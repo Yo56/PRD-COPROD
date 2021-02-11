@@ -7,8 +7,6 @@ using namespace std;
 class PLNE
 {
 public:
-	//PLNE();
-	//~PLNE();
 	static void run();
 };
 

@@ -1,6 +1,6 @@
-#include "pch.h"
 #include <iostream>
 #include <ilcplex/ilocplex.h>
+
 #include "Tuto.h"
 #include "PLNE.h"
 
