@@ -125,10 +125,54 @@ void PLNE::run() {
 	}
 
 	//{Intervalles[t−;t+]q de disponibilité de la rame f}
+	IloArray<IloArray<IloIntArray> > Ttrain(env, nTrain); // IMPORTANT : espace entre les chevrons -> >' '> 
+	for (int f = 0; f < nTrain; f++) {
+		Ttrain[f] = IloArray<IloIntArray>(env); // tableau qui va contenir les q creneaux de disponibilité à ajouter au cas par cas puisque chaque rame va avoir des creneaux différents
+		// chaque creneau est un tableau de 2 ints 
+	}
 
 	//{Intervalles[t−;t+]q de disponibilité de la voie j}
+	IloArray<IloArray<IloIntArray> > Ttrack(env, m); // IMPORTANT : espace entre les chevrons -> >' '> 
+	for (int j = 0; j < m; j++) {
+		Ttrack[j] = IloArray<IloIntArray>(env); // tableau qui va contenir les q creneaux de disponibilité à ajouter au cas par cas puisque chaque voie va avoir des creneaux différents
+		// chaque creneau est un tableau de 2 ints 
+	}
 
 	//{Couples (j;[t−;t]q) de disponibilité simultanée des rames f et des voies j}
+	IloArray<IloArray<IloArray<IloIntArray> > > Tfj(env, nTrain); // IMPORTANT : espace entre les chevrons -> >' '> 
+	for (int f = 0; f < nTrain; f++) {
+		Tfj[f] = IloArray<IloArray<IloIntArray> >(env,m); // tableau de chaque rame qui comporte l'ensemble des voies
+		for (int j = 0; j < m; j++) {
+			Tfj[f][j] = IloArray<IloIntArray>(env); //ensemble de couples [t-,t+]1, [t-,t+]2... de compatibilité de la rame f et de la voie j 
+		}
+	}
 
 	//{Intervalles [t−;t+]q de disponibilité de l’agent a}
+	IloArray<IloArray<IloIntArray> > Tagent(env, nAgent); // IMPORTANT : espace entre les chevrons -> >' '> 
+	for (int a = 0; a < nAgent; a++) {
+		Tagent[a] = IloArray<IloIntArray>(env); // tableau qui va contenir les q creneaux de disponibilité à ajouter au cas par cas puisque chaque agent va avoir des creneaux différents
+		// chaque creneau est un tableau de 2 ints 
+	}
+
+	// -------------------------- Variables --------------------------------------//
+
+	//Xijt
+
+	//Yi
+	//IloBoolVarArray y(env,);
+
+
+	//Zait
+
+	//Eflt
+
+	//Eflt start
+
+	//Si
+
+	//Ci
+
+	//Ei prev
+
+	//Ti corr
 }
