@@ -1,0 +1,589 @@
+\hypertarget{classxlnt_1_1range}{}\doxysection{xlnt\+::range Class Reference}
+\label{classxlnt_1_1range}\index{xlnt::range@{xlnt::range}}
+
+
+A range is a 2D collection of cells with defined extens that can be iterated upon.  
+
+
+
+
+{\ttfamily \#include $<$range.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classxlnt_1_1range_a986ba0a91ae683008885779b32564c3e}{iterator}} = \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em Alias for the iterator type \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classxlnt_1_1range_a540912d91e4fbcdaba1753a0f9ab59d3}{const\+\_\+iterator}} = \mbox{\hyperlink{classxlnt_1_1const__range__iterator}{const\+\_\+range\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em Alias for the const iterator type \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classxlnt_1_1range_a821a57d7cee8720e10ac899bbc11553f}{reverse\+\_\+iterator}} = std\+::reverse\+\_\+iterator$<$ \mbox{\hyperlink{classxlnt_1_1range_a986ba0a91ae683008885779b32564c3e}{iterator}} $>$
+\begin{DoxyCompactList}\small\item\em Alias for the reverse iterator type \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classxlnt_1_1range_aa68c98bfd385853a5de3439b8a3a9a4b}{const\+\_\+reverse\+\_\+iterator}} = std\+::reverse\+\_\+iterator$<$ \mbox{\hyperlink{classxlnt_1_1range_a540912d91e4fbcdaba1753a0f9ab59d3}{const\+\_\+iterator}} $>$
+\begin{DoxyCompactList}\small\item\em Alias for the const reverse iterator type \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1range_ae42c3003ba3c8518810e30f7e3b1f1ac}{range}} (\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} ws, const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&\mbox{\hyperlink{classxlnt_1_1range_acfbd00b87a31b4401bd9af27133d38a9}{reference}}, major\+\_\+order order=\mbox{\hyperlink{page__setup_8hpp_ad42e2d1ad172100a2cd1338656cf0425}{major\+\_\+order\+::row}}, bool skip\+\_\+null=false)
+\begin{DoxyCompactList}\small\item\em Constructs a range on the given worksheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range_a861657c685d68cf9330ba7ea2fd13d7b}{$\sim$range}} ()
+\begin{DoxyCompactList}\small\item\em Desctructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range_ae9d6ac37914110275ce2916eef0f4950}{range}} (const \mbox{\hyperlink{classxlnt_1_1range}{range}} \&)=default
+\begin{DoxyCompactList}\small\item\em Default copy constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1range_a601865c497b77e5798131f6a3359c164}{clear\+\_\+cells}} ()
+\begin{DoxyCompactList}\small\item\em Erases all cell data from the worksheet for cells within this range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} \mbox{\hyperlink{classxlnt_1_1range_a15708936d1c196e2025e5c31190e3fe9}{vector}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} n)
+\begin{DoxyCompactList}\small\item\em Returns a vector pointing to the n-\/th row or column in this range (depending on major order). \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} \mbox{\hyperlink{classxlnt_1_1range_a484604bfc32de74cb74662484a160d1e}{vector}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} n) const
+\begin{DoxyCompactList}\small\item\em Returns a vector pointing to the n-\/th row or column in this range (depending on major order). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1range_ab0e8d49721f772b7168606197fe636b4}{cell}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&ref)
+\begin{DoxyCompactList}\small\item\em Returns a cell in the range relative to its top left cell. \end{DoxyCompactList}\item 
+const class \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1range_a9f127fea0c5d11acd6da094ece515429}{cell}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&ref) const
+\begin{DoxyCompactList}\small\item\em Returns a cell in the range relative to its top left cell. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \& \mbox{\hyperlink{classxlnt_1_1range_a92093cbdcc67ee7df5945921b5f76604}{target\+\_\+worksheet}} () const
+\begin{DoxyCompactList}\small\item\em The worksheet this range targets \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1range_acfbd00b87a31b4401bd9af27133d38a9}{reference}} () const
+\begin{DoxyCompactList}\small\item\em Returns the reference defining the bounds of this range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1range_a6d60789467622ed6758a92d6af0376b2}{length}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of rows or columns in this range (depending on major order). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1range_a7c5cd7f0b363adf41275778a25969d18}{contains}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&ref)
+\begin{DoxyCompactList}\small\item\em Returns true if the given cell exists in the parent worksheet of this range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1range_a49154e485b81a502355224aabd6e3819}{alignment}} (const \mbox{\hyperlink{classxlnt_1_1alignment}{xlnt\+::alignment}} \&new\+\_\+alignment)
+\begin{DoxyCompactList}\small\item\em Sets the alignment of all cells in the range to new\+\_\+alignment and returns the range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1range_afdedf3bffe4a41e6caf8cd0ccd27492a}{border}} (const \mbox{\hyperlink{classxlnt_1_1border}{xlnt\+::border}} \&new\+\_\+border)
+\begin{DoxyCompactList}\small\item\em Sets the border of all cells in the range to new\+\_\+border and returns the range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1range_a5ada67b836de962322b7c50536068dba}{fill}} (const \mbox{\hyperlink{classxlnt_1_1fill}{xlnt\+::fill}} \&new\+\_\+fill)
+\begin{DoxyCompactList}\small\item\em Sets the fill of all cells in the range to new\+\_\+fill and returns the range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1range_aba1c79d259a087c6188bcac9358bfb2e}{font}} (const \mbox{\hyperlink{classxlnt_1_1font}{xlnt\+::font}} \&new\+\_\+font)
+\begin{DoxyCompactList}\small\item\em Sets the font of all cells in the range to new\+\_\+font and returns the range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1range_a15cdd0cc56aaf3fa419d41f7d4618c79}{number\+\_\+format}} (const \mbox{\hyperlink{classxlnt_1_1number__format}{xlnt\+::number\+\_\+format}} \&new\+\_\+number\+\_\+format)
+\begin{DoxyCompactList}\small\item\em Sets the number format of all cells in the range to new\+\_\+number\+\_\+format and returns the range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1range_af37a8c6a4925768594c9a3a9eef6333f}{protection}} (const \mbox{\hyperlink{classxlnt_1_1protection}{xlnt\+::protection}} \&new\+\_\+protection)
+\begin{DoxyCompactList}\small\item\em Sets the protection of all cells in the range to new\+\_\+protection and returns the range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1range_aec21f3287434bf645968195feb3fc49d}{style}} (const class \mbox{\hyperlink{classxlnt_1_1style}{style}} \&new\+\_\+style)
+\begin{DoxyCompactList}\small\item\em Sets the named style applied to all cells in this range to a style named style\+\_\+name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1range_a15486e1d6107d77a6dcdec87db8689d2}{style}} (const std\+::string \&style\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Sets the named style applied to all cells in this range to a style named style\+\_\+name. If this style has not been previously created in the workbook, a \mbox{\hyperlink{classxlnt_1_1key__not__found}{key\+\_\+not\+\_\+found}} exception will be thrown. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1conditional__format}{xlnt\+::conditional\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1range_aee32f1a01e6a54e8370d5c6bca767917}{conditional\+\_\+format}} (const \mbox{\hyperlink{classxlnt_1_1condition}{condition}} \&when)
+\item 
+\mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} \mbox{\hyperlink{classxlnt_1_1range_a1d07b943eab523c06ac3810a4611153d}{front}} ()
+\begin{DoxyCompactList}\small\item\em Returns the first row or column in this range. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} \mbox{\hyperlink{classxlnt_1_1range_a53bb5bfc8ced095ab0e61811d8cee4a8}{front}} () const
+\begin{DoxyCompactList}\small\item\em Returns the first row or column in this range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} \mbox{\hyperlink{classxlnt_1_1range_ae9873cc3c60336683e585b26e9b4c641}{back}} ()
+\begin{DoxyCompactList}\small\item\em Returns the last row or column in this range. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} \mbox{\hyperlink{classxlnt_1_1range_a47889c3bf21cd8c5d0a95303d4a8ea0e}{back}} () const
+\begin{DoxyCompactList}\small\item\em Returns the last row or column in this range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range_a986ba0a91ae683008885779b32564c3e}{iterator}} \mbox{\hyperlink{classxlnt_1_1range_a50983d2dd3dc8feae4b28c786440e245}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the first row or column in this range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range_a986ba0a91ae683008885779b32564c3e}{iterator}} \mbox{\hyperlink{classxlnt_1_1range_a88c786cd5164e7c22fc5df7153f60c6b}{end}} ()
+\begin{DoxyCompactList}\small\item\em Returns an iterator to one past the last row or column in this range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range_a540912d91e4fbcdaba1753a0f9ab59d3}{const\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1range_aceb39b632b49dd4efb194838864429e5}{begin}} () const
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the first row or column in this range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range_a540912d91e4fbcdaba1753a0f9ab59d3}{const\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1range_a3e0909b3d766e03c49ce7691a05fdeea}{end}} () const
+\begin{DoxyCompactList}\small\item\em Returns an iterator to one past the last row or column in this range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range_a540912d91e4fbcdaba1753a0f9ab59d3}{const\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1range_afe5d069f78d73b6c57615afe21f50f7a}{cbegin}} () const
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the first row or column in this range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range_a540912d91e4fbcdaba1753a0f9ab59d3}{const\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1range_a8f3a8c7bfc398de86d4110ebd16d3910}{cend}} () const
+\begin{DoxyCompactList}\small\item\em Returns an iterator to one past the last row or column in this range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range_a821a57d7cee8720e10ac899bbc11553f}{reverse\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1range_a7da4c2e75dc30d2f5cd085511c7f1ec4}{rbegin}} ()
+\begin{DoxyCompactList}\small\item\em Returns a reverse iterator to the first row or column in this range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range_a821a57d7cee8720e10ac899bbc11553f}{reverse\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1range_a0cfba26d087cb50883c72647a5545280}{rend}} ()
+\begin{DoxyCompactList}\small\item\em Returns a reverse iterator to one past the last row or column in this range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range_aa68c98bfd385853a5de3439b8a3a9a4b}{const\+\_\+reverse\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1range_a483a6e7ea4fddad45647ffceca224e05}{rbegin}} () const
+\begin{DoxyCompactList}\small\item\em Returns a reverse iterator to the first row or column in this range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range_aa68c98bfd385853a5de3439b8a3a9a4b}{const\+\_\+reverse\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1range_a064c37b10eba2196b44fdf966549db0a}{rend}} () const
+\begin{DoxyCompactList}\small\item\em Returns a reverse iterator to one past the last row or column in this range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range_aa68c98bfd385853a5de3439b8a3a9a4b}{const\+\_\+reverse\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1range_a0308d354e93dad757f3b90118b749244}{crbegin}} () const
+\begin{DoxyCompactList}\small\item\em Returns a reverse iterator to the first row or column in this range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range_aa68c98bfd385853a5de3439b8a3a9a4b}{const\+\_\+reverse\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1range_ad932f43415d9f5eec4526e5c0416425b}{crend}} () const
+\begin{DoxyCompactList}\small\item\em Returns a reverse iterator to one past the last row or column in this range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1range_a8df0f556f491fbd957d5ce8913f35b4d}{apply}} (std\+::function$<$ void(class \mbox{\hyperlink{classxlnt_1_1cell}{cell}})$>$ f)
+\begin{DoxyCompactList}\small\item\em Applies function f to all cells in the range \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} \mbox{\hyperlink{classxlnt_1_1range_ac95c1c2acfc08036f28da76c7fa5580f}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} n)
+\begin{DoxyCompactList}\small\item\em Returns the n-\/th row or column in this range. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} \mbox{\hyperlink{classxlnt_1_1range_a24c99985773df7cc5fe177009f59cb88}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} n) const
+\begin{DoxyCompactList}\small\item\em Returns the n-\/th row or column in this range. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1range_ac6e68ab01c1cac4ffab41451d30ebae0}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1range}{range}} \&comparand) const
+\begin{DoxyCompactList}\small\item\em Returns true if this range is equivalent to comparand. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1range_a0dd5450b9286921bc1c1970562fe57c8}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1range}{range}} \&comparand) const
+\begin{DoxyCompactList}\small\item\em Returns true if this range is not equivalent to comparand. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A range is a 2D collection of cells with defined extens that can be iterated upon. 
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classxlnt_1_1range_a540912d91e4fbcdaba1753a0f9ab59d3}\label{classxlnt_1_1range_a540912d91e4fbcdaba1753a0f9ab59d3}} 
+\index{xlnt::range@{xlnt::range}!const\_iterator@{const\_iterator}}
+\index{const\_iterator@{const\_iterator}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{const\_iterator}{const\_iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1range_a540912d91e4fbcdaba1753a0f9ab59d3}{xlnt\+::range\+::const\+\_\+iterator}} =  \mbox{\hyperlink{classxlnt_1_1const__range__iterator}{const\+\_\+range\+\_\+iterator}}}
+
+
+
+Alias for the const iterator type 
+
+\mbox{\Hypertarget{classxlnt_1_1range_aa68c98bfd385853a5de3439b8a3a9a4b}\label{classxlnt_1_1range_aa68c98bfd385853a5de3439b8a3a9a4b}} 
+\index{xlnt::range@{xlnt::range}!const\_reverse\_iterator@{const\_reverse\_iterator}}
+\index{const\_reverse\_iterator@{const\_reverse\_iterator}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{const\_reverse\_iterator}{const\_reverse\_iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1range_aa68c98bfd385853a5de3439b8a3a9a4b}{xlnt\+::range\+::const\+\_\+reverse\+\_\+iterator}} =  std\+::reverse\+\_\+iterator$<$\mbox{\hyperlink{classxlnt_1_1range_a540912d91e4fbcdaba1753a0f9ab59d3}{const\+\_\+iterator}}$>$}
+
+
+
+Alias for the const reverse iterator type 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a986ba0a91ae683008885779b32564c3e}\label{classxlnt_1_1range_a986ba0a91ae683008885779b32564c3e}} 
+\index{xlnt::range@{xlnt::range}!iterator@{iterator}}
+\index{iterator@{iterator}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1range_a986ba0a91ae683008885779b32564c3e}{xlnt\+::range\+::iterator}} =  \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}}}
+
+
+
+Alias for the iterator type 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a821a57d7cee8720e10ac899bbc11553f}\label{classxlnt_1_1range_a821a57d7cee8720e10ac899bbc11553f}} 
+\index{xlnt::range@{xlnt::range}!reverse\_iterator@{reverse\_iterator}}
+\index{reverse\_iterator@{reverse\_iterator}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{reverse\_iterator}{reverse\_iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1range_a821a57d7cee8720e10ac899bbc11553f}{xlnt\+::range\+::reverse\+\_\+iterator}} =  std\+::reverse\+\_\+iterator$<$\mbox{\hyperlink{classxlnt_1_1range_a986ba0a91ae683008885779b32564c3e}{iterator}}$>$}
+
+
+
+Alias for the reverse iterator type 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1range_ae42c3003ba3c8518810e30f7e3b1f1ac}\label{classxlnt_1_1range_ae42c3003ba3c8518810e30f7e3b1f1ac}} 
+\index{xlnt::range@{xlnt::range}!range@{range}}
+\index{range@{range}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{range()}{range()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily xlnt\+::range\+::range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}}]{ws,  }\item[{const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&}]{reference,  }\item[{major\+\_\+order}]{order = {\ttfamily \mbox{\hyperlink{page__setup_8hpp_ad42e2d1ad172100a2cd1338656cf0425}{major\+\_\+order\+::row}}},  }\item[{bool}]{skip\+\_\+null = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructs a range on the given worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a861657c685d68cf9330ba7ea2fd13d7b}\label{classxlnt_1_1range_a861657c685d68cf9330ba7ea2fd13d7b}} 
+\index{xlnt::range@{xlnt::range}!````~range@{$\sim$range}}
+\index{````~range@{$\sim$range}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{$\sim$range()}{~range()}}
+{\footnotesize\ttfamily xlnt\+::range\+::$\sim$range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Desctructor 
+
+\mbox{\Hypertarget{classxlnt_1_1range_ae9d6ac37914110275ce2916eef0f4950}\label{classxlnt_1_1range_ae9d6ac37914110275ce2916eef0f4950}} 
+\index{xlnt::range@{xlnt::range}!range@{range}}
+\index{range@{range}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{range()}{range()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily xlnt\+::range\+::range (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1range}{range}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default copy constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1range_a49154e485b81a502355224aabd6e3819}\label{classxlnt_1_1range_a49154e485b81a502355224aabd6e3819}} 
+\index{xlnt::range@{xlnt::range}!alignment@{alignment}}
+\index{alignment@{alignment}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{alignment()}{alignment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range}{range}} xlnt\+::range\+::alignment (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1alignment}{xlnt\+::alignment}} \&}]{new\+\_\+alignment }\end{DoxyParamCaption})}
+
+
+
+Sets the alignment of all cells in the range to new\+\_\+alignment and returns the range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a8df0f556f491fbd957d5ce8913f35b4d}\label{classxlnt_1_1range_a8df0f556f491fbd957d5ce8913f35b4d}} 
+\index{xlnt::range@{xlnt::range}!apply@{apply}}
+\index{apply@{apply}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily void xlnt\+::range\+::apply (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(class \mbox{\hyperlink{classxlnt_1_1cell}{cell}})$>$}]{f }\end{DoxyParamCaption})}
+
+
+
+Applies function f to all cells in the range 
+
+\mbox{\Hypertarget{classxlnt_1_1range_ae9873cc3c60336683e585b26e9b4c641}\label{classxlnt_1_1range_ae9873cc3c60336683e585b26e9b4c641}} 
+\index{xlnt::range@{xlnt::range}!back@{back}}
+\index{back@{back}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} xlnt\+::range\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the last row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a47889c3bf21cd8c5d0a95303d4a8ea0e}\label{classxlnt_1_1range_a47889c3bf21cd8c5d0a95303d4a8ea0e}} 
+\index{xlnt::range@{xlnt::range}!back@{back}}
+\index{back@{back}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} xlnt\+::range\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the last row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a50983d2dd3dc8feae4b28c786440e245}\label{classxlnt_1_1range_a50983d2dd3dc8feae4b28c786440e245}} 
+\index{xlnt::range@{xlnt::range}!begin@{begin}}
+\index{begin@{begin}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range_a986ba0a91ae683008885779b32564c3e}{range\+::iterator}} xlnt\+::range\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns an iterator to the first row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_aceb39b632b49dd4efb194838864429e5}\label{classxlnt_1_1range_aceb39b632b49dd4efb194838864429e5}} 
+\index{xlnt::range@{xlnt::range}!begin@{begin}}
+\index{begin@{begin}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range_a540912d91e4fbcdaba1753a0f9ab59d3}{range\+::const\+\_\+iterator}} xlnt\+::range\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns an iterator to the first row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_afdedf3bffe4a41e6caf8cd0ccd27492a}\label{classxlnt_1_1range_afdedf3bffe4a41e6caf8cd0ccd27492a}} 
+\index{xlnt::range@{xlnt::range}!border@{border}}
+\index{border@{border}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{border()}{border()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range}{range}} xlnt\+::range\+::border (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1border}{xlnt\+::border}} \&}]{new\+\_\+border }\end{DoxyParamCaption})}
+
+
+
+Sets the border of all cells in the range to new\+\_\+border and returns the range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_afe5d069f78d73b6c57615afe21f50f7a}\label{classxlnt_1_1range_afe5d069f78d73b6c57615afe21f50f7a}} 
+\index{xlnt::range@{xlnt::range}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{cbegin()}{cbegin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range_a540912d91e4fbcdaba1753a0f9ab59d3}{range\+::const\+\_\+iterator}} xlnt\+::range\+::cbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns an iterator to the first row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_ab0e8d49721f772b7168606197fe636b4}\label{classxlnt_1_1range_ab0e8d49721f772b7168606197fe636b4}} 
+\index{xlnt::range@{xlnt::range}!cell@{cell}}
+\index{cell@{cell}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{cell()}{cell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell}{cell}} xlnt\+::range\+::cell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{ref }\end{DoxyParamCaption})}
+
+
+
+Returns a cell in the range relative to its top left cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a9f127fea0c5d11acd6da094ece515429}\label{classxlnt_1_1range_a9f127fea0c5d11acd6da094ece515429}} 
+\index{xlnt::range@{xlnt::range}!cell@{cell}}
+\index{cell@{cell}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{cell()}{cell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} xlnt\+::range\+::cell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{ref }\end{DoxyParamCaption}) const}
+
+
+
+Returns a cell in the range relative to its top left cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a8f3a8c7bfc398de86d4110ebd16d3910}\label{classxlnt_1_1range_a8f3a8c7bfc398de86d4110ebd16d3910}} 
+\index{xlnt::range@{xlnt::range}!cend@{cend}}
+\index{cend@{cend}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{cend()}{cend()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range_a540912d91e4fbcdaba1753a0f9ab59d3}{range\+::const\+\_\+iterator}} xlnt\+::range\+::cend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns an iterator to one past the last row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a601865c497b77e5798131f6a3359c164}\label{classxlnt_1_1range_a601865c497b77e5798131f6a3359c164}} 
+\index{xlnt::range@{xlnt::range}!clear\_cells@{clear\_cells}}
+\index{clear\_cells@{clear\_cells}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{clear\_cells()}{clear\_cells()}}
+{\footnotesize\ttfamily void xlnt\+::range\+::clear\+\_\+cells (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Erases all cell data from the worksheet for cells within this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_aee32f1a01e6a54e8370d5c6bca767917}\label{classxlnt_1_1range_aee32f1a01e6a54e8370d5c6bca767917}} 
+\index{xlnt::range@{xlnt::range}!conditional\_format@{conditional\_format}}
+\index{conditional\_format@{conditional\_format}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{conditional\_format()}{conditional\_format()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1conditional__format}{conditional\+\_\+format}} xlnt\+::range\+::conditional\+\_\+format (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1condition}{condition}} \&}]{when }\end{DoxyParamCaption})}
+
+
+
+
+
+\mbox{\Hypertarget{classxlnt_1_1range_a7c5cd7f0b363adf41275778a25969d18}\label{classxlnt_1_1range_a7c5cd7f0b363adf41275778a25969d18}} 
+\index{xlnt::range@{xlnt::range}!contains@{contains}}
+\index{contains@{contains}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool xlnt\+::range\+::contains (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{ref }\end{DoxyParamCaption})}
+
+
+
+Returns true if the given cell exists in the parent worksheet of this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a0308d354e93dad757f3b90118b749244}\label{classxlnt_1_1range_a0308d354e93dad757f3b90118b749244}} 
+\index{xlnt::range@{xlnt::range}!crbegin@{crbegin}}
+\index{crbegin@{crbegin}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{crbegin()}{crbegin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range_aa68c98bfd385853a5de3439b8a3a9a4b}{range\+::const\+\_\+reverse\+\_\+iterator}} xlnt\+::range\+::crbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a reverse iterator to the first row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_ad932f43415d9f5eec4526e5c0416425b}\label{classxlnt_1_1range_ad932f43415d9f5eec4526e5c0416425b}} 
+\index{xlnt::range@{xlnt::range}!crend@{crend}}
+\index{crend@{crend}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{crend()}{crend()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range_aa68c98bfd385853a5de3439b8a3a9a4b}{range\+::const\+\_\+reverse\+\_\+iterator}} xlnt\+::range\+::crend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a reverse iterator to one past the last row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a88c786cd5164e7c22fc5df7153f60c6b}\label{classxlnt_1_1range_a88c786cd5164e7c22fc5df7153f60c6b}} 
+\index{xlnt::range@{xlnt::range}!end@{end}}
+\index{end@{end}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range_a986ba0a91ae683008885779b32564c3e}{range\+::iterator}} xlnt\+::range\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns an iterator to one past the last row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a3e0909b3d766e03c49ce7691a05fdeea}\label{classxlnt_1_1range_a3e0909b3d766e03c49ce7691a05fdeea}} 
+\index{xlnt::range@{xlnt::range}!end@{end}}
+\index{end@{end}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range_a540912d91e4fbcdaba1753a0f9ab59d3}{range\+::const\+\_\+iterator}} xlnt\+::range\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns an iterator to one past the last row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a5ada67b836de962322b7c50536068dba}\label{classxlnt_1_1range_a5ada67b836de962322b7c50536068dba}} 
+\index{xlnt::range@{xlnt::range}!fill@{fill}}
+\index{fill@{fill}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range}{range}} xlnt\+::range\+::fill (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1fill}{xlnt\+::fill}} \&}]{new\+\_\+fill }\end{DoxyParamCaption})}
+
+
+
+Sets the fill of all cells in the range to new\+\_\+fill and returns the range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_aba1c79d259a087c6188bcac9358bfb2e}\label{classxlnt_1_1range_aba1c79d259a087c6188bcac9358bfb2e}} 
+\index{xlnt::range@{xlnt::range}!font@{font}}
+\index{font@{font}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{font()}{font()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range}{range}} xlnt\+::range\+::font (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1font}{xlnt\+::font}} \&}]{new\+\_\+font }\end{DoxyParamCaption})}
+
+
+
+Sets the font of all cells in the range to new\+\_\+font and returns the range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a1d07b943eab523c06ac3810a4611153d}\label{classxlnt_1_1range_a1d07b943eab523c06ac3810a4611153d}} 
+\index{xlnt::range@{xlnt::range}!front@{front}}
+\index{front@{front}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} xlnt\+::range\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the first row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a53bb5bfc8ced095ab0e61811d8cee4a8}\label{classxlnt_1_1range_a53bb5bfc8ced095ab0e61811d8cee4a8}} 
+\index{xlnt::range@{xlnt::range}!front@{front}}
+\index{front@{front}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} xlnt\+::range\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the first row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a6d60789467622ed6758a92d6af0376b2}\label{classxlnt_1_1range_a6d60789467622ed6758a92d6af0376b2}} 
+\index{xlnt::range@{xlnt::range}!length@{length}}
+\index{length@{length}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::range\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number of rows or columns in this range (depending on major order). 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a15cdd0cc56aaf3fa419d41f7d4618c79}\label{classxlnt_1_1range_a15cdd0cc56aaf3fa419d41f7d4618c79}} 
+\index{xlnt::range@{xlnt::range}!number\_format@{number\_format}}
+\index{number\_format@{number\_format}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{number\_format()}{number\_format()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range}{range}} xlnt\+::range\+::number\+\_\+format (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1number__format}{xlnt\+::number\+\_\+format}} \&}]{new\+\_\+number\+\_\+format }\end{DoxyParamCaption})}
+
+
+
+Sets the number format of all cells in the range to new\+\_\+number\+\_\+format and returns the range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a0dd5450b9286921bc1c1970562fe57c8}\label{classxlnt_1_1range_a0dd5450b9286921bc1c1970562fe57c8}} 
+\index{xlnt::range@{xlnt::range}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool xlnt\+::range\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1range}{range}} \&}]{comparand }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this range is not equivalent to comparand. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_ac6e68ab01c1cac4ffab41451d30ebae0}\label{classxlnt_1_1range_ac6e68ab01c1cac4ffab41451d30ebae0}} 
+\index{xlnt::range@{xlnt::range}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::range\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1range}{range}} \&}]{comparand }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this range is equivalent to comparand. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_ac95c1c2acfc08036f28da76c7fa5580f}\label{classxlnt_1_1range_ac95c1c2acfc08036f28da76c7fa5580f}} 
+\index{xlnt::range@{xlnt::range}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} xlnt\+::range\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{n }\end{DoxyParamCaption})}
+
+
+
+Returns the n-\/th row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a24c99985773df7cc5fe177009f59cb88}\label{classxlnt_1_1range_a24c99985773df7cc5fe177009f59cb88}} 
+\index{xlnt::range@{xlnt::range}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} xlnt\+::range\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{n }\end{DoxyParamCaption}) const}
+
+
+
+Returns the n-\/th row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_af37a8c6a4925768594c9a3a9eef6333f}\label{classxlnt_1_1range_af37a8c6a4925768594c9a3a9eef6333f}} 
+\index{xlnt::range@{xlnt::range}!protection@{protection}}
+\index{protection@{protection}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{protection()}{protection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range}{range}} xlnt\+::range\+::protection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1protection}{xlnt\+::protection}} \&}]{new\+\_\+protection }\end{DoxyParamCaption})}
+
+
+
+Sets the protection of all cells in the range to new\+\_\+protection and returns the range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a7da4c2e75dc30d2f5cd085511c7f1ec4}\label{classxlnt_1_1range_a7da4c2e75dc30d2f5cd085511c7f1ec4}} 
+\index{xlnt::range@{xlnt::range}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{rbegin()}{rbegin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range_a821a57d7cee8720e10ac899bbc11553f}{range\+::reverse\+\_\+iterator}} xlnt\+::range\+::rbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a reverse iterator to the first row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a483a6e7ea4fddad45647ffceca224e05}\label{classxlnt_1_1range_a483a6e7ea4fddad45647ffceca224e05}} 
+\index{xlnt::range@{xlnt::range}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{rbegin()}{rbegin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range_aa68c98bfd385853a5de3439b8a3a9a4b}{range\+::const\+\_\+reverse\+\_\+iterator}} xlnt\+::range\+::rbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a reverse iterator to the first row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_acfbd00b87a31b4401bd9af27133d38a9}\label{classxlnt_1_1range_acfbd00b87a31b4401bd9af27133d38a9}} 
+\index{xlnt::range@{xlnt::range}!reference@{reference}}
+\index{reference@{reference}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{reference()}{reference()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} xlnt\+::range\+::reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the reference defining the bounds of this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a0cfba26d087cb50883c72647a5545280}\label{classxlnt_1_1range_a0cfba26d087cb50883c72647a5545280}} 
+\index{xlnt::range@{xlnt::range}!rend@{rend}}
+\index{rend@{rend}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{rend()}{rend()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range_a821a57d7cee8720e10ac899bbc11553f}{range\+::reverse\+\_\+iterator}} xlnt\+::range\+::rend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a reverse iterator to one past the last row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a064c37b10eba2196b44fdf966549db0a}\label{classxlnt_1_1range_a064c37b10eba2196b44fdf966549db0a}} 
+\index{xlnt::range@{xlnt::range}!rend@{rend}}
+\index{rend@{rend}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{rend()}{rend()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range_aa68c98bfd385853a5de3439b8a3a9a4b}{range\+::const\+\_\+reverse\+\_\+iterator}} xlnt\+::range\+::rend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a reverse iterator to one past the last row or column in this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_aec21f3287434bf645968195feb3fc49d}\label{classxlnt_1_1range_aec21f3287434bf645968195feb3fc49d}} 
+\index{xlnt::range@{xlnt::range}!style@{style}}
+\index{style@{style}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{style()}{style()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range}{range}} xlnt\+::range\+::style (\begin{DoxyParamCaption}\item[{const class \mbox{\hyperlink{classxlnt_1_1style}{style}} \&}]{new\+\_\+style }\end{DoxyParamCaption})}
+
+
+
+Sets the named style applied to all cells in this range to a style named style\+\_\+name. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a15486e1d6107d77a6dcdec87db8689d2}\label{classxlnt_1_1range_a15486e1d6107d77a6dcdec87db8689d2}} 
+\index{xlnt::range@{xlnt::range}!style@{style}}
+\index{style@{style}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{style()}{style()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range}{range}} xlnt\+::range\+::style (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{style\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Sets the named style applied to all cells in this range to a style named style\+\_\+name. If this style has not been previously created in the workbook, a \mbox{\hyperlink{classxlnt_1_1key__not__found}{key\+\_\+not\+\_\+found}} exception will be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a92093cbdcc67ee7df5945921b5f76604}\label{classxlnt_1_1range_a92093cbdcc67ee7df5945921b5f76604}} 
+\index{xlnt::range@{xlnt::range}!target\_worksheet@{target\_worksheet}}
+\index{target\_worksheet@{target\_worksheet}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{target\_worksheet()}{target\_worksheet()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \& xlnt\+::range\+::target\+\_\+worksheet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+The worksheet this range targets 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a15708936d1c196e2025e5c31190e3fe9}\label{classxlnt_1_1range_a15708936d1c196e2025e5c31190e3fe9}} 
+\index{xlnt::range@{xlnt::range}!vector@{vector}}
+\index{vector@{vector}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} xlnt\+::range\+::vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{n }\end{DoxyParamCaption})}
+
+
+
+Returns a vector pointing to the n-\/th row or column in this range (depending on major order). 
+
+\mbox{\Hypertarget{classxlnt_1_1range_a484604bfc32de74cb74662484a160d1e}\label{classxlnt_1_1range_a484604bfc32de74cb74662484a160d1e}} 
+\index{xlnt::range@{xlnt::range}!vector@{vector}}
+\index{vector@{vector}!xlnt::range@{xlnt::range}}
+\doxysubsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} xlnt\+::range\+::vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{n }\end{DoxyParamCaption}) const}
+
+
+
+Returns a vector pointing to the n-\/th row or column in this range (depending on major order). 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/worksheet/\mbox{\hyperlink{range_8hpp}{range.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/worksheet/\mbox{\hyperlink{range_8cpp}{range.\+cpp}}\end{DoxyCompactItemize}

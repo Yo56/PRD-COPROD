@@ -1,0 +1,180 @@
+\hypertarget{structbuffer__info}{}\doxysection{buffer\+\_\+info Struct Reference}
+\label{structbuffer__info}\index{buffer\_info@{buffer\_info}}
+
+
+Information record describing a Python buffer object.  
+
+
+
+
+{\ttfamily \#include $<$buffer\+\_\+info.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structbuffer__info_a7ba465a026eab59b502922baceb7e196}{buffer\+\_\+info}} ()
+\item 
+\mbox{\hyperlink{structbuffer__info_a453e5b1373b00938414661fa169506b0}{buffer\+\_\+info}} (void $\ast$\mbox{\hyperlink{structbuffer__info_a2976ad4b157156ebbcffe667888e2d28}{ptr}}, \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} \mbox{\hyperlink{structbuffer__info_a8a95447f854c217a3b76168627900139}{itemsize}}, const std\+::string \&\mbox{\hyperlink{structbuffer__info_af5d89b84be8905b695a23b914e92bbda}{format}}, \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} \mbox{\hyperlink{structbuffer__info_a81d14cf3fc7ceae1b811f335bf35cd97}{ndim}}, detail\+::any\+\_\+container$<$ \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} $>$ shape\+\_\+in, detail\+::any\+\_\+container$<$ \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} $>$ strides\+\_\+in)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structbuffer__info_a7b8f6155115e1c4a73e1dd4d8944fcdb}{buffer\+\_\+info}} (T $\ast$\mbox{\hyperlink{structbuffer__info_a2976ad4b157156ebbcffe667888e2d28}{ptr}}, detail\+::any\+\_\+container$<$ \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} $>$ shape\+\_\+in, detail\+::any\+\_\+container$<$ \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} $>$ strides\+\_\+in)
+\item 
+\mbox{\hyperlink{structbuffer__info_a4fcc193bf8c8693624eb20586471ca85}{buffer\+\_\+info}} (void $\ast$\mbox{\hyperlink{structbuffer__info_a2976ad4b157156ebbcffe667888e2d28}{ptr}}, \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} \mbox{\hyperlink{structbuffer__info_a8a95447f854c217a3b76168627900139}{itemsize}}, const std\+::string \&\mbox{\hyperlink{structbuffer__info_af5d89b84be8905b695a23b914e92bbda}{format}}, \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} \mbox{\hyperlink{structbuffer__info_aa8d7471a42f3656b1b7a8b94d8fe03ae}{size}})
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structbuffer__info_afdadf4414d716e34b64a215014fc2dfb}{buffer\+\_\+info}} (T $\ast$\mbox{\hyperlink{structbuffer__info_a2976ad4b157156ebbcffe667888e2d28}{ptr}}, \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} \mbox{\hyperlink{structbuffer__info_aa8d7471a42f3656b1b7a8b94d8fe03ae}{size}})
+\item 
+\mbox{\hyperlink{structbuffer__info_a18bf6023b6d4bb685d345d5acb9b71ca}{buffer\+\_\+info}} (Py\+\_\+buffer $\ast$view, bool ownview=true)
+\item 
+\mbox{\hyperlink{structbuffer__info_a7c5a7e3878ecda87f0e60448b2bf7d1e}{buffer\+\_\+info}} (const \mbox{\hyperlink{structbuffer__info}{buffer\+\_\+info}} \&)=delete
+\item 
+\mbox{\hyperlink{structbuffer__info}{buffer\+\_\+info}} \& \mbox{\hyperlink{structbuffer__info_ab55caff9667d44d8ffec6822c4a09068}{operator=}} (const \mbox{\hyperlink{structbuffer__info}{buffer\+\_\+info}} \&)=delete
+\item 
+\mbox{\hyperlink{structbuffer__info_a6ea2c0767021b4dc20c6116b6989c3aa}{buffer\+\_\+info}} (\mbox{\hyperlink{structbuffer__info}{buffer\+\_\+info}} \&\&other)
+\item 
+\mbox{\hyperlink{structbuffer__info}{buffer\+\_\+info}} \& \mbox{\hyperlink{structbuffer__info_a21fc6598b9a1e8df410d1168971a2208}{operator=}} (\mbox{\hyperlink{structbuffer__info}{buffer\+\_\+info}} \&\&rhs)
+\item 
+\mbox{\hyperlink{structbuffer__info_af1f9a46bb7b88c2ff00001b68d21cded}{$\sim$buffer\+\_\+info}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{structbuffer__info_a2976ad4b157156ebbcffe667888e2d28}{ptr}} = nullptr
+\item 
+\mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} \mbox{\hyperlink{structbuffer__info_a8a95447f854c217a3b76168627900139}{itemsize}} = 0
+\item 
+\mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} \mbox{\hyperlink{structbuffer__info_aa8d7471a42f3656b1b7a8b94d8fe03ae}{size}} = 0
+\item 
+std\+::string \mbox{\hyperlink{structbuffer__info_af5d89b84be8905b695a23b914e92bbda}{format}}
+\item 
+\mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} \mbox{\hyperlink{structbuffer__info_a81d14cf3fc7ceae1b811f335bf35cd97}{ndim}} = 0
+\item 
+std\+::vector$<$ \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} $>$ \mbox{\hyperlink{structbuffer__info_a69da91575dde98ab488789dfd2d8daf4}{shape}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} $>$ \mbox{\hyperlink{structbuffer__info_abd738097cc1960c4955040eec0619026}{strides}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Information record describing a Python buffer object. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structbuffer__info_a7ba465a026eab59b502922baceb7e196}\label{structbuffer__info_a7ba465a026eab59b502922baceb7e196}} 
+\index{buffer\_info@{buffer\_info}!buffer\_info@{buffer\_info}}
+\index{buffer\_info@{buffer\_info}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{buffer\_info()}{buffer\_info()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily buffer\+\_\+info\+::buffer\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structbuffer__info_a453e5b1373b00938414661fa169506b0}\label{structbuffer__info_a453e5b1373b00938414661fa169506b0}} 
+\index{buffer\_info@{buffer\_info}!buffer\_info@{buffer\_info}}
+\index{buffer\_info@{buffer\_info}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{buffer\_info()}{buffer\_info()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily buffer\+\_\+info\+::buffer\+\_\+info (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}}}]{itemsize,  }\item[{const std\+::string \&}]{format,  }\item[{\mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}}}]{ndim,  }\item[{detail\+::any\+\_\+container$<$ \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} $>$}]{shape\+\_\+in,  }\item[{detail\+::any\+\_\+container$<$ \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} $>$}]{strides\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structbuffer__info_a7b8f6155115e1c4a73e1dd4d8944fcdb}\label{structbuffer__info_a7b8f6155115e1c4a73e1dd4d8944fcdb}} 
+\index{buffer\_info@{buffer\_info}!buffer\_info@{buffer\_info}}
+\index{buffer\_info@{buffer\_info}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{buffer\_info()}{buffer\_info()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+buffer\+\_\+info\+::buffer\+\_\+info (\begin{DoxyParamCaption}\item[{T $\ast$}]{ptr,  }\item[{detail\+::any\+\_\+container$<$ \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} $>$}]{shape\+\_\+in,  }\item[{detail\+::any\+\_\+container$<$ \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} $>$}]{strides\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structbuffer__info_a4fcc193bf8c8693624eb20586471ca85}\label{structbuffer__info_a4fcc193bf8c8693624eb20586471ca85}} 
+\index{buffer\_info@{buffer\_info}!buffer\_info@{buffer\_info}}
+\index{buffer\_info@{buffer\_info}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{buffer\_info()}{buffer\_info()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily buffer\+\_\+info\+::buffer\+\_\+info (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}}}]{itemsize,  }\item[{const std\+::string \&}]{format,  }\item[{\mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structbuffer__info_afdadf4414d716e34b64a215014fc2dfb}\label{structbuffer__info_afdadf4414d716e34b64a215014fc2dfb}} 
+\index{buffer\_info@{buffer\_info}!buffer\_info@{buffer\_info}}
+\index{buffer\_info@{buffer\_info}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{buffer\_info()}{buffer\_info()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+buffer\+\_\+info\+::buffer\+\_\+info (\begin{DoxyParamCaption}\item[{T $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structbuffer__info_a18bf6023b6d4bb685d345d5acb9b71ca}\label{structbuffer__info_a18bf6023b6d4bb685d345d5acb9b71ca}} 
+\index{buffer\_info@{buffer\_info}!buffer\_info@{buffer\_info}}
+\index{buffer\_info@{buffer\_info}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{buffer\_info()}{buffer\_info()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily buffer\+\_\+info\+::buffer\+\_\+info (\begin{DoxyParamCaption}\item[{Py\+\_\+buffer $\ast$}]{view,  }\item[{bool}]{ownview = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{structbuffer__info_a7c5a7e3878ecda87f0e60448b2bf7d1e}\label{structbuffer__info_a7c5a7e3878ecda87f0e60448b2bf7d1e}} 
+\index{buffer\_info@{buffer\_info}!buffer\_info@{buffer\_info}}
+\index{buffer\_info@{buffer\_info}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{buffer\_info()}{buffer\_info()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily buffer\+\_\+info\+::buffer\+\_\+info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structbuffer__info}{buffer\+\_\+info}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{structbuffer__info_a6ea2c0767021b4dc20c6116b6989c3aa}\label{structbuffer__info_a6ea2c0767021b4dc20c6116b6989c3aa}} 
+\index{buffer\_info@{buffer\_info}!buffer\_info@{buffer\_info}}
+\index{buffer\_info@{buffer\_info}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{buffer\_info()}{buffer\_info()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily buffer\+\_\+info\+::buffer\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbuffer__info}{buffer\+\_\+info}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structbuffer__info_af1f9a46bb7b88c2ff00001b68d21cded}\label{structbuffer__info_af1f9a46bb7b88c2ff00001b68d21cded}} 
+\index{buffer\_info@{buffer\_info}!````~buffer\_info@{$\sim$buffer\_info}}
+\index{````~buffer\_info@{$\sim$buffer\_info}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{$\sim$buffer\_info()}{~buffer\_info()}}
+{\footnotesize\ttfamily buffer\+\_\+info\+::$\sim$buffer\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structbuffer__info_a21fc6598b9a1e8df410d1168971a2208}\label{structbuffer__info_a21fc6598b9a1e8df410d1168971a2208}} 
+\index{buffer\_info@{buffer\_info}!operator=@{operator=}}
+\index{operator=@{operator=}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structbuffer__info}{buffer\+\_\+info}}\& buffer\+\_\+info\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbuffer__info}{buffer\+\_\+info}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structbuffer__info_ab55caff9667d44d8ffec6822c4a09068}\label{structbuffer__info_ab55caff9667d44d8ffec6822c4a09068}} 
+\index{buffer\_info@{buffer\_info}!operator=@{operator=}}
+\index{operator=@{operator=}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structbuffer__info}{buffer\+\_\+info}}\& buffer\+\_\+info\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structbuffer__info}{buffer\+\_\+info}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structbuffer__info_af5d89b84be8905b695a23b914e92bbda}\label{structbuffer__info_af5d89b84be8905b695a23b914e92bbda}} 
+\index{buffer\_info@{buffer\_info}!format@{format}}
+\index{format@{format}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily std\+::string buffer\+\_\+info\+::format}
+
+\mbox{\Hypertarget{structbuffer__info_a8a95447f854c217a3b76168627900139}\label{structbuffer__info_a8a95447f854c217a3b76168627900139}} 
+\index{buffer\_info@{buffer\_info}!itemsize@{itemsize}}
+\index{itemsize@{itemsize}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{itemsize}{itemsize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} buffer\+\_\+info\+::itemsize = 0}
+
+\mbox{\Hypertarget{structbuffer__info_a81d14cf3fc7ceae1b811f335bf35cd97}\label{structbuffer__info_a81d14cf3fc7ceae1b811f335bf35cd97}} 
+\index{buffer\_info@{buffer\_info}!ndim@{ndim}}
+\index{ndim@{ndim}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{ndim}{ndim}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} buffer\+\_\+info\+::ndim = 0}
+
+\mbox{\Hypertarget{structbuffer__info_a2976ad4b157156ebbcffe667888e2d28}\label{structbuffer__info_a2976ad4b157156ebbcffe667888e2d28}} 
+\index{buffer\_info@{buffer\_info}!ptr@{ptr}}
+\index{ptr@{ptr}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily void$\ast$ buffer\+\_\+info\+::ptr = nullptr}
+
+\mbox{\Hypertarget{structbuffer__info_a69da91575dde98ab488789dfd2d8daf4}\label{structbuffer__info_a69da91575dde98ab488789dfd2d8daf4}} 
+\index{buffer\_info@{buffer\_info}!shape@{shape}}
+\index{shape@{shape}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{shape}{shape}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}}$>$ buffer\+\_\+info\+::shape}
+
+\mbox{\Hypertarget{structbuffer__info_aa8d7471a42f3656b1b7a8b94d8fe03ae}\label{structbuffer__info_aa8d7471a42f3656b1b7a8b94d8fe03ae}} 
+\index{buffer\_info@{buffer\_info}!size@{size}}
+\index{size@{size}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} buffer\+\_\+info\+::size = 0}
+
+\mbox{\Hypertarget{structbuffer__info_abd738097cc1960c4955040eec0619026}\label{structbuffer__info_abd738097cc1960c4955040eec0619026}} 
+\index{buffer\_info@{buffer\_info}!strides@{strides}}
+\index{strides@{strides}!buffer\_info@{buffer\_info}}
+\doxysubsubsection{\texorpdfstring{strides}{strides}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}}$>$ buffer\+\_\+info\+::strides}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{buffer__info_8h}{buffer\+\_\+info.\+h}}\end{DoxyCompactItemize}

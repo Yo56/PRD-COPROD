@@ -1,0 +1,93 @@
+\hypertarget{classmodule}{}\doxysection{module Class Reference}
+\label{classmodule}\index{module@{module}}
+
+
+Wrapper for Python extension modules.  
+
+
+
+
+{\ttfamily \#include $<$pybind11.\+h$>$}
+
+Inheritance diagram for module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classmodule}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodule_abd798017921903073343c4479efb93c0}{module}} (const char $\ast$\mbox{\hyperlink{structname}{name}}, const char $\ast$\mbox{\hyperlink{structdoc}{doc}}=nullptr)
+\begin{DoxyCompactList}\small\item\em Create a new top-\/level Python module with the given name and docstring. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Func , typename... Extra$>$ }\\\mbox{\hyperlink{classmodule}{module}} \& \mbox{\hyperlink{classmodule_ab17b2e694f8a83305c1b707363a1ccdf}{def}} (const char $\ast$name\+\_\+, Func \&\&f, const Extra \&... extra)
+\item 
+\mbox{\hyperlink{classmodule}{module}} \mbox{\hyperlink{classmodule_a0e559dd7ef70d0edd90d0327ddbd0c12}{def\+\_\+submodule}} (const char $\ast$\mbox{\hyperlink{structname}{name}}, const char $\ast$\mbox{\hyperlink{structdoc}{doc}}=nullptr)
+\item 
+\mbox{\hyperlink{common_8h_a1fb186b7494d5c576d902c0730ecbb71}{PYBIND11\+\_\+\+NOINLINE}} void \mbox{\hyperlink{classmodule_a96d24a509c6c0fc2beb7afa62dc9eb18}{add\+\_\+object}} (const char $\ast$\mbox{\hyperlink{structname}{name}}, \mbox{\hyperlink{classhandle}{handle}} obj, bool overwrite=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classmodule}{module}} \mbox{\hyperlink{classmodule_a40817edef0ded5727701534bcded9982}{import}} (const char $\ast$\mbox{\hyperlink{structname}{name}})
+\begin{DoxyCompactList}\small\item\em Import and return a module or throws {\ttfamily \mbox{\hyperlink{classerror__already__set}{error\+\_\+already\+\_\+set}}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Wrapper for Python extension modules. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmodule_abd798017921903073343c4479efb93c0}\label{classmodule_abd798017921903073343c4479efb93c0}} 
+\index{module@{module}!module@{module}}
+\index{module@{module}!module@{module}}
+\doxysubsubsection{\texorpdfstring{module()}{module()}}
+{\footnotesize\ttfamily module\+::module (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{doc = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Create a new top-\/level Python module with the given name and docstring. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmodule_a96d24a509c6c0fc2beb7afa62dc9eb18}\label{classmodule_a96d24a509c6c0fc2beb7afa62dc9eb18}} 
+\index{module@{module}!add\_object@{add\_object}}
+\index{add\_object@{add\_object}!module@{module}}
+\doxysubsubsection{\texorpdfstring{add\_object()}{add\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a1fb186b7494d5c576d902c0730ecbb71}{PYBIND11\+\_\+\+NOINLINE}} void module\+::add\+\_\+object (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{classhandle}{handle}}}]{obj,  }\item[{bool}]{overwrite = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmodule_ab17b2e694f8a83305c1b707363a1ccdf}\label{classmodule_ab17b2e694f8a83305c1b707363a1ccdf}} 
+\index{module@{module}!def@{def}}
+\index{def@{def}!module@{module}}
+\doxysubsubsection{\texorpdfstring{def()}{def()}}
+{\footnotesize\ttfamily template$<$typename Func , typename... Extra$>$ \\
+\mbox{\hyperlink{classmodule}{module}}\& module\+::def (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name\+\_\+,  }\item[{Func \&\&}]{f,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\textbackslash{}rst Create Python binding for a new function within the module scope. {\ttfamily Func} can be a plain C++ function, a function pointer, or a lambda function. For details on the {\ttfamily Extra\&\& ... extra} argument, see section \+:ref\+:{\ttfamily extras}. \textbackslash{}endrst \mbox{\Hypertarget{classmodule_a0e559dd7ef70d0edd90d0327ddbd0c12}\label{classmodule_a0e559dd7ef70d0edd90d0327ddbd0c12}} 
+\index{module@{module}!def\_submodule@{def\_submodule}}
+\index{def\_submodule@{def\_submodule}!module@{module}}
+\doxysubsubsection{\texorpdfstring{def\_submodule()}{def\_submodule()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmodule}{module}} module\+::def\+\_\+submodule (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{doc = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\textbackslash{}rst Create and return a new Python submodule with the given name and docstring. This also works recursively, i.\+e.
+
+.. code-\/block\+:: cpp \begin{DoxyVerb}py::module m("example", "pybind11 example plugin");
+py::module m2 = m.def_submodule("sub", "A submodule of 'example'");
+py::module m3 = m2.def_submodule("subsub", "A submodule of 'example.sub'");
+\end{DoxyVerb}
+ \textbackslash{}endrst \mbox{\Hypertarget{classmodule_a40817edef0ded5727701534bcded9982}\label{classmodule_a40817edef0ded5727701534bcded9982}} 
+\index{module@{module}!import@{import}}
+\index{import@{import}!module@{module}}
+\doxysubsubsection{\texorpdfstring{import()}{import()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classmodule}{module}} module\+::import (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Import and return a module or throws {\ttfamily \mbox{\hyperlink{classerror__already__set}{error\+\_\+already\+\_\+set}}}. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{pybind11_8h}{pybind11.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,34 @@
+\hypertarget{index__types_8hpp}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.5.0/include/xlnt/cell/index\+\_\+types.hpp File Reference}
+\label{index__types_8hpp}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/include/xlnt/cell/index\_types.hpp@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/include/xlnt/cell/index\_types.hpp}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$xlnt/xlnt\+\_\+config.\+hpp$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1column__t}{xlnt\+::column\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Columns can be referred to as a string A,B,...Z,AA,AB,..,ZZ,AAA,...,ZZZ or as a 1-\/indexed index. This class encapsulates both of these forms of column referencing and allows for conversions between them. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structxlnt_1_1column__hash}{xlnt\+::column\+\_\+hash}}
+\begin{DoxyCompactList}\small\item\em Functor for hashing a column. Allows for use of std\+::unordered\+\_\+set$<$column\+\_\+t, column\+\_\+hash$>$ and similar. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstd_1_1hash_3_01xlnt_1_1column__t_01_4}{std\+::hash$<$ xlnt\+::column\+\_\+t $>$}}
+\begin{DoxyCompactList}\small\item\em Template specialization to allow \mbox{\hyperlink{classxlnt_1_1column__t}{xlnt\+::column\+\_\+t}} to be used as a key in a std container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacexlnt}{xlnt}}
+\begin{DoxyCompactList}\small\item\em Enumerates the possible types a cell can be determined by it\textquotesingle{}s current value. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacestd}{std}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{xlnt\+::row\+\_\+t}} = std\+::uint32\+\_\+t
+\begin{DoxyCompactList}\small\item\em All rows should be referred to by an instance of this type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacexlnt_a8dc0eda024e26470579fd066826f64f3}{xlnt\+::row\+\_\+or\+\_\+col\+\_\+t}} \+: int \{ \mbox{\hyperlink{namespacexlnt_a8dc0eda024e26470579fd066826f64f3af1965a857bc285d26fe22023aa5ab50d}{xlnt\+::row}}
+, \mbox{\hyperlink{namespacexlnt_a8dc0eda024e26470579fd066826f64f3a1afd32818d1c9525f82aff4c09efd254}{xlnt\+::column}}
+ \}
+\end{DoxyCompactItemize}

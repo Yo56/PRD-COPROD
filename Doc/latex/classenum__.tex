@@ -1,0 +1,89 @@
+\hypertarget{classenum__}{}\doxysection{enum\+\_\+$<$ Type $>$ Class Template Reference}
+\label{classenum__}\index{enum\_$<$ Type $>$@{enum\_$<$ Type $>$}}
+
+
+Binds C++ enumerations and enumeration classes to Python.  
+
+
+
+
+{\ttfamily \#include $<$pybind11.\+h$>$}
+
+Inheritance diagram for enum\+\_\+$<$ Type $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classenum__}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classenum___a1825e262342ffd5e7ea411185c9d5bd7}{Scalar}} = typename std\+::underlying\+\_\+type$<$ Type $>$\+::\mbox{\hyperlink{classclass___a90e08a4ecffb596c1f1055f47747ad91}{type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Extra$>$ }\\\mbox{\hyperlink{classenum___a91101e5ded2dc0b8ef0405a7197f1cf1}{enum\+\_\+}} (const \mbox{\hyperlink{classhandle}{handle}} \&\mbox{\hyperlink{structscope}{scope}}, const char $\ast$\mbox{\hyperlink{structname}{name}}, const Extra \&... extra)
+\item 
+\mbox{\hyperlink{classenum__}{enum\+\_\+}} \& \mbox{\hyperlink{classenum___a1cb0d14e870b83cd87bd1f9846b9a449}{export\+\_\+values}} ()
+\begin{DoxyCompactList}\small\item\em Export enumeration entries into the parent scope. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classenum__}{enum\+\_\+}} \& \mbox{\hyperlink{classenum___aabffafa8c167a1c89f8d136533fc99af}{value}} (char const $\ast$\mbox{\hyperlink{structname}{name}}, Type value)
+\begin{DoxyCompactList}\small\item\em Add an enumeration entry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Type$>$\newline
+class enum\+\_\+$<$ Type $>$}
+
+Binds C++ enumerations and enumeration classes to Python. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classenum___a1825e262342ffd5e7ea411185c9d5bd7}\label{classenum___a1825e262342ffd5e7ea411185c9d5bd7}} 
+\index{enum\_$<$ Type $>$@{enum\_$<$ Type $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!enum\_$<$ Type $>$@{enum\_$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{classenum__}{enum\+\_\+}}$<$ Type $>$\+::\mbox{\hyperlink{classenum___a1825e262342ffd5e7ea411185c9d5bd7}{Scalar}} =  typename std\+::underlying\+\_\+type$<$Type$>$\+::\mbox{\hyperlink{classclass___a90e08a4ecffb596c1f1055f47747ad91}{type}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classenum___a91101e5ded2dc0b8ef0405a7197f1cf1}\label{classenum___a91101e5ded2dc0b8ef0405a7197f1cf1}} 
+\index{enum\_$<$ Type $>$@{enum\_$<$ Type $>$}!enum\_@{enum\_}}
+\index{enum\_@{enum\_}!enum\_$<$ Type $>$@{enum\_$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{enum\_()}{enum\_()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+template$<$typename... Extra$>$ \\
+\mbox{\hyperlink{classenum__}{enum\+\_\+}}$<$ Type $>$\+::\mbox{\hyperlink{classenum__}{enum\+\_\+}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhandle}{handle}} \&}]{scope,  }\item[{const char $\ast$}]{name,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classenum___a1cb0d14e870b83cd87bd1f9846b9a449}\label{classenum___a1cb0d14e870b83cd87bd1f9846b9a449}} 
+\index{enum\_$<$ Type $>$@{enum\_$<$ Type $>$}!export\_values@{export\_values}}
+\index{export\_values@{export\_values}!enum\_$<$ Type $>$@{enum\_$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{export\_values()}{export\_values()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classenum__}{enum\+\_\+}}\& \mbox{\hyperlink{classenum__}{enum\+\_\+}}$<$ Type $>$\+::export\+\_\+values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Export enumeration entries into the parent scope. 
+
+\mbox{\Hypertarget{classenum___aabffafa8c167a1c89f8d136533fc99af}\label{classenum___aabffafa8c167a1c89f8d136533fc99af}} 
+\index{enum\_$<$ Type $>$@{enum\_$<$ Type $>$}!value@{value}}
+\index{value@{value}!enum\_$<$ Type $>$@{enum\_$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classenum__}{enum\+\_\+}}\& \mbox{\hyperlink{classenum__}{enum\+\_\+}}$<$ Type $>$\+::value (\begin{DoxyParamCaption}\item[{char const $\ast$}]{name,  }\item[{Type}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add an enumeration entry. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{pybind11_8h}{pybind11.\+h}}\end{DoxyCompactItemize}

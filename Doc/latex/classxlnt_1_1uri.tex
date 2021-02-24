@@ -1,0 +1,319 @@
+\hypertarget{classxlnt_1_1uri}{}\doxysection{xlnt\+::uri Class Reference}
+\label{classxlnt_1_1uri}\index{xlnt::uri@{xlnt::uri}}
+
+
+Encapsulates a uniform resource identifier (URI) as described by RFC 3986.  
+
+
+
+
+{\ttfamily \#include $<$uri.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1uri_a7ba67292d42fc962ea9b6abfb47bd888}{uri}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an empty URI. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1uri_a3c9f471bd8e5e6771fcb397f6257964d}{uri}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&\mbox{\hyperlink{structbase}{base}}, const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&relative)
+\begin{DoxyCompactList}\small\item\em Constructs a URI by combining base with relative. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1uri_a8a0b10a6e47633510e8cfbb9ceff3da6}{uri}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&\mbox{\hyperlink{structbase}{base}}, const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&relative)
+\begin{DoxyCompactList}\small\item\em Constructs a URI by combining base with relative path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1uri_a56d19e26e1ba6d01516155b2e607925f}{uri}} (const std\+::string \&uri\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Constructs a URI by parsing the given uri\+\_\+string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1uri_a3f06c6ab88bfbc667a10b3a376eee341}{is\+\_\+relative}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this URI is relative. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1uri_afe54d7867124e2e6b1da001be4343f8a}{is\+\_\+absolute}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this URI is not relative (i.\+e. absolute). \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1uri_abadbed6cb6eed479119eca5f22e7ad4f}{scheme}} () const
+\begin{DoxyCompactList}\small\item\em Returns the scheme of this URI. E.\+g. the scheme of \href{http://user:pass@example.com}{\texttt{ http\+://user\+:pass@example.\+com}} is \char`\"{}http\char`\"{} \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1uri_a586b7c63004d8d1682896b1a5853c6f6}{authority}} () const
+\begin{DoxyCompactList}\small\item\em Returns the authority of this URI. E.\+g. the authority of \href{http://user:pass@example.com:80/document}{\texttt{ http\+://user\+:pass@example.\+com\+:80/document}} is \char`\"{}user\+:pass@example.\+com\+:80\char`\"{} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1uri_ad15a53adf32086eb4a93bfcee7be3a65}{has\+\_\+authentication}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if an authentication section is specified for this URI. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1uri_a61fbf5c45d850a0655c6c06a4dc9de43}{authentication}} () const
+\begin{DoxyCompactList}\small\item\em Returns the authentication of this URI. E.\+g. the authentication of \href{http://user:pass@example.com}{\texttt{ http\+://user\+:pass@example.\+com}} is \char`\"{}user\+:pass\char`\"{} \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1uri_aa45a7a8fb8240902b64afe0923e3e303}{username}} () const
+\begin{DoxyCompactList}\small\item\em Returns the username of this URI. E.\+g. the username of \href{http://user:pass@example.com}{\texttt{ http\+://user\+:pass@example.\+com}} is \char`\"{}user\char`\"{} \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1uri_aa2d50725cee9b96b36b811d3e7604edd}{password}} () const
+\begin{DoxyCompactList}\small\item\em Returns the password of this URI. E.\+g. the password of \href{http://user:pass@example.com}{\texttt{ http\+://user\+:pass@example.\+com}} is \char`\"{}pass\char`\"{} \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1uri_a40ffb288aa571cd2cb52f5a4772a4c4f}{host}} () const
+\begin{DoxyCompactList}\small\item\em Returns the host of this URI. E.\+g. the host of \href{http://example.com:80/document}{\texttt{ http\+://example.\+com\+:80/document}} is \char`\"{}example.\+com\char`\"{} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1uri_a0c22164dc18ee484c78060226fb91b3c}{has\+\_\+port}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if a non-\/default port is specified for this URI. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1uri_ad280752472ad85129fc22f9b5ef502ed}{port}} () const
+\begin{DoxyCompactList}\small\item\em Returns the port of this URI. E.\+g. the port of \href{https://example.com:443/document}{\texttt{ https\+://example.\+com\+:443/document}} is \char`\"{}443\char`\"{} \end{DoxyCompactList}\item 
+const class \mbox{\hyperlink{classxlnt_1_1path}{path}} \& \mbox{\hyperlink{classxlnt_1_1uri_ac5eed7c4d96f7dabd0919c2d540b7754}{path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the path of this URI. E.\+g. the path of \href{http://example.com/document}{\texttt{ http\+://example.\+com/document}} is \char`\"{}/document\char`\"{} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1uri_adefb26040b2cc96a1de65de2fa5ecc7b}{has\+\_\+query}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this URI has a non-\/null query string section. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1uri_a832758706433ac02460644bd87175ebc}{query}} () const
+\begin{DoxyCompactList}\small\item\em Returns the query string of this URI. E.\+g. the query of \href{http://example.com/document?v=1&x=3\#abc}{\texttt{ http\+://example.\+com/document?v=1\&x=3\#abc}} is \char`\"{}v=1\&x=3\char`\"{} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1uri_aee84bad9b87675fdf263900bb45bb90d}{has\+\_\+fragment}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this URI has a non-\/empty fragment section. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1uri_af84f58e570ff04a96a12d0c428a60bed}{fragment}} () const
+\begin{DoxyCompactList}\small\item\em Returns the fragment section of this URI. E.\+g. the fragment of \href{http://example.com/document\#abc}{\texttt{ http\+://example.\+com/document\#abc}} is \char`\"{}abc\char`\"{} \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1uri_a6ccfabb6971665c571bad03b2d52ce56}{to\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Returns a string representation of this URI. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1uri}{uri}} \mbox{\hyperlink{classxlnt_1_1uri_aefe10f91bdb0b6f78c7ba38d26774ffb}{make\+\_\+absolute}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&\mbox{\hyperlink{structbase}{base}})
+\begin{DoxyCompactList}\small\item\em If this URI is relative, an absolute URI will be returned by appending the path to the given absolute base URI. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1uri}{uri}} \mbox{\hyperlink{classxlnt_1_1uri_a247dd17de4a6f8fc871799e14eabe7e7}{make\+\_\+reference}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&\mbox{\hyperlink{structbase}{base}})
+\begin{DoxyCompactList}\small\item\em If this URI is absolute, a relative URI will be returned by removing the common base path from the given absolute base URI. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1uri_ad72be3cd127e732aca2d5e3db8a63d2e}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this URI is equivalent to other. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encapsulates a uniform resource identifier (URI) as described by RFC 3986. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1uri_a7ba67292d42fc962ea9b6abfb47bd888}\label{classxlnt_1_1uri_a7ba67292d42fc962ea9b6abfb47bd888}} 
+\index{xlnt::uri@{xlnt::uri}!uri@{uri}}
+\index{uri@{uri}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{uri()}{uri()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily xlnt\+::uri\+::uri (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs an empty URI. 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_a3c9f471bd8e5e6771fcb397f6257964d}\label{classxlnt_1_1uri_a3c9f471bd8e5e6771fcb397f6257964d}} 
+\index{xlnt::uri@{xlnt::uri}!uri@{uri}}
+\index{uri@{uri}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{uri()}{uri()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily xlnt\+::uri\+::uri (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&}]{base,  }\item[{const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&}]{relative }\end{DoxyParamCaption})}
+
+
+
+Constructs a URI by combining base with relative. 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_a8a0b10a6e47633510e8cfbb9ceff3da6}\label{classxlnt_1_1uri_a8a0b10a6e47633510e8cfbb9ceff3da6}} 
+\index{xlnt::uri@{xlnt::uri}!uri@{uri}}
+\index{uri@{uri}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{uri()}{uri()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily xlnt\+::uri\+::uri (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&}]{base,  }\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{relative }\end{DoxyParamCaption})}
+
+
+
+Constructs a URI by combining base with relative path. 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_a56d19e26e1ba6d01516155b2e607925f}\label{classxlnt_1_1uri_a56d19e26e1ba6d01516155b2e607925f}} 
+\index{xlnt::uri@{xlnt::uri}!uri@{uri}}
+\index{uri@{uri}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{uri()}{uri()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily xlnt\+::uri\+::uri (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Constructs a URI by parsing the given uri\+\_\+string. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1uri_a61fbf5c45d850a0655c6c06a4dc9de43}\label{classxlnt_1_1uri_a61fbf5c45d850a0655c6c06a4dc9de43}} 
+\index{xlnt::uri@{xlnt::uri}!authentication@{authentication}}
+\index{authentication@{authentication}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{authentication()}{authentication()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::uri\+::authentication (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the authentication of this URI. E.\+g. the authentication of \href{http://user:pass@example.com}{\texttt{ http\+://user\+:pass@example.\+com}} is \char`\"{}user\+:pass\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_a586b7c63004d8d1682896b1a5853c6f6}\label{classxlnt_1_1uri_a586b7c63004d8d1682896b1a5853c6f6}} 
+\index{xlnt::uri@{xlnt::uri}!authority@{authority}}
+\index{authority@{authority}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{authority()}{authority()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::uri\+::authority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the authority of this URI. E.\+g. the authority of \href{http://user:pass@example.com:80/document}{\texttt{ http\+://user\+:pass@example.\+com\+:80/document}} is \char`\"{}user\+:pass@example.\+com\+:80\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_af84f58e570ff04a96a12d0c428a60bed}\label{classxlnt_1_1uri_af84f58e570ff04a96a12d0c428a60bed}} 
+\index{xlnt::uri@{xlnt::uri}!fragment@{fragment}}
+\index{fragment@{fragment}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{fragment()}{fragment()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::uri\+::fragment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the fragment section of this URI. E.\+g. the fragment of \href{http://example.com/document\#abc}{\texttt{ http\+://example.\+com/document\#abc}} is \char`\"{}abc\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_ad15a53adf32086eb4a93bfcee7be3a65}\label{classxlnt_1_1uri_ad15a53adf32086eb4a93bfcee7be3a65}} 
+\index{xlnt::uri@{xlnt::uri}!has\_authentication@{has\_authentication}}
+\index{has\_authentication@{has\_authentication}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{has\_authentication()}{has\_authentication()}}
+{\footnotesize\ttfamily bool xlnt\+::uri\+::has\+\_\+authentication (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if an authentication section is specified for this URI. 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_aee84bad9b87675fdf263900bb45bb90d}\label{classxlnt_1_1uri_aee84bad9b87675fdf263900bb45bb90d}} 
+\index{xlnt::uri@{xlnt::uri}!has\_fragment@{has\_fragment}}
+\index{has\_fragment@{has\_fragment}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{has\_fragment()}{has\_fragment()}}
+{\footnotesize\ttfamily bool xlnt\+::uri\+::has\+\_\+fragment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this URI has a non-\/empty fragment section. 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_a0c22164dc18ee484c78060226fb91b3c}\label{classxlnt_1_1uri_a0c22164dc18ee484c78060226fb91b3c}} 
+\index{xlnt::uri@{xlnt::uri}!has\_port@{has\_port}}
+\index{has\_port@{has\_port}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{has\_port()}{has\_port()}}
+{\footnotesize\ttfamily bool xlnt\+::uri\+::has\+\_\+port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if a non-\/default port is specified for this URI. 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_adefb26040b2cc96a1de65de2fa5ecc7b}\label{classxlnt_1_1uri_adefb26040b2cc96a1de65de2fa5ecc7b}} 
+\index{xlnt::uri@{xlnt::uri}!has\_query@{has\_query}}
+\index{has\_query@{has\_query}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{has\_query()}{has\_query()}}
+{\footnotesize\ttfamily bool xlnt\+::uri\+::has\+\_\+query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this URI has a non-\/null query string section. 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_a40ffb288aa571cd2cb52f5a4772a4c4f}\label{classxlnt_1_1uri_a40ffb288aa571cd2cb52f5a4772a4c4f}} 
+\index{xlnt::uri@{xlnt::uri}!host@{host}}
+\index{host@{host}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{host()}{host()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::uri\+::host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the host of this URI. E.\+g. the host of \href{http://example.com:80/document}{\texttt{ http\+://example.\+com\+:80/document}} is \char`\"{}example.\+com\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_afe54d7867124e2e6b1da001be4343f8a}\label{classxlnt_1_1uri_afe54d7867124e2e6b1da001be4343f8a}} 
+\index{xlnt::uri@{xlnt::uri}!is\_absolute@{is\_absolute}}
+\index{is\_absolute@{is\_absolute}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{is\_absolute()}{is\_absolute()}}
+{\footnotesize\ttfamily bool xlnt\+::uri\+::is\+\_\+absolute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this URI is not relative (i.\+e. absolute). 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_a3f06c6ab88bfbc667a10b3a376eee341}\label{classxlnt_1_1uri_a3f06c6ab88bfbc667a10b3a376eee341}} 
+\index{xlnt::uri@{xlnt::uri}!is\_relative@{is\_relative}}
+\index{is\_relative@{is\_relative}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{is\_relative()}{is\_relative()}}
+{\footnotesize\ttfamily bool xlnt\+::uri\+::is\+\_\+relative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this URI is relative. 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_aefe10f91bdb0b6f78c7ba38d26774ffb}\label{classxlnt_1_1uri_aefe10f91bdb0b6f78c7ba38d26774ffb}} 
+\index{xlnt::uri@{xlnt::uri}!make\_absolute@{make\_absolute}}
+\index{make\_absolute@{make\_absolute}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{make\_absolute()}{make\_absolute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1uri}{uri}} xlnt\+::uri\+::make\+\_\+absolute (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&}]{base }\end{DoxyParamCaption})}
+
+
+
+If this URI is relative, an absolute URI will be returned by appending the path to the given absolute base URI. 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_a247dd17de4a6f8fc871799e14eabe7e7}\label{classxlnt_1_1uri_a247dd17de4a6f8fc871799e14eabe7e7}} 
+\index{xlnt::uri@{xlnt::uri}!make\_reference@{make\_reference}}
+\index{make\_reference@{make\_reference}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{make\_reference()}{make\_reference()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1uri}{uri}} xlnt\+::uri\+::make\+\_\+reference (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&}]{base }\end{DoxyParamCaption})}
+
+
+
+If this URI is absolute, a relative URI will be returned by removing the common base path from the given absolute base URI. 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_ad72be3cd127e732aca2d5e3db8a63d2e}\label{classxlnt_1_1uri_ad72be3cd127e732aca2d5e3db8a63d2e}} 
+\index{xlnt::uri@{xlnt::uri}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::uri\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this URI is equivalent to other. 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_aa2d50725cee9b96b36b811d3e7604edd}\label{classxlnt_1_1uri_aa2d50725cee9b96b36b811d3e7604edd}} 
+\index{xlnt::uri@{xlnt::uri}!password@{password}}
+\index{password@{password}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{password()}{password()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::uri\+::password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the password of this URI. E.\+g. the password of \href{http://user:pass@example.com}{\texttt{ http\+://user\+:pass@example.\+com}} is \char`\"{}pass\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_ac5eed7c4d96f7dabd0919c2d540b7754}\label{classxlnt_1_1uri_ac5eed7c4d96f7dabd0919c2d540b7754}} 
+\index{xlnt::uri@{xlnt::uri}!path@{path}}
+\index{path@{path}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{path()}{path()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1path}{path}} \& xlnt\+::uri\+::path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the path of this URI. E.\+g. the path of \href{http://example.com/document}{\texttt{ http\+://example.\+com/document}} is \char`\"{}/document\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_ad280752472ad85129fc22f9b5ef502ed}\label{classxlnt_1_1uri_ad280752472ad85129fc22f9b5ef502ed}} 
+\index{xlnt::uri@{xlnt::uri}!port@{port}}
+\index{port@{port}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{port()}{port()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::uri\+::port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the port of this URI. E.\+g. the port of \href{https://example.com:443/document}{\texttt{ https\+://example.\+com\+:443/document}} is \char`\"{}443\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_a832758706433ac02460644bd87175ebc}\label{classxlnt_1_1uri_a832758706433ac02460644bd87175ebc}} 
+\index{xlnt::uri@{xlnt::uri}!query@{query}}
+\index{query@{query}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::uri\+::query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the query string of this URI. E.\+g. the query of \href{http://example.com/document?v=1&x=3\#abc}{\texttt{ http\+://example.\+com/document?v=1\&x=3\#abc}} is \char`\"{}v=1\&x=3\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_abadbed6cb6eed479119eca5f22e7ad4f}\label{classxlnt_1_1uri_abadbed6cb6eed479119eca5f22e7ad4f}} 
+\index{xlnt::uri@{xlnt::uri}!scheme@{scheme}}
+\index{scheme@{scheme}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{scheme()}{scheme()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::uri\+::scheme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the scheme of this URI. E.\+g. the scheme of \href{http://user:pass@example.com}{\texttt{ http\+://user\+:pass@example.\+com}} is \char`\"{}http\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_a6ccfabb6971665c571bad03b2d52ce56}\label{classxlnt_1_1uri_a6ccfabb6971665c571bad03b2d52ce56}} 
+\index{xlnt::uri@{xlnt::uri}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::uri\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a string representation of this URI. 
+
+\mbox{\Hypertarget{classxlnt_1_1uri_aa45a7a8fb8240902b64afe0923e3e303}\label{classxlnt_1_1uri_aa45a7a8fb8240902b64afe0923e3e303}} 
+\index{xlnt::uri@{xlnt::uri}!username@{username}}
+\index{username@{username}!xlnt::uri@{xlnt::uri}}
+\doxysubsubsection{\texorpdfstring{username()}{username()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::uri\+::username (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the username of this URI. E.\+g. the username of \href{http://user:pass@example.com}{\texttt{ http\+://user\+:pass@example.\+com}} is \char`\"{}user\char`\"{} 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/packaging/\mbox{\hyperlink{uri_8hpp}{uri.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/packaging/\mbox{\hyperlink{uri_8cpp}{uri.\+cpp}}\end{DoxyCompactItemize}

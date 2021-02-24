@@ -1,0 +1,197 @@
+\hypertarget{classxlnt_1_1python__streambuf}{}\doxysection{xlnt\+::python\+\_\+streambuf Class Reference}
+\label{classxlnt_1_1python__streambuf}\index{xlnt::python\_streambuf@{xlnt::python\_streambuf}}
+
+
+{\ttfamily \#include $<$python\+\_\+streambuf.\+hpp$>$}
+
+Inheritance diagram for xlnt\+::python\+\_\+streambuf\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classxlnt_1_1python__streambuf}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef base\+\_\+t\+::char\+\_\+type \mbox{\hyperlink{classxlnt_1_1python__streambuf_a3c94a1a43dad5cfe8798beb21391fea5}{char\+\_\+type}}
+\item 
+typedef base\+\_\+t\+::int\+\_\+type \mbox{\hyperlink{classxlnt_1_1python__streambuf_af8f1d1048672950e4e0b60e5c55cbc38}{int\+\_\+type}}
+\item 
+typedef base\+\_\+t\+::pos\+\_\+type \mbox{\hyperlink{classxlnt_1_1python__streambuf_acb4bde4ec4b9b080175c2a134bd15c08}{pos\+\_\+type}}
+\item 
+typedef base\+\_\+t\+::off\+\_\+type \mbox{\hyperlink{classxlnt_1_1python__streambuf_af7a227666c5edffbdbd5eb3774f29a56}{off\+\_\+type}}
+\item 
+typedef base\+\_\+t\+::traits\+\_\+type \mbox{\hyperlink{classxlnt_1_1python__streambuf_ac5bfb88a2dff467918d4b8cf1ab8807d}{traits\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1python__streambuf_a840aefd3702a7bc40e62a3340830540f}{python\+\_\+streambuf}} (pybind11\+::object python\+\_\+file\+\_\+obj, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} buffer\+\_\+size\+\_\+=0)
+\begin{DoxyCompactList}\small\item\em Construct from a Python file object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classxlnt_1_1python__streambuf_ab3b4d42c62a89b7b05720fc3aacb8fb4}{$\sim$python\+\_\+streambuf}} ()
+\begin{DoxyCompactList}\small\item\em Mundane destructor freeing the allocated resources. \end{DoxyCompactList}\item 
+virtual std\+::streamsize \mbox{\hyperlink{classxlnt_1_1python__streambuf_ae30f3e7ad582581ca34b30723a957cb5}{showmanyc}} ()
+\begin{DoxyCompactList}\small\item\em C.\+f. C++ standard section 27.\+5.\+2.\+4.\+3. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classxlnt_1_1python__streambuf_af8f1d1048672950e4e0b60e5c55cbc38}{int\+\_\+type}} \mbox{\hyperlink{classxlnt_1_1python__streambuf_ae38d0f2a708de1ed6000ef68a18bc0cc}{underflow}} ()
+\begin{DoxyCompactList}\small\item\em C.\+f. C++ standard section 27.\+5.\+2.\+4.\+3. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classxlnt_1_1python__streambuf_af8f1d1048672950e4e0b60e5c55cbc38}{int\+\_\+type}} \mbox{\hyperlink{classxlnt_1_1python__streambuf_a153fc3a56ccc1477abaa6985d7c8ec82}{overflow}} (\mbox{\hyperlink{classxlnt_1_1python__streambuf_af8f1d1048672950e4e0b60e5c55cbc38}{int\+\_\+type}} c=\mbox{\hyperlink{classxlnt_1_1python__streambuf_a164bc72ac5aa7af95831eb3f7a085098}{traits\+\_\+type\+\_\+eof}}())
+\begin{DoxyCompactList}\small\item\em C.\+f. C++ standard section 27.\+5.\+2.\+4.\+5. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classxlnt_1_1python__streambuf_afcc98f7fc77f94cc9348805069e0888f}{sync}} ()
+\begin{DoxyCompactList}\small\item\em Update the python file to reflect the state of this stream buffer. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classxlnt_1_1python__streambuf_acb4bde4ec4b9b080175c2a134bd15c08}{pos\+\_\+type}} \mbox{\hyperlink{classxlnt_1_1python__streambuf_ae8f93663d34242594e9b74a9c5788744}{seekoff}} (\mbox{\hyperlink{classxlnt_1_1python__streambuf_af7a227666c5edffbdbd5eb3774f29a56}{off\+\_\+type}} off, std\+::ios\+\_\+base\+::seekdir way, std\+::ios\+\_\+base\+::openmode which=std\+::ios\+\_\+base\+::in$\vert$std\+::ios\+\_\+base\+::out)
+\begin{DoxyCompactList}\small\item\em C.\+f. C++ standard section 27.\+5.\+2.\+4.\+2. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classxlnt_1_1python__streambuf_acb4bde4ec4b9b080175c2a134bd15c08}{pos\+\_\+type}} \mbox{\hyperlink{classxlnt_1_1python__streambuf_ac681ab8219a102da4c739b0509bc028a}{seekpos}} (\mbox{\hyperlink{classxlnt_1_1python__streambuf_acb4bde4ec4b9b080175c2a134bd15c08}{pos\+\_\+type}} sp, std\+::ios\+\_\+base\+::openmode which=std\+::ios\+\_\+base\+::in$\vert$std\+::ios\+\_\+base\+::out)
+\begin{DoxyCompactList}\small\item\em C.\+f. C++ standard section 27.\+5.\+2.\+4.\+2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classxlnt_1_1python__streambuf_a164bc72ac5aa7af95831eb3f7a085098}{traits\+\_\+type\+\_\+eof}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1python__streambuf_ab6fcc6b9bbcba325c59a11e78a2c2cef}{default\+\_\+buffer\+\_\+size}} = 1024
+\begin{DoxyCompactList}\small\item\em The default size of the read and write buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classxlnt_1_1python__streambuf_a3c94a1a43dad5cfe8798beb21391fea5}\label{classxlnt_1_1python__streambuf_a3c94a1a43dad5cfe8798beb21391fea5}} 
+\index{xlnt::python\_streambuf@{xlnt::python\_streambuf}!char\_type@{char\_type}}
+\index{char\_type@{char\_type}!xlnt::python\_streambuf@{xlnt::python\_streambuf}}
+\doxysubsubsection{\texorpdfstring{char\_type}{char\_type}}
+{\footnotesize\ttfamily typedef base\+\_\+t\+::char\+\_\+type \mbox{\hyperlink{classxlnt_1_1python__streambuf_a3c94a1a43dad5cfe8798beb21391fea5}{xlnt\+::python\+\_\+streambuf\+::char\+\_\+type}}}
+
+\mbox{\Hypertarget{classxlnt_1_1python__streambuf_af8f1d1048672950e4e0b60e5c55cbc38}\label{classxlnt_1_1python__streambuf_af8f1d1048672950e4e0b60e5c55cbc38}} 
+\index{xlnt::python\_streambuf@{xlnt::python\_streambuf}!int\_type@{int\_type}}
+\index{int\_type@{int\_type}!xlnt::python\_streambuf@{xlnt::python\_streambuf}}
+\doxysubsubsection{\texorpdfstring{int\_type}{int\_type}}
+{\footnotesize\ttfamily typedef base\+\_\+t\+::int\+\_\+type \mbox{\hyperlink{classxlnt_1_1python__streambuf_af8f1d1048672950e4e0b60e5c55cbc38}{xlnt\+::python\+\_\+streambuf\+::int\+\_\+type}}}
+
+\mbox{\Hypertarget{classxlnt_1_1python__streambuf_af7a227666c5edffbdbd5eb3774f29a56}\label{classxlnt_1_1python__streambuf_af7a227666c5edffbdbd5eb3774f29a56}} 
+\index{xlnt::python\_streambuf@{xlnt::python\_streambuf}!off\_type@{off\_type}}
+\index{off\_type@{off\_type}!xlnt::python\_streambuf@{xlnt::python\_streambuf}}
+\doxysubsubsection{\texorpdfstring{off\_type}{off\_type}}
+{\footnotesize\ttfamily typedef base\+\_\+t\+::off\+\_\+type \mbox{\hyperlink{classxlnt_1_1python__streambuf_af7a227666c5edffbdbd5eb3774f29a56}{xlnt\+::python\+\_\+streambuf\+::off\+\_\+type}}}
+
+\mbox{\Hypertarget{classxlnt_1_1python__streambuf_acb4bde4ec4b9b080175c2a134bd15c08}\label{classxlnt_1_1python__streambuf_acb4bde4ec4b9b080175c2a134bd15c08}} 
+\index{xlnt::python\_streambuf@{xlnt::python\_streambuf}!pos\_type@{pos\_type}}
+\index{pos\_type@{pos\_type}!xlnt::python\_streambuf@{xlnt::python\_streambuf}}
+\doxysubsubsection{\texorpdfstring{pos\_type}{pos\_type}}
+{\footnotesize\ttfamily typedef base\+\_\+t\+::pos\+\_\+type \mbox{\hyperlink{classxlnt_1_1python__streambuf_acb4bde4ec4b9b080175c2a134bd15c08}{xlnt\+::python\+\_\+streambuf\+::pos\+\_\+type}}}
+
+\mbox{\Hypertarget{classxlnt_1_1python__streambuf_ac5bfb88a2dff467918d4b8cf1ab8807d}\label{classxlnt_1_1python__streambuf_ac5bfb88a2dff467918d4b8cf1ab8807d}} 
+\index{xlnt::python\_streambuf@{xlnt::python\_streambuf}!traits\_type@{traits\_type}}
+\index{traits\_type@{traits\_type}!xlnt::python\_streambuf@{xlnt::python\_streambuf}}
+\doxysubsubsection{\texorpdfstring{traits\_type}{traits\_type}}
+{\footnotesize\ttfamily typedef base\+\_\+t\+::traits\+\_\+type \mbox{\hyperlink{classxlnt_1_1python__streambuf_ac5bfb88a2dff467918d4b8cf1ab8807d}{xlnt\+::python\+\_\+streambuf\+::traits\+\_\+type}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1python__streambuf_a840aefd3702a7bc40e62a3340830540f}\label{classxlnt_1_1python__streambuf_a840aefd3702a7bc40e62a3340830540f}} 
+\index{xlnt::python\_streambuf@{xlnt::python\_streambuf}!python\_streambuf@{python\_streambuf}}
+\index{python\_streambuf@{python\_streambuf}!xlnt::python\_streambuf@{xlnt::python\_streambuf}}
+\doxysubsubsection{\texorpdfstring{python\_streambuf()}{python\_streambuf()}}
+{\footnotesize\ttfamily xlnt\+::python\+\_\+streambuf\+::python\+\_\+streambuf (\begin{DoxyParamCaption}\item[{pybind11\+::object}]{python\+\_\+file\+\_\+obj,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{buffer\+\_\+size\+\_\+ = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct from a Python file object. 
+
+if buffer\+\_\+size is 0 the current default\+\_\+buffer\+\_\+size is used. \mbox{\Hypertarget{classxlnt_1_1python__streambuf_ab3b4d42c62a89b7b05720fc3aacb8fb4}\label{classxlnt_1_1python__streambuf_ab3b4d42c62a89b7b05720fc3aacb8fb4}} 
+\index{xlnt::python\_streambuf@{xlnt::python\_streambuf}!````~python\_streambuf@{$\sim$python\_streambuf}}
+\index{````~python\_streambuf@{$\sim$python\_streambuf}!xlnt::python\_streambuf@{xlnt::python\_streambuf}}
+\doxysubsubsection{\texorpdfstring{$\sim$python\_streambuf()}{~python\_streambuf()}}
+{\footnotesize\ttfamily virtual xlnt\+::python\+\_\+streambuf\+::$\sim$python\+\_\+streambuf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Mundane destructor freeing the allocated resources. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1python__streambuf_a153fc3a56ccc1477abaa6985d7c8ec82}\label{classxlnt_1_1python__streambuf_a153fc3a56ccc1477abaa6985d7c8ec82}} 
+\index{xlnt::python\_streambuf@{xlnt::python\_streambuf}!overflow@{overflow}}
+\index{overflow@{overflow}!xlnt::python\_streambuf@{xlnt::python\_streambuf}}
+\doxysubsubsection{\texorpdfstring{overflow()}{overflow()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classxlnt_1_1python__streambuf_af8f1d1048672950e4e0b60e5c55cbc38}{int\+\_\+type}} xlnt\+::python\+\_\+streambuf\+::overflow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1python__streambuf_af8f1d1048672950e4e0b60e5c55cbc38}{int\+\_\+type}}}]{c = {\ttfamily \mbox{\hyperlink{classxlnt_1_1python__streambuf_a164bc72ac5aa7af95831eb3f7a085098}{traits\+\_\+type\+\_\+eof}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+C.\+f. C++ standard section 27.\+5.\+2.\+4.\+5. 
+
+\mbox{\Hypertarget{classxlnt_1_1python__streambuf_ae8f93663d34242594e9b74a9c5788744}\label{classxlnt_1_1python__streambuf_ae8f93663d34242594e9b74a9c5788744}} 
+\index{xlnt::python\_streambuf@{xlnt::python\_streambuf}!seekoff@{seekoff}}
+\index{seekoff@{seekoff}!xlnt::python\_streambuf@{xlnt::python\_streambuf}}
+\doxysubsubsection{\texorpdfstring{seekoff()}{seekoff()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classxlnt_1_1python__streambuf_acb4bde4ec4b9b080175c2a134bd15c08}{pos\+\_\+type}} xlnt\+::python\+\_\+streambuf\+::seekoff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1python__streambuf_af7a227666c5edffbdbd5eb3774f29a56}{off\+\_\+type}}}]{off,  }\item[{std\+::ios\+\_\+base\+::seekdir}]{way,  }\item[{std\+::ios\+\_\+base\+::openmode}]{which = {\ttfamily std\+:\+:ios\+\_\+base\+:\+:in~$\vert$~std\+:\+:ios\+\_\+base\+:\+:out} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+C.\+f. C++ standard section 27.\+5.\+2.\+4.\+2. 
+
+This implementation is optimised to look whether the position is within the buffers, so as to avoid calling Python seek or tell. It is important for many applications that the overhead of calling into Python is avoided as much as possible (e.\+g. parsers which may do a lot of backtracking) \mbox{\Hypertarget{classxlnt_1_1python__streambuf_ac681ab8219a102da4c739b0509bc028a}\label{classxlnt_1_1python__streambuf_ac681ab8219a102da4c739b0509bc028a}} 
+\index{xlnt::python\_streambuf@{xlnt::python\_streambuf}!seekpos@{seekpos}}
+\index{seekpos@{seekpos}!xlnt::python\_streambuf@{xlnt::python\_streambuf}}
+\doxysubsubsection{\texorpdfstring{seekpos()}{seekpos()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classxlnt_1_1python__streambuf_acb4bde4ec4b9b080175c2a134bd15c08}{pos\+\_\+type}} xlnt\+::python\+\_\+streambuf\+::seekpos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1python__streambuf_acb4bde4ec4b9b080175c2a134bd15c08}{pos\+\_\+type}}}]{sp,  }\item[{std\+::ios\+\_\+base\+::openmode}]{which = {\ttfamily std\+:\+:ios\+\_\+base\+:\+:in~$\vert$~std\+:\+:ios\+\_\+base\+:\+:out} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+C.\+f. C++ standard section 27.\+5.\+2.\+4.\+2. 
+
+\mbox{\Hypertarget{classxlnt_1_1python__streambuf_ae30f3e7ad582581ca34b30723a957cb5}\label{classxlnt_1_1python__streambuf_ae30f3e7ad582581ca34b30723a957cb5}} 
+\index{xlnt::python\_streambuf@{xlnt::python\_streambuf}!showmanyc@{showmanyc}}
+\index{showmanyc@{showmanyc}!xlnt::python\_streambuf@{xlnt::python\_streambuf}}
+\doxysubsubsection{\texorpdfstring{showmanyc()}{showmanyc()}}
+{\footnotesize\ttfamily virtual std\+::streamsize xlnt\+::python\+\_\+streambuf\+::showmanyc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+C.\+f. C++ standard section 27.\+5.\+2.\+4.\+3. 
+
+It is essential to override this virtual function for the stream member function readsome to work correctly (c.\+f. 27.\+6.\+1.\+3, alinea 30) \mbox{\Hypertarget{classxlnt_1_1python__streambuf_afcc98f7fc77f94cc9348805069e0888f}\label{classxlnt_1_1python__streambuf_afcc98f7fc77f94cc9348805069e0888f}} 
+\index{xlnt::python\_streambuf@{xlnt::python\_streambuf}!sync@{sync}}
+\index{sync@{sync}!xlnt::python\_streambuf@{xlnt::python\_streambuf}}
+\doxysubsubsection{\texorpdfstring{sync()}{sync()}}
+{\footnotesize\ttfamily virtual int xlnt\+::python\+\_\+streambuf\+::sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Update the python file to reflect the state of this stream buffer. 
+
+Empty the write buffer into the Python file object and set the seek position of the latter accordingly (C++ standard section 27.\+5.\+2.\+4.\+2). If there is no write buffer or it is empty, but there is a non-\/empty read buffer, set the Python file object seek position to the seek position in that read buffer. \mbox{\Hypertarget{classxlnt_1_1python__streambuf_a164bc72ac5aa7af95831eb3f7a085098}\label{classxlnt_1_1python__streambuf_a164bc72ac5aa7af95831eb3f7a085098}} 
+\index{xlnt::python\_streambuf@{xlnt::python\_streambuf}!traits\_type\_eof@{traits\_type\_eof}}
+\index{traits\_type\_eof@{traits\_type\_eof}!xlnt::python\_streambuf@{xlnt::python\_streambuf}}
+\doxysubsubsection{\texorpdfstring{traits\_type\_eof()}{traits\_type\_eof()}}
+{\footnotesize\ttfamily static int xlnt\+::python\+\_\+streambuf\+::traits\+\_\+type\+\_\+eof (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classxlnt_1_1python__streambuf_ae38d0f2a708de1ed6000ef68a18bc0cc}\label{classxlnt_1_1python__streambuf_ae38d0f2a708de1ed6000ef68a18bc0cc}} 
+\index{xlnt::python\_streambuf@{xlnt::python\_streambuf}!underflow@{underflow}}
+\index{underflow@{underflow}!xlnt::python\_streambuf@{xlnt::python\_streambuf}}
+\doxysubsubsection{\texorpdfstring{underflow()}{underflow()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classxlnt_1_1python__streambuf_af8f1d1048672950e4e0b60e5c55cbc38}{int\+\_\+type}} xlnt\+::python\+\_\+streambuf\+::underflow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+C.\+f. C++ standard section 27.\+5.\+2.\+4.\+3. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classxlnt_1_1python__streambuf_ab6fcc6b9bbcba325c59a11e78a2c2cef}\label{classxlnt_1_1python__streambuf_ab6fcc6b9bbcba325c59a11e78a2c2cef}} 
+\index{xlnt::python\_streambuf@{xlnt::python\_streambuf}!default\_buffer\_size@{default\_buffer\_size}}
+\index{default\_buffer\_size@{default\_buffer\_size}!xlnt::python\_streambuf@{xlnt::python\_streambuf}}
+\doxysubsubsection{\texorpdfstring{default\_buffer\_size}{default\_buffer\_size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::python\+\_\+streambuf\+::default\+\_\+buffer\+\_\+size = 1024\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The default size of the read and write buffer. 
+
+They are respectively used to buffer data read from and data written to the Python file object. It can be modified from Python. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/python/\mbox{\hyperlink{python__streambuf_8hpp}{python\+\_\+streambuf.\+hpp}}\end{DoxyCompactItemize}

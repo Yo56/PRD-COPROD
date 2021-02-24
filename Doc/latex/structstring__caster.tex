@@ -1,0 +1,77 @@
+\hypertarget{structstring__caster}{}\doxysection{string\+\_\+caster$<$ String\+Type, Is\+View $>$ Struct Template Reference}
+\label{structstring__caster}\index{string\_caster$<$ StringType, IsView $>$@{string\_caster$<$ StringType, IsView $>$}}
+
+
+{\ttfamily \#include $<$cast.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structstring__caster_a0d5228e9253c85b930b6230662f2f60c}{CharT}} = typename String\+Type\+::value\+\_\+type
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structstring__caster_aa38bc121001de95bcf9c45ddbffdb635}{load}} (\mbox{\hyperlink{classhandle}{handle}} src, bool)
+\item 
+\mbox{\hyperlink{structstring__caster_afe8c27c979388d23f805bb38f04d94ab}{PYBIND11\+\_\+\+TYPE\+\_\+\+CASTER}} (String\+Type, \mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\mbox{\hyperlink{common_8h_a4490c1733364f04fcea017da2eb38d38}{PYBIND11\+\_\+\+STRING\+\_\+\+NAME}}))
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{structstring__caster_aac6f059b620b6ada6aed354b9c3f0b56}{cast}} (const String\+Type \&src, \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}}, \mbox{\hyperlink{classhandle}{handle}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} \mbox{\hyperlink{structstring__caster_a1d6a90921b8dd893b6feecfa98859d28}{UTF\+\_\+N}} = 8 $\ast$ sizeof(\mbox{\hyperlink{structstring__caster_a0d5228e9253c85b930b6230662f2f60c}{CharT}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structstring__caster_a0d5228e9253c85b930b6230662f2f60c}\label{structstring__caster_a0d5228e9253c85b930b6230662f2f60c}} 
+\index{string\_caster$<$ StringType, IsView $>$@{string\_caster$<$ StringType, IsView $>$}!CharT@{CharT}}
+\index{CharT@{CharT}!string\_caster$<$ StringType, IsView $>$@{string\_caster$<$ StringType, IsView $>$}}
+\doxysubsubsection{\texorpdfstring{CharT}{CharT}}
+{\footnotesize\ttfamily template$<$typename String\+Type , bool Is\+View = false$>$ \\
+using \mbox{\hyperlink{structstring__caster}{string\+\_\+caster}}$<$ String\+Type, Is\+View $>$\+::\mbox{\hyperlink{structstring__caster_a0d5228e9253c85b930b6230662f2f60c}{CharT}} =  typename String\+Type\+::value\+\_\+type}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structstring__caster_aac6f059b620b6ada6aed354b9c3f0b56}\label{structstring__caster_aac6f059b620b6ada6aed354b9c3f0b56}} 
+\index{string\_caster$<$ StringType, IsView $>$@{string\_caster$<$ StringType, IsView $>$}!cast@{cast}}
+\index{cast@{cast}!string\_caster$<$ StringType, IsView $>$@{string\_caster$<$ StringType, IsView $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}}
+{\footnotesize\ttfamily template$<$typename String\+Type , bool Is\+View = false$>$ \\
+static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{structstring__caster}{string\+\_\+caster}}$<$ String\+Type, Is\+View $>$\+::cast (\begin{DoxyParamCaption}\item[{const String\+Type \&}]{src,  }\item[{\mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}}}]{,  }\item[{\mbox{\hyperlink{classhandle}{handle}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structstring__caster_aa38bc121001de95bcf9c45ddbffdb635}\label{structstring__caster_aa38bc121001de95bcf9c45ddbffdb635}} 
+\index{string\_caster$<$ StringType, IsView $>$@{string\_caster$<$ StringType, IsView $>$}!load@{load}}
+\index{load@{load}!string\_caster$<$ StringType, IsView $>$@{string\_caster$<$ StringType, IsView $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$typename String\+Type , bool Is\+View = false$>$ \\
+bool \mbox{\hyperlink{structstring__caster}{string\+\_\+caster}}$<$ String\+Type, Is\+View $>$\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandle}{handle}}}]{src,  }\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structstring__caster_afe8c27c979388d23f805bb38f04d94ab}\label{structstring__caster_afe8c27c979388d23f805bb38f04d94ab}} 
+\index{string\_caster$<$ StringType, IsView $>$@{string\_caster$<$ StringType, IsView $>$}!PYBIND11\_TYPE\_CASTER@{PYBIND11\_TYPE\_CASTER}}
+\index{PYBIND11\_TYPE\_CASTER@{PYBIND11\_TYPE\_CASTER}!string\_caster$<$ StringType, IsView $>$@{string\_caster$<$ StringType, IsView $>$}}
+\doxysubsubsection{\texorpdfstring{PYBIND11\_TYPE\_CASTER()}{PYBIND11\_TYPE\_CASTER()}}
+{\footnotesize\ttfamily template$<$typename String\+Type , bool Is\+View = false$>$ \\
+\mbox{\hyperlink{structstring__caster}{string\+\_\+caster}}$<$ String\+Type, Is\+View $>$\+::PYBIND11\+\_\+\+TYPE\+\_\+\+CASTER (\begin{DoxyParamCaption}\item[{String\+Type}]{,  }\item[{\mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\mbox{\hyperlink{common_8h_a4490c1733364f04fcea017da2eb38d38}{PYBIND11\+\_\+\+STRING\+\_\+\+NAME}})}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structstring__caster_a1d6a90921b8dd893b6feecfa98859d28}\label{structstring__caster_a1d6a90921b8dd893b6feecfa98859d28}} 
+\index{string\_caster$<$ StringType, IsView $>$@{string\_caster$<$ StringType, IsView $>$}!UTF\_N@{UTF\_N}}
+\index{UTF\_N@{UTF\_N}!string\_caster$<$ StringType, IsView $>$@{string\_caster$<$ StringType, IsView $>$}}
+\doxysubsubsection{\texorpdfstring{UTF\_N}{UTF\_N}}
+{\footnotesize\ttfamily template$<$typename String\+Type , bool Is\+View = false$>$ \\
+constexpr \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} \mbox{\hyperlink{structstring__caster}{string\+\_\+caster}}$<$ String\+Type, Is\+View $>$\+::UTF\+\_\+N = 8 $\ast$ sizeof(\mbox{\hyperlink{structstring__caster_a0d5228e9253c85b930b6230662f2f60c}{CharT}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{cast_8h}{cast.\+h}}\end{DoxyCompactItemize}

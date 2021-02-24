@@ -1,0 +1,183 @@
+\hypertarget{classxlnt_1_1streaming__workbook__reader}{}\doxysection{xlnt\+::streaming\+\_\+workbook\+\_\+reader Class Reference}
+\label{classxlnt_1_1streaming__workbook__reader}\index{xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}}
+
+
+workbook is the container for all other parts of the document.  
+
+
+
+
+{\ttfamily \#include $<$streaming\+\_\+workbook\+\_\+reader.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_aa063bafa94c3c2f008bde0b4a73a9f3e}{streaming\+\_\+workbook\+\_\+reader}} ()
+\item 
+\mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a234e786bff25c672ee12265abbccba7c}{$\sim$streaming\+\_\+workbook\+\_\+reader}} ()
+\item 
+void \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a4d4994f26accd24f230e60a27ca3ea82}{close}} ()
+\begin{DoxyCompactList}\small\item\em Closes currently open read stream. This will be called automatically by the destructor if it hasn\textquotesingle{}t already been called manually. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_af6ac8c4819f00c29acf64b1f011d709e}{has\+\_\+cell}} ()
+\item 
+\mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a2fd38f1e42516466b1a5e4fddbbbe4b9}{read\+\_\+cell}} ()
+\begin{DoxyCompactList}\small\item\em Reads the next cell in the current worksheet and optionally returns it if the last cell in the sheet has not yet been read. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_adad4163898d9f5a54b6725c2f945cdfc}{has\+\_\+worksheet}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\item 
+void \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_ada181daac2887630587c772a660f3dd0}{begin\+\_\+worksheet}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\begin{DoxyCompactList}\small\item\em Beings reading of the next worksheet in the workbook and optionally returns its title if the last worksheet has not yet been read. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_aa6662cc065f8aa379d094a651e7ae392}{end\+\_\+worksheet}} ()
+\begin{DoxyCompactList}\small\item\em Ends reading of the current worksheet in the workbook and optionally returns a worksheet object corresponding to the worksheet with the title returned by \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_ada181daac2887630587c772a660f3dd0}{begin\+\_\+worksheet()}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a5e21819e0c10f7aacc52e9cd84e7a1a8}{open}} (const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Interprets byte vector data as an XLSX file and sets the content of this workbook to match that file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a5c9c9d4592e37bf1cc586ba7a747439d}{open}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Interprets file with the given filename as an XLSX file and sets the content of this workbook to match that file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a08bfc55411516bce8f8b65e782f86571}{open}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&filename)
+\begin{DoxyCompactList}\small\item\em Interprets file with the given filename as an XLSX file and sets the content of this workbook to match that file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a4435de0ebb17d619620144369ebe0b3c}{open}} (std\+::istream \&stream)
+\begin{DoxyCompactList}\small\item\em Interprets data in stream as an XLSX file and sets the content of this workbook to match that file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a9f1d9939195263dfca2503391c7431c8}{open}} (std\+::unique\+\_\+ptr$<$ std\+::streambuf $>$ \&\&\mbox{\hyperlink{classbuffer}{buffer}})
+\begin{DoxyCompactList}\small\item\em Holds the given streambuf internally, creates a std\+::istream backed by the given buffer, and calls \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a4435de0ebb17d619620144369ebe0b3c}{open(std\+::istream \&)}} with that stream. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a2370347979955975f7079c3a5d136d7c}{sheet\+\_\+titles}} ()
+\begin{DoxyCompactList}\small\item\em Returns a vector of the titles of sheets in the workbook in order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+workbook is the container for all other parts of the document. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1streaming__workbook__reader_aa063bafa94c3c2f008bde0b4a73a9f3e}\label{classxlnt_1_1streaming__workbook__reader_aa063bafa94c3c2f008bde0b4a73a9f3e}} 
+\index{xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}!streaming\_workbook\_reader@{streaming\_workbook\_reader}}
+\index{streaming\_workbook\_reader@{streaming\_workbook\_reader}!xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}}
+\doxysubsubsection{\texorpdfstring{streaming\_workbook\_reader()}{streaming\_workbook\_reader()}}
+{\footnotesize\ttfamily xlnt\+::streaming\+\_\+workbook\+\_\+reader\+::streaming\+\_\+workbook\+\_\+reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxlnt_1_1streaming__workbook__reader_a234e786bff25c672ee12265abbccba7c}\label{classxlnt_1_1streaming__workbook__reader_a234e786bff25c672ee12265abbccba7c}} 
+\index{xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}!````~streaming\_workbook\_reader@{$\sim$streaming\_workbook\_reader}}
+\index{````~streaming\_workbook\_reader@{$\sim$streaming\_workbook\_reader}!xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}}
+\doxysubsubsection{\texorpdfstring{$\sim$streaming\_workbook\_reader()}{~streaming\_workbook\_reader()}}
+{\footnotesize\ttfamily xlnt\+::streaming\+\_\+workbook\+\_\+reader\+::$\sim$streaming\+\_\+workbook\+\_\+reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1streaming__workbook__reader_ada181daac2887630587c772a660f3dd0}\label{classxlnt_1_1streaming__workbook__reader_ada181daac2887630587c772a660f3dd0}} 
+\index{xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}!begin\_worksheet@{begin\_worksheet}}
+\index{begin\_worksheet@{begin\_worksheet}!xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}}
+\doxysubsubsection{\texorpdfstring{begin\_worksheet()}{begin\_worksheet()}}
+{\footnotesize\ttfamily void xlnt\+::streaming\+\_\+workbook\+\_\+reader\+::begin\+\_\+worksheet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Beings reading of the next worksheet in the workbook and optionally returns its title if the last worksheet has not yet been read. 
+
+\mbox{\Hypertarget{classxlnt_1_1streaming__workbook__reader_a4d4994f26accd24f230e60a27ca3ea82}\label{classxlnt_1_1streaming__workbook__reader_a4d4994f26accd24f230e60a27ca3ea82}} 
+\index{xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}!close@{close}}
+\index{close@{close}!xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void xlnt\+::streaming\+\_\+workbook\+\_\+reader\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Closes currently open read stream. This will be called automatically by the destructor if it hasn\textquotesingle{}t already been called manually. 
+
+\mbox{\Hypertarget{classxlnt_1_1streaming__workbook__reader_aa6662cc065f8aa379d094a651e7ae392}\label{classxlnt_1_1streaming__workbook__reader_aa6662cc065f8aa379d094a651e7ae392}} 
+\index{xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}!end\_worksheet@{end\_worksheet}}
+\index{end\_worksheet@{end\_worksheet}!xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}}
+\doxysubsubsection{\texorpdfstring{end\_worksheet()}{end\_worksheet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::streaming\+\_\+workbook\+\_\+reader\+::end\+\_\+worksheet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ends reading of the current worksheet in the workbook and optionally returns a worksheet object corresponding to the worksheet with the title returned by \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_ada181daac2887630587c772a660f3dd0}{begin\+\_\+worksheet()}}. 
+
+\mbox{\Hypertarget{classxlnt_1_1streaming__workbook__reader_af6ac8c4819f00c29acf64b1f011d709e}\label{classxlnt_1_1streaming__workbook__reader_af6ac8c4819f00c29acf64b1f011d709e}} 
+\index{xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}!has\_cell@{has\_cell}}
+\index{has\_cell@{has\_cell}!xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}}
+\doxysubsubsection{\texorpdfstring{has\_cell()}{has\_cell()}}
+{\footnotesize\ttfamily bool xlnt\+::streaming\+\_\+workbook\+\_\+reader\+::has\+\_\+cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxlnt_1_1streaming__workbook__reader_adad4163898d9f5a54b6725c2f945cdfc}\label{classxlnt_1_1streaming__workbook__reader_adad4163898d9f5a54b6725c2f945cdfc}} 
+\index{xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}!has\_worksheet@{has\_worksheet}}
+\index{has\_worksheet@{has\_worksheet}!xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}}
+\doxysubsubsection{\texorpdfstring{has\_worksheet()}{has\_worksheet()}}
+{\footnotesize\ttfamily bool xlnt\+::streaming\+\_\+workbook\+\_\+reader\+::has\+\_\+worksheet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxlnt_1_1streaming__workbook__reader_a08bfc55411516bce8f8b65e782f86571}\label{classxlnt_1_1streaming__workbook__reader_a08bfc55411516bce8f8b65e782f86571}} 
+\index{xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}!open@{open}}
+\index{open@{open}!xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void xlnt\+::streaming\+\_\+workbook\+\_\+reader\+::open (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Interprets file with the given filename as an XLSX file and sets the content of this workbook to match that file. 
+
+\mbox{\Hypertarget{classxlnt_1_1streaming__workbook__reader_a5c9c9d4592e37bf1cc586ba7a747439d}\label{classxlnt_1_1streaming__workbook__reader_a5c9c9d4592e37bf1cc586ba7a747439d}} 
+\index{xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}!open@{open}}
+\index{open@{open}!xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily void xlnt\+::streaming\+\_\+workbook\+\_\+reader\+::open (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Interprets file with the given filename as an XLSX file and sets the content of this workbook to match that file. 
+
+\mbox{\Hypertarget{classxlnt_1_1streaming__workbook__reader_a5e21819e0c10f7aacc52e9cd84e7a1a8}\label{classxlnt_1_1streaming__workbook__reader_a5e21819e0c10f7aacc52e9cd84e7a1a8}} 
+\index{xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}!open@{open}}
+\index{open@{open}!xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void xlnt\+::streaming\+\_\+workbook\+\_\+reader\+::open (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Interprets byte vector data as an XLSX file and sets the content of this workbook to match that file. 
+
+\mbox{\Hypertarget{classxlnt_1_1streaming__workbook__reader_a4435de0ebb17d619620144369ebe0b3c}\label{classxlnt_1_1streaming__workbook__reader_a4435de0ebb17d619620144369ebe0b3c}} 
+\index{xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}!open@{open}}
+\index{open@{open}!xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily void xlnt\+::streaming\+\_\+workbook\+\_\+reader\+::open (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{stream }\end{DoxyParamCaption})}
+
+
+
+Interprets data in stream as an XLSX file and sets the content of this workbook to match that file. 
+
+\mbox{\Hypertarget{classxlnt_1_1streaming__workbook__reader_a9f1d9939195263dfca2503391c7431c8}\label{classxlnt_1_1streaming__workbook__reader_a9f1d9939195263dfca2503391c7431c8}} 
+\index{xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}!open@{open}}
+\index{open@{open}!xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily void xlnt\+::streaming\+\_\+workbook\+\_\+reader\+::open (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ std\+::streambuf $>$ \&\&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Holds the given streambuf internally, creates a std\+::istream backed by the given buffer, and calls \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a4435de0ebb17d619620144369ebe0b3c}{open(std\+::istream \&)}} with that stream. 
+
+\mbox{\Hypertarget{classxlnt_1_1streaming__workbook__reader_a2fd38f1e42516466b1a5e4fddbbbe4b9}\label{classxlnt_1_1streaming__workbook__reader_a2fd38f1e42516466b1a5e4fddbbbe4b9}} 
+\index{xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}!read\_cell@{read\_cell}}
+\index{read\_cell@{read\_cell}!xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}}
+\doxysubsubsection{\texorpdfstring{read\_cell()}{read\_cell()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell}{cell}} xlnt\+::streaming\+\_\+workbook\+\_\+reader\+::read\+\_\+cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads the next cell in the current worksheet and optionally returns it if the last cell in the sheet has not yet been read. 
+
+\mbox{\Hypertarget{classxlnt_1_1streaming__workbook__reader_a2370347979955975f7079c3a5d136d7c}\label{classxlnt_1_1streaming__workbook__reader_a2370347979955975f7079c3a5d136d7c}} 
+\index{xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}!sheet\_titles@{sheet\_titles}}
+\index{sheet\_titles@{sheet\_titles}!xlnt::streaming\_workbook\_reader@{xlnt::streaming\_workbook\_reader}}
+\doxysubsubsection{\texorpdfstring{sheet\_titles()}{sheet\_titles()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ xlnt\+::streaming\+\_\+workbook\+\_\+reader\+::sheet\+\_\+titles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a vector of the titles of sheets in the workbook in order. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/workbook/\mbox{\hyperlink{streaming__workbook__reader_8hpp}{streaming\+\_\+workbook\+\_\+reader.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/workbook/\mbox{\hyperlink{streaming__workbook__reader_8cpp}{streaming\+\_\+workbook\+\_\+reader.\+cpp}}\end{DoxyCompactItemize}

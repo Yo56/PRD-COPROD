@@ -1,0 +1,135 @@
+\hypertarget{classxlnt_1_1border}{}\doxysection{xlnt\+::border Class Reference}
+\label{classxlnt_1_1border}\index{xlnt::border@{xlnt::border}}
+
+
+Describes the border style of a particular cell.  
+
+
+
+
+{\ttfamily \#include $<$border.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1border_1_1border__property}{border\+\_\+property}}
+\begin{DoxyCompactList}\small\item\em Each side of a cell can have a \mbox{\hyperlink{classxlnt_1_1border_1_1border__property}{border\+\_\+property}} applied to it to change how it is displayed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1border_a15918a1b698a3c66f6d5aef7a77a3427}{border}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a default border. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ \mbox{\hyperlink{classxlnt_1_1border_1_1border__property}{border\+\_\+property}} $>$ \mbox{\hyperlink{classxlnt_1_1border_af84c4ed6883739b168ad72f08bf9937b}{side}} (border\+\_\+side s) const
+\begin{DoxyCompactList}\small\item\em Returns the border properties of the given side. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1border}{border}} \& \mbox{\hyperlink{classxlnt_1_1border_a54aa807a7a30b8c4f3c870f4b505c1e6}{side}} (border\+\_\+side s, const \mbox{\hyperlink{classxlnt_1_1border_1_1border__property}{border\+\_\+property}} \&prop)
+\begin{DoxyCompactList}\small\item\em Sets the border properties of the side s to prop. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ diagonal\+\_\+direction $>$ \mbox{\hyperlink{classxlnt_1_1border_a1b3956a6bd3382f0a3e874dceb53f261}{diagonal}} () const
+\begin{DoxyCompactList}\small\item\em Returns the diagonal direction of this border. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1border}{border}} \& \mbox{\hyperlink{classxlnt_1_1border_a290b2bec460e75b0887a1fb0ff65d3c9}{diagonal}} (diagonal\+\_\+direction dir)
+\begin{DoxyCompactList}\small\item\em Sets the diagonal direction of this border to dir. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1border_a93582fbd608c72c346b055c4525cfc03}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1border}{border}} \&\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}}) const
+\begin{DoxyCompactList}\small\item\em Returns true if left is exactly equal to right. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1border_ad7e0e1d1580a03a5ef94767d4abc6db2}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1border}{border}} \&\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}}) const
+\begin{DoxyCompactList}\small\item\em Returns true if left is not exactly equal to right. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::vector$<$ border\+\_\+side $>$ \& \mbox{\hyperlink{classxlnt_1_1border_af67e8a6d1ad965623d7db8de3f1a196a}{all\+\_\+sides}} ()
+\begin{DoxyCompactList}\small\item\em Returns a vector containing all of the border sides to be used for iteration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Describes the border style of a particular cell. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1border_a15918a1b698a3c66f6d5aef7a77a3427}\label{classxlnt_1_1border_a15918a1b698a3c66f6d5aef7a77a3427}} 
+\index{xlnt::border@{xlnt::border}!border@{border}}
+\index{border@{border}!xlnt::border@{xlnt::border}}
+\doxysubsubsection{\texorpdfstring{border()}{border()}}
+{\footnotesize\ttfamily xlnt\+::border\+::border (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a default border. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1border_af67e8a6d1ad965623d7db8de3f1a196a}\label{classxlnt_1_1border_af67e8a6d1ad965623d7db8de3f1a196a}} 
+\index{xlnt::border@{xlnt::border}!all\_sides@{all\_sides}}
+\index{all\_sides@{all\_sides}!xlnt::border@{xlnt::border}}
+\doxysubsubsection{\texorpdfstring{all\_sides()}{all\_sides()}}
+{\footnotesize\ttfamily const std\+::vector$<$ xlnt\+::border\+\_\+side $>$ \& xlnt\+::border\+::all\+\_\+sides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a vector containing all of the border sides to be used for iteration. 
+
+\mbox{\Hypertarget{classxlnt_1_1border_a1b3956a6bd3382f0a3e874dceb53f261}\label{classxlnt_1_1border_a1b3956a6bd3382f0a3e874dceb53f261}} 
+\index{xlnt::border@{xlnt::border}!diagonal@{diagonal}}
+\index{diagonal@{diagonal}!xlnt::border@{xlnt::border}}
+\doxysubsubsection{\texorpdfstring{diagonal()}{diagonal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ diagonal\+\_\+direction $>$ xlnt\+::border\+::diagonal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the diagonal direction of this border. 
+
+\mbox{\Hypertarget{classxlnt_1_1border_a290b2bec460e75b0887a1fb0ff65d3c9}\label{classxlnt_1_1border_a290b2bec460e75b0887a1fb0ff65d3c9}} 
+\index{xlnt::border@{xlnt::border}!diagonal@{diagonal}}
+\index{diagonal@{diagonal}!xlnt::border@{xlnt::border}}
+\doxysubsubsection{\texorpdfstring{diagonal()}{diagonal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1border}{border}} \& xlnt\+::border\+::diagonal (\begin{DoxyParamCaption}\item[{diagonal\+\_\+direction}]{dir }\end{DoxyParamCaption})}
+
+
+
+Sets the diagonal direction of this border to dir. 
+
+\mbox{\Hypertarget{classxlnt_1_1border_ad7e0e1d1580a03a5ef94767d4abc6db2}\label{classxlnt_1_1border_ad7e0e1d1580a03a5ef94767d4abc6db2}} 
+\index{xlnt::border@{xlnt::border}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::border@{xlnt::border}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool xlnt\+::border\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1border}{border}} \&}]{right }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if left is not exactly equal to right. 
+
+\mbox{\Hypertarget{classxlnt_1_1border_a93582fbd608c72c346b055c4525cfc03}\label{classxlnt_1_1border_a93582fbd608c72c346b055c4525cfc03}} 
+\index{xlnt::border@{xlnt::border}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::border@{xlnt::border}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::border\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1border}{border}} \&}]{right }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if left is exactly equal to right. 
+
+\mbox{\Hypertarget{classxlnt_1_1border_af84c4ed6883739b168ad72f08bf9937b}\label{classxlnt_1_1border_af84c4ed6883739b168ad72f08bf9937b}} 
+\index{xlnt::border@{xlnt::border}!side@{side}}
+\index{side@{side}!xlnt::border@{xlnt::border}}
+\doxysubsubsection{\texorpdfstring{side()}{side()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ \mbox{\hyperlink{classxlnt_1_1border_1_1border__property}{border\+::border\+\_\+property}} $>$ xlnt\+::border\+::side (\begin{DoxyParamCaption}\item[{border\+\_\+side}]{s }\end{DoxyParamCaption}) const}
+
+
+
+Returns the border properties of the given side. 
+
+\mbox{\Hypertarget{classxlnt_1_1border_a54aa807a7a30b8c4f3c870f4b505c1e6}\label{classxlnt_1_1border_a54aa807a7a30b8c4f3c870f4b505c1e6}} 
+\index{xlnt::border@{xlnt::border}!side@{side}}
+\index{side@{side}!xlnt::border@{xlnt::border}}
+\doxysubsubsection{\texorpdfstring{side()}{side()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1border}{border}} \& xlnt\+::border\+::side (\begin{DoxyParamCaption}\item[{border\+\_\+side}]{s,  }\item[{const \mbox{\hyperlink{classxlnt_1_1border_1_1border__property}{border\+\_\+property}} \&}]{prop }\end{DoxyParamCaption})}
+
+
+
+Sets the border properties of the side s to prop. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/styles/\mbox{\hyperlink{border_8hpp}{border.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/styles/\mbox{\hyperlink{border_8cpp}{border.\+cpp}}\end{DoxyCompactItemize}

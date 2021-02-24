@@ -1,0 +1,266 @@
+\hypertarget{structxlnt_1_1detail_1_1worksheet__impl}{}\doxysection{xlnt\+::detail\+::worksheet\+\_\+impl Struct Reference}
+\label{structxlnt_1_1detail_1_1worksheet__impl}\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+
+
+{\ttfamily \#include $<$worksheet\+\_\+impl.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_a6aabf3f9f966033d623c4dd0d34aba0f}{worksheet\+\_\+impl}} (\mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} $\ast$parent\+\_\+workbook, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} id, const std\+::string \&title)
+\item 
+\mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_ac71a096721e32f2e3b9014621b7ffbc4}{worksheet\+\_\+impl}} (const \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl}{worksheet\+\_\+impl}} \&other)
+\item 
+void \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_a4e89aca9f714f6660d576d2e0639aed5}{operator=}} (const \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl}{worksheet\+\_\+impl}} \&other)
+\item 
+bool \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_aec65232c7939b041a75ba49ee7c563a4}{operator==}} (const \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl}{worksheet\+\_\+impl}} \&rhs) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} $\ast$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_a860bdc3858dc9293576dd55f13e5b322}{parent\+\_\+}}
+\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_a2f0ec05bc0ec39b6a1b5e99c8cf24348}{id\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_a99d605dbb92ec1678e5f5c8f1a4c83c5}{title\+\_\+}}
+\item 
+\mbox{\hyperlink{classxlnt_1_1sheet__format__properties}{sheet\+\_\+format\+\_\+properties}} \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_ad65b59bdd0c397a6b1fba92a5d22d7d9}{format\+\_\+properties\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}, \mbox{\hyperlink{classxlnt_1_1column__properties}{column\+\_\+properties}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_af4e019a5b7c37797f58ac69c2aa4fbb1}{column\+\_\+properties\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}, \mbox{\hyperlink{classxlnt_1_1row__properties}{row\+\_\+properties}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_aa1fae058c5b7f4c58f498239f2ab3ad5}{row\+\_\+properties\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}, \mbox{\hyperlink{structxlnt_1_1detail_1_1cell__impl}{cell\+\_\+impl}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_a15ac4411739f1451b1c59be72326c4b1}{cell\+\_\+map\+\_\+}}
+\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ \mbox{\hyperlink{structxlnt_1_1page__setup}{page\+\_\+setup}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_a4bd7f2a3a0212bdc6f1c378704abe05e}{page\+\_\+setup\+\_\+}}
+\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_a25b023ee93bb3b70c7c203a9a651162f}{auto\+\_\+filter\+\_\+}}
+\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ \mbox{\hyperlink{classxlnt_1_1page__margins}{page\+\_\+margins}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_a40564be2020689cd0a28211b8e3c783c}{page\+\_\+margins\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_a93888939c143790c37de69ae2c06c8e8}{merged\+\_\+cells\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classxlnt_1_1named__range}{named\+\_\+range}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_a05c64faa542307a1b774cfb2b9ea37d6}{named\+\_\+ranges\+\_\+}}
+\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ \mbox{\hyperlink{classxlnt_1_1phonetic__pr}{phonetic\+\_\+pr}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_ad0218a57441dd075323c44b8be884d85}{phonetic\+\_\+properties\+\_\+}}
+\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_a4f311b70c3318fee0f161be472f22711}{header\+\_\+footer\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_ac78600ac1a4ddd5df81c85409f1220b4}{print\+\_\+title\+\_\+cols\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_ab7cef3a1a0eebde3ab4649c9a0ed840c}{print\+\_\+title\+\_\+rows\+\_\+}}
+\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_a3c62431b2ada289641c21440a4f6c895}{print\+\_\+area\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1sheet__view}{sheet\+\_\+view}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_a3d03fd57398215830aee2a0b337f7719}{views\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_a1c92950efe3b71c21791b005b4dc2cbe}{column\+\_\+breaks\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_a70c2a77a39f51d06f7cb6eebbe2de04e}{row\+\_\+breaks\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classxlnt_1_1comment}{comment}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_ae21817f2e00b05c75de1a59d4b2fe390}{comments\+\_\+}}
+\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ \mbox{\hyperlink{structxlnt_1_1print__options}{print\+\_\+options}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_ab39221b1e05ddacd7a31c89502a69265}{print\+\_\+options\+\_\+}}
+\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ \mbox{\hyperlink{structxlnt_1_1sheet__pr}{sheet\+\_\+pr}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_aa4bd9f55d1856eb41b787c0776f42918}{sheet\+\_\+properties\+\_\+}}
+\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ \mbox{\hyperlink{classxlnt_1_1ext__list}{ext\+\_\+list}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_af9ba93b276ce27ae3727990bffce5894}{extension\+\_\+list\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_afb6ca13c1c0cd3a77adb6f1ac785cce3}{drawing\+\_\+rel\+\_\+id\+\_\+}}
+\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ \mbox{\hyperlink{classxlnt_1_1drawing_1_1spreadsheet__drawing}{drawing\+::spreadsheet\+\_\+drawing}} $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl_ac547abaaf6b1f2e58079ab7bc18c0259}{drawing\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_a6aabf3f9f966033d623c4dd0d34aba0f}\label{structxlnt_1_1detail_1_1worksheet__impl_a6aabf3f9f966033d623c4dd0d34aba0f}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!worksheet\_impl@{worksheet\_impl}}
+\index{worksheet\_impl@{worksheet\_impl}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{worksheet\_impl()}{worksheet\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily xlnt\+::detail\+::worksheet\+\_\+impl\+::worksheet\+\_\+impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} $\ast$}]{parent\+\_\+workbook,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{id,  }\item[{const std\+::string \&}]{title }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_ac71a096721e32f2e3b9014621b7ffbc4}\label{structxlnt_1_1detail_1_1worksheet__impl_ac71a096721e32f2e3b9014621b7ffbc4}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!worksheet\_impl@{worksheet\_impl}}
+\index{worksheet\_impl@{worksheet\_impl}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{worksheet\_impl()}{worksheet\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily xlnt\+::detail\+::worksheet\+\_\+impl\+::worksheet\+\_\+impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl}{worksheet\+\_\+impl}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_a4e89aca9f714f6660d576d2e0639aed5}\label{structxlnt_1_1detail_1_1worksheet__impl_a4e89aca9f714f6660d576d2e0639aed5}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!operator=@{operator=}}
+\index{operator=@{operator=}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void xlnt\+::detail\+::worksheet\+\_\+impl\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl}{worksheet\+\_\+impl}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_aec65232c7939b041a75ba49ee7c563a4}\label{structxlnt_1_1detail_1_1worksheet__impl_aec65232c7939b041a75ba49ee7c563a4}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::detail\+::worksheet\+\_\+impl\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1detail_1_1worksheet__impl}{worksheet\+\_\+impl}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_a25b023ee93bb3b70c7c203a9a651162f}\label{structxlnt_1_1detail_1_1worksheet__impl_a25b023ee93bb3b70c7c203a9a651162f}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!auto\_filter\_@{auto\_filter\_}}
+\index{auto\_filter\_@{auto\_filter\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{auto\_filter\_}{auto\_filter\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$\mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::auto\+\_\+filter\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_a15ac4411739f1451b1c59be72326c4b1}\label{structxlnt_1_1detail_1_1worksheet__impl_a15ac4411739f1451b1c59be72326c4b1}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!cell\_map\_@{cell\_map\_}}
+\index{cell\_map\_@{cell\_map\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{cell\_map\_}{cell\_map\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}, \mbox{\hyperlink{structxlnt_1_1detail_1_1cell__impl}{cell\+\_\+impl}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::cell\+\_\+map\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_a1c92950efe3b71c21791b005b4dc2cbe}\label{structxlnt_1_1detail_1_1worksheet__impl_a1c92950efe3b71c21791b005b4dc2cbe}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!column\_breaks\_@{column\_breaks\_}}
+\index{column\_breaks\_@{column\_breaks\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{column\_breaks\_}{column\_breaks\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::column\+\_\+breaks\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_af4e019a5b7c37797f58ac69c2aa4fbb1}\label{structxlnt_1_1detail_1_1worksheet__impl_af4e019a5b7c37797f58ac69c2aa4fbb1}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!column\_properties\_@{column\_properties\_}}
+\index{column\_properties\_@{column\_properties\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{column\_properties\_}{column\_properties\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}, \mbox{\hyperlink{classxlnt_1_1column__properties}{column\+\_\+properties}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::column\+\_\+properties\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_ae21817f2e00b05c75de1a59d4b2fe390}\label{structxlnt_1_1detail_1_1worksheet__impl_ae21817f2e00b05c75de1a59d4b2fe390}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!comments\_@{comments\_}}
+\index{comments\_@{comments\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{comments\_}{comments\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classxlnt_1_1comment}{comment}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::comments\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_ac547abaaf6b1f2e58079ab7bc18c0259}\label{structxlnt_1_1detail_1_1worksheet__impl_ac547abaaf6b1f2e58079ab7bc18c0259}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!drawing\_@{drawing\_}}
+\index{drawing\_@{drawing\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{drawing\_}{drawing\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$\mbox{\hyperlink{classxlnt_1_1drawing_1_1spreadsheet__drawing}{drawing\+::spreadsheet\+\_\+drawing}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::drawing\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_afb6ca13c1c0cd3a77adb6f1ac785cce3}\label{structxlnt_1_1detail_1_1worksheet__impl_afb6ca13c1c0cd3a77adb6f1ac785cce3}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!drawing\_rel\_id\_@{drawing\_rel\_id\_}}
+\index{drawing\_rel\_id\_@{drawing\_rel\_id\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{drawing\_rel\_id\_}{drawing\_rel\_id\_}}
+{\footnotesize\ttfamily std\+::string xlnt\+::detail\+::worksheet\+\_\+impl\+::drawing\+\_\+rel\+\_\+id\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_af9ba93b276ce27ae3727990bffce5894}\label{structxlnt_1_1detail_1_1worksheet__impl_af9ba93b276ce27ae3727990bffce5894}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!extension\_list\_@{extension\_list\_}}
+\index{extension\_list\_@{extension\_list\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{extension\_list\_}{extension\_list\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$\mbox{\hyperlink{classxlnt_1_1ext__list}{ext\+\_\+list}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::extension\+\_\+list\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_ad65b59bdd0c397a6b1fba92a5d22d7d9}\label{structxlnt_1_1detail_1_1worksheet__impl_ad65b59bdd0c397a6b1fba92a5d22d7d9}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!format\_properties\_@{format\_properties\_}}
+\index{format\_properties\_@{format\_properties\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{format\_properties\_}{format\_properties\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1sheet__format__properties}{sheet\+\_\+format\+\_\+properties}} xlnt\+::detail\+::worksheet\+\_\+impl\+::format\+\_\+properties\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_a4f311b70c3318fee0f161be472f22711}\label{structxlnt_1_1detail_1_1worksheet__impl_a4f311b70c3318fee0f161be472f22711}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!header\_footer\_@{header\_footer\_}}
+\index{header\_footer\_@{header\_footer\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{header\_footer\_}{header\_footer\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$\mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::header\+\_\+footer\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_a2f0ec05bc0ec39b6a1b5e99c8cf24348}\label{structxlnt_1_1detail_1_1worksheet__impl_a2f0ec05bc0ec39b6a1b5e99c8cf24348}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!id\_@{id\_}}
+\index{id\_@{id\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{id\_}{id\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::detail\+::worksheet\+\_\+impl\+::id\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_a93888939c143790c37de69ae2c06c8e8}\label{structxlnt_1_1detail_1_1worksheet__impl_a93888939c143790c37de69ae2c06c8e8}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!merged\_cells\_@{merged\_cells\_}}
+\index{merged\_cells\_@{merged\_cells\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{merged\_cells\_}{merged\_cells\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::merged\+\_\+cells\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_a05c64faa542307a1b774cfb2b9ea37d6}\label{structxlnt_1_1detail_1_1worksheet__impl_a05c64faa542307a1b774cfb2b9ea37d6}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!named\_ranges\_@{named\_ranges\_}}
+\index{named\_ranges\_@{named\_ranges\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{named\_ranges\_}{named\_ranges\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classxlnt_1_1named__range}{named\+\_\+range}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::named\+\_\+ranges\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_a40564be2020689cd0a28211b8e3c783c}\label{structxlnt_1_1detail_1_1worksheet__impl_a40564be2020689cd0a28211b8e3c783c}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!page\_margins\_@{page\_margins\_}}
+\index{page\_margins\_@{page\_margins\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{page\_margins\_}{page\_margins\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$\mbox{\hyperlink{classxlnt_1_1page__margins}{page\+\_\+margins}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::page\+\_\+margins\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_a4bd7f2a3a0212bdc6f1c378704abe05e}\label{structxlnt_1_1detail_1_1worksheet__impl_a4bd7f2a3a0212bdc6f1c378704abe05e}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!page\_setup\_@{page\_setup\_}}
+\index{page\_setup\_@{page\_setup\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{page\_setup\_}{page\_setup\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$\mbox{\hyperlink{structxlnt_1_1page__setup}{page\+\_\+setup}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::page\+\_\+setup\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_a860bdc3858dc9293576dd55f13e5b322}\label{structxlnt_1_1detail_1_1worksheet__impl_a860bdc3858dc9293576dd55f13e5b322}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!parent\_@{parent\_}}
+\index{parent\_@{parent\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{parent\_}{parent\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}}$\ast$ xlnt\+::detail\+::worksheet\+\_\+impl\+::parent\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_ad0218a57441dd075323c44b8be884d85}\label{structxlnt_1_1detail_1_1worksheet__impl_ad0218a57441dd075323c44b8be884d85}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!phonetic\_properties\_@{phonetic\_properties\_}}
+\index{phonetic\_properties\_@{phonetic\_properties\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{phonetic\_properties\_}{phonetic\_properties\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$\mbox{\hyperlink{classxlnt_1_1phonetic__pr}{phonetic\+\_\+pr}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::phonetic\+\_\+properties\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_a3c62431b2ada289641c21440a4f6c895}\label{structxlnt_1_1detail_1_1worksheet__impl_a3c62431b2ada289641c21440a4f6c895}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!print\_area\_@{print\_area\_}}
+\index{print\_area\_@{print\_area\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{print\_area\_}{print\_area\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$\mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::print\+\_\+area\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_ab39221b1e05ddacd7a31c89502a69265}\label{structxlnt_1_1detail_1_1worksheet__impl_ab39221b1e05ddacd7a31c89502a69265}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!print\_options\_@{print\_options\_}}
+\index{print\_options\_@{print\_options\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{print\_options\_}{print\_options\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$\mbox{\hyperlink{structxlnt_1_1print__options}{print\+\_\+options}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::print\+\_\+options\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_ac78600ac1a4ddd5df81c85409f1220b4}\label{structxlnt_1_1detail_1_1worksheet__impl_ac78600ac1a4ddd5df81c85409f1220b4}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!print\_title\_cols\_@{print\_title\_cols\_}}
+\index{print\_title\_cols\_@{print\_title\_cols\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{print\_title\_cols\_}{print\_title\_cols\_}}
+{\footnotesize\ttfamily std\+::string xlnt\+::detail\+::worksheet\+\_\+impl\+::print\+\_\+title\+\_\+cols\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_ab7cef3a1a0eebde3ab4649c9a0ed840c}\label{structxlnt_1_1detail_1_1worksheet__impl_ab7cef3a1a0eebde3ab4649c9a0ed840c}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!print\_title\_rows\_@{print\_title\_rows\_}}
+\index{print\_title\_rows\_@{print\_title\_rows\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{print\_title\_rows\_}{print\_title\_rows\_}}
+{\footnotesize\ttfamily std\+::string xlnt\+::detail\+::worksheet\+\_\+impl\+::print\+\_\+title\+\_\+rows\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_a70c2a77a39f51d06f7cb6eebbe2de04e}\label{structxlnt_1_1detail_1_1worksheet__impl_a70c2a77a39f51d06f7cb6eebbe2de04e}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!row\_breaks\_@{row\_breaks\_}}
+\index{row\_breaks\_@{row\_breaks\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{row\_breaks\_}{row\_breaks\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::row\+\_\+breaks\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_aa1fae058c5b7f4c58f498239f2ab3ad5}\label{structxlnt_1_1detail_1_1worksheet__impl_aa1fae058c5b7f4c58f498239f2ab3ad5}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!row\_properties\_@{row\_properties\_}}
+\index{row\_properties\_@{row\_properties\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{row\_properties\_}{row\_properties\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}, \mbox{\hyperlink{classxlnt_1_1row__properties}{row\+\_\+properties}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::row\+\_\+properties\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_aa4bd9f55d1856eb41b787c0776f42918}\label{structxlnt_1_1detail_1_1worksheet__impl_aa4bd9f55d1856eb41b787c0776f42918}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!sheet\_properties\_@{sheet\_properties\_}}
+\index{sheet\_properties\_@{sheet\_properties\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{sheet\_properties\_}{sheet\_properties\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$\mbox{\hyperlink{structxlnt_1_1sheet__pr}{sheet\+\_\+pr}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::sheet\+\_\+properties\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_a99d605dbb92ec1678e5f5c8f1a4c83c5}\label{structxlnt_1_1detail_1_1worksheet__impl_a99d605dbb92ec1678e5f5c8f1a4c83c5}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!title\_@{title\_}}
+\index{title\_@{title\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{title\_}{title\_}}
+{\footnotesize\ttfamily std\+::string xlnt\+::detail\+::worksheet\+\_\+impl\+::title\+\_\+}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1worksheet__impl_a3d03fd57398215830aee2a0b337f7719}\label{structxlnt_1_1detail_1_1worksheet__impl_a3d03fd57398215830aee2a0b337f7719}} 
+\index{xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}!views\_@{views\_}}
+\index{views\_@{views\_}!xlnt::detail::worksheet\_impl@{xlnt::detail::worksheet\_impl}}
+\doxysubsubsection{\texorpdfstring{views\_}{views\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classxlnt_1_1sheet__view}{sheet\+\_\+view}}$>$ xlnt\+::detail\+::worksheet\+\_\+impl\+::views\+\_\+}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/detail/implementations/\mbox{\hyperlink{worksheet__impl_8hpp}{worksheet\+\_\+impl.\+hpp}}\end{DoxyCompactItemize}

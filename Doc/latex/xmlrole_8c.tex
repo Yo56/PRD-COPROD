@@ -1,0 +1,58 @@
+\hypertarget{xmlrole_8c}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/xmlrole.c File Reference}
+\label{xmlrole_8c}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/xmlrole.c@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/xmlrole.c}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$libstudxml/details/expat/config.\+h$>$}\newline
+{\ttfamily \#include $<$libstudxml/details/expat/expat\+\_\+external.\+h$>$}\newline
+{\ttfamily \#include $<$libstudxml/details/expat/internal.\+h$>$}\newline
+{\ttfamily \#include $<$libstudxml/details/expat/xmlrole.\+h$>$}\newline
+{\ttfamily \#include $<$libstudxml/details/expat/ascii.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{xmlrole_8c_a70f48b34f888c23bae761b4471829386}{MIN\+\_\+\+BYTES\+\_\+\+PER\+\_\+\+CHAR}}(enc)~((enc)-\/$>$min\+Bytes\+Per\+Char)
+\item 
+\#define \mbox{\hyperlink{xmlrole_8c_a297dbba7fd3567ed9b53713531826eea}{set\+Top\+Level}}(\mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}})~((\mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}})-\/$>$handler = internal\+Subset)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \mbox{\hyperlink{internal_8h_af44f68911377fd55f6e1588b0c89b3e5}{PTRCALL}} \mbox{\hyperlink{xmlrole_8c_a3e8ff58d796b73a1838581c000b676a0}{PROLOG\+\_\+\+HANDLER}}(\mbox{\hyperlink{xmlrole_8h_a5831a1391b0ce8d742d9481c7526d065}{PROLOG\+\_\+\+STATE}} $\ast$\mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}}, int tok, const char $\ast$ptr, const char $\ast$\mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$enc)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{xmlrole_8c_a4847cc3b5914b0e79d3ddd301497857a}{Xml\+Prolog\+State\+Init}} (\mbox{\hyperlink{xmlrole_8h_a5831a1391b0ce8d742d9481c7526d065}{PROLOG\+\_\+\+STATE}} $\ast$\mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{xmlrole_8c_a70f48b34f888c23bae761b4471829386}\label{xmlrole_8c_a70f48b34f888c23bae761b4471829386}} 
+\index{xmlrole.c@{xmlrole.c}!MIN\_BYTES\_PER\_CHAR@{MIN\_BYTES\_PER\_CHAR}}
+\index{MIN\_BYTES\_PER\_CHAR@{MIN\_BYTES\_PER\_CHAR}!xmlrole.c@{xmlrole.c}}
+\doxysubsubsection{\texorpdfstring{MIN\_BYTES\_PER\_CHAR}{MIN\_BYTES\_PER\_CHAR}}
+{\footnotesize\ttfamily \#define MIN\+\_\+\+BYTES\+\_\+\+PER\+\_\+\+CHAR(\begin{DoxyParamCaption}\item[{}]{enc }\end{DoxyParamCaption})~((enc)-\/$>$min\+Bytes\+Per\+Char)}
+
+\mbox{\Hypertarget{xmlrole_8c_a297dbba7fd3567ed9b53713531826eea}\label{xmlrole_8c_a297dbba7fd3567ed9b53713531826eea}} 
+\index{xmlrole.c@{xmlrole.c}!setTopLevel@{setTopLevel}}
+\index{setTopLevel@{setTopLevel}!xmlrole.c@{xmlrole.c}}
+\doxysubsubsection{\texorpdfstring{setTopLevel}{setTopLevel}}
+{\footnotesize\ttfamily \#define set\+Top\+Level(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}} }\end{DoxyParamCaption})~((\mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}})-\/$>$handler = internal\+Subset)}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{xmlrole_8c_a3e8ff58d796b73a1838581c000b676a0}\label{xmlrole_8c_a3e8ff58d796b73a1838581c000b676a0}} 
+\index{xmlrole.c@{xmlrole.c}!PROLOG\_HANDLER@{PROLOG\_HANDLER}}
+\index{PROLOG\_HANDLER@{PROLOG\_HANDLER}!xmlrole.c@{xmlrole.c}}
+\doxysubsubsection{\texorpdfstring{PROLOG\_HANDLER}{PROLOG\_HANDLER}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{internal_8h_af44f68911377fd55f6e1588b0c89b3e5}{PTRCALL}} PROLOG\+\_\+\+HANDLER(\mbox{\hyperlink{xmlrole_8h_a5831a1391b0ce8d742d9481c7526d065}{PROLOG\+\_\+\+STATE}} $\ast$\mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}}, int tok, const char $\ast$ptr, const char $\ast$\mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$enc)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{xmlrole_8c_a4847cc3b5914b0e79d3ddd301497857a}\label{xmlrole_8c_a4847cc3b5914b0e79d3ddd301497857a}} 
+\index{xmlrole.c@{xmlrole.c}!XmlPrologStateInit@{XmlPrologStateInit}}
+\index{XmlPrologStateInit@{XmlPrologStateInit}!xmlrole.c@{xmlrole.c}}
+\doxysubsubsection{\texorpdfstring{XmlPrologStateInit()}{XmlPrologStateInit()}}
+{\footnotesize\ttfamily void Xml\+Prolog\+State\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{xmlrole_8h_a5831a1391b0ce8d742d9481c7526d065}{PROLOG\+\_\+\+STATE}} $\ast$}]{state }\end{DoxyParamCaption})}
+

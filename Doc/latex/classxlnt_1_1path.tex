@@ -1,0 +1,310 @@
+\hypertarget{classxlnt_1_1path}{}\doxysection{xlnt\+::path Class Reference}
+\label{classxlnt_1_1path}\index{xlnt::path@{xlnt::path}}
+
+
+Encapsulates a path that points to location in a filesystem.  
+
+
+
+
+{\ttfamily \#include $<$path.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1path_a64cf753e1625e300a0b0330683f89d04}{path}} ()
+\begin{DoxyCompactList}\small\item\em Construct an empty path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1path_a20925ff54bc393302bf24557c99c75d2}{path}} (const std\+::string \&path\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Counstruct a path from a string representing the path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1path_abd96393de519c2097ad5f3e175054847}{path}} (const std\+::string \&path\+\_\+string, char sep)
+\begin{DoxyCompactList}\small\item\em Construct a path from a string with an explicit directory seprator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1path_a8200c5cdd52793ba6fc44ee797daf196}{is\+\_\+relative}} () const
+\begin{DoxyCompactList}\small\item\em Return true iff this path doesn\textquotesingle{}t begin with / (or a drive letter on Windows). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1path_a5c2c3287069e5e92b464cdbe95ae0d9a}{is\+\_\+absolute}} () const
+\begin{DoxyCompactList}\small\item\em Return true iff \mbox{\hyperlink{classxlnt_1_1path_a8200c5cdd52793ba6fc44ee797daf196}{path\+::is\+\_\+relative()}} is false. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1path_aa18f0ce6afd269bf51a8d7718e980394}{is\+\_\+root}} () const
+\begin{DoxyCompactList}\small\item\em Return true iff this path is the root directory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1path}{path}} \mbox{\hyperlink{classxlnt_1_1path_adc856880715f815935888653e7bb9e30}{parent}} () const
+\begin{DoxyCompactList}\small\item\em Return a new path that points to the directory containing the current path Return the path unchanged if this path is the absolute or relative root. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1path_a717b25da7d89aaf0d293914f55eab512}{filename}} () const
+\begin{DoxyCompactList}\small\item\em Return the last component of this path. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1path_a9221ba95c176dfc9418bf9638d149577}{extension}} () const
+\begin{DoxyCompactList}\small\item\em Return the part of the path following the last dot in the filename. \end{DoxyCompactList}\item 
+std\+::pair$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classxlnt_1_1path_a68dd4b24e749bb35d941ad10620519d7}{split\+\_\+extension}} () const
+\begin{DoxyCompactList}\small\item\em Return a pair of strings resulting from splitting the filename on the last dot. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classxlnt_1_1path_a2d1a3bbac43e268b22652201c2db09fb}{split}} () const
+\begin{DoxyCompactList}\small\item\em Create a string representing this path separated by the provided separator or the system-\/default separator if not provided. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classxlnt_1_1path_a20c2e81517781178a253ccc2f497b501}{string}} () const
+\begin{DoxyCompactList}\small\item\em Create a string representing this path separated by the provided separator or the system-\/default separator if not provided. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1path}{path}} \mbox{\hyperlink{classxlnt_1_1path_a382affc3ed31744ad56ab33c15e5f56d}{resolve}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&base\+\_\+path) const
+\begin{DoxyCompactList}\small\item\em If this path is relative, append each component of this path to base\+\_\+path and return the resulting absolute path. Otherwise, the the current path will be returned and base\+\_\+path will be ignored. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1path}{path}} \mbox{\hyperlink{classxlnt_1_1path_abd1155098ed192c199039cd3aa3f1c69}{relative\+\_\+to}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&base\+\_\+path) const
+\begin{DoxyCompactList}\small\item\em The inverse of \mbox{\hyperlink{classxlnt_1_1path_a382affc3ed31744ad56ab33c15e5f56d}{path\+::resolve}}. Creates a relative path from an absolute path by removing the common root between base\+\_\+path and this path. If the current path is already relative, return it unchanged. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1path_a549a7de20255288c0132d1fe3f58b145}{exists}} () const
+\begin{DoxyCompactList}\small\item\em Return true iff the file or directory pointed to by this path exists on the filesystem. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1path_af1a653c19685410b945be99a507256ab}{is\+\_\+directory}} () const
+\begin{DoxyCompactList}\small\item\em Return true if the file or directory pointed to by this path is a directory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1path_a8a2083cc4e9e0873acfa33ff1cd8202f}{is\+\_\+file}} () const
+\begin{DoxyCompactList}\small\item\em Return true if the file or directory pointed to by this path is a regular file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1path_a6d2d885fa562361c11781d1a9abff19d}{read\+\_\+contents}} () const
+\begin{DoxyCompactList}\small\item\em Open the file pointed to by this path and return a string containing the files contents. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1path}{path}} \mbox{\hyperlink{classxlnt_1_1path_adfb1aac9ce279cf94e87233490da20e8}{append}} (const std\+::string \&to\+\_\+append) const
+\begin{DoxyCompactList}\small\item\em Append the provided part to this path and return the result. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1path}{path}} \mbox{\hyperlink{classxlnt_1_1path_ae22f50a08277330190d9ff01aace9997}{append}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&to\+\_\+append) const
+\begin{DoxyCompactList}\small\item\em Append the provided part to this path and return the result. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1path_a03910f15f2df5e9830182ffd5d3da493}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if left path is equal to right path. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1path_a04de167a780893b012f9ea9543c3b152}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if left path is equal to right path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static char \mbox{\hyperlink{classxlnt_1_1path_ae6d8164fb35821e8a203fa68567bbadf}{system\+\_\+separator}} ()
+\begin{DoxyCompactList}\small\item\em The system-\/specific path separator character (e.\+g. \textquotesingle{}/\textquotesingle{} or \textquotesingle{}\textbackslash{}\textquotesingle{}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encapsulates a path that points to location in a filesystem. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1path_a64cf753e1625e300a0b0330683f89d04}\label{classxlnt_1_1path_a64cf753e1625e300a0b0330683f89d04}} 
+\index{xlnt::path@{xlnt::path}!path@{path}}
+\index{path@{path}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{path()}{path()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily xlnt\+::path\+::path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct an empty path. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_a20925ff54bc393302bf24557c99c75d2}\label{classxlnt_1_1path_a20925ff54bc393302bf24557c99c75d2}} 
+\index{xlnt::path@{xlnt::path}!path@{path}}
+\index{path@{path}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{path()}{path()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily xlnt\+::path\+::path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path\+\_\+string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Counstruct a path from a string representing the path. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_abd96393de519c2097ad5f3e175054847}\label{classxlnt_1_1path_abd96393de519c2097ad5f3e175054847}} 
+\index{xlnt::path@{xlnt::path}!path@{path}}
+\index{path@{path}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{path()}{path()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily xlnt\+::path\+::path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path\+\_\+string,  }\item[{char}]{sep }\end{DoxyParamCaption})}
+
+
+
+Construct a path from a string with an explicit directory seprator. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1path_ae22f50a08277330190d9ff01aace9997}\label{classxlnt_1_1path_ae22f50a08277330190d9ff01aace9997}} 
+\index{xlnt::path@{xlnt::path}!append@{append}}
+\index{append@{append}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1path}{path}} xlnt\+::path\+::append (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{to\+\_\+append }\end{DoxyParamCaption}) const}
+
+
+
+Append the provided part to this path and return the result. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_adfb1aac9ce279cf94e87233490da20e8}\label{classxlnt_1_1path_adfb1aac9ce279cf94e87233490da20e8}} 
+\index{xlnt::path@{xlnt::path}!append@{append}}
+\index{append@{append}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1path}{path}} xlnt\+::path\+::append (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{to\+\_\+append }\end{DoxyParamCaption}) const}
+
+
+
+Append the provided part to this path and return the result. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_a549a7de20255288c0132d1fe3f58b145}\label{classxlnt_1_1path_a549a7de20255288c0132d1fe3f58b145}} 
+\index{xlnt::path@{xlnt::path}!exists@{exists}}
+\index{exists@{exists}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily bool xlnt\+::path\+::exists (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return true iff the file or directory pointed to by this path exists on the filesystem. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_a9221ba95c176dfc9418bf9638d149577}\label{classxlnt_1_1path_a9221ba95c176dfc9418bf9638d149577}} 
+\index{xlnt::path@{xlnt::path}!extension@{extension}}
+\index{extension@{extension}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{extension()}{extension()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::path\+::extension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the part of the path following the last dot in the filename. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_a717b25da7d89aaf0d293914f55eab512}\label{classxlnt_1_1path_a717b25da7d89aaf0d293914f55eab512}} 
+\index{xlnt::path@{xlnt::path}!filename@{filename}}
+\index{filename@{filename}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{filename()}{filename()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::path\+::filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the last component of this path. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_a5c2c3287069e5e92b464cdbe95ae0d9a}\label{classxlnt_1_1path_a5c2c3287069e5e92b464cdbe95ae0d9a}} 
+\index{xlnt::path@{xlnt::path}!is\_absolute@{is\_absolute}}
+\index{is\_absolute@{is\_absolute}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{is\_absolute()}{is\_absolute()}}
+{\footnotesize\ttfamily bool xlnt\+::path\+::is\+\_\+absolute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return true iff \mbox{\hyperlink{classxlnt_1_1path_a8200c5cdd52793ba6fc44ee797daf196}{path\+::is\+\_\+relative()}} is false. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_af1a653c19685410b945be99a507256ab}\label{classxlnt_1_1path_af1a653c19685410b945be99a507256ab}} 
+\index{xlnt::path@{xlnt::path}!is\_directory@{is\_directory}}
+\index{is\_directory@{is\_directory}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{is\_directory()}{is\_directory()}}
+{\footnotesize\ttfamily bool xlnt\+::path\+::is\+\_\+directory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return true if the file or directory pointed to by this path is a directory. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_a8a2083cc4e9e0873acfa33ff1cd8202f}\label{classxlnt_1_1path_a8a2083cc4e9e0873acfa33ff1cd8202f}} 
+\index{xlnt::path@{xlnt::path}!is\_file@{is\_file}}
+\index{is\_file@{is\_file}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{is\_file()}{is\_file()}}
+{\footnotesize\ttfamily bool xlnt\+::path\+::is\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return true if the file or directory pointed to by this path is a regular file. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_a8200c5cdd52793ba6fc44ee797daf196}\label{classxlnt_1_1path_a8200c5cdd52793ba6fc44ee797daf196}} 
+\index{xlnt::path@{xlnt::path}!is\_relative@{is\_relative}}
+\index{is\_relative@{is\_relative}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{is\_relative()}{is\_relative()}}
+{\footnotesize\ttfamily bool xlnt\+::path\+::is\+\_\+relative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return true iff this path doesn\textquotesingle{}t begin with / (or a drive letter on Windows). 
+
+\mbox{\Hypertarget{classxlnt_1_1path_aa18f0ce6afd269bf51a8d7718e980394}\label{classxlnt_1_1path_aa18f0ce6afd269bf51a8d7718e980394}} 
+\index{xlnt::path@{xlnt::path}!is\_root@{is\_root}}
+\index{is\_root@{is\_root}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{is\_root()}{is\_root()}}
+{\footnotesize\ttfamily bool xlnt\+::path\+::is\+\_\+root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return true iff this path is the root directory. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_a04de167a780893b012f9ea9543c3b152}\label{classxlnt_1_1path_a04de167a780893b012f9ea9543c3b152}} 
+\index{xlnt::path@{xlnt::path}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool xlnt\+::path\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if left path is equal to right path. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_a03910f15f2df5e9830182ffd5d3da493}\label{classxlnt_1_1path_a03910f15f2df5e9830182ffd5d3da493}} 
+\index{xlnt::path@{xlnt::path}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::path\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if left path is equal to right path. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_adc856880715f815935888653e7bb9e30}\label{classxlnt_1_1path_adc856880715f815935888653e7bb9e30}} 
+\index{xlnt::path@{xlnt::path}!parent@{parent}}
+\index{parent@{parent}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1path}{path}} xlnt\+::path\+::parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return a new path that points to the directory containing the current path Return the path unchanged if this path is the absolute or relative root. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_a6d2d885fa562361c11781d1a9abff19d}\label{classxlnt_1_1path_a6d2d885fa562361c11781d1a9abff19d}} 
+\index{xlnt::path@{xlnt::path}!read\_contents@{read\_contents}}
+\index{read\_contents@{read\_contents}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{read\_contents()}{read\_contents()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::path\+::read\+\_\+contents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Open the file pointed to by this path and return a string containing the files contents. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_abd1155098ed192c199039cd3aa3f1c69}\label{classxlnt_1_1path_abd1155098ed192c199039cd3aa3f1c69}} 
+\index{xlnt::path@{xlnt::path}!relative\_to@{relative\_to}}
+\index{relative\_to@{relative\_to}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{relative\_to()}{relative\_to()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1path}{path}} xlnt\+::path\+::relative\+\_\+to (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{base\+\_\+path }\end{DoxyParamCaption}) const}
+
+
+
+The inverse of \mbox{\hyperlink{classxlnt_1_1path_a382affc3ed31744ad56ab33c15e5f56d}{path\+::resolve}}. Creates a relative path from an absolute path by removing the common root between base\+\_\+path and this path. If the current path is already relative, return it unchanged. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_a382affc3ed31744ad56ab33c15e5f56d}\label{classxlnt_1_1path_a382affc3ed31744ad56ab33c15e5f56d}} 
+\index{xlnt::path@{xlnt::path}!resolve@{resolve}}
+\index{resolve@{resolve}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1path}{path}} xlnt\+::path\+::resolve (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{base\+\_\+path }\end{DoxyParamCaption}) const}
+
+
+
+If this path is relative, append each component of this path to base\+\_\+path and return the resulting absolute path. Otherwise, the the current path will be returned and base\+\_\+path will be ignored. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_a2d1a3bbac43e268b22652201c2db09fb}\label{classxlnt_1_1path_a2d1a3bbac43e268b22652201c2db09fb}} 
+\index{xlnt::path@{xlnt::path}!split@{split}}
+\index{split@{split}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ xlnt\+::path\+::split (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Create a string representing this path separated by the provided separator or the system-\/default separator if not provided. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_a68dd4b24e749bb35d941ad10620519d7}\label{classxlnt_1_1path_a68dd4b24e749bb35d941ad10620519d7}} 
+\index{xlnt::path@{xlnt::path}!split\_extension@{split\_extension}}
+\index{split\_extension@{split\_extension}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{split\_extension()}{split\_extension()}}
+{\footnotesize\ttfamily std\+::pair$<$ std\+::string, std\+::string $>$ xlnt\+::path\+::split\+\_\+extension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return a pair of strings resulting from splitting the filename on the last dot. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_a20c2e81517781178a253ccc2f497b501}\label{classxlnt_1_1path_a20c2e81517781178a253ccc2f497b501}} 
+\index{xlnt::path@{xlnt::path}!string@{string}}
+\index{string@{string}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{string()}{string()}}
+{\footnotesize\ttfamily const std\+::string \& xlnt\+::path\+::string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Create a string representing this path separated by the provided separator or the system-\/default separator if not provided. 
+
+\mbox{\Hypertarget{classxlnt_1_1path_ae6d8164fb35821e8a203fa68567bbadf}\label{classxlnt_1_1path_ae6d8164fb35821e8a203fa68567bbadf}} 
+\index{xlnt::path@{xlnt::path}!system\_separator@{system\_separator}}
+\index{system\_separator@{system\_separator}!xlnt::path@{xlnt::path}}
+\doxysubsubsection{\texorpdfstring{system\_separator()}{system\_separator()}}
+{\footnotesize\ttfamily char xlnt\+::path\+::system\+\_\+separator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The system-\/specific path separator character (e.\+g. \textquotesingle{}/\textquotesingle{} or \textquotesingle{}\textbackslash{}\textquotesingle{}). 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/utils/\mbox{\hyperlink{path_8hpp}{path.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/utils/\mbox{\hyperlink{path_8cpp}{path.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,312 @@
+\hypertarget{classxlnt_1_1manifest}{}\doxysection{xlnt\+::manifest Class Reference}
+\label{classxlnt_1_1manifest}\index{xlnt::manifest@{xlnt::manifest}}
+
+
+The manifest keeps track of all files in the OOXML package and their type and relationships.  
+
+
+
+
+{\ttfamily \#include $<$manifest.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classxlnt_1_1manifest_a54af1cbef09453b57440cb36c22ca0cb}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Unregisters all default and override type and all relationships and known parts. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1path}{path}} $>$ \mbox{\hyperlink{classxlnt_1_1manifest_ac01069db708b02148b23f5a285b8116f}{parts}} () const
+\begin{DoxyCompactList}\small\item\em Returns the path to all internal package parts registered as a source or target of a relationship. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1manifest_aa3b15806378006db18e6d7304d5160c4}{has\+\_\+relationship}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&source, relationship\+\_\+type type) const
+\begin{DoxyCompactList}\small\item\em Returns true if the manifest contains a relationship with the given type with part as the source. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1manifest_aff71c2d2f7ad97100c9c79cd68699776}{has\+\_\+relationship}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&source, const std\+::string \&rel\+\_\+id) const
+\begin{DoxyCompactList}\small\item\em Returns true if the manifest contains a relationship with the given type with part as the source. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1relationship}{relationship}} \mbox{\hyperlink{classxlnt_1_1manifest_aad326450d4e265a98dbfb0ec4a45d398}{relationship}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&source, relationship\+\_\+type type) const
+\begin{DoxyCompactList}\small\item\em Returns the relationship with \char`\"{}source\char`\"{} as the source and with a type of \char`\"{}type\char`\"{}. Throws a \mbox{\hyperlink{classxlnt_1_1key__not__found}{key\+\_\+not\+\_\+found}} exception if no such relationship is found. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1relationship}{relationship}} \mbox{\hyperlink{classxlnt_1_1manifest_aff757b78ed22190ea8dd3ce98b150324}{relationship}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&source, const std\+::string \&rel\+\_\+id) const
+\begin{DoxyCompactList}\small\item\em Returns the relationship with \char`\"{}source\char`\"{} as the source and with an ID of \char`\"{}rel\+\_\+id\char`\"{}. Throws a \mbox{\hyperlink{classxlnt_1_1key__not__found}{key\+\_\+not\+\_\+found}} exception if no such relationship is found. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1relationship}{xlnt\+::relationship}} $>$ \mbox{\hyperlink{classxlnt_1_1manifest_a2240e4e7b43ece1b3fb82c5be31cb944}{relationships}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&source) const
+\begin{DoxyCompactList}\small\item\em Returns all relationship with \char`\"{}source\char`\"{} as the source. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1relationship}{xlnt\+::relationship}} $>$ \mbox{\hyperlink{classxlnt_1_1manifest_acc666808a03eb4b0ff215aea7db9a4e7}{relationships}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&source, relationship\+\_\+type type) const
+\begin{DoxyCompactList}\small\item\em Returns all relationships with \char`\"{}source\char`\"{} as the source and with a type of \char`\"{}type\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1path}{path}} \mbox{\hyperlink{classxlnt_1_1manifest_a2655028632b906b2537c6a5732ad56ce}{canonicalize}} (const std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1relationship}{xlnt\+::relationship}} $>$ \&rels) const
+\begin{DoxyCompactList}\small\item\em Returns the canonical path of the chain of relationships by traversing through rels and forming the absolute combined path. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1manifest_a258b180a7e667509fefaccadc2694eea}{register\+\_\+relationship}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&source, relationship\+\_\+type type, const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&target, target\+\_\+mode mode)
+\begin{DoxyCompactList}\small\item\em Registers a new relationship by specifying all of the relationship properties explicitly. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1manifest_a94ace52389d3cd6b6c887fb4d52f5228}{register\+\_\+relationship}} (const class \mbox{\hyperlink{classxlnt_1_1relationship}{relationship}} \&rel)
+\begin{DoxyCompactList}\small\item\em Registers a new relationship already constructed elsewhere. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classxlnt_1_1manifest_ad182f641b3410f258adcf9a1a1edd423}{unregister\+\_\+relationship}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&source, const std\+::string \&rel\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Delete the relationship with the given id from source part. Returns a mapping of relationship IDs since IDs are shifted down. For example, if there are three relationships for part a.\+xml like \mbox{[}r\+Id1, r\+Id2, r\+Id3\mbox{]} and r\+Id2 is deleted, the resulting map would look like \mbox{[}r\+Id3-\/$>$r\+Id2\mbox{]}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1manifest_ae1cffaac41ad585535e389fb0f872929}{content\+\_\+type}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&part) const
+\begin{DoxyCompactList}\small\item\em Given the path to a part, returns the content type of the part as a string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1manifest_a56e02d02403b73482a8b9362f9be314e}{has\+\_\+default\+\_\+type}} (const std\+::string \&extension) const
+\begin{DoxyCompactList}\small\item\em Returns true if a default content type for the extension has been registered. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classxlnt_1_1manifest_a2f7bb6208e0e57f0ab7cc7b9a4e4d2ac}{extensions\+\_\+with\+\_\+default\+\_\+types}} () const
+\begin{DoxyCompactList}\small\item\em Returns a vector of all extensions with registered default content types. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1manifest_a278940484f977f13b554a29483ae0acb}{default\+\_\+type}} (const std\+::string \&extension) const
+\begin{DoxyCompactList}\small\item\em Returns the registered default content type for parts of the given extension. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1manifest_a696f9d51dcfca5af3c39d3fda40f8a8c}{register\+\_\+default\+\_\+type}} (const std\+::string \&extension, const std\+::string \&type)
+\begin{DoxyCompactList}\small\item\em Associates the given extension with the given content type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1manifest_a28741a3ff2ea5b8cc61870a15e1f0743}{unregister\+\_\+default\+\_\+type}} (const std\+::string \&extension)
+\begin{DoxyCompactList}\small\item\em Unregisters the default content type for the given extension. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1manifest_aef8c17dfe1cfdcadccb977db1b57fbf2}{has\+\_\+override\+\_\+type}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&part) const
+\begin{DoxyCompactList}\small\item\em Returns true if a content type overriding the default content type has been registered for the given part. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1manifest_a8f8400ba54883c2391d6d03a49fdb165}{override\+\_\+type}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&part) const
+\begin{DoxyCompactList}\small\item\em Returns the override content type registered for the given part. Throws \mbox{\hyperlink{classxlnt_1_1key__not__found}{key\+\_\+not\+\_\+found}} exception if no override type was found. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1path}{path}} $>$ \mbox{\hyperlink{classxlnt_1_1manifest_a5e325ca8cf3cacc8b3a36ccca1ad117c}{parts\+\_\+with\+\_\+overriden\+\_\+types}} () const
+\begin{DoxyCompactList}\small\item\em Returns the path of every part in this manifest with an overriden content type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1manifest_a6f839f478ecc20d7945d62b3ad513511}{register\+\_\+override\+\_\+type}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&part, const std\+::string \&type)
+\begin{DoxyCompactList}\small\item\em Overrides any default type registered for the part\textquotesingle{}s extension with the given content type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1manifest_ad60b4fd8bd7300646e975900356f102c}{unregister\+\_\+override\+\_\+type}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&part)
+\begin{DoxyCompactList}\small\item\em Unregisters the overriding content type of the given part. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1manifest_a6860a3f697a377526e365626f345fff8}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1manifest}{manifest}} \&other) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The manifest keeps track of all files in the OOXML package and their type and relationships. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1manifest_a2655028632b906b2537c6a5732ad56ce}\label{classxlnt_1_1manifest_a2655028632b906b2537c6a5732ad56ce}} 
+\index{xlnt::manifest@{xlnt::manifest}!canonicalize@{canonicalize}}
+\index{canonicalize@{canonicalize}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{canonicalize()}{canonicalize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1path}{path}} xlnt\+::manifest\+::canonicalize (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1relationship}{xlnt\+::relationship}} $>$ \&}]{rels }\end{DoxyParamCaption}) const}
+
+
+
+Returns the canonical path of the chain of relationships by traversing through rels and forming the absolute combined path. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_a54af1cbef09453b57440cb36c22ca0cb}\label{classxlnt_1_1manifest_a54af1cbef09453b57440cb36c22ca0cb}} 
+\index{xlnt::manifest@{xlnt::manifest}!clear@{clear}}
+\index{clear@{clear}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void xlnt\+::manifest\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unregisters all default and override type and all relationships and known parts. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_ae1cffaac41ad585535e389fb0f872929}\label{classxlnt_1_1manifest_ae1cffaac41ad585535e389fb0f872929}} 
+\index{xlnt::manifest@{xlnt::manifest}!content\_type@{content\_type}}
+\index{content\_type@{content\_type}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{content\_type()}{content\_type()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::manifest\+::content\+\_\+type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{part }\end{DoxyParamCaption}) const}
+
+
+
+Given the path to a part, returns the content type of the part as a string. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_a278940484f977f13b554a29483ae0acb}\label{classxlnt_1_1manifest_a278940484f977f13b554a29483ae0acb}} 
+\index{xlnt::manifest@{xlnt::manifest}!default\_type@{default\_type}}
+\index{default\_type@{default\_type}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{default\_type()}{default\_type()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::manifest\+::default\+\_\+type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{extension }\end{DoxyParamCaption}) const}
+
+
+
+Returns the registered default content type for parts of the given extension. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_a2f7bb6208e0e57f0ab7cc7b9a4e4d2ac}\label{classxlnt_1_1manifest_a2f7bb6208e0e57f0ab7cc7b9a4e4d2ac}} 
+\index{xlnt::manifest@{xlnt::manifest}!extensions\_with\_default\_types@{extensions\_with\_default\_types}}
+\index{extensions\_with\_default\_types@{extensions\_with\_default\_types}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{extensions\_with\_default\_types()}{extensions\_with\_default\_types()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ xlnt\+::manifest\+::extensions\+\_\+with\+\_\+default\+\_\+types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a vector of all extensions with registered default content types. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_a56e02d02403b73482a8b9362f9be314e}\label{classxlnt_1_1manifest_a56e02d02403b73482a8b9362f9be314e}} 
+\index{xlnt::manifest@{xlnt::manifest}!has\_default\_type@{has\_default\_type}}
+\index{has\_default\_type@{has\_default\_type}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{has\_default\_type()}{has\_default\_type()}}
+{\footnotesize\ttfamily bool xlnt\+::manifest\+::has\+\_\+default\+\_\+type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{extension }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if a default content type for the extension has been registered. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_aef8c17dfe1cfdcadccb977db1b57fbf2}\label{classxlnt_1_1manifest_aef8c17dfe1cfdcadccb977db1b57fbf2}} 
+\index{xlnt::manifest@{xlnt::manifest}!has\_override\_type@{has\_override\_type}}
+\index{has\_override\_type@{has\_override\_type}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{has\_override\_type()}{has\_override\_type()}}
+{\footnotesize\ttfamily bool xlnt\+::manifest\+::has\+\_\+override\+\_\+type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{part }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if a content type overriding the default content type has been registered for the given part. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_aff71c2d2f7ad97100c9c79cd68699776}\label{classxlnt_1_1manifest_aff71c2d2f7ad97100c9c79cd68699776}} 
+\index{xlnt::manifest@{xlnt::manifest}!has\_relationship@{has\_relationship}}
+\index{has\_relationship@{has\_relationship}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{has\_relationship()}{has\_relationship()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::manifest\+::has\+\_\+relationship (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{source,  }\item[{const std\+::string \&}]{rel\+\_\+id }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the manifest contains a relationship with the given type with part as the source. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_aa3b15806378006db18e6d7304d5160c4}\label{classxlnt_1_1manifest_aa3b15806378006db18e6d7304d5160c4}} 
+\index{xlnt::manifest@{xlnt::manifest}!has\_relationship@{has\_relationship}}
+\index{has\_relationship@{has\_relationship}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{has\_relationship()}{has\_relationship()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool xlnt\+::manifest\+::has\+\_\+relationship (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{source,  }\item[{relationship\+\_\+type}]{type }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the manifest contains a relationship with the given type with part as the source. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_a6860a3f697a377526e365626f345fff8}\label{classxlnt_1_1manifest_a6860a3f697a377526e365626f345fff8}} 
+\index{xlnt::manifest@{xlnt::manifest}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::manifest\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1manifest}{manifest}} \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_a8f8400ba54883c2391d6d03a49fdb165}\label{classxlnt_1_1manifest_a8f8400ba54883c2391d6d03a49fdb165}} 
+\index{xlnt::manifest@{xlnt::manifest}!override\_type@{override\_type}}
+\index{override\_type@{override\_type}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{override\_type()}{override\_type()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::manifest\+::override\+\_\+type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{part }\end{DoxyParamCaption}) const}
+
+
+
+Returns the override content type registered for the given part. Throws \mbox{\hyperlink{classxlnt_1_1key__not__found}{key\+\_\+not\+\_\+found}} exception if no override type was found. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_ac01069db708b02148b23f5a285b8116f}\label{classxlnt_1_1manifest_ac01069db708b02148b23f5a285b8116f}} 
+\index{xlnt::manifest@{xlnt::manifest}!parts@{parts}}
+\index{parts@{parts}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{parts()}{parts()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1path}{path}} $>$ xlnt\+::manifest\+::parts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the path to all internal package parts registered as a source or target of a relationship. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_a5e325ca8cf3cacc8b3a36ccca1ad117c}\label{classxlnt_1_1manifest_a5e325ca8cf3cacc8b3a36ccca1ad117c}} 
+\index{xlnt::manifest@{xlnt::manifest}!parts\_with\_overriden\_types@{parts\_with\_overriden\_types}}
+\index{parts\_with\_overriden\_types@{parts\_with\_overriden\_types}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{parts\_with\_overriden\_types()}{parts\_with\_overriden\_types()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1path}{path}} $>$ xlnt\+::manifest\+::parts\+\_\+with\+\_\+overriden\+\_\+types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the path of every part in this manifest with an overriden content type. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_a696f9d51dcfca5af3c39d3fda40f8a8c}\label{classxlnt_1_1manifest_a696f9d51dcfca5af3c39d3fda40f8a8c}} 
+\index{xlnt::manifest@{xlnt::manifest}!register\_default\_type@{register\_default\_type}}
+\index{register\_default\_type@{register\_default\_type}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{register\_default\_type()}{register\_default\_type()}}
+{\footnotesize\ttfamily void xlnt\+::manifest\+::register\+\_\+default\+\_\+type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{extension,  }\item[{const std\+::string \&}]{type }\end{DoxyParamCaption})}
+
+
+
+Associates the given extension with the given content type. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_a6f839f478ecc20d7945d62b3ad513511}\label{classxlnt_1_1manifest_a6f839f478ecc20d7945d62b3ad513511}} 
+\index{xlnt::manifest@{xlnt::manifest}!register\_override\_type@{register\_override\_type}}
+\index{register\_override\_type@{register\_override\_type}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{register\_override\_type()}{register\_override\_type()}}
+{\footnotesize\ttfamily void xlnt\+::manifest\+::register\+\_\+override\+\_\+type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{part,  }\item[{const std\+::string \&}]{type }\end{DoxyParamCaption})}
+
+
+
+Overrides any default type registered for the part\textquotesingle{}s extension with the given content type. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_a94ace52389d3cd6b6c887fb4d52f5228}\label{classxlnt_1_1manifest_a94ace52389d3cd6b6c887fb4d52f5228}} 
+\index{xlnt::manifest@{xlnt::manifest}!register\_relationship@{register\_relationship}}
+\index{register\_relationship@{register\_relationship}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{register\_relationship()}{register\_relationship()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string xlnt\+::manifest\+::register\+\_\+relationship (\begin{DoxyParamCaption}\item[{const class \mbox{\hyperlink{classxlnt_1_1relationship}{relationship}} \&}]{rel }\end{DoxyParamCaption})}
+
+
+
+Registers a new relationship already constructed elsewhere. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_a258b180a7e667509fefaccadc2694eea}\label{classxlnt_1_1manifest_a258b180a7e667509fefaccadc2694eea}} 
+\index{xlnt::manifest@{xlnt::manifest}!register\_relationship@{register\_relationship}}
+\index{register\_relationship@{register\_relationship}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{register\_relationship()}{register\_relationship()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string xlnt\+::manifest\+::register\+\_\+relationship (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&}]{source,  }\item[{relationship\+\_\+type}]{type,  }\item[{const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&}]{target,  }\item[{target\+\_\+mode}]{mode }\end{DoxyParamCaption})}
+
+
+
+Registers a new relationship by specifying all of the relationship properties explicitly. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_aff757b78ed22190ea8dd3ce98b150324}\label{classxlnt_1_1manifest_aff757b78ed22190ea8dd3ce98b150324}} 
+\index{xlnt::manifest@{xlnt::manifest}!relationship@{relationship}}
+\index{relationship@{relationship}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{relationship()}{relationship()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1relationship}{relationship}} xlnt\+::manifest\+::relationship (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{source,  }\item[{const std\+::string \&}]{rel\+\_\+id }\end{DoxyParamCaption}) const}
+
+
+
+Returns the relationship with \char`\"{}source\char`\"{} as the source and with an ID of \char`\"{}rel\+\_\+id\char`\"{}. Throws a \mbox{\hyperlink{classxlnt_1_1key__not__found}{key\+\_\+not\+\_\+found}} exception if no such relationship is found. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_aad326450d4e265a98dbfb0ec4a45d398}\label{classxlnt_1_1manifest_aad326450d4e265a98dbfb0ec4a45d398}} 
+\index{xlnt::manifest@{xlnt::manifest}!relationship@{relationship}}
+\index{relationship@{relationship}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{relationship()}{relationship()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1relationship}{relationship}} xlnt\+::manifest\+::relationship (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{source,  }\item[{relationship\+\_\+type}]{type }\end{DoxyParamCaption}) const}
+
+
+
+Returns the relationship with \char`\"{}source\char`\"{} as the source and with a type of \char`\"{}type\char`\"{}. Throws a \mbox{\hyperlink{classxlnt_1_1key__not__found}{key\+\_\+not\+\_\+found}} exception if no such relationship is found. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_a2240e4e7b43ece1b3fb82c5be31cb944}\label{classxlnt_1_1manifest_a2240e4e7b43ece1b3fb82c5be31cb944}} 
+\index{xlnt::manifest@{xlnt::manifest}!relationships@{relationships}}
+\index{relationships@{relationships}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{relationships()}{relationships()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1relationship}{relationship}} $>$ xlnt\+::manifest\+::relationships (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{source }\end{DoxyParamCaption}) const}
+
+
+
+Returns all relationship with \char`\"{}source\char`\"{} as the source. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_acc666808a03eb4b0ff215aea7db9a4e7}\label{classxlnt_1_1manifest_acc666808a03eb4b0ff215aea7db9a4e7}} 
+\index{xlnt::manifest@{xlnt::manifest}!relationships@{relationships}}
+\index{relationships@{relationships}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{relationships()}{relationships()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1relationship}{xlnt\+::relationship}} $>$ xlnt\+::manifest\+::relationships (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{source,  }\item[{relationship\+\_\+type}]{type }\end{DoxyParamCaption}) const}
+
+
+
+Returns all relationships with \char`\"{}source\char`\"{} as the source and with a type of \char`\"{}type\char`\"{}. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_a28741a3ff2ea5b8cc61870a15e1f0743}\label{classxlnt_1_1manifest_a28741a3ff2ea5b8cc61870a15e1f0743}} 
+\index{xlnt::manifest@{xlnt::manifest}!unregister\_default\_type@{unregister\_default\_type}}
+\index{unregister\_default\_type@{unregister\_default\_type}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{unregister\_default\_type()}{unregister\_default\_type()}}
+{\footnotesize\ttfamily void xlnt\+::manifest\+::unregister\+\_\+default\+\_\+type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{extension }\end{DoxyParamCaption})}
+
+
+
+Unregisters the default content type for the given extension. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_ad60b4fd8bd7300646e975900356f102c}\label{classxlnt_1_1manifest_ad60b4fd8bd7300646e975900356f102c}} 
+\index{xlnt::manifest@{xlnt::manifest}!unregister\_override\_type@{unregister\_override\_type}}
+\index{unregister\_override\_type@{unregister\_override\_type}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{unregister\_override\_type()}{unregister\_override\_type()}}
+{\footnotesize\ttfamily void xlnt\+::manifest\+::unregister\+\_\+override\+\_\+type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{part }\end{DoxyParamCaption})}
+
+
+
+Unregisters the overriding content type of the given part. 
+
+\mbox{\Hypertarget{classxlnt_1_1manifest_ad182f641b3410f258adcf9a1a1edd423}\label{classxlnt_1_1manifest_ad182f641b3410f258adcf9a1a1edd423}} 
+\index{xlnt::manifest@{xlnt::manifest}!unregister\_relationship@{unregister\_relationship}}
+\index{unregister\_relationship@{unregister\_relationship}!xlnt::manifest@{xlnt::manifest}}
+\doxysubsubsection{\texorpdfstring{unregister\_relationship()}{unregister\_relationship()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ xlnt\+::manifest\+::unregister\+\_\+relationship (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&}]{source,  }\item[{const std\+::string \&}]{rel\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Delete the relationship with the given id from source part. Returns a mapping of relationship IDs since IDs are shifted down. For example, if there are three relationships for part a.\+xml like \mbox{[}r\+Id1, r\+Id2, r\+Id3\mbox{]} and r\+Id2 is deleted, the resulting map would look like \mbox{[}r\+Id3-\/$>$r\+Id2\mbox{]}. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/packaging/\mbox{\hyperlink{manifest_8hpp}{manifest.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/packaging/\mbox{\hyperlink{manifest_8cpp}{manifest.\+cpp}}\end{DoxyCompactItemize}

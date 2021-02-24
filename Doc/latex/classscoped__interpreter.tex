@@ -1,0 +1,80 @@
+\hypertarget{classscoped__interpreter}{}\doxysection{scoped\+\_\+interpreter Class Reference}
+\label{classscoped__interpreter}\index{scoped\_interpreter@{scoped\_interpreter}}
+
+
+{\ttfamily \#include $<$embed.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classscoped__interpreter_a6ba04e4795ec864e8e23289819225bef}{scoped\+\_\+interpreter}} (bool init\+\_\+signal\+\_\+handlers=true)
+\item 
+\mbox{\hyperlink{classscoped__interpreter_a794109d4db2ba5daf345b9262b85ec3e}{scoped\+\_\+interpreter}} (const \mbox{\hyperlink{classscoped__interpreter}{scoped\+\_\+interpreter}} \&)=delete
+\item 
+\mbox{\hyperlink{classscoped__interpreter_ac3d62f9f0065b0a627367d88d3ee38e9}{scoped\+\_\+interpreter}} (\mbox{\hyperlink{classscoped__interpreter}{scoped\+\_\+interpreter}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{classscoped__interpreter}{scoped\+\_\+interpreter}} \& \mbox{\hyperlink{classscoped__interpreter_a7843ed2ad5cf5c54537373c1febec3c7}{operator=}} (const \mbox{\hyperlink{classscoped__interpreter}{scoped\+\_\+interpreter}} \&)=delete
+\item 
+\mbox{\hyperlink{classscoped__interpreter}{scoped\+\_\+interpreter}} \& \mbox{\hyperlink{classscoped__interpreter_acdda686792144d2fb682491d19a803b5}{operator=}} (\mbox{\hyperlink{classscoped__interpreter}{scoped\+\_\+interpreter}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classscoped__interpreter_a482334b3d598cfffa28d4efa8a1bb3e9}{$\sim$scoped\+\_\+interpreter}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\textbackslash{}rst Scope guard version of {\ttfamily initialize\+\_\+interpreter} and {\ttfamily finalize\+\_\+interpreter}. This a move-\/only guard and only a single instance can exist.
+
+.. code-\/block\+:: cpp \begin{DoxyVerb}#include <pybind11/embed.h>
+
+int main() {
+    py::scoped_interpreter guard{};
+    py::print(Hello, World!);
+} // <-- interpreter shutdown
+\end{DoxyVerb}
+ \textbackslash{}endrst 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classscoped__interpreter_a6ba04e4795ec864e8e23289819225bef}\label{classscoped__interpreter_a6ba04e4795ec864e8e23289819225bef}} 
+\index{scoped\_interpreter@{scoped\_interpreter}!scoped\_interpreter@{scoped\_interpreter}}
+\index{scoped\_interpreter@{scoped\_interpreter}!scoped\_interpreter@{scoped\_interpreter}}
+\doxysubsubsection{\texorpdfstring{scoped\_interpreter()}{scoped\_interpreter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily scoped\+\_\+interpreter\+::scoped\+\_\+interpreter (\begin{DoxyParamCaption}\item[{bool}]{init\+\_\+signal\+\_\+handlers = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classscoped__interpreter_a794109d4db2ba5daf345b9262b85ec3e}\label{classscoped__interpreter_a794109d4db2ba5daf345b9262b85ec3e}} 
+\index{scoped\_interpreter@{scoped\_interpreter}!scoped\_interpreter@{scoped\_interpreter}}
+\index{scoped\_interpreter@{scoped\_interpreter}!scoped\_interpreter@{scoped\_interpreter}}
+\doxysubsubsection{\texorpdfstring{scoped\_interpreter()}{scoped\_interpreter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily scoped\+\_\+interpreter\+::scoped\+\_\+interpreter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classscoped__interpreter}{scoped\+\_\+interpreter}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classscoped__interpreter_ac3d62f9f0065b0a627367d88d3ee38e9}\label{classscoped__interpreter_ac3d62f9f0065b0a627367d88d3ee38e9}} 
+\index{scoped\_interpreter@{scoped\_interpreter}!scoped\_interpreter@{scoped\_interpreter}}
+\index{scoped\_interpreter@{scoped\_interpreter}!scoped\_interpreter@{scoped\_interpreter}}
+\doxysubsubsection{\texorpdfstring{scoped\_interpreter()}{scoped\_interpreter()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily scoped\+\_\+interpreter\+::scoped\+\_\+interpreter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classscoped__interpreter}{scoped\+\_\+interpreter}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classscoped__interpreter_a482334b3d598cfffa28d4efa8a1bb3e9}\label{classscoped__interpreter_a482334b3d598cfffa28d4efa8a1bb3e9}} 
+\index{scoped\_interpreter@{scoped\_interpreter}!````~scoped\_interpreter@{$\sim$scoped\_interpreter}}
+\index{````~scoped\_interpreter@{$\sim$scoped\_interpreter}!scoped\_interpreter@{scoped\_interpreter}}
+\doxysubsubsection{\texorpdfstring{$\sim$scoped\_interpreter()}{~scoped\_interpreter()}}
+{\footnotesize\ttfamily scoped\+\_\+interpreter\+::$\sim$scoped\+\_\+interpreter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classscoped__interpreter_a7843ed2ad5cf5c54537373c1febec3c7}\label{classscoped__interpreter_a7843ed2ad5cf5c54537373c1febec3c7}} 
+\index{scoped\_interpreter@{scoped\_interpreter}!operator=@{operator=}}
+\index{operator=@{operator=}!scoped\_interpreter@{scoped\_interpreter}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classscoped__interpreter}{scoped\+\_\+interpreter}}\& scoped\+\_\+interpreter\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classscoped__interpreter}{scoped\+\_\+interpreter}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classscoped__interpreter_acdda686792144d2fb682491d19a803b5}\label{classscoped__interpreter_acdda686792144d2fb682491d19a803b5}} 
+\index{scoped\_interpreter@{scoped\_interpreter}!operator=@{operator=}}
+\index{operator=@{operator=}!scoped\_interpreter@{scoped\_interpreter}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classscoped__interpreter}{scoped\+\_\+interpreter}}\& scoped\+\_\+interpreter\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classscoped__interpreter}{scoped\+\_\+interpreter}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{embed_8h}{embed.\+h}}\end{DoxyCompactItemize}

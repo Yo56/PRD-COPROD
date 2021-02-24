@@ -1,0 +1,293 @@
+\hypertarget{classxlnt_1_1variant}{}\doxysection{xlnt\+::variant Class Reference}
+\label{classxlnt_1_1variant}\index{xlnt::variant@{xlnt::variant}}
+
+
+Represents an object that can have variable type.  
+
+
+
+
+{\ttfamily \#include $<$variant.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3}{type}} \{ \newline
+\mbox{\hyperlink{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3a6ba8844da718b4a65f60dbfd0d92d6ef}{vector}}
+, \mbox{\hyperlink{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3a37a6259cc0c1dae299a7866489dff0bd}{null}}
+, \mbox{\hyperlink{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3aa9818d533a6a867304dd2a16f5644215}{i4}}
+, \mbox{\hyperlink{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3a50832ec233be4417bbec35cd56b1f312}{lpstr}}
+, \newline
+\mbox{\hyperlink{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3a5fc732311905cb27e82d67f4f6511f7f}{date}}
+, \mbox{\hyperlink{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3a84e2c64f38f78ba3ea5c905ab5a2da27}{boolean}}
+ \}
+\begin{DoxyCompactList}\small\item\em The possible types a variant can hold. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1variant_a229f10a100c8812cbfe2c35360dfff9a}{variant}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. Creates a null-\/type variant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1variant_ab3f3482e47d60c835a89dc664a1c4c04}{variant}} (const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Creates a string-\/type variant with the given value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1variant_aea0802fa6f2859412e60f255aceb8fac}{variant}} (const char $\ast$value)
+\begin{DoxyCompactList}\small\item\em Creates a string-\/type variant with the given value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1variant_af57057f67e3d9d56e5f45ae298c68cdf}{variant}} (std\+::int32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Creates a i4-\/type variant with the given value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1variant_a0f6256bf7810c977e50f2828271bd909}{variant}} (bool value)
+\begin{DoxyCompactList}\small\item\em Creates a bool-\/type variant with the given value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1variant_ac81021f5d181679770554c0ac08941ca}{variant}} (const \mbox{\hyperlink{structxlnt_1_1datetime}{datetime}} \&value)
+\begin{DoxyCompactList}\small\item\em Creates a date-\/type variant with the given value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1variant_ad73b6f6ccd483f25e500c7d443e93c2d}{variant}} (const std\+::initializer\+\_\+list$<$ std\+::int32\+\_\+t $>$ \&value)
+\begin{DoxyCompactList}\small\item\em Creates a vector\+\_\+i4-\/type variant with the given value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1variant_af90a188ad302bb0bde173b2d6062ca72}{variant}} (const std\+::vector$<$ std\+::int32\+\_\+t $>$ \&value)
+\begin{DoxyCompactList}\small\item\em Creates a vector\+\_\+i4-\/type variant with the given value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1variant_ac7e940a9ecb55b9c73813c3fd5ec7105}{variant}} (const std\+::initializer\+\_\+list$<$ const char $\ast$ $>$ \&value)
+\begin{DoxyCompactList}\small\item\em Creates a vector\+\_\+string-\/type variant with the given value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1variant_a790307ccb76c6c3dc00e5d55b999402a}{variant}} (const std\+::vector$<$ const char $\ast$ $>$ \&value)
+\begin{DoxyCompactList}\small\item\em Creates a vector\+\_\+string-\/type variant with the given value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1variant_a64da7cc5b04050cc235c6bdaff2d8861}{variant}} (const std\+::initializer\+\_\+list$<$ std\+::string $>$ \&value)
+\begin{DoxyCompactList}\small\item\em Creates a vector\+\_\+string-\/type variant with the given value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1variant_a5b85c2d24b9de7ac393b83771b3a50a3}{variant}} (const std\+::vector$<$ std\+::string $>$ \&value)
+\begin{DoxyCompactList}\small\item\em Creates a vector\+\_\+string-\/type variant with the given value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1variant_ab8fce396095bb6df500a97bb4a5857b8}{variant}} (const std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1variant}{variant}} $>$ \&value)
+\begin{DoxyCompactList}\small\item\em Creates a vector\+\_\+variant-\/type variant with the given value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1variant_ad656fbf89d112561b2a635da22e4685f}{is}} (\mbox{\hyperlink{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3}{type}} t) const
+\begin{DoxyCompactList}\small\item\em Returns true if this variant is of type t. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxlnt_1_1variant_ad6e30eb5fce5d6a4a087ddc139d344e3}{get}} () const
+\begin{DoxyCompactList}\small\item\em Returns the value of this variant as type T. An exception will be thrown if the types are not convertible. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3}{type}} \mbox{\hyperlink{classxlnt_1_1variant_ae1c3eb43528c5989f85635000c77c575}{value\+\_\+type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the type of this variant. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1variant_a031f0bc8e96231e775c5bb84fff5ee27}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1variant}{variant}} \&rhs) const
+\item 
+template$<$$>$ bool \mbox{\hyperlink{classxlnt_1_1variant_abdc58e27e9ab76b2ea585ac043ffa613}{get}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an object that can have variable type. 
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3}\label{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3}} 
+\index{xlnt::variant@{xlnt::variant}!type@{type}}
+\index{type@{type}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3}{xlnt\+::variant\+::type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The possible types a variant can hold. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{vector@{vector}!xlnt::variant@{xlnt::variant}}\index{xlnt::variant@{xlnt::variant}!vector@{vector}}}\mbox{\Hypertarget{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3a6ba8844da718b4a65f60dbfd0d92d6ef}\label{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3a6ba8844da718b4a65f60dbfd0d92d6ef}} 
+vector&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{null@{null}!xlnt::variant@{xlnt::variant}}\index{xlnt::variant@{xlnt::variant}!null@{null}}}\mbox{\Hypertarget{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3a37a6259cc0c1dae299a7866489dff0bd}\label{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3a37a6259cc0c1dae299a7866489dff0bd}} 
+null&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{i4@{i4}!xlnt::variant@{xlnt::variant}}\index{xlnt::variant@{xlnt::variant}!i4@{i4}}}\mbox{\Hypertarget{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3aa9818d533a6a867304dd2a16f5644215}\label{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3aa9818d533a6a867304dd2a16f5644215}} 
+i4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{lpstr@{lpstr}!xlnt::variant@{xlnt::variant}}\index{xlnt::variant@{xlnt::variant}!lpstr@{lpstr}}}\mbox{\Hypertarget{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3a50832ec233be4417bbec35cd56b1f312}\label{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3a50832ec233be4417bbec35cd56b1f312}} 
+lpstr&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{date@{date}!xlnt::variant@{xlnt::variant}}\index{xlnt::variant@{xlnt::variant}!date@{date}}}\mbox{\Hypertarget{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3a5fc732311905cb27e82d67f4f6511f7f}\label{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3a5fc732311905cb27e82d67f4f6511f7f}} 
+date&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{boolean@{boolean}!xlnt::variant@{xlnt::variant}}\index{xlnt::variant@{xlnt::variant}!boolean@{boolean}}}\mbox{\Hypertarget{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3a84e2c64f38f78ba3ea5c905ab5a2da27}\label{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3a84e2c64f38f78ba3ea5c905ab5a2da27}} 
+boolean&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1variant_a229f10a100c8812cbfe2c35360dfff9a}\label{classxlnt_1_1variant_a229f10a100c8812cbfe2c35360dfff9a}} 
+\index{xlnt::variant@{xlnt::variant}!variant@{variant}}
+\index{variant@{variant}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{variant()}{variant()}\hspace{0.1cm}{\footnotesize\ttfamily [1/13]}}
+{\footnotesize\ttfamily xlnt\+::variant\+::variant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. Creates a null-\/type variant. 
+
+\mbox{\Hypertarget{classxlnt_1_1variant_ab3f3482e47d60c835a89dc664a1c4c04}\label{classxlnt_1_1variant_ab3f3482e47d60c835a89dc664a1c4c04}} 
+\index{xlnt::variant@{xlnt::variant}!variant@{variant}}
+\index{variant@{variant}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{variant()}{variant()}\hspace{0.1cm}{\footnotesize\ttfamily [2/13]}}
+{\footnotesize\ttfamily xlnt\+::variant\+::variant (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Creates a string-\/type variant with the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1variant_aea0802fa6f2859412e60f255aceb8fac}\label{classxlnt_1_1variant_aea0802fa6f2859412e60f255aceb8fac}} 
+\index{xlnt::variant@{xlnt::variant}!variant@{variant}}
+\index{variant@{variant}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{variant()}{variant()}\hspace{0.1cm}{\footnotesize\ttfamily [3/13]}}
+{\footnotesize\ttfamily xlnt\+::variant\+::variant (\begin{DoxyParamCaption}\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Creates a string-\/type variant with the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1variant_af57057f67e3d9d56e5f45ae298c68cdf}\label{classxlnt_1_1variant_af57057f67e3d9d56e5f45ae298c68cdf}} 
+\index{xlnt::variant@{xlnt::variant}!variant@{variant}}
+\index{variant@{variant}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{variant()}{variant()}\hspace{0.1cm}{\footnotesize\ttfamily [4/13]}}
+{\footnotesize\ttfamily xlnt\+::variant\+::variant (\begin{DoxyParamCaption}\item[{std\+::int32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Creates a i4-\/type variant with the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1variant_a0f6256bf7810c977e50f2828271bd909}\label{classxlnt_1_1variant_a0f6256bf7810c977e50f2828271bd909}} 
+\index{xlnt::variant@{xlnt::variant}!variant@{variant}}
+\index{variant@{variant}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{variant()}{variant()}\hspace{0.1cm}{\footnotesize\ttfamily [5/13]}}
+{\footnotesize\ttfamily xlnt\+::variant\+::variant (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Creates a bool-\/type variant with the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1variant_ac81021f5d181679770554c0ac08941ca}\label{classxlnt_1_1variant_ac81021f5d181679770554c0ac08941ca}} 
+\index{xlnt::variant@{xlnt::variant}!variant@{variant}}
+\index{variant@{variant}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{variant()}{variant()}\hspace{0.1cm}{\footnotesize\ttfamily [6/13]}}
+{\footnotesize\ttfamily xlnt\+::variant\+::variant (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1datetime}{datetime}} \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Creates a date-\/type variant with the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1variant_ad73b6f6ccd483f25e500c7d443e93c2d}\label{classxlnt_1_1variant_ad73b6f6ccd483f25e500c7d443e93c2d}} 
+\index{xlnt::variant@{xlnt::variant}!variant@{variant}}
+\index{variant@{variant}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{variant()}{variant()}\hspace{0.1cm}{\footnotesize\ttfamily [7/13]}}
+{\footnotesize\ttfamily xlnt\+::variant\+::variant (\begin{DoxyParamCaption}\item[{const std\+::initializer\+\_\+list$<$ std\+::int32\+\_\+t $>$ \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Creates a vector\+\_\+i4-\/type variant with the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1variant_af90a188ad302bb0bde173b2d6062ca72}\label{classxlnt_1_1variant_af90a188ad302bb0bde173b2d6062ca72}} 
+\index{xlnt::variant@{xlnt::variant}!variant@{variant}}
+\index{variant@{variant}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{variant()}{variant()}\hspace{0.1cm}{\footnotesize\ttfamily [8/13]}}
+{\footnotesize\ttfamily xlnt\+::variant\+::variant (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::int32\+\_\+t $>$ \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Creates a vector\+\_\+i4-\/type variant with the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1variant_ac7e940a9ecb55b9c73813c3fd5ec7105}\label{classxlnt_1_1variant_ac7e940a9ecb55b9c73813c3fd5ec7105}} 
+\index{xlnt::variant@{xlnt::variant}!variant@{variant}}
+\index{variant@{variant}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{variant()}{variant()}\hspace{0.1cm}{\footnotesize\ttfamily [9/13]}}
+{\footnotesize\ttfamily xlnt\+::variant\+::variant (\begin{DoxyParamCaption}\item[{const std\+::initializer\+\_\+list$<$ const char $\ast$ $>$ \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Creates a vector\+\_\+string-\/type variant with the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1variant_a790307ccb76c6c3dc00e5d55b999402a}\label{classxlnt_1_1variant_a790307ccb76c6c3dc00e5d55b999402a}} 
+\index{xlnt::variant@{xlnt::variant}!variant@{variant}}
+\index{variant@{variant}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{variant()}{variant()}\hspace{0.1cm}{\footnotesize\ttfamily [10/13]}}
+{\footnotesize\ttfamily xlnt\+::variant\+::variant (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ const char $\ast$ $>$ \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Creates a vector\+\_\+string-\/type variant with the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1variant_a64da7cc5b04050cc235c6bdaff2d8861}\label{classxlnt_1_1variant_a64da7cc5b04050cc235c6bdaff2d8861}} 
+\index{xlnt::variant@{xlnt::variant}!variant@{variant}}
+\index{variant@{variant}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{variant()}{variant()}\hspace{0.1cm}{\footnotesize\ttfamily [11/13]}}
+{\footnotesize\ttfamily xlnt\+::variant\+::variant (\begin{DoxyParamCaption}\item[{const std\+::initializer\+\_\+list$<$ std\+::string $>$ \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Creates a vector\+\_\+string-\/type variant with the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1variant_a5b85c2d24b9de7ac393b83771b3a50a3}\label{classxlnt_1_1variant_a5b85c2d24b9de7ac393b83771b3a50a3}} 
+\index{xlnt::variant@{xlnt::variant}!variant@{variant}}
+\index{variant@{variant}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{variant()}{variant()}\hspace{0.1cm}{\footnotesize\ttfamily [12/13]}}
+{\footnotesize\ttfamily xlnt\+::variant\+::variant (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Creates a vector\+\_\+string-\/type variant with the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1variant_ab8fce396095bb6df500a97bb4a5857b8}\label{classxlnt_1_1variant_ab8fce396095bb6df500a97bb4a5857b8}} 
+\index{xlnt::variant@{xlnt::variant}!variant@{variant}}
+\index{variant@{variant}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{variant()}{variant()}\hspace{0.1cm}{\footnotesize\ttfamily [13/13]}}
+{\footnotesize\ttfamily xlnt\+::variant\+::variant (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1variant}{variant}} $>$ \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Creates a vector\+\_\+variant-\/type variant with the given value. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1variant_ad6e30eb5fce5d6a4a087ddc139d344e3}\label{classxlnt_1_1variant_ad6e30eb5fce5d6a4a087ddc139d344e3}} 
+\index{xlnt::variant@{xlnt::variant}!get@{get}}
+\index{get@{get}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T xlnt\+::variant\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the value of this variant as type T. An exception will be thrown if the types are not convertible. 
+
+\mbox{\Hypertarget{classxlnt_1_1variant_abdc58e27e9ab76b2ea585ac043ffa613}\label{classxlnt_1_1variant_abdc58e27e9ab76b2ea585ac043ffa613}} 
+\index{xlnt::variant@{xlnt::variant}!get@{get}}
+\index{get@{get}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+\mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} \mbox{\hyperlink{structxlnt_1_1datetime}{datetime}} xlnt\+::variant\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1variant_ad656fbf89d112561b2a635da22e4685f}\label{classxlnt_1_1variant_ad656fbf89d112561b2a635da22e4685f}} 
+\index{xlnt::variant@{xlnt::variant}!is@{is}}
+\index{is@{is}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{is()}{is()}}
+{\footnotesize\ttfamily bool xlnt\+::variant\+::is (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3}{type}}}]{t }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this variant is of type t. 
+
+\mbox{\Hypertarget{classxlnt_1_1variant_a031f0bc8e96231e775c5bb84fff5ee27}\label{classxlnt_1_1variant_a031f0bc8e96231e775c5bb84fff5ee27}} 
+\index{xlnt::variant@{xlnt::variant}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::variant\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1variant}{variant}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1variant_ae1c3eb43528c5989f85635000c77c575}\label{classxlnt_1_1variant_ae1c3eb43528c5989f85635000c77c575}} 
+\index{xlnt::variant@{xlnt::variant}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!xlnt::variant@{xlnt::variant}}
+\doxysubsubsection{\texorpdfstring{value\_type()}{value\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1variant_a7256ff9116aab1d86fe6ddc428746fa3}{variant\+::type}} xlnt\+::variant\+::value\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the type of this variant. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/utils/\mbox{\hyperlink{variant_8hpp}{variant.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/utils/\mbox{\hyperlink{variant_8cpp}{variant.\+cpp}}\end{DoxyCompactItemize}

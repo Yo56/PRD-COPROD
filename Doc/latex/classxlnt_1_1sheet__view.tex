@@ -1,0 +1,291 @@
+\hypertarget{classxlnt_1_1sheet__view}{}\doxysection{xlnt\+::sheet\+\_\+view Class Reference}
+\label{classxlnt_1_1sheet__view}\index{xlnt::sheet\_view@{xlnt::sheet\_view}}
+
+
+Describes a view of a worksheet. Worksheets can have multiple views which show the data differently.  
+
+
+
+
+{\ttfamily \#include $<$sheet\+\_\+view.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classxlnt_1_1sheet__view_abe722a969744cdd42c4067226c041e0d}{id}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} new\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Sets the ID of this view to new\+\_\+id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1sheet__view_ad41fea936468385ad911a5afe6f31088}{id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the ID of this view. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1sheet__view_a8e1298ffdc346a9e157ec1ceff534f96}{has\+\_\+pane}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this view has a pane defined. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structxlnt_1_1pane}{pane}} \& \mbox{\hyperlink{classxlnt_1_1sheet__view_ab21d19f431588481db0782b1e07f3758}{pane}} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to this view\textquotesingle{}s pane. \end{DoxyCompactList}\item 
+const struct \mbox{\hyperlink{structxlnt_1_1pane}{pane}} \& \mbox{\hyperlink{classxlnt_1_1sheet__view_a1a1116a8a72b9a8a05d694d5eb5c5c97}{pane}} () const
+\begin{DoxyCompactList}\small\item\em Returns a reference to this view\textquotesingle{}s pane. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1sheet__view_afe846874f13c6aa28b1a3aa63e2956fd}{clear\+\_\+pane}} ()
+\begin{DoxyCompactList}\small\item\em Removes the defined pane from this view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1sheet__view_ae59f5dd1bf293448e3161f9c4e3adf84}{pane}} (const struct \mbox{\hyperlink{structxlnt_1_1pane}{pane}} \&new\+\_\+pane)
+\begin{DoxyCompactList}\small\item\em Sets the pane of this view to new\+\_\+pane. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1sheet__view_a26803be1c4511fccedffba97aa30f4d2}{has\+\_\+selections}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this view has any selections. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1sheet__view_abaaa89960f39516eb52997f8bec6c61c}{add\+\_\+selection}} (const class \mbox{\hyperlink{classxlnt_1_1selection}{selection}} \&new\+\_\+selection)
+\begin{DoxyCompactList}\small\item\em Adds the given selection to the collection of selections. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1sheet__view_a87d43d10245ef25e4ba4e00b762dd25c}{clear\+\_\+selections}} ()
+\begin{DoxyCompactList}\small\item\em Removes all selections. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1selection}{xlnt\+::selection}} $>$ \mbox{\hyperlink{classxlnt_1_1sheet__view_a2ad7a3bf27a054bf91976eb5909268c6}{selections}} () const
+\begin{DoxyCompactList}\small\item\em Returns the collection of selections as a vector. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1selection}{xlnt\+::selection}} \& \mbox{\hyperlink{classxlnt_1_1sheet__view_adbf0ff8696bcf45e783c7dac005940d6}{selection}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} index)
+\begin{DoxyCompactList}\small\item\em Returns the selection at the given index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1sheet__view_a0f53c4def36756edf0f1851deab447ec}{show\+\_\+grid\+\_\+lines}} (bool show)
+\begin{DoxyCompactList}\small\item\em If show is true, grid lines will be shown for sheets using this view. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1sheet__view_a6126b3049bebfb75f5a84a530059148a}{show\+\_\+grid\+\_\+lines}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if grid lines will be shown for sheets using this view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1sheet__view_ad046c67f23fd5b3e995c874c28439b58}{default\+\_\+grid\+\_\+color}} (bool is\+\_\+default)
+\begin{DoxyCompactList}\small\item\em If is\+\_\+default is true, the default grid color will be used. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1sheet__view_aab0aadfc143841c022ce02d0b2ccd326}{default\+\_\+grid\+\_\+color}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the default grid color will be used. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1sheet__view_aaf4c970c7f0671f6d60938bf2b69babf}{type}} (\mbox{\hyperlink{namespacexlnt_ab0c3101c39024923299c02588cf84fab}{sheet\+\_\+view\+\_\+type}} new\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Sets the type of this view. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacexlnt_ab0c3101c39024923299c02588cf84fab}{sheet\+\_\+view\+\_\+type}} \mbox{\hyperlink{classxlnt_1_1sheet__view_ad02cc07c7b561e0cfe5106d5ef4699d5}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the type of this view. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1sheet__view_a5a3a818d8c00fa5344029a7472a1863e}{has\+\_\+top\+\_\+left\+\_\+cell}} () const
+\begin{DoxyCompactList}\small\item\em has a top left cell? \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1sheet__view_a4ba62d4aea73a818bcea11ef9a0278f4}{top\+\_\+left\+\_\+cell}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&ref)
+\begin{DoxyCompactList}\small\item\em Sets the top left cell of this view. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1sheet__view_a4fada4cecd527e02aacf3f4c9b2258d0}{top\+\_\+left\+\_\+cell}} () const
+\begin{DoxyCompactList}\small\item\em Returns the top left cell of this view. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1sheet__view_a9dfd7b0e81ae960103e3fd08ab93c389}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1sheet__view}{sheet\+\_\+view}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Returns true if this view is equal to rhs based on its id, grid lines setting, default grid color, pane, and selections. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Describes a view of a worksheet. Worksheets can have multiple views which show the data differently. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_abaaa89960f39516eb52997f8bec6c61c}\label{classxlnt_1_1sheet__view_abaaa89960f39516eb52997f8bec6c61c}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!add\_selection@{add\_selection}}
+\index{add\_selection@{add\_selection}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{add\_selection()}{add\_selection()}}
+{\footnotesize\ttfamily void xlnt\+::sheet\+\_\+view\+::add\+\_\+selection (\begin{DoxyParamCaption}\item[{const class \mbox{\hyperlink{classxlnt_1_1selection}{selection}} \&}]{new\+\_\+selection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds the given selection to the collection of selections. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_afe846874f13c6aa28b1a3aa63e2956fd}\label{classxlnt_1_1sheet__view_afe846874f13c6aa28b1a3aa63e2956fd}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!clear\_pane@{clear\_pane}}
+\index{clear\_pane@{clear\_pane}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{clear\_pane()}{clear\_pane()}}
+{\footnotesize\ttfamily void xlnt\+::sheet\+\_\+view\+::clear\+\_\+pane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the defined pane from this view. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_a87d43d10245ef25e4ba4e00b762dd25c}\label{classxlnt_1_1sheet__view_a87d43d10245ef25e4ba4e00b762dd25c}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!clear\_selections@{clear\_selections}}
+\index{clear\_selections@{clear\_selections}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{clear\_selections()}{clear\_selections()}}
+{\footnotesize\ttfamily void xlnt\+::sheet\+\_\+view\+::clear\+\_\+selections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes all selections. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_aab0aadfc143841c022ce02d0b2ccd326}\label{classxlnt_1_1sheet__view_aab0aadfc143841c022ce02d0b2ccd326}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!default\_grid\_color@{default\_grid\_color}}
+\index{default\_grid\_color@{default\_grid\_color}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{default\_grid\_color()}{default\_grid\_color()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::sheet\+\_\+view\+::default\+\_\+grid\+\_\+color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if the default grid color will be used. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_ad046c67f23fd5b3e995c874c28439b58}\label{classxlnt_1_1sheet__view_ad046c67f23fd5b3e995c874c28439b58}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!default\_grid\_color@{default\_grid\_color}}
+\index{default\_grid\_color@{default\_grid\_color}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{default\_grid\_color()}{default\_grid\_color()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::sheet\+\_\+view\+::default\+\_\+grid\+\_\+color (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+default }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If is\+\_\+default is true, the default grid color will be used. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_a8e1298ffdc346a9e157ec1ceff534f96}\label{classxlnt_1_1sheet__view_a8e1298ffdc346a9e157ec1ceff534f96}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!has\_pane@{has\_pane}}
+\index{has\_pane@{has\_pane}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{has\_pane()}{has\_pane()}}
+{\footnotesize\ttfamily bool xlnt\+::sheet\+\_\+view\+::has\+\_\+pane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if this view has a pane defined. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_a26803be1c4511fccedffba97aa30f4d2}\label{classxlnt_1_1sheet__view_a26803be1c4511fccedffba97aa30f4d2}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!has\_selections@{has\_selections}}
+\index{has\_selections@{has\_selections}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{has\_selections()}{has\_selections()}}
+{\footnotesize\ttfamily bool xlnt\+::sheet\+\_\+view\+::has\+\_\+selections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if this view has any selections. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_a5a3a818d8c00fa5344029a7472a1863e}\label{classxlnt_1_1sheet__view_a5a3a818d8c00fa5344029a7472a1863e}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!has\_top\_left\_cell@{has\_top\_left\_cell}}
+\index{has\_top\_left\_cell@{has\_top\_left\_cell}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{has\_top\_left\_cell()}{has\_top\_left\_cell()}}
+{\footnotesize\ttfamily bool xlnt\+::sheet\+\_\+view\+::has\+\_\+top\+\_\+left\+\_\+cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+has a top left cell? 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_ad41fea936468385ad911a5afe6f31088}\label{classxlnt_1_1sheet__view_ad41fea936468385ad911a5afe6f31088}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!id@{id}}
+\index{id@{id}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::sheet\+\_\+view\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the ID of this view. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_abe722a969744cdd42c4067226c041e0d}\label{classxlnt_1_1sheet__view_abe722a969744cdd42c4067226c041e0d}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!id@{id}}
+\index{id@{id}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::sheet\+\_\+view\+::id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{new\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the ID of this view to new\+\_\+id. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_a9dfd7b0e81ae960103e3fd08ab93c389}\label{classxlnt_1_1sheet__view_a9dfd7b0e81ae960103e3fd08ab93c389}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::sheet\+\_\+view\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1sheet__view}{sheet\+\_\+view}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if this view is equal to rhs based on its id, grid lines setting, default grid color, pane, and selections. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_ab21d19f431588481db0782b1e07f3758}\label{classxlnt_1_1sheet__view_ab21d19f431588481db0782b1e07f3758}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!pane@{pane}}
+\index{pane@{pane}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{pane()}{pane()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structxlnt_1_1pane}{pane}}\& xlnt\+::sheet\+\_\+view\+::pane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a reference to this view\textquotesingle{}s pane. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_a1a1116a8a72b9a8a05d694d5eb5c5c97}\label{classxlnt_1_1sheet__view_a1a1116a8a72b9a8a05d694d5eb5c5c97}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!pane@{pane}}
+\index{pane@{pane}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{pane()}{pane()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily const struct \mbox{\hyperlink{structxlnt_1_1pane}{pane}}\& xlnt\+::sheet\+\_\+view\+::pane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a reference to this view\textquotesingle{}s pane. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_ae59f5dd1bf293448e3161f9c4e3adf84}\label{classxlnt_1_1sheet__view_ae59f5dd1bf293448e3161f9c4e3adf84}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!pane@{pane}}
+\index{pane@{pane}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{pane()}{pane()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void xlnt\+::sheet\+\_\+view\+::pane (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structxlnt_1_1pane}{pane}} \&}]{new\+\_\+pane }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the pane of this view to new\+\_\+pane. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_adbf0ff8696bcf45e783c7dac005940d6}\label{classxlnt_1_1sheet__view_adbf0ff8696bcf45e783c7dac005940d6}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!selection@{selection}}
+\index{selection@{selection}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{selection()}{selection()}}
+{\footnotesize\ttfamily class \mbox{\hyperlink{classxlnt_1_1selection}{xlnt\+::selection}}\& xlnt\+::sheet\+\_\+view\+::selection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the selection at the given index. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_a2ad7a3bf27a054bf91976eb5909268c6}\label{classxlnt_1_1sheet__view_a2ad7a3bf27a054bf91976eb5909268c6}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!selections@{selections}}
+\index{selections@{selections}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{selections()}{selections()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classxlnt_1_1selection}{xlnt\+::selection}}$>$ xlnt\+::sheet\+\_\+view\+::selections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the collection of selections as a vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_a6126b3049bebfb75f5a84a530059148a}\label{classxlnt_1_1sheet__view_a6126b3049bebfb75f5a84a530059148a}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!show\_grid\_lines@{show\_grid\_lines}}
+\index{show\_grid\_lines@{show\_grid\_lines}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{show\_grid\_lines()}{show\_grid\_lines()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::sheet\+\_\+view\+::show\+\_\+grid\+\_\+lines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if grid lines will be shown for sheets using this view. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_a0f53c4def36756edf0f1851deab447ec}\label{classxlnt_1_1sheet__view_a0f53c4def36756edf0f1851deab447ec}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!show\_grid\_lines@{show\_grid\_lines}}
+\index{show\_grid\_lines@{show\_grid\_lines}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{show\_grid\_lines()}{show\_grid\_lines()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::sheet\+\_\+view\+::show\+\_\+grid\+\_\+lines (\begin{DoxyParamCaption}\item[{bool}]{show }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If show is true, grid lines will be shown for sheets using this view. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_a4fada4cecd527e02aacf3f4c9b2258d0}\label{classxlnt_1_1sheet__view_a4fada4cecd527e02aacf3f4c9b2258d0}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!top\_left\_cell@{top\_left\_cell}}
+\index{top\_left\_cell@{top\_left\_cell}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{top\_left\_cell()}{top\_left\_cell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} xlnt\+::sheet\+\_\+view\+::top\+\_\+left\+\_\+cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the top left cell of this view. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_a4ba62d4aea73a818bcea11ef9a0278f4}\label{classxlnt_1_1sheet__view_a4ba62d4aea73a818bcea11ef9a0278f4}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!top\_left\_cell@{top\_left\_cell}}
+\index{top\_left\_cell@{top\_left\_cell}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{top\_left\_cell()}{top\_left\_cell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::sheet\+\_\+view\+::top\+\_\+left\+\_\+cell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{ref }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the top left cell of this view. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_ad02cc07c7b561e0cfe5106d5ef4699d5}\label{classxlnt_1_1sheet__view_ad02cc07c7b561e0cfe5106d5ef4699d5}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!type@{type}}
+\index{type@{type}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacexlnt_ab0c3101c39024923299c02588cf84fab}{sheet\+\_\+view\+\_\+type}} xlnt\+::sheet\+\_\+view\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the type of this view. 
+
+\mbox{\Hypertarget{classxlnt_1_1sheet__view_aaf4c970c7f0671f6d60938bf2b69babf}\label{classxlnt_1_1sheet__view_aaf4c970c7f0671f6d60938bf2b69babf}} 
+\index{xlnt::sheet\_view@{xlnt::sheet\_view}!type@{type}}
+\index{type@{type}!xlnt::sheet\_view@{xlnt::sheet\_view}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::sheet\+\_\+view\+::type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_ab0c3101c39024923299c02588cf84fab}{sheet\+\_\+view\+\_\+type}}}]{new\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the type of this view. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/worksheet/\mbox{\hyperlink{sheet__view_8hpp}{sheet\+\_\+view.\+hpp}}\end{DoxyCompactItemize}

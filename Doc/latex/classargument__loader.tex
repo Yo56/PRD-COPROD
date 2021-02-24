@@ -1,0 +1,93 @@
+\hypertarget{classargument__loader}{}\doxysection{argument\+\_\+loader$<$ Args $>$ Class Template Reference}
+\label{classargument__loader}\index{argument\_loader$<$ Args $>$@{argument\_loader$<$ Args $>$}}
+
+
+Helper class which loads arguments for C++ functions called from Python.  
+
+
+
+
+{\ttfamily \#include $<$cast.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classargument__loader_ac5cff5197a03f99f06169af9f43d6537}{load\+\_\+args}} (\mbox{\hyperlink{structfunction__call}{function\+\_\+call}} \&\mbox{\hyperlink{classargument__loader_a5d84d64cfc5643563f65b0e21310ca6c}{call}})
+\item 
+{\footnotesize template$<$typename Return , typename Guard , typename Func $>$ }\\\mbox{\hyperlink{common_8h_a012819c9e8b5e04872a271f50f8b8196}{enable\+\_\+if\+\_\+t}}$<$!std\+::is\+\_\+void$<$ Return $>$\+::value, Return $>$ \mbox{\hyperlink{classargument__loader_a5d84d64cfc5643563f65b0e21310ca6c}{call}} (Func \&\&f) \&\&
+\item 
+{\footnotesize template$<$typename Return , typename Guard , typename Func $>$ }\\\mbox{\hyperlink{common_8h_a012819c9e8b5e04872a271f50f8b8196}{enable\+\_\+if\+\_\+t}}$<$ std\+::is\+\_\+void$<$ Return $>$\+::value, \mbox{\hyperlink{structvoid__type}{void\+\_\+type}} $>$ \mbox{\hyperlink{classargument__loader_a1671b063ca065c47975b4aa7853b403c}{call}} (Func \&\&f) \&\&
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{descr_8h_ae155873780600c0149950602b31084a9}{PYBIND11\+\_\+\+DESCR}} \mbox{\hyperlink{classargument__loader_a42f51c3dee96085d1ed297d7eb92792e}{arg\+\_\+names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{classargument__loader_aefd489f954b4706554d6c4e7e705617f}{has\+\_\+kwargs}} = kwargs\+\_\+pos $<$ 0
+\item 
+static constexpr bool \mbox{\hyperlink{classargument__loader_a9436dd2f1d26de4dcfb7e5f7edffef93}{has\+\_\+args}} = args\+\_\+pos $<$ 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename... Args$>$\newline
+class argument\+\_\+loader$<$ Args $>$}
+
+Helper class which loads arguments for C++ functions called from Python. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classargument__loader_a42f51c3dee96085d1ed297d7eb92792e}\label{classargument__loader_a42f51c3dee96085d1ed297d7eb92792e}} 
+\index{argument\_loader$<$ Args $>$@{argument\_loader$<$ Args $>$}!arg\_names@{arg\_names}}
+\index{arg\_names@{arg\_names}!argument\_loader$<$ Args $>$@{argument\_loader$<$ Args $>$}}
+\doxysubsubsection{\texorpdfstring{arg\_names()}{arg\_names()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+static \mbox{\hyperlink{descr_8h_ae155873780600c0149950602b31084a9}{PYBIND11\+\_\+\+DESCR}} \mbox{\hyperlink{classargument__loader}{argument\+\_\+loader}}$<$ Args $>$\+::arg\+\_\+names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classargument__loader_a5d84d64cfc5643563f65b0e21310ca6c}\label{classargument__loader_a5d84d64cfc5643563f65b0e21310ca6c}} 
+\index{argument\_loader$<$ Args $>$@{argument\_loader$<$ Args $>$}!call@{call}}
+\index{call@{call}!argument\_loader$<$ Args $>$@{argument\_loader$<$ Args $>$}}
+\doxysubsubsection{\texorpdfstring{call()}{call()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+template$<$typename Return , typename Guard , typename Func $>$ \\
+\mbox{\hyperlink{common_8h_a012819c9e8b5e04872a271f50f8b8196}{enable\+\_\+if\+\_\+t}}$<$!std\+::is\+\_\+void$<$Return$>$\+::value, Return$>$ \mbox{\hyperlink{classargument__loader}{argument\+\_\+loader}}$<$ Args $>$\+::call (\begin{DoxyParamCaption}\item[{Func \&\&}]{f }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classargument__loader_a1671b063ca065c47975b4aa7853b403c}\label{classargument__loader_a1671b063ca065c47975b4aa7853b403c}} 
+\index{argument\_loader$<$ Args $>$@{argument\_loader$<$ Args $>$}!call@{call}}
+\index{call@{call}!argument\_loader$<$ Args $>$@{argument\_loader$<$ Args $>$}}
+\doxysubsubsection{\texorpdfstring{call()}{call()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+template$<$typename Return , typename Guard , typename Func $>$ \\
+\mbox{\hyperlink{common_8h_a012819c9e8b5e04872a271f50f8b8196}{enable\+\_\+if\+\_\+t}}$<$std\+::is\+\_\+void$<$Return$>$\+::value, \mbox{\hyperlink{structvoid__type}{void\+\_\+type}}$>$ \mbox{\hyperlink{classargument__loader}{argument\+\_\+loader}}$<$ Args $>$\+::call (\begin{DoxyParamCaption}\item[{Func \&\&}]{f }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classargument__loader_ac5cff5197a03f99f06169af9f43d6537}\label{classargument__loader_ac5cff5197a03f99f06169af9f43d6537}} 
+\index{argument\_loader$<$ Args $>$@{argument\_loader$<$ Args $>$}!load\_args@{load\_args}}
+\index{load\_args@{load\_args}!argument\_loader$<$ Args $>$@{argument\_loader$<$ Args $>$}}
+\doxysubsubsection{\texorpdfstring{load\_args()}{load\_args()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+bool \mbox{\hyperlink{classargument__loader}{argument\+\_\+loader}}$<$ Args $>$\+::load\+\_\+args (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structfunction__call}{function\+\_\+call}} \&}]{call }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classargument__loader_a9436dd2f1d26de4dcfb7e5f7edffef93}\label{classargument__loader_a9436dd2f1d26de4dcfb7e5f7edffef93}} 
+\index{argument\_loader$<$ Args $>$@{argument\_loader$<$ Args $>$}!has\_args@{has\_args}}
+\index{has\_args@{has\_args}!argument\_loader$<$ Args $>$@{argument\_loader$<$ Args $>$}}
+\doxysubsubsection{\texorpdfstring{has\_args}{has\_args}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+constexpr bool \mbox{\hyperlink{classargument__loader}{argument\+\_\+loader}}$<$ Args $>$\+::has\+\_\+args = args\+\_\+pos $<$ 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classargument__loader_aefd489f954b4706554d6c4e7e705617f}\label{classargument__loader_aefd489f954b4706554d6c4e7e705617f}} 
+\index{argument\_loader$<$ Args $>$@{argument\_loader$<$ Args $>$}!has\_kwargs@{has\_kwargs}}
+\index{has\_kwargs@{has\_kwargs}!argument\_loader$<$ Args $>$@{argument\_loader$<$ Args $>$}}
+\doxysubsubsection{\texorpdfstring{has\_kwargs}{has\_kwargs}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+constexpr bool \mbox{\hyperlink{classargument__loader}{argument\+\_\+loader}}$<$ Args $>$\+::has\+\_\+kwargs = kwargs\+\_\+pos $<$ 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{cast_8h}{cast.\+h}}\end{DoxyCompactItemize}

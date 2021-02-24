@@ -1,0 +1,1627 @@
+\hypertarget{classxlnt_1_1worksheet}{}\doxysection{xlnt\+::worksheet Class Reference}
+\label{classxlnt_1_1worksheet}\index{xlnt::worksheet@{xlnt::worksheet}}
+
+
+A worksheet is a 2D array of cells starting with cell A1 in the top-\/left corner and extending indefinitely down and right as needed.  
+
+
+
+
+{\ttfamily \#include $<$worksheet.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classxlnt_1_1worksheet_ae96ed144ca5710f7e45e39e51a4b2dbe}{iterator}} = \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em Iterate over a non-\/const worksheet with an iterator of this type. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classxlnt_1_1worksheet_a63658d488e4268777aa391fa0050233a}{const\+\_\+iterator}} = \mbox{\hyperlink{classxlnt_1_1const__range__iterator}{const\+\_\+range\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em Iterate over a non-\/const worksheet with an iterator of this type. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classxlnt_1_1worksheet_a862aacebd1521c7d000ef740f6e1e918}{reverse\+\_\+iterator}} = std\+::reverse\+\_\+iterator$<$ \mbox{\hyperlink{classxlnt_1_1worksheet_ae96ed144ca5710f7e45e39e51a4b2dbe}{iterator}} $>$
+\begin{DoxyCompactList}\small\item\em Iterate in reverse over a non-\/const worksheet with an iterator of this type. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classxlnt_1_1worksheet_a5df76c014e585a15e75b9bb7afcef11f}{const\+\_\+reverse\+\_\+iterator}} = std\+::reverse\+\_\+iterator$<$ \mbox{\hyperlink{classxlnt_1_1worksheet_a63658d488e4268777aa391fa0050233a}{const\+\_\+iterator}} $>$
+\begin{DoxyCompactList}\small\item\em Iterate in reverse order over a const worksheet with an iterator of this type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet_a060c9a7e63a0f118d118580eb3a2bb7b}{worksheet}} ()
+\begin{DoxyCompactList}\small\item\em Construct a null worksheet. No methods should be called on such a worksheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet_a12ed1c574b4e5b4de187f32e85c19f9f}{worksheet}} (const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor. This worksheet will point to the same memory as rhs\textquotesingle{}s worksheet. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \& \mbox{\hyperlink{classxlnt_1_1worksheet_ae4f3620687b70078065dababe2d43524}{workbook}} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the workbook this worksheet is owned by. \end{DoxyCompactList}\item 
+const class \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \& \mbox{\hyperlink{classxlnt_1_1worksheet_af2643961703e50d7254222e6c2c2a0c6}{workbook}} () const
+\begin{DoxyCompactList}\small\item\em Returns a reference to the workbook this worksheet is owned by. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a4f218d49d06f6f44dbab452bf2bdec3e}{garbage\+\_\+collect}} ()
+\begin{DoxyCompactList}\small\item\em Deletes data held in the worksheet that does not affect the internal data or display. For example, unreference styles and empty cells will be removed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1worksheet_a2a84f029276bfd9faec801fb17d3d6a9}{id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the unique numeric identifier of this worksheet. This will sometimes but not necessarily be the index of the worksheet in the workbook. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_aad07421a40956072818d448c7bc0e812}{id}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} id)
+\begin{DoxyCompactList}\small\item\em Set the unique numeric identifier. The id defaults to the lowest unused id in the workbook so this should not be called without a good reason. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1worksheet_ad6b664b8fd51d88bb50b6aca9870ac07}{title}} () const
+\begin{DoxyCompactList}\small\item\em Returns the title of this sheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a1042c97e2d1a85f45e1cef1e5104268a}{title}} (const std\+::string \&title)
+\begin{DoxyCompactList}\small\item\em Sets the title of this sheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1worksheet_a9242ee6abf016a88fbfda441ded5fcff}{frozen\+\_\+panes}} () const
+\begin{DoxyCompactList}\small\item\em Returns the top left corner of the region above and to the left of which panes are frozen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a0cbbf8626202bd83a901e0c8ff3c4d33}{freeze\+\_\+panes}} (\mbox{\hyperlink{classxlnt_1_1cell}{cell}} top\+\_\+left\+\_\+cell)
+\begin{DoxyCompactList}\small\item\em Freeze panes above and to the left of top\+\_\+left\+\_\+cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_af00727b60f55c3c673444d55c3ce8b6f}{freeze\+\_\+panes}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&top\+\_\+left\+\_\+coordinate)
+\begin{DoxyCompactList}\small\item\em Freeze panes above and to the left of top\+\_\+left\+\_\+coordinate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a09deeb4f6b94bf1ce596644d75370321}{unfreeze\+\_\+panes}} ()
+\begin{DoxyCompactList}\small\item\em Remove frozen panes. The data in those panes will be unaffected--this affects only the view. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_af47eda457f89f9a0c8da5dadec53e01d}{has\+\_\+frozen\+\_\+panes}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this sheet has a frozen row, frozen column, or both. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_aa96b7d1b9ee7e63b00220a1039db96c4}{has\+\_\+cell}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&reference) const
+\begin{DoxyCompactList}\small\item\em Returns true if this sheet has an initialized cell at the given reference. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1worksheet_a537be721b2b8c8c2c0cb4a3f159741a4}{cell}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&reference)
+\begin{DoxyCompactList}\small\item\em Returns the cell at the given reference. If the cell doesn\textquotesingle{}t exist, it will be initialized to null before being returned. \end{DoxyCompactList}\item 
+const class \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1worksheet_abf8998a003c3d6e5e527020da5f155fa}{cell}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&reference) const
+\begin{DoxyCompactList}\small\item\em Returns the cell at the given reference. If the cell doesn\textquotesingle{}t exist, an \mbox{\hyperlink{classxlnt_1_1invalid__parameter}{invalid\+\_\+parameter}} exception will be thrown. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1worksheet_ad312313d5a4c0c15957a16e87d97b54e}{cell}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} column, \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} row)
+\begin{DoxyCompactList}\small\item\em Returns the cell at the given column and row. If the cell doesn\textquotesingle{}t exist, it will be initialized to null before being returned. \end{DoxyCompactList}\item 
+const class \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1worksheet_af3956bc78f3d6b06a29b218596ed37c1}{cell}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} column, \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} row) const
+\begin{DoxyCompactList}\small\item\em Returns the cell at the given column and row. If the cell doesn\textquotesingle{}t exist, an \mbox{\hyperlink{classxlnt_1_1invalid__parameter}{invalid\+\_\+parameter}} exception will be thrown. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1worksheet_a8f9c0cc9493c0976f97a49dac38f6732}{range}} (const std\+::string \&reference\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Returns the range defined by reference string. If reference string is the name of a previously-\/defined named range in the sheet, it will be returned. \end{DoxyCompactList}\item 
+const class \mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1worksheet_ae653c3d890293c629c9f17d48b11bea2}{range}} (const std\+::string \&reference\+\_\+string) const
+\begin{DoxyCompactList}\small\item\em Returns the range defined by reference string. If reference string is the name of a previously-\/defined named range in the sheet, it will be returned. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1worksheet_ad68bda36461c1e961e4c03cb979dde2e}{range}} (const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&reference)
+\begin{DoxyCompactList}\small\item\em Returns the range defined by reference. \end{DoxyCompactList}\item 
+const class \mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1worksheet_a474966ce22a4e6dcef1f0e7c35569ca1}{range}} (const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&reference) const
+\begin{DoxyCompactList}\small\item\em Returns the range defined by reference. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1worksheet_a12778fcfc846484b59f95aa858a6d904}{rows}} (bool skip\+\_\+null=true)
+\begin{DoxyCompactList}\small\item\em Returns a range encompassing all cells in this sheet which will be iterated upon in row-\/major order. If skip\+\_\+null is true (default), empty rows and cells will be skipped during iteration of the range. \end{DoxyCompactList}\item 
+const class \mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1worksheet_ad57834107e0c93a2c1b64c4cb6d01d9e}{rows}} (bool skip\+\_\+null=true) const
+\begin{DoxyCompactList}\small\item\em Returns a range encompassing all cells in this sheet which will be iterated upon in row-\/major order. If skip\+\_\+null is true (default), empty rows and cells will be skipped during iteration of the range. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1worksheet_aef7f7c5c52affd4c8a10f40f782794ad}{columns}} (bool skip\+\_\+null=true)
+\begin{DoxyCompactList}\small\item\em Returns a range ecompassing all cells in this sheet which will be iterated upon in column-\/major order. If skip\+\_\+null is true (default), empty columns and cells will be skipped during iteration of the range. \end{DoxyCompactList}\item 
+const class \mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1worksheet_adad29f025fae53ffb3a9203e3a2976d2}{columns}} (bool skip\+\_\+null=true) const
+\begin{DoxyCompactList}\small\item\em Returns a range ecompassing all cells in this sheet which will be iterated upon in column-\/major order. If skip\+\_\+null is true (default), empty columns and cells will be skipped during iteration of the range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a0f5e7357a5d62397bf826371ff8cf5ee}{clear\+\_\+cell}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&ref)
+\begin{DoxyCompactList}\small\item\em Clears memory used by the given cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_ac04b853a21d8f8a06bd08896db5260b0}{clear\+\_\+row}} (\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} row)
+\begin{DoxyCompactList}\small\item\em Clears memory used by all cells in the given row. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_ab6925c264dfd8571f59e9aa42b95839e}{insert\+\_\+rows}} (\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} row, std\+::uint32\+\_\+t amount)
+\begin{DoxyCompactList}\small\item\em Insert empty rows before the given row index \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_ac925be7acfd64ff61a2bed5ace6afda2}{insert\+\_\+columns}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} column, std\+::uint32\+\_\+t amount)
+\begin{DoxyCompactList}\small\item\em Insert empty columns before the given column index \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a1e4853431c31b53d455bf158570cc393}{delete\+\_\+rows}} (\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} row, std\+::uint32\+\_\+t amount)
+\begin{DoxyCompactList}\small\item\em Delete rows before the given row index \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a651d63782df4463c8431c9c52113ee54}{delete\+\_\+columns}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} column, std\+::uint32\+\_\+t amount)
+\begin{DoxyCompactList}\small\item\em Delete columns before the given column index \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__properties}{xlnt\+::column\+\_\+properties}} \& \mbox{\hyperlink{classxlnt_1_1worksheet_a4b03bdef7998ec5f9f1689a03ec54785}{column\+\_\+properties}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} column)
+\begin{DoxyCompactList}\small\item\em Returns the column properties for the given column. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1column__properties}{xlnt\+::column\+\_\+properties}} \& \mbox{\hyperlink{classxlnt_1_1worksheet_a2b6a1f89c2dcaaf170058f65d4db04f6}{column\+\_\+properties}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} column) const
+\begin{DoxyCompactList}\small\item\em Returns the column properties for the given column. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_a9cc68476d47cf5fea8761ef67fdefe6e}{has\+\_\+column\+\_\+properties}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} column) const
+\begin{DoxyCompactList}\small\item\em Returns true if column properties have been set for the given column. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a158ef9ecc40eb80ec0350377ee3c757d}{add\+\_\+column\+\_\+properties}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} column, const class \mbox{\hyperlink{classxlnt_1_1column__properties}{column\+\_\+properties}} \&props)
+\begin{DoxyCompactList}\small\item\em Sets column properties for the given column to props. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classxlnt_1_1worksheet_a71b1660f42ffee879079463393efe24c}{column\+\_\+width}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} column) const
+\begin{DoxyCompactList}\small\item\em Calculates the width of the given column. This will be the default column width if a custom width is not set on this column\textquotesingle{}s \mbox{\hyperlink{classxlnt_1_1column__properties}{column\+\_\+properties}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1row__properties}{xlnt\+::row\+\_\+properties}} \& \mbox{\hyperlink{classxlnt_1_1worksheet_aff6507aa5653c439811f1f7c5aa16d03}{row\+\_\+properties}} (\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} row)
+\begin{DoxyCompactList}\small\item\em Returns the row properties for the given row. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1row__properties}{xlnt\+::row\+\_\+properties}} \& \mbox{\hyperlink{classxlnt_1_1worksheet_a003ac3abdf0cb218f8664214bb52ceb1}{row\+\_\+properties}} (\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} row) const
+\begin{DoxyCompactList}\small\item\em Returns the row properties for the given row. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_ab02c7ae0e6b5be9c8253eae5e14986ed}{has\+\_\+row\+\_\+properties}} (\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} row) const
+\begin{DoxyCompactList}\small\item\em Returns true if row properties have been set for the given row. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_ad2cabfe79e832411e6a52bb16f98dc95}{add\+\_\+row\+\_\+properties}} (\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} row, const class \mbox{\hyperlink{classxlnt_1_1row__properties}{row\+\_\+properties}} \&props)
+\begin{DoxyCompactList}\small\item\em Sets row properties for the given row to props. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classxlnt_1_1worksheet_a9dfad3c8abf86758156649388d54d18e}{row\+\_\+height}} (\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} row) const
+\begin{DoxyCompactList}\small\item\em Calculate the height of the given row. This will be the default row height if a custom height is not set on this row\textquotesingle{}s \mbox{\hyperlink{classxlnt_1_1row__properties}{row\+\_\+properties}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1worksheet_a627951189735a34fdbd953e91fb8534f}{point\+\_\+pos}} (int \mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}, int \mbox{\hyperlink{border_8hpp_a8aab264665f2085687d9eeca4c67a691}{top}}) const
+\begin{DoxyCompactList}\small\item\em Returns a reference to the cell at the given point coordinates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_ad11c6a505ee9a08a13251250a355a447}{create\+\_\+named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, const std\+::string \&reference\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Creates a new named range with the given name encompassing the string representing a range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_af73844f7be716fa3f34ca2175a7fbfb5}{create\+\_\+named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&reference)
+\begin{DoxyCompactList}\small\item\em Creates a new named range with the given name encompassing the given range reference. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_aaed7880fd2b7bf2ffcd92fe64e768e4f}{has\+\_\+named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}) const
+\begin{DoxyCompactList}\small\item\em Returns true if this worksheet contains a named range with the given name. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1worksheet_a3e8416a110ca2603076dd5c72556472b}{named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\begin{DoxyCompactList}\small\item\em Returns the named range with the given name. Throws \mbox{\hyperlink{classxlnt_1_1key__not__found}{key\+\_\+not\+\_\+found}} exception if the named range doesn\textquotesingle{}t exist. \end{DoxyCompactList}\item 
+const class \mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1worksheet_a69a339b1a11a98ab428b23a0eda322a2}{named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}) const
+\begin{DoxyCompactList}\small\item\em Returns the named range with the given name. Throws \mbox{\hyperlink{classxlnt_1_1key__not__found}{key\+\_\+not\+\_\+found}} exception if the named range doesn\textquotesingle{}t exist. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a3f527518c9a7b59c85c43c4a4f760c23}{remove\+\_\+named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\begin{DoxyCompactList}\small\item\em Removes a named range with the given name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1worksheet_a4893d07dfed96b4d6bc586793dce1d4c}{lowest\+\_\+row}} () const
+\begin{DoxyCompactList}\small\item\em Returns the row of the first non-\/empty cell in the worksheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1worksheet_ad9f7ade1268af691064d5ac5d17b5a9e}{lowest\+\_\+row\+\_\+or\+\_\+props}} () const
+\begin{DoxyCompactList}\small\item\em Returns the row of the first non-\/empty cell or lowest row with properties in the worksheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1worksheet_a463fc655c6104badfcfffe79ee7e1a22}{highest\+\_\+row}} () const
+\begin{DoxyCompactList}\small\item\em Returns the row of the last non-\/empty cell in the worksheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1worksheet_a00aa6db8c85ca3bc6e3c7165083df8bc}{highest\+\_\+row\+\_\+or\+\_\+props}} () const
+\begin{DoxyCompactList}\small\item\em Returns the row of the last non-\/empty cell or highest row with properties in the worksheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1worksheet_a0f8fb1aaa556f3415c5c8e4b3cd4bd2e}{next\+\_\+row}} () const
+\begin{DoxyCompactList}\small\item\em Returns the row directly below the last non-\/empty cell in the worksheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1worksheet_afceb7651672b605dd7617ba705721596}{lowest\+\_\+column}} () const
+\begin{DoxyCompactList}\small\item\em Returns the column of the first non-\/empty cell in the worksheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1worksheet_a9b5aa18e8353e62fece137e1973c2042}{lowest\+\_\+column\+\_\+or\+\_\+props}} () const
+\begin{DoxyCompactList}\small\item\em Returns the column of the first non-\/empty cell or lowest column with properties in the worksheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1worksheet_a48be494b534cf1c15ec62d6e861fe2d0}{highest\+\_\+column}} () const
+\begin{DoxyCompactList}\small\item\em Returns the column of the last non-\/empty cell in the worksheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1worksheet_afd26b7db01d0aff7fb02feeb4f839cf3}{highest\+\_\+column\+\_\+or\+\_\+props}} () const
+\begin{DoxyCompactList}\small\item\em Returns the column of the last non-\/empty cell or highest column with properties in the worksheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1worksheet_a261f05d8a62977747299d92461fc9e84}{calculate\+\_\+dimension}} () const
+\begin{DoxyCompactList}\small\item\em Returns a \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} pointing to the full range of non-\/empty cells in the worksheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a5e51e2f8e3396adfc0a2751a3826aebf}{merge\+\_\+cells}} (const std\+::string \&reference\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Merges the cells within the range represented by the given string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a370b7d922dc8662fa02fb6b413bbe7bc}{merge\+\_\+cells}} (const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&reference)
+\begin{DoxyCompactList}\small\item\em Merges the cells within the given range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a4ce60b6626ef5de86dd3852b029bf94b}{unmerge\+\_\+cells}} (const std\+::string \&reference\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Removes the merging of the cells in the range represented by the given string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a9fabc58e3c05d898aef057bf17a3ca0b}{unmerge\+\_\+cells}} (const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&reference)
+\begin{DoxyCompactList}\small\item\em Removes the merging of the cells in the given range. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} $>$ \mbox{\hyperlink{classxlnt_1_1worksheet_ae3ac827eef04ab469c1d01ed2187c4bc}{merged\+\_\+ranges}} () const
+\begin{DoxyCompactList}\small\item\em Returns a vector of references of all merged ranges in the worksheet. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_a4569636da10049f96a59af63dea774d7}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this worksheet refers to the same worksheet as other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_ac5ee8f14d02d9c202c83d6e36ac2f046}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this worksheet doesn\textquotesingle{}t refer to the same worksheet as other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_a739a624d0827ac0c7eaf6b7c622d217a}{operator==}} (std\+::nullptr\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em Returns true if this worksheet is null. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_a63e4bc732cd957116255ae551a8173bf}{operator!=}} (std\+::nullptr\+\_\+t) const
+\begin{DoxyCompactList}\small\item\em Returns true if this worksheet is not null. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a9e69d7b5b2666d98fac1eb990f557b8a}{operator=}} (const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \&other)
+\begin{DoxyCompactList}\small\item\em Sets the internal pointer of this worksheet object to point to other. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1worksheet_ac389497d95de112d2bdf973fd1a98020}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&reference)
+\begin{DoxyCompactList}\small\item\em Convenience method for \mbox{\hyperlink{classxlnt_1_1worksheet_aae88f49f4ddcc1e24b2e6c1841c35018}{worksheet\+::cell}} method. \end{DoxyCompactList}\item 
+const class \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1worksheet_af851ccb46c8df6eeead3ebf17e62a9dd}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&reference) const
+\begin{DoxyCompactList}\small\item\em Convenience method for \mbox{\hyperlink{classxlnt_1_1worksheet_aae88f49f4ddcc1e24b2e6c1841c35018}{worksheet\+::cell}} method. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_a5c1614eb9bf609af862ae74206ac40f9}{compare}} (const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \&other, bool reference) const
+\begin{DoxyCompactList}\small\item\em Returns true if this worksheet is equal to other. If reference is true, the comparison will only check that both worksheets point to the same sheet in the same workbook. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_ab7021e96cba19202c1f36f3e1ac427c4}{has\+\_\+page\+\_\+setup}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this worksheet has a page setup. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structxlnt_1_1page__setup}{xlnt\+::page\+\_\+setup}} \mbox{\hyperlink{classxlnt_1_1worksheet_a5f3eefc4bfb1037624ffa120926b5f6a}{page\+\_\+setup}} () const
+\begin{DoxyCompactList}\small\item\em Returns the page setup for this sheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a27f1aa4d2677e9db98b6668c5ce58b07}{page\+\_\+setup}} (const struct \mbox{\hyperlink{structxlnt_1_1page__setup}{page\+\_\+setup}} \&setup)
+\begin{DoxyCompactList}\small\item\em Sets the page setup for this sheet to setup. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_aa8ebe828801dc0e50fab4289227cd64d}{has\+\_\+page\+\_\+margins}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this page has margins. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1page__margins}{xlnt\+::page\+\_\+margins}} \mbox{\hyperlink{classxlnt_1_1worksheet_aa4285c468a7384649abcf1a1a92cba1c}{page\+\_\+margins}} () const
+\begin{DoxyCompactList}\small\item\em Returns the margins of this sheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_ae607465e03e2b9b4bf74f3609d753117}{page\+\_\+margins}} (const class \mbox{\hyperlink{classxlnt_1_1page__margins}{page\+\_\+margins}} \&margins)
+\begin{DoxyCompactList}\small\item\em Sets the margins of this sheet to margins. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1worksheet_ae1c8c5f2ca9e88699a00eb574be06533}{auto\+\_\+filter}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current auto-\/filter of this sheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a746e317f507c015a16323cd8ea42043b}{auto\+\_\+filter}} (const std\+::string \&range\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Sets the auto-\/filter of this sheet to the range defined by range\+\_\+string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_aa13363509d7e87c7d83b165895bb8514}{auto\+\_\+filter}} (const \mbox{\hyperlink{classxlnt_1_1range}{xlnt\+::range}} \&\mbox{\hyperlink{classxlnt_1_1range}{range}})
+\begin{DoxyCompactList}\small\item\em Sets the auto-\/filter of this sheet to the given range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a0830e6f7781b8af1031a0e505f17b344}{auto\+\_\+filter}} (const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&reference)
+\begin{DoxyCompactList}\small\item\em Sets the auto-\/filter of this sheet to the range defined by reference. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a8ceeef08fc6fee74c61daf504be7a5ee}{clear\+\_\+auto\+\_\+filter}} ()
+\begin{DoxyCompactList}\small\item\em Clear the auto-\/filter from this sheet. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_afc1035b43426f60a946bb61b3671e98a}{has\+\_\+auto\+\_\+filter}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this sheet has an auto-\/filter set. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_ad914d72ec3dbc3458814f2680bc62854}{reserve}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} n)
+\begin{DoxyCompactList}\small\item\em Reserve n rows. This can be optionally called before adding many rows to improve performance. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_a3d1c21b5dd1c29df57944e625dd9f7a3}{has\+\_\+phonetic\+\_\+properties}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this sheet has phonetic properties \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1phonetic__pr}{phonetic\+\_\+pr}} \& \mbox{\hyperlink{classxlnt_1_1worksheet_a73c5f29df7545c4d78926c6404d92513}{phonetic\+\_\+properties}} () const
+\begin{DoxyCompactList}\small\item\em Returns the phonetic properties of this sheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a3859407b94cf7cd6159518d15b7eb6d0}{phonetic\+\_\+properties}} (const \mbox{\hyperlink{classxlnt_1_1phonetic__pr}{phonetic\+\_\+pr}} \&phonetic\+\_\+props)
+\begin{DoxyCompactList}\small\item\em Sets the phonetic properties of this sheet to phonetic\+\_\+props \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_af5506249c8b3b00023f0ba60530919d0}{has\+\_\+header\+\_\+footer}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this sheet has a header/footer. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \mbox{\hyperlink{classxlnt_1_1worksheet_a6595eb968cbe9d0c384ace092f19f1ec}{header\+\_\+footer}} () const
+\begin{DoxyCompactList}\small\item\em Returns the header/footer of this sheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a4c5285d235716f550605a90160b7a4cd}{header\+\_\+footer}} (const class \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \&new\+\_\+header\+\_\+footer)
+\begin{DoxyCompactList}\small\item\em Sets the header/footer of this sheet to new\+\_\+header\+\_\+footer. \end{DoxyCompactList}\item 
+xlnt\+::sheet\+\_\+state \mbox{\hyperlink{classxlnt_1_1worksheet_a38de65f307d983e9e828136ebf7e1b5f}{sheet\+\_\+state}} () const
+\begin{DoxyCompactList}\small\item\em Returns the sheet state of this sheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a314b2933e883121cd277bfcafdebdfe8}{sheet\+\_\+state}} (xlnt\+::sheet\+\_\+state \mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}})
+\begin{DoxyCompactList}\small\item\em Sets the sheet state of this sheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet_ae96ed144ca5710f7e45e39e51a4b2dbe}{iterator}} \mbox{\hyperlink{classxlnt_1_1worksheet_a9dabe9096ad7eff66f361901b3617777}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the first row in this sheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet_ae96ed144ca5710f7e45e39e51a4b2dbe}{iterator}} \mbox{\hyperlink{classxlnt_1_1worksheet_a18c9e4e7755097f09a19dc86d304f232}{end}} ()
+\begin{DoxyCompactList}\small\item\em Returns an iterator one past the last row in this sheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet_a63658d488e4268777aa391fa0050233a}{const\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1worksheet_a6b94d70d3c06fbcb60238fdc98ab00e5}{begin}} () const
+\begin{DoxyCompactList}\small\item\em Return a constant iterator to the first row in this sheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet_a63658d488e4268777aa391fa0050233a}{const\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1worksheet_a8d3600237b5fb696fd070b1286b5d503}{end}} () const
+\begin{DoxyCompactList}\small\item\em Returns a constant iterator to one past the last row in this sheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet_a63658d488e4268777aa391fa0050233a}{const\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1worksheet_abeb4141869e19fe9f2dbdff09caa5617}{cbegin}} () const
+\begin{DoxyCompactList}\small\item\em Return a constant iterator to the first row in this sheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet_a63658d488e4268777aa391fa0050233a}{const\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1worksheet_ae5428cd319db0c0284a279c2cb205ebd}{cend}} () const
+\begin{DoxyCompactList}\small\item\em Returns a constant iterator to one past the last row in this sheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a1510c3bae89168cfb4ab381c29ce88db}{print\+\_\+title\+\_\+rows}} (\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} first\+\_\+row, \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} last\+\_\+row)
+\begin{DoxyCompactList}\small\item\em Sets rows to repeat at top during printing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_ace768d103a9e0e4dcb30c0f4ab9f3969}{print\+\_\+title\+\_\+rows}} (\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} last\+\_\+row)
+\begin{DoxyCompactList}\small\item\em Sets rows to repeat at top during printing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a2684cdb908ea3cdff7aa66c1539c1882}{print\+\_\+title\+\_\+cols}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} first\+\_\+column, \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} last\+\_\+column)
+\begin{DoxyCompactList}\small\item\em Sets columns to repeat at left during printing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_adf13f46ace48e54232633852f138d37b}{print\+\_\+title\+\_\+cols}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} last\+\_\+column)
+\begin{DoxyCompactList}\small\item\em Sets columns to repeat at left during printing. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1worksheet_a98cbec7939236c4ee7e8a5f7ccd28cd2}{print\+\_\+titles}} () const
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the defined print titles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a8acdd63570f0dc32734ef6fe5eb30919}{print\+\_\+area}} (const std\+::string \&print\+\_\+area)
+\begin{DoxyCompactList}\small\item\em Sets the print area of this sheet to print\+\_\+area. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1worksheet_a0c2f5c3d47499969321e2b7f2190328b}{print\+\_\+area}} () const
+\begin{DoxyCompactList}\small\item\em Returns the print area defined for this sheet. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_a786995df580eb382f86723c634c4ffe9}{has\+\_\+view}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this sheet has any number of views defined. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1sheet__view}{sheet\+\_\+view}} \& \mbox{\hyperlink{classxlnt_1_1worksheet_afd8b8426c2a74615000d7a30157b5520}{view}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} index=0) const
+\begin{DoxyCompactList}\small\item\em Returns the view at the given index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a17b07f13febfae1a31d728d2fa7eb377}{add\+\_\+view}} (const \mbox{\hyperlink{classxlnt_1_1sheet__view}{sheet\+\_\+view}} \&new\+\_\+view)
+\begin{DoxyCompactList}\small\item\em Adds new\+\_\+view to the set of available views for this sheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a96226f3aebb43c0c348b1fefb42fd109}{active\+\_\+cell}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&ref)
+\begin{DoxyCompactList}\small\item\em Set the active cell on the default worksheet view to the given reference. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_a8bc9f4975ccb951a6ef73688cc3a2a1c}{has\+\_\+active\+\_\+cell}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the worksheet has a view and the view has an active cell. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1worksheet_a41ccc231a9581c5d7037a1b17d690bd0}{active\+\_\+cell}} () const
+\begin{DoxyCompactList}\small\item\em Returns the active cell on the default worksheet view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a416c5ea1d961fecda670181c6ac234e9}{clear\+\_\+page\+\_\+breaks}} ()
+\begin{DoxyCompactList}\small\item\em Remove all manual column and row page breaks (represented as dashed blue lines in the page view in Excel). \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} $>$ \& \mbox{\hyperlink{classxlnt_1_1worksheet_ae4b4f4123e826dd6788f30554e12de6a}{page\+\_\+break\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Returns vector where each element represents a row which will break a page below it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_aa5f8638ca90d1796dde3269789bcdb91}{page\+\_\+break\+\_\+at\+\_\+row}} (\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} row)
+\begin{DoxyCompactList}\small\item\em Add a page break at the given row. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} $>$ \& \mbox{\hyperlink{classxlnt_1_1worksheet_a61b87666b6ace6e6d1ee406425102a21}{page\+\_\+break\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Returns vector where each element represents a column which will break a page to the right. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_ae3349851433d5a7754995eb478be8c9a}{page\+\_\+break\+\_\+at\+\_\+column}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} column)
+\begin{DoxyCompactList}\small\item\em Add a page break at the given column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1conditional__format}{xlnt\+::conditional\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1worksheet_ac08cf6404e8235e376215d67d391d53b}{conditional\+\_\+format}} (const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&ref, const \mbox{\hyperlink{classxlnt_1_1condition}{condition}} \&when)
+\begin{DoxyCompactList}\small\item\em Creates a conditional format for the given range with the given condition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1path}{xlnt\+::path}} \mbox{\hyperlink{classxlnt_1_1worksheet_a9690eae90ec94f7fbfe37188aa775e35}{path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the path of this worksheet in the containing package. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1relationship}{relationship}} \mbox{\hyperlink{classxlnt_1_1worksheet_a628d2af9edc362c99f19d2606c918bfe}{referring\+\_\+relationship}} () const
+\begin{DoxyCompactList}\small\item\em Returns the relationship from the parent workbook to this worksheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1sheet__format__properties}{sheet\+\_\+format\+\_\+properties}} \mbox{\hyperlink{classxlnt_1_1worksheet_a3b6e1b0209c89c0e6ee9748d7d3b5d2e}{format\+\_\+properties}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current formatting properties. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a6414c6ba52c0a3a63d8f196c7d8604d5}{format\+\_\+properties}} (const \mbox{\hyperlink{classxlnt_1_1sheet__format__properties}{sheet\+\_\+format\+\_\+properties}} \&properties)
+\begin{DoxyCompactList}\small\item\em Sets the format properties to the given properties. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_a61ab53ed257e2ac41daa63480fe8a7c8}{has\+\_\+drawing}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this worksheet has a page setup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1worksheet_aae88f49f4ddcc1e24b2e6c1841c35018}{cell}}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1worksheet_a487acfcdb9d580938240775d2f99c7df}{const\+\_\+range\+\_\+iterator}}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1worksheet_a06e4ef1ae5a9412e52086ec54ec7c3d2}{range\+\_\+iterator}}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1worksheet_a71339f4270bfea0439cd2aa3c11f9b02}{workbook}}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1worksheet_a5c27ff96f65a231e21871a228cbaf740}{detail\+::xlsx\+\_\+consumer}}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1worksheet_aeaa1b2a5f3d37ddb4b8ca1ebaab144f3}{detail\+::xlsx\+\_\+producer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A worksheet is a 2D array of cells starting with cell A1 in the top-\/left corner and extending indefinitely down and right as needed. 
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a63658d488e4268777aa391fa0050233a}\label{classxlnt_1_1worksheet_a63658d488e4268777aa391fa0050233a}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!const\_iterator@{const\_iterator}}
+\index{const\_iterator@{const\_iterator}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{const\_iterator}{const\_iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1worksheet_a63658d488e4268777aa391fa0050233a}{xlnt\+::worksheet\+::const\+\_\+iterator}} =  \mbox{\hyperlink{classxlnt_1_1const__range__iterator}{const\+\_\+range\+\_\+iterator}}}
+
+
+
+Iterate over a non-\/const worksheet with an iterator of this type. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a5df76c014e585a15e75b9bb7afcef11f}\label{classxlnt_1_1worksheet_a5df76c014e585a15e75b9bb7afcef11f}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!const\_reverse\_iterator@{const\_reverse\_iterator}}
+\index{const\_reverse\_iterator@{const\_reverse\_iterator}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{const\_reverse\_iterator}{const\_reverse\_iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1worksheet_a5df76c014e585a15e75b9bb7afcef11f}{xlnt\+::worksheet\+::const\+\_\+reverse\+\_\+iterator}} =  std\+::reverse\+\_\+iterator$<$\mbox{\hyperlink{classxlnt_1_1worksheet_a63658d488e4268777aa391fa0050233a}{const\+\_\+iterator}}$>$}
+
+
+
+Iterate in reverse order over a const worksheet with an iterator of this type. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ae96ed144ca5710f7e45e39e51a4b2dbe}\label{classxlnt_1_1worksheet_ae96ed144ca5710f7e45e39e51a4b2dbe}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!iterator@{iterator}}
+\index{iterator@{iterator}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1worksheet_ae96ed144ca5710f7e45e39e51a4b2dbe}{xlnt\+::worksheet\+::iterator}} =  \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}}}
+
+
+
+Iterate over a non-\/const worksheet with an iterator of this type. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a862aacebd1521c7d000ef740f6e1e918}\label{classxlnt_1_1worksheet_a862aacebd1521c7d000ef740f6e1e918}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!reverse\_iterator@{reverse\_iterator}}
+\index{reverse\_iterator@{reverse\_iterator}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{reverse\_iterator}{reverse\_iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1worksheet_a862aacebd1521c7d000ef740f6e1e918}{xlnt\+::worksheet\+::reverse\+\_\+iterator}} =  std\+::reverse\+\_\+iterator$<$\mbox{\hyperlink{classxlnt_1_1worksheet_ae96ed144ca5710f7e45e39e51a4b2dbe}{iterator}}$>$}
+
+
+
+Iterate in reverse over a non-\/const worksheet with an iterator of this type. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a060c9a7e63a0f118d118580eb3a2bb7b}\label{classxlnt_1_1worksheet_a060c9a7e63a0f118d118580eb3a2bb7b}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!worksheet@{worksheet}}
+\index{worksheet@{worksheet}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{worksheet()}{worksheet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily xlnt\+::worksheet\+::worksheet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a null worksheet. No methods should be called on such a worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a12ed1c574b4e5b4de187f32e85c19f9f}\label{classxlnt_1_1worksheet_a12ed1c574b4e5b4de187f32e85c19f9f}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!worksheet@{worksheet}}
+\index{worksheet@{worksheet}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{worksheet()}{worksheet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily xlnt\+::worksheet\+::worksheet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. This worksheet will point to the same memory as rhs\textquotesingle{}s worksheet. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a41ccc231a9581c5d7037a1b17d690bd0}\label{classxlnt_1_1worksheet_a41ccc231a9581c5d7037a1b17d690bd0}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!active\_cell@{active\_cell}}
+\index{active\_cell@{active\_cell}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{active\_cell()}{active\_cell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} xlnt\+::worksheet\+::active\+\_\+cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the active cell on the default worksheet view. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a96226f3aebb43c0c348b1fefb42fd109}\label{classxlnt_1_1worksheet_a96226f3aebb43c0c348b1fefb42fd109}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!active\_cell@{active\_cell}}
+\index{active\_cell@{active\_cell}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{active\_cell()}{active\_cell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::active\+\_\+cell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{ref }\end{DoxyParamCaption})}
+
+
+
+Set the active cell on the default worksheet view to the given reference. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a158ef9ecc40eb80ec0350377ee3c757d}\label{classxlnt_1_1worksheet_a158ef9ecc40eb80ec0350377ee3c757d}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!add\_column\_properties@{add\_column\_properties}}
+\index{add\_column\_properties@{add\_column\_properties}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{add\_column\_properties()}{add\_column\_properties()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::add\+\_\+column\+\_\+properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}}]{column,  }\item[{const class \mbox{\hyperlink{classxlnt_1_1column__properties}{column\+\_\+properties}} \&}]{props }\end{DoxyParamCaption})}
+
+
+
+Sets column properties for the given column to props. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ad2cabfe79e832411e6a52bb16f98dc95}\label{classxlnt_1_1worksheet_ad2cabfe79e832411e6a52bb16f98dc95}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!add\_row\_properties@{add\_row\_properties}}
+\index{add\_row\_properties@{add\_row\_properties}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{add\_row\_properties()}{add\_row\_properties()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::add\+\_\+row\+\_\+properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}}]{row,  }\item[{const class \mbox{\hyperlink{classxlnt_1_1row__properties}{row\+\_\+properties}} \&}]{props }\end{DoxyParamCaption})}
+
+
+
+Sets row properties for the given row to props. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a17b07f13febfae1a31d728d2fa7eb377}\label{classxlnt_1_1worksheet_a17b07f13febfae1a31d728d2fa7eb377}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!add\_view@{add\_view}}
+\index{add\_view@{add\_view}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{add\_view()}{add\_view()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::add\+\_\+view (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1sheet__view}{sheet\+\_\+view}} \&}]{new\+\_\+view }\end{DoxyParamCaption})}
+
+
+
+Adds new\+\_\+view to the set of available views for this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ae1c8c5f2ca9e88699a00eb574be06533}\label{classxlnt_1_1worksheet_ae1c8c5f2ca9e88699a00eb574be06533}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!auto\_filter@{auto\_filter}}
+\index{auto\_filter@{auto\_filter}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{auto\_filter()}{auto\_filter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} xlnt\+::worksheet\+::auto\+\_\+filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the current auto-\/filter of this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a0830e6f7781b8af1031a0e505f17b344}\label{classxlnt_1_1worksheet_a0830e6f7781b8af1031a0e505f17b344}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!auto\_filter@{auto\_filter}}
+\index{auto\_filter@{auto\_filter}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{auto\_filter()}{auto\_filter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::auto\+\_\+filter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&}]{reference }\end{DoxyParamCaption})}
+
+
+
+Sets the auto-\/filter of this sheet to the range defined by reference. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a746e317f507c015a16323cd8ea42043b}\label{classxlnt_1_1worksheet_a746e317f507c015a16323cd8ea42043b}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!auto\_filter@{auto\_filter}}
+\index{auto\_filter@{auto\_filter}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{auto\_filter()}{auto\_filter()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::auto\+\_\+filter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{range\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Sets the auto-\/filter of this sheet to the range defined by range\+\_\+string. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_aa13363509d7e87c7d83b165895bb8514}\label{classxlnt_1_1worksheet_aa13363509d7e87c7d83b165895bb8514}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!auto\_filter@{auto\_filter}}
+\index{auto\_filter@{auto\_filter}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{auto\_filter()}{auto\_filter()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::auto\+\_\+filter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1range}{xlnt\+::range}} \&}]{range }\end{DoxyParamCaption})}
+
+
+
+Sets the auto-\/filter of this sheet to the given range. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a9dabe9096ad7eff66f361901b3617777}\label{classxlnt_1_1worksheet_a9dabe9096ad7eff66f361901b3617777}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!begin@{begin}}
+\index{begin@{begin}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet_ae96ed144ca5710f7e45e39e51a4b2dbe}{worksheet\+::iterator}} xlnt\+::worksheet\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns an iterator to the first row in this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a6b94d70d3c06fbcb60238fdc98ab00e5}\label{classxlnt_1_1worksheet_a6b94d70d3c06fbcb60238fdc98ab00e5}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!begin@{begin}}
+\index{begin@{begin}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet_a63658d488e4268777aa391fa0050233a}{worksheet\+::const\+\_\+iterator}} xlnt\+::worksheet\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return a constant iterator to the first row in this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a261f05d8a62977747299d92461fc9e84}\label{classxlnt_1_1worksheet_a261f05d8a62977747299d92461fc9e84}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!calculate\_dimension@{calculate\_dimension}}
+\index{calculate\_dimension@{calculate\_dimension}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{calculate\_dimension()}{calculate\_dimension()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} xlnt\+::worksheet\+::calculate\+\_\+dimension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} pointing to the full range of non-\/empty cells in the worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_abeb4141869e19fe9f2dbdff09caa5617}\label{classxlnt_1_1worksheet_abeb4141869e19fe9f2dbdff09caa5617}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{cbegin()}{cbegin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet_a63658d488e4268777aa391fa0050233a}{worksheet\+::const\+\_\+iterator}} xlnt\+::worksheet\+::cbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return a constant iterator to the first row in this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ad312313d5a4c0c15957a16e87d97b54e}\label{classxlnt_1_1worksheet_ad312313d5a4c0c15957a16e87d97b54e}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!cell@{cell}}
+\index{cell@{cell}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{cell()}{cell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell}{cell}} xlnt\+::worksheet\+::cell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{xlnt\+::column\+\_\+t}}}]{column,  }\item[{\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}}]{row }\end{DoxyParamCaption})}
+
+
+
+Returns the cell at the given column and row. If the cell doesn\textquotesingle{}t exist, it will be initialized to null before being returned. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_af3956bc78f3d6b06a29b218596ed37c1}\label{classxlnt_1_1worksheet_af3956bc78f3d6b06a29b218596ed37c1}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!cell@{cell}}
+\index{cell@{cell}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{cell()}{cell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} xlnt\+::worksheet\+::cell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{xlnt\+::column\+\_\+t}}}]{column,  }\item[{\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}}]{row }\end{DoxyParamCaption}) const}
+
+
+
+Returns the cell at the given column and row. If the cell doesn\textquotesingle{}t exist, an \mbox{\hyperlink{classxlnt_1_1invalid__parameter}{invalid\+\_\+parameter}} exception will be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a537be721b2b8c8c2c0cb4a3f159741a4}\label{classxlnt_1_1worksheet_a537be721b2b8c8c2c0cb4a3f159741a4}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!cell@{cell}}
+\index{cell@{cell}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{cell()}{cell()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell}{cell}} xlnt\+::worksheet\+::cell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{reference }\end{DoxyParamCaption})}
+
+
+
+Returns the cell at the given reference. If the cell doesn\textquotesingle{}t exist, it will be initialized to null before being returned. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_abf8998a003c3d6e5e527020da5f155fa}\label{classxlnt_1_1worksheet_abf8998a003c3d6e5e527020da5f155fa}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!cell@{cell}}
+\index{cell@{cell}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{cell()}{cell()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} xlnt\+::worksheet\+::cell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{reference }\end{DoxyParamCaption}) const}
+
+
+
+Returns the cell at the given reference. If the cell doesn\textquotesingle{}t exist, an \mbox{\hyperlink{classxlnt_1_1invalid__parameter}{invalid\+\_\+parameter}} exception will be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ae5428cd319db0c0284a279c2cb205ebd}\label{classxlnt_1_1worksheet_ae5428cd319db0c0284a279c2cb205ebd}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!cend@{cend}}
+\index{cend@{cend}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{cend()}{cend()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet_a63658d488e4268777aa391fa0050233a}{worksheet\+::const\+\_\+iterator}} xlnt\+::worksheet\+::cend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a constant iterator to one past the last row in this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a8ceeef08fc6fee74c61daf504be7a5ee}\label{classxlnt_1_1worksheet_a8ceeef08fc6fee74c61daf504be7a5ee}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!clear\_auto\_filter@{clear\_auto\_filter}}
+\index{clear\_auto\_filter@{clear\_auto\_filter}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{clear\_auto\_filter()}{clear\_auto\_filter()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::clear\+\_\+auto\+\_\+filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear the auto-\/filter from this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a0f5e7357a5d62397bf826371ff8cf5ee}\label{classxlnt_1_1worksheet_a0f5e7357a5d62397bf826371ff8cf5ee}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!clear\_cell@{clear\_cell}}
+\index{clear\_cell@{clear\_cell}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{clear\_cell()}{clear\_cell()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::clear\+\_\+cell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{ref }\end{DoxyParamCaption})}
+
+
+
+Clears memory used by the given cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a416c5ea1d961fecda670181c6ac234e9}\label{classxlnt_1_1worksheet_a416c5ea1d961fecda670181c6ac234e9}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!clear\_page\_breaks@{clear\_page\_breaks}}
+\index{clear\_page\_breaks@{clear\_page\_breaks}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{clear\_page\_breaks()}{clear\_page\_breaks()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::clear\+\_\+page\+\_\+breaks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove all manual column and row page breaks (represented as dashed blue lines in the page view in Excel). 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ac04b853a21d8f8a06bd08896db5260b0}\label{classxlnt_1_1worksheet_ac04b853a21d8f8a06bd08896db5260b0}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!clear\_row@{clear\_row}}
+\index{clear\_row@{clear\_row}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{clear\_row()}{clear\_row()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::clear\+\_\+row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}}]{row }\end{DoxyParamCaption})}
+
+
+
+Clears memory used by all cells in the given row. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a4b03bdef7998ec5f9f1689a03ec54785}\label{classxlnt_1_1worksheet_a4b03bdef7998ec5f9f1689a03ec54785}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!column\_properties@{column\_properties}}
+\index{column\_properties@{column\_properties}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{column\_properties()}{column\_properties()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__properties}{column\+\_\+properties}} \& xlnt\+::worksheet\+::column\+\_\+properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}}]{column }\end{DoxyParamCaption})}
+
+
+
+Returns the column properties for the given column. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a2b6a1f89c2dcaaf170058f65d4db04f6}\label{classxlnt_1_1worksheet_a2b6a1f89c2dcaaf170058f65d4db04f6}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!column\_properties@{column\_properties}}
+\index{column\_properties@{column\_properties}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{column\_properties()}{column\_properties()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1column__properties}{column\+\_\+properties}} \& xlnt\+::worksheet\+::column\+\_\+properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}}]{column }\end{DoxyParamCaption}) const}
+
+
+
+Returns the column properties for the given column. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a71b1660f42ffee879079463393efe24c}\label{classxlnt_1_1worksheet_a71b1660f42ffee879079463393efe24c}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!column\_width@{column\_width}}
+\index{column\_width@{column\_width}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{column\_width()}{column\_width()}}
+{\footnotesize\ttfamily double xlnt\+::worksheet\+::column\+\_\+width (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}}]{column }\end{DoxyParamCaption}) const}
+
+
+
+Calculates the width of the given column. This will be the default column width if a custom width is not set on this column\textquotesingle{}s \mbox{\hyperlink{classxlnt_1_1column__properties}{column\+\_\+properties}}. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_aef7f7c5c52affd4c8a10f40f782794ad}\label{classxlnt_1_1worksheet_aef7f7c5c52affd4c8a10f40f782794ad}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!columns@{columns}}
+\index{columns@{columns}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{columns()}{columns()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range}{xlnt\+::range}} xlnt\+::worksheet\+::columns (\begin{DoxyParamCaption}\item[{bool}]{skip\+\_\+null = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Returns a range ecompassing all cells in this sheet which will be iterated upon in column-\/major order. If skip\+\_\+null is true (default), empty columns and cells will be skipped during iteration of the range. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_adad29f025fae53ffb3a9203e3a2976d2}\label{classxlnt_1_1worksheet_adad29f025fae53ffb3a9203e3a2976d2}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!columns@{columns}}
+\index{columns@{columns}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{columns()}{columns()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1range}{xlnt\+::range}} xlnt\+::worksheet\+::columns (\begin{DoxyParamCaption}\item[{bool}]{skip\+\_\+null = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+
+
+Returns a range ecompassing all cells in this sheet which will be iterated upon in column-\/major order. If skip\+\_\+null is true (default), empty columns and cells will be skipped during iteration of the range. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a5c1614eb9bf609af862ae74206ac40f9}\label{classxlnt_1_1worksheet_a5c1614eb9bf609af862ae74206ac40f9}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!compare@{compare}}
+\index{compare@{compare}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::compare (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \&}]{other,  }\item[{bool}]{reference }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this worksheet is equal to other. If reference is true, the comparison will only check that both worksheets point to the same sheet in the same workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ac08cf6404e8235e376215d67d391d53b}\label{classxlnt_1_1worksheet_ac08cf6404e8235e376215d67d391d53b}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!conditional\_format@{conditional\_format}}
+\index{conditional\_format@{conditional\_format}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{conditional\_format()}{conditional\_format()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1conditional__format}{conditional\+\_\+format}} xlnt\+::worksheet\+::conditional\+\_\+format (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&}]{ref,  }\item[{const \mbox{\hyperlink{classxlnt_1_1condition}{condition}} \&}]{when }\end{DoxyParamCaption})}
+
+
+
+Creates a conditional format for the given range with the given condition. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_af73844f7be716fa3f34ca2175a7fbfb5}\label{classxlnt_1_1worksheet_af73844f7be716fa3f34ca2175a7fbfb5}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!create\_named\_range@{create\_named\_range}}
+\index{create\_named\_range@{create\_named\_range}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{create\_named\_range()}{create\_named\_range()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::create\+\_\+named\+\_\+range (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&}]{reference }\end{DoxyParamCaption})}
+
+
+
+Creates a new named range with the given name encompassing the given range reference. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ad11c6a505ee9a08a13251250a355a447}\label{classxlnt_1_1worksheet_ad11c6a505ee9a08a13251250a355a447}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!create\_named\_range@{create\_named\_range}}
+\index{create\_named\_range@{create\_named\_range}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{create\_named\_range()}{create\_named\_range()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::create\+\_\+named\+\_\+range (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{reference\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Creates a new named range with the given name encompassing the string representing a range. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a651d63782df4463c8431c9c52113ee54}\label{classxlnt_1_1worksheet_a651d63782df4463c8431c9c52113ee54}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!delete\_columns@{delete\_columns}}
+\index{delete\_columns@{delete\_columns}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{delete\_columns()}{delete\_columns()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::delete\+\_\+columns (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}}]{column,  }\item[{std\+::uint32\+\_\+t}]{amount }\end{DoxyParamCaption})}
+
+
+
+Delete columns before the given column index 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a1e4853431c31b53d455bf158570cc393}\label{classxlnt_1_1worksheet_a1e4853431c31b53d455bf158570cc393}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!delete\_rows@{delete\_rows}}
+\index{delete\_rows@{delete\_rows}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{delete\_rows()}{delete\_rows()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::delete\+\_\+rows (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}}]{row,  }\item[{std\+::uint32\+\_\+t}]{amount }\end{DoxyParamCaption})}
+
+
+
+Delete rows before the given row index 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a18c9e4e7755097f09a19dc86d304f232}\label{classxlnt_1_1worksheet_a18c9e4e7755097f09a19dc86d304f232}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!end@{end}}
+\index{end@{end}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet_ae96ed144ca5710f7e45e39e51a4b2dbe}{worksheet\+::iterator}} xlnt\+::worksheet\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns an iterator one past the last row in this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a8d3600237b5fb696fd070b1286b5d503}\label{classxlnt_1_1worksheet_a8d3600237b5fb696fd070b1286b5d503}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!end@{end}}
+\index{end@{end}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet_a63658d488e4268777aa391fa0050233a}{worksheet\+::const\+\_\+iterator}} xlnt\+::worksheet\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a constant iterator to one past the last row in this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a3b6e1b0209c89c0e6ee9748d7d3b5d2e}\label{classxlnt_1_1worksheet_a3b6e1b0209c89c0e6ee9748d7d3b5d2e}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!format\_properties@{format\_properties}}
+\index{format\_properties@{format\_properties}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{format\_properties()}{format\_properties()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1sheet__format__properties}{sheet\+\_\+format\+\_\+properties}} xlnt\+::worksheet\+::format\+\_\+properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the current formatting properties. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a6414c6ba52c0a3a63d8f196c7d8604d5}\label{classxlnt_1_1worksheet_a6414c6ba52c0a3a63d8f196c7d8604d5}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!format\_properties@{format\_properties}}
+\index{format\_properties@{format\_properties}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{format\_properties()}{format\_properties()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::format\+\_\+properties (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1sheet__format__properties}{sheet\+\_\+format\+\_\+properties}} \&}]{properties }\end{DoxyParamCaption})}
+
+
+
+Sets the format properties to the given properties. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a0cbbf8626202bd83a901e0c8ff3c4d33}\label{classxlnt_1_1worksheet_a0cbbf8626202bd83a901e0c8ff3c4d33}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!freeze\_panes@{freeze\_panes}}
+\index{freeze\_panes@{freeze\_panes}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{freeze\_panes()}{freeze\_panes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::freeze\+\_\+panes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1cell}{xlnt\+::cell}}}]{top\+\_\+left\+\_\+cell }\end{DoxyParamCaption})}
+
+
+
+Freeze panes above and to the left of top\+\_\+left\+\_\+cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_af00727b60f55c3c673444d55c3ce8b6f}\label{classxlnt_1_1worksheet_af00727b60f55c3c673444d55c3ce8b6f}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!freeze\_panes@{freeze\_panes}}
+\index{freeze\_panes@{freeze\_panes}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{freeze\_panes()}{freeze\_panes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::freeze\+\_\+panes (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{top\+\_\+left\+\_\+coordinate }\end{DoxyParamCaption})}
+
+
+
+Freeze panes above and to the left of top\+\_\+left\+\_\+coordinate. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a9242ee6abf016a88fbfda441ded5fcff}\label{classxlnt_1_1worksheet_a9242ee6abf016a88fbfda441ded5fcff}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!frozen\_panes@{frozen\_panes}}
+\index{frozen\_panes@{frozen\_panes}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{frozen\_panes()}{frozen\_panes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} xlnt\+::worksheet\+::frozen\+\_\+panes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the top left corner of the region above and to the left of which panes are frozen. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a4f218d49d06f6f44dbab452bf2bdec3e}\label{classxlnt_1_1worksheet_a4f218d49d06f6f44dbab452bf2bdec3e}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!garbage\_collect@{garbage\_collect}}
+\index{garbage\_collect@{garbage\_collect}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{garbage\_collect()}{garbage\_collect()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::garbage\+\_\+collect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deletes data held in the worksheet that does not affect the internal data or display. For example, unreference styles and empty cells will be removed. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a8bc9f4975ccb951a6ef73688cc3a2a1c}\label{classxlnt_1_1worksheet_a8bc9f4975ccb951a6ef73688cc3a2a1c}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!has\_active\_cell@{has\_active\_cell}}
+\index{has\_active\_cell@{has\_active\_cell}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{has\_active\_cell()}{has\_active\_cell()}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::has\+\_\+active\+\_\+cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the worksheet has a view and the view has an active cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_afc1035b43426f60a946bb61b3671e98a}\label{classxlnt_1_1worksheet_afc1035b43426f60a946bb61b3671e98a}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!has\_auto\_filter@{has\_auto\_filter}}
+\index{has\_auto\_filter@{has\_auto\_filter}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{has\_auto\_filter()}{has\_auto\_filter()}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::has\+\_\+auto\+\_\+filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this sheet has an auto-\/filter set. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_aa96b7d1b9ee7e63b00220a1039db96c4}\label{classxlnt_1_1worksheet_aa96b7d1b9ee7e63b00220a1039db96c4}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!has\_cell@{has\_cell}}
+\index{has\_cell@{has\_cell}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{has\_cell()}{has\_cell()}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::has\+\_\+cell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{reference }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this sheet has an initialized cell at the given reference. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a9cc68476d47cf5fea8761ef67fdefe6e}\label{classxlnt_1_1worksheet_a9cc68476d47cf5fea8761ef67fdefe6e}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!has\_column\_properties@{has\_column\_properties}}
+\index{has\_column\_properties@{has\_column\_properties}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{has\_column\_properties()}{has\_column\_properties()}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::has\+\_\+column\+\_\+properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}}]{column }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if column properties have been set for the given column. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a61ab53ed257e2ac41daa63480fe8a7c8}\label{classxlnt_1_1worksheet_a61ab53ed257e2ac41daa63480fe8a7c8}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!has\_drawing@{has\_drawing}}
+\index{has\_drawing@{has\_drawing}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{has\_drawing()}{has\_drawing()}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::has\+\_\+drawing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this worksheet has a page setup. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_af47eda457f89f9a0c8da5dadec53e01d}\label{classxlnt_1_1worksheet_af47eda457f89f9a0c8da5dadec53e01d}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!has\_frozen\_panes@{has\_frozen\_panes}}
+\index{has\_frozen\_panes@{has\_frozen\_panes}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{has\_frozen\_panes()}{has\_frozen\_panes()}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::has\+\_\+frozen\+\_\+panes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this sheet has a frozen row, frozen column, or both. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_af5506249c8b3b00023f0ba60530919d0}\label{classxlnt_1_1worksheet_af5506249c8b3b00023f0ba60530919d0}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!has\_header\_footer@{has\_header\_footer}}
+\index{has\_header\_footer@{has\_header\_footer}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{has\_header\_footer()}{has\_header\_footer()}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::has\+\_\+header\+\_\+footer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this sheet has a header/footer. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_aaed7880fd2b7bf2ffcd92fe64e768e4f}\label{classxlnt_1_1worksheet_aaed7880fd2b7bf2ffcd92fe64e768e4f}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!has\_named\_range@{has\_named\_range}}
+\index{has\_named\_range@{has\_named\_range}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{has\_named\_range()}{has\_named\_range()}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::has\+\_\+named\+\_\+range (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this worksheet contains a named range with the given name. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_aa8ebe828801dc0e50fab4289227cd64d}\label{classxlnt_1_1worksheet_aa8ebe828801dc0e50fab4289227cd64d}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!has\_page\_margins@{has\_page\_margins}}
+\index{has\_page\_margins@{has\_page\_margins}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{has\_page\_margins()}{has\_page\_margins()}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::has\+\_\+page\+\_\+margins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this page has margins. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ab7021e96cba19202c1f36f3e1ac427c4}\label{classxlnt_1_1worksheet_ab7021e96cba19202c1f36f3e1ac427c4}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!has\_page\_setup@{has\_page\_setup}}
+\index{has\_page\_setup@{has\_page\_setup}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{has\_page\_setup()}{has\_page\_setup()}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::has\+\_\+page\+\_\+setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this worksheet has a page setup. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a3d1c21b5dd1c29df57944e625dd9f7a3}\label{classxlnt_1_1worksheet_a3d1c21b5dd1c29df57944e625dd9f7a3}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!has\_phonetic\_properties@{has\_phonetic\_properties}}
+\index{has\_phonetic\_properties@{has\_phonetic\_properties}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{has\_phonetic\_properties()}{has\_phonetic\_properties()}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::has\+\_\+phonetic\+\_\+properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this sheet has phonetic properties 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ab02c7ae0e6b5be9c8253eae5e14986ed}\label{classxlnt_1_1worksheet_ab02c7ae0e6b5be9c8253eae5e14986ed}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!has\_row\_properties@{has\_row\_properties}}
+\index{has\_row\_properties@{has\_row\_properties}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{has\_row\_properties()}{has\_row\_properties()}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::has\+\_\+row\+\_\+properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}}]{row }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if row properties have been set for the given row. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a786995df580eb382f86723c634c4ffe9}\label{classxlnt_1_1worksheet_a786995df580eb382f86723c634c4ffe9}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!has\_view@{has\_view}}
+\index{has\_view@{has\_view}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{has\_view()}{has\_view()}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::has\+\_\+view (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this sheet has any number of views defined. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a6595eb968cbe9d0c384ace092f19f1ec}\label{classxlnt_1_1worksheet_a6595eb968cbe9d0c384ace092f19f1ec}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!header\_footer@{header\_footer}}
+\index{header\_footer@{header\_footer}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{header\_footer()}{header\_footer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily class \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} xlnt\+::worksheet\+::header\+\_\+footer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the header/footer of this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a4c5285d235716f550605a90160b7a4cd}\label{classxlnt_1_1worksheet_a4c5285d235716f550605a90160b7a4cd}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!header\_footer@{header\_footer}}
+\index{header\_footer@{header\_footer}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{header\_footer()}{header\_footer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::header\+\_\+footer (\begin{DoxyParamCaption}\item[{const class \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \&}]{new\+\_\+header\+\_\+footer }\end{DoxyParamCaption})}
+
+
+
+Sets the header/footer of this sheet to new\+\_\+header\+\_\+footer. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a48be494b534cf1c15ec62d6e861fe2d0}\label{classxlnt_1_1worksheet_a48be494b534cf1c15ec62d6e861fe2d0}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!highest\_column@{highest\_column}}
+\index{highest\_column@{highest\_column}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{highest\_column()}{highest\_column()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} xlnt\+::worksheet\+::highest\+\_\+column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the column of the last non-\/empty cell in the worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_afd26b7db01d0aff7fb02feeb4f839cf3}\label{classxlnt_1_1worksheet_afd26b7db01d0aff7fb02feeb4f839cf3}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!highest\_column\_or\_props@{highest\_column\_or\_props}}
+\index{highest\_column\_or\_props@{highest\_column\_or\_props}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{highest\_column\_or\_props()}{highest\_column\_or\_props()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} xlnt\+::worksheet\+::highest\+\_\+column\+\_\+or\+\_\+props (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the column of the last non-\/empty cell or highest column with properties in the worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a463fc655c6104badfcfffe79ee7e1a22}\label{classxlnt_1_1worksheet_a463fc655c6104badfcfffe79ee7e1a22}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!highest\_row@{highest\_row}}
+\index{highest\_row@{highest\_row}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{highest\_row()}{highest\_row()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} xlnt\+::worksheet\+::highest\+\_\+row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the row of the last non-\/empty cell in the worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a00aa6db8c85ca3bc6e3c7165083df8bc}\label{classxlnt_1_1worksheet_a00aa6db8c85ca3bc6e3c7165083df8bc}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!highest\_row\_or\_props@{highest\_row\_or\_props}}
+\index{highest\_row\_or\_props@{highest\_row\_or\_props}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{highest\_row\_or\_props()}{highest\_row\_or\_props()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} xlnt\+::worksheet\+::highest\+\_\+row\+\_\+or\+\_\+props (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the row of the last non-\/empty cell or highest row with properties in the worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a2a84f029276bfd9faec801fb17d3d6a9}\label{classxlnt_1_1worksheet_a2a84f029276bfd9faec801fb17d3d6a9}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!id@{id}}
+\index{id@{id}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::worksheet\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the unique numeric identifier of this worksheet. This will sometimes but not necessarily be the index of the worksheet in the workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_aad07421a40956072818d448c7bc0e812}\label{classxlnt_1_1worksheet_aad07421a40956072818d448c7bc0e812}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!id@{id}}
+\index{id@{id}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Set the unique numeric identifier. The id defaults to the lowest unused id in the workbook so this should not be called without a good reason. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ac925be7acfd64ff61a2bed5ace6afda2}\label{classxlnt_1_1worksheet_ac925be7acfd64ff61a2bed5ace6afda2}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!insert\_columns@{insert\_columns}}
+\index{insert\_columns@{insert\_columns}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{insert\_columns()}{insert\_columns()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::insert\+\_\+columns (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}}]{column,  }\item[{std\+::uint32\+\_\+t}]{amount }\end{DoxyParamCaption})}
+
+
+
+Insert empty columns before the given column index 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ab6925c264dfd8571f59e9aa42b95839e}\label{classxlnt_1_1worksheet_ab6925c264dfd8571f59e9aa42b95839e}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!insert\_rows@{insert\_rows}}
+\index{insert\_rows@{insert\_rows}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{insert\_rows()}{insert\_rows()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::insert\+\_\+rows (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}}]{row,  }\item[{std\+::uint32\+\_\+t}]{amount }\end{DoxyParamCaption})}
+
+
+
+Insert empty rows before the given row index 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_afceb7651672b605dd7617ba705721596}\label{classxlnt_1_1worksheet_afceb7651672b605dd7617ba705721596}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!lowest\_column@{lowest\_column}}
+\index{lowest\_column@{lowest\_column}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{lowest\_column()}{lowest\_column()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} xlnt\+::worksheet\+::lowest\+\_\+column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the column of the first non-\/empty cell in the worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a9b5aa18e8353e62fece137e1973c2042}\label{classxlnt_1_1worksheet_a9b5aa18e8353e62fece137e1973c2042}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!lowest\_column\_or\_props@{lowest\_column\_or\_props}}
+\index{lowest\_column\_or\_props@{lowest\_column\_or\_props}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{lowest\_column\_or\_props()}{lowest\_column\_or\_props()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} xlnt\+::worksheet\+::lowest\+\_\+column\+\_\+or\+\_\+props (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the column of the first non-\/empty cell or lowest column with properties in the worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a4893d07dfed96b4d6bc586793dce1d4c}\label{classxlnt_1_1worksheet_a4893d07dfed96b4d6bc586793dce1d4c}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!lowest\_row@{lowest\_row}}
+\index{lowest\_row@{lowest\_row}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{lowest\_row()}{lowest\_row()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} xlnt\+::worksheet\+::lowest\+\_\+row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the row of the first non-\/empty cell in the worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ad9f7ade1268af691064d5ac5d17b5a9e}\label{classxlnt_1_1worksheet_ad9f7ade1268af691064d5ac5d17b5a9e}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!lowest\_row\_or\_props@{lowest\_row\_or\_props}}
+\index{lowest\_row\_or\_props@{lowest\_row\_or\_props}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{lowest\_row\_or\_props()}{lowest\_row\_or\_props()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} xlnt\+::worksheet\+::lowest\+\_\+row\+\_\+or\+\_\+props (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the row of the first non-\/empty cell or lowest row with properties in the worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a370b7d922dc8662fa02fb6b413bbe7bc}\label{classxlnt_1_1worksheet_a370b7d922dc8662fa02fb6b413bbe7bc}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!merge\_cells@{merge\_cells}}
+\index{merge\_cells@{merge\_cells}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{merge\_cells()}{merge\_cells()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::merge\+\_\+cells (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&}]{reference }\end{DoxyParamCaption})}
+
+
+
+Merges the cells within the given range. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a5e51e2f8e3396adfc0a2751a3826aebf}\label{classxlnt_1_1worksheet_a5e51e2f8e3396adfc0a2751a3826aebf}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!merge\_cells@{merge\_cells}}
+\index{merge\_cells@{merge\_cells}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{merge\_cells()}{merge\_cells()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::merge\+\_\+cells (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{reference\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Merges the cells within the range represented by the given string. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ae3ac827eef04ab469c1d01ed2187c4bc}\label{classxlnt_1_1worksheet_ae3ac827eef04ab469c1d01ed2187c4bc}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!merged\_ranges@{merged\_ranges}}
+\index{merged\_ranges@{merged\_ranges}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{merged\_ranges()}{merged\_ranges()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} $>$ xlnt\+::worksheet\+::merged\+\_\+ranges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a vector of references of all merged ranges in the worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a3e8416a110ca2603076dd5c72556472b}\label{classxlnt_1_1worksheet_a3e8416a110ca2603076dd5c72556472b}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!named\_range@{named\_range}}
+\index{named\_range@{named\_range}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{named\_range()}{named\_range()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range}{range}} xlnt\+::worksheet\+::named\+\_\+range (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Returns the named range with the given name. Throws \mbox{\hyperlink{classxlnt_1_1key__not__found}{key\+\_\+not\+\_\+found}} exception if the named range doesn\textquotesingle{}t exist. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a69a339b1a11a98ab428b23a0eda322a2}\label{classxlnt_1_1worksheet_a69a339b1a11a98ab428b23a0eda322a2}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!named\_range@{named\_range}}
+\index{named\_range@{named\_range}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{named\_range()}{named\_range()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1range}{range}} xlnt\+::worksheet\+::named\+\_\+range (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Returns the named range with the given name. Throws \mbox{\hyperlink{classxlnt_1_1key__not__found}{key\+\_\+not\+\_\+found}} exception if the named range doesn\textquotesingle{}t exist. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a0f8fb1aaa556f3415c5c8e4b3cd4bd2e}\label{classxlnt_1_1worksheet_a0f8fb1aaa556f3415c5c8e4b3cd4bd2e}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!next\_row@{next\_row}}
+\index{next\_row@{next\_row}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{next\_row()}{next\_row()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} xlnt\+::worksheet\+::next\+\_\+row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the row directly below the last non-\/empty cell in the worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ac5ee8f14d02d9c202c83d6e36ac2f046}\label{classxlnt_1_1worksheet_ac5ee8f14d02d9c202c83d6e36ac2f046}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this worksheet doesn\textquotesingle{}t refer to the same worksheet as other. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a63e4bc732cd957116255ae551a8173bf}\label{classxlnt_1_1worksheet_a63e4bc732cd957116255ae551a8173bf}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::operator!= (\begin{DoxyParamCaption}\item[{std\+::nullptr\+\_\+t}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this worksheet is not null. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a9e69d7b5b2666d98fac1eb990f557b8a}\label{classxlnt_1_1worksheet_a9e69d7b5b2666d98fac1eb990f557b8a}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!operator=@{operator=}}
+\index{operator=@{operator=}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Sets the internal pointer of this worksheet object to point to other. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a4569636da10049f96a59af63dea774d7}\label{classxlnt_1_1worksheet_a4569636da10049f96a59af63dea774d7}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this worksheet refers to the same worksheet as other. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a739a624d0827ac0c7eaf6b7c622d217a}\label{classxlnt_1_1worksheet_a739a624d0827ac0c7eaf6b7c622d217a}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+::operator== (\begin{DoxyParamCaption}\item[{std\+::nullptr\+\_\+t}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this worksheet is null. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ac389497d95de112d2bdf973fd1a98020}\label{classxlnt_1_1worksheet_ac389497d95de112d2bdf973fd1a98020}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell}{cell}} xlnt\+::worksheet\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{reference }\end{DoxyParamCaption})}
+
+
+
+Convenience method for \mbox{\hyperlink{classxlnt_1_1worksheet_aae88f49f4ddcc1e24b2e6c1841c35018}{worksheet\+::cell}} method. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_af851ccb46c8df6eeead3ebf17e62a9dd}\label{classxlnt_1_1worksheet_af851ccb46c8df6eeead3ebf17e62a9dd}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} xlnt\+::worksheet\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{reference }\end{DoxyParamCaption}) const}
+
+
+
+Convenience method for \mbox{\hyperlink{classxlnt_1_1worksheet_aae88f49f4ddcc1e24b2e6c1841c35018}{worksheet\+::cell}} method. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ae3349851433d5a7754995eb478be8c9a}\label{classxlnt_1_1worksheet_ae3349851433d5a7754995eb478be8c9a}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!page\_break\_at\_column@{page\_break\_at\_column}}
+\index{page\_break\_at\_column@{page\_break\_at\_column}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{page\_break\_at\_column()}{page\_break\_at\_column()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::page\+\_\+break\+\_\+at\+\_\+column (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{xlnt\+::column\+\_\+t}}}]{column }\end{DoxyParamCaption})}
+
+
+
+Add a page break at the given column. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_aa5f8638ca90d1796dde3269789bcdb91}\label{classxlnt_1_1worksheet_aa5f8638ca90d1796dde3269789bcdb91}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!page\_break\_at\_row@{page\_break\_at\_row}}
+\index{page\_break\_at\_row@{page\_break\_at\_row}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{page\_break\_at\_row()}{page\_break\_at\_row()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::page\+\_\+break\+\_\+at\+\_\+row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}}]{row }\end{DoxyParamCaption})}
+
+
+
+Add a page break at the given row. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a61b87666b6ace6e6d1ee406425102a21}\label{classxlnt_1_1worksheet_a61b87666b6ace6e6d1ee406425102a21}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!page\_break\_columns@{page\_break\_columns}}
+\index{page\_break\_columns@{page\_break\_columns}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{page\_break\_columns()}{page\_break\_columns()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} $>$ \& xlnt\+::worksheet\+::page\+\_\+break\+\_\+columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns vector where each element represents a column which will break a page to the right. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ae4b4f4123e826dd6788f30554e12de6a}\label{classxlnt_1_1worksheet_ae4b4f4123e826dd6788f30554e12de6a}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!page\_break\_rows@{page\_break\_rows}}
+\index{page\_break\_rows@{page\_break\_rows}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{page\_break\_rows()}{page\_break\_rows()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} $>$ \& xlnt\+::worksheet\+::page\+\_\+break\+\_\+rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns vector where each element represents a row which will break a page below it. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_aa4285c468a7384649abcf1a1a92cba1c}\label{classxlnt_1_1worksheet_aa4285c468a7384649abcf1a1a92cba1c}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!page\_margins@{page\_margins}}
+\index{page\_margins@{page\_margins}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{page\_margins()}{page\_margins()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1page__margins}{page\+\_\+margins}} xlnt\+::worksheet\+::page\+\_\+margins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the margins of this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ae607465e03e2b9b4bf74f3609d753117}\label{classxlnt_1_1worksheet_ae607465e03e2b9b4bf74f3609d753117}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!page\_margins@{page\_margins}}
+\index{page\_margins@{page\_margins}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{page\_margins()}{page\_margins()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::page\+\_\+margins (\begin{DoxyParamCaption}\item[{const class \mbox{\hyperlink{classxlnt_1_1page__margins}{page\+\_\+margins}} \&}]{margins }\end{DoxyParamCaption})}
+
+
+
+Sets the margins of this sheet to margins. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a5f3eefc4bfb1037624ffa120926b5f6a}\label{classxlnt_1_1worksheet_a5f3eefc4bfb1037624ffa120926b5f6a}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!page\_setup@{page\_setup}}
+\index{page\_setup@{page\_setup}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{page\_setup()}{page\_setup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structxlnt_1_1page__setup}{page\+\_\+setup}} xlnt\+::worksheet\+::page\+\_\+setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the page setup for this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a27f1aa4d2677e9db98b6668c5ce58b07}\label{classxlnt_1_1worksheet_a27f1aa4d2677e9db98b6668c5ce58b07}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!page\_setup@{page\_setup}}
+\index{page\_setup@{page\_setup}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{page\_setup()}{page\_setup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::page\+\_\+setup (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structxlnt_1_1page__setup}{page\+\_\+setup}} \&}]{setup }\end{DoxyParamCaption})}
+
+
+
+Sets the page setup for this sheet to setup. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a9690eae90ec94f7fbfe37188aa775e35}\label{classxlnt_1_1worksheet_a9690eae90ec94f7fbfe37188aa775e35}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!path@{path}}
+\index{path@{path}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{path()}{path()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1path}{path}} xlnt\+::worksheet\+::path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the path of this worksheet in the containing package. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a73c5f29df7545c4d78926c6404d92513}\label{classxlnt_1_1worksheet_a73c5f29df7545c4d78926c6404d92513}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!phonetic\_properties@{phonetic\_properties}}
+\index{phonetic\_properties@{phonetic\_properties}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{phonetic\_properties()}{phonetic\_properties()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1phonetic__pr}{phonetic\+\_\+pr}} \& xlnt\+::worksheet\+::phonetic\+\_\+properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the phonetic properties of this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a3859407b94cf7cd6159518d15b7eb6d0}\label{classxlnt_1_1worksheet_a3859407b94cf7cd6159518d15b7eb6d0}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!phonetic\_properties@{phonetic\_properties}}
+\index{phonetic\_properties@{phonetic\_properties}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{phonetic\_properties()}{phonetic\_properties()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::phonetic\+\_\+properties (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1phonetic__pr}{phonetic\+\_\+pr}} \&}]{phonetic\+\_\+props }\end{DoxyParamCaption})}
+
+
+
+Sets the phonetic properties of this sheet to phonetic\+\_\+props 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a627951189735a34fdbd953e91fb8534f}\label{classxlnt_1_1worksheet_a627951189735a34fdbd953e91fb8534f}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!point\_pos@{point\_pos}}
+\index{point\_pos@{point\_pos}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{point\_pos()}{point\_pos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} xlnt\+::worksheet\+::point\+\_\+pos (\begin{DoxyParamCaption}\item[{int}]{left,  }\item[{int}]{top }\end{DoxyParamCaption}) const}
+
+
+
+Returns a reference to the cell at the given point coordinates. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a0c2f5c3d47499969321e2b7f2190328b}\label{classxlnt_1_1worksheet_a0c2f5c3d47499969321e2b7f2190328b}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!print\_area@{print\_area}}
+\index{print\_area@{print\_area}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{print\_area()}{print\_area()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} xlnt\+::worksheet\+::print\+\_\+area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the print area defined for this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a8acdd63570f0dc32734ef6fe5eb30919}\label{classxlnt_1_1worksheet_a8acdd63570f0dc32734ef6fe5eb30919}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!print\_area@{print\_area}}
+\index{print\_area@{print\_area}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{print\_area()}{print\_area()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::print\+\_\+area (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{print\+\_\+area }\end{DoxyParamCaption})}
+
+
+
+Sets the print area of this sheet to print\+\_\+area. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a2684cdb908ea3cdff7aa66c1539c1882}\label{classxlnt_1_1worksheet_a2684cdb908ea3cdff7aa66c1539c1882}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!print\_title\_cols@{print\_title\_cols}}
+\index{print\_title\_cols@{print\_title\_cols}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{print\_title\_cols()}{print\_title\_cols()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::print\+\_\+title\+\_\+cols (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}}]{first\+\_\+column,  }\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}}]{last\+\_\+column }\end{DoxyParamCaption})}
+
+
+
+Sets columns to repeat at left during printing. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_adf13f46ace48e54232633852f138d37b}\label{classxlnt_1_1worksheet_adf13f46ace48e54232633852f138d37b}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!print\_title\_cols@{print\_title\_cols}}
+\index{print\_title\_cols@{print\_title\_cols}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{print\_title\_cols()}{print\_title\_cols()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::print\+\_\+title\+\_\+cols (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}}]{last\+\_\+column }\end{DoxyParamCaption})}
+
+
+
+Sets columns to repeat at left during printing. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a1510c3bae89168cfb4ab381c29ce88db}\label{classxlnt_1_1worksheet_a1510c3bae89168cfb4ab381c29ce88db}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!print\_title\_rows@{print\_title\_rows}}
+\index{print\_title\_rows@{print\_title\_rows}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{print\_title\_rows()}{print\_title\_rows()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::print\+\_\+title\+\_\+rows (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}}]{first\+\_\+row,  }\item[{\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}}]{last\+\_\+row }\end{DoxyParamCaption})}
+
+
+
+Sets rows to repeat at top during printing. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ace768d103a9e0e4dcb30c0f4ab9f3969}\label{classxlnt_1_1worksheet_ace768d103a9e0e4dcb30c0f4ab9f3969}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!print\_title\_rows@{print\_title\_rows}}
+\index{print\_title\_rows@{print\_title\_rows}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{print\_title\_rows()}{print\_title\_rows()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::print\+\_\+title\+\_\+rows (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}}]{last\+\_\+row }\end{DoxyParamCaption})}
+
+
+
+Sets rows to repeat at top during printing. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a98cbec7939236c4ee7e8a5f7ccd28cd2}\label{classxlnt_1_1worksheet_a98cbec7939236c4ee7e8a5f7ccd28cd2}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!print\_titles@{print\_titles}}
+\index{print\_titles@{print\_titles}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{print\_titles()}{print\_titles()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::worksheet\+::print\+\_\+titles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a string representation of the defined print titles. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ad68bda36461c1e961e4c03cb979dde2e}\label{classxlnt_1_1worksheet_ad68bda36461c1e961e4c03cb979dde2e}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!range@{range}}
+\index{range@{range}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{range()}{range()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range}{range}} xlnt\+::worksheet\+::range (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&}]{reference }\end{DoxyParamCaption})}
+
+
+
+Returns the range defined by reference. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a474966ce22a4e6dcef1f0e7c35569ca1}\label{classxlnt_1_1worksheet_a474966ce22a4e6dcef1f0e7c35569ca1}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!range@{range}}
+\index{range@{range}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{range()}{range()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1range}{range}} xlnt\+::worksheet\+::range (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&}]{reference }\end{DoxyParamCaption}) const}
+
+
+
+Returns the range defined by reference. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a8f9c0cc9493c0976f97a49dac38f6732}\label{classxlnt_1_1worksheet_a8f9c0cc9493c0976f97a49dac38f6732}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!range@{range}}
+\index{range@{range}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{range()}{range()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range}{range}} xlnt\+::worksheet\+::range (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{reference\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Returns the range defined by reference string. If reference string is the name of a previously-\/defined named range in the sheet, it will be returned. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ae653c3d890293c629c9f17d48b11bea2}\label{classxlnt_1_1worksheet_ae653c3d890293c629c9f17d48b11bea2}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!range@{range}}
+\index{range@{range}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{range()}{range()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1range}{range}} xlnt\+::worksheet\+::range (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{reference\+\_\+string }\end{DoxyParamCaption}) const}
+
+
+
+Returns the range defined by reference string. If reference string is the name of a previously-\/defined named range in the sheet, it will be returned. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a628d2af9edc362c99f19d2606c918bfe}\label{classxlnt_1_1worksheet_a628d2af9edc362c99f19d2606c918bfe}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!referring\_relationship@{referring\_relationship}}
+\index{referring\_relationship@{referring\_relationship}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{referring\_relationship()}{referring\_relationship()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1relationship}{relationship}} xlnt\+::worksheet\+::referring\+\_\+relationship (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the relationship from the parent workbook to this worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a3f527518c9a7b59c85c43c4a4f760c23}\label{classxlnt_1_1worksheet_a3f527518c9a7b59c85c43c4a4f760c23}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!remove\_named\_range@{remove\_named\_range}}
+\index{remove\_named\_range@{remove\_named\_range}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{remove\_named\_range()}{remove\_named\_range()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::remove\+\_\+named\+\_\+range (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Removes a named range with the given name. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ad914d72ec3dbc3458814f2680bc62854}\label{classxlnt_1_1worksheet_ad914d72ec3dbc3458814f2680bc62854}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!reserve@{reserve}}
+\index{reserve@{reserve}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{reserve()}{reserve()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::reserve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{n }\end{DoxyParamCaption})}
+
+
+
+Reserve n rows. This can be optionally called before adding many rows to improve performance. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a9dfad3c8abf86758156649388d54d18e}\label{classxlnt_1_1worksheet_a9dfad3c8abf86758156649388d54d18e}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!row\_height@{row\_height}}
+\index{row\_height@{row\_height}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{row\_height()}{row\_height()}}
+{\footnotesize\ttfamily double xlnt\+::worksheet\+::row\+\_\+height (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}}]{row }\end{DoxyParamCaption}) const}
+
+
+
+Calculate the height of the given row. This will be the default row height if a custom height is not set on this row\textquotesingle{}s \mbox{\hyperlink{classxlnt_1_1row__properties}{row\+\_\+properties}}. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_aff6507aa5653c439811f1f7c5aa16d03}\label{classxlnt_1_1worksheet_aff6507aa5653c439811f1f7c5aa16d03}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!row\_properties@{row\_properties}}
+\index{row\_properties@{row\_properties}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{row\_properties()}{row\_properties()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1row__properties}{row\+\_\+properties}} \& xlnt\+::worksheet\+::row\+\_\+properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}}]{row }\end{DoxyParamCaption})}
+
+
+
+Returns the row properties for the given row. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a003ac3abdf0cb218f8664214bb52ceb1}\label{classxlnt_1_1worksheet_a003ac3abdf0cb218f8664214bb52ceb1}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!row\_properties@{row\_properties}}
+\index{row\_properties@{row\_properties}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{row\_properties()}{row\_properties()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1row__properties}{row\+\_\+properties}} \& xlnt\+::worksheet\+::row\+\_\+properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}}]{row }\end{DoxyParamCaption}) const}
+
+
+
+Returns the row properties for the given row. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a12778fcfc846484b59f95aa858a6d904}\label{classxlnt_1_1worksheet_a12778fcfc846484b59f95aa858a6d904}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!rows@{rows}}
+\index{rows@{rows}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range}{xlnt\+::range}} xlnt\+::worksheet\+::rows (\begin{DoxyParamCaption}\item[{bool}]{skip\+\_\+null = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Returns a range encompassing all cells in this sheet which will be iterated upon in row-\/major order. If skip\+\_\+null is true (default), empty rows and cells will be skipped during iteration of the range. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ad57834107e0c93a2c1b64c4cb6d01d9e}\label{classxlnt_1_1worksheet_ad57834107e0c93a2c1b64c4cb6d01d9e}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!rows@{rows}}
+\index{rows@{rows}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1range}{xlnt\+::range}} xlnt\+::worksheet\+::rows (\begin{DoxyParamCaption}\item[{bool}]{skip\+\_\+null = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+
+
+Returns a range encompassing all cells in this sheet which will be iterated upon in row-\/major order. If skip\+\_\+null is true (default), empty rows and cells will be skipped during iteration of the range. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a38de65f307d983e9e828136ebf7e1b5f}\label{classxlnt_1_1worksheet_a38de65f307d983e9e828136ebf7e1b5f}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!sheet\_state@{sheet\_state}}
+\index{sheet\_state@{sheet\_state}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{sheet\_state()}{sheet\_state()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sheet\+\_\+state xlnt\+::worksheet\+::sheet\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the sheet state of this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a314b2933e883121cd277bfcafdebdfe8}\label{classxlnt_1_1worksheet_a314b2933e883121cd277bfcafdebdfe8}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!sheet\_state@{sheet\_state}}
+\index{sheet\_state@{sheet\_state}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{sheet\_state()}{sheet\_state()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::sheet\+\_\+state (\begin{DoxyParamCaption}\item[{xlnt\+::sheet\+\_\+state}]{state }\end{DoxyParamCaption})}
+
+
+
+Sets the sheet state of this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ad6b664b8fd51d88bb50b6aca9870ac07}\label{classxlnt_1_1worksheet_ad6b664b8fd51d88bb50b6aca9870ac07}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!title@{title}}
+\index{title@{title}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string xlnt\+::worksheet\+::title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the title of this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a1042c97e2d1a85f45e1cef1e5104268a}\label{classxlnt_1_1worksheet_a1042c97e2d1a85f45e1cef1e5104268a}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!title@{title}}
+\index{title@{title}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::title (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title }\end{DoxyParamCaption})}
+
+
+
+Sets the title of this sheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a09deeb4f6b94bf1ce596644d75370321}\label{classxlnt_1_1worksheet_a09deeb4f6b94bf1ce596644d75370321}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!unfreeze\_panes@{unfreeze\_panes}}
+\index{unfreeze\_panes@{unfreeze\_panes}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{unfreeze\_panes()}{unfreeze\_panes()}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::unfreeze\+\_\+panes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove frozen panes. The data in those panes will be unaffected--this affects only the view. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a9fabc58e3c05d898aef057bf17a3ca0b}\label{classxlnt_1_1worksheet_a9fabc58e3c05d898aef057bf17a3ca0b}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!unmerge\_cells@{unmerge\_cells}}
+\index{unmerge\_cells@{unmerge\_cells}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{unmerge\_cells()}{unmerge\_cells()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::unmerge\+\_\+cells (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&}]{reference }\end{DoxyParamCaption})}
+
+
+
+Removes the merging of the cells in the given range. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a4ce60b6626ef5de86dd3852b029bf94b}\label{classxlnt_1_1worksheet_a4ce60b6626ef5de86dd3852b029bf94b}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!unmerge\_cells@{unmerge\_cells}}
+\index{unmerge\_cells@{unmerge\_cells}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{unmerge\_cells()}{unmerge\_cells()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::unmerge\+\_\+cells (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{reference\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Removes the merging of the cells in the range represented by the given string. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_afd8b8426c2a74615000d7a30157b5520}\label{classxlnt_1_1worksheet_afd8b8426c2a74615000d7a30157b5520}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!view@{view}}
+\index{view@{view}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{view()}{view()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1sheet__view}{sheet\+\_\+view}} \& xlnt\+::worksheet\+::view (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+Returns the view at the given index. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_ae4f3620687b70078065dababe2d43524}\label{classxlnt_1_1worksheet_ae4f3620687b70078065dababe2d43524}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!workbook@{workbook}}
+\index{workbook@{workbook}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{workbook()}{workbook()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily class \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}}\& xlnt\+::worksheet\+::workbook (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a reference to the workbook this worksheet is owned by. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_af2643961703e50d7254222e6c2c2a0c6}\label{classxlnt_1_1worksheet_af2643961703e50d7254222e6c2c2a0c6}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!workbook@{workbook}}
+\index{workbook@{workbook}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{workbook()}{workbook()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \& xlnt\+::worksheet\+::workbook (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a reference to the workbook this worksheet is owned by. 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1worksheet_aae88f49f4ddcc1e24b2e6c1841c35018}\label{classxlnt_1_1worksheet_aae88f49f4ddcc1e24b2e6c1841c35018}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!cell@{cell}}
+\index{cell@{cell}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{cell}{cell}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classxlnt_1_1cell}{cell}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a487acfcdb9d580938240775d2f99c7df}\label{classxlnt_1_1worksheet_a487acfcdb9d580938240775d2f99c7df}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!const\_range\_iterator@{const\_range\_iterator}}
+\index{const\_range\_iterator@{const\_range\_iterator}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{const\_range\_iterator}{const\_range\_iterator}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classxlnt_1_1const__range__iterator}{const\+\_\+range\+\_\+iterator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a5c27ff96f65a231e21871a228cbaf740}\label{classxlnt_1_1worksheet_a5c27ff96f65a231e21871a228cbaf740}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!detail::xlsx\_consumer@{detail::xlsx\_consumer}}
+\index{detail::xlsx\_consumer@{detail::xlsx\_consumer}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{detail::xlsx\_consumer}{detail::xlsx\_consumer}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classxlnt_1_1detail_1_1xlsx__consumer}{detail\+::xlsx\+\_\+consumer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_aeaa1b2a5f3d37ddb4b8ca1ebaab144f3}\label{classxlnt_1_1worksheet_aeaa1b2a5f3d37ddb4b8ca1ebaab144f3}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!detail::xlsx\_producer@{detail::xlsx\_producer}}
+\index{detail::xlsx\_producer@{detail::xlsx\_producer}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{detail::xlsx\_producer}{detail::xlsx\_producer}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classxlnt_1_1detail_1_1xlsx__producer}{detail\+::xlsx\+\_\+producer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a06e4ef1ae5a9412e52086ec54ec7c3d2}\label{classxlnt_1_1worksheet_a06e4ef1ae5a9412e52086ec54ec7c3d2}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!range\_iterator@{range\_iterator}}
+\index{range\_iterator@{range\_iterator}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{range\_iterator}{range\_iterator}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet_a71339f4270bfea0439cd2aa3c11f9b02}\label{classxlnt_1_1worksheet_a71339f4270bfea0439cd2aa3c11f9b02}} 
+\index{xlnt::worksheet@{xlnt::worksheet}!workbook@{workbook}}
+\index{workbook@{workbook}!xlnt::worksheet@{xlnt::worksheet}}
+\doxysubsubsection{\texorpdfstring{workbook}{workbook}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \& xlnt\+::worksheet\+::workbook\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/worksheet/\mbox{\hyperlink{worksheet_8hpp}{worksheet.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/worksheet/\mbox{\hyperlink{worksheet_8cpp}{worksheet.\+cpp}}\end{DoxyCompactItemize}

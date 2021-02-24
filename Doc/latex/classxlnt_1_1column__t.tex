@@ -1,0 +1,556 @@
+\hypertarget{classxlnt_1_1column__t}{}\doxysection{xlnt\+::column\+\_\+t Class Reference}
+\label{classxlnt_1_1column__t}\index{xlnt::column\_t@{xlnt::column\_t}}
+
+
+Columns can be referred to as a string A,B,...Z,AA,AB,..,ZZ,AAA,...,ZZZ or as a 1-\/indexed index. This class encapsulates both of these forms of column referencing and allows for conversions between them.  
+
+
+
+
+{\ttfamily \#include $<$index\+\_\+types.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{index\+\_\+t}} = std\+::uint32\+\_\+t
+\begin{DoxyCompactList}\small\item\em Alias declaration for the internal numeric type of this column. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1column__t_a17ecf0149815f0e8cfbf3d6fb9181966}{column\+\_\+t}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. The column points to the \char`\"{}\+A\char`\"{} column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t_a8ef4798c933f535e5c344d15b730dea1}{column\+\_\+t}} (\mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{index\+\_\+t}} column\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Constructs a column from a number. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t_a51223789791f8bac595c1f7d68d94d2b}{column\+\_\+t}} (const std\+::string \&\mbox{\hyperlink{classxlnt_1_1column__t_acf34c7f03d070a3bfa9dabed88411f1c}{column\+\_\+string}})
+\begin{DoxyCompactList}\small\item\em Constructs a column from a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t_abe9a7724fafffc29ca8fdf428469cf4a}{column\+\_\+t}} (const char $\ast$\mbox{\hyperlink{classxlnt_1_1column__t_acf34c7f03d070a3bfa9dabed88411f1c}{column\+\_\+string}})
+\begin{DoxyCompactList}\small\item\em Constructs a column from a string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1column__t_acf34c7f03d070a3bfa9dabed88411f1c}{column\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Returns a string representation of this column index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \& \mbox{\hyperlink{classxlnt_1_1column__t_a9a0be009adb1029f5f268d3f75cbc910}{operator=}} (const std\+::string \&rhs)
+\begin{DoxyCompactList}\small\item\em Sets this column to be equal to rhs and return reference to self. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \& \mbox{\hyperlink{classxlnt_1_1column__t_a985aeb3675905115dddddde860807106}{operator=}} (const char $\ast$rhs)
+\begin{DoxyCompactList}\small\item\em Sets this column to be equal to rhs and return reference to self. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_ab774eea0973b113268cd8ba1997138be}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this column refers to the same column as other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_a3730c4854888b300fbdabec3ec155cc8}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this column doesn\textquotesingle{}t refer to the same column as other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_aa6cafc9b777354926bc174ee4819272f}{operator==}} (int other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this column refers to the same column as other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_af2aba5ed49ce6847c20ff02b0a83e4b5}{operator==}} (\mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{index\+\_\+t}} other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this column refers to the same column as other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_aed5d29ebaee2f9601f5484e9e8d37959}{operator==}} (const std\+::string \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this column refers to the same column as other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_a0023091df60cb803860be673020ffbdd}{operator==}} (const char $\ast$other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this column refers to the same column as other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_a418e399217a40e8f03b614f887883264}{operator!=}} (int other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this column doesn\textquotesingle{}t refer to the same column as other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_ab782517542e3aeee0ea6b85fdba3b01c}{operator!=}} (\mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{index\+\_\+t}} other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this column doesn\textquotesingle{}t refer to the same column as other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_a991bd23bb10ae22b3f14678f3ff09c5a}{operator!=}} (const std\+::string \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this column doesn\textquotesingle{}t refer to the same column as other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_aa24681170b8d44da29b63abb98759060}{operator!=}} (const char $\ast$other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this column doesn\textquotesingle{}t refer to the same column as other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_a85a0899a221e2365ca88a649abcb6745}{operator$>$}} (const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if other is to the right of this column. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_aafb675ccfb46a0a83669b70d1b9cefa3}{operator$>$=}} (const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if other is to the right of or equal to this column. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_afb01a98fd3f8240cd81ef7a82f9b74d5}{operator$<$}} (const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if other is to the left of this column. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_aa4595bf9721fc9a9a1d6e33bcf7f6b4a}{operator$<$=}} (const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if other is to the left of or equal to this column. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_a80bc6e33cb95e0433a5c9eba5bf156d7}{operator$>$}} (const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if other is to the right of this column. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_ad655c2a45d3dc7a27b1c1661b7008888}{operator$>$=}} (const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if other is to the right of or equal to this column. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_a038c96bf0eac7e441e65f47b831f52bf}{operator$<$}} (const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if other is to the left of this column. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1column__t_a3893f4ecfad908bb62201032c03ab556}{operator$<$=}} (const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if other is to the left of or equal to this column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \& \mbox{\hyperlink{classxlnt_1_1column__t_a48f04341aed247967de08522bda4ebda}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em Pre-\/increments this column, making it point to the column one to the right and returning a reference to it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \& \mbox{\hyperlink{classxlnt_1_1column__t_ad560a60d876273dc3b2d7882cae68f14}{operator-\/-\/}} ()
+\begin{DoxyCompactList}\small\item\em Pre-\/deccrements this column, making it point to the column one to the left and returning a reference to it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1column__t_a94dd3c5ea72f056276c2daaa03c08757}{operator++}} (int)
+\begin{DoxyCompactList}\small\item\em Post-\/increments this column, making it point to the column one to the right and returning the old column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1column__t_aff101d876632bc5ce93bbae6941bc3d6}{operator-\/-\/}} (int)
+\begin{DoxyCompactList}\small\item\em Post-\/decrements this column, making it point to the column one to the left and returning the old column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \& \mbox{\hyperlink{classxlnt_1_1column__t_acc47a7f652c287d179c51859360a99b5}{operator+=}} (const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Adds rhs to this column and returns a reference to this column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \& \mbox{\hyperlink{classxlnt_1_1column__t_a07c3be09e7f446ebaa3876aa2bb13bad}{operator-\/=}} (const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Subtracts rhs from this column and returns a reference to this column. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{index\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1column__t_a0d279f6bb1c3f6fbe4a1b9ea8a73f182}{column\+\_\+index\+\_\+from\+\_\+string}} (const std\+::string \&\mbox{\hyperlink{classxlnt_1_1column__t_acf34c7f03d070a3bfa9dabed88411f1c}{column\+\_\+string}})
+\begin{DoxyCompactList}\small\item\em Convert a column letter into a column number (e.\+g. B -\/$>$ 2) \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classxlnt_1_1column__t_a23c8985b1f2b91f2ba5b722a7fb053e0}{column\+\_\+string\+\_\+from\+\_\+index}} (\mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{index\+\_\+t}} column\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Convert a column number into a column letter (3 -\/$>$ \textquotesingle{}C\textquotesingle{}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{index\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1column__t_a9e53ff3b0e9037c56561bc5e3a5d2f57}{index}}
+\begin{DoxyCompactList}\small\item\em Internal numeric value of this column index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1column__t_a7b3aad4ebc633a0face07b276e6e8ad7}{operator+}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} lhs, const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Returns the result of adding rhs to this column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1column__t_a69295fd4f41af2cbfc5ebbf64cae8b93}{operator-\/}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} lhs, const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Returns the result of subtracing lhs by rhs column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool \mbox{\hyperlink{classxlnt_1_1column__t_a3ec5e3db3a78b50af9729bf887bd865d}{operator$>$}} (const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}, const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}})
+\begin{DoxyCompactList}\small\item\em Returns true if other is to the right of this column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool \mbox{\hyperlink{classxlnt_1_1column__t_a13a9ec17fe04c332716907de96c0d909}{operator$>$=}} (const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}, const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}})
+\begin{DoxyCompactList}\small\item\em Returns true if other is to the right of or equal to this column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool \mbox{\hyperlink{classxlnt_1_1column__t_a7615b1e028e3438734b4901d58efce7a}{operator$<$}} (const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}, const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}})
+\begin{DoxyCompactList}\small\item\em Returns true if other is to the left of this column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool \mbox{\hyperlink{classxlnt_1_1column__t_a1d1dbc28260dd8f41ca2de30911d1554}{operator$<$=}} (const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}, const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}})
+\begin{DoxyCompactList}\small\item\em Returns true if other is to the left of or equal to this column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} void \mbox{\hyperlink{classxlnt_1_1column__t_a85fb8e50c16ccecffd055a3947905215}{swap}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}, \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}})
+\begin{DoxyCompactList}\small\item\em Swaps the columns that left and right refer to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Columns can be referred to as a string A,B,...Z,AA,AB,..,ZZ,AAA,...,ZZZ or as a 1-\/indexed index. This class encapsulates both of these forms of column referencing and allows for conversions between them. 
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}\label{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!index\_t@{index\_t}}
+\index{index\_t@{index\_t}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{index\_t}{index\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{xlnt\+::column\+\_\+t\+::index\+\_\+t}} =  std\+::uint32\+\_\+t}
+
+
+
+Alias declaration for the internal numeric type of this column. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1column__t_a17ecf0149815f0e8cfbf3d6fb9181966}\label{classxlnt_1_1column__t_a17ecf0149815f0e8cfbf3d6fb9181966}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!column\_t@{column\_t}}
+\index{column\_t@{column\_t}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{column\_t()}{column\_t()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily xlnt\+::column\+\_\+t\+::column\+\_\+t (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. The column points to the \char`\"{}\+A\char`\"{} column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a8ef4798c933f535e5c344d15b730dea1}\label{classxlnt_1_1column__t_a8ef4798c933f535e5c344d15b730dea1}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!column\_t@{column\_t}}
+\index{column\_t@{column\_t}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{column\_t()}{column\_t()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily xlnt\+::column\+\_\+t\+::column\+\_\+t (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{index\+\_\+t}}}]{column\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Constructs a column from a number. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a51223789791f8bac595c1f7d68d94d2b}\label{classxlnt_1_1column__t_a51223789791f8bac595c1f7d68d94d2b}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!column\_t@{column\_t}}
+\index{column\_t@{column\_t}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{column\_t()}{column\_t()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily xlnt\+::column\+\_\+t\+::column\+\_\+t (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{column\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Constructs a column from a string. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_abe9a7724fafffc29ca8fdf428469cf4a}\label{classxlnt_1_1column__t_abe9a7724fafffc29ca8fdf428469cf4a}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!column\_t@{column\_t}}
+\index{column\_t@{column\_t}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{column\_t()}{column\_t()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily xlnt\+::column\+\_\+t\+::column\+\_\+t (\begin{DoxyParamCaption}\item[{const char $\ast$}]{column\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Constructs a column from a string. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1column__t_a0d279f6bb1c3f6fbe4a1b9ea8a73f182}\label{classxlnt_1_1column__t_a0d279f6bb1c3f6fbe4a1b9ea8a73f182}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!column\_index\_from\_string@{column\_index\_from\_string}}
+\index{column\_index\_from\_string@{column\_index\_from\_string}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{column\_index\_from\_string()}{column\_index\_from\_string()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} xlnt\+::column\+\_\+t\+::column\+\_\+index\+\_\+from\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{column\+\_\+string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Convert a column letter into a column number (e.\+g. B -\/$>$ 2) 
+
+Excel only supports 1 -\/ 3 letter column names from A-\/$>$ZZZ, so we restrict our column names to 1 -\/ 3 characters, each in the range A -\/ Z. Strings outside this range and malformed strings will throw column\+\_\+string\+\_\+index\+\_\+exception. \mbox{\Hypertarget{classxlnt_1_1column__t_acf34c7f03d070a3bfa9dabed88411f1c}\label{classxlnt_1_1column__t_acf34c7f03d070a3bfa9dabed88411f1c}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!column\_string@{column\_string}}
+\index{column\_string@{column\_string}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{column\_string()}{column\_string()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::column\+\_\+t\+::column\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a string representation of this column index. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a23c8985b1f2b91f2ba5b722a7fb053e0}\label{classxlnt_1_1column__t_a23c8985b1f2b91f2ba5b722a7fb053e0}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!column\_string\_from\_index@{column\_string\_from\_index}}
+\index{column\_string\_from\_index@{column\_string\_from\_index}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{column\_string\_from\_index()}{column\_string\_from\_index()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::column\+\_\+t\+::column\+\_\+string\+\_\+from\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}}}]{column\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Convert a column number into a column letter (3 -\/$>$ \textquotesingle{}C\textquotesingle{}) 
+
+Right shift the column, column\+\_\+index, by 26 to find column letters in reverse order. These indices are 1-\/based, and can be converted to ASCII ordinals by adding 64. \mbox{\Hypertarget{classxlnt_1_1column__t_aa24681170b8d44da29b63abb98759060}\label{classxlnt_1_1column__t_aa24681170b8d44da29b63abb98759060}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator!= (\begin{DoxyParamCaption}\item[{const char $\ast$}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this column doesn\textquotesingle{}t refer to the same column as other. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a3730c4854888b300fbdabec3ec155cc8}\label{classxlnt_1_1column__t_a3730c4854888b300fbdabec3ec155cc8}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this column doesn\textquotesingle{}t refer to the same column as other. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a991bd23bb10ae22b3f14678f3ff09c5a}\label{classxlnt_1_1column__t_a991bd23bb10ae22b3f14678f3ff09c5a}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator!= (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this column doesn\textquotesingle{}t refer to the same column as other. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_ab782517542e3aeee0ea6b85fdba3b01c}\label{classxlnt_1_1column__t_ab782517542e3aeee0ea6b85fdba3b01c}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{index\+\_\+t}}}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this column doesn\textquotesingle{}t refer to the same column as other. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a418e399217a40e8f03b614f887883264}\label{classxlnt_1_1column__t_a418e399217a40e8f03b614f887883264}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator!= (\begin{DoxyParamCaption}\item[{int}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this column doesn\textquotesingle{}t refer to the same column as other. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a48f04341aed247967de08522bda4ebda}\label{classxlnt_1_1column__t_a48f04341aed247967de08522bda4ebda}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator++@{operator++}}
+\index{operator++@{operator++}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \& xlnt\+::column\+\_\+t\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pre-\/increments this column, making it point to the column one to the right and returning a reference to it. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a94dd3c5ea72f056276c2daaa03c08757}\label{classxlnt_1_1column__t_a94dd3c5ea72f056276c2daaa03c08757}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator++@{operator++}}
+\index{operator++@{operator++}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} xlnt\+::column\+\_\+t\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Post-\/increments this column, making it point to the column one to the right and returning the old column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_acc47a7f652c287d179c51859360a99b5}\label{classxlnt_1_1column__t_acc47a7f652c287d179c51859360a99b5}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \& xlnt\+::column\+\_\+t\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Adds rhs to this column and returns a reference to this column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_ad560a60d876273dc3b2d7882cae68f14}\label{classxlnt_1_1column__t_ad560a60d876273dc3b2d7882cae68f14}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \& xlnt\+::column\+\_\+t\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pre-\/deccrements this column, making it point to the column one to the left and returning a reference to it. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_aff101d876632bc5ce93bbae6941bc3d6}\label{classxlnt_1_1column__t_aff101d876632bc5ce93bbae6941bc3d6}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} xlnt\+::column\+\_\+t\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Post-\/decrements this column, making it point to the column one to the left and returning the old column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a07c3be09e7f446ebaa3876aa2bb13bad}\label{classxlnt_1_1column__t_a07c3be09e7f446ebaa3876aa2bb13bad}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \& xlnt\+::column\+\_\+t\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Subtracts rhs from this column and returns a reference to this column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_afb01a98fd3f8240cd81ef7a82f9b74d5}\label{classxlnt_1_1column__t_afb01a98fd3f8240cd81ef7a82f9b74d5}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if other is to the left of this column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a038c96bf0eac7e441e65f47b831f52bf}\label{classxlnt_1_1column__t_a038c96bf0eac7e441e65f47b831f52bf}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if other is to the left of this column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_aa4595bf9721fc9a9a1d6e33bcf7f6b4a}\label{classxlnt_1_1column__t_aa4595bf9721fc9a9a1d6e33bcf7f6b4a}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if other is to the left of or equal to this column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a3893f4ecfad908bb62201032c03ab556}\label{classxlnt_1_1column__t_a3893f4ecfad908bb62201032c03ab556}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if other is to the left of or equal to this column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a985aeb3675905115dddddde860807106}\label{classxlnt_1_1column__t_a985aeb3675905115dddddde860807106}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator=@{operator=}}
+\index{operator=@{operator=}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \& xlnt\+::column\+\_\+t\+::operator= (\begin{DoxyParamCaption}\item[{const char $\ast$}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Sets this column to be equal to rhs and return reference to self. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a9a0be009adb1029f5f268d3f75cbc910}\label{classxlnt_1_1column__t_a9a0be009adb1029f5f268d3f75cbc910}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator=@{operator=}}
+\index{operator=@{operator=}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \& xlnt\+::column\+\_\+t\+::operator= (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Sets this column to be equal to rhs and return reference to self. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a0023091df60cb803860be673020ffbdd}\label{classxlnt_1_1column__t_a0023091df60cb803860be673020ffbdd}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator== (\begin{DoxyParamCaption}\item[{const char $\ast$}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this column refers to the same column as other. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_ab774eea0973b113268cd8ba1997138be}\label{classxlnt_1_1column__t_ab774eea0973b113268cd8ba1997138be}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this column refers to the same column as other. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_aed5d29ebaee2f9601f5484e9e8d37959}\label{classxlnt_1_1column__t_aed5d29ebaee2f9601f5484e9e8d37959}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator== (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this column refers to the same column as other. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_af2aba5ed49ce6847c20ff02b0a83e4b5}\label{classxlnt_1_1column__t_af2aba5ed49ce6847c20ff02b0a83e4b5}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{index\+\_\+t}}}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this column refers to the same column as other. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_aa6cafc9b777354926bc174ee4819272f}\label{classxlnt_1_1column__t_aa6cafc9b777354926bc174ee4819272f}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator== (\begin{DoxyParamCaption}\item[{int}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this column refers to the same column as other. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a85a0899a221e2365ca88a649abcb6745}\label{classxlnt_1_1column__t_a85a0899a221e2365ca88a649abcb6745}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if other is to the right of this column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a80bc6e33cb95e0433a5c9eba5bf156d7}\label{classxlnt_1_1column__t_a80bc6e33cb95e0433a5c9eba5bf156d7}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if other is to the right of this column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_aafb675ccfb46a0a83669b70d1b9cefa3}\label{classxlnt_1_1column__t_aafb675ccfb46a0a83669b70d1b9cefa3}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if other is to the right of or equal to this column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_ad655c2a45d3dc7a27b1c1661b7008888}\label{classxlnt_1_1column__t_ad655c2a45d3dc7a27b1c1661b7008888}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool xlnt\+::column\+\_\+t\+::operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if other is to the right of or equal to this column. 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1column__t_a7b3aad4ebc633a0face07b276e6e8ad7}\label{classxlnt_1_1column__t_a7b3aad4ebc633a0face07b276e6e8ad7}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator+@{operator+}}
+\index{operator+@{operator+}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator+}{operator+}}
+{\footnotesize\ttfamily \mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}}]{lhs,  }\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Returns the result of adding rhs to this column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a69295fd4f41af2cbfc5ebbf64cae8b93}\label{classxlnt_1_1column__t_a69295fd4f41af2cbfc5ebbf64cae8b93}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator-\/}{operator-}}
+{\footnotesize\ttfamily \mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} operator-\/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}}]{lhs,  }\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Returns the result of subtracing lhs by rhs column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a7615b1e028e3438734b4901d58efce7a}\label{classxlnt_1_1column__t_a7615b1e028e3438734b4901d58efce7a}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator$<$}{operator<}}
+{\footnotesize\ttfamily \mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&}]{left,  }\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Returns true if other is to the left of this column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a1d1dbc28260dd8f41ca2de30911d1554}\label{classxlnt_1_1column__t_a1d1dbc28260dd8f41ca2de30911d1554}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator$<$=}{operator<=}}
+{\footnotesize\ttfamily \mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&}]{left,  }\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Returns true if other is to the left of or equal to this column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a3ec5e3db3a78b50af9729bf887bd865d}\label{classxlnt_1_1column__t_a3ec5e3db3a78b50af9729bf887bd865d}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator$>$}{operator>}}
+{\footnotesize\ttfamily \mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&}]{left,  }\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Returns true if other is to the right of this column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a13a9ec17fe04c332716907de96c0d909}\label{classxlnt_1_1column__t_a13a9ec17fe04c332716907de96c0d909}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{operator$>$=}{operator>=}}
+{\footnotesize\ttfamily \mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&}]{left,  }\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Returns true if other is to the right of or equal to this column. 
+
+\mbox{\Hypertarget{classxlnt_1_1column__t_a85fb8e50c16ccecffd055a3947905215}\label{classxlnt_1_1column__t_a85fb8e50c16ccecffd055a3947905215}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!swap@{swap}}
+\index{swap@{swap}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{swap}{swap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} void swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{left,  }\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Swaps the columns that left and right refer to. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classxlnt_1_1column__t_a9e53ff3b0e9037c56561bc5e3a5d2f57}\label{classxlnt_1_1column__t_a9e53ff3b0e9037c56561bc5e3a5d2f57}} 
+\index{xlnt::column\_t@{xlnt::column\_t}!index@{index}}
+\index{index@{index}!xlnt::column\_t@{xlnt::column\_t}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{index\+\_\+t}} xlnt\+::column\+\_\+t\+::index}
+
+
+
+Internal numeric value of this column index. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/cell/\mbox{\hyperlink{index__types_8hpp}{index\+\_\+types.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/cell/\mbox{\hyperlink{index__types_8cpp}{index\+\_\+types.\+cpp}}\end{DoxyCompactItemize}

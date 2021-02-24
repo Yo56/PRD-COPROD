@@ -1,0 +1,160 @@
+\hypertarget{structxlnt_1_1time}{}\doxysection{xlnt\+::time Struct Reference}
+\label{structxlnt_1_1time}\index{xlnt::time@{xlnt::time}}
+
+
+A time is a specific time of the day specified in terms of an hour, minute, second, and microsecond (0-\/999999). It can also be initialized as a fraction of a day using \mbox{\hyperlink{structxlnt_1_1time_a57fc697aa54ed9c2efbc39c1a72696ec}{time\+::from\+\_\+number}}.  
+
+
+
+
+{\ttfamily \#include $<$time.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structxlnt_1_1time_a19bf9fcc56c251ad1d01a52a81b6eb3f}{time}} (int hour\+\_\+=0, int minute\+\_\+=0, int second\+\_\+=0, int microsecond\+\_\+=0)
+\begin{DoxyCompactList}\small\item\em Constructs a time object from an optional hour, minute, second, and microsecond. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structxlnt_1_1time_a4bc79bde4f28158bb3945593750eeb5b}{time}} (const std\+::string \&time\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Constructs a time object from a string representing the time. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structxlnt_1_1time_aecffc54d34f56dcdd64cfe6c98ee32c9}{to\+\_\+number}} () const
+\begin{DoxyCompactList}\small\item\em Returns a numeric representation of the time in the range 0-\/1 where the value is equal to the fraction of the day elapsed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structxlnt_1_1time_a88c193b72c44ca004a52f8e0acfcf6ca}{operator==}} (const \mbox{\hyperlink{structxlnt_1_1time}{time}} \&comparand) const
+\begin{DoxyCompactList}\small\item\em Returns true if this time is equivalent to comparand. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structxlnt_1_1time}{time}} \mbox{\hyperlink{structxlnt_1_1time_a08da1d23f01852b0a20a543a99a92f41}{now}} ()
+\begin{DoxyCompactList}\small\item\em Return the current time according to the system time. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structxlnt_1_1time}{time}} \mbox{\hyperlink{structxlnt_1_1time_a57fc697aa54ed9c2efbc39c1a72696ec}{from\+\_\+number}} (double \mbox{\hyperlink{cell__type_8hpp_af31813e2131200936cf54234db95808d}{number}})
+\begin{DoxyCompactList}\small\item\em Return a time from a number representing a fraction of a day. The integer part of number will be ignored. 0.\+5 would return time(12, 0, 0, 0) or noon, halfway through the day. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structxlnt_1_1time_a89ad1dbabe8c2feb3ead88bbc9ac8a05}{hour}}
+\begin{DoxyCompactList}\small\item\em The hour \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structxlnt_1_1time_ad6fe4644a42f276c76be6039cc1ad6fe}{minute}}
+\begin{DoxyCompactList}\small\item\em The minute \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structxlnt_1_1time_aeeb2afa02d19c7afc315322423740a29}{second}}
+\begin{DoxyCompactList}\small\item\em The second \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structxlnt_1_1time_ae81bf67138dce324e5595bcfc99d6afb}{microsecond}}
+\begin{DoxyCompactList}\small\item\em The microsecond \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A time is a specific time of the day specified in terms of an hour, minute, second, and microsecond (0-\/999999). It can also be initialized as a fraction of a day using \mbox{\hyperlink{structxlnt_1_1time_a57fc697aa54ed9c2efbc39c1a72696ec}{time\+::from\+\_\+number}}. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structxlnt_1_1time_a19bf9fcc56c251ad1d01a52a81b6eb3f}\label{structxlnt_1_1time_a19bf9fcc56c251ad1d01a52a81b6eb3f}} 
+\index{xlnt::time@{xlnt::time}!time@{time}}
+\index{time@{time}!xlnt::time@{xlnt::time}}
+\doxysubsubsection{\texorpdfstring{time()}{time()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily xlnt\+::time\+::time (\begin{DoxyParamCaption}\item[{int}]{hour\+\_\+ = {\ttfamily 0},  }\item[{int}]{minute\+\_\+ = {\ttfamily 0},  }\item[{int}]{second\+\_\+ = {\ttfamily 0},  }\item[{int}]{microsecond\+\_\+ = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a time object from an optional hour, minute, second, and microsecond. 
+
+\mbox{\Hypertarget{structxlnt_1_1time_a4bc79bde4f28158bb3945593750eeb5b}\label{structxlnt_1_1time_a4bc79bde4f28158bb3945593750eeb5b}} 
+\index{xlnt::time@{xlnt::time}!time@{time}}
+\index{time@{time}!xlnt::time@{xlnt::time}}
+\doxysubsubsection{\texorpdfstring{time()}{time()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily xlnt\+::time\+::time (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{time\+\_\+string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a time object from a string representing the time. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structxlnt_1_1time_a57fc697aa54ed9c2efbc39c1a72696ec}\label{structxlnt_1_1time_a57fc697aa54ed9c2efbc39c1a72696ec}} 
+\index{xlnt::time@{xlnt::time}!from\_number@{from\_number}}
+\index{from\_number@{from\_number}!xlnt::time@{xlnt::time}}
+\doxysubsubsection{\texorpdfstring{from\_number()}{from\_number()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structxlnt_1_1time}{time}} xlnt\+::time\+::from\+\_\+number (\begin{DoxyParamCaption}\item[{double}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return a time from a number representing a fraction of a day. The integer part of number will be ignored. 0.\+5 would return time(12, 0, 0, 0) or noon, halfway through the day. 
+
+\mbox{\Hypertarget{structxlnt_1_1time_a08da1d23f01852b0a20a543a99a92f41}\label{structxlnt_1_1time_a08da1d23f01852b0a20a543a99a92f41}} 
+\index{xlnt::time@{xlnt::time}!now@{now}}
+\index{now@{now}!xlnt::time@{xlnt::time}}
+\doxysubsubsection{\texorpdfstring{now()}{now()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structxlnt_1_1time}{time}} xlnt\+::time\+::now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the current time according to the system time. 
+
+\mbox{\Hypertarget{structxlnt_1_1time_a88c193b72c44ca004a52f8e0acfcf6ca}\label{structxlnt_1_1time_a88c193b72c44ca004a52f8e0acfcf6ca}} 
+\index{xlnt::time@{xlnt::time}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::time@{xlnt::time}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::time\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1time}{time}} \&}]{comparand }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this time is equivalent to comparand. 
+
+\mbox{\Hypertarget{structxlnt_1_1time_aecffc54d34f56dcdd64cfe6c98ee32c9}\label{structxlnt_1_1time_aecffc54d34f56dcdd64cfe6c98ee32c9}} 
+\index{xlnt::time@{xlnt::time}!to\_number@{to\_number}}
+\index{to\_number@{to\_number}!xlnt::time@{xlnt::time}}
+\doxysubsubsection{\texorpdfstring{to\_number()}{to\_number()}}
+{\footnotesize\ttfamily double xlnt\+::time\+::to\+\_\+number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a numeric representation of the time in the range 0-\/1 where the value is equal to the fraction of the day elapsed. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structxlnt_1_1time_a89ad1dbabe8c2feb3ead88bbc9ac8a05}\label{structxlnt_1_1time_a89ad1dbabe8c2feb3ead88bbc9ac8a05}} 
+\index{xlnt::time@{xlnt::time}!hour@{hour}}
+\index{hour@{hour}!xlnt::time@{xlnt::time}}
+\doxysubsubsection{\texorpdfstring{hour}{hour}}
+{\footnotesize\ttfamily int xlnt\+::time\+::hour}
+
+
+
+The hour 
+
+\mbox{\Hypertarget{structxlnt_1_1time_ae81bf67138dce324e5595bcfc99d6afb}\label{structxlnt_1_1time_ae81bf67138dce324e5595bcfc99d6afb}} 
+\index{xlnt::time@{xlnt::time}!microsecond@{microsecond}}
+\index{microsecond@{microsecond}!xlnt::time@{xlnt::time}}
+\doxysubsubsection{\texorpdfstring{microsecond}{microsecond}}
+{\footnotesize\ttfamily int xlnt\+::time\+::microsecond}
+
+
+
+The microsecond 
+
+\mbox{\Hypertarget{structxlnt_1_1time_ad6fe4644a42f276c76be6039cc1ad6fe}\label{structxlnt_1_1time_ad6fe4644a42f276c76be6039cc1ad6fe}} 
+\index{xlnt::time@{xlnt::time}!minute@{minute}}
+\index{minute@{minute}!xlnt::time@{xlnt::time}}
+\doxysubsubsection{\texorpdfstring{minute}{minute}}
+{\footnotesize\ttfamily int xlnt\+::time\+::minute}
+
+
+
+The minute 
+
+\mbox{\Hypertarget{structxlnt_1_1time_aeeb2afa02d19c7afc315322423740a29}\label{structxlnt_1_1time_aeeb2afa02d19c7afc315322423740a29}} 
+\index{xlnt::time@{xlnt::time}!second@{second}}
+\index{second@{second}!xlnt::time@{xlnt::time}}
+\doxysubsubsection{\texorpdfstring{second}{second}}
+{\footnotesize\ttfamily int xlnt\+::time\+::second}
+
+
+
+The second 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/utils/\mbox{\hyperlink{time_8hpp}{time.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/utils/\mbox{\hyperlink{time_8cpp}{time.\+cpp}}\end{DoxyCompactItemize}

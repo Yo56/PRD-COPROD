@@ -1,0 +1,90 @@
+\hypertarget{classunpacking__collector}{}\doxysection{unpacking\+\_\+collector$<$ policy $>$ Class Template Reference}
+\label{classunpacking__collector}\index{unpacking\_collector$<$ policy $>$@{unpacking\_collector$<$ policy $>$}}
+
+
+Helper class which collects positional, keyword, $\ast$ and $\ast$$\ast$ arguments for a Python function call.  
+
+
+
+
+{\ttfamily \#include $<$cast.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Ts$>$ }\\\mbox{\hyperlink{classunpacking__collector_a8cc5fdce9ceb3faf99180e480efa0367}{unpacking\+\_\+collector}} (Ts \&\&...values)
+\item 
+const \mbox{\hyperlink{classtuple}{tuple}} \& \mbox{\hyperlink{classunpacking__collector_a8c2a4543599919b9d8b4c13a5cf6cf02}{args}} () const \&
+\item 
+const \mbox{\hyperlink{classdict}{dict}} \& \mbox{\hyperlink{classunpacking__collector_a14ceb5d3912c58d37b244dd5b7824aad}{kwargs}} () const \&
+\item 
+\mbox{\hyperlink{classtuple}{tuple}} \mbox{\hyperlink{classunpacking__collector_a9905f0fd4b68ab18f9df1fc495f369a9}{args}} () \&\&
+\item 
+\mbox{\hyperlink{classdict}{dict}} \mbox{\hyperlink{classunpacking__collector_ad623100e5a5b6ce8adb01dc8d86e5655}{kwargs}} () \&\&
+\item 
+\mbox{\hyperlink{classobject}{object}} \mbox{\hyperlink{classunpacking__collector_a3df5e4ecbc1a9fd31788c59053444de3}{call}} (Py\+Object $\ast$ptr) const
+\begin{DoxyCompactList}\small\item\em Call a Python function and pass the collected arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$return\+\_\+value\+\_\+policy policy$>$\newline
+class unpacking\+\_\+collector$<$ policy $>$}
+
+Helper class which collects positional, keyword, $\ast$ and $\ast$$\ast$ arguments for a Python function call. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classunpacking__collector_a8cc5fdce9ceb3faf99180e480efa0367}\label{classunpacking__collector_a8cc5fdce9ceb3faf99180e480efa0367}} 
+\index{unpacking\_collector$<$ policy $>$@{unpacking\_collector$<$ policy $>$}!unpacking\_collector@{unpacking\_collector}}
+\index{unpacking\_collector@{unpacking\_collector}!unpacking\_collector$<$ policy $>$@{unpacking\_collector$<$ policy $>$}}
+\doxysubsubsection{\texorpdfstring{unpacking\_collector()}{unpacking\_collector()}}
+{\footnotesize\ttfamily template$<$return\+\_\+value\+\_\+policy policy$>$ \\
+template$<$typename... Ts$>$ \\
+\mbox{\hyperlink{classunpacking__collector}{unpacking\+\_\+collector}}$<$ policy $>$\+::\mbox{\hyperlink{classunpacking__collector}{unpacking\+\_\+collector}} (\begin{DoxyParamCaption}\item[{Ts \&\&...}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classunpacking__collector_a9905f0fd4b68ab18f9df1fc495f369a9}\label{classunpacking__collector_a9905f0fd4b68ab18f9df1fc495f369a9}} 
+\index{unpacking\_collector$<$ policy $>$@{unpacking\_collector$<$ policy $>$}!args@{args}}
+\index{args@{args}!unpacking\_collector$<$ policy $>$@{unpacking\_collector$<$ policy $>$}}
+\doxysubsubsection{\texorpdfstring{args()}{args()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$return\+\_\+value\+\_\+policy policy$>$ \\
+\mbox{\hyperlink{classtuple}{tuple}} \mbox{\hyperlink{classunpacking__collector}{unpacking\+\_\+collector}}$<$ policy $>$\+::\mbox{\hyperlink{classargs}{args}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classunpacking__collector_a8c2a4543599919b9d8b4c13a5cf6cf02}\label{classunpacking__collector_a8c2a4543599919b9d8b4c13a5cf6cf02}} 
+\index{unpacking\_collector$<$ policy $>$@{unpacking\_collector$<$ policy $>$}!args@{args}}
+\index{args@{args}!unpacking\_collector$<$ policy $>$@{unpacking\_collector$<$ policy $>$}}
+\doxysubsubsection{\texorpdfstring{args()}{args()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$return\+\_\+value\+\_\+policy policy$>$ \\
+const \mbox{\hyperlink{classtuple}{tuple}}\& \mbox{\hyperlink{classunpacking__collector}{unpacking\+\_\+collector}}$<$ policy $>$\+::\mbox{\hyperlink{classargs}{args}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classunpacking__collector_a3df5e4ecbc1a9fd31788c59053444de3}\label{classunpacking__collector_a3df5e4ecbc1a9fd31788c59053444de3}} 
+\index{unpacking\_collector$<$ policy $>$@{unpacking\_collector$<$ policy $>$}!call@{call}}
+\index{call@{call}!unpacking\_collector$<$ policy $>$@{unpacking\_collector$<$ policy $>$}}
+\doxysubsubsection{\texorpdfstring{call()}{call()}}
+{\footnotesize\ttfamily template$<$return\+\_\+value\+\_\+policy policy$>$ \\
+\mbox{\hyperlink{classobject}{object}} \mbox{\hyperlink{classunpacking__collector}{unpacking\+\_\+collector}}$<$ policy $>$\+::call (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{ptr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Call a Python function and pass the collected arguments. 
+
+\mbox{\Hypertarget{classunpacking__collector_ad623100e5a5b6ce8adb01dc8d86e5655}\label{classunpacking__collector_ad623100e5a5b6ce8adb01dc8d86e5655}} 
+\index{unpacking\_collector$<$ policy $>$@{unpacking\_collector$<$ policy $>$}!kwargs@{kwargs}}
+\index{kwargs@{kwargs}!unpacking\_collector$<$ policy $>$@{unpacking\_collector$<$ policy $>$}}
+\doxysubsubsection{\texorpdfstring{kwargs()}{kwargs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$return\+\_\+value\+\_\+policy policy$>$ \\
+\mbox{\hyperlink{classdict}{dict}} \mbox{\hyperlink{classunpacking__collector}{unpacking\+\_\+collector}}$<$ policy $>$\+::\mbox{\hyperlink{classkwargs}{kwargs}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classunpacking__collector_a14ceb5d3912c58d37b244dd5b7824aad}\label{classunpacking__collector_a14ceb5d3912c58d37b244dd5b7824aad}} 
+\index{unpacking\_collector$<$ policy $>$@{unpacking\_collector$<$ policy $>$}!kwargs@{kwargs}}
+\index{kwargs@{kwargs}!unpacking\_collector$<$ policy $>$@{unpacking\_collector$<$ policy $>$}}
+\doxysubsubsection{\texorpdfstring{kwargs()}{kwargs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$return\+\_\+value\+\_\+policy policy$>$ \\
+const \mbox{\hyperlink{classdict}{dict}}\& \mbox{\hyperlink{classunpacking__collector}{unpacking\+\_\+collector}}$<$ policy $>$\+::\mbox{\hyperlink{classkwargs}{kwargs}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{cast_8h}{cast.\+h}}\end{DoxyCompactItemize}

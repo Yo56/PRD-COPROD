@@ -1,0 +1,110 @@
+\hypertarget{classxlnt_1_1document__security}{}\doxysection{xlnt\+::document\+\_\+security Class Reference}
+\label{classxlnt_1_1document__security}\index{xlnt::document\_security@{xlnt::document\_security}}
+
+
+Properties governing how the data in a workbook should be protected. These values can be ignored by consumers.  
+
+
+
+
+{\ttfamily \#include $<$document\+\_\+security.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structxlnt_1_1document__security_1_1lock__verifier}{lock\+\_\+verifier}}
+\begin{DoxyCompactList}\small\item\em Holds data describing the verifier that locks revisions or a workbook. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1document__security_a6fa71d4f89db0444ea3405a6e8c69023}{document\+\_\+security}} ()=default
+\begin{DoxyCompactList}\small\item\em Constructs a new document security object with default values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classxlnt_1_1document__security_a920b61bb08cdf7593486ff39f2c3cfda}{lock\+\_\+revision}} = false
+\begin{DoxyCompactList}\small\item\em If true, the workbook is locked for revisions. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1document__security_ac1c0763ee6a7bea7c0b8e5c6a83200d5}{lock\+\_\+structure}} = false
+\begin{DoxyCompactList}\small\item\em If true, worksheets can\textquotesingle{}t be moved, renamed, (un)hidden, inserted, or deleted. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1document__security_a8317718858959a27001d15981d9426e9}{lock\+\_\+windows}} = false
+\begin{DoxyCompactList}\small\item\em If true, workbook windows will be opened at the same position with the same size every time they are loaded. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structxlnt_1_1document__security_1_1lock__verifier}{lock\+\_\+verifier}} \mbox{\hyperlink{classxlnt_1_1document__security_acc7129f16192f6a0e4c9235e7431278d}{revision\+\_\+lock}}
+\begin{DoxyCompactList}\small\item\em The settings to allow the revision lock to be removed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structxlnt_1_1document__security_1_1lock__verifier}{lock\+\_\+verifier}} \mbox{\hyperlink{classxlnt_1_1document__security_a9954138998c28315d3e52805bf766ee0}{workbook\+\_\+lock}}
+\begin{DoxyCompactList}\small\item\em The settings to allow the structure and windows lock to be removed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Properties governing how the data in a workbook should be protected. These values can be ignored by consumers. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1document__security_a6fa71d4f89db0444ea3405a6e8c69023}\label{classxlnt_1_1document__security_a6fa71d4f89db0444ea3405a6e8c69023}} 
+\index{xlnt::document\_security@{xlnt::document\_security}!document\_security@{document\_security}}
+\index{document\_security@{document\_security}!xlnt::document\_security@{xlnt::document\_security}}
+\doxysubsubsection{\texorpdfstring{document\_security()}{document\_security()}}
+{\footnotesize\ttfamily xlnt\+::document\+\_\+security\+::document\+\_\+security (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Constructs a new document security object with default values. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classxlnt_1_1document__security_a920b61bb08cdf7593486ff39f2c3cfda}\label{classxlnt_1_1document__security_a920b61bb08cdf7593486ff39f2c3cfda}} 
+\index{xlnt::document\_security@{xlnt::document\_security}!lock\_revision@{lock\_revision}}
+\index{lock\_revision@{lock\_revision}!xlnt::document\_security@{xlnt::document\_security}}
+\doxysubsubsection{\texorpdfstring{lock\_revision}{lock\_revision}}
+{\footnotesize\ttfamily bool xlnt\+::document\+\_\+security\+::lock\+\_\+revision = false}
+
+
+
+If true, the workbook is locked for revisions. 
+
+\mbox{\Hypertarget{classxlnt_1_1document__security_ac1c0763ee6a7bea7c0b8e5c6a83200d5}\label{classxlnt_1_1document__security_ac1c0763ee6a7bea7c0b8e5c6a83200d5}} 
+\index{xlnt::document\_security@{xlnt::document\_security}!lock\_structure@{lock\_structure}}
+\index{lock\_structure@{lock\_structure}!xlnt::document\_security@{xlnt::document\_security}}
+\doxysubsubsection{\texorpdfstring{lock\_structure}{lock\_structure}}
+{\footnotesize\ttfamily bool xlnt\+::document\+\_\+security\+::lock\+\_\+structure = false}
+
+
+
+If true, worksheets can\textquotesingle{}t be moved, renamed, (un)hidden, inserted, or deleted. 
+
+\mbox{\Hypertarget{classxlnt_1_1document__security_a8317718858959a27001d15981d9426e9}\label{classxlnt_1_1document__security_a8317718858959a27001d15981d9426e9}} 
+\index{xlnt::document\_security@{xlnt::document\_security}!lock\_windows@{lock\_windows}}
+\index{lock\_windows@{lock\_windows}!xlnt::document\_security@{xlnt::document\_security}}
+\doxysubsubsection{\texorpdfstring{lock\_windows}{lock\_windows}}
+{\footnotesize\ttfamily bool xlnt\+::document\+\_\+security\+::lock\+\_\+windows = false}
+
+
+
+If true, workbook windows will be opened at the same position with the same size every time they are loaded. 
+
+\mbox{\Hypertarget{classxlnt_1_1document__security_acc7129f16192f6a0e4c9235e7431278d}\label{classxlnt_1_1document__security_acc7129f16192f6a0e4c9235e7431278d}} 
+\index{xlnt::document\_security@{xlnt::document\_security}!revision\_lock@{revision\_lock}}
+\index{revision\_lock@{revision\_lock}!xlnt::document\_security@{xlnt::document\_security}}
+\doxysubsubsection{\texorpdfstring{revision\_lock}{revision\_lock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structxlnt_1_1document__security_1_1lock__verifier}{lock\+\_\+verifier}} xlnt\+::document\+\_\+security\+::revision\+\_\+lock}
+
+
+
+The settings to allow the revision lock to be removed. 
+
+\mbox{\Hypertarget{classxlnt_1_1document__security_a9954138998c28315d3e52805bf766ee0}\label{classxlnt_1_1document__security_a9954138998c28315d3e52805bf766ee0}} 
+\index{xlnt::document\_security@{xlnt::document\_security}!workbook\_lock@{workbook\_lock}}
+\index{workbook\_lock@{workbook\_lock}!xlnt::document\_security@{xlnt::document\_security}}
+\doxysubsubsection{\texorpdfstring{workbook\_lock}{workbook\_lock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structxlnt_1_1document__security_1_1lock__verifier}{lock\+\_\+verifier}} xlnt\+::document\+\_\+security\+::workbook\+\_\+lock}
+
+
+
+The settings to allow the structure and windows lock to be removed. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/workbook/\mbox{\hyperlink{document__security_8hpp}{document\+\_\+security.\+hpp}}\end{DoxyCompactItemize}

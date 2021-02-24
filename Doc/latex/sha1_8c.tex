@@ -1,0 +1,141 @@
+\hypertarget{sha1_8c}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.5.0/source/detail/cryptography/sha1.c File Reference}
+\label{sha1_8c}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/source/detail/cryptography/sha1.c@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/source/detail/cryptography/sha1.c}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sha1_8c_af931bf11c41af34dde1b90f1b26488f6}{ROTL32}}(x,  n)~(((0U + (x)) $<$$<$ (n)) $\vert$ ((x) $>$$>$ (32 -\/ (n))))
+\item 
+\#define \mbox{\hyperlink{sha1_8c_aa4a3bbd99055fbdbeec131f7fe960a32}{LOADSCHEDULE}}(i)
+\item 
+\#define \mbox{\hyperlink{sha1_8c_ada36ce93dcb64a0dcf52a3563f6b5787}{SCHEDULE}}(i)
+\item 
+\#define \mbox{\hyperlink{sha1_8c_a29ac91c24a693a25249f94df7b988f2e}{ROUND0a}}(a,  b,  c,  d,  e,  i)~\mbox{\hyperlink{sha512_8c_aa4a3bbd99055fbdbeec131f7fe960a32}{LOADSCHEDULE}}(i)  \mbox{\hyperlink{sha1_8c_a9038d2aa2fd3d02aa3684c0128d462d0}{ROUNDTAIL}}(a, b, e, ((b \& c) $\vert$ ($\sim$b \& d))         , i, 0x5\+A827999)
+\item 
+\#define \mbox{\hyperlink{sha1_8c_a2c6787077c14575f56f1c82a4822e056}{ROUND0b}}(a,  b,  c,  d,  e,  i)~\mbox{\hyperlink{sha512_8c_ada36ce93dcb64a0dcf52a3563f6b5787}{SCHEDULE}}(i)      \mbox{\hyperlink{sha1_8c_a9038d2aa2fd3d02aa3684c0128d462d0}{ROUNDTAIL}}(a, b, e, ((b \& c) $\vert$ ($\sim$b \& d))         , i, 0x5\+A827999)
+\item 
+\#define \mbox{\hyperlink{sha1_8c_ab2181da50c6e0560f52a4cf740360369}{ROUND1}}(a,  b,  c,  d,  e,  i)~\mbox{\hyperlink{sha512_8c_ada36ce93dcb64a0dcf52a3563f6b5787}{SCHEDULE}}(i)      \mbox{\hyperlink{sha1_8c_a9038d2aa2fd3d02aa3684c0128d462d0}{ROUNDTAIL}}(a, b, e, (b $^\wedge$ c $^\wedge$ d)                  , i, 0x6\+ED9\+EBA1)
+\item 
+\#define \mbox{\hyperlink{sha1_8c_aa252ff1effd941bdc5f296709052e343}{ROUND2}}(a,  b,  c,  d,  e,  i)~\mbox{\hyperlink{sha512_8c_ada36ce93dcb64a0dcf52a3563f6b5787}{SCHEDULE}}(i)      \mbox{\hyperlink{sha1_8c_a9038d2aa2fd3d02aa3684c0128d462d0}{ROUNDTAIL}}(a, b, e, ((b \& c) $^\wedge$ (b \& d) $^\wedge$ (c \& d)), i, 0x8\+F1\+BBCDC)
+\item 
+\#define \mbox{\hyperlink{sha1_8c_ac4410c3b2686243b9019d2b2bc205e54}{ROUND3}}(a,  b,  c,  d,  e,  i)~\mbox{\hyperlink{sha512_8c_ada36ce93dcb64a0dcf52a3563f6b5787}{SCHEDULE}}(i)      \mbox{\hyperlink{sha1_8c_a9038d2aa2fd3d02aa3684c0128d462d0}{ROUNDTAIL}}(a, b, e, (b $^\wedge$ c $^\wedge$ d)                  , i, 0x\+CA62\+C1\+D6)
+\item 
+\#define \mbox{\hyperlink{sha1_8c_a9038d2aa2fd3d02aa3684c0128d462d0}{ROUNDTAIL}}(a,  b,  e,  f,  i,  k)
+\item 
+\#define \mbox{\hyperlink{sha1_8c_ad51ded0bbd705f02f73fc60c0b721ced}{BLOCK\+\_\+\+SIZE}}~64
+\item 
+\#define \mbox{\hyperlink{sha1_8c_a4cf85b81fbffdd226a7c53c9556461f2}{LENGTH\+\_\+\+SIZE}}~8
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sha1_8c_a77e3526841583856d9307bf89c597050}{sha1\+\_\+compress}} (uint32\+\_\+t \mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}}\mbox{[}5\mbox{]}, const uint8\+\_\+t \mbox{\hyperlink{structblock}{block}}\mbox{[}64\mbox{]})
+\item 
+void \mbox{\hyperlink{sha1_8c_ab158a9af37f9cd293125d79ab0e23509}{sha1\+\_\+hash}} (const uint8\+\_\+t $\ast$message, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} \mbox{\hyperlink{group__python__builtins_gaeff368081ac50b8fe2cc0230d96e3acb}{len}}, uint32\+\_\+t hash\mbox{[}5\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sha1_8c_ad51ded0bbd705f02f73fc60c0b721ced}\label{sha1_8c_ad51ded0bbd705f02f73fc60c0b721ced}} 
+\index{sha1.c@{sha1.c}!BLOCK\_SIZE@{BLOCK\_SIZE}}
+\index{BLOCK\_SIZE@{BLOCK\_SIZE}!sha1.c@{sha1.c}}
+\doxysubsubsection{\texorpdfstring{BLOCK\_SIZE}{BLOCK\_SIZE}}
+{\footnotesize\ttfamily \#define BLOCK\+\_\+\+SIZE~64}
+
+\mbox{\Hypertarget{sha1_8c_a4cf85b81fbffdd226a7c53c9556461f2}\label{sha1_8c_a4cf85b81fbffdd226a7c53c9556461f2}} 
+\index{sha1.c@{sha1.c}!LENGTH\_SIZE@{LENGTH\_SIZE}}
+\index{LENGTH\_SIZE@{LENGTH\_SIZE}!sha1.c@{sha1.c}}
+\doxysubsubsection{\texorpdfstring{LENGTH\_SIZE}{LENGTH\_SIZE}}
+{\footnotesize\ttfamily \#define LENGTH\+\_\+\+SIZE~8}
+
+\mbox{\Hypertarget{sha1_8c_aa4a3bbd99055fbdbeec131f7fe960a32}\label{sha1_8c_aa4a3bbd99055fbdbeec131f7fe960a32}} 
+\index{sha1.c@{sha1.c}!LOADSCHEDULE@{LOADSCHEDULE}}
+\index{LOADSCHEDULE@{LOADSCHEDULE}!sha1.c@{sha1.c}}
+\doxysubsubsection{\texorpdfstring{LOADSCHEDULE}{LOADSCHEDULE}}
+{\footnotesize\ttfamily \#define LOADSCHEDULE(\begin{DoxyParamCaption}\item[{}]{i }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        schedule[i] = (\mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{uint32\_t}})\mbox{\hyperlink{structblock}{block}}[i * 4 + 0] << 24  \(\backslash\)}
+\DoxyCodeLine{                    | (\mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{uint32\_t}})\mbox{\hyperlink{structblock}{block}}[i * 4 + 1] << 16  \(\backslash\)}
+\DoxyCodeLine{                    | (\mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{uint32\_t}})\mbox{\hyperlink{structblock}{block}}[i * 4 + 2] <<  8  \(\backslash\)}
+\DoxyCodeLine{                    | (\mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{uint32\_t}})\mbox{\hyperlink{structblock}{block}}[i * 4 + 3] <<  0;}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{sha1_8c_af931bf11c41af34dde1b90f1b26488f6}\label{sha1_8c_af931bf11c41af34dde1b90f1b26488f6}} 
+\index{sha1.c@{sha1.c}!ROTL32@{ROTL32}}
+\index{ROTL32@{ROTL32}!sha1.c@{sha1.c}}
+\doxysubsubsection{\texorpdfstring{ROTL32}{ROTL32}}
+{\footnotesize\ttfamily \#define ROTL32(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{n }\end{DoxyParamCaption})~(((0U + (x)) $<$$<$ (n)) $\vert$ ((x) $>$$>$ (32 -\/ (n))))}
+
+\mbox{\Hypertarget{sha1_8c_a29ac91c24a693a25249f94df7b988f2e}\label{sha1_8c_a29ac91c24a693a25249f94df7b988f2e}} 
+\index{sha1.c@{sha1.c}!ROUND0a@{ROUND0a}}
+\index{ROUND0a@{ROUND0a}!sha1.c@{sha1.c}}
+\doxysubsubsection{\texorpdfstring{ROUND0a}{ROUND0a}}
+{\footnotesize\ttfamily \#define ROUND0a(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{c,  }\item[{}]{d,  }\item[{}]{e,  }\item[{}]{i }\end{DoxyParamCaption})~\mbox{\hyperlink{sha512_8c_aa4a3bbd99055fbdbeec131f7fe960a32}{LOADSCHEDULE}}(i)  \mbox{\hyperlink{sha1_8c_a9038d2aa2fd3d02aa3684c0128d462d0}{ROUNDTAIL}}(a, b, e, ((b \& c) $\vert$ ($\sim$b \& d))         , i, 0x5\+A827999)}
+
+\mbox{\Hypertarget{sha1_8c_a2c6787077c14575f56f1c82a4822e056}\label{sha1_8c_a2c6787077c14575f56f1c82a4822e056}} 
+\index{sha1.c@{sha1.c}!ROUND0b@{ROUND0b}}
+\index{ROUND0b@{ROUND0b}!sha1.c@{sha1.c}}
+\doxysubsubsection{\texorpdfstring{ROUND0b}{ROUND0b}}
+{\footnotesize\ttfamily \#define ROUND0b(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{c,  }\item[{}]{d,  }\item[{}]{e,  }\item[{}]{i }\end{DoxyParamCaption})~\mbox{\hyperlink{sha512_8c_ada36ce93dcb64a0dcf52a3563f6b5787}{SCHEDULE}}(i)      \mbox{\hyperlink{sha1_8c_a9038d2aa2fd3d02aa3684c0128d462d0}{ROUNDTAIL}}(a, b, e, ((b \& c) $\vert$ ($\sim$b \& d))         , i, 0x5\+A827999)}
+
+\mbox{\Hypertarget{sha1_8c_ab2181da50c6e0560f52a4cf740360369}\label{sha1_8c_ab2181da50c6e0560f52a4cf740360369}} 
+\index{sha1.c@{sha1.c}!ROUND1@{ROUND1}}
+\index{ROUND1@{ROUND1}!sha1.c@{sha1.c}}
+\doxysubsubsection{\texorpdfstring{ROUND1}{ROUND1}}
+{\footnotesize\ttfamily \#define ROUND1(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{c,  }\item[{}]{d,  }\item[{}]{e,  }\item[{}]{i }\end{DoxyParamCaption})~\mbox{\hyperlink{sha512_8c_ada36ce93dcb64a0dcf52a3563f6b5787}{SCHEDULE}}(i)      \mbox{\hyperlink{sha1_8c_a9038d2aa2fd3d02aa3684c0128d462d0}{ROUNDTAIL}}(a, b, e, (b $^\wedge$ c $^\wedge$ d)                  , i, 0x6\+ED9\+EBA1)}
+
+\mbox{\Hypertarget{sha1_8c_aa252ff1effd941bdc5f296709052e343}\label{sha1_8c_aa252ff1effd941bdc5f296709052e343}} 
+\index{sha1.c@{sha1.c}!ROUND2@{ROUND2}}
+\index{ROUND2@{ROUND2}!sha1.c@{sha1.c}}
+\doxysubsubsection{\texorpdfstring{ROUND2}{ROUND2}}
+{\footnotesize\ttfamily \#define ROUND2(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{c,  }\item[{}]{d,  }\item[{}]{e,  }\item[{}]{i }\end{DoxyParamCaption})~\mbox{\hyperlink{sha512_8c_ada36ce93dcb64a0dcf52a3563f6b5787}{SCHEDULE}}(i)      \mbox{\hyperlink{sha1_8c_a9038d2aa2fd3d02aa3684c0128d462d0}{ROUNDTAIL}}(a, b, e, ((b \& c) $^\wedge$ (b \& d) $^\wedge$ (c \& d)), i, 0x8\+F1\+BBCDC)}
+
+\mbox{\Hypertarget{sha1_8c_ac4410c3b2686243b9019d2b2bc205e54}\label{sha1_8c_ac4410c3b2686243b9019d2b2bc205e54}} 
+\index{sha1.c@{sha1.c}!ROUND3@{ROUND3}}
+\index{ROUND3@{ROUND3}!sha1.c@{sha1.c}}
+\doxysubsubsection{\texorpdfstring{ROUND3}{ROUND3}}
+{\footnotesize\ttfamily \#define ROUND3(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{c,  }\item[{}]{d,  }\item[{}]{e,  }\item[{}]{i }\end{DoxyParamCaption})~\mbox{\hyperlink{sha512_8c_ada36ce93dcb64a0dcf52a3563f6b5787}{SCHEDULE}}(i)      \mbox{\hyperlink{sha1_8c_a9038d2aa2fd3d02aa3684c0128d462d0}{ROUNDTAIL}}(a, b, e, (b $^\wedge$ c $^\wedge$ d)                  , i, 0x\+CA62\+C1\+D6)}
+
+\mbox{\Hypertarget{sha1_8c_a9038d2aa2fd3d02aa3684c0128d462d0}\label{sha1_8c_a9038d2aa2fd3d02aa3684c0128d462d0}} 
+\index{sha1.c@{sha1.c}!ROUNDTAIL@{ROUNDTAIL}}
+\index{ROUNDTAIL@{ROUNDTAIL}!sha1.c@{sha1.c}}
+\doxysubsubsection{\texorpdfstring{ROUNDTAIL}{ROUNDTAIL}}
+{\footnotesize\ttfamily \#define ROUNDTAIL(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{e,  }\item[{}]{f,  }\item[{}]{i,  }\item[{}]{k }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        e = 0U + e + \mbox{\hyperlink{sha1_8c_af931bf11c41af34dde1b90f1b26488f6}{ROTL32}}(a, 5) + f + UINT32\_C(k) + schedule[i \& 0xF];  \(\backslash\)}
+\DoxyCodeLine{        b = \mbox{\hyperlink{sha1_8c_af931bf11c41af34dde1b90f1b26488f6}{ROTL32}}(b, 30);}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{sha1_8c_ada36ce93dcb64a0dcf52a3563f6b5787}\label{sha1_8c_ada36ce93dcb64a0dcf52a3563f6b5787}} 
+\index{sha1.c@{sha1.c}!SCHEDULE@{SCHEDULE}}
+\index{SCHEDULE@{SCHEDULE}!sha1.c@{sha1.c}}
+\doxysubsubsection{\texorpdfstring{SCHEDULE}{SCHEDULE}}
+{\footnotesize\ttfamily \#define SCHEDULE(\begin{DoxyParamCaption}\item[{}]{i }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        temp = schedule[(i -\/ 3) \& 0xF] \string^ schedule[(i -\/ 8) \& 0xF] \string^ schedule[(i -\/ 14) \& 0xF] \string^ schedule[(i -\/ 16) \& 0xF];  \(\backslash\)}
+\DoxyCodeLine{        schedule[i \& 0xF] = \mbox{\hyperlink{sha1_8c_af931bf11c41af34dde1b90f1b26488f6}{ROTL32}}(temp, 1);}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sha1_8c_a77e3526841583856d9307bf89c597050}\label{sha1_8c_a77e3526841583856d9307bf89c597050}} 
+\index{sha1.c@{sha1.c}!sha1\_compress@{sha1\_compress}}
+\index{sha1\_compress@{sha1\_compress}!sha1.c@{sha1.c}}
+\doxysubsubsection{\texorpdfstring{sha1\_compress()}{sha1\_compress()}}
+{\footnotesize\ttfamily void sha1\+\_\+compress (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{state\mbox{[}5\mbox{]},  }\item[{const uint8\+\_\+t}]{block\mbox{[}64\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sha1_8c_ab158a9af37f9cd293125d79ab0e23509}\label{sha1_8c_ab158a9af37f9cd293125d79ab0e23509}} 
+\index{sha1.c@{sha1.c}!sha1\_hash@{sha1\_hash}}
+\index{sha1\_hash@{sha1\_hash}!sha1.c@{sha1.c}}
+\doxysubsubsection{\texorpdfstring{sha1\_hash()}{sha1\_hash()}}
+{\footnotesize\ttfamily void sha1\+\_\+hash (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}}}]{len,  }\item[{uint32\+\_\+t}]{hash\mbox{[}5\mbox{]} }\end{DoxyParamCaption})}
+

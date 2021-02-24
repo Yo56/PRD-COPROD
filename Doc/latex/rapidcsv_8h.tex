@@ -1,0 +1,38 @@
+\hypertarget{rapidcsv_8h}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/rapidcsv.h File Reference}
+\label{rapidcsv_8h}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/rapidcsv.h@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/rapidcsv.h}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$typeinfo$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrapidcsv_1_1_converter_params}{rapidcsv\+::\+Converter\+Params}}
+\begin{DoxyCompactList}\small\item\em Datastructure holding parameters controlling how invalid numbers (including empty strings) should be handled. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrapidcsv_1_1no__converter}{rapidcsv\+::no\+\_\+converter}}
+\begin{DoxyCompactList}\small\item\em Exception thrown when attempting to access \mbox{\hyperlink{classrapidcsv_1_1_document}{Document}} data in a datatype which is not supported by the \mbox{\hyperlink{classrapidcsv_1_1_converter}{Converter}} class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrapidcsv_1_1_converter}{rapidcsv\+::\+Converter$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Class providing conversion to/from numerical datatypes and strings. Only intended for rapidcsv internal usage, but exposed externally to allow specialization for custom datatype conversions. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrapidcsv_1_1_label_params}{rapidcsv\+::\+Label\+Params}}
+\begin{DoxyCompactList}\small\item\em Datastructure holding parameters controlling which row and column should be treated as labels. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrapidcsv_1_1_separator_params}{rapidcsv\+::\+Separator\+Params}}
+\begin{DoxyCompactList}\small\item\em Datastructure holding parameters controlling how the CSV data fields are separated. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classrapidcsv_1_1_document}{rapidcsv\+::\+Document}}
+\begin{DoxyCompactList}\small\item\em Class representing a CSV document. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerapidcsv}{rapidcsv}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespacerapidcsv_a5322d7b37e7e9580d68775714e0dff10}{rapidcsv\+::\+Conv\+Func}} = std\+::function$<$ void(const std\+::string \&p\+Str, T \&p\+Val)$>$
+\end{DoxyCompactItemize}

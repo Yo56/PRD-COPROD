@@ -1,0 +1,550 @@
+\hypertarget{classxlnt_1_1number__format}{}\doxysection{xlnt\+::number\+\_\+format Class Reference}
+\label{classxlnt_1_1number__format}\index{xlnt::number\_format@{xlnt::number\_format}}
+
+
+Describes the number formatting applied to text and numbers within a certain cell.  
+
+
+
+
+{\ttfamily \#include $<$number\+\_\+format.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1number__format_a2af3586d8f1d5156771562da790346d3}{number\+\_\+format}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a default \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} equivalent to \char`\"{}\+General\char`\"{} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1number__format_a325c0a9528a07762a6996c1dfe8edfcd}{number\+\_\+format}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} builtin\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Constructs a number format equivalent to that returned from number\+\_\+format\+::from\+\_\+builtin\+\_\+id(builtin\+\_\+id). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1number__format_a61b2937320e1957c7d9ff25b0f72cda6}{number\+\_\+format}} (const std\+::string \&code)
+\begin{DoxyCompactList}\small\item\em Constructs a number format from a code string. If the string matches a builtin ID, its ID will also be set to match the builtin ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1number__format_a84615e37d75fb43b1fc47c991134e351}{number\+\_\+format}} (const std\+::string \&code, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} custom\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Constructs a number format from a code string and custom ID. Custom ID should generally be $>$= 164. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1number__format_a9a81df42719198e2693a214be89d2718}{format\+\_\+string}} (const std\+::string \&format\+\_\+code)
+\begin{DoxyCompactList}\small\item\em Sets the format code of this number format to format\+\_\+code. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1number__format_a3019523e5c92279ab303c351433e57d6}{format\+\_\+string}} (const std\+::string \&format\+\_\+code, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} custom\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Sets the format code of this number format to format\+\_\+code and the ID to custom\+\_\+id. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1number__format_a936df793569ba6833825d016c539b18a}{format\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Returns the format code this number format uses. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1number__format_a09ee801ca6589c36c08ea648ababce63}{has\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this number format has an ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1number__format_ad2123a9cb95255606e56efcaf039b5a3}{id}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} id)
+\begin{DoxyCompactList}\small\item\em Sets the ID of this number format to id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1number__format_aef03101e88db7c53159b6b17f51d4d78}{id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the ID of this format. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1number__format_a311c393ee708876673c3ada232a68b67}{format}} (const std\+::string \&\mbox{\hyperlink{classxlnt_1_1number__format_a57c7cda73f4d2dfd0009913360d50e81}{text}}) const
+\begin{DoxyCompactList}\small\item\em Returns text formatted according to this number format\textquotesingle{}s format code. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1number__format_aed9694ab46e4ebfcb3f31b2f9bd9106b}{format}} (double \mbox{\hyperlink{classxlnt_1_1number__format_a0bdf387fa294bd4d8781e59f5f3407aa}{number}}, calendar base\+\_\+date) const
+\begin{DoxyCompactList}\small\item\em Returns number formatted according to this number format\textquotesingle{}s format code with the given base date. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1number__format_af93c7c4db9acaee78fe0866ea1adb3b3}{is\+\_\+date\+\_\+format}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this format code returns a number formatted as a date. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1number__format_aa941a6f733e37e752c8f2b000ad246ce}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this format is equivalent to other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1number__format_a5e0b444cc2b30680dd664e1e9bba9005}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this format is not equivalent to other. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a2e5520da3df25eefa2a14ad0622341df}{general}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}\+General\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a57c7cda73f4d2dfd0009913360d50e81}{text}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}@\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a0bdf387fa294bd4d8781e59f5f3407aa}{number}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}0\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a1b84095576ec8285aa4be8e2e2c27c6f}{number\+\_\+00}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}00\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a6f4bebc2cb3228d4510dd8e49ac12cc7}{number\+\_\+comma\+\_\+separated1}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}\#,\#\#0.\+00\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a58d6ee69884870f8cd5a63a2e760f3bf}{percentage}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}0\%\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_ae2f6dbeb86b29dc777cdd191bbb63942}{percentage\+\_\+00}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}0.\+00\%\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a5469bbfa9dbbe9b700de35f174ccef6e}{date\+\_\+yyyymmdd2}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}yyyy-\/mm-\/dd\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a3440a45a7796dd337105c16e8d844c0e}{date\+\_\+yymmdd}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}yy-\/mm-\/dd\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_ae4df0884a89566b2cedcd5fc404f5497}{date\+\_\+ddmmyyyy}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}dd/mm/yy\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a77eeecf69cd0871d4ccb187a1a2f89de}{date\+\_\+dmyslash}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}d/m/yy\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_af87f91f67f84d553013d390c064710e5}{date\+\_\+dmyminus}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}d-\/m-\/yy\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_af66f71c7346373747370f36496f17e1e}{date\+\_\+dmminus}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}d-\/m\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a14467bdfd0112831ddebf926d10e36fb}{date\+\_\+myminus}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}m-\/yy\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a5ec5c90f13069123151e3118c4f2a980}{date\+\_\+xlsx14}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}mm-\/dd-\/yy\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_aa8e7fa7fa360f12d576370bebe7b081f}{date\+\_\+xlsx15}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}d-\/mmm-\/yy\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a11ad7e990c32a75e4fbbde344e01dbd6}{date\+\_\+xlsx16}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}d-\/mmm\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a7a4cb460a1e834f780d4e981dfcd86aa}{date\+\_\+xlsx17}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}mmm-\/yy\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_acd526123760a435feb755c5a84723d6b}{date\+\_\+xlsx22}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}m/d/yy h\+:mm\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_aeebd5264f548789947f7e1ccb6634c83}{date\+\_\+datetime}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}yyyy-\/mm-\/dd h\+:mm\+:ss\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a63dae09bca55e24e8a67f97476cad8ae}{date\+\_\+time1}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}h\+:mm AM/\+PM\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_afeb4e4d39e0bef1568f132bc66e34dc0}{date\+\_\+time2}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}h\+:mm\+:ss AM/\+PM\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a366bd2634560142073ca20064f8fe57b}{date\+\_\+time3}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}h\+:mm\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a9b67db9c3f0c5c0c1bb2985fb1bd6dd9}{date\+\_\+time4}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}h\+:mm\+:ss\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_af619dfe9353c845db9308bdf03befc41}{date\+\_\+time5}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}mm\+:ss\char`\"{} \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a0798a642d9a55168eea75f36f9acceab}{date\+\_\+time6}} ()
+\begin{DoxyCompactList}\small\item\em Number format \char`\"{}h\+:mm\+:ss\char`\"{} \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classxlnt_1_1number__format_af8f99f061ec62916951e85100d76497c}{is\+\_\+builtin\+\_\+format}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} builtin\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Returns true if the given format ID corresponds to a known builtin format. \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \& \mbox{\hyperlink{classxlnt_1_1number__format_aee2d3b2bcf6257ca05616a7de2132649}{from\+\_\+builtin\+\_\+id}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} builtin\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Returns the format with the given ID. Thows an \mbox{\hyperlink{classxlnt_1_1invalid__parameter}{invalid\+\_\+parameter}} exception if builtin\+\_\+id is not a valid ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Describes the number formatting applied to text and numbers within a certain cell. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1number__format_a2af3586d8f1d5156771562da790346d3}\label{classxlnt_1_1number__format_a2af3586d8f1d5156771562da790346d3}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!number\_format@{number\_format}}
+\index{number\_format@{number\_format}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{number\_format()}{number\_format()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily xlnt\+::number\+\_\+format\+::number\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a default \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} equivalent to \char`\"{}\+General\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a325c0a9528a07762a6996c1dfe8edfcd}\label{classxlnt_1_1number__format_a325c0a9528a07762a6996c1dfe8edfcd}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!number\_format@{number\_format}}
+\index{number\_format@{number\_format}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{number\_format()}{number\_format()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily xlnt\+::number\+\_\+format\+::number\+\_\+format (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{builtin\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Constructs a number format equivalent to that returned from number\+\_\+format\+::from\+\_\+builtin\+\_\+id(builtin\+\_\+id). 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a61b2937320e1957c7d9ff25b0f72cda6}\label{classxlnt_1_1number__format_a61b2937320e1957c7d9ff25b0f72cda6}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!number\_format@{number\_format}}
+\index{number\_format@{number\_format}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{number\_format()}{number\_format()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily xlnt\+::number\+\_\+format\+::number\+\_\+format (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{code }\end{DoxyParamCaption})}
+
+
+
+Constructs a number format from a code string. If the string matches a builtin ID, its ID will also be set to match the builtin ID. 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a84615e37d75fb43b1fc47c991134e351}\label{classxlnt_1_1number__format_a84615e37d75fb43b1fc47c991134e351}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!number\_format@{number\_format}}
+\index{number\_format@{number\_format}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{number\_format()}{number\_format()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily xlnt\+::number\+\_\+format\+::number\+\_\+format (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{code,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{custom\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Constructs a number format from a code string and custom ID. Custom ID should generally be $>$= 164. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1number__format_aeebd5264f548789947f7e1ccb6634c83}\label{classxlnt_1_1number__format_aeebd5264f548789947f7e1ccb6634c83}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_datetime@{date\_datetime}}
+\index{date\_datetime@{date\_datetime}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_datetime()}{date\_datetime()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+datetime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}yyyy-\/mm-\/dd h\+:mm\+:ss\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_ae4df0884a89566b2cedcd5fc404f5497}\label{classxlnt_1_1number__format_ae4df0884a89566b2cedcd5fc404f5497}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_ddmmyyyy@{date\_ddmmyyyy}}
+\index{date\_ddmmyyyy@{date\_ddmmyyyy}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_ddmmyyyy()}{date\_ddmmyyyy()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+ddmmyyyy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}dd/mm/yy\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_af66f71c7346373747370f36496f17e1e}\label{classxlnt_1_1number__format_af66f71c7346373747370f36496f17e1e}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_dmminus@{date\_dmminus}}
+\index{date\_dmminus@{date\_dmminus}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_dmminus()}{date\_dmminus()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+dmminus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}d-\/m\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_af87f91f67f84d553013d390c064710e5}\label{classxlnt_1_1number__format_af87f91f67f84d553013d390c064710e5}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_dmyminus@{date\_dmyminus}}
+\index{date\_dmyminus@{date\_dmyminus}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_dmyminus()}{date\_dmyminus()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+dmyminus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}d-\/m-\/yy\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a77eeecf69cd0871d4ccb187a1a2f89de}\label{classxlnt_1_1number__format_a77eeecf69cd0871d4ccb187a1a2f89de}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_dmyslash@{date\_dmyslash}}
+\index{date\_dmyslash@{date\_dmyslash}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_dmyslash()}{date\_dmyslash()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+dmyslash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}d/m/yy\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a14467bdfd0112831ddebf926d10e36fb}\label{classxlnt_1_1number__format_a14467bdfd0112831ddebf926d10e36fb}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_myminus@{date\_myminus}}
+\index{date\_myminus@{date\_myminus}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_myminus()}{date\_myminus()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+myminus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}m-\/yy\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a63dae09bca55e24e8a67f97476cad8ae}\label{classxlnt_1_1number__format_a63dae09bca55e24e8a67f97476cad8ae}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_time1@{date\_time1}}
+\index{date\_time1@{date\_time1}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_time1()}{date\_time1()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+time1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}h\+:mm AM/\+PM\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_afeb4e4d39e0bef1568f132bc66e34dc0}\label{classxlnt_1_1number__format_afeb4e4d39e0bef1568f132bc66e34dc0}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_time2@{date\_time2}}
+\index{date\_time2@{date\_time2}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_time2()}{date\_time2()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+time2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}h\+:mm\+:ss AM/\+PM\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a366bd2634560142073ca20064f8fe57b}\label{classxlnt_1_1number__format_a366bd2634560142073ca20064f8fe57b}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_time3@{date\_time3}}
+\index{date\_time3@{date\_time3}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_time3()}{date\_time3()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+time3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}h\+:mm\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a9b67db9c3f0c5c0c1bb2985fb1bd6dd9}\label{classxlnt_1_1number__format_a9b67db9c3f0c5c0c1bb2985fb1bd6dd9}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_time4@{date\_time4}}
+\index{date\_time4@{date\_time4}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_time4()}{date\_time4()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+time4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}h\+:mm\+:ss\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_af619dfe9353c845db9308bdf03befc41}\label{classxlnt_1_1number__format_af619dfe9353c845db9308bdf03befc41}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_time5@{date\_time5}}
+\index{date\_time5@{date\_time5}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_time5()}{date\_time5()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+time5 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}mm\+:ss\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a0798a642d9a55168eea75f36f9acceab}\label{classxlnt_1_1number__format_a0798a642d9a55168eea75f36f9acceab}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_time6@{date\_time6}}
+\index{date\_time6@{date\_time6}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_time6()}{date\_time6()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+time6 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}h\+:mm\+:ss\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a5ec5c90f13069123151e3118c4f2a980}\label{classxlnt_1_1number__format_a5ec5c90f13069123151e3118c4f2a980}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_xlsx14@{date\_xlsx14}}
+\index{date\_xlsx14@{date\_xlsx14}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_xlsx14()}{date\_xlsx14()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+xlsx14 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}mm-\/dd-\/yy\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_aa8e7fa7fa360f12d576370bebe7b081f}\label{classxlnt_1_1number__format_aa8e7fa7fa360f12d576370bebe7b081f}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_xlsx15@{date\_xlsx15}}
+\index{date\_xlsx15@{date\_xlsx15}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_xlsx15()}{date\_xlsx15()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+xlsx15 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}d-\/mmm-\/yy\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a11ad7e990c32a75e4fbbde344e01dbd6}\label{classxlnt_1_1number__format_a11ad7e990c32a75e4fbbde344e01dbd6}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_xlsx16@{date\_xlsx16}}
+\index{date\_xlsx16@{date\_xlsx16}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_xlsx16()}{date\_xlsx16()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+xlsx16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}d-\/mmm\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a7a4cb460a1e834f780d4e981dfcd86aa}\label{classxlnt_1_1number__format_a7a4cb460a1e834f780d4e981dfcd86aa}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_xlsx17@{date\_xlsx17}}
+\index{date\_xlsx17@{date\_xlsx17}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_xlsx17()}{date\_xlsx17()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+xlsx17 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}mmm-\/yy\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_acd526123760a435feb755c5a84723d6b}\label{classxlnt_1_1number__format_acd526123760a435feb755c5a84723d6b}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_xlsx22@{date\_xlsx22}}
+\index{date\_xlsx22@{date\_xlsx22}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_xlsx22()}{date\_xlsx22()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+xlsx22 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}m/d/yy h\+:mm\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a3440a45a7796dd337105c16e8d844c0e}\label{classxlnt_1_1number__format_a3440a45a7796dd337105c16e8d844c0e}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_yymmdd@{date\_yymmdd}}
+\index{date\_yymmdd@{date\_yymmdd}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_yymmdd()}{date\_yymmdd()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+yymmdd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}yy-\/mm-\/dd\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a5469bbfa9dbbe9b700de35f174ccef6e}\label{classxlnt_1_1number__format_a5469bbfa9dbbe9b700de35f174ccef6e}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!date\_yyyymmdd2@{date\_yyyymmdd2}}
+\index{date\_yyyymmdd2@{date\_yyyymmdd2}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{date\_yyyymmdd2()}{date\_yyyymmdd2()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::date\+\_\+yyyymmdd2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}yyyy-\/mm-\/dd\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a311c393ee708876673c3ada232a68b67}\label{classxlnt_1_1number__format_a311c393ee708876673c3ada232a68b67}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!format@{format}}
+\index{format@{format}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string xlnt\+::number\+\_\+format\+::format (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption}) const}
+
+
+
+Returns text formatted according to this number format\textquotesingle{}s format code. 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_aed9694ab46e4ebfcb3f31b2f9bd9106b}\label{classxlnt_1_1number__format_aed9694ab46e4ebfcb3f31b2f9bd9106b}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!format@{format}}
+\index{format@{format}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string xlnt\+::number\+\_\+format\+::format (\begin{DoxyParamCaption}\item[{double}]{number,  }\item[{calendar}]{base\+\_\+date }\end{DoxyParamCaption}) const}
+
+
+
+Returns number formatted according to this number format\textquotesingle{}s format code with the given base date. 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a936df793569ba6833825d016c539b18a}\label{classxlnt_1_1number__format_a936df793569ba6833825d016c539b18a}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!format\_string@{format\_string}}
+\index{format\_string@{format\_string}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{format\_string()}{format\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::string xlnt\+::number\+\_\+format\+::format\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the format code this number format uses. 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a9a81df42719198e2693a214be89d2718}\label{classxlnt_1_1number__format_a9a81df42719198e2693a214be89d2718}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!format\_string@{format\_string}}
+\index{format\_string@{format\_string}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{format\_string()}{format\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void xlnt\+::number\+\_\+format\+::format\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{format\+\_\+code }\end{DoxyParamCaption})}
+
+
+
+Sets the format code of this number format to format\+\_\+code. 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a3019523e5c92279ab303c351433e57d6}\label{classxlnt_1_1number__format_a3019523e5c92279ab303c351433e57d6}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!format\_string@{format\_string}}
+\index{format\_string@{format\_string}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{format\_string()}{format\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void xlnt\+::number\+\_\+format\+::format\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{format\+\_\+code,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{custom\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Sets the format code of this number format to format\+\_\+code and the ID to custom\+\_\+id. 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_aee2d3b2bcf6257ca05616a7de2132649}\label{classxlnt_1_1number__format_aee2d3b2bcf6257ca05616a7de2132649}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!from\_builtin\_id@{from\_builtin\_id}}
+\index{from\_builtin\_id@{from\_builtin\_id}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{from\_builtin\_id()}{from\_builtin\_id()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \& xlnt\+::number\+\_\+format\+::from\+\_\+builtin\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{builtin\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the format with the given ID. Thows an \mbox{\hyperlink{classxlnt_1_1invalid__parameter}{invalid\+\_\+parameter}} exception if builtin\+\_\+id is not a valid ID. 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a2e5520da3df25eefa2a14ad0622341df}\label{classxlnt_1_1number__format_a2e5520da3df25eefa2a14ad0622341df}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!general@{general}}
+\index{general@{general}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{general()}{general()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::general (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}\+General\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a09ee801ca6589c36c08ea648ababce63}\label{classxlnt_1_1number__format_a09ee801ca6589c36c08ea648ababce63}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!has\_id@{has\_id}}
+\index{has\_id@{has\_id}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{has\_id()}{has\_id()}}
+{\footnotesize\ttfamily bool xlnt\+::number\+\_\+format\+::has\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this number format has an ID. 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_aef03101e88db7c53159b6b17f51d4d78}\label{classxlnt_1_1number__format_aef03101e88db7c53159b6b17f51d4d78}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!id@{id}}
+\index{id@{id}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::number\+\_\+format\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the ID of this format. 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_ad2123a9cb95255606e56efcaf039b5a3}\label{classxlnt_1_1number__format_ad2123a9cb95255606e56efcaf039b5a3}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!id@{id}}
+\index{id@{id}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::number\+\_\+format\+::id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Sets the ID of this number format to id. 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_af8f99f061ec62916951e85100d76497c}\label{classxlnt_1_1number__format_af8f99f061ec62916951e85100d76497c}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!is\_builtin\_format@{is\_builtin\_format}}
+\index{is\_builtin\_format@{is\_builtin\_format}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{is\_builtin\_format()}{is\_builtin\_format()}}
+{\footnotesize\ttfamily bool xlnt\+::number\+\_\+format\+::is\+\_\+builtin\+\_\+format (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{builtin\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns true if the given format ID corresponds to a known builtin format. 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_af93c7c4db9acaee78fe0866ea1adb3b3}\label{classxlnt_1_1number__format_af93c7c4db9acaee78fe0866ea1adb3b3}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!is\_date\_format@{is\_date\_format}}
+\index{is\_date\_format@{is\_date\_format}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{is\_date\_format()}{is\_date\_format()}}
+{\footnotesize\ttfamily bool xlnt\+::number\+\_\+format\+::is\+\_\+date\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this format code returns a number formatted as a date. 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a0bdf387fa294bd4d8781e59f5f3407aa}\label{classxlnt_1_1number__format_a0bdf387fa294bd4d8781e59f5f3407aa}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!number@{number}}
+\index{number@{number}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{number()}{number()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}0\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a1b84095576ec8285aa4be8e2e2c27c6f}\label{classxlnt_1_1number__format_a1b84095576ec8285aa4be8e2e2c27c6f}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!number\_00@{number\_00}}
+\index{number\_00@{number\_00}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{number\_00()}{number\_00()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::number\+\_\+00 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}00\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a6f4bebc2cb3228d4510dd8e49ac12cc7}\label{classxlnt_1_1number__format_a6f4bebc2cb3228d4510dd8e49ac12cc7}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!number\_comma\_separated1@{number\_comma\_separated1}}
+\index{number\_comma\_separated1@{number\_comma\_separated1}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{number\_comma\_separated1()}{number\_comma\_separated1()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::number\+\_\+comma\+\_\+separated1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}\#,\#\#0.\+00\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a5e0b444cc2b30680dd664e1e9bba9005}\label{classxlnt_1_1number__format_a5e0b444cc2b30680dd664e1e9bba9005}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool xlnt\+::number\+\_\+format\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this format is not equivalent to other. 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_aa941a6f733e37e752c8f2b000ad246ce}\label{classxlnt_1_1number__format_aa941a6f733e37e752c8f2b000ad246ce}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::number\+\_\+format\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this format is equivalent to other. 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a58d6ee69884870f8cd5a63a2e760f3bf}\label{classxlnt_1_1number__format_a58d6ee69884870f8cd5a63a2e760f3bf}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!percentage@{percentage}}
+\index{percentage@{percentage}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{percentage()}{percentage()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::percentage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}0\%\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_ae2f6dbeb86b29dc777cdd191bbb63942}\label{classxlnt_1_1number__format_ae2f6dbeb86b29dc777cdd191bbb63942}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!percentage\_00@{percentage\_00}}
+\index{percentage\_00@{percentage\_00}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{percentage\_00()}{percentage\_00()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::percentage\+\_\+00 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}0.\+00\%\char`\"{} 
+
+\mbox{\Hypertarget{classxlnt_1_1number__format_a57c7cda73f4d2dfd0009913360d50e81}\label{classxlnt_1_1number__format_a57c7cda73f4d2dfd0009913360d50e81}} 
+\index{xlnt::number\_format@{xlnt::number\_format}!text@{text}}
+\index{text@{text}!xlnt::number\_format@{xlnt::number\_format}}
+\doxysubsubsection{\texorpdfstring{text()}{text()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::number\+\_\+format\+::text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Number format \char`\"{}@\char`\"{} 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/styles/\mbox{\hyperlink{number__format_8hpp}{number\+\_\+format.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/styles/\mbox{\hyperlink{number__format_8cpp}{number\+\_\+format.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,771 @@
+\hypertarget{xmltok_8h}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/xmltok.h File Reference}
+\label{xmltok_8h}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/xmltok.h@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/xmltok.h}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structposition}{position}}
+\item 
+struct \mbox{\hyperlink{struct_a_t_t_r_i_b_u_t_e}{ATTRIBUTE}}
+\item 
+struct \mbox{\hyperlink{structencoding}{encoding}}
+\item 
+struct \mbox{\hyperlink{struct_i_n_i_t___e_n_c_o_d_i_n_g}{INIT\+\_\+\+ENCODING}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_abf7ec5f4bd9e9cef232dafa767f04bce}{XML\+\_\+\+TOK\+\_\+\+TRAILING\+\_\+\+RSQB}}
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_ae7e1bec48067fc1eb0f6e0c698774178}{XML\+\_\+\+TOK\+\_\+\+NONE}}~-\/4          /$\ast$ The string to be scanned is \mbox{\hyperlink{cell__type_8hpp_a7d665d9fa18a26df451d111b34afd89f}{empty}} $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_af1c37f43365bc2d8b3032ed0eee5bde5}{XML\+\_\+\+TOK\+\_\+\+TRAILING\+\_\+\+CR}}
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a41a5e653a58517c8b6a466b389766995}{XML\+\_\+\+TOK\+\_\+\+PARTIAL\+\_\+\+CHAR}}~-\/2  /$\ast$ only part of a multibyte \mbox{\hyperlink{classsequence}{sequence}} $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a9a7922389e85b2c2fa93f3641d354bd9}{XML\+\_\+\+TOK\+\_\+\+PARTIAL}}~-\/1       /$\ast$ only part of a token $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_aee1e4d85cea344c2714103f9eda99ecf}{XML\+\_\+\+TOK\+\_\+\+INVALID}}~0
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a9b81ba9f75c91dc994c6df29f25f778a}{XML\+\_\+\+TOK\+\_\+\+START\+\_\+\+TAG\+\_\+\+WITH\+\_\+\+ATTS}}~1
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_ae71b8d0f22fd36f466384ee700378e75}{XML\+\_\+\+TOK\+\_\+\+START\+\_\+\+TAG\+\_\+\+NO\+\_\+\+ATTS}}~2
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_aba4a115b8570e03bac402258ed3c1a68}{XML\+\_\+\+TOK\+\_\+\+EMPTY\+\_\+\+ELEMENT\+\_\+\+WITH\+\_\+\+ATTS}}~3 /$\ast$ \mbox{\hyperlink{cell__type_8hpp_a7d665d9fa18a26df451d111b34afd89f}{empty}} element \mbox{\hyperlink{structtag}{tag}} $<$e/$>$ $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a4ed8594361ac9d7630cb28ec40999bc7}{XML\+\_\+\+TOK\+\_\+\+EMPTY\+\_\+\+ELEMENT\+\_\+\+NO\+\_\+\+ATTS}}~4
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a711a275047a0174598b9494e77e8c050}{XML\+\_\+\+TOK\+\_\+\+END\+\_\+\+TAG}}~5
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_aa7822fe0055f36488e298587a4eb3ae6}{XML\+\_\+\+TOK\+\_\+\+DATA\+\_\+\+CHARS}}~6
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a6a8daa94ccaada0b1801b0a138d6dc22}{XML\+\_\+\+TOK\+\_\+\+DATA\+\_\+\+NEWLINE}}~7
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_af74377673d82d61a9e054bbb5b0e2b03}{XML\+\_\+\+TOK\+\_\+\+CDATA\+\_\+\+SECT\+\_\+\+OPEN}}~8
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a57c5b5461cd4428f56d177f8d2b7dc93}{XML\+\_\+\+TOK\+\_\+\+ENTITY\+\_\+\+REF}}~9
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a208b2f07998408ffac71c3c42e627487}{XML\+\_\+\+TOK\+\_\+\+CHAR\+\_\+\+REF}}~10               /$\ast$ numeric character reference $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a296cfc009c93a7439090afe445f39b24}{XML\+\_\+\+TOK\+\_\+\+PI}}~11                     /$\ast$ processing instruction $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a9133bd5d1523d522b59c35e3e5db7c97}{XML\+\_\+\+TOK\+\_\+\+XML\+\_\+\+DECL}}~12               /$\ast$ XML decl or text decl $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a7418cdd8400bffbbab6c91750b5fd4c0}{XML\+\_\+\+TOK\+\_\+\+COMMENT}}~13
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_afc08ba6ab1f33a9382cf313ea32786e3}{XML\+\_\+\+TOK\+\_\+\+BOM}}~14                    /$\ast$ \mbox{\hyperlink{miniz_8h_ae3a497195d617519e5353ea7b417940f}{Byte}} order mark $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a919f2ff8a2170e8ba113d79b89da6830}{XML\+\_\+\+TOK\+\_\+\+PROLOG\+\_\+S}}~15
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a14b5a53e38b3ae1debf0e2d35953a539}{XML\+\_\+\+TOK\+\_\+\+DECL\+\_\+\+OPEN}}~16              /$\ast$ $<$!foo $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a6f023bf109b19991f0e11916c9cd9278}{XML\+\_\+\+TOK\+\_\+\+DECL\+\_\+\+CLOSE}}~17             /$\ast$ $>$ $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a0b695d4629eb9d679f48791de09c4337}{XML\+\_\+\+TOK\+\_\+\+NAME}}~18
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a4279c93f430158a83af1d85e8fa7bc3d}{XML\+\_\+\+TOK\+\_\+\+NMTOKEN}}~19
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_aaddf76ac034c29257e6a8b4981306530}{XML\+\_\+\+TOK\+\_\+\+POUND\+\_\+\+NAME}}~20             /$\ast$ \#\mbox{\hyperlink{structname}{name}} $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_ac819ea12d022ff454b4a0f5a7d1163e6}{XML\+\_\+\+TOK\+\_\+\+OR}}~21                     /$\ast$ $\vert$ $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_abd67bad50fb1b7e76e0e8db88a4f56b5}{XML\+\_\+\+TOK\+\_\+\+PERCENT}}~22
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a1dc9c15b38d35857be0614378e05f0c5}{XML\+\_\+\+TOK\+\_\+\+OPEN\+\_\+\+PAREN}}~23
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a5a0b33434e7aa64ba0f594bea7c5de63}{XML\+\_\+\+TOK\+\_\+\+CLOSE\+\_\+\+PAREN}}~24
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a36c9557301de44cbb1243d88ef5c067c}{XML\+\_\+\+TOK\+\_\+\+OPEN\+\_\+\+BRACKET}}~25
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_ab60a8a3b384cf565a4b080c686662d14}{XML\+\_\+\+TOK\+\_\+\+CLOSE\+\_\+\+BRACKET}}~26
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_adb01696f22eda844986c64c8549503be}{XML\+\_\+\+TOK\+\_\+\+LITERAL}}~27
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_ab18b08de6516ad084269e27e1b527f9d}{XML\+\_\+\+TOK\+\_\+\+PARAM\+\_\+\+ENTITY\+\_\+\+REF}}~28
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_af75d9807105db140bb33af3dca1dd8ee}{XML\+\_\+\+TOK\+\_\+\+INSTANCE\+\_\+\+START}}~29
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a7bef439c012a10efc74b3d0e62f9542a}{XML\+\_\+\+TOK\+\_\+\+NAME\+\_\+\+QUESTION}}~30          /$\ast$ \mbox{\hyperlink{structname}{name}}? $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a5de7f8be5e35eee24475501c62824eb7}{XML\+\_\+\+TOK\+\_\+\+NAME\+\_\+\+ASTERISK}}~31          /$\ast$ \mbox{\hyperlink{structname}{name}}$\ast$ $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a7af5b6ca4db1bf91b0f1862cddad78bc}{XML\+\_\+\+TOK\+\_\+\+NAME\+\_\+\+PLUS}}~32              /$\ast$ \mbox{\hyperlink{structname}{name}}+ $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_aaaaa6569c66e56f9ad44ed0d7e5b3064}{XML\+\_\+\+TOK\+\_\+\+COND\+\_\+\+SECT\+\_\+\+OPEN}}~33         /$\ast$ $<$!\mbox{[} $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a8d74cb69f486ffcbe26149183c94f47d}{XML\+\_\+\+TOK\+\_\+\+COND\+\_\+\+SECT\+\_\+\+CLOSE}}~34        /$\ast$ \mbox{]}\mbox{]}$>$ $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_afbf1a0bf10bbe6fdca2d0a9c3baed0e4}{XML\+\_\+\+TOK\+\_\+\+CLOSE\+\_\+\+PAREN\+\_\+\+QUESTION}}~35   /$\ast$ )? $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a0d6aa9264d011d8617aad74993f36c20}{XML\+\_\+\+TOK\+\_\+\+CLOSE\+\_\+\+PAREN\+\_\+\+ASTERISK}}~36   /$\ast$ )$\ast$ $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a4cc9031e96500d6dc24ee611892f5019}{XML\+\_\+\+TOK\+\_\+\+CLOSE\+\_\+\+PAREN\+\_\+\+PLUS}}~37       /$\ast$ )+ $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_acad4675ddf25a322f54f1e8ad2559b9d}{XML\+\_\+\+TOK\+\_\+\+COMMA}}~38
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_ad3300d7abc893ea2f70c9a3bfe6a0764}{XML\+\_\+\+TOK\+\_\+\+ATTRIBUTE\+\_\+\+VALUE\+\_\+S}}~39
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a9c5ca6e3a5aa0b7dcbaaa41be571a734}{XML\+\_\+\+TOK\+\_\+\+CDATA\+\_\+\+SECT\+\_\+\+CLOSE}}~40
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a18eba5abe613dc17a5351d81cb3ecdc6}{XML\+\_\+\+TOK\+\_\+\+PREFIXED\+\_\+\+NAME}}~41
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a716387e9cc55410d572b202955d926ba}{XML\+\_\+\+N\+\_\+\+STATES}}~3
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_ab5d1d624b4c8265073d712b388a1f218}{XML\+\_\+\+PROLOG\+\_\+\+STATE}}~0
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a286768b60261f6abe90b4b17c2e98f00}{XML\+\_\+\+CONTENT\+\_\+\+STATE}}~1
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a156ecfeae5f40c2b8dbfc38e230794b6}{XML\+\_\+\+CDATA\+\_\+\+SECTION\+\_\+\+STATE}}~2
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a26a75ee24f173c281d20b247603b1f24}{XML\+\_\+\+N\+\_\+\+LITERAL\+\_\+\+TYPES}}~2
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a00e3276ed5472dc3648fd910cfc71d7c}{XML\+\_\+\+ATTRIBUTE\+\_\+\+VALUE\+\_\+\+LITERAL}}~0
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a817209e2f639ddeeb7fc34ce06776024}{XML\+\_\+\+ENTITY\+\_\+\+VALUE\+\_\+\+LITERAL}}~1
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a8fefe7b18536c40a32b581a2f40aa2fe}{XML\+\_\+\+UTF8\+\_\+\+ENCODE\+\_\+\+MAX}}~4
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a2782ea94dc173be2426c0106900f73b9}{XML\+\_\+\+UTF16\+\_\+\+ENCODE\+\_\+\+MAX}}~2
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_aeea3db72246c2b1a44e1247062ba1645}{Xml\+Tok}}(enc,  \mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}},  ptr,  \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  next\+Tok\+Ptr)~  (((enc)-\/$>$scanners\mbox{[}\mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}}\mbox{]})(enc, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, next\+Tok\+Ptr))
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a95dc5b9041a662c1b2297e71112ccffd}{Xml\+Prolog\+Tok}}(enc,  ptr,  \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  next\+Tok\+Ptr)~   \mbox{\hyperlink{xmltok_8h_aeea3db72246c2b1a44e1247062ba1645}{Xml\+Tok}}(enc, \mbox{\hyperlink{xmltok_8h_ab5d1d624b4c8265073d712b388a1f218}{XML\+\_\+\+PROLOG\+\_\+\+STATE}}, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, next\+Tok\+Ptr)
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a585c062a5cb678af310ba02ae689bcb7}{Xml\+Content\+Tok}}(enc,  ptr,  \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  next\+Tok\+Ptr)~   \mbox{\hyperlink{xmltok_8h_aeea3db72246c2b1a44e1247062ba1645}{Xml\+Tok}}(enc, \mbox{\hyperlink{xmltok_8h_a286768b60261f6abe90b4b17c2e98f00}{XML\+\_\+\+CONTENT\+\_\+\+STATE}}, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, next\+Tok\+Ptr)
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a20940deaf1a78db30c77647ebbf3bb37}{Xml\+Cdata\+Section\+Tok}}(enc,  ptr,  \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  next\+Tok\+Ptr)~   \mbox{\hyperlink{xmltok_8h_aeea3db72246c2b1a44e1247062ba1645}{Xml\+Tok}}(enc, \mbox{\hyperlink{xmltok_8h_a156ecfeae5f40c2b8dbfc38e230794b6}{XML\+\_\+\+CDATA\+\_\+\+SECTION\+\_\+\+STATE}}, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, next\+Tok\+Ptr)
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_aa82e22155adcef408a0d52c2e673e5fe}{Xml\+Literal\+Tok}}(enc,  literal\+Type,  ptr,  \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  next\+Tok\+Ptr)~  (((enc)-\/$>$literal\+Scanners\mbox{[}literal\+Type\mbox{]})(enc, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, next\+Tok\+Ptr))
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_ae523fd1d41331e9e3e1d3978205c6ebe}{Xml\+Attribute\+Value\+Tok}}(enc,  ptr,  \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  next\+Tok\+Ptr)~   \mbox{\hyperlink{xmltok_8h_aa82e22155adcef408a0d52c2e673e5fe}{Xml\+Literal\+Tok}}(enc, \mbox{\hyperlink{xmltok_8h_a00e3276ed5472dc3648fd910cfc71d7c}{XML\+\_\+\+ATTRIBUTE\+\_\+\+VALUE\+\_\+\+LITERAL}}, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, next\+Tok\+Ptr)
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a4d7b144430ffa80c0f5611db860154e2}{Xml\+Entity\+Value\+Tok}}(enc,  ptr,  \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  next\+Tok\+Ptr)~   \mbox{\hyperlink{xmltok_8h_aa82e22155adcef408a0d52c2e673e5fe}{Xml\+Literal\+Tok}}(enc, \mbox{\hyperlink{xmltok_8h_a817209e2f639ddeeb7fc34ce06776024}{XML\+\_\+\+ENTITY\+\_\+\+VALUE\+\_\+\+LITERAL}}, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, next\+Tok\+Ptr)
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_ab8bf85725c50ffeb527d3eb96cc9bc49}{Xml\+Same\+Name}}(enc,  ptr1,  ptr2)~(((enc)-\/$>$same\+Name)(enc, ptr1, ptr2))
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_ac2c80c413865548d9640ede78d9b684a}{Xml\+Name\+Matches\+Ascii}}(enc,  ptr1,  end1,  ptr2)~  (((enc)-\/$>$name\+Matches\+Ascii)(enc, ptr1, end1, ptr2))
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a2f485908164f077787f48b3eb6ecc387}{Xml\+Name\+Length}}(enc,  ptr)~  (((enc)-\/$>$name\+Length)(enc, ptr))
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_aeb75680dbd23df91fc2816540099a5df}{Xml\+SkipS}}(enc,  ptr)~  (((enc)-\/$>$skipS)(enc, ptr))
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a0254b9d9a2b83ccc146f96ba1a2bdc66}{Xml\+Get\+Attributes}}(enc,  ptr,  atts\+Max,  \mbox{\hyperlink{xmlparse_8c_a5bbadff5cdbbd3feb492c555b546a292}{atts}})~  (((enc)-\/$>$get\+Atts)(enc, ptr, atts\+Max, \mbox{\hyperlink{xmlparse_8c_a5bbadff5cdbbd3feb492c555b546a292}{atts}}))
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_ac15894c527aabfbe79ecc5256e824e9e}{Xml\+Char\+Ref\+Number}}(enc,  ptr)~  (((enc)-\/$>$char\+Ref\+Number)(enc, ptr))
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_ac767b382ac53162cdfa33a3d67042dbe}{Xml\+Predefined\+Entity\+Name}}(enc,  ptr,  \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}})~  (((enc)-\/$>$predefined\+Entity\+Name)(enc, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}))
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_afe872cfddf5afb0650d38d093d8b5500}{Xml\+Update\+Position}}(enc,  ptr,  \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  pos)~  (((enc)-\/$>$update\+Position)(enc, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, pos))
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a97a6cc4d7e2ccf079e21abb4810c9ae4}{Xml\+Is\+Public\+Id}}(enc,  ptr,  \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  bad\+Ptr)~  (((enc)-\/$>$is\+Public\+Id)(enc, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, bad\+Ptr))
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_a2b4273f95ae9afa03fd097aaa807be9e}{Xml\+Utf8\+Convert}}(enc,  fromP,  from\+Lim,  toP,  to\+Lim)~  (((enc)-\/$>$utf8\+Convert)(enc, fromP, from\+Lim, toP, to\+Lim))
+\item 
+\#define \mbox{\hyperlink{xmltok_8h_acbfdedc19e4a6ef4eb5b6a7d26bc7a70}{Xml\+Utf16\+Convert}}(enc,  fromP,  from\+Lim,  toP,  to\+Lim)~  (((enc)-\/$>$utf16\+Convert)(enc, fromP, from\+Lim, toP, to\+Lim))
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structposition}{position}} \mbox{\hyperlink{xmltok_8h_a78fe67d81ceb88ace3799c5279f7b2a6}{POSITION}}
+\item 
+typedef struct \mbox{\hyperlink{structencoding}{encoding}} \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}}
+\item 
+typedef int(\mbox{\hyperlink{internal_8h_af44f68911377fd55f6e1588b0c89b3e5}{PTRCALL}} $\ast$ \mbox{\hyperlink{xmltok_8h_a64a2a69dc8f54087bbb1bd09bf66f720}{SCANNER}}) (const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$, const char $\ast$, const char $\ast$, const char $\ast$$\ast$)
+\item 
+typedef int(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{xmltok_8h_ac77bae1c0c025a615a2c21e90e3ce5b6}{CONVERTER}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const char $\ast$p)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{xmltok_8h_a10982a55deba3bb46e373700d7a4ec2e}{Xml\+Parse\+Xml\+Decl}} (int is\+General\+Text\+Entity, const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$enc, const char $\ast$ptr, const char $\ast$\mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, const char $\ast$$\ast$bad\+Ptr, const char $\ast$$\ast$version\+Ptr, const char $\ast$$\ast$version\+End\+Ptr, const char $\ast$$\ast$encoding\+Name\+Ptr, const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$$\ast$named\+Encoding\+Ptr, int $\ast$standalone\+Ptr)
+\item 
+int \mbox{\hyperlink{xmltok_8h_a9fa3e317508ec3052e285957e931ae13}{Xml\+Init\+Encoding}} (\mbox{\hyperlink{struct_i_n_i_t___e_n_c_o_d_i_n_g}{INIT\+\_\+\+ENCODING}} $\ast$, const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$$\ast$, const char $\ast$\mbox{\hyperlink{structname}{name}})
+\item 
+const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$ \mbox{\hyperlink{xmltok_8h_a64165f5cd093ceab395d98e0cb80fc3d}{Xml\+Get\+Utf8\+Internal\+Encoding}} (void)
+\item 
+const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$ \mbox{\hyperlink{xmltok_8h_ae6f3b591a76fd87e6c8aa4d71b1aac3d}{Xml\+Get\+Utf16\+Internal\+Encoding}} (void)
+\item 
+int \mbox{\hyperlink{internal_8h_a6f671bc94a3e87fcef3b36ec87d34bff}{FASTCALL}} \mbox{\hyperlink{xmltok_8h_a56e56e234fd330d912619501fcc01054}{Xml\+Utf8\+Encode}} (int char\+Number, char $\ast$buf)
+\item 
+int \mbox{\hyperlink{internal_8h_a6f671bc94a3e87fcef3b36ec87d34bff}{FASTCALL}} \mbox{\hyperlink{xmltok_8h_a502289528ab90639dc8d86376c099e23}{Xml\+Utf16\+Encode}} (int char\+Number, unsigned short $\ast$buf)
+\item 
+int \mbox{\hyperlink{xmltok_8h_a8671b08cbc73ee001e696f02404e878f}{Xml\+Size\+Of\+Unknown\+Encoding}} (void)
+\item 
+\mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$ \mbox{\hyperlink{xmltok_8h_a7bd2980a71390ec11b4039e2f10a41da}{Xml\+Init\+Unknown\+Encoding}} (void $\ast$mem, int $\ast$table, \mbox{\hyperlink{xmltok_8h_ac77bae1c0c025a615a2c21e90e3ce5b6}{CONVERTER}} convert, void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}})
+\item 
+int \mbox{\hyperlink{xmltok_8h_a9c544e6ffe63fce6320cc6b44c2fe4be}{Xml\+Parse\+Xml\+Decl\+NS}} (int is\+General\+Text\+Entity, const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$enc, const char $\ast$ptr, const char $\ast$\mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, const char $\ast$$\ast$bad\+Ptr, const char $\ast$$\ast$version\+Ptr, const char $\ast$$\ast$version\+End\+Ptr, const char $\ast$$\ast$encoding\+Name\+Ptr, const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$$\ast$named\+Encoding\+Ptr, int $\ast$standalone\+Ptr)
+\item 
+int \mbox{\hyperlink{xmltok_8h_a47157662f6df370cdd22bbc16cbae2f5}{Xml\+Init\+Encoding\+NS}} (\mbox{\hyperlink{struct_i_n_i_t___e_n_c_o_d_i_n_g}{INIT\+\_\+\+ENCODING}} $\ast$, const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$$\ast$, const char $\ast$\mbox{\hyperlink{structname}{name}})
+\item 
+const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$ \mbox{\hyperlink{xmltok_8h_a4111b4a4799b494f3f721f5675f0106c}{Xml\+Get\+Utf8\+Internal\+Encoding\+NS}} (void)
+\item 
+const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$ \mbox{\hyperlink{xmltok_8h_ad7d24d3a74b649e041075d39acbad483}{Xml\+Get\+Utf16\+Internal\+Encoding\+NS}} (void)
+\item 
+\mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$ \mbox{\hyperlink{xmltok_8h_aee948c65d72033eb1b3559778c5a0e56}{Xml\+Init\+Unknown\+Encoding\+NS}} (void $\ast$mem, int $\ast$table, \mbox{\hyperlink{xmltok_8h_ac77bae1c0c025a615a2c21e90e3ce5b6}{CONVERTER}} convert, void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{xmltok_8h_a00e3276ed5472dc3648fd910cfc71d7c}\label{xmltok_8h_a00e3276ed5472dc3648fd910cfc71d7c}} 
+\index{xmltok.h@{xmltok.h}!XML\_ATTRIBUTE\_VALUE\_LITERAL@{XML\_ATTRIBUTE\_VALUE\_LITERAL}}
+\index{XML\_ATTRIBUTE\_VALUE\_LITERAL@{XML\_ATTRIBUTE\_VALUE\_LITERAL}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_ATTRIBUTE\_VALUE\_LITERAL}{XML\_ATTRIBUTE\_VALUE\_LITERAL}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+ATTRIBUTE\+\_\+\+VALUE\+\_\+\+LITERAL~0}
+
+\mbox{\Hypertarget{xmltok_8h_a156ecfeae5f40c2b8dbfc38e230794b6}\label{xmltok_8h_a156ecfeae5f40c2b8dbfc38e230794b6}} 
+\index{xmltok.h@{xmltok.h}!XML\_CDATA\_SECTION\_STATE@{XML\_CDATA\_SECTION\_STATE}}
+\index{XML\_CDATA\_SECTION\_STATE@{XML\_CDATA\_SECTION\_STATE}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_CDATA\_SECTION\_STATE}{XML\_CDATA\_SECTION\_STATE}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+CDATA\+\_\+\+SECTION\+\_\+\+STATE~2}
+
+\mbox{\Hypertarget{xmltok_8h_a286768b60261f6abe90b4b17c2e98f00}\label{xmltok_8h_a286768b60261f6abe90b4b17c2e98f00}} 
+\index{xmltok.h@{xmltok.h}!XML\_CONTENT\_STATE@{XML\_CONTENT\_STATE}}
+\index{XML\_CONTENT\_STATE@{XML\_CONTENT\_STATE}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_CONTENT\_STATE}{XML\_CONTENT\_STATE}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+CONTENT\+\_\+\+STATE~1}
+
+\mbox{\Hypertarget{xmltok_8h_a817209e2f639ddeeb7fc34ce06776024}\label{xmltok_8h_a817209e2f639ddeeb7fc34ce06776024}} 
+\index{xmltok.h@{xmltok.h}!XML\_ENTITY\_VALUE\_LITERAL@{XML\_ENTITY\_VALUE\_LITERAL}}
+\index{XML\_ENTITY\_VALUE\_LITERAL@{XML\_ENTITY\_VALUE\_LITERAL}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_ENTITY\_VALUE\_LITERAL}{XML\_ENTITY\_VALUE\_LITERAL}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+ENTITY\+\_\+\+VALUE\+\_\+\+LITERAL~1}
+
+\mbox{\Hypertarget{xmltok_8h_a26a75ee24f173c281d20b247603b1f24}\label{xmltok_8h_a26a75ee24f173c281d20b247603b1f24}} 
+\index{xmltok.h@{xmltok.h}!XML\_N\_LITERAL\_TYPES@{XML\_N\_LITERAL\_TYPES}}
+\index{XML\_N\_LITERAL\_TYPES@{XML\_N\_LITERAL\_TYPES}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_N\_LITERAL\_TYPES}{XML\_N\_LITERAL\_TYPES}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+N\+\_\+\+LITERAL\+\_\+\+TYPES~2}
+
+\mbox{\Hypertarget{xmltok_8h_a716387e9cc55410d572b202955d926ba}\label{xmltok_8h_a716387e9cc55410d572b202955d926ba}} 
+\index{xmltok.h@{xmltok.h}!XML\_N\_STATES@{XML\_N\_STATES}}
+\index{XML\_N\_STATES@{XML\_N\_STATES}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_N\_STATES}{XML\_N\_STATES}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+N\+\_\+\+STATES~3}
+
+\mbox{\Hypertarget{xmltok_8h_ab5d1d624b4c8265073d712b388a1f218}\label{xmltok_8h_ab5d1d624b4c8265073d712b388a1f218}} 
+\index{xmltok.h@{xmltok.h}!XML\_PROLOG\_STATE@{XML\_PROLOG\_STATE}}
+\index{XML\_PROLOG\_STATE@{XML\_PROLOG\_STATE}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_PROLOG\_STATE}{XML\_PROLOG\_STATE}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+PROLOG\+\_\+\+STATE~0}
+
+\mbox{\Hypertarget{xmltok_8h_ad3300d7abc893ea2f70c9a3bfe6a0764}\label{xmltok_8h_ad3300d7abc893ea2f70c9a3bfe6a0764}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_ATTRIBUTE\_VALUE\_S@{XML\_TOK\_ATTRIBUTE\_VALUE\_S}}
+\index{XML\_TOK\_ATTRIBUTE\_VALUE\_S@{XML\_TOK\_ATTRIBUTE\_VALUE\_S}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_ATTRIBUTE\_VALUE\_S}{XML\_TOK\_ATTRIBUTE\_VALUE\_S}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+ATTRIBUTE\+\_\+\+VALUE\+\_\+S~39}
+
+\mbox{\Hypertarget{xmltok_8h_afc08ba6ab1f33a9382cf313ea32786e3}\label{xmltok_8h_afc08ba6ab1f33a9382cf313ea32786e3}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_BOM@{XML\_TOK\_BOM}}
+\index{XML\_TOK\_BOM@{XML\_TOK\_BOM}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_BOM}{XML\_TOK\_BOM}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+BOM~14                    /$\ast$ \mbox{\hyperlink{miniz_8h_ae3a497195d617519e5353ea7b417940f}{Byte}} order mark $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_a9c5ca6e3a5aa0b7dcbaaa41be571a734}\label{xmltok_8h_a9c5ca6e3a5aa0b7dcbaaa41be571a734}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_CDATA\_SECT\_CLOSE@{XML\_TOK\_CDATA\_SECT\_CLOSE}}
+\index{XML\_TOK\_CDATA\_SECT\_CLOSE@{XML\_TOK\_CDATA\_SECT\_CLOSE}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_CDATA\_SECT\_CLOSE}{XML\_TOK\_CDATA\_SECT\_CLOSE}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+CDATA\+\_\+\+SECT\+\_\+\+CLOSE~40}
+
+\mbox{\Hypertarget{xmltok_8h_af74377673d82d61a9e054bbb5b0e2b03}\label{xmltok_8h_af74377673d82d61a9e054bbb5b0e2b03}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_CDATA\_SECT\_OPEN@{XML\_TOK\_CDATA\_SECT\_OPEN}}
+\index{XML\_TOK\_CDATA\_SECT\_OPEN@{XML\_TOK\_CDATA\_SECT\_OPEN}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_CDATA\_SECT\_OPEN}{XML\_TOK\_CDATA\_SECT\_OPEN}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+CDATA\+\_\+\+SECT\+\_\+\+OPEN~8}
+
+\mbox{\Hypertarget{xmltok_8h_a208b2f07998408ffac71c3c42e627487}\label{xmltok_8h_a208b2f07998408ffac71c3c42e627487}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_CHAR\_REF@{XML\_TOK\_CHAR\_REF}}
+\index{XML\_TOK\_CHAR\_REF@{XML\_TOK\_CHAR\_REF}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_CHAR\_REF}{XML\_TOK\_CHAR\_REF}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+CHAR\+\_\+\+REF~10               /$\ast$ numeric character reference $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_ab60a8a3b384cf565a4b080c686662d14}\label{xmltok_8h_ab60a8a3b384cf565a4b080c686662d14}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_CLOSE\_BRACKET@{XML\_TOK\_CLOSE\_BRACKET}}
+\index{XML\_TOK\_CLOSE\_BRACKET@{XML\_TOK\_CLOSE\_BRACKET}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_CLOSE\_BRACKET}{XML\_TOK\_CLOSE\_BRACKET}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+CLOSE\+\_\+\+BRACKET~26}
+
+\mbox{\Hypertarget{xmltok_8h_a5a0b33434e7aa64ba0f594bea7c5de63}\label{xmltok_8h_a5a0b33434e7aa64ba0f594bea7c5de63}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_CLOSE\_PAREN@{XML\_TOK\_CLOSE\_PAREN}}
+\index{XML\_TOK\_CLOSE\_PAREN@{XML\_TOK\_CLOSE\_PAREN}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_CLOSE\_PAREN}{XML\_TOK\_CLOSE\_PAREN}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+CLOSE\+\_\+\+PAREN~24}
+
+\mbox{\Hypertarget{xmltok_8h_a0d6aa9264d011d8617aad74993f36c20}\label{xmltok_8h_a0d6aa9264d011d8617aad74993f36c20}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_CLOSE\_PAREN\_ASTERISK@{XML\_TOK\_CLOSE\_PAREN\_ASTERISK}}
+\index{XML\_TOK\_CLOSE\_PAREN\_ASTERISK@{XML\_TOK\_CLOSE\_PAREN\_ASTERISK}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_CLOSE\_PAREN\_ASTERISK}{XML\_TOK\_CLOSE\_PAREN\_ASTERISK}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+CLOSE\+\_\+\+PAREN\+\_\+\+ASTERISK~36   /$\ast$ )$\ast$ $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_a4cc9031e96500d6dc24ee611892f5019}\label{xmltok_8h_a4cc9031e96500d6dc24ee611892f5019}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_CLOSE\_PAREN\_PLUS@{XML\_TOK\_CLOSE\_PAREN\_PLUS}}
+\index{XML\_TOK\_CLOSE\_PAREN\_PLUS@{XML\_TOK\_CLOSE\_PAREN\_PLUS}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_CLOSE\_PAREN\_PLUS}{XML\_TOK\_CLOSE\_PAREN\_PLUS}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+CLOSE\+\_\+\+PAREN\+\_\+\+PLUS~37       /$\ast$ )+ $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_afbf1a0bf10bbe6fdca2d0a9c3baed0e4}\label{xmltok_8h_afbf1a0bf10bbe6fdca2d0a9c3baed0e4}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_CLOSE\_PAREN\_QUESTION@{XML\_TOK\_CLOSE\_PAREN\_QUESTION}}
+\index{XML\_TOK\_CLOSE\_PAREN\_QUESTION@{XML\_TOK\_CLOSE\_PAREN\_QUESTION}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_CLOSE\_PAREN\_QUESTION}{XML\_TOK\_CLOSE\_PAREN\_QUESTION}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+CLOSE\+\_\+\+PAREN\+\_\+\+QUESTION~35   /$\ast$ )? $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_acad4675ddf25a322f54f1e8ad2559b9d}\label{xmltok_8h_acad4675ddf25a322f54f1e8ad2559b9d}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_COMMA@{XML\_TOK\_COMMA}}
+\index{XML\_TOK\_COMMA@{XML\_TOK\_COMMA}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_COMMA}{XML\_TOK\_COMMA}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+COMMA~38}
+
+\mbox{\Hypertarget{xmltok_8h_a7418cdd8400bffbbab6c91750b5fd4c0}\label{xmltok_8h_a7418cdd8400bffbbab6c91750b5fd4c0}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_COMMENT@{XML\_TOK\_COMMENT}}
+\index{XML\_TOK\_COMMENT@{XML\_TOK\_COMMENT}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_COMMENT}{XML\_TOK\_COMMENT}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+COMMENT~13}
+
+\mbox{\Hypertarget{xmltok_8h_a8d74cb69f486ffcbe26149183c94f47d}\label{xmltok_8h_a8d74cb69f486ffcbe26149183c94f47d}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_COND\_SECT\_CLOSE@{XML\_TOK\_COND\_SECT\_CLOSE}}
+\index{XML\_TOK\_COND\_SECT\_CLOSE@{XML\_TOK\_COND\_SECT\_CLOSE}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_COND\_SECT\_CLOSE}{XML\_TOK\_COND\_SECT\_CLOSE}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+COND\+\_\+\+SECT\+\_\+\+CLOSE~34        /$\ast$ \mbox{]}\mbox{]}$>$ $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_aaaaa6569c66e56f9ad44ed0d7e5b3064}\label{xmltok_8h_aaaaa6569c66e56f9ad44ed0d7e5b3064}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_COND\_SECT\_OPEN@{XML\_TOK\_COND\_SECT\_OPEN}}
+\index{XML\_TOK\_COND\_SECT\_OPEN@{XML\_TOK\_COND\_SECT\_OPEN}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_COND\_SECT\_OPEN}{XML\_TOK\_COND\_SECT\_OPEN}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+COND\+\_\+\+SECT\+\_\+\+OPEN~33         /$\ast$ $<$!\mbox{[} $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_aa7822fe0055f36488e298587a4eb3ae6}\label{xmltok_8h_aa7822fe0055f36488e298587a4eb3ae6}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_DATA\_CHARS@{XML\_TOK\_DATA\_CHARS}}
+\index{XML\_TOK\_DATA\_CHARS@{XML\_TOK\_DATA\_CHARS}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_DATA\_CHARS}{XML\_TOK\_DATA\_CHARS}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+DATA\+\_\+\+CHARS~6}
+
+\mbox{\Hypertarget{xmltok_8h_a6a8daa94ccaada0b1801b0a138d6dc22}\label{xmltok_8h_a6a8daa94ccaada0b1801b0a138d6dc22}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_DATA\_NEWLINE@{XML\_TOK\_DATA\_NEWLINE}}
+\index{XML\_TOK\_DATA\_NEWLINE@{XML\_TOK\_DATA\_NEWLINE}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_DATA\_NEWLINE}{XML\_TOK\_DATA\_NEWLINE}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+DATA\+\_\+\+NEWLINE~7}
+
+\mbox{\Hypertarget{xmltok_8h_a6f023bf109b19991f0e11916c9cd9278}\label{xmltok_8h_a6f023bf109b19991f0e11916c9cd9278}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_DECL\_CLOSE@{XML\_TOK\_DECL\_CLOSE}}
+\index{XML\_TOK\_DECL\_CLOSE@{XML\_TOK\_DECL\_CLOSE}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_DECL\_CLOSE}{XML\_TOK\_DECL\_CLOSE}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+DECL\+\_\+\+CLOSE~17             /$\ast$ $>$ $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_a14b5a53e38b3ae1debf0e2d35953a539}\label{xmltok_8h_a14b5a53e38b3ae1debf0e2d35953a539}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_DECL\_OPEN@{XML\_TOK\_DECL\_OPEN}}
+\index{XML\_TOK\_DECL\_OPEN@{XML\_TOK\_DECL\_OPEN}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_DECL\_OPEN}{XML\_TOK\_DECL\_OPEN}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+DECL\+\_\+\+OPEN~16              /$\ast$ $<$!foo $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_a4ed8594361ac9d7630cb28ec40999bc7}\label{xmltok_8h_a4ed8594361ac9d7630cb28ec40999bc7}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_EMPTY\_ELEMENT\_NO\_ATTS@{XML\_TOK\_EMPTY\_ELEMENT\_NO\_ATTS}}
+\index{XML\_TOK\_EMPTY\_ELEMENT\_NO\_ATTS@{XML\_TOK\_EMPTY\_ELEMENT\_NO\_ATTS}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_EMPTY\_ELEMENT\_NO\_ATTS}{XML\_TOK\_EMPTY\_ELEMENT\_NO\_ATTS}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+EMPTY\+\_\+\+ELEMENT\+\_\+\+NO\+\_\+\+ATTS~4}
+
+\mbox{\Hypertarget{xmltok_8h_aba4a115b8570e03bac402258ed3c1a68}\label{xmltok_8h_aba4a115b8570e03bac402258ed3c1a68}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_EMPTY\_ELEMENT\_WITH\_ATTS@{XML\_TOK\_EMPTY\_ELEMENT\_WITH\_ATTS}}
+\index{XML\_TOK\_EMPTY\_ELEMENT\_WITH\_ATTS@{XML\_TOK\_EMPTY\_ELEMENT\_WITH\_ATTS}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_EMPTY\_ELEMENT\_WITH\_ATTS}{XML\_TOK\_EMPTY\_ELEMENT\_WITH\_ATTS}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+EMPTY\+\_\+\+ELEMENT\+\_\+\+WITH\+\_\+\+ATTS~3 /$\ast$ \mbox{\hyperlink{cell__type_8hpp_a7d665d9fa18a26df451d111b34afd89f}{empty}} element \mbox{\hyperlink{structtag}{tag}} $<$e/$>$ $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_a711a275047a0174598b9494e77e8c050}\label{xmltok_8h_a711a275047a0174598b9494e77e8c050}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_END\_TAG@{XML\_TOK\_END\_TAG}}
+\index{XML\_TOK\_END\_TAG@{XML\_TOK\_END\_TAG}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_END\_TAG}{XML\_TOK\_END\_TAG}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+END\+\_\+\+TAG~5}
+
+\mbox{\Hypertarget{xmltok_8h_a57c5b5461cd4428f56d177f8d2b7dc93}\label{xmltok_8h_a57c5b5461cd4428f56d177f8d2b7dc93}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_ENTITY\_REF@{XML\_TOK\_ENTITY\_REF}}
+\index{XML\_TOK\_ENTITY\_REF@{XML\_TOK\_ENTITY\_REF}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_ENTITY\_REF}{XML\_TOK\_ENTITY\_REF}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+ENTITY\+\_\+\+REF~9}
+
+\mbox{\Hypertarget{xmltok_8h_af75d9807105db140bb33af3dca1dd8ee}\label{xmltok_8h_af75d9807105db140bb33af3dca1dd8ee}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_INSTANCE\_START@{XML\_TOK\_INSTANCE\_START}}
+\index{XML\_TOK\_INSTANCE\_START@{XML\_TOK\_INSTANCE\_START}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_INSTANCE\_START}{XML\_TOK\_INSTANCE\_START}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+INSTANCE\+\_\+\+START~29}
+
+\mbox{\Hypertarget{xmltok_8h_aee1e4d85cea344c2714103f9eda99ecf}\label{xmltok_8h_aee1e4d85cea344c2714103f9eda99ecf}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_INVALID@{XML\_TOK\_INVALID}}
+\index{XML\_TOK\_INVALID@{XML\_TOK\_INVALID}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_INVALID}{XML\_TOK\_INVALID}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+INVALID~0}
+
+\mbox{\Hypertarget{xmltok_8h_adb01696f22eda844986c64c8549503be}\label{xmltok_8h_adb01696f22eda844986c64c8549503be}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_LITERAL@{XML\_TOK\_LITERAL}}
+\index{XML\_TOK\_LITERAL@{XML\_TOK\_LITERAL}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_LITERAL}{XML\_TOK\_LITERAL}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+LITERAL~27}
+
+\mbox{\Hypertarget{xmltok_8h_a0b695d4629eb9d679f48791de09c4337}\label{xmltok_8h_a0b695d4629eb9d679f48791de09c4337}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_NAME@{XML\_TOK\_NAME}}
+\index{XML\_TOK\_NAME@{XML\_TOK\_NAME}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_NAME}{XML\_TOK\_NAME}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+NAME~18}
+
+\mbox{\Hypertarget{xmltok_8h_a5de7f8be5e35eee24475501c62824eb7}\label{xmltok_8h_a5de7f8be5e35eee24475501c62824eb7}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_NAME\_ASTERISK@{XML\_TOK\_NAME\_ASTERISK}}
+\index{XML\_TOK\_NAME\_ASTERISK@{XML\_TOK\_NAME\_ASTERISK}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_NAME\_ASTERISK}{XML\_TOK\_NAME\_ASTERISK}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+NAME\+\_\+\+ASTERISK~31          /$\ast$ \mbox{\hyperlink{structname}{name}}$\ast$ $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_a7af5b6ca4db1bf91b0f1862cddad78bc}\label{xmltok_8h_a7af5b6ca4db1bf91b0f1862cddad78bc}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_NAME\_PLUS@{XML\_TOK\_NAME\_PLUS}}
+\index{XML\_TOK\_NAME\_PLUS@{XML\_TOK\_NAME\_PLUS}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_NAME\_PLUS}{XML\_TOK\_NAME\_PLUS}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+NAME\+\_\+\+PLUS~32              /$\ast$ \mbox{\hyperlink{structname}{name}}+ $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_a7bef439c012a10efc74b3d0e62f9542a}\label{xmltok_8h_a7bef439c012a10efc74b3d0e62f9542a}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_NAME\_QUESTION@{XML\_TOK\_NAME\_QUESTION}}
+\index{XML\_TOK\_NAME\_QUESTION@{XML\_TOK\_NAME\_QUESTION}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_NAME\_QUESTION}{XML\_TOK\_NAME\_QUESTION}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+NAME\+\_\+\+QUESTION~30          /$\ast$ \mbox{\hyperlink{structname}{name}}? $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_a4279c93f430158a83af1d85e8fa7bc3d}\label{xmltok_8h_a4279c93f430158a83af1d85e8fa7bc3d}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_NMTOKEN@{XML\_TOK\_NMTOKEN}}
+\index{XML\_TOK\_NMTOKEN@{XML\_TOK\_NMTOKEN}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_NMTOKEN}{XML\_TOK\_NMTOKEN}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+NMTOKEN~19}
+
+\mbox{\Hypertarget{xmltok_8h_ae7e1bec48067fc1eb0f6e0c698774178}\label{xmltok_8h_ae7e1bec48067fc1eb0f6e0c698774178}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_NONE@{XML\_TOK\_NONE}}
+\index{XML\_TOK\_NONE@{XML\_TOK\_NONE}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_NONE}{XML\_TOK\_NONE}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+NONE~-\/4          /$\ast$ The string to be scanned is \mbox{\hyperlink{cell__type_8hpp_a7d665d9fa18a26df451d111b34afd89f}{empty}} $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_a36c9557301de44cbb1243d88ef5c067c}\label{xmltok_8h_a36c9557301de44cbb1243d88ef5c067c}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_OPEN\_BRACKET@{XML\_TOK\_OPEN\_BRACKET}}
+\index{XML\_TOK\_OPEN\_BRACKET@{XML\_TOK\_OPEN\_BRACKET}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_OPEN\_BRACKET}{XML\_TOK\_OPEN\_BRACKET}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+OPEN\+\_\+\+BRACKET~25}
+
+\mbox{\Hypertarget{xmltok_8h_a1dc9c15b38d35857be0614378e05f0c5}\label{xmltok_8h_a1dc9c15b38d35857be0614378e05f0c5}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_OPEN\_PAREN@{XML\_TOK\_OPEN\_PAREN}}
+\index{XML\_TOK\_OPEN\_PAREN@{XML\_TOK\_OPEN\_PAREN}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_OPEN\_PAREN}{XML\_TOK\_OPEN\_PAREN}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+OPEN\+\_\+\+PAREN~23}
+
+\mbox{\Hypertarget{xmltok_8h_ac819ea12d022ff454b4a0f5a7d1163e6}\label{xmltok_8h_ac819ea12d022ff454b4a0f5a7d1163e6}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_OR@{XML\_TOK\_OR}}
+\index{XML\_TOK\_OR@{XML\_TOK\_OR}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_OR}{XML\_TOK\_OR}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+OR~21                     /$\ast$ $\vert$ $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_ab18b08de6516ad084269e27e1b527f9d}\label{xmltok_8h_ab18b08de6516ad084269e27e1b527f9d}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_PARAM\_ENTITY\_REF@{XML\_TOK\_PARAM\_ENTITY\_REF}}
+\index{XML\_TOK\_PARAM\_ENTITY\_REF@{XML\_TOK\_PARAM\_ENTITY\_REF}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_PARAM\_ENTITY\_REF}{XML\_TOK\_PARAM\_ENTITY\_REF}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+PARAM\+\_\+\+ENTITY\+\_\+\+REF~28}
+
+\mbox{\Hypertarget{xmltok_8h_a9a7922389e85b2c2fa93f3641d354bd9}\label{xmltok_8h_a9a7922389e85b2c2fa93f3641d354bd9}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_PARTIAL@{XML\_TOK\_PARTIAL}}
+\index{XML\_TOK\_PARTIAL@{XML\_TOK\_PARTIAL}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_PARTIAL}{XML\_TOK\_PARTIAL}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+PARTIAL~-\/1       /$\ast$ only part of a token $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_a41a5e653a58517c8b6a466b389766995}\label{xmltok_8h_a41a5e653a58517c8b6a466b389766995}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_PARTIAL\_CHAR@{XML\_TOK\_PARTIAL\_CHAR}}
+\index{XML\_TOK\_PARTIAL\_CHAR@{XML\_TOK\_PARTIAL\_CHAR}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_PARTIAL\_CHAR}{XML\_TOK\_PARTIAL\_CHAR}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+PARTIAL\+\_\+\+CHAR~-\/2  /$\ast$ only part of a multibyte \mbox{\hyperlink{classsequence}{sequence}} $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_abd67bad50fb1b7e76e0e8db88a4f56b5}\label{xmltok_8h_abd67bad50fb1b7e76e0e8db88a4f56b5}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_PERCENT@{XML\_TOK\_PERCENT}}
+\index{XML\_TOK\_PERCENT@{XML\_TOK\_PERCENT}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_PERCENT}{XML\_TOK\_PERCENT}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+PERCENT~22}
+
+\mbox{\Hypertarget{xmltok_8h_a296cfc009c93a7439090afe445f39b24}\label{xmltok_8h_a296cfc009c93a7439090afe445f39b24}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_PI@{XML\_TOK\_PI}}
+\index{XML\_TOK\_PI@{XML\_TOK\_PI}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_PI}{XML\_TOK\_PI}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+PI~11                     /$\ast$ processing instruction $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_aaddf76ac034c29257e6a8b4981306530}\label{xmltok_8h_aaddf76ac034c29257e6a8b4981306530}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_POUND\_NAME@{XML\_TOK\_POUND\_NAME}}
+\index{XML\_TOK\_POUND\_NAME@{XML\_TOK\_POUND\_NAME}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_POUND\_NAME}{XML\_TOK\_POUND\_NAME}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+POUND\+\_\+\+NAME~20             /$\ast$ \#\mbox{\hyperlink{structname}{name}} $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_a18eba5abe613dc17a5351d81cb3ecdc6}\label{xmltok_8h_a18eba5abe613dc17a5351d81cb3ecdc6}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_PREFIXED\_NAME@{XML\_TOK\_PREFIXED\_NAME}}
+\index{XML\_TOK\_PREFIXED\_NAME@{XML\_TOK\_PREFIXED\_NAME}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_PREFIXED\_NAME}{XML\_TOK\_PREFIXED\_NAME}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+PREFIXED\+\_\+\+NAME~41}
+
+\mbox{\Hypertarget{xmltok_8h_a919f2ff8a2170e8ba113d79b89da6830}\label{xmltok_8h_a919f2ff8a2170e8ba113d79b89da6830}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_PROLOG\_S@{XML\_TOK\_PROLOG\_S}}
+\index{XML\_TOK\_PROLOG\_S@{XML\_TOK\_PROLOG\_S}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_PROLOG\_S}{XML\_TOK\_PROLOG\_S}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+PROLOG\+\_\+S~15}
+
+\mbox{\Hypertarget{xmltok_8h_ae71b8d0f22fd36f466384ee700378e75}\label{xmltok_8h_ae71b8d0f22fd36f466384ee700378e75}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_START\_TAG\_NO\_ATTS@{XML\_TOK\_START\_TAG\_NO\_ATTS}}
+\index{XML\_TOK\_START\_TAG\_NO\_ATTS@{XML\_TOK\_START\_TAG\_NO\_ATTS}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_START\_TAG\_NO\_ATTS}{XML\_TOK\_START\_TAG\_NO\_ATTS}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+START\+\_\+\+TAG\+\_\+\+NO\+\_\+\+ATTS~2}
+
+\mbox{\Hypertarget{xmltok_8h_a9b81ba9f75c91dc994c6df29f25f778a}\label{xmltok_8h_a9b81ba9f75c91dc994c6df29f25f778a}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_START\_TAG\_WITH\_ATTS@{XML\_TOK\_START\_TAG\_WITH\_ATTS}}
+\index{XML\_TOK\_START\_TAG\_WITH\_ATTS@{XML\_TOK\_START\_TAG\_WITH\_ATTS}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_START\_TAG\_WITH\_ATTS}{XML\_TOK\_START\_TAG\_WITH\_ATTS}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+START\+\_\+\+TAG\+\_\+\+WITH\+\_\+\+ATTS~1}
+
+\mbox{\Hypertarget{xmltok_8h_af1c37f43365bc2d8b3032ed0eee5bde5}\label{xmltok_8h_af1c37f43365bc2d8b3032ed0eee5bde5}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_TRAILING\_CR@{XML\_TOK\_TRAILING\_CR}}
+\index{XML\_TOK\_TRAILING\_CR@{XML\_TOK\_TRAILING\_CR}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_TRAILING\_CR}{XML\_TOK\_TRAILING\_CR}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+TRAILING\+\_\+\+CR}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                    -\/3   \textcolor{comment}{/* A CR at the end of the scan;}}
+\DoxyCodeLine{\textcolor{comment}{                                    might be part of CRLF sequence */}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{xmltok_8h_abf7ec5f4bd9e9cef232dafa767f04bce}\label{xmltok_8h_abf7ec5f4bd9e9cef232dafa767f04bce}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_TRAILING\_RSQB@{XML\_TOK\_TRAILING\_RSQB}}
+\index{XML\_TOK\_TRAILING\_RSQB@{XML\_TOK\_TRAILING\_RSQB}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_TRAILING\_RSQB}{XML\_TOK\_TRAILING\_RSQB}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+TRAILING\+\_\+\+RSQB}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                    -\/5 \textcolor{comment}{/* ] or ]] at the end of the scan; might be}}
+\DoxyCodeLine{\textcolor{comment}{                                    start of illegal ]]> sequence */}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{xmltok_8h_a9133bd5d1523d522b59c35e3e5db7c97}\label{xmltok_8h_a9133bd5d1523d522b59c35e3e5db7c97}} 
+\index{xmltok.h@{xmltok.h}!XML\_TOK\_XML\_DECL@{XML\_TOK\_XML\_DECL}}
+\index{XML\_TOK\_XML\_DECL@{XML\_TOK\_XML\_DECL}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TOK\_XML\_DECL}{XML\_TOK\_XML\_DECL}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TOK\+\_\+\+XML\+\_\+\+DECL~12               /$\ast$ XML decl or text decl $\ast$/}
+
+\mbox{\Hypertarget{xmltok_8h_a2782ea94dc173be2426c0106900f73b9}\label{xmltok_8h_a2782ea94dc173be2426c0106900f73b9}} 
+\index{xmltok.h@{xmltok.h}!XML\_UTF16\_ENCODE\_MAX@{XML\_UTF16\_ENCODE\_MAX}}
+\index{XML\_UTF16\_ENCODE\_MAX@{XML\_UTF16\_ENCODE\_MAX}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_UTF16\_ENCODE\_MAX}{XML\_UTF16\_ENCODE\_MAX}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+UTF16\+\_\+\+ENCODE\+\_\+\+MAX~2}
+
+\mbox{\Hypertarget{xmltok_8h_a8fefe7b18536c40a32b581a2f40aa2fe}\label{xmltok_8h_a8fefe7b18536c40a32b581a2f40aa2fe}} 
+\index{xmltok.h@{xmltok.h}!XML\_UTF8\_ENCODE\_MAX@{XML\_UTF8\_ENCODE\_MAX}}
+\index{XML\_UTF8\_ENCODE\_MAX@{XML\_UTF8\_ENCODE\_MAX}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XML\_UTF8\_ENCODE\_MAX}{XML\_UTF8\_ENCODE\_MAX}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+UTF8\+\_\+\+ENCODE\+\_\+\+MAX~4}
+
+\mbox{\Hypertarget{xmltok_8h_ae523fd1d41331e9e3e1d3978205c6ebe}\label{xmltok_8h_ae523fd1d41331e9e3e1d3978205c6ebe}} 
+\index{xmltok.h@{xmltok.h}!XmlAttributeValueTok@{XmlAttributeValueTok}}
+\index{XmlAttributeValueTok@{XmlAttributeValueTok}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlAttributeValueTok}{XmlAttributeValueTok}}
+{\footnotesize\ttfamily \#define Xml\+Attribute\+Value\+Tok(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{ptr,  }\item[{}]{\mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  }\item[{}]{next\+Tok\+Ptr }\end{DoxyParamCaption})~   \mbox{\hyperlink{xmltok_8h_aa82e22155adcef408a0d52c2e673e5fe}{Xml\+Literal\+Tok}}(enc, \mbox{\hyperlink{xmltok_8h_a00e3276ed5472dc3648fd910cfc71d7c}{XML\+\_\+\+ATTRIBUTE\+\_\+\+VALUE\+\_\+\+LITERAL}}, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, next\+Tok\+Ptr)}
+
+\mbox{\Hypertarget{xmltok_8h_a20940deaf1a78db30c77647ebbf3bb37}\label{xmltok_8h_a20940deaf1a78db30c77647ebbf3bb37}} 
+\index{xmltok.h@{xmltok.h}!XmlCdataSectionTok@{XmlCdataSectionTok}}
+\index{XmlCdataSectionTok@{XmlCdataSectionTok}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlCdataSectionTok}{XmlCdataSectionTok}}
+{\footnotesize\ttfamily \#define Xml\+Cdata\+Section\+Tok(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{ptr,  }\item[{}]{\mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  }\item[{}]{next\+Tok\+Ptr }\end{DoxyParamCaption})~   \mbox{\hyperlink{xmltok_8h_aeea3db72246c2b1a44e1247062ba1645}{Xml\+Tok}}(enc, \mbox{\hyperlink{xmltok_8h_a156ecfeae5f40c2b8dbfc38e230794b6}{XML\+\_\+\+CDATA\+\_\+\+SECTION\+\_\+\+STATE}}, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, next\+Tok\+Ptr)}
+
+\mbox{\Hypertarget{xmltok_8h_ac15894c527aabfbe79ecc5256e824e9e}\label{xmltok_8h_ac15894c527aabfbe79ecc5256e824e9e}} 
+\index{xmltok.h@{xmltok.h}!XmlCharRefNumber@{XmlCharRefNumber}}
+\index{XmlCharRefNumber@{XmlCharRefNumber}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlCharRefNumber}{XmlCharRefNumber}}
+{\footnotesize\ttfamily \#define Xml\+Char\+Ref\+Number(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{ptr }\end{DoxyParamCaption})~  (((enc)-\/$>$char\+Ref\+Number)(enc, ptr))}
+
+\mbox{\Hypertarget{xmltok_8h_a585c062a5cb678af310ba02ae689bcb7}\label{xmltok_8h_a585c062a5cb678af310ba02ae689bcb7}} 
+\index{xmltok.h@{xmltok.h}!XmlContentTok@{XmlContentTok}}
+\index{XmlContentTok@{XmlContentTok}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlContentTok}{XmlContentTok}}
+{\footnotesize\ttfamily \#define Xml\+Content\+Tok(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{ptr,  }\item[{}]{\mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  }\item[{}]{next\+Tok\+Ptr }\end{DoxyParamCaption})~   \mbox{\hyperlink{xmltok_8h_aeea3db72246c2b1a44e1247062ba1645}{Xml\+Tok}}(enc, \mbox{\hyperlink{xmltok_8h_a286768b60261f6abe90b4b17c2e98f00}{XML\+\_\+\+CONTENT\+\_\+\+STATE}}, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, next\+Tok\+Ptr)}
+
+\mbox{\Hypertarget{xmltok_8h_a4d7b144430ffa80c0f5611db860154e2}\label{xmltok_8h_a4d7b144430ffa80c0f5611db860154e2}} 
+\index{xmltok.h@{xmltok.h}!XmlEntityValueTok@{XmlEntityValueTok}}
+\index{XmlEntityValueTok@{XmlEntityValueTok}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlEntityValueTok}{XmlEntityValueTok}}
+{\footnotesize\ttfamily \#define Xml\+Entity\+Value\+Tok(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{ptr,  }\item[{}]{\mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  }\item[{}]{next\+Tok\+Ptr }\end{DoxyParamCaption})~   \mbox{\hyperlink{xmltok_8h_aa82e22155adcef408a0d52c2e673e5fe}{Xml\+Literal\+Tok}}(enc, \mbox{\hyperlink{xmltok_8h_a817209e2f639ddeeb7fc34ce06776024}{XML\+\_\+\+ENTITY\+\_\+\+VALUE\+\_\+\+LITERAL}}, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, next\+Tok\+Ptr)}
+
+\mbox{\Hypertarget{xmltok_8h_a0254b9d9a2b83ccc146f96ba1a2bdc66}\label{xmltok_8h_a0254b9d9a2b83ccc146f96ba1a2bdc66}} 
+\index{xmltok.h@{xmltok.h}!XmlGetAttributes@{XmlGetAttributes}}
+\index{XmlGetAttributes@{XmlGetAttributes}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlGetAttributes}{XmlGetAttributes}}
+{\footnotesize\ttfamily \#define Xml\+Get\+Attributes(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{ptr,  }\item[{}]{atts\+Max,  }\item[{}]{\mbox{\hyperlink{xmlparse_8c_a5bbadff5cdbbd3feb492c555b546a292}{atts}} }\end{DoxyParamCaption})~  (((enc)-\/$>$get\+Atts)(enc, ptr, atts\+Max, \mbox{\hyperlink{xmlparse_8c_a5bbadff5cdbbd3feb492c555b546a292}{atts}}))}
+
+\mbox{\Hypertarget{xmltok_8h_a97a6cc4d7e2ccf079e21abb4810c9ae4}\label{xmltok_8h_a97a6cc4d7e2ccf079e21abb4810c9ae4}} 
+\index{xmltok.h@{xmltok.h}!XmlIsPublicId@{XmlIsPublicId}}
+\index{XmlIsPublicId@{XmlIsPublicId}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlIsPublicId}{XmlIsPublicId}}
+{\footnotesize\ttfamily \#define Xml\+Is\+Public\+Id(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{ptr,  }\item[{}]{\mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  }\item[{}]{bad\+Ptr }\end{DoxyParamCaption})~  (((enc)-\/$>$is\+Public\+Id)(enc, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, bad\+Ptr))}
+
+\mbox{\Hypertarget{xmltok_8h_aa82e22155adcef408a0d52c2e673e5fe}\label{xmltok_8h_aa82e22155adcef408a0d52c2e673e5fe}} 
+\index{xmltok.h@{xmltok.h}!XmlLiteralTok@{XmlLiteralTok}}
+\index{XmlLiteralTok@{XmlLiteralTok}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlLiteralTok}{XmlLiteralTok}}
+{\footnotesize\ttfamily \#define Xml\+Literal\+Tok(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{literal\+Type,  }\item[{}]{ptr,  }\item[{}]{\mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  }\item[{}]{next\+Tok\+Ptr }\end{DoxyParamCaption})~  (((enc)-\/$>$literal\+Scanners\mbox{[}literal\+Type\mbox{]})(enc, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, next\+Tok\+Ptr))}
+
+\mbox{\Hypertarget{xmltok_8h_a2f485908164f077787f48b3eb6ecc387}\label{xmltok_8h_a2f485908164f077787f48b3eb6ecc387}} 
+\index{xmltok.h@{xmltok.h}!XmlNameLength@{XmlNameLength}}
+\index{XmlNameLength@{XmlNameLength}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlNameLength}{XmlNameLength}}
+{\footnotesize\ttfamily \#define Xml\+Name\+Length(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{ptr }\end{DoxyParamCaption})~  (((enc)-\/$>$name\+Length)(enc, ptr))}
+
+\mbox{\Hypertarget{xmltok_8h_ac2c80c413865548d9640ede78d9b684a}\label{xmltok_8h_ac2c80c413865548d9640ede78d9b684a}} 
+\index{xmltok.h@{xmltok.h}!XmlNameMatchesAscii@{XmlNameMatchesAscii}}
+\index{XmlNameMatchesAscii@{XmlNameMatchesAscii}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlNameMatchesAscii}{XmlNameMatchesAscii}}
+{\footnotesize\ttfamily \#define Xml\+Name\+Matches\+Ascii(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{ptr1,  }\item[{}]{end1,  }\item[{}]{ptr2 }\end{DoxyParamCaption})~  (((enc)-\/$>$name\+Matches\+Ascii)(enc, ptr1, end1, ptr2))}
+
+\mbox{\Hypertarget{xmltok_8h_ac767b382ac53162cdfa33a3d67042dbe}\label{xmltok_8h_ac767b382ac53162cdfa33a3d67042dbe}} 
+\index{xmltok.h@{xmltok.h}!XmlPredefinedEntityName@{XmlPredefinedEntityName}}
+\index{XmlPredefinedEntityName@{XmlPredefinedEntityName}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlPredefinedEntityName}{XmlPredefinedEntityName}}
+{\footnotesize\ttfamily \#define Xml\+Predefined\+Entity\+Name(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{ptr,  }\item[{}]{\mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}} }\end{DoxyParamCaption})~  (((enc)-\/$>$predefined\+Entity\+Name)(enc, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}))}
+
+\mbox{\Hypertarget{xmltok_8h_a95dc5b9041a662c1b2297e71112ccffd}\label{xmltok_8h_a95dc5b9041a662c1b2297e71112ccffd}} 
+\index{xmltok.h@{xmltok.h}!XmlPrologTok@{XmlPrologTok}}
+\index{XmlPrologTok@{XmlPrologTok}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlPrologTok}{XmlPrologTok}}
+{\footnotesize\ttfamily \#define Xml\+Prolog\+Tok(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{ptr,  }\item[{}]{\mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  }\item[{}]{next\+Tok\+Ptr }\end{DoxyParamCaption})~   \mbox{\hyperlink{xmltok_8h_aeea3db72246c2b1a44e1247062ba1645}{Xml\+Tok}}(enc, \mbox{\hyperlink{xmltok_8h_ab5d1d624b4c8265073d712b388a1f218}{XML\+\_\+\+PROLOG\+\_\+\+STATE}}, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, next\+Tok\+Ptr)}
+
+\mbox{\Hypertarget{xmltok_8h_ab8bf85725c50ffeb527d3eb96cc9bc49}\label{xmltok_8h_ab8bf85725c50ffeb527d3eb96cc9bc49}} 
+\index{xmltok.h@{xmltok.h}!XmlSameName@{XmlSameName}}
+\index{XmlSameName@{XmlSameName}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlSameName}{XmlSameName}}
+{\footnotesize\ttfamily \#define Xml\+Same\+Name(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{ptr1,  }\item[{}]{ptr2 }\end{DoxyParamCaption})~(((enc)-\/$>$same\+Name)(enc, ptr1, ptr2))}
+
+\mbox{\Hypertarget{xmltok_8h_aeb75680dbd23df91fc2816540099a5df}\label{xmltok_8h_aeb75680dbd23df91fc2816540099a5df}} 
+\index{xmltok.h@{xmltok.h}!XmlSkipS@{XmlSkipS}}
+\index{XmlSkipS@{XmlSkipS}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlSkipS}{XmlSkipS}}
+{\footnotesize\ttfamily \#define Xml\+SkipS(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{ptr }\end{DoxyParamCaption})~  (((enc)-\/$>$skipS)(enc, ptr))}
+
+\mbox{\Hypertarget{xmltok_8h_aeea3db72246c2b1a44e1247062ba1645}\label{xmltok_8h_aeea3db72246c2b1a44e1247062ba1645}} 
+\index{xmltok.h@{xmltok.h}!XmlTok@{XmlTok}}
+\index{XmlTok@{XmlTok}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlTok}{XmlTok}}
+{\footnotesize\ttfamily \#define Xml\+Tok(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{\mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}},  }\item[{}]{ptr,  }\item[{}]{\mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  }\item[{}]{next\+Tok\+Ptr }\end{DoxyParamCaption})~  (((enc)-\/$>$scanners\mbox{[}\mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}}\mbox{]})(enc, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, next\+Tok\+Ptr))}
+
+\mbox{\Hypertarget{xmltok_8h_afe872cfddf5afb0650d38d093d8b5500}\label{xmltok_8h_afe872cfddf5afb0650d38d093d8b5500}} 
+\index{xmltok.h@{xmltok.h}!XmlUpdatePosition@{XmlUpdatePosition}}
+\index{XmlUpdatePosition@{XmlUpdatePosition}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlUpdatePosition}{XmlUpdatePosition}}
+{\footnotesize\ttfamily \#define Xml\+Update\+Position(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{ptr,  }\item[{}]{\mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  }\item[{}]{pos }\end{DoxyParamCaption})~  (((enc)-\/$>$update\+Position)(enc, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, pos))}
+
+\mbox{\Hypertarget{xmltok_8h_acbfdedc19e4a6ef4eb5b6a7d26bc7a70}\label{xmltok_8h_acbfdedc19e4a6ef4eb5b6a7d26bc7a70}} 
+\index{xmltok.h@{xmltok.h}!XmlUtf16Convert@{XmlUtf16Convert}}
+\index{XmlUtf16Convert@{XmlUtf16Convert}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlUtf16Convert}{XmlUtf16Convert}}
+{\footnotesize\ttfamily \#define Xml\+Utf16\+Convert(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{fromP,  }\item[{}]{from\+Lim,  }\item[{}]{toP,  }\item[{}]{to\+Lim }\end{DoxyParamCaption})~  (((enc)-\/$>$utf16\+Convert)(enc, fromP, from\+Lim, toP, to\+Lim))}
+
+\mbox{\Hypertarget{xmltok_8h_a2b4273f95ae9afa03fd097aaa807be9e}\label{xmltok_8h_a2b4273f95ae9afa03fd097aaa807be9e}} 
+\index{xmltok.h@{xmltok.h}!XmlUtf8Convert@{XmlUtf8Convert}}
+\index{XmlUtf8Convert@{XmlUtf8Convert}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlUtf8Convert}{XmlUtf8Convert}}
+{\footnotesize\ttfamily \#define Xml\+Utf8\+Convert(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{fromP,  }\item[{}]{from\+Lim,  }\item[{}]{toP,  }\item[{}]{to\+Lim }\end{DoxyParamCaption})~  (((enc)-\/$>$utf8\+Convert)(enc, fromP, from\+Lim, toP, to\+Lim))}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{xmltok_8h_ac77bae1c0c025a615a2c21e90e3ce5b6}\label{xmltok_8h_ac77bae1c0c025a615a2c21e90e3ce5b6}} 
+\index{xmltok.h@{xmltok.h}!CONVERTER@{CONVERTER}}
+\index{CONVERTER@{CONVERTER}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{CONVERTER}{CONVERTER}}
+{\footnotesize\ttfamily typedef int(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ CONVERTER) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const char $\ast$p)}
+
+\mbox{\Hypertarget{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}\label{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}} 
+\index{xmltok.h@{xmltok.h}!ENCODING@{ENCODING}}
+\index{ENCODING@{ENCODING}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{ENCODING}{ENCODING}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structencoding}{encoding}} \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}}}
+
+\mbox{\Hypertarget{xmltok_8h_a78fe67d81ceb88ace3799c5279f7b2a6}\label{xmltok_8h_a78fe67d81ceb88ace3799c5279f7b2a6}} 
+\index{xmltok.h@{xmltok.h}!POSITION@{POSITION}}
+\index{POSITION@{POSITION}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{POSITION}{POSITION}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structposition}{position}} \mbox{\hyperlink{xmltok_8h_a78fe67d81ceb88ace3799c5279f7b2a6}{POSITION}}}
+
+\mbox{\Hypertarget{xmltok_8h_a64a2a69dc8f54087bbb1bd09bf66f720}\label{xmltok_8h_a64a2a69dc8f54087bbb1bd09bf66f720}} 
+\index{xmltok.h@{xmltok.h}!SCANNER@{SCANNER}}
+\index{SCANNER@{SCANNER}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{SCANNER}{SCANNER}}
+{\footnotesize\ttfamily typedef int(\mbox{\hyperlink{internal_8h_af44f68911377fd55f6e1588b0c89b3e5}{PTRCALL}} $\ast$ SCANNER) (const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$, const char $\ast$, const char $\ast$, const char $\ast$$\ast$)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{xmltok_8h_ae6f3b591a76fd87e6c8aa4d71b1aac3d}\label{xmltok_8h_ae6f3b591a76fd87e6c8aa4d71b1aac3d}} 
+\index{xmltok.h@{xmltok.h}!XmlGetUtf16InternalEncoding@{XmlGetUtf16InternalEncoding}}
+\index{XmlGetUtf16InternalEncoding@{XmlGetUtf16InternalEncoding}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlGetUtf16InternalEncoding()}{XmlGetUtf16InternalEncoding()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}}$\ast$ Xml\+Get\+Utf16\+Internal\+Encoding (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmltok_8h_ad7d24d3a74b649e041075d39acbad483}\label{xmltok_8h_ad7d24d3a74b649e041075d39acbad483}} 
+\index{xmltok.h@{xmltok.h}!XmlGetUtf16InternalEncodingNS@{XmlGetUtf16InternalEncodingNS}}
+\index{XmlGetUtf16InternalEncodingNS@{XmlGetUtf16InternalEncodingNS}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlGetUtf16InternalEncodingNS()}{XmlGetUtf16InternalEncodingNS()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}}$\ast$ Xml\+Get\+Utf16\+Internal\+Encoding\+NS (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmltok_8h_a64165f5cd093ceab395d98e0cb80fc3d}\label{xmltok_8h_a64165f5cd093ceab395d98e0cb80fc3d}} 
+\index{xmltok.h@{xmltok.h}!XmlGetUtf8InternalEncoding@{XmlGetUtf8InternalEncoding}}
+\index{XmlGetUtf8InternalEncoding@{XmlGetUtf8InternalEncoding}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlGetUtf8InternalEncoding()}{XmlGetUtf8InternalEncoding()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}}$\ast$ Xml\+Get\+Utf8\+Internal\+Encoding (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmltok_8h_a4111b4a4799b494f3f721f5675f0106c}\label{xmltok_8h_a4111b4a4799b494f3f721f5675f0106c}} 
+\index{xmltok.h@{xmltok.h}!XmlGetUtf8InternalEncodingNS@{XmlGetUtf8InternalEncodingNS}}
+\index{XmlGetUtf8InternalEncodingNS@{XmlGetUtf8InternalEncodingNS}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlGetUtf8InternalEncodingNS()}{XmlGetUtf8InternalEncodingNS()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}}$\ast$ Xml\+Get\+Utf8\+Internal\+Encoding\+NS (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmltok_8h_a9fa3e317508ec3052e285957e931ae13}\label{xmltok_8h_a9fa3e317508ec3052e285957e931ae13}} 
+\index{xmltok.h@{xmltok.h}!XmlInitEncoding@{XmlInitEncoding}}
+\index{XmlInitEncoding@{XmlInitEncoding}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlInitEncoding()}{XmlInitEncoding()}}
+{\footnotesize\ttfamily int Xml\+Init\+Encoding (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i_n_i_t___e_n_c_o_d_i_n_g}{INIT\+\_\+\+ENCODING}} $\ast$}]{,  }\item[{const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$$\ast$}]{,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmltok_8h_a47157662f6df370cdd22bbc16cbae2f5}\label{xmltok_8h_a47157662f6df370cdd22bbc16cbae2f5}} 
+\index{xmltok.h@{xmltok.h}!XmlInitEncodingNS@{XmlInitEncodingNS}}
+\index{XmlInitEncodingNS@{XmlInitEncodingNS}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlInitEncodingNS()}{XmlInitEncodingNS()}}
+{\footnotesize\ttfamily int Xml\+Init\+Encoding\+NS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i_n_i_t___e_n_c_o_d_i_n_g}{INIT\+\_\+\+ENCODING}} $\ast$}]{,  }\item[{const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$$\ast$}]{,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmltok_8h_a7bd2980a71390ec11b4039e2f10a41da}\label{xmltok_8h_a7bd2980a71390ec11b4039e2f10a41da}} 
+\index{xmltok.h@{xmltok.h}!XmlInitUnknownEncoding@{XmlInitUnknownEncoding}}
+\index{XmlInitUnknownEncoding@{XmlInitUnknownEncoding}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlInitUnknownEncoding()}{XmlInitUnknownEncoding()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}}$\ast$ Xml\+Init\+Unknown\+Encoding (\begin{DoxyParamCaption}\item[{void $\ast$}]{mem,  }\item[{int $\ast$}]{table,  }\item[{\mbox{\hyperlink{xmltok_8h_ac77bae1c0c025a615a2c21e90e3ce5b6}{CONVERTER}}}]{convert,  }\item[{void $\ast$}]{user\+Data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmltok_8h_aee948c65d72033eb1b3559778c5a0e56}\label{xmltok_8h_aee948c65d72033eb1b3559778c5a0e56}} 
+\index{xmltok.h@{xmltok.h}!XmlInitUnknownEncodingNS@{XmlInitUnknownEncodingNS}}
+\index{XmlInitUnknownEncodingNS@{XmlInitUnknownEncodingNS}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlInitUnknownEncodingNS()}{XmlInitUnknownEncodingNS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}}$\ast$ Xml\+Init\+Unknown\+Encoding\+NS (\begin{DoxyParamCaption}\item[{void $\ast$}]{mem,  }\item[{int $\ast$}]{table,  }\item[{\mbox{\hyperlink{xmltok_8h_ac77bae1c0c025a615a2c21e90e3ce5b6}{CONVERTER}}}]{convert,  }\item[{void $\ast$}]{user\+Data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmltok_8h_a10982a55deba3bb46e373700d7a4ec2e}\label{xmltok_8h_a10982a55deba3bb46e373700d7a4ec2e}} 
+\index{xmltok.h@{xmltok.h}!XmlParseXmlDecl@{XmlParseXmlDecl}}
+\index{XmlParseXmlDecl@{XmlParseXmlDecl}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlParseXmlDecl()}{XmlParseXmlDecl()}}
+{\footnotesize\ttfamily int Xml\+Parse\+Xml\+Decl (\begin{DoxyParamCaption}\item[{int}]{is\+General\+Text\+Entity,  }\item[{const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$}]{enc,  }\item[{const char $\ast$}]{ptr,  }\item[{const char $\ast$}]{end,  }\item[{const char $\ast$$\ast$}]{bad\+Ptr,  }\item[{const char $\ast$$\ast$}]{version\+Ptr,  }\item[{const char $\ast$$\ast$}]{version\+End\+Ptr,  }\item[{const char $\ast$$\ast$}]{encoding\+Name\+Ptr,  }\item[{const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$$\ast$}]{named\+Encoding\+Ptr,  }\item[{int $\ast$}]{standalone\+Ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmltok_8h_a9c544e6ffe63fce6320cc6b44c2fe4be}\label{xmltok_8h_a9c544e6ffe63fce6320cc6b44c2fe4be}} 
+\index{xmltok.h@{xmltok.h}!XmlParseXmlDeclNS@{XmlParseXmlDeclNS}}
+\index{XmlParseXmlDeclNS@{XmlParseXmlDeclNS}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlParseXmlDeclNS()}{XmlParseXmlDeclNS()}}
+{\footnotesize\ttfamily int Xml\+Parse\+Xml\+Decl\+NS (\begin{DoxyParamCaption}\item[{int}]{is\+General\+Text\+Entity,  }\item[{const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$}]{enc,  }\item[{const char $\ast$}]{ptr,  }\item[{const char $\ast$}]{end,  }\item[{const char $\ast$$\ast$}]{bad\+Ptr,  }\item[{const char $\ast$$\ast$}]{version\+Ptr,  }\item[{const char $\ast$$\ast$}]{version\+End\+Ptr,  }\item[{const char $\ast$$\ast$}]{encoding\+Name\+Ptr,  }\item[{const \mbox{\hyperlink{xmltok_8h_a46834e73898ebab478b38f817a8c6fc0}{ENCODING}} $\ast$$\ast$}]{named\+Encoding\+Ptr,  }\item[{int $\ast$}]{standalone\+Ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmltok_8h_a8671b08cbc73ee001e696f02404e878f}\label{xmltok_8h_a8671b08cbc73ee001e696f02404e878f}} 
+\index{xmltok.h@{xmltok.h}!XmlSizeOfUnknownEncoding@{XmlSizeOfUnknownEncoding}}
+\index{XmlSizeOfUnknownEncoding@{XmlSizeOfUnknownEncoding}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlSizeOfUnknownEncoding()}{XmlSizeOfUnknownEncoding()}}
+{\footnotesize\ttfamily int Xml\+Size\+Of\+Unknown\+Encoding (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmltok_8h_a502289528ab90639dc8d86376c099e23}\label{xmltok_8h_a502289528ab90639dc8d86376c099e23}} 
+\index{xmltok.h@{xmltok.h}!XmlUtf16Encode@{XmlUtf16Encode}}
+\index{XmlUtf16Encode@{XmlUtf16Encode}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlUtf16Encode()}{XmlUtf16Encode()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{internal_8h_a6f671bc94a3e87fcef3b36ec87d34bff}{FASTCALL}} Xml\+Utf16\+Encode (\begin{DoxyParamCaption}\item[{int}]{char\+Number,  }\item[{unsigned short $\ast$}]{buf }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmltok_8h_a56e56e234fd330d912619501fcc01054}\label{xmltok_8h_a56e56e234fd330d912619501fcc01054}} 
+\index{xmltok.h@{xmltok.h}!XmlUtf8Encode@{XmlUtf8Encode}}
+\index{XmlUtf8Encode@{XmlUtf8Encode}!xmltok.h@{xmltok.h}}
+\doxysubsubsection{\texorpdfstring{XmlUtf8Encode()}{XmlUtf8Encode()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{internal_8h_a6f671bc94a3e87fcef3b36ec87d34bff}{FASTCALL}} Xml\+Utf8\+Encode (\begin{DoxyParamCaption}\item[{int}]{char\+Number,  }\item[{char $\ast$}]{buf }\end{DoxyParamCaption})}
+

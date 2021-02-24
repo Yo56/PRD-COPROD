@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['h_5flinks_10032',['h_links',['../namespacexlnt.html#af19e407c73cf8ee3bd956e4f6ea490f5ac0bc14d36ed9e270b38bc8348b23f0d0',1,'xlnt']]],
+  ['half_5fwidth_5fkatakana_10033',['half_width_katakana',['../classxlnt_1_1phonetic__pr.html#af984886df1d78ac49c1b3cfde98cb974af402bc154dabbd11fb6ff14f372a48ef',1,'xlnt::phonetic_pr']]],
+  ['hausa_10034',['hausa',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60da6397887a55216b86387a94299937fd00',1,'xlnt::detail']]],
+  ['hausa_5flatin_10035',['hausa_latin',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60dab033145c14688a4f7af9873bda39aff6',1,'xlnt::detail']]],
+  ['hausa_5flatin_5fnigeria_10036',['hausa_latin_nigeria',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60dabed5f3d2a1dc7f8596f7c08980a90d22',1,'xlnt::detail']]],
+  ['hawaiian_10037',['hawaiian',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60da5efcd206d09ed4beefc691c8c2d40297',1,'xlnt::detail']]],
+  ['hawaiian_5funited_5fstates_10038',['hawaiian_united_states',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60da3f77e315e234953b22b9257efa06bced',1,'xlnt::detail']]],
+  ['heading_5fpairs_10039',['heading_pairs',['../namespacexlnt.html#af19e407c73cf8ee3bd956e4f6ea490f5a9b9157340a1bfcdad9ca36c5e50f1962',1,'xlnt']]],
+  ['hebrew_10040',['hebrew',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60da09e7306c24228641cccdbbb4dd0fc6d5',1,'xlnt::detail']]],
+  ['hebrew_5fisrael_10041',['hebrew_israel',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60da285e7d98f248f15e2d554f70bdc51a89',1,'xlnt::detail']]],
+  ['hidden_5fslides_10042',['hidden_slides',['../namespacexlnt.html#af19e407c73cf8ee3bd956e4f6ea490f5aa85a2c42db352712814114ab409bb394',1,'xlnt']]],
+  ['hindi_10043',['hindi',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60da13a2927187b9700ae7ea82d7841d5b68',1,'xlnt::detail']]],
+  ['hindi_5findia_10044',['hindi_india',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60dad7a6039c8e53410c193870d10b2bbc1b',1,'xlnt::detail']]],
+  ['hiragana_10045',['hiragana',['../classxlnt_1_1phonetic__pr.html#af984886df1d78ac49c1b3cfde98cb974a7b3571e7836374a853fad26971060b13',1,'xlnt::phonetic_pr']]],
+  ['hour_10046',['hour',['../structxlnt_1_1detail_1_1template__part.html#a11063cddb8ca24ae4171966be79790b8a896c55cc5e46fab38ce9f51ebf7bfcd3',1,'xlnt::detail::template_part']]],
+  ['hour_5fleading_5fzero_10047',['hour_leading_zero',['../structxlnt_1_1detail_1_1template__part.html#a11063cddb8ca24ae4171966be79790b8a736d40fa80d7801fd22d10843b986f6c',1,'xlnt::detail::template_part']]],
+  ['hungarian_10048',['hungarian',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60da06c4c0c4f5c90b0f823b80fa8127948c',1,'xlnt::detail']]],
+  ['hungarian_5fhungary_10049',['hungarian_hungary',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60daf94017a0305fb2a38db7fd58c5b3ee10',1,'xlnt::detail']]],
+  ['hyperlink_5fbase_10050',['hyperlink_base',['../namespacexlnt.html#af19e407c73cf8ee3bd956e4f6ea490f5a82493a2f628b27c2a73c23b49ca01e6a',1,'xlnt']]],
+  ['hyperlinks_5fchanged_10051',['hyperlinks_changed',['../namespacexlnt.html#af19e407c73cf8ee3bd956e4f6ea490f5aa920557033f86d6ad96c2129714b11d4',1,'xlnt']]]
+];

@@ -1,0 +1,81 @@
+\hypertarget{xlntpyarrow_8lib_8cpp}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.5.0/python/xlntpyarrow.lib.\+cpp File Reference}
+\label{xlntpyarrow_8lib_8cpp}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/python/xlntpyarrow.lib.cpp@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/python/xlntpyarrow.lib.cpp}}
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include $<$arrow/api.\+h$>$}\newline
+{\ttfamily \#include $<$arrow/python/pyarrow.\+h$>$}\newline
+{\ttfamily \#include $<$pybind11/pybind11.\+h$>$}\newline
+{\ttfamily \#include $<$pybind11/stl.\+h$>$}\newline
+{\ttfamily \#include $<$xlnt/xlnt.\+hpp$>$}\newline
+{\ttfamily \#include $<$xlnt/workbook/streaming\+\_\+workbook\+\_\+reader.\+hpp$>$}\newline
+{\ttfamily \#include $<$python\+\_\+streambuf.\+hpp$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{xlntpyarrow_8lib_8cpp_a564c4f6aaaaf2e481cdd949a512f66fc}{import\+\_\+pyarrow}} ()
+\item 
+arrow\+::\+Array\+Builder $\ast$ \mbox{\hyperlink{xlntpyarrow_8lib_8cpp_a5f0fdd7db2b68499366227f8b41afe1b}{make\+\_\+array\+\_\+builder}} (arrow\+::\+Type\+::type type)
+\item 
+void \mbox{\hyperlink{xlntpyarrow_8lib_8cpp_a26a0177aa3f942c67fe5cc3082a33dc1}{open\+\_\+file}} (\mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader}{xlnt\+::streaming\+\_\+workbook\+\_\+reader}} \&reader, pybind11\+::object file)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{xlntpyarrow_8lib_8cpp_a05912e0de0964d0216395035c62cb4fb}{cell\+\_\+value}} (\mbox{\hyperlink{classxlnt_1_1cell}{xlnt\+::cell}} cell)
+\item 
+std\+::uint16\+\_\+t \mbox{\hyperlink{xlntpyarrow_8lib_8cpp_a4b1ff92c87dc788519c89efebe9c4c3b}{float\+\_\+to\+\_\+half}} (float f)
+\item 
+void \mbox{\hyperlink{xlntpyarrow_8lib_8cpp_aa3f9b749a9a64e49f5220fb002b8b62f}{append\+\_\+cell\+\_\+value}} (arrow\+::\+Array\+Builder $\ast$builder, arrow\+::\+Type\+::type type, \mbox{\hyperlink{classxlnt_1_1cell}{xlnt\+::cell}} cell)
+\item 
+pybind11\+::handle \mbox{\hyperlink{xlntpyarrow_8lib_8cpp_a13df5266d3ddf582e72d756678f6a9d0}{read\+\_\+batch}} (\mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader}{xlnt\+::streaming\+\_\+workbook\+\_\+reader}} \&reader, pybind11\+::object pyschema, int max\+\_\+rows)
+\item 
+\mbox{\hyperlink{xlntpyarrow_8lib_8cpp_aaeb203fa26ba42647b94c211a2bac9fd}{PYBIND11\+\_\+\+MODULE}} (lib, m)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{xlntpyarrow_8lib_8cpp_aa3f9b749a9a64e49f5220fb002b8b62f}\label{xlntpyarrow_8lib_8cpp_aa3f9b749a9a64e49f5220fb002b8b62f}} 
+\index{xlntpyarrow.lib.cpp@{xlntpyarrow.lib.cpp}!append\_cell\_value@{append\_cell\_value}}
+\index{append\_cell\_value@{append\_cell\_value}!xlntpyarrow.lib.cpp@{xlntpyarrow.lib.cpp}}
+\doxysubsubsection{\texorpdfstring{append\_cell\_value()}{append\_cell\_value()}}
+{\footnotesize\ttfamily void append\+\_\+cell\+\_\+value (\begin{DoxyParamCaption}\item[{arrow\+::\+Array\+Builder $\ast$}]{builder,  }\item[{arrow\+::\+Type\+::type}]{type,  }\item[{\mbox{\hyperlink{classxlnt_1_1cell}{xlnt\+::cell}}}]{cell }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xlntpyarrow_8lib_8cpp_a05912e0de0964d0216395035c62cb4fb}\label{xlntpyarrow_8lib_8cpp_a05912e0de0964d0216395035c62cb4fb}} 
+\index{xlntpyarrow.lib.cpp@{xlntpyarrow.lib.cpp}!cell\_value@{cell\_value}}
+\index{cell\_value@{cell\_value}!xlntpyarrow.lib.cpp@{xlntpyarrow.lib.cpp}}
+\doxysubsubsection{\texorpdfstring{cell\_value()}{cell\_value()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T cell\+\_\+value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1cell}{xlnt\+::cell}}}]{cell }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xlntpyarrow_8lib_8cpp_a4b1ff92c87dc788519c89efebe9c4c3b}\label{xlntpyarrow_8lib_8cpp_a4b1ff92c87dc788519c89efebe9c4c3b}} 
+\index{xlntpyarrow.lib.cpp@{xlntpyarrow.lib.cpp}!float\_to\_half@{float\_to\_half}}
+\index{float\_to\_half@{float\_to\_half}!xlntpyarrow.lib.cpp@{xlntpyarrow.lib.cpp}}
+\doxysubsubsection{\texorpdfstring{float\_to\_half()}{float\_to\_half()}}
+{\footnotesize\ttfamily std\+::uint16\+\_\+t float\+\_\+to\+\_\+half (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xlntpyarrow_8lib_8cpp_a564c4f6aaaaf2e481cdd949a512f66fc}\label{xlntpyarrow_8lib_8cpp_a564c4f6aaaaf2e481cdd949a512f66fc}} 
+\index{xlntpyarrow.lib.cpp@{xlntpyarrow.lib.cpp}!import\_pyarrow@{import\_pyarrow}}
+\index{import\_pyarrow@{import\_pyarrow}!xlntpyarrow.lib.cpp@{xlntpyarrow.lib.cpp}}
+\doxysubsubsection{\texorpdfstring{import\_pyarrow()}{import\_pyarrow()}}
+{\footnotesize\ttfamily void import\+\_\+pyarrow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xlntpyarrow_8lib_8cpp_a5f0fdd7db2b68499366227f8b41afe1b}\label{xlntpyarrow_8lib_8cpp_a5f0fdd7db2b68499366227f8b41afe1b}} 
+\index{xlntpyarrow.lib.cpp@{xlntpyarrow.lib.cpp}!make\_array\_builder@{make\_array\_builder}}
+\index{make\_array\_builder@{make\_array\_builder}!xlntpyarrow.lib.cpp@{xlntpyarrow.lib.cpp}}
+\doxysubsubsection{\texorpdfstring{make\_array\_builder()}{make\_array\_builder()}}
+{\footnotesize\ttfamily arrow\+::\+Array\+Builder$\ast$ make\+\_\+array\+\_\+builder (\begin{DoxyParamCaption}\item[{arrow\+::\+Type\+::type}]{type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xlntpyarrow_8lib_8cpp_a26a0177aa3f942c67fe5cc3082a33dc1}\label{xlntpyarrow_8lib_8cpp_a26a0177aa3f942c67fe5cc3082a33dc1}} 
+\index{xlntpyarrow.lib.cpp@{xlntpyarrow.lib.cpp}!open\_file@{open\_file}}
+\index{open\_file@{open\_file}!xlntpyarrow.lib.cpp@{xlntpyarrow.lib.cpp}}
+\doxysubsubsection{\texorpdfstring{open\_file()}{open\_file()}}
+{\footnotesize\ttfamily void open\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader}{xlnt\+::streaming\+\_\+workbook\+\_\+reader}} \&}]{reader,  }\item[{pybind11\+::object}]{file }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xlntpyarrow_8lib_8cpp_aaeb203fa26ba42647b94c211a2bac9fd}\label{xlntpyarrow_8lib_8cpp_aaeb203fa26ba42647b94c211a2bac9fd}} 
+\index{xlntpyarrow.lib.cpp@{xlntpyarrow.lib.cpp}!PYBIND11\_MODULE@{PYBIND11\_MODULE}}
+\index{PYBIND11\_MODULE@{PYBIND11\_MODULE}!xlntpyarrow.lib.cpp@{xlntpyarrow.lib.cpp}}
+\doxysubsubsection{\texorpdfstring{PYBIND11\_MODULE()}{PYBIND11\_MODULE()}}
+{\footnotesize\ttfamily PYBIND11\+\_\+\+MODULE (\begin{DoxyParamCaption}\item[{lib}]{,  }\item[{m}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xlntpyarrow_8lib_8cpp_a13df5266d3ddf582e72d756678f6a9d0}\label{xlntpyarrow_8lib_8cpp_a13df5266d3ddf582e72d756678f6a9d0}} 
+\index{xlntpyarrow.lib.cpp@{xlntpyarrow.lib.cpp}!read\_batch@{read\_batch}}
+\index{read\_batch@{read\_batch}!xlntpyarrow.lib.cpp@{xlntpyarrow.lib.cpp}}
+\doxysubsubsection{\texorpdfstring{read\_batch()}{read\_batch()}}
+{\footnotesize\ttfamily pybind11\+::handle read\+\_\+batch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader}{xlnt\+::streaming\+\_\+workbook\+\_\+reader}} \&}]{reader,  }\item[{pybind11\+::object}]{pyschema,  }\item[{int}]{max\+\_\+rows }\end{DoxyParamCaption})}
+

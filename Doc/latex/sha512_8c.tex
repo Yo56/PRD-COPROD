@@ -1,0 +1,107 @@
+\hypertarget{sha512_8c}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.5.0/source/detail/cryptography/sha512.c File Reference}
+\label{sha512_8c}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/source/detail/cryptography/sha512.c@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/source/detail/cryptography/sha512.c}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sha512_8c_acd84d952de5690225855b76b308db6e8}{ROTR64}}(x,  n)~(((0U + (x)) $<$$<$ (64 -\/ (n))) $\vert$ ((x) $>$$>$ (n)))
+\item 
+\#define \mbox{\hyperlink{sha512_8c_aa4a3bbd99055fbdbeec131f7fe960a32}{LOADSCHEDULE}}(i)
+\item 
+\#define \mbox{\hyperlink{sha512_8c_ada36ce93dcb64a0dcf52a3563f6b5787}{SCHEDULE}}(i)
+\item 
+\#define \mbox{\hyperlink{sha512_8c_a4c0831392962e68a83139673c3825538}{ROUND}}(a,  b,  c,  d,  e,  f,  g,  h,  i,  k)
+\item 
+\#define \mbox{\hyperlink{sha512_8c_ad51ded0bbd705f02f73fc60c0b721ced}{BLOCK\+\_\+\+SIZE}}~128
+\item 
+\#define \mbox{\hyperlink{sha512_8c_a4cf85b81fbffdd226a7c53c9556461f2}{LENGTH\+\_\+\+SIZE}}~16
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sha512_8c_a3fca23e1ae0df255acb1c3b55ed55cdc}{sha512\+\_\+compress}} (uint64\+\_\+t \mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}}\mbox{[}8\mbox{]}, const uint8\+\_\+t \mbox{\hyperlink{structblock}{block}}\mbox{[}128\mbox{]})
+\item 
+void \mbox{\hyperlink{sha512_8c_a08f374309f14b05048f5f0aca74a4c53}{sha512\+\_\+hash}} (const uint8\+\_\+t $\ast$message, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} \mbox{\hyperlink{group__python__builtins_gaeff368081ac50b8fe2cc0230d96e3acb}{len}}, uint64\+\_\+t hash\mbox{[}8\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sha512_8c_ad51ded0bbd705f02f73fc60c0b721ced}\label{sha512_8c_ad51ded0bbd705f02f73fc60c0b721ced}} 
+\index{sha512.c@{sha512.c}!BLOCK\_SIZE@{BLOCK\_SIZE}}
+\index{BLOCK\_SIZE@{BLOCK\_SIZE}!sha512.c@{sha512.c}}
+\doxysubsubsection{\texorpdfstring{BLOCK\_SIZE}{BLOCK\_SIZE}}
+{\footnotesize\ttfamily \#define BLOCK\+\_\+\+SIZE~128}
+
+\mbox{\Hypertarget{sha512_8c_a4cf85b81fbffdd226a7c53c9556461f2}\label{sha512_8c_a4cf85b81fbffdd226a7c53c9556461f2}} 
+\index{sha512.c@{sha512.c}!LENGTH\_SIZE@{LENGTH\_SIZE}}
+\index{LENGTH\_SIZE@{LENGTH\_SIZE}!sha512.c@{sha512.c}}
+\doxysubsubsection{\texorpdfstring{LENGTH\_SIZE}{LENGTH\_SIZE}}
+{\footnotesize\ttfamily \#define LENGTH\+\_\+\+SIZE~16}
+
+\mbox{\Hypertarget{sha512_8c_aa4a3bbd99055fbdbeec131f7fe960a32}\label{sha512_8c_aa4a3bbd99055fbdbeec131f7fe960a32}} 
+\index{sha512.c@{sha512.c}!LOADSCHEDULE@{LOADSCHEDULE}}
+\index{LOADSCHEDULE@{LOADSCHEDULE}!sha512.c@{sha512.c}}
+\doxysubsubsection{\texorpdfstring{LOADSCHEDULE}{LOADSCHEDULE}}
+{\footnotesize\ttfamily \#define LOADSCHEDULE(\begin{DoxyParamCaption}\item[{}]{i }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        schedule[i] = (uint64\_t)\mbox{\hyperlink{structblock}{block}}[i * 8 + 0] << 56  \(\backslash\)}
+\DoxyCodeLine{                    | (uint64\_t)\mbox{\hyperlink{structblock}{block}}[i * 8 + 1] << 48  \(\backslash\)}
+\DoxyCodeLine{                    | (uint64\_t)\mbox{\hyperlink{structblock}{block}}[i * 8 + 2] << 40  \(\backslash\)}
+\DoxyCodeLine{                    | (uint64\_t)\mbox{\hyperlink{structblock}{block}}[i * 8 + 3] << 32  \(\backslash\)}
+\DoxyCodeLine{                    | (uint64\_t)\mbox{\hyperlink{structblock}{block}}[i * 8 + 4] << 24  \(\backslash\)}
+\DoxyCodeLine{                    | (uint64\_t)\mbox{\hyperlink{structblock}{block}}[i * 8 + 5] << 16  \(\backslash\)}
+\DoxyCodeLine{                    | (uint64\_t)\mbox{\hyperlink{structblock}{block}}[i * 8 + 6] <<  8  \(\backslash\)}
+\DoxyCodeLine{                    | (uint64\_t)\mbox{\hyperlink{structblock}{block}}[i * 8 + 7] <<  0;}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{sha512_8c_acd84d952de5690225855b76b308db6e8}\label{sha512_8c_acd84d952de5690225855b76b308db6e8}} 
+\index{sha512.c@{sha512.c}!ROTR64@{ROTR64}}
+\index{ROTR64@{ROTR64}!sha512.c@{sha512.c}}
+\doxysubsubsection{\texorpdfstring{ROTR64}{ROTR64}}
+{\footnotesize\ttfamily \#define ROTR64(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{n }\end{DoxyParamCaption})~(((0U + (x)) $<$$<$ (64 -\/ (n))) $\vert$ ((x) $>$$>$ (n)))}
+
+\mbox{\Hypertarget{sha512_8c_a4c0831392962e68a83139673c3825538}\label{sha512_8c_a4c0831392962e68a83139673c3825538}} 
+\index{sha512.c@{sha512.c}!ROUND@{ROUND}}
+\index{ROUND@{ROUND}!sha512.c@{sha512.c}}
+\doxysubsubsection{\texorpdfstring{ROUND}{ROUND}}
+{\footnotesize\ttfamily \#define ROUND(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{c,  }\item[{}]{d,  }\item[{}]{e,  }\item[{}]{f,  }\item[{}]{g,  }\item[{}]{h,  }\item[{}]{i,  }\item[{}]{k }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        h = 0U + h + (\mbox{\hyperlink{sha512_8c_acd84d952de5690225855b76b308db6e8}{ROTR64}}(e, 14) \string^ \mbox{\hyperlink{sha512_8c_acd84d952de5690225855b76b308db6e8}{ROTR64}}(e, 18) \string^ \mbox{\hyperlink{sha512_8c_acd84d952de5690225855b76b308db6e8}{ROTR64}}(e, 41)) + (g \string^ (e \& (f \string^ g))) + UINT64\_C(k) + schedule[i];  \(\backslash\)}
+\DoxyCodeLine{        d = 0U + \mbox{\hyperlink{namespacemkdoc_a85ae95dfe8536ee978dcacf1f5dcfe00}{d}} + h;  \(\backslash\)}
+\DoxyCodeLine{        h = 0U + h + (\mbox{\hyperlink{sha512_8c_acd84d952de5690225855b76b308db6e8}{ROTR64}}(a, 28) \string^ \mbox{\hyperlink{sha512_8c_acd84d952de5690225855b76b308db6e8}{ROTR64}}(a, 34) \string^ \mbox{\hyperlink{sha512_8c_acd84d952de5690225855b76b308db6e8}{ROTR64}}(a, 39)) + ((a \& (b | c)) | (b \& c));}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{sha512_8c_ada36ce93dcb64a0dcf52a3563f6b5787}\label{sha512_8c_ada36ce93dcb64a0dcf52a3563f6b5787}} 
+\index{sha512.c@{sha512.c}!SCHEDULE@{SCHEDULE}}
+\index{SCHEDULE@{SCHEDULE}!sha512.c@{sha512.c}}
+\doxysubsubsection{\texorpdfstring{SCHEDULE}{SCHEDULE}}
+{\footnotesize\ttfamily \#define SCHEDULE(\begin{DoxyParamCaption}\item[{}]{i }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        schedule[i] = 0U + schedule[i -\/ 16] + schedule[i -\/ 7]  \(\backslash\)}
+\DoxyCodeLine{            + (\mbox{\hyperlink{sha512_8c_acd84d952de5690225855b76b308db6e8}{ROTR64}}(schedule[i -\/ 15], 1) \string^ \mbox{\hyperlink{sha512_8c_acd84d952de5690225855b76b308db6e8}{ROTR64}}(schedule[i -\/ 15], 8) \string^ (schedule[i -\/ 15] >> 7))  \(\backslash\)}
+\DoxyCodeLine{            + (\mbox{\hyperlink{sha512_8c_acd84d952de5690225855b76b308db6e8}{ROTR64}}(schedule[i -\/ 2], 19) \string^ \mbox{\hyperlink{sha512_8c_acd84d952de5690225855b76b308db6e8}{ROTR64}}(schedule[i -\/ 2], 61) \string^ (schedule[i -\/ 2] >> 6));}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sha512_8c_a3fca23e1ae0df255acb1c3b55ed55cdc}\label{sha512_8c_a3fca23e1ae0df255acb1c3b55ed55cdc}} 
+\index{sha512.c@{sha512.c}!sha512\_compress@{sha512\_compress}}
+\index{sha512\_compress@{sha512\_compress}!sha512.c@{sha512.c}}
+\doxysubsubsection{\texorpdfstring{sha512\_compress()}{sha512\_compress()}}
+{\footnotesize\ttfamily void sha512\+\_\+compress (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{state\mbox{[}8\mbox{]},  }\item[{const uint8\+\_\+t}]{block\mbox{[}128\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sha512_8c_a08f374309f14b05048f5f0aca74a4c53}\label{sha512_8c_a08f374309f14b05048f5f0aca74a4c53}} 
+\index{sha512.c@{sha512.c}!sha512\_hash@{sha512\_hash}}
+\index{sha512\_hash@{sha512\_hash}!sha512.c@{sha512.c}}
+\doxysubsubsection{\texorpdfstring{sha512\_hash()}{sha512\_hash()}}
+{\footnotesize\ttfamily void sha512\+\_\+hash (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}}}]{len,  }\item[{uint64\+\_\+t}]{hash\mbox{[}8\mbox{]} }\end{DoxyParamCaption})}
+

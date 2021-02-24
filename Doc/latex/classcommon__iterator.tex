@@ -1,0 +1,82 @@
+\hypertarget{classcommon__iterator}{}\doxysection{common\+\_\+iterator Class Reference}
+\label{classcommon__iterator}\index{common\_iterator@{common\_iterator}}
+
+
+{\ttfamily \#include $<$numpy.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classcommon__iterator_a61d77b64fb74c43f016ce8cbde4b27c7}{container\+\_\+type}} = std\+::vector$<$ \mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}} $>$
+\item 
+using \mbox{\hyperlink{classcommon__iterator_ae5c71809ed30d20b321bf01f4043142e}{value\+\_\+type}} = container\+\_\+type\+::value\+\_\+type
+\item 
+using \mbox{\hyperlink{classcommon__iterator_a1b9c8bc2b0275b8b9b6f5410b6f96148}{size\+\_\+type}} = container\+\_\+type\+::size\+\_\+type
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcommon__iterator_a7e2266ddbeb3adb5d1cad2854cba952f}{common\+\_\+iterator}} ()
+\item 
+\mbox{\hyperlink{classcommon__iterator_a5bb0f4465ff31b46f77188fe253ade67}{common\+\_\+iterator}} (void $\ast$ptr, const \mbox{\hyperlink{classcommon__iterator_a61d77b64fb74c43f016ce8cbde4b27c7}{container\+\_\+type}} \&strides, const \mbox{\hyperlink{classcommon__iterator_a61d77b64fb74c43f016ce8cbde4b27c7}{container\+\_\+type}} \&shape)
+\item 
+void \mbox{\hyperlink{classcommon__iterator_a6f54104a4b0847b87bab424db09b85d7}{increment}} (\mbox{\hyperlink{classcommon__iterator_a1b9c8bc2b0275b8b9b6f5410b6f96148}{size\+\_\+type}} dim)
+\item 
+void $\ast$ \mbox{\hyperlink{classcommon__iterator_a29db8ccd525c10275c1cbcab64c56b95}{data}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classcommon__iterator_a61d77b64fb74c43f016ce8cbde4b27c7}\label{classcommon__iterator_a61d77b64fb74c43f016ce8cbde4b27c7}} 
+\index{common\_iterator@{common\_iterator}!container\_type@{container\_type}}
+\index{container\_type@{container\_type}!common\_iterator@{common\_iterator}}
+\doxysubsubsection{\texorpdfstring{container\_type}{container\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classcommon__iterator_a61d77b64fb74c43f016ce8cbde4b27c7}{common\+\_\+iterator\+::container\+\_\+type}} =  std\+::vector$<$\mbox{\hyperlink{common_8h_ac430d16fc097b3bf0a7469cfd09decda}{ssize\+\_\+t}}$>$}
+
+\mbox{\Hypertarget{classcommon__iterator_a1b9c8bc2b0275b8b9b6f5410b6f96148}\label{classcommon__iterator_a1b9c8bc2b0275b8b9b6f5410b6f96148}} 
+\index{common\_iterator@{common\_iterator}!size\_type@{size\_type}}
+\index{size\_type@{size\_type}!common\_iterator@{common\_iterator}}
+\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classcommon__iterator_a1b9c8bc2b0275b8b9b6f5410b6f96148}{common\+\_\+iterator\+::size\+\_\+type}} =  container\+\_\+type\+::size\+\_\+type}
+
+\mbox{\Hypertarget{classcommon__iterator_ae5c71809ed30d20b321bf01f4043142e}\label{classcommon__iterator_ae5c71809ed30d20b321bf01f4043142e}} 
+\index{common\_iterator@{common\_iterator}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!common\_iterator@{common\_iterator}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classcommon__iterator_ae5c71809ed30d20b321bf01f4043142e}{common\+\_\+iterator\+::value\+\_\+type}} =  container\+\_\+type\+::value\+\_\+type}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcommon__iterator_a7e2266ddbeb3adb5d1cad2854cba952f}\label{classcommon__iterator_a7e2266ddbeb3adb5d1cad2854cba952f}} 
+\index{common\_iterator@{common\_iterator}!common\_iterator@{common\_iterator}}
+\index{common\_iterator@{common\_iterator}!common\_iterator@{common\_iterator}}
+\doxysubsubsection{\texorpdfstring{common\_iterator()}{common\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily common\+\_\+iterator\+::common\+\_\+iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcommon__iterator_a5bb0f4465ff31b46f77188fe253ade67}\label{classcommon__iterator_a5bb0f4465ff31b46f77188fe253ade67}} 
+\index{common\_iterator@{common\_iterator}!common\_iterator@{common\_iterator}}
+\index{common\_iterator@{common\_iterator}!common\_iterator@{common\_iterator}}
+\doxysubsubsection{\texorpdfstring{common\_iterator()}{common\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily common\+\_\+iterator\+::common\+\_\+iterator (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{const \mbox{\hyperlink{classcommon__iterator_a61d77b64fb74c43f016ce8cbde4b27c7}{container\+\_\+type}} \&}]{strides,  }\item[{const \mbox{\hyperlink{classcommon__iterator_a61d77b64fb74c43f016ce8cbde4b27c7}{container\+\_\+type}} \&}]{shape }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcommon__iterator_a29db8ccd525c10275c1cbcab64c56b95}\label{classcommon__iterator_a29db8ccd525c10275c1cbcab64c56b95}} 
+\index{common\_iterator@{common\_iterator}!data@{data}}
+\index{data@{data}!common\_iterator@{common\_iterator}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily void$\ast$ common\+\_\+iterator\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcommon__iterator_a6f54104a4b0847b87bab424db09b85d7}\label{classcommon__iterator_a6f54104a4b0847b87bab424db09b85d7}} 
+\index{common\_iterator@{common\_iterator}!increment@{increment}}
+\index{increment@{increment}!common\_iterator@{common\_iterator}}
+\doxysubsubsection{\texorpdfstring{increment()}{increment()}}
+{\footnotesize\ttfamily void common\+\_\+iterator\+::increment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcommon__iterator_a1b9c8bc2b0275b8b9b6f5410b6f96148}{size\+\_\+type}}}]{dim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{numpy_8h}{numpy.\+h}}\end{DoxyCompactItemize}

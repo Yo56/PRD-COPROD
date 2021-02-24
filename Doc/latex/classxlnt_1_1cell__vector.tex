@@ -1,0 +1,337 @@
+\hypertarget{classxlnt_1_1cell__vector}{}\doxysection{xlnt\+::cell\+\_\+vector Class Reference}
+\label{classxlnt_1_1cell__vector}\index{xlnt::cell\_vector@{xlnt::cell\_vector}}
+
+
+A cell vector is a linear (1D) range of cells, either vertical or horizontal depending on the major order specified in the constructor.  
+
+
+
+
+{\ttfamily \#include $<$cell\+\_\+vector.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classxlnt_1_1cell__vector_a62994a96700c3b99e27e92b1d60d4656}{iterator}} = \mbox{\hyperlink{classxlnt_1_1cell__iterator}{cell\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em Iterate over cells in a \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} with an iterator of this type. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classxlnt_1_1cell__vector_ac1a9772a2570df64c9ae2c80e2e868e6}{const\+\_\+iterator}} = \mbox{\hyperlink{classxlnt_1_1const__cell__iterator}{const\+\_\+cell\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em Iterate over const cells in a const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} with an iterator of this type. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classxlnt_1_1cell__vector_aa3058cd55363a569135c110065f2edc3}{reverse\+\_\+iterator}} = std\+::reverse\+\_\+iterator$<$ \mbox{\hyperlink{classxlnt_1_1cell__vector_a62994a96700c3b99e27e92b1d60d4656}{iterator}} $>$
+\begin{DoxyCompactList}\small\item\em Iterate over cells in a \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} in reverse oreder with an iterator of this type. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classxlnt_1_1cell__vector_aaf877a061c1149d41e77131c0025e5b2}{const\+\_\+reverse\+\_\+iterator}} = std\+::reverse\+\_\+iterator$<$ \mbox{\hyperlink{classxlnt_1_1cell__vector_ac1a9772a2570df64c9ae2c80e2e868e6}{const\+\_\+iterator}} $>$
+\begin{DoxyCompactList}\small\item\em Iterate over const cells in a const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} in reverse order with an iterator of this type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1cell__vector_a330bf13297eee224ff1a029a505d858c}{cell\+\_\+vector}} (\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} ws, const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&cursor, const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&ref, major\+\_\+order order, bool skip\+\_\+null, bool wrap)
+\begin{DoxyCompactList}\small\item\em Constructs a cell vector pointing to a given range in a given worksheet. order determines whether this vector is a row or a column. If skip\+\_\+null is true, iterating over this vector will skip empty cells. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell__vector_aef86c32af642960ca17713745b104e16}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if every cell in this vector is null (i.\+e. the cell doesn\textquotesingle{}t exist in the worksheet). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1cell__vector_a5d3e98894b06080420e9d3c694890375}{front}} ()
+\begin{DoxyCompactList}\small\item\em Returns the first cell in this vector. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1cell__vector_aeb4d823c35883d01551e177d175a14b8}{front}} () const
+\begin{DoxyCompactList}\small\item\em Returns the first cell in this vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1cell__vector_ae791afda0c2adbe472b3755b35a4f0ed}{back}} ()
+\begin{DoxyCompactList}\small\item\em Returns the last cell in this vector. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1cell__vector_acc0b57e777f94bc9f26cc181532c51d5}{back}} () const
+\begin{DoxyCompactList}\small\item\em Returns the last cell in this vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1cell__vector_ab5315ce95388d3e6c40db6af026259f6}{length}} () const
+\begin{DoxyCompactList}\small\item\em Returns the distance between the first and last cells in this vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__vector_a62994a96700c3b99e27e92b1d60d4656}{iterator}} \mbox{\hyperlink{classxlnt_1_1cell__vector_acf0574d59067645d6b037c72f0a6ac60}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the first cell in this vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__vector_a62994a96700c3b99e27e92b1d60d4656}{iterator}} \mbox{\hyperlink{classxlnt_1_1cell__vector_a7aadd50ffe0f5db191df7be85b9d7ca1}{end}} ()
+\begin{DoxyCompactList}\small\item\em Returns an iterator to a cell one-\/past-\/the-\/end of this vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__vector_ac1a9772a2570df64c9ae2c80e2e868e6}{const\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1cell__vector_a2b10381fe58f290e0058c83ee89e1466}{begin}} () const
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the first cell in this vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__vector_ac1a9772a2570df64c9ae2c80e2e868e6}{const\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1cell__vector_a81d3df3db8553fc00825758c4c324906}{cbegin}} () const
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the first cell in this vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__vector_ac1a9772a2570df64c9ae2c80e2e868e6}{const\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1cell__vector_a23aad17918997305e1d10e08aa5cb71c}{end}} () const
+\begin{DoxyCompactList}\small\item\em Returns an iterator to a cell one-\/past-\/the-\/end of this vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__vector_ac1a9772a2570df64c9ae2c80e2e868e6}{const\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1cell__vector_a729df3ac1c403663e4bfecc7c0307cb4}{cend}} () const
+\begin{DoxyCompactList}\small\item\em Returns an iterator to a cell one-\/past-\/the-\/end of this vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__vector_aa3058cd55363a569135c110065f2edc3}{reverse\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1cell__vector_a3db0818abf1dc23c386db1a43c70967a}{rbegin}} ()
+\begin{DoxyCompactList}\small\item\em Returns a reverse iterator to the first cell of this reversed vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__vector_aa3058cd55363a569135c110065f2edc3}{reverse\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1cell__vector_a4b75c5e9d031b701159432157635a75d}{rend}} ()
+\begin{DoxyCompactList}\small\item\em Returns a reverse iterator to to a cell one-\/past-\/the-\/end of this reversed vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__vector_aaf877a061c1149d41e77131c0025e5b2}{const\+\_\+reverse\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1cell__vector_af7881112b27c0b0434003bf77b313a57}{rbegin}} () const
+\begin{DoxyCompactList}\small\item\em Returns a reverse iterator to the first cell of this reversed vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__vector_aaf877a061c1149d41e77131c0025e5b2}{const\+\_\+reverse\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1cell__vector_a72095fc04380d017ae4524bed660f1fa}{rend}} () const
+\begin{DoxyCompactList}\small\item\em Returns a reverse iterator to to a cell one-\/past-\/the-\/end of this reversed vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__vector_aaf877a061c1149d41e77131c0025e5b2}{const\+\_\+reverse\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1cell__vector_af9d72065632911f218a7cfaa98fbf422}{crbegin}} () const
+\begin{DoxyCompactList}\small\item\em Returns a reverse iterator to the first cell of this reversed vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__vector_aaf877a061c1149d41e77131c0025e5b2}{const\+\_\+reverse\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1cell__vector_a01f03f2be4bfbf5daa42f68484e0d3c0}{crend}} () const
+\begin{DoxyCompactList}\small\item\em Returns a reverse iterator to to a cell one-\/past-\/the-\/end of this reversed vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1cell__vector_a694a0a481d1d905ffaca02f22e77366b}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} column\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Returns the cell column\+\_\+index distance away from the first cell in this vector. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1cell__vector_a88298b5187b93ae2d27892f7728ee76e}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} column\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Returns the cell column\+\_\+index distance away from the first cell in this vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A cell vector is a linear (1D) range of cells, either vertical or horizontal depending on the major order specified in the constructor. 
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_ac1a9772a2570df64c9ae2c80e2e868e6}\label{classxlnt_1_1cell__vector_ac1a9772a2570df64c9ae2c80e2e868e6}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!const\_iterator@{const\_iterator}}
+\index{const\_iterator@{const\_iterator}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{const\_iterator}{const\_iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1cell__vector_ac1a9772a2570df64c9ae2c80e2e868e6}{xlnt\+::cell\+\_\+vector\+::const\+\_\+iterator}} =  \mbox{\hyperlink{classxlnt_1_1const__cell__iterator}{const\+\_\+cell\+\_\+iterator}}}
+
+
+
+Iterate over const cells in a const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} with an iterator of this type. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_aaf877a061c1149d41e77131c0025e5b2}\label{classxlnt_1_1cell__vector_aaf877a061c1149d41e77131c0025e5b2}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!const\_reverse\_iterator@{const\_reverse\_iterator}}
+\index{const\_reverse\_iterator@{const\_reverse\_iterator}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{const\_reverse\_iterator}{const\_reverse\_iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1cell__vector_aaf877a061c1149d41e77131c0025e5b2}{xlnt\+::cell\+\_\+vector\+::const\+\_\+reverse\+\_\+iterator}} =  std\+::reverse\+\_\+iterator$<$\mbox{\hyperlink{classxlnt_1_1cell__vector_ac1a9772a2570df64c9ae2c80e2e868e6}{const\+\_\+iterator}}$>$}
+
+
+
+Iterate over const cells in a const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} in reverse order with an iterator of this type. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_a62994a96700c3b99e27e92b1d60d4656}\label{classxlnt_1_1cell__vector_a62994a96700c3b99e27e92b1d60d4656}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!iterator@{iterator}}
+\index{iterator@{iterator}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1cell__vector_a62994a96700c3b99e27e92b1d60d4656}{xlnt\+::cell\+\_\+vector\+::iterator}} =  \mbox{\hyperlink{classxlnt_1_1cell__iterator}{cell\+\_\+iterator}}}
+
+
+
+Iterate over cells in a \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} with an iterator of this type. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_aa3058cd55363a569135c110065f2edc3}\label{classxlnt_1_1cell__vector_aa3058cd55363a569135c110065f2edc3}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!reverse\_iterator@{reverse\_iterator}}
+\index{reverse\_iterator@{reverse\_iterator}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{reverse\_iterator}{reverse\_iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1cell__vector_aa3058cd55363a569135c110065f2edc3}{xlnt\+::cell\+\_\+vector\+::reverse\+\_\+iterator}} =  std\+::reverse\+\_\+iterator$<$\mbox{\hyperlink{classxlnt_1_1cell__vector_a62994a96700c3b99e27e92b1d60d4656}{iterator}}$>$}
+
+
+
+Iterate over cells in a \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} in reverse oreder with an iterator of this type. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_a330bf13297eee224ff1a029a505d858c}\label{classxlnt_1_1cell__vector_a330bf13297eee224ff1a029a505d858c}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!cell\_vector@{cell\_vector}}
+\index{cell\_vector@{cell\_vector}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{cell\_vector()}{cell\_vector()}}
+{\footnotesize\ttfamily xlnt\+::cell\+\_\+vector\+::cell\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}}]{ws,  }\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{cursor,  }\item[{const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&}]{ref,  }\item[{major\+\_\+order}]{order,  }\item[{bool}]{skip\+\_\+null,  }\item[{bool}]{wrap }\end{DoxyParamCaption})}
+
+
+
+Constructs a cell vector pointing to a given range in a given worksheet. order determines whether this vector is a row or a column. If skip\+\_\+null is true, iterating over this vector will skip empty cells. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_ae791afda0c2adbe472b3755b35a4f0ed}\label{classxlnt_1_1cell__vector_ae791afda0c2adbe472b3755b35a4f0ed}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!back@{back}}
+\index{back@{back}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell}{cell}} xlnt\+::cell\+\_\+vector\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the last cell in this vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_acc0b57e777f94bc9f26cc181532c51d5}\label{classxlnt_1_1cell__vector_acc0b57e777f94bc9f26cc181532c51d5}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!back@{back}}
+\index{back@{back}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} xlnt\+::cell\+\_\+vector\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the last cell in this vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_acf0574d59067645d6b037c72f0a6ac60}\label{classxlnt_1_1cell__vector_acf0574d59067645d6b037c72f0a6ac60}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!begin@{begin}}
+\index{begin@{begin}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector_a62994a96700c3b99e27e92b1d60d4656}{cell\+\_\+vector\+::iterator}} xlnt\+::cell\+\_\+vector\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns an iterator to the first cell in this vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_a2b10381fe58f290e0058c83ee89e1466}\label{classxlnt_1_1cell__vector_a2b10381fe58f290e0058c83ee89e1466}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!begin@{begin}}
+\index{begin@{begin}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector_ac1a9772a2570df64c9ae2c80e2e868e6}{cell\+\_\+vector\+::const\+\_\+iterator}} xlnt\+::cell\+\_\+vector\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns an iterator to the first cell in this vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_a81d3df3db8553fc00825758c4c324906}\label{classxlnt_1_1cell__vector_a81d3df3db8553fc00825758c4c324906}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{cbegin()}{cbegin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector_ac1a9772a2570df64c9ae2c80e2e868e6}{cell\+\_\+vector\+::const\+\_\+iterator}} xlnt\+::cell\+\_\+vector\+::cbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns an iterator to the first cell in this vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_a729df3ac1c403663e4bfecc7c0307cb4}\label{classxlnt_1_1cell__vector_a729df3ac1c403663e4bfecc7c0307cb4}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!cend@{cend}}
+\index{cend@{cend}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{cend()}{cend()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector_ac1a9772a2570df64c9ae2c80e2e868e6}{cell\+\_\+vector\+::const\+\_\+iterator}} xlnt\+::cell\+\_\+vector\+::cend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns an iterator to a cell one-\/past-\/the-\/end of this vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_af9d72065632911f218a7cfaa98fbf422}\label{classxlnt_1_1cell__vector_af9d72065632911f218a7cfaa98fbf422}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!crbegin@{crbegin}}
+\index{crbegin@{crbegin}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{crbegin()}{crbegin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector_aaf877a061c1149d41e77131c0025e5b2}{cell\+\_\+vector\+::const\+\_\+reverse\+\_\+iterator}} xlnt\+::cell\+\_\+vector\+::crbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a reverse iterator to the first cell of this reversed vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_a01f03f2be4bfbf5daa42f68484e0d3c0}\label{classxlnt_1_1cell__vector_a01f03f2be4bfbf5daa42f68484e0d3c0}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!crend@{crend}}
+\index{crend@{crend}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{crend()}{crend()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector_aaf877a061c1149d41e77131c0025e5b2}{cell\+\_\+vector\+::const\+\_\+reverse\+\_\+iterator}} xlnt\+::cell\+\_\+vector\+::crend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a reverse iterator to to a cell one-\/past-\/the-\/end of this reversed vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_aef86c32af642960ca17713745b104e16}\label{classxlnt_1_1cell__vector_aef86c32af642960ca17713745b104e16}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!empty@{empty}}
+\index{empty@{empty}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+\_\+vector\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if every cell in this vector is null (i.\+e. the cell doesn\textquotesingle{}t exist in the worksheet). 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_a7aadd50ffe0f5db191df7be85b9d7ca1}\label{classxlnt_1_1cell__vector_a7aadd50ffe0f5db191df7be85b9d7ca1}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!end@{end}}
+\index{end@{end}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector_a62994a96700c3b99e27e92b1d60d4656}{cell\+\_\+vector\+::iterator}} xlnt\+::cell\+\_\+vector\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns an iterator to a cell one-\/past-\/the-\/end of this vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_a23aad17918997305e1d10e08aa5cb71c}\label{classxlnt_1_1cell__vector_a23aad17918997305e1d10e08aa5cb71c}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!end@{end}}
+\index{end@{end}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector_ac1a9772a2570df64c9ae2c80e2e868e6}{cell\+\_\+vector\+::const\+\_\+iterator}} xlnt\+::cell\+\_\+vector\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns an iterator to a cell one-\/past-\/the-\/end of this vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_a5d3e98894b06080420e9d3c694890375}\label{classxlnt_1_1cell__vector_a5d3e98894b06080420e9d3c694890375}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!front@{front}}
+\index{front@{front}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell}{cell}} xlnt\+::cell\+\_\+vector\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the first cell in this vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_aeb4d823c35883d01551e177d175a14b8}\label{classxlnt_1_1cell__vector_aeb4d823c35883d01551e177d175a14b8}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!front@{front}}
+\index{front@{front}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} xlnt\+::cell\+\_\+vector\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the first cell in this vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_ab5315ce95388d3e6c40db6af026259f6}\label{classxlnt_1_1cell__vector_ab5315ce95388d3e6c40db6af026259f6}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!length@{length}}
+\index{length@{length}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::cell\+\_\+vector\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the distance between the first and last cells in this vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_a694a0a481d1d905ffaca02f22e77366b}\label{classxlnt_1_1cell__vector_a694a0a481d1d905ffaca02f22e77366b}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell}{cell}} xlnt\+::cell\+\_\+vector\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{column\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Returns the cell column\+\_\+index distance away from the first cell in this vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_a88298b5187b93ae2d27892f7728ee76e}\label{classxlnt_1_1cell__vector_a88298b5187b93ae2d27892f7728ee76e}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} xlnt\+::cell\+\_\+vector\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{column\+\_\+index }\end{DoxyParamCaption}) const}
+
+
+
+Returns the cell column\+\_\+index distance away from the first cell in this vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_a3db0818abf1dc23c386db1a43c70967a}\label{classxlnt_1_1cell__vector_a3db0818abf1dc23c386db1a43c70967a}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{rbegin()}{rbegin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector_aa3058cd55363a569135c110065f2edc3}{cell\+\_\+vector\+::reverse\+\_\+iterator}} xlnt\+::cell\+\_\+vector\+::rbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a reverse iterator to the first cell of this reversed vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_af7881112b27c0b0434003bf77b313a57}\label{classxlnt_1_1cell__vector_af7881112b27c0b0434003bf77b313a57}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{rbegin()}{rbegin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector_aaf877a061c1149d41e77131c0025e5b2}{cell\+\_\+vector\+::const\+\_\+reverse\+\_\+iterator}} xlnt\+::cell\+\_\+vector\+::rbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a reverse iterator to the first cell of this reversed vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_a4b75c5e9d031b701159432157635a75d}\label{classxlnt_1_1cell__vector_a4b75c5e9d031b701159432157635a75d}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!rend@{rend}}
+\index{rend@{rend}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{rend()}{rend()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector_aa3058cd55363a569135c110065f2edc3}{cell\+\_\+vector\+::reverse\+\_\+iterator}} xlnt\+::cell\+\_\+vector\+::rend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a reverse iterator to to a cell one-\/past-\/the-\/end of this reversed vector. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__vector_a72095fc04380d017ae4524bed660f1fa}\label{classxlnt_1_1cell__vector_a72095fc04380d017ae4524bed660f1fa}} 
+\index{xlnt::cell\_vector@{xlnt::cell\_vector}!rend@{rend}}
+\index{rend@{rend}!xlnt::cell\_vector@{xlnt::cell\_vector}}
+\doxysubsubsection{\texorpdfstring{rend()}{rend()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector_aaf877a061c1149d41e77131c0025e5b2}{cell\+\_\+vector\+::const\+\_\+reverse\+\_\+iterator}} xlnt\+::cell\+\_\+vector\+::rend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a reverse iterator to to a cell one-\/past-\/the-\/end of this reversed vector. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/worksheet/\mbox{\hyperlink{cell__vector_8hpp}{cell\+\_\+vector.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/worksheet/\mbox{\hyperlink{cell__vector_8cpp}{cell\+\_\+vector.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,235 @@
+\hypertarget{classxlnt_1_1comment}{}\doxysection{xlnt\+::comment Class Reference}
+\label{classxlnt_1_1comment}\index{xlnt::comment@{xlnt::comment}}
+
+
+A comment can be applied to a cell to provide extra information about its contents.  
+
+
+
+
+{\ttfamily \#include $<$comment.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1comment_a03fc5209f4e28579dce92a749d116568}{comment}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new blank comment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1comment_a7056409a24dd81bbedf5dd772a367d7d}{comment}} (const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&\mbox{\hyperlink{classxlnt_1_1comment_a07332297ef8e70ed3338619eff519980}{text}}, const std\+::string \&\mbox{\hyperlink{classxlnt_1_1comment_a8afc24769ccfbb380748103cd55bb8a7}{author}})
+\begin{DoxyCompactList}\small\item\em Constructs a new comment with the given text and author. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1comment_ad0c737082b2e85772a0d71e5d36be679}{comment}} (const std\+::string \&\mbox{\hyperlink{classxlnt_1_1comment_a07332297ef8e70ed3338619eff519980}{text}}, const std\+::string \&\mbox{\hyperlink{classxlnt_1_1comment_a8afc24769ccfbb380748103cd55bb8a7}{author}})
+\begin{DoxyCompactList}\small\item\em Constructs a new comment with the given unformatted text and author. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \mbox{\hyperlink{classxlnt_1_1comment_a07332297ef8e70ed3338619eff519980}{text}} () const
+\begin{DoxyCompactList}\small\item\em Returns the text that will be displayed for this comment. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1comment_a1c4207f2d2c65f13d6edd2b63463be8f}{plain\+\_\+text}} () const
+\begin{DoxyCompactList}\small\item\em Returns the plain text that will be displayed for this comment without formatting information. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1comment_a8afc24769ccfbb380748103cd55bb8a7}{author}} () const
+\begin{DoxyCompactList}\small\item\em Returns the author of this comment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1comment_a83fc5d6dfa28fd55f23cf36092eade1e}{hide}} ()
+\begin{DoxyCompactList}\small\item\em Makes this comment only visible when the associated cell is hovered. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1comment_a4c36c1f9cf08ae4f37d803acde98c1f8}{show}} ()
+\begin{DoxyCompactList}\small\item\em Makes this comment always visible. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1comment_aab17bcf37d41405d4f98e4e6c67c42af}{visible}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this comment is not hidden. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1comment_adf035b69cd259b855d21caa5608c586e}{position}} (int \mbox{\hyperlink{classxlnt_1_1comment_a5a9c2386250118ca6be2a7d56c210ee4}{left}}, int \mbox{\hyperlink{classxlnt_1_1comment_a2864eb7775a8eafbd19c9c9aff7f7042}{top}})
+\begin{DoxyCompactList}\small\item\em Sets the absolute position of this cell to the given coordinates. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classxlnt_1_1comment_a5a9c2386250118ca6be2a7d56c210ee4}{left}} () const
+\begin{DoxyCompactList}\small\item\em Returns the distance from the left side of the sheet to the left side of the comment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classxlnt_1_1comment_a2864eb7775a8eafbd19c9c9aff7f7042}{top}} () const
+\begin{DoxyCompactList}\small\item\em Returns the distance from the top of the sheet to the top of the comment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1comment_a671bf5e9bdaaa0f4103450d600fffc75}{size}} (int \mbox{\hyperlink{classxlnt_1_1comment_a747873a60f26b9fe8e6bddbdb74d8ea1}{width}}, int \mbox{\hyperlink{classxlnt_1_1comment_aeb4147263826510782857d0625118b96}{height}})
+\begin{DoxyCompactList}\small\item\em Sets the size of the comment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classxlnt_1_1comment_a747873a60f26b9fe8e6bddbdb74d8ea1}{width}} () const
+\begin{DoxyCompactList}\small\item\em Returns the width of this comment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classxlnt_1_1comment_aeb4147263826510782857d0625118b96}{height}} () const
+\begin{DoxyCompactList}\small\item\em Returns the height of this comment. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1comment_a930125758e360a70acfb69692a38dc9d}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1comment}{comment}} \&other) const
+\begin{DoxyCompactList}\small\item\em Return true if this comment is equivalent to other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1comment_ac6a1f1ac8317f06b66c87b948a38487e}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1comment}{comment}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this comment is not equivalent to other. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A comment can be applied to a cell to provide extra information about its contents. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1comment_a03fc5209f4e28579dce92a749d116568}\label{classxlnt_1_1comment_a03fc5209f4e28579dce92a749d116568}} 
+\index{xlnt::comment@{xlnt::comment}!comment@{comment}}
+\index{comment@{comment}!xlnt::comment@{xlnt::comment}}
+\doxysubsubsection{\texorpdfstring{comment()}{comment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily xlnt\+::comment\+::comment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new blank comment. 
+
+\mbox{\Hypertarget{classxlnt_1_1comment_a7056409a24dd81bbedf5dd772a367d7d}\label{classxlnt_1_1comment_a7056409a24dd81bbedf5dd772a367d7d}} 
+\index{xlnt::comment@{xlnt::comment}!comment@{comment}}
+\index{comment@{comment}!xlnt::comment@{xlnt::comment}}
+\doxysubsubsection{\texorpdfstring{comment()}{comment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily xlnt\+::comment\+::comment (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&}]{text,  }\item[{const std\+::string \&}]{author }\end{DoxyParamCaption})}
+
+
+
+Constructs a new comment with the given text and author. 
+
+\mbox{\Hypertarget{classxlnt_1_1comment_ad0c737082b2e85772a0d71e5d36be679}\label{classxlnt_1_1comment_ad0c737082b2e85772a0d71e5d36be679}} 
+\index{xlnt::comment@{xlnt::comment}!comment@{comment}}
+\index{comment@{comment}!xlnt::comment@{xlnt::comment}}
+\doxysubsubsection{\texorpdfstring{comment()}{comment()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily xlnt\+::comment\+::comment (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{const std\+::string \&}]{author }\end{DoxyParamCaption})}
+
+
+
+Constructs a new comment with the given unformatted text and author. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1comment_a8afc24769ccfbb380748103cd55bb8a7}\label{classxlnt_1_1comment_a8afc24769ccfbb380748103cd55bb8a7}} 
+\index{xlnt::comment@{xlnt::comment}!author@{author}}
+\index{author@{author}!xlnt::comment@{xlnt::comment}}
+\doxysubsubsection{\texorpdfstring{author()}{author()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::comment\+::author (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the author of this comment. 
+
+\mbox{\Hypertarget{classxlnt_1_1comment_aeb4147263826510782857d0625118b96}\label{classxlnt_1_1comment_aeb4147263826510782857d0625118b96}} 
+\index{xlnt::comment@{xlnt::comment}!height@{height}}
+\index{height@{height}!xlnt::comment@{xlnt::comment}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily int xlnt\+::comment\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the height of this comment. 
+
+\mbox{\Hypertarget{classxlnt_1_1comment_a83fc5d6dfa28fd55f23cf36092eade1e}\label{classxlnt_1_1comment_a83fc5d6dfa28fd55f23cf36092eade1e}} 
+\index{xlnt::comment@{xlnt::comment}!hide@{hide}}
+\index{hide@{hide}!xlnt::comment@{xlnt::comment}}
+\doxysubsubsection{\texorpdfstring{hide()}{hide()}}
+{\footnotesize\ttfamily void xlnt\+::comment\+::hide (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Makes this comment only visible when the associated cell is hovered. 
+
+\mbox{\Hypertarget{classxlnt_1_1comment_a5a9c2386250118ca6be2a7d56c210ee4}\label{classxlnt_1_1comment_a5a9c2386250118ca6be2a7d56c210ee4}} 
+\index{xlnt::comment@{xlnt::comment}!left@{left}}
+\index{left@{left}!xlnt::comment@{xlnt::comment}}
+\doxysubsubsection{\texorpdfstring{left()}{left()}}
+{\footnotesize\ttfamily int xlnt\+::comment\+::left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the distance from the left side of the sheet to the left side of the comment. 
+
+\mbox{\Hypertarget{classxlnt_1_1comment_ac6a1f1ac8317f06b66c87b948a38487e}\label{classxlnt_1_1comment_ac6a1f1ac8317f06b66c87b948a38487e}} 
+\index{xlnt::comment@{xlnt::comment}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::comment@{xlnt::comment}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool xlnt\+::comment\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1comment}{comment}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this comment is not equivalent to other. 
+
+\mbox{\Hypertarget{classxlnt_1_1comment_a930125758e360a70acfb69692a38dc9d}\label{classxlnt_1_1comment_a930125758e360a70acfb69692a38dc9d}} 
+\index{xlnt::comment@{xlnt::comment}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::comment@{xlnt::comment}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::comment\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1comment}{comment}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Return true if this comment is equivalent to other. 
+
+\mbox{\Hypertarget{classxlnt_1_1comment_a1c4207f2d2c65f13d6edd2b63463be8f}\label{classxlnt_1_1comment_a1c4207f2d2c65f13d6edd2b63463be8f}} 
+\index{xlnt::comment@{xlnt::comment}!plain\_text@{plain\_text}}
+\index{plain\_text@{plain\_text}!xlnt::comment@{xlnt::comment}}
+\doxysubsubsection{\texorpdfstring{plain\_text()}{plain\_text()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::comment\+::plain\+\_\+text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the plain text that will be displayed for this comment without formatting information. 
+
+\mbox{\Hypertarget{classxlnt_1_1comment_adf035b69cd259b855d21caa5608c586e}\label{classxlnt_1_1comment_adf035b69cd259b855d21caa5608c586e}} 
+\index{xlnt::comment@{xlnt::comment}!position@{position}}
+\index{position@{position}!xlnt::comment@{xlnt::comment}}
+\doxysubsubsection{\texorpdfstring{position()}{position()}}
+{\footnotesize\ttfamily void xlnt\+::comment\+::position (\begin{DoxyParamCaption}\item[{int}]{left,  }\item[{int}]{top }\end{DoxyParamCaption})}
+
+
+
+Sets the absolute position of this cell to the given coordinates. 
+
+\mbox{\Hypertarget{classxlnt_1_1comment_a4c36c1f9cf08ae4f37d803acde98c1f8}\label{classxlnt_1_1comment_a4c36c1f9cf08ae4f37d803acde98c1f8}} 
+\index{xlnt::comment@{xlnt::comment}!show@{show}}
+\index{show@{show}!xlnt::comment@{xlnt::comment}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void xlnt\+::comment\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Makes this comment always visible. 
+
+\mbox{\Hypertarget{classxlnt_1_1comment_a671bf5e9bdaaa0f4103450d600fffc75}\label{classxlnt_1_1comment_a671bf5e9bdaaa0f4103450d600fffc75}} 
+\index{xlnt::comment@{xlnt::comment}!size@{size}}
+\index{size@{size}!xlnt::comment@{xlnt::comment}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily void xlnt\+::comment\+::size (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Sets the size of the comment. 
+
+\mbox{\Hypertarget{classxlnt_1_1comment_a07332297ef8e70ed3338619eff519980}\label{classxlnt_1_1comment_a07332297ef8e70ed3338619eff519980}} 
+\index{xlnt::comment@{xlnt::comment}!text@{text}}
+\index{text@{text}!xlnt::comment@{xlnt::comment}}
+\doxysubsubsection{\texorpdfstring{text()}{text()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} xlnt\+::comment\+::text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the text that will be displayed for this comment. 
+
+\mbox{\Hypertarget{classxlnt_1_1comment_a2864eb7775a8eafbd19c9c9aff7f7042}\label{classxlnt_1_1comment_a2864eb7775a8eafbd19c9c9aff7f7042}} 
+\index{xlnt::comment@{xlnt::comment}!top@{top}}
+\index{top@{top}!xlnt::comment@{xlnt::comment}}
+\doxysubsubsection{\texorpdfstring{top()}{top()}}
+{\footnotesize\ttfamily int xlnt\+::comment\+::top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the distance from the top of the sheet to the top of the comment. 
+
+\mbox{\Hypertarget{classxlnt_1_1comment_aab17bcf37d41405d4f98e4e6c67c42af}\label{classxlnt_1_1comment_aab17bcf37d41405d4f98e4e6c67c42af}} 
+\index{xlnt::comment@{xlnt::comment}!visible@{visible}}
+\index{visible@{visible}!xlnt::comment@{xlnt::comment}}
+\doxysubsubsection{\texorpdfstring{visible()}{visible()}}
+{\footnotesize\ttfamily bool xlnt\+::comment\+::visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this comment is not hidden. 
+
+\mbox{\Hypertarget{classxlnt_1_1comment_a747873a60f26b9fe8e6bddbdb74d8ea1}\label{classxlnt_1_1comment_a747873a60f26b9fe8e6bddbdb74d8ea1}} 
+\index{xlnt::comment@{xlnt::comment}!width@{width}}
+\index{width@{width}!xlnt::comment@{xlnt::comment}}
+\doxysubsubsection{\texorpdfstring{width()}{width()}}
+{\footnotesize\ttfamily int xlnt\+::comment\+::width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the width of this comment. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/cell/\mbox{\hyperlink{comment_8hpp}{comment.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/cell/\mbox{\hyperlink{comment_8cpp}{comment.\+cpp}}\end{DoxyCompactItemize}

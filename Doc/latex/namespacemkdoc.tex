@@ -1,0 +1,237 @@
+\hypertarget{namespacemkdoc}{}\doxysection{mkdoc Namespace Reference}
+\label{namespacemkdoc}\index{mkdoc@{mkdoc}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmkdoc_1_1_extraction_thread}{Extraction\+Thread}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacemkdoc_a85ae95dfe8536ee978dcacf1f5dcfe00}{d}} (s)
+\item 
+def \mbox{\hyperlink{namespacemkdoc_aba928e5c95e96f8dec657143cf20618b}{sanitize\+\_\+name}} (\mbox{\hyperlink{structname}{name}})
+\item 
+def \mbox{\hyperlink{namespacemkdoc_a858ea0c3045aa0c993dfa4b614a2fef0}{process\+\_\+comment}} (comment)
+\item 
+def \mbox{\hyperlink{namespacemkdoc_a4e290cfb6c23e5bd2f57e6686b500aa4}{extract}} (filename, node, \mbox{\hyperlink{structprefix}{prefix}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlist}{list}} \mbox{\hyperlink{namespacemkdoc_a39fcd8cacdb85662261873832c8cdbc4}{RECURSE\+\_\+\+LIST}}
+\item 
+\mbox{\hyperlink{classlist}{list}} \mbox{\hyperlink{namespacemkdoc_ad7a4a26a7761f2006a2d5b2008f8a3ed}{PRINT\+\_\+\+LIST}}
+\item 
+dictionary \mbox{\hyperlink{namespacemkdoc_ad4b3ba2731787584b72a4988e043a7f4}{CPP\+\_\+\+OPERATORS}}
+\item 
+\mbox{\hyperlink{namespacemkdoc_a78cb707792ea1729ef7e8d3887275e66}{job\+\_\+count}} = cpu\+\_\+count()
+\item 
+\mbox{\hyperlink{namespacemkdoc_a2293819b2cd2fceaf9736ba54d68c05a}{job\+\_\+semaphore}} = Semaphore(\mbox{\hyperlink{namespacemkdoc_a78cb707792ea1729ef7e8d3887275e66}{job\+\_\+count}})
+\item 
+\mbox{\hyperlink{classlist}{list}} \mbox{\hyperlink{namespacemkdoc_a6299c53cb772acb4a1cb315a21268404}{output}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{classlist}{list}} \mbox{\hyperlink{namespacemkdoc_a2cff62850018cb669b1d13bb8c335018}{parameters}} = \mbox{[}\textquotesingle{}-\/x\textquotesingle{}, \textquotesingle{}c++\textquotesingle{}, \textquotesingle{}-\/std=c++11\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{classlist}{list}} \mbox{\hyperlink{namespacemkdoc_ad5cf7d23761d598592b4ff19c50f1808}{filenames}} = \mbox{[}$\,$\mbox{]}
+\item 
+string \mbox{\hyperlink{namespacemkdoc_afd27915357cd6df92f7e64673bd208b5}{dev\+\_\+path}} = \textquotesingle{}/Applications/Xcode.\+app/Contents/Developer/\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacemkdoc_a79687e87b072bd21df37d124afa374ef}{lib\+\_\+dir}} = \mbox{\hyperlink{namespacemkdoc_afd27915357cd6df92f7e64673bd208b5}{dev\+\_\+path}} + \textquotesingle{}Toolchains/Xcode\+Default.\+xctoolchain/usr/lib/\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacemkdoc_a812adec5149aaa5538af4bd942c1f480}{sdk\+\_\+dir}} = \mbox{\hyperlink{namespacemkdoc_afd27915357cd6df92f7e64673bd208b5}{dev\+\_\+path}} + \textquotesingle{}Platforms/Mac\+OSX.\+platform/Developer/SDKs\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacemkdoc_adac3931090ead65140d186397cf36a55}{libclang}} = \mbox{\hyperlink{namespacemkdoc_a79687e87b072bd21df37d124afa374ef}{lib\+\_\+dir}} + \textquotesingle{}libclang.\+dylib\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespacemkdoc_a1e126f52ce0b98ad1c7967e6a4034ece}{sysroot\+\_\+dir}} = os.\+path.\+join(\mbox{\hyperlink{namespacemkdoc_a812adec5149aaa5538af4bd942c1f480}{sdk\+\_\+dir}}, next(os.\+walk(\mbox{\hyperlink{namespacemkdoc_a812adec5149aaa5538af4bd942c1f480}{sdk\+\_\+dir}}))\mbox{[}1\mbox{]}\mbox{[}0\mbox{]})
+\item 
+\mbox{\hyperlink{namespacemkdoc_ab136f9c1bffd08b25a73887b8f6c1c91}{thr}} = \mbox{\hyperlink{classmkdoc_1_1_extraction_thread}{Extraction\+Thread}}(filename, \mbox{\hyperlink{namespacemkdoc_a2cff62850018cb669b1d13bb8c335018}{parameters}})
+\item 
+\mbox{\hyperlink{namespacemkdoc_a61b86360716449119d63c43972c1b1be}{file}}
+\item 
+int \mbox{\hyperlink{namespacemkdoc_a9dd4ab426bd81d51c31af8f18171b3c5}{name\+\_\+ctr}} = 1
+\item 
+\mbox{\hyperlink{namespacemkdoc_a029677ada5b49414de07f350a8f3f657}{name\+\_\+prev}} = None
+\item 
+string \mbox{\hyperlink{namespacemkdoc_a1f8f832af63724a053f825faeeff418b}{name}} = \mbox{\hyperlink{structname}{name}} + \char`\"{}\+\_\+\%i\char`\"{} \% name\+\_\+ctr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacemkdoc_a85ae95dfe8536ee978dcacf1f5dcfe00}\label{namespacemkdoc_a85ae95dfe8536ee978dcacf1f5dcfe00}} 
+\index{mkdoc@{mkdoc}!d@{d}}
+\index{d@{d}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{d()}{d()}}
+{\footnotesize\ttfamily def mkdoc.\+d (\begin{DoxyParamCaption}\item[{}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacemkdoc_a4e290cfb6c23e5bd2f57e6686b500aa4}\label{namespacemkdoc_a4e290cfb6c23e5bd2f57e6686b500aa4}} 
+\index{mkdoc@{mkdoc}!extract@{extract}}
+\index{extract@{extract}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{extract()}{extract()}}
+{\footnotesize\ttfamily def mkdoc.\+extract (\begin{DoxyParamCaption}\item[{}]{filename,  }\item[{}]{node,  }\item[{}]{prefix }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacemkdoc_a858ea0c3045aa0c993dfa4b614a2fef0}\label{namespacemkdoc_a858ea0c3045aa0c993dfa4b614a2fef0}} 
+\index{mkdoc@{mkdoc}!process\_comment@{process\_comment}}
+\index{process\_comment@{process\_comment}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{process\_comment()}{process\_comment()}}
+{\footnotesize\ttfamily def mkdoc.\+process\+\_\+comment (\begin{DoxyParamCaption}\item[{}]{comment }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacemkdoc_aba928e5c95e96f8dec657143cf20618b}\label{namespacemkdoc_aba928e5c95e96f8dec657143cf20618b}} 
+\index{mkdoc@{mkdoc}!sanitize\_name@{sanitize\_name}}
+\index{sanitize\_name@{sanitize\_name}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{sanitize\_name()}{sanitize\_name()}}
+{\footnotesize\ttfamily def mkdoc.\+sanitize\+\_\+name (\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacemkdoc_ad4b3ba2731787584b72a4988e043a7f4}\label{namespacemkdoc_ad4b3ba2731787584b72a4988e043a7f4}} 
+\index{mkdoc@{mkdoc}!CPP\_OPERATORS@{CPP\_OPERATORS}}
+\index{CPP\_OPERATORS@{CPP\_OPERATORS}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{CPP\_OPERATORS}{CPP\_OPERATORS}}
+{\footnotesize\ttfamily mkdoc.\+CPP\+\_\+\+OPERATORS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     \textcolor{stringliteral}{'<='}: \textcolor{stringliteral}{'le'}, \textcolor{stringliteral}{'>='}: \textcolor{stringliteral}{'ge'}, \textcolor{stringliteral}{'=='}: \textcolor{stringliteral}{'eq'}, \textcolor{stringliteral}{'!='}: \textcolor{stringliteral}{'ne'}, \textcolor{stringliteral}{'[]'}: \textcolor{stringliteral}{'array'},}
+\DoxyCodeLine{3     \textcolor{stringliteral}{'+='}: \textcolor{stringliteral}{'iadd'}, \textcolor{stringliteral}{'-\/='}: \textcolor{stringliteral}{'isub'}, \textcolor{stringliteral}{'*='}: \textcolor{stringliteral}{'imul'}, \textcolor{stringliteral}{'/='}: \textcolor{stringliteral}{'idiv'}, \textcolor{stringliteral}{'\%='}:}
+\DoxyCodeLine{4     \textcolor{stringliteral}{'imod'}, \textcolor{stringliteral}{'\&='}: \textcolor{stringliteral}{'iand'}, \textcolor{stringliteral}{'|='}: \textcolor{stringliteral}{'ior'}, \textcolor{stringliteral}{'\string^='}: \textcolor{stringliteral}{'ixor'}, \textcolor{stringliteral}{'<<='}: \textcolor{stringliteral}{'ilshift'},}
+\DoxyCodeLine{5     \textcolor{stringliteral}{'>>='}: \textcolor{stringliteral}{'irshift'}, \textcolor{stringliteral}{'++'}: \textcolor{stringliteral}{'inc'}, \textcolor{stringliteral}{'-\/-\/'}: \textcolor{stringliteral}{'dec'}, \textcolor{stringliteral}{'<<'}: \textcolor{stringliteral}{'lshift'}, \textcolor{stringliteral}{'>>'}:}
+\DoxyCodeLine{6     \textcolor{stringliteral}{'rshift'}, \textcolor{stringliteral}{'\&\&'}: \textcolor{stringliteral}{'land'}, \textcolor{stringliteral}{'||'}: \textcolor{stringliteral}{'lor'}, \textcolor{stringliteral}{'!'}: \textcolor{stringliteral}{'lnot'}, \textcolor{stringliteral}{'\string~'}: \textcolor{stringliteral}{'bnot'},}
+\DoxyCodeLine{7     \textcolor{stringliteral}{'\&'}: \textcolor{stringliteral}{'band'}, \textcolor{stringliteral}{'|'}: \textcolor{stringliteral}{'bor'}, \textcolor{stringliteral}{'+'}: \textcolor{stringliteral}{'add'}, \textcolor{stringliteral}{'-\/'}: \textcolor{stringliteral}{'sub'}, \textcolor{stringliteral}{'*'}: \textcolor{stringliteral}{'mul'}, \textcolor{stringliteral}{'/'}:}
+\DoxyCodeLine{8     \textcolor{stringliteral}{'div'}, \textcolor{stringliteral}{'\%'}: \textcolor{stringliteral}{'mod'}, \textcolor{stringliteral}{'<'}: \textcolor{stringliteral}{'lt'}, \textcolor{stringliteral}{'>'}: \textcolor{stringliteral}{'gt'}, \textcolor{stringliteral}{'='}: \textcolor{stringliteral}{'assign'}, \textcolor{stringliteral}{'()'}: \textcolor{stringliteral}{'call'}}
+\DoxyCodeLine{9 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacemkdoc_afd27915357cd6df92f7e64673bd208b5}\label{namespacemkdoc_afd27915357cd6df92f7e64673bd208b5}} 
+\index{mkdoc@{mkdoc}!dev\_path@{dev\_path}}
+\index{dev\_path@{dev\_path}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{dev\_path}{dev\_path}}
+{\footnotesize\ttfamily string mkdoc.\+dev\+\_\+path = \textquotesingle{}/Applications/Xcode.\+app/Contents/Developer/\textquotesingle{}}
+
+\mbox{\Hypertarget{namespacemkdoc_a61b86360716449119d63c43972c1b1be}\label{namespacemkdoc_a61b86360716449119d63c43972c1b1be}} 
+\index{mkdoc@{mkdoc}!file@{file}}
+\index{file@{file}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily mkdoc.\+file}
+
+\mbox{\Hypertarget{namespacemkdoc_ad5cf7d23761d598592b4ff19c50f1808}\label{namespacemkdoc_ad5cf7d23761d598592b4ff19c50f1808}} 
+\index{mkdoc@{mkdoc}!filenames@{filenames}}
+\index{filenames@{filenames}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{filenames}{filenames}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlist}{list}} mkdoc.\+filenames = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{namespacemkdoc_a78cb707792ea1729ef7e8d3887275e66}\label{namespacemkdoc_a78cb707792ea1729ef7e8d3887275e66}} 
+\index{mkdoc@{mkdoc}!job\_count@{job\_count}}
+\index{job\_count@{job\_count}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{job\_count}{job\_count}}
+{\footnotesize\ttfamily mkdoc.\+job\+\_\+count = cpu\+\_\+count()}
+
+\mbox{\Hypertarget{namespacemkdoc_a2293819b2cd2fceaf9736ba54d68c05a}\label{namespacemkdoc_a2293819b2cd2fceaf9736ba54d68c05a}} 
+\index{mkdoc@{mkdoc}!job\_semaphore@{job\_semaphore}}
+\index{job\_semaphore@{job\_semaphore}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{job\_semaphore}{job\_semaphore}}
+{\footnotesize\ttfamily mkdoc.\+job\+\_\+semaphore = Semaphore(\mbox{\hyperlink{namespacemkdoc_a78cb707792ea1729ef7e8d3887275e66}{job\+\_\+count}})}
+
+\mbox{\Hypertarget{namespacemkdoc_a79687e87b072bd21df37d124afa374ef}\label{namespacemkdoc_a79687e87b072bd21df37d124afa374ef}} 
+\index{mkdoc@{mkdoc}!lib\_dir@{lib\_dir}}
+\index{lib\_dir@{lib\_dir}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{lib\_dir}{lib\_dir}}
+{\footnotesize\ttfamily string mkdoc.\+lib\+\_\+dir = \mbox{\hyperlink{namespacemkdoc_afd27915357cd6df92f7e64673bd208b5}{dev\+\_\+path}} + \textquotesingle{}Toolchains/Xcode\+Default.\+xctoolchain/usr/lib/\textquotesingle{}}
+
+\mbox{\Hypertarget{namespacemkdoc_adac3931090ead65140d186397cf36a55}\label{namespacemkdoc_adac3931090ead65140d186397cf36a55}} 
+\index{mkdoc@{mkdoc}!libclang@{libclang}}
+\index{libclang@{libclang}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{libclang}{libclang}}
+{\footnotesize\ttfamily string mkdoc.\+libclang = \mbox{\hyperlink{namespacemkdoc_a79687e87b072bd21df37d124afa374ef}{lib\+\_\+dir}} + \textquotesingle{}libclang.\+dylib\textquotesingle{}}
+
+\mbox{\Hypertarget{namespacemkdoc_a1f8f832af63724a053f825faeeff418b}\label{namespacemkdoc_a1f8f832af63724a053f825faeeff418b}} 
+\index{mkdoc@{mkdoc}!name@{name}}
+\index{name@{name}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string mkdoc.\+name = \mbox{\hyperlink{structname}{name}} + \char`\"{}\+\_\+\%i\char`\"{} \% name\+\_\+ctr}
+
+\mbox{\Hypertarget{namespacemkdoc_a9dd4ab426bd81d51c31af8f18171b3c5}\label{namespacemkdoc_a9dd4ab426bd81d51c31af8f18171b3c5}} 
+\index{mkdoc@{mkdoc}!name\_ctr@{name\_ctr}}
+\index{name\_ctr@{name\_ctr}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{name\_ctr}{name\_ctr}}
+{\footnotesize\ttfamily int mkdoc.\+name\+\_\+ctr = 1}
+
+\mbox{\Hypertarget{namespacemkdoc_a029677ada5b49414de07f350a8f3f657}\label{namespacemkdoc_a029677ada5b49414de07f350a8f3f657}} 
+\index{mkdoc@{mkdoc}!name\_prev@{name\_prev}}
+\index{name\_prev@{name\_prev}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{name\_prev}{name\_prev}}
+{\footnotesize\ttfamily string mkdoc.\+name\+\_\+prev = None}
+
+\mbox{\Hypertarget{namespacemkdoc_a6299c53cb772acb4a1cb315a21268404}\label{namespacemkdoc_a6299c53cb772acb4a1cb315a21268404}} 
+\index{mkdoc@{mkdoc}!output@{output}}
+\index{output@{output}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{output}{output}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlist}{list}} mkdoc.\+output = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{namespacemkdoc_a2cff62850018cb669b1d13bb8c335018}\label{namespacemkdoc_a2cff62850018cb669b1d13bb8c335018}} 
+\index{mkdoc@{mkdoc}!parameters@{parameters}}
+\index{parameters@{parameters}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{parameters}{parameters}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlist}{list}} mkdoc.\+parameters = \mbox{[}\textquotesingle{}-\/x\textquotesingle{}, \textquotesingle{}c++\textquotesingle{}, \textquotesingle{}-\/std=c++11\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{namespacemkdoc_ad7a4a26a7761f2006a2d5b2008f8a3ed}\label{namespacemkdoc_ad7a4a26a7761f2006a2d5b2008f8a3ed}} 
+\index{mkdoc@{mkdoc}!PRINT\_LIST@{PRINT\_LIST}}
+\index{PRINT\_LIST@{PRINT\_LIST}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{PRINT\_LIST}{PRINT\_LIST}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlist}{list}} mkdoc.\+PRINT\+\_\+\+LIST}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  [}
+\DoxyCodeLine{2     CursorKind.CLASS\_DECL,}
+\DoxyCodeLine{3     CursorKind.STRUCT\_DECL,}
+\DoxyCodeLine{4     CursorKind.ENUM\_DECL,}
+\DoxyCodeLine{5     CursorKind.ENUM\_CONSTANT\_DECL,}
+\DoxyCodeLine{6     CursorKind.CLASS\_TEMPLATE,}
+\DoxyCodeLine{7     CursorKind.FUNCTION\_DECL,}
+\DoxyCodeLine{8     CursorKind.FUNCTION\_TEMPLATE,}
+\DoxyCodeLine{9     CursorKind.CONVERSION\_FUNCTION,}
+\DoxyCodeLine{10     CursorKind.CXX\_METHOD,}
+\DoxyCodeLine{11     CursorKind.CONSTRUCTOR,}
+\DoxyCodeLine{12     CursorKind.FIELD\_DECL}
+\DoxyCodeLine{13 ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacemkdoc_a39fcd8cacdb85662261873832c8cdbc4}\label{namespacemkdoc_a39fcd8cacdb85662261873832c8cdbc4}} 
+\index{mkdoc@{mkdoc}!RECURSE\_LIST@{RECURSE\_LIST}}
+\index{RECURSE\_LIST@{RECURSE\_LIST}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{RECURSE\_LIST}{RECURSE\_LIST}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlist}{list}} mkdoc.\+RECURSE\+\_\+\+LIST}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  [}
+\DoxyCodeLine{2     CursorKind.TRANSLATION\_UNIT,}
+\DoxyCodeLine{3     CursorKind.NAMESPACE,}
+\DoxyCodeLine{4     CursorKind.CLASS\_DECL,}
+\DoxyCodeLine{5     CursorKind.STRUCT\_DECL,}
+\DoxyCodeLine{6     CursorKind.ENUM\_DECL,}
+\DoxyCodeLine{7     CursorKind.CLASS\_TEMPLATE}
+\DoxyCodeLine{8 ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacemkdoc_a812adec5149aaa5538af4bd942c1f480}\label{namespacemkdoc_a812adec5149aaa5538af4bd942c1f480}} 
+\index{mkdoc@{mkdoc}!sdk\_dir@{sdk\_dir}}
+\index{sdk\_dir@{sdk\_dir}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{sdk\_dir}{sdk\_dir}}
+{\footnotesize\ttfamily string mkdoc.\+sdk\+\_\+dir = \mbox{\hyperlink{namespacemkdoc_afd27915357cd6df92f7e64673bd208b5}{dev\+\_\+path}} + \textquotesingle{}Platforms/Mac\+OSX.\+platform/Developer/SDKs\textquotesingle{}}
+
+\mbox{\Hypertarget{namespacemkdoc_a1e126f52ce0b98ad1c7967e6a4034ece}\label{namespacemkdoc_a1e126f52ce0b98ad1c7967e6a4034ece}} 
+\index{mkdoc@{mkdoc}!sysroot\_dir@{sysroot\_dir}}
+\index{sysroot\_dir@{sysroot\_dir}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{sysroot\_dir}{sysroot\_dir}}
+{\footnotesize\ttfamily mkdoc.\+sysroot\+\_\+dir = os.\+path.\+join(\mbox{\hyperlink{namespacemkdoc_a812adec5149aaa5538af4bd942c1f480}{sdk\+\_\+dir}}, next(os.\+walk(\mbox{\hyperlink{namespacemkdoc_a812adec5149aaa5538af4bd942c1f480}{sdk\+\_\+dir}}))\mbox{[}1\mbox{]}\mbox{[}0\mbox{]})}
+
+\mbox{\Hypertarget{namespacemkdoc_ab136f9c1bffd08b25a73887b8f6c1c91}\label{namespacemkdoc_ab136f9c1bffd08b25a73887b8f6c1c91}} 
+\index{mkdoc@{mkdoc}!thr@{thr}}
+\index{thr@{thr}!mkdoc@{mkdoc}}
+\doxysubsubsection{\texorpdfstring{thr}{thr}}
+{\footnotesize\ttfamily mkdoc.\+thr = \mbox{\hyperlink{classmkdoc_1_1_extraction_thread}{Extraction\+Thread}}(filename, \mbox{\hyperlink{namespacemkdoc_a2cff62850018cb669b1d13bb8c335018}{parameters}})}
+

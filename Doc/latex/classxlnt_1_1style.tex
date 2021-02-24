@@ -1,0 +1,449 @@
+\hypertarget{classxlnt_1_1style}{}\doxysection{xlnt\+::style Class Reference}
+\label{classxlnt_1_1style}\index{xlnt::style@{xlnt::style}}
+
+
+Describes a style which has a name and can be applied to multiple individual formats. In Excel this is a \char`\"{}\+Cell Style\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$style.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1style_a769c5c8a331a7f3a683c866881b0fe0f}{style}} ()=delete
+\begin{DoxyCompactList}\small\item\em Delete zero-\/argument constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1style_a384898ae7d81d38f8141fabd144a71c0}{style}} (const \mbox{\hyperlink{classxlnt_1_1style}{style}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Default copy constructor. Constructs a style using the same PIMPL as other. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1style_af8d322ba8cd29a536c54e80472577198}{name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the name of this style. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1style}{style}} \mbox{\hyperlink{classxlnt_1_1style_aad924e4d2430322fdfdc7fab5921d4dc}{name}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\begin{DoxyCompactList}\small\item\em Sets the name of this style to name. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1style_a6a384abfdeb437705184c32317084a96}{hidden}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this style is hidden. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1style}{style}} \mbox{\hyperlink{classxlnt_1_1style_a4c7c7ecc1ffc209d9039b4914512f0ea}{hidden}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the hidden state of this style to value. A hidden style will not be shown in the list of selectable styles in the UI, but will still apply its formatting to cells using it. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1style_aa2c294a5b51f93fa1ebc7fbfe41c72cd}{custom\+\_\+builtin}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this is a builtin style that has been customized and should therefore be persisted in the workbook. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1style_ad18be2affc80439670daae02a90a7d6d}{builtin\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the index of the builtin style that this style is an instance of or is a customized version thereof. If \mbox{\hyperlink{classxlnt_1_1style_a7a6abdea098d68174527b94a70c8381a}{style\+::builtin()}} is false, this will throw an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1style_a7a6abdea098d68174527b94a70c8381a}{builtin}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this is a builtin style. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \mbox{\hyperlink{classxlnt_1_1style_a56d1ad74bedb0297a4579686cd9e481f}{alignment}} () const
+\begin{DoxyCompactList}\small\item\em Returns the alignment of this style. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1style_acb8d9ca4d8d114bc0dc1e7ce755c8155}{alignment\+\_\+applied}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the alignment of this style should be applied to cells using it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1style}{style}} \mbox{\hyperlink{classxlnt_1_1style_a5eb6eaa6592ef57ac4ae25ce595b3929}{alignment}} (const \mbox{\hyperlink{classxlnt_1_1alignment}{xlnt\+::alignment}} \&new\+\_\+alignment, \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ bool $>$ applied=\{\})
+\begin{DoxyCompactList}\small\item\em Sets the alignment of this style to new\+\_\+alignment. Applied, which defaults to true, determines whether the alignment should be enabled for cells using this style. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1border}{border}} \mbox{\hyperlink{classxlnt_1_1style_aff1553a569944fdbc591654c77ae385a}{border}} () const
+\begin{DoxyCompactList}\small\item\em Returns the border of this style. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1style_aac6c36f64878a356fe6825d9a3948ca9}{border\+\_\+applied}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the border set for this style should be applied to cells using the style. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1style}{style}} \mbox{\hyperlink{classxlnt_1_1style_aea3667eb32b2149cac287d3a255e061b}{border}} (const \mbox{\hyperlink{classxlnt_1_1border}{xlnt\+::border}} \&new\+\_\+border, \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ bool $>$ applied=\{\})
+\begin{DoxyCompactList}\small\item\em Sets the border of this style to new\+\_\+border. Applied, which defaults to true, determines whether the border should be enabled for cells using this style. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1fill}{fill}} \mbox{\hyperlink{classxlnt_1_1style_a415f8e947c5ae4e8594972ebba320b55}{fill}} () const
+\begin{DoxyCompactList}\small\item\em Returns the fill of this style. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1style_ad1061d1e5a2295d1163a5a115172e9ed}{fill\+\_\+applied}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the fill set for this style should be applied to cells using the style. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1style}{style}} \mbox{\hyperlink{classxlnt_1_1style_a5984410b5863489c91ff7441538621a1}{fill}} (const \mbox{\hyperlink{classxlnt_1_1fill}{xlnt\+::fill}} \&new\+\_\+fill, \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ bool $>$ applied=\{\})
+\begin{DoxyCompactList}\small\item\em Sets the fill of this style to new\+\_\+fill. Applied, which defaults to true, determines whether the border should be enabled for cells using this style. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1font}{font}} \mbox{\hyperlink{classxlnt_1_1style_a3f4560c0b2e4966a9924a4eca832e7ba}{font}} () const
+\begin{DoxyCompactList}\small\item\em Returns the font of this style. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1style_aa73e8ebab8112280c5174063b4405db8}{font\+\_\+applied}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the font set for this style should be applied to cells using the style. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1style}{style}} \mbox{\hyperlink{classxlnt_1_1style_a2b0ef35f32e7bcb35142a7120dcec4cf}{font}} (const \mbox{\hyperlink{classxlnt_1_1font}{xlnt\+::font}} \&new\+\_\+font, \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ bool $>$ applied=\{\})
+\begin{DoxyCompactList}\small\item\em Sets the font of this style to new\+\_\+font. Applied, which defaults to true, determines whether the font should be enabled for cells using this style. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1style_ab5f966638d2afb8adc01670656f55573}{number\+\_\+format}} () const
+\begin{DoxyCompactList}\small\item\em Returns the \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} of this style. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1style_a79fdf1823f240bf5747970f53f7a0b7d}{number\+\_\+format\+\_\+applied}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} set for this style should be applied to cells using the style. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1style}{style}} \mbox{\hyperlink{classxlnt_1_1style_a41aa5ccedce8226afc6e5b41fd2b8899}{number\+\_\+format}} (const \mbox{\hyperlink{classxlnt_1_1number__format}{xlnt\+::number\+\_\+format}} \&new\+\_\+number\+\_\+format, \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ bool $>$ applied=\{\})
+\begin{DoxyCompactList}\small\item\em Sets the number format of this style to new\+\_\+number\+\_\+format. Applied, which defaults to true, determines whether the number format should be enabled for cells using this style. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1protection}{protection}} \mbox{\hyperlink{classxlnt_1_1style_aa70ef91e7b6c8589820ce010c9a55215}{protection}} () const
+\begin{DoxyCompactList}\small\item\em Returns the protection of this style. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1style_a84e322c1bb7e0eb356452bcad787949e}{protection\+\_\+applied}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the protection set for this style should be applied to cells using the style. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1style}{style}} \mbox{\hyperlink{classxlnt_1_1style_a992ada0110b15057ddeca624c8da9ef4}{protection}} (const \mbox{\hyperlink{classxlnt_1_1protection}{xlnt\+::protection}} \&new\+\_\+protection, \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ bool $>$ applied=\{\})
+\begin{DoxyCompactList}\small\item\em Sets the border of this style to new\+\_\+protection. Applied, which defaults to true, determines whether the protection should be enabled for cells using this style. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1style_ad0279530d128bcfca094f3a108118f51}{pivot\+\_\+button}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the pivot table interface is enabled for this style. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1style_abe814e8a17a59644a3493b41fed9e5e7}{pivot\+\_\+button}} (bool show)
+\begin{DoxyCompactList}\small\item\em If show is true, a pivot table interface will be displayed for cells using this style. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1style_a239fff155ba4b07e2081349a9294972b}{quote\+\_\+prefix}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this style should add a single-\/quote prefix for all text values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1style_a6dafbe004b8863f37e21a59e5547b9ed}{quote\+\_\+prefix}} (bool quote)
+\begin{DoxyCompactList}\small\item\em If quote is true, enables a single-\/quote prefix for all text values in cells using this style (e.\+g. \char`\"{}abc\char`\"{} will appear as \char`\"{}\textquotesingle{}abc\char`\"{}). The text will also not be stored in shared\+Strings when this is enabled. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1style_a5878863acbf9fd044934cfb85c914f77}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1style}{style}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this style is equivalent to other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1style_a459f5c72537ed7e51c243405738a5c95}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1style}{style}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this style is not equivalent to other. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{classxlnt_1_1style_a8f7c8587d229b210b77937e24479888f}{detail\+::stylesheet}}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1style_a5c27ff96f65a231e21871a228cbaf740}{detail\+::xlsx\+\_\+consumer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Describes a style which has a name and can be applied to multiple individual formats. In Excel this is a \char`\"{}\+Cell Style\char`\"{}. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1style_a769c5c8a331a7f3a683c866881b0fe0f}\label{classxlnt_1_1style_a769c5c8a331a7f3a683c866881b0fe0f}} 
+\index{xlnt::style@{xlnt::style}!style@{style}}
+\index{style@{style}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{style()}{style()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily xlnt\+::style\+::style (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Delete zero-\/argument constructor 
+
+\mbox{\Hypertarget{classxlnt_1_1style_a384898ae7d81d38f8141fabd144a71c0}\label{classxlnt_1_1style_a384898ae7d81d38f8141fabd144a71c0}} 
+\index{xlnt::style@{xlnt::style}!style@{style}}
+\index{style@{style}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{style()}{style()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily xlnt\+::style\+::style (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1style}{style}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default copy constructor. Constructs a style using the same PIMPL as other. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1style_a56d1ad74bedb0297a4579686cd9e481f}\label{classxlnt_1_1style_a56d1ad74bedb0297a4579686cd9e481f}} 
+\index{xlnt::style@{xlnt::style}!alignment@{alignment}}
+\index{alignment@{alignment}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{alignment()}{alignment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1alignment}{xlnt\+::alignment}} xlnt\+::style\+::alignment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the alignment of this style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_a5eb6eaa6592ef57ac4ae25ce595b3929}\label{classxlnt_1_1style_a5eb6eaa6592ef57ac4ae25ce595b3929}} 
+\index{xlnt::style@{xlnt::style}!alignment@{alignment}}
+\index{alignment@{alignment}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{alignment()}{alignment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1style}{style}} xlnt\+::style\+::alignment (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1alignment}{xlnt\+::alignment}} \&}]{new\+\_\+alignment,  }\item[{\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ bool $>$}]{applied = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Sets the alignment of this style to new\+\_\+alignment. Applied, which defaults to true, determines whether the alignment should be enabled for cells using this style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_acb8d9ca4d8d114bc0dc1e7ce755c8155}\label{classxlnt_1_1style_acb8d9ca4d8d114bc0dc1e7ce755c8155}} 
+\index{xlnt::style@{xlnt::style}!alignment\_applied@{alignment\_applied}}
+\index{alignment\_applied@{alignment\_applied}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{alignment\_applied()}{alignment\_applied()}}
+{\footnotesize\ttfamily bool xlnt\+::style\+::alignment\+\_\+applied (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the alignment of this style should be applied to cells using it. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_aff1553a569944fdbc591654c77ae385a}\label{classxlnt_1_1style_aff1553a569944fdbc591654c77ae385a}} 
+\index{xlnt::style@{xlnt::style}!border@{border}}
+\index{border@{border}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{border()}{border()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1border}{xlnt\+::border}} xlnt\+::style\+::border (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the border of this style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_aea3667eb32b2149cac287d3a255e061b}\label{classxlnt_1_1style_aea3667eb32b2149cac287d3a255e061b}} 
+\index{xlnt::style@{xlnt::style}!border@{border}}
+\index{border@{border}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{border()}{border()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1style}{style}} xlnt\+::style\+::border (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1border}{xlnt\+::border}} \&}]{new\+\_\+border,  }\item[{\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ bool $>$}]{applied = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Sets the border of this style to new\+\_\+border. Applied, which defaults to true, determines whether the border should be enabled for cells using this style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_aac6c36f64878a356fe6825d9a3948ca9}\label{classxlnt_1_1style_aac6c36f64878a356fe6825d9a3948ca9}} 
+\index{xlnt::style@{xlnt::style}!border\_applied@{border\_applied}}
+\index{border\_applied@{border\_applied}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{border\_applied()}{border\_applied()}}
+{\footnotesize\ttfamily bool xlnt\+::style\+::border\+\_\+applied (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the border set for this style should be applied to cells using the style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_a7a6abdea098d68174527b94a70c8381a}\label{classxlnt_1_1style_a7a6abdea098d68174527b94a70c8381a}} 
+\index{xlnt::style@{xlnt::style}!builtin@{builtin}}
+\index{builtin@{builtin}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{builtin()}{builtin()}}
+{\footnotesize\ttfamily bool xlnt\+::style\+::builtin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this is a builtin style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_ad18be2affc80439670daae02a90a7d6d}\label{classxlnt_1_1style_ad18be2affc80439670daae02a90a7d6d}} 
+\index{xlnt::style@{xlnt::style}!builtin\_id@{builtin\_id}}
+\index{builtin\_id@{builtin\_id}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{builtin\_id()}{builtin\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::style\+::builtin\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the index of the builtin style that this style is an instance of or is a customized version thereof. If \mbox{\hyperlink{classxlnt_1_1style_a7a6abdea098d68174527b94a70c8381a}{style\+::builtin()}} is false, this will throw an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_aa2c294a5b51f93fa1ebc7fbfe41c72cd}\label{classxlnt_1_1style_aa2c294a5b51f93fa1ebc7fbfe41c72cd}} 
+\index{xlnt::style@{xlnt::style}!custom\_builtin@{custom\_builtin}}
+\index{custom\_builtin@{custom\_builtin}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{custom\_builtin()}{custom\_builtin()}}
+{\footnotesize\ttfamily bool xlnt\+::style\+::custom\+\_\+builtin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this is a builtin style that has been customized and should therefore be persisted in the workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_a415f8e947c5ae4e8594972ebba320b55}\label{classxlnt_1_1style_a415f8e947c5ae4e8594972ebba320b55}} 
+\index{xlnt::style@{xlnt::style}!fill@{fill}}
+\index{fill@{fill}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1fill}{xlnt\+::fill}} xlnt\+::style\+::fill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the fill of this style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_a5984410b5863489c91ff7441538621a1}\label{classxlnt_1_1style_a5984410b5863489c91ff7441538621a1}} 
+\index{xlnt::style@{xlnt::style}!fill@{fill}}
+\index{fill@{fill}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1style}{style}} xlnt\+::style\+::fill (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1fill}{xlnt\+::fill}} \&}]{new\+\_\+fill,  }\item[{\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ bool $>$}]{applied = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Sets the fill of this style to new\+\_\+fill. Applied, which defaults to true, determines whether the border should be enabled for cells using this style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_ad1061d1e5a2295d1163a5a115172e9ed}\label{classxlnt_1_1style_ad1061d1e5a2295d1163a5a115172e9ed}} 
+\index{xlnt::style@{xlnt::style}!fill\_applied@{fill\_applied}}
+\index{fill\_applied@{fill\_applied}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{fill\_applied()}{fill\_applied()}}
+{\footnotesize\ttfamily bool xlnt\+::style\+::fill\+\_\+applied (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the fill set for this style should be applied to cells using the style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_a3f4560c0b2e4966a9924a4eca832e7ba}\label{classxlnt_1_1style_a3f4560c0b2e4966a9924a4eca832e7ba}} 
+\index{xlnt::style@{xlnt::style}!font@{font}}
+\index{font@{font}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{font()}{font()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1font}{xlnt\+::font}} xlnt\+::style\+::font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the font of this style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_a2b0ef35f32e7bcb35142a7120dcec4cf}\label{classxlnt_1_1style_a2b0ef35f32e7bcb35142a7120dcec4cf}} 
+\index{xlnt::style@{xlnt::style}!font@{font}}
+\index{font@{font}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{font()}{font()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1style}{style}} xlnt\+::style\+::font (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1font}{xlnt\+::font}} \&}]{new\+\_\+font,  }\item[{\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ bool $>$}]{applied = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Sets the font of this style to new\+\_\+font. Applied, which defaults to true, determines whether the font should be enabled for cells using this style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_aa73e8ebab8112280c5174063b4405db8}\label{classxlnt_1_1style_aa73e8ebab8112280c5174063b4405db8}} 
+\index{xlnt::style@{xlnt::style}!font\_applied@{font\_applied}}
+\index{font\_applied@{font\_applied}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{font\_applied()}{font\_applied()}}
+{\footnotesize\ttfamily bool xlnt\+::style\+::font\+\_\+applied (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the font set for this style should be applied to cells using the style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_a6a384abfdeb437705184c32317084a96}\label{classxlnt_1_1style_a6a384abfdeb437705184c32317084a96}} 
+\index{xlnt::style@{xlnt::style}!hidden@{hidden}}
+\index{hidden@{hidden}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{hidden()}{hidden()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::style\+::hidden (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this style is hidden. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_a4c7c7ecc1ffc209d9039b4914512f0ea}\label{classxlnt_1_1style_a4c7c7ecc1ffc209d9039b4914512f0ea}} 
+\index{xlnt::style@{xlnt::style}!hidden@{hidden}}
+\index{hidden@{hidden}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{hidden()}{hidden()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1style}{style}} xlnt\+::style\+::hidden (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the hidden state of this style to value. A hidden style will not be shown in the list of selectable styles in the UI, but will still apply its formatting to cells using it. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_af8d322ba8cd29a536c54e80472577198}\label{classxlnt_1_1style_af8d322ba8cd29a536c54e80472577198}} 
+\index{xlnt::style@{xlnt::style}!name@{name}}
+\index{name@{name}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string xlnt\+::style\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the name of this style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_aad924e4d2430322fdfdc7fab5921d4dc}\label{classxlnt_1_1style_aad924e4d2430322fdfdc7fab5921d4dc}} 
+\index{xlnt::style@{xlnt::style}!name@{name}}
+\index{name@{name}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1style}{style}} xlnt\+::style\+::name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Sets the name of this style to name. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_ab5f966638d2afb8adc01670656f55573}\label{classxlnt_1_1style_ab5f966638d2afb8adc01670656f55573}} 
+\index{xlnt::style@{xlnt::style}!number\_format@{number\_format}}
+\index{number\_format@{number\_format}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{number\_format()}{number\_format()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1number__format}{xlnt\+::number\+\_\+format}} xlnt\+::style\+::number\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} of this style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_a41aa5ccedce8226afc6e5b41fd2b8899}\label{classxlnt_1_1style_a41aa5ccedce8226afc6e5b41fd2b8899}} 
+\index{xlnt::style@{xlnt::style}!number\_format@{number\_format}}
+\index{number\_format@{number\_format}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{number\_format()}{number\_format()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1style}{style}} xlnt\+::style\+::number\+\_\+format (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1number__format}{xlnt\+::number\+\_\+format}} \&}]{new\+\_\+number\+\_\+format,  }\item[{\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ bool $>$}]{applied = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Sets the number format of this style to new\+\_\+number\+\_\+format. Applied, which defaults to true, determines whether the number format should be enabled for cells using this style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_a79fdf1823f240bf5747970f53f7a0b7d}\label{classxlnt_1_1style_a79fdf1823f240bf5747970f53f7a0b7d}} 
+\index{xlnt::style@{xlnt::style}!number\_format\_applied@{number\_format\_applied}}
+\index{number\_format\_applied@{number\_format\_applied}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{number\_format\_applied()}{number\_format\_applied()}}
+{\footnotesize\ttfamily bool xlnt\+::style\+::number\+\_\+format\+\_\+applied (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} set for this style should be applied to cells using the style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_a459f5c72537ed7e51c243405738a5c95}\label{classxlnt_1_1style_a459f5c72537ed7e51c243405738a5c95}} 
+\index{xlnt::style@{xlnt::style}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool xlnt\+::style\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1style}{style}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this style is not equivalent to other. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_a5878863acbf9fd044934cfb85c914f77}\label{classxlnt_1_1style_a5878863acbf9fd044934cfb85c914f77}} 
+\index{xlnt::style@{xlnt::style}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::style\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1style}{style}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this style is equivalent to other. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_ad0279530d128bcfca094f3a108118f51}\label{classxlnt_1_1style_ad0279530d128bcfca094f3a108118f51}} 
+\index{xlnt::style@{xlnt::style}!pivot\_button@{pivot\_button}}
+\index{pivot\_button@{pivot\_button}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{pivot\_button()}{pivot\_button()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::style\+::pivot\+\_\+button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the pivot table interface is enabled for this style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_abe814e8a17a59644a3493b41fed9e5e7}\label{classxlnt_1_1style_abe814e8a17a59644a3493b41fed9e5e7}} 
+\index{xlnt::style@{xlnt::style}!pivot\_button@{pivot\_button}}
+\index{pivot\_button@{pivot\_button}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{pivot\_button()}{pivot\_button()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::style\+::pivot\+\_\+button (\begin{DoxyParamCaption}\item[{bool}]{show }\end{DoxyParamCaption})}
+
+
+
+If show is true, a pivot table interface will be displayed for cells using this style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_aa70ef91e7b6c8589820ce010c9a55215}\label{classxlnt_1_1style_aa70ef91e7b6c8589820ce010c9a55215}} 
+\index{xlnt::style@{xlnt::style}!protection@{protection}}
+\index{protection@{protection}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{protection()}{protection()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1protection}{xlnt\+::protection}} xlnt\+::style\+::protection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the protection of this style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_a992ada0110b15057ddeca624c8da9ef4}\label{classxlnt_1_1style_a992ada0110b15057ddeca624c8da9ef4}} 
+\index{xlnt::style@{xlnt::style}!protection@{protection}}
+\index{protection@{protection}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{protection()}{protection()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1style}{style}} xlnt\+::style\+::protection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1protection}{xlnt\+::protection}} \&}]{new\+\_\+protection,  }\item[{\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ bool $>$}]{applied = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Sets the border of this style to new\+\_\+protection. Applied, which defaults to true, determines whether the protection should be enabled for cells using this style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_a84e322c1bb7e0eb356452bcad787949e}\label{classxlnt_1_1style_a84e322c1bb7e0eb356452bcad787949e}} 
+\index{xlnt::style@{xlnt::style}!protection\_applied@{protection\_applied}}
+\index{protection\_applied@{protection\_applied}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{protection\_applied()}{protection\_applied()}}
+{\footnotesize\ttfamily bool xlnt\+::style\+::protection\+\_\+applied (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the protection set for this style should be applied to cells using the style. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_a239fff155ba4b07e2081349a9294972b}\label{classxlnt_1_1style_a239fff155ba4b07e2081349a9294972b}} 
+\index{xlnt::style@{xlnt::style}!quote\_prefix@{quote\_prefix}}
+\index{quote\_prefix@{quote\_prefix}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{quote\_prefix()}{quote\_prefix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::style\+::quote\+\_\+prefix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this style should add a single-\/quote prefix for all text values. 
+
+\mbox{\Hypertarget{classxlnt_1_1style_a6dafbe004b8863f37e21a59e5547b9ed}\label{classxlnt_1_1style_a6dafbe004b8863f37e21a59e5547b9ed}} 
+\index{xlnt::style@{xlnt::style}!quote\_prefix@{quote\_prefix}}
+\index{quote\_prefix@{quote\_prefix}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{quote\_prefix()}{quote\_prefix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::style\+::quote\+\_\+prefix (\begin{DoxyParamCaption}\item[{bool}]{quote }\end{DoxyParamCaption})}
+
+
+
+If quote is true, enables a single-\/quote prefix for all text values in cells using this style (e.\+g. \char`\"{}abc\char`\"{} will appear as \char`\"{}\textquotesingle{}abc\char`\"{}). The text will also not be stored in shared\+Strings when this is enabled. 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1style_a8f7c8587d229b210b77937e24479888f}\label{classxlnt_1_1style_a8f7c8587d229b210b77937e24479888f}} 
+\index{xlnt::style@{xlnt::style}!detail::stylesheet@{detail::stylesheet}}
+\index{detail::stylesheet@{detail::stylesheet}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{detail::stylesheet}{detail::stylesheet}}
+{\footnotesize\ttfamily friend struct \mbox{\hyperlink{structxlnt_1_1detail_1_1stylesheet}{detail\+::stylesheet}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classxlnt_1_1style_a5c27ff96f65a231e21871a228cbaf740}\label{classxlnt_1_1style_a5c27ff96f65a231e21871a228cbaf740}} 
+\index{xlnt::style@{xlnt::style}!detail::xlsx\_consumer@{detail::xlsx\_consumer}}
+\index{detail::xlsx\_consumer@{detail::xlsx\_consumer}!xlnt::style@{xlnt::style}}
+\doxysubsubsection{\texorpdfstring{detail::xlsx\_consumer}{detail::xlsx\_consumer}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classxlnt_1_1detail_1_1xlsx__consumer}{detail\+::xlsx\+\_\+consumer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/styles/\mbox{\hyperlink{style_8hpp}{style.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/styles/\mbox{\hyperlink{style_8cpp}{style.\+cpp}}\end{DoxyCompactItemize}

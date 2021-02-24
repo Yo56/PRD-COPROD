@@ -1,0 +1,105 @@
+\hypertarget{structxlnt_1_1pane}{}\doxysection{xlnt\+::pane Struct Reference}
+\label{structxlnt_1_1pane}\index{xlnt::pane@{xlnt::pane}}
+
+
+A fixed portion of a worksheet.  
+
+
+
+
+{\ttfamily \#include $<$pane.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structxlnt_1_1pane_a493296bfabf9e63d987c6ce7834c6c9f}{operator==}} (const \mbox{\hyperlink{structxlnt_1_1pane}{pane}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Returns true if this pane is equal to rhs based on its top-\/left cell, state, active pane, and x/y split location. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} $>$ \mbox{\hyperlink{structxlnt_1_1pane_a6d93bf8376b81a38fd1e74d4221a6f87}{top\+\_\+left\+\_\+cell}}
+\begin{DoxyCompactList}\small\item\em The optional top left cell \end{DoxyCompactList}\item 
+pane\+\_\+state \mbox{\hyperlink{structxlnt_1_1pane_a8f39a46ae2f9a789c09399a5097f6d03}{state}} = pane\+\_\+state\+::split
+\begin{DoxyCompactList}\small\item\em The state of the pane \end{DoxyCompactList}\item 
+pane\+\_\+corner \mbox{\hyperlink{structxlnt_1_1pane_a839ade8745a918e060f9e6d1cc8e58a8}{active\+\_\+pane}} = \mbox{\hyperlink{pane_8hpp_a4607e43404c757cbde2f71c03baff0f6}{pane\+\_\+corner\+::top\+\_\+left}}
+\begin{DoxyCompactList}\small\item\em The pane which contains the active cell \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} \mbox{\hyperlink{structxlnt_1_1pane_ac73d0f15dc92767961b31f538d6528af}{y\+\_\+split}} = 1
+\begin{DoxyCompactList}\small\item\em The row where the split should take place \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \mbox{\hyperlink{structxlnt_1_1pane_ae01cc023bff4c375bd08a43326d5fb0a}{x\+\_\+split}} = 1
+\begin{DoxyCompactList}\small\item\em The column where the split should take place \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A fixed portion of a worksheet. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structxlnt_1_1pane_a493296bfabf9e63d987c6ce7834c6c9f}\label{structxlnt_1_1pane_a493296bfabf9e63d987c6ce7834c6c9f}} 
+\index{xlnt::pane@{xlnt::pane}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::pane@{xlnt::pane}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::pane\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1pane}{pane}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if this pane is equal to rhs based on its top-\/left cell, state, active pane, and x/y split location. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structxlnt_1_1pane_a839ade8745a918e060f9e6d1cc8e58a8}\label{structxlnt_1_1pane_a839ade8745a918e060f9e6d1cc8e58a8}} 
+\index{xlnt::pane@{xlnt::pane}!active\_pane@{active\_pane}}
+\index{active\_pane@{active\_pane}!xlnt::pane@{xlnt::pane}}
+\doxysubsubsection{\texorpdfstring{active\_pane}{active\_pane}}
+{\footnotesize\ttfamily pane\+\_\+corner xlnt\+::pane\+::active\+\_\+pane = \mbox{\hyperlink{pane_8hpp_a4607e43404c757cbde2f71c03baff0f6}{pane\+\_\+corner\+::top\+\_\+left}}}
+
+
+
+The pane which contains the active cell 
+
+\mbox{\Hypertarget{structxlnt_1_1pane_a8f39a46ae2f9a789c09399a5097f6d03}\label{structxlnt_1_1pane_a8f39a46ae2f9a789c09399a5097f6d03}} 
+\index{xlnt::pane@{xlnt::pane}!state@{state}}
+\index{state@{state}!xlnt::pane@{xlnt::pane}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily pane\+\_\+state xlnt\+::pane\+::state = pane\+\_\+state\+::split}
+
+
+
+The state of the pane 
+
+\mbox{\Hypertarget{structxlnt_1_1pane_a6d93bf8376b81a38fd1e74d4221a6f87}\label{structxlnt_1_1pane_a6d93bf8376b81a38fd1e74d4221a6f87}} 
+\index{xlnt::pane@{xlnt::pane}!top\_left\_cell@{top\_left\_cell}}
+\index{top\_left\_cell@{top\_left\_cell}!xlnt::pane@{xlnt::pane}}
+\doxysubsubsection{\texorpdfstring{top\_left\_cell}{top\_left\_cell}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$\mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}$>$ xlnt\+::pane\+::top\+\_\+left\+\_\+cell}
+
+
+
+The optional top left cell 
+
+\mbox{\Hypertarget{structxlnt_1_1pane_ae01cc023bff4c375bd08a43326d5fb0a}\label{structxlnt_1_1pane_ae01cc023bff4c375bd08a43326d5fb0a}} 
+\index{xlnt::pane@{xlnt::pane}!x\_split@{x\_split}}
+\index{x\_split@{x\_split}!xlnt::pane@{xlnt::pane}}
+\doxysubsubsection{\texorpdfstring{x\_split}{x\_split}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} xlnt\+::pane\+::x\+\_\+split = 1}
+
+
+
+The column where the split should take place 
+
+\mbox{\Hypertarget{structxlnt_1_1pane_ac73d0f15dc92767961b31f538d6528af}\label{structxlnt_1_1pane_ac73d0f15dc92767961b31f538d6528af}} 
+\index{xlnt::pane@{xlnt::pane}!y\_split@{y\_split}}
+\index{y\_split@{y\_split}!xlnt::pane@{xlnt::pane}}
+\doxysubsubsection{\texorpdfstring{y\_split}{y\_split}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} xlnt\+::pane\+::y\+\_\+split = 1}
+
+
+
+The row where the split should take place 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/worksheet/\mbox{\hyperlink{pane_8hpp}{pane.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,75 @@
+\hypertarget{structxlnt_1_1document__security_1_1lock__verifier}{}\doxysection{xlnt\+::document\+\_\+security\+::lock\+\_\+verifier Struct Reference}
+\label{structxlnt_1_1document__security_1_1lock__verifier}\index{xlnt::document\_security::lock\_verifier@{xlnt::document\_security::lock\_verifier}}
+
+
+Holds data describing the verifier that locks revisions or a workbook.  
+
+
+
+
+{\ttfamily \#include $<$document\+\_\+security.\+hpp$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structxlnt_1_1document__security_1_1lock__verifier_a0ac833d1dd0a809634d0ed4a18ef2fcd}{hash\+\_\+algorithm}}
+\begin{DoxyCompactList}\small\item\em The algorithm used to create and verify this lock. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structxlnt_1_1document__security_1_1lock__verifier_af59062f980afeb1eb0235092eb77b9c2}{salt}}
+\begin{DoxyCompactList}\small\item\em The initial salt combined with the password used to prevent rainbow table attacks \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structxlnt_1_1document__security_1_1lock__verifier_af2c562e1e1bc6218a5c2fd04b58be984}{hash}}
+\begin{DoxyCompactList}\small\item\em The actual hash value represented as a string \end{DoxyCompactList}\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{structxlnt_1_1document__security_1_1lock__verifier_a9374992c72e4f0f69663365dfcf4cf03}{spin\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em The number of times the hash should be applied to the password combined with the salt. This allows the difficulty of the hash to be increased as computing power increases. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Holds data describing the verifier that locks revisions or a workbook. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structxlnt_1_1document__security_1_1lock__verifier_af2c562e1e1bc6218a5c2fd04b58be984}\label{structxlnt_1_1document__security_1_1lock__verifier_af2c562e1e1bc6218a5c2fd04b58be984}} 
+\index{xlnt::document\_security::lock\_verifier@{xlnt::document\_security::lock\_verifier}!hash@{hash}}
+\index{hash@{hash}!xlnt::document\_security::lock\_verifier@{xlnt::document\_security::lock\_verifier}}
+\doxysubsubsection{\texorpdfstring{hash}{hash}}
+{\footnotesize\ttfamily std\+::string xlnt\+::document\+\_\+security\+::lock\+\_\+verifier\+::hash}
+
+
+
+The actual hash value represented as a string 
+
+\mbox{\Hypertarget{structxlnt_1_1document__security_1_1lock__verifier_a0ac833d1dd0a809634d0ed4a18ef2fcd}\label{structxlnt_1_1document__security_1_1lock__verifier_a0ac833d1dd0a809634d0ed4a18ef2fcd}} 
+\index{xlnt::document\_security::lock\_verifier@{xlnt::document\_security::lock\_verifier}!hash\_algorithm@{hash\_algorithm}}
+\index{hash\_algorithm@{hash\_algorithm}!xlnt::document\_security::lock\_verifier@{xlnt::document\_security::lock\_verifier}}
+\doxysubsubsection{\texorpdfstring{hash\_algorithm}{hash\_algorithm}}
+{\footnotesize\ttfamily std\+::string xlnt\+::document\+\_\+security\+::lock\+\_\+verifier\+::hash\+\_\+algorithm}
+
+
+
+The algorithm used to create and verify this lock. 
+
+\mbox{\Hypertarget{structxlnt_1_1document__security_1_1lock__verifier_af59062f980afeb1eb0235092eb77b9c2}\label{structxlnt_1_1document__security_1_1lock__verifier_af59062f980afeb1eb0235092eb77b9c2}} 
+\index{xlnt::document\_security::lock\_verifier@{xlnt::document\_security::lock\_verifier}!salt@{salt}}
+\index{salt@{salt}!xlnt::document\_security::lock\_verifier@{xlnt::document\_security::lock\_verifier}}
+\doxysubsubsection{\texorpdfstring{salt}{salt}}
+{\footnotesize\ttfamily std\+::string xlnt\+::document\+\_\+security\+::lock\+\_\+verifier\+::salt}
+
+
+
+The initial salt combined with the password used to prevent rainbow table attacks 
+
+\mbox{\Hypertarget{structxlnt_1_1document__security_1_1lock__verifier_a9374992c72e4f0f69663365dfcf4cf03}\label{structxlnt_1_1document__security_1_1lock__verifier_a9374992c72e4f0f69663365dfcf4cf03}} 
+\index{xlnt::document\_security::lock\_verifier@{xlnt::document\_security::lock\_verifier}!spin\_count@{spin\_count}}
+\index{spin\_count@{spin\_count}!xlnt::document\_security::lock\_verifier@{xlnt::document\_security::lock\_verifier}}
+\doxysubsubsection{\texorpdfstring{spin\_count}{spin\_count}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::document\+\_\+security\+::lock\+\_\+verifier\+::spin\+\_\+count}
+
+
+
+The number of times the hash should be applied to the password combined with the salt. This allows the difficulty of the hash to be increased as computing power increases. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/workbook/\mbox{\hyperlink{document__security_8hpp}{document\+\_\+security.\+hpp}}\end{DoxyCompactItemize}

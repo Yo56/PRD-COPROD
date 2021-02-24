@@ -1,0 +1,217 @@
+\hypertarget{structcopyable__holder__caster}{}\doxysection{copyable\+\_\+holder\+\_\+caster$<$ type, holder\+\_\+type $>$ Struct Template Reference}
+\label{structcopyable__holder__caster}\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+
+
+Type caster for holder types like std\+::shared\+\_\+ptr, etc.  
+
+
+
+
+{\ttfamily \#include $<$cast.\+h$>$}
+
+Inheritance diagram for copyable\+\_\+holder\+\_\+caster$<$ type, holder\+\_\+type $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structcopyable__holder__caster}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structcopyable__holder__caster_a5d25e9cc9ce588710bb255ddd1b904de}{base}} = \mbox{\hyperlink{classtype__caster__base}{type\+\_\+caster\+\_\+base}}$<$ type $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structcopyable__holder__caster_ad6d2e3b89e1fab57e5a93e15171c0c3a}{load}} (\mbox{\hyperlink{classhandle}{handle}} src, bool convert)
+\item 
+\mbox{\hyperlink{structcopyable__holder__caster_a9b3a08950760728cf856a82824b4ddfd}{operator type $\ast$}} ()
+\item 
+\mbox{\hyperlink{structcopyable__holder__caster_a80d72d78e526acacc5fc38c63fdc4f69}{operator type \&}} ()
+\item 
+\mbox{\hyperlink{structcopyable__holder__caster_a303261c970995da9e0e5b08614bd3034}{operator holder\+\_\+type $\ast$}} ()
+\item 
+\mbox{\hyperlink{structcopyable__holder__caster_a1efff1069bd3b73e34bcb6d788820dc4}{operator holder\+\_\+type \&}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{structcopyable__holder__caster_a5b09fa5941d46a4fdedbbb631418a89b}{cast}} (const holder\+\_\+type \&src, \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}}, \mbox{\hyperlink{classhandle}{handle}})
+\item 
+static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{structcopyable__holder__caster_acd5bd2fafc86fb3160c7955bfc2f88de}{cast}} (const itype \&src, \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}} policy, \mbox{\hyperlink{classhandle}{handle}} parent)
+\item 
+static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{structcopyable__holder__caster_abd0cc8e51c0882bb1b81710745295811}{cast}} (itype \&\&src, \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}}, \mbox{\hyperlink{classhandle}{handle}} parent)
+\item 
+static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{structcopyable__holder__caster_a0fa8012ef36eabd7993fdd3adb4fbf92}{cast}} (const itype $\ast$src, \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}} policy, \mbox{\hyperlink{classhandle}{handle}} parent)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structcopyable__holder__caster_aeaf5f5d682581b26ea69b8ceb0e62951}{check\+\_\+holder\+\_\+compat}} ()
+\item 
+bool \mbox{\hyperlink{structcopyable__holder__caster_aace042644c2c9634ad52235378c05f9d}{load\+\_\+value}} (const \mbox{\hyperlink{structvalue__and__holder}{value\+\_\+and\+\_\+holder}} \&v\+\_\+h)
+\item 
+{\footnotesize template$<$typename T  = holder\+\_\+type, detail\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+constructible$<$ T, const T \&, type $\ast$ $>$\+::value, int $>$  = 0$>$ }\\bool \mbox{\hyperlink{structcopyable__holder__caster_a3bcddc9789c2710905270b7888b36a46}{try\+\_\+implicit\+\_\+casts}} (\mbox{\hyperlink{classhandle}{handle}}, bool)
+\item 
+{\footnotesize template$<$typename T  = holder\+\_\+type, detail\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+constructible$<$ T, const T \&, type $\ast$ $>$\+::value, int $>$  = 0$>$ }\\bool \mbox{\hyperlink{structcopyable__holder__caster_a9dbbb61be9263940f6bda512f25e5443}{try\+\_\+implicit\+\_\+casts}} (\mbox{\hyperlink{classhandle}{handle}} src, bool convert)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{structcopyable__holder__caster_af1b6fc22fdfe27e062af0ee7f74ccd54}{try\+\_\+direct\+\_\+conversions}} (\mbox{\hyperlink{classhandle}{handle}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+holder\+\_\+type \mbox{\hyperlink{structcopyable__holder__caster_a63b9604b16a2e9be8193d5cd0294c410}{holder}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{structcopyable__holder__caster_a47dd585b718e81e33e44307daa659ba4}{type\+\_\+caster\+\_\+generic}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename type, typename holder\+\_\+type$>$\newline
+struct copyable\+\_\+holder\+\_\+caster$<$ type, holder\+\_\+type $>$}
+
+Type caster for holder types like std\+::shared\+\_\+ptr, etc. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structcopyable__holder__caster_a5d25e9cc9ce588710bb255ddd1b904de}\label{structcopyable__holder__caster_a5d25e9cc9ce588710bb255ddd1b904de}} 
+\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}!base@{base}}
+\index{base@{base}!copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{base}{base}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+using \mbox{\hyperlink{structcopyable__holder__caster}{copyable\+\_\+holder\+\_\+caster}}$<$ type, holder\+\_\+type $>$\+::\mbox{\hyperlink{structcopyable__holder__caster_a5d25e9cc9ce588710bb255ddd1b904de}{base}} =  \mbox{\hyperlink{classtype__caster__base}{type\+\_\+caster\+\_\+base}}$<$type$>$}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcopyable__holder__caster_a5b09fa5941d46a4fdedbbb631418a89b}\label{structcopyable__holder__caster_a5b09fa5941d46a4fdedbbb631418a89b}} 
+\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}!cast@{cast}}
+\index{cast@{cast}!copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{structcopyable__holder__caster}{copyable\+\_\+holder\+\_\+caster}}$<$ type, holder\+\_\+type $>$\+::cast (\begin{DoxyParamCaption}\item[{const holder\+\_\+type \&}]{src,  }\item[{\mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}}}]{,  }\item[{\mbox{\hyperlink{classhandle}{handle}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structcopyable__holder__caster_acd5bd2fafc86fb3160c7955bfc2f88de}\label{structcopyable__holder__caster_acd5bd2fafc86fb3160c7955bfc2f88de}} 
+\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}!cast@{cast}}
+\index{cast@{cast}!copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{classtype__caster__base}{type\+\_\+caster\+\_\+base}}$<$ type $>$\+::cast\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structcopyable__holder__caster_a0fa8012ef36eabd7993fdd3adb4fbf92}\label{structcopyable__holder__caster_a0fa8012ef36eabd7993fdd3adb4fbf92}} 
+\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}!cast@{cast}}
+\index{cast@{cast}!copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{classtype__caster__base}{type\+\_\+caster\+\_\+base}}$<$ type $>$\+::cast\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structcopyable__holder__caster_abd0cc8e51c0882bb1b81710745295811}\label{structcopyable__holder__caster_abd0cc8e51c0882bb1b81710745295811}} 
+\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}!cast@{cast}}
+\index{cast@{cast}!copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{classtype__caster__base}{type\+\_\+caster\+\_\+base}}$<$ type $>$\+::cast\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structcopyable__holder__caster_aeaf5f5d682581b26ea69b8ceb0e62951}\label{structcopyable__holder__caster_aeaf5f5d682581b26ea69b8ceb0e62951}} 
+\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}!check\_holder\_compat@{check\_holder\_compat}}
+\index{check\_holder\_compat@{check\_holder\_compat}!copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{check\_holder\_compat()}{check\_holder\_compat()}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+void \mbox{\hyperlink{structcopyable__holder__caster}{copyable\+\_\+holder\+\_\+caster}}$<$ type, holder\+\_\+type $>$\+::check\+\_\+holder\+\_\+compat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structcopyable__holder__caster_ad6d2e3b89e1fab57e5a93e15171c0c3a}\label{structcopyable__holder__caster_ad6d2e3b89e1fab57e5a93e15171c0c3a}} 
+\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}!load@{load}}
+\index{load@{load}!copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+bool \mbox{\hyperlink{structcopyable__holder__caster}{copyable\+\_\+holder\+\_\+caster}}$<$ type, holder\+\_\+type $>$\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandle}{handle}}}]{src,  }\item[{bool}]{convert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structcopyable__holder__caster_aace042644c2c9634ad52235378c05f9d}\label{structcopyable__holder__caster_aace042644c2c9634ad52235378c05f9d}} 
+\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}!load\_value@{load\_value}}
+\index{load\_value@{load\_value}!copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{load\_value()}{load\_value()}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+bool \mbox{\hyperlink{structcopyable__holder__caster}{copyable\+\_\+holder\+\_\+caster}}$<$ type, holder\+\_\+type $>$\+::load\+\_\+value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structvalue__and__holder}{value\+\_\+and\+\_\+holder}} \&}]{v\+\_\+h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structcopyable__holder__caster_a1efff1069bd3b73e34bcb6d788820dc4}\label{structcopyable__holder__caster_a1efff1069bd3b73e34bcb6d788820dc4}} 
+\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}!operator holder\_type \&@{operator holder\_type \&}}
+\index{operator holder\_type \&@{operator holder\_type \&}!copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{operator holder\_type \&()}{operator holder\_type \&()}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+\mbox{\hyperlink{structcopyable__holder__caster}{copyable\+\_\+holder\+\_\+caster}}$<$ type, holder\+\_\+type $>$\+::operator holder\+\_\+type \& (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{structcopyable__holder__caster_a303261c970995da9e0e5b08614bd3034}\label{structcopyable__holder__caster_a303261c970995da9e0e5b08614bd3034}} 
+\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}!operator holder\_type $\ast$@{operator holder\_type $\ast$}}
+\index{operator holder\_type $\ast$@{operator holder\_type $\ast$}!copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{operator holder\_type $\ast$()}{operator holder\_type *()}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+\mbox{\hyperlink{structcopyable__holder__caster}{copyable\+\_\+holder\+\_\+caster}}$<$ type, holder\+\_\+type $>$\+::operator holder\+\_\+type $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{structcopyable__holder__caster_a80d72d78e526acacc5fc38c63fdc4f69}\label{structcopyable__holder__caster_a80d72d78e526acacc5fc38c63fdc4f69}} 
+\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}!operator type \&@{operator type \&}}
+\index{operator type \&@{operator type \&}!copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{operator type \&()}{operator type \&()}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+\mbox{\hyperlink{structcopyable__holder__caster}{copyable\+\_\+holder\+\_\+caster}}$<$ type, holder\+\_\+type $>$\+::operator type \& (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{structcopyable__holder__caster_a9b3a08950760728cf856a82824b4ddfd}\label{structcopyable__holder__caster_a9b3a08950760728cf856a82824b4ddfd}} 
+\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}!operator type $\ast$@{operator type $\ast$}}
+\index{operator type $\ast$@{operator type $\ast$}!copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{operator type $\ast$()}{operator type *()}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+\mbox{\hyperlink{structcopyable__holder__caster}{copyable\+\_\+holder\+\_\+caster}}$<$ type, holder\+\_\+type $>$\+::operator type $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{structcopyable__holder__caster_af1b6fc22fdfe27e062af0ee7f74ccd54}\label{structcopyable__holder__caster_af1b6fc22fdfe27e062af0ee7f74ccd54}} 
+\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}!try\_direct\_conversions@{try\_direct\_conversions}}
+\index{try\_direct\_conversions@{try\_direct\_conversions}!copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{try\_direct\_conversions()}{try\_direct\_conversions()}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+static bool \mbox{\hyperlink{structcopyable__holder__caster}{copyable\+\_\+holder\+\_\+caster}}$<$ type, holder\+\_\+type $>$\+::try\+\_\+direct\+\_\+conversions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandle}{handle}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structcopyable__holder__caster_a9dbbb61be9263940f6bda512f25e5443}\label{structcopyable__holder__caster_a9dbbb61be9263940f6bda512f25e5443}} 
+\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}!try\_implicit\_casts@{try\_implicit\_casts}}
+\index{try\_implicit\_casts@{try\_implicit\_casts}!copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{try\_implicit\_casts()}{try\_implicit\_casts()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+template$<$typename T  = holder\+\_\+type, detail\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+constructible$<$ T, const T \&, type $\ast$ $>$\+::value, int $>$  = 0$>$ \\
+bool \mbox{\hyperlink{structcopyable__holder__caster}{copyable\+\_\+holder\+\_\+caster}}$<$ type, holder\+\_\+type $>$\+::try\+\_\+implicit\+\_\+casts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandle}{handle}}}]{src,  }\item[{bool}]{convert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structcopyable__holder__caster_a3bcddc9789c2710905270b7888b36a46}\label{structcopyable__holder__caster_a3bcddc9789c2710905270b7888b36a46}} 
+\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}!try\_implicit\_casts@{try\_implicit\_casts}}
+\index{try\_implicit\_casts@{try\_implicit\_casts}!copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{try\_implicit\_casts()}{try\_implicit\_casts()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+template$<$typename T  = holder\+\_\+type, detail\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+constructible$<$ T, const T \&, type $\ast$ $>$\+::value, int $>$  = 0$>$ \\
+bool \mbox{\hyperlink{structcopyable__holder__caster}{copyable\+\_\+holder\+\_\+caster}}$<$ type, holder\+\_\+type $>$\+::try\+\_\+implicit\+\_\+casts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandle}{handle}}}]{,  }\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structcopyable__holder__caster_a47dd585b718e81e33e44307daa659ba4}\label{structcopyable__holder__caster_a47dd585b718e81e33e44307daa659ba4}} 
+\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}!type\_caster\_generic@{type\_caster\_generic}}
+\index{type\_caster\_generic@{type\_caster\_generic}!copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{type\_caster\_generic}{type\_caster\_generic}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+friend class \mbox{\hyperlink{classtype__caster__generic}{type\+\_\+caster\+\_\+generic}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcopyable__holder__caster_a63b9604b16a2e9be8193d5cd0294c410}\label{structcopyable__holder__caster_a63b9604b16a2e9be8193d5cd0294c410}} 
+\index{copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}!holder@{holder}}
+\index{holder@{holder}!copyable\_holder\_caster$<$ type, holder\_type $>$@{copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{holder}{holder}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+holder\+\_\+type \mbox{\hyperlink{structcopyable__holder__caster}{copyable\+\_\+holder\+\_\+caster}}$<$ type, holder\+\_\+type $>$\+::holder\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{cast_8h}{cast.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,575 @@
+\hypertarget{genx_8c}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/genx/genx.c File Reference}
+\label{genx_8c}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/genx/genx.c@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/genx/genx.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$libstudxml/details/genx/genx.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structplist}{plist}}
+\item 
+struct \mbox{\hyperlink{structcollector}{collector}}
+\item 
+struct \mbox{\hyperlink{structgenx_namespace__rec}{genx\+Namespace\+\_\+rec}}
+\item 
+struct \mbox{\hyperlink{structgenx_element__rec}{genx\+Element\+\_\+rec}}
+\item 
+struct \mbox{\hyperlink{structgenx_attribute__rec}{genx\+Attribute\+\_\+rec}}
+\item 
+struct \mbox{\hyperlink{structgenx_writer__rec}{genx\+Writer\+\_\+rec}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{genx_8c_a17bff902dab4121c9c9d98e600e341b3}{GENX\+\_\+\+VERSION}}~\char`\"{}cs-\/1\char`\"{}
+\item 
+\#define \mbox{\hyperlink{genx_8c_a5dc1a1eea304803c4111d432c42d635d}{Boolean}}~int
+\item 
+\#define \mbox{\hyperlink{genx_8c_add3ca9eefe3b5b754426f51d3043e579}{True}}~1
+\item 
+\#define \mbox{\hyperlink{genx_8c_a306ebd41c0cd1303b1372c6153f0caf8}{False}}~0
+\item 
+\#define \mbox{\hyperlink{genx_8c_a1a8c1498730d8c3b3e9fdb6618e7ef65}{STRLEN\+\_\+\+XMLNS\+\_\+\+COLON}}~6
+\item 
+\#define \mbox{\hyperlink{genx_8c_af19a1883819b2786c275eb1fa8a7ac40}{collect\+Piece}}(w,  c,  d,  size)~\{if (((c)-\/$>$used+(size))$>$=(c)-\/$>$space)\{if (((w)-\/$>$status=grow\+Collector(w,c,(c)-\/$>$used+(size)))!=\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574baa00ecf572455f7f1f4887ecf683ccac6}{GENX\+\_\+\+SUCCESS}}) return (w)-\/$>$status;\}memcpy((char $\ast$)(c)-\/$>$buf+(c)-\/$>$used,d,size);(c)-\/$>$used+=size;\}
+\item 
+\#define \mbox{\hyperlink{genx_8c_ab184e84e5e61358ac389c373a728f164}{Send\+Check}}(w,  s)~if ((w-\/$>$status=sendx(w,(\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}})s))!=\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574baa00ecf572455f7f1f4887ecf683ccac6}{GENX\+\_\+\+SUCCESS}}) return w-\/$>$status
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04}{writer\+Sequence}} \{ \newline
+\mbox{\hyperlink{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04aa4e8e4b405174135e14f157d1772acde}{SEQUENCE\+\_\+\+NO\+\_\+\+DOC}}
+, \mbox{\hyperlink{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04a19b5136c5e1e6dfe5e265825b1c50d30}{SEQUENCE\+\_\+\+PRE\+\_\+\+DOC}}
+, \mbox{\hyperlink{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04ab8e30b37437c424f00da27431ef54004}{SEQUENCE\+\_\+\+POST\+\_\+\+DOC}}
+, \mbox{\hyperlink{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04a7ff49b25332c5ac9db56ca030b237aee}{SEQUENCE\+\_\+\+START\+\_\+\+TAG}}
+, \newline
+\mbox{\hyperlink{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04aa948ca357014bfa92e151b76c69f9715}{SEQUENCE\+\_\+\+ATTRIBUTES}}
+, \mbox{\hyperlink{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04a887c3a3fa6ff8a13b1379df5eb680495}{SEQUENCE\+\_\+\+START\+\_\+\+ATTR}}
+, \mbox{\hyperlink{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04ad4302520bf382f7426618885b10ddb56}{SEQUENCE\+\_\+\+CONTENT}}
+ \}
+\item 
+enum \mbox{\hyperlink{genx_8c_a25172ee313519e8eee73a351aa25c5c6}{attr\+Type}} \{ \mbox{\hyperlink{genx_8c_a25172ee313519e8eee73a351aa25c5c6afd7b5144471e41a0d7a83f837cc4c839}{ATTR\+\_\+\+NSDECL}}
+, \mbox{\hyperlink{genx_8c_a25172ee313519e8eee73a351aa25c5c6a43d6f0cf49c07f45c267d998ff259fb0}{ATTR\+\_\+\+NAKED}}
+, \mbox{\hyperlink{genx_8c_a25172ee313519e8eee73a351aa25c5c6a622cdf3a4be4a0c64ed82f8edbf98210}{ATTR\+\_\+\+PREFIXED}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{genx_8c_a0c422ab1bf52142783bdd76f439461b8}{genx\+Set\+Char\+Props}} (char $\ast$p)
+\item 
+int \mbox{\hyperlink{genx_8c_aa1f28596814ceac1df303564b7e0b3d9}{genx\+Next\+Unicode\+Char}} (\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} $\ast$sp)
+\item 
+\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} \mbox{\hyperlink{genx_8c_a5dca72d0ad06d146e4032e963826e324}{genx\+New}} (\mbox{\hyperlink{genx_8h_a575737f1221a8d4e97f3e655f3ce9883}{genx\+Alloc}} alloc, \mbox{\hyperlink{genx_8h_ae1e818cf216c71cf82abe7edde40dbe6}{genx\+Dealloc}} dealloc, void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}})
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a733ec21ce3891434c6467125a56277f0}{genx\+Reset}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w)
+\item 
+void \mbox{\hyperlink{genx_8c_aa9ead3b56c438ef7268001a9e0dd05dd}{genx\+Set\+User\+Data}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}})
+\item 
+void $\ast$ \mbox{\hyperlink{genx_8c_a69648efea45aece1b85f69c6c45370af}{genx\+Get\+User\+Data}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a0cd5d9a729ce15a0067bc9e3cdec9729}{genx\+Set\+Pretty\+Print}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, int ind)
+\item 
+int \mbox{\hyperlink{genx_8c_a29a5b8ba818749372d2181829c86d59e}{genx\+Get\+Pretty\+Print}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_aacf0225ee5a0f35fd6271d0a450adc90}{genx\+Suspend\+Pretty\+Print}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a3dd0f07eb3e77fe66cf36c7a70fa2d08}{genx\+Resume\+Pretty\+Print}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w)
+\item 
+int \mbox{\hyperlink{genx_8c_a768ead9d4c94a26103d2cd73432021b7}{genx\+Pretty\+Print\+Suspended}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a57ecaa8ec21936539ec7cb74c8f796fc}{genx\+Set\+Canonical}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, int flag)
+\item 
+int \mbox{\hyperlink{genx_8c_aba48980007259bb75531dfb8034ab579}{genx\+Get\+Canonical}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w)
+\item 
+void \mbox{\hyperlink{genx_8c_a42722fd772ef61cc16eea9c6f04bf90a}{genx\+Set\+Alloc}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a575737f1221a8d4e97f3e655f3ce9883}{genx\+Alloc}} alloc)
+\item 
+void \mbox{\hyperlink{genx_8c_a131148d462ff0a9c54861f8d87e43348}{genx\+Set\+Dealloc}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_ae1e818cf216c71cf82abe7edde40dbe6}{genx\+Dealloc}} dealloc)
+\item 
+\mbox{\hyperlink{genx_8h_a575737f1221a8d4e97f3e655f3ce9883}{genx\+Alloc}} \mbox{\hyperlink{genx_8c_a2f484a4cd9af72a5660f198366f19f34}{genx\+Get\+Alloc}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w)
+\item 
+\mbox{\hyperlink{genx_8h_ae1e818cf216c71cf82abe7edde40dbe6}{genx\+Dealloc}} \mbox{\hyperlink{genx_8c_ab89ccd565d625598865e4b6d22ec6964}{genx\+Get\+Dealloc}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w)
+\item 
+void \mbox{\hyperlink{genx_8c_a98276dd82320b5efbf75c15a18a3b6e9}{genx\+Dispose}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_ada0c8407e630376a5369c90fbae87176}{genx\+Check\+Text}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} s)
+\item 
+int \mbox{\hyperlink{genx_8c_afc1d66ce1d73bad09b73bf521b77cba0}{genx\+Scrub\+Text}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} in, \mbox{\hyperlink{genx_8h_a01e6d3532a502d1cada677440674e4c4}{utf8}} out)
+\item 
+int \mbox{\hyperlink{genx_8c_ac11dc793ec9375d4e46eb8cd898d9e2d}{genx\+Char\+Class}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, int c)
+\item 
+char $\ast$ \mbox{\hyperlink{genx_8c_a1ad9a39a098f62b2293a9a4fe0442554}{genx\+Get\+Error\+Message}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} status)
+\item 
+char $\ast$ \mbox{\hyperlink{genx_8c_a62da274f7b31fb48b44e4e02f9aa792d}{genx\+Last\+Error\+Message}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w)
+\item 
+\mbox{\hyperlink{genx_8h_a2f71bdfb25c233ade286db132f15fc66}{genx\+Namespace}} \mbox{\hyperlink{genx_8c_a58ccc39b27164c9d4df944768a883d78}{genx\+Declare\+Namespace}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} uri, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} default\+Pref, \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} $\ast$statusP)
+\item 
+\mbox{\hyperlink{genx_8h_a01e6d3532a502d1cada677440674e4c4}{utf8}} \mbox{\hyperlink{genx_8c_a2e5419978da077d7275ce52df89e64f3}{genx\+Get\+Namespace\+Prefix}} (\mbox{\hyperlink{genx_8h_a2f71bdfb25c233ade286db132f15fc66}{genx\+Namespace}} \mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}})
+\item 
+\mbox{\hyperlink{genx_8h_aa85ceabd90df3ba4a09356a99457f06b}{genx\+Element}} \mbox{\hyperlink{genx_8c_a8f036e7e0c2c4bdaeb0173307d687067}{genx\+Declare\+Element}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a2f71bdfb25c233ade286db132f15fc66}{genx\+Namespace}} \mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}}, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} \mbox{\hyperlink{structname}{name}}, \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} $\ast$statusP)
+\item 
+\mbox{\hyperlink{genx_8h_ae83ef0060ab67b45800cd74d376b33b9}{genx\+Attribute}} \mbox{\hyperlink{genx_8c_a12a45b2e03477c2fd5de70694c050466}{genx\+Declare\+Attribute}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a2f71bdfb25c233ade286db132f15fc66}{genx\+Namespace}} \mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}}, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} \mbox{\hyperlink{structname}{name}}, \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} $\ast$statusP)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a1df694db80c08ad48a94237a2bfa5b7e}{genx\+Start\+Doc\+Sender}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{structgenx_sender}{genx\+Sender}} $\ast$sender)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a475cf470ffccec47144e2140ed5e9782}{genx\+Unset\+Default\+Namespace}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a2afff0b94371ee3e8d8df369e8afb796}{genx\+Start\+Element}} (\mbox{\hyperlink{genx_8h_aa85ceabd90df3ba4a09356a99457f06b}{genx\+Element}} e)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_ae443b6b20478eee20301566109eeb379}{genx\+Add\+Namespace}} (\mbox{\hyperlink{genx_8h_a2f71bdfb25c233ade286db132f15fc66}{genx\+Namespace}} \mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}}, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} \mbox{\hyperlink{structprefix}{prefix}})
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a44146bfa58946a085254626f913a84aa}{genx\+Add\+Attribute}} (\mbox{\hyperlink{genx_8h_ae83ef0060ab67b45800cd74d376b33b9}{genx\+Attribute}} a, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} valuestr)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a8301402a552887f348ab40a405dc9bea}{genx\+Start\+Attribute}} (\mbox{\hyperlink{genx_8h_ae83ef0060ab67b45800cd74d376b33b9}{genx\+Attribute}} a)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a1d486595474902d8272ee121f798eb2a}{genx\+Get\+Current\+Attribute}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} $\ast$xmlns, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} $\ast$\mbox{\hyperlink{structname}{name}})
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a7ebc06c0aebf88c8f4d4653e2caaeb57}{genx\+End\+Attribute}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_ad99391bd65ed69e869f7b99a89786f51}{genx\+Get\+Current\+Element}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} $\ast$xmlns, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} $\ast$\mbox{\hyperlink{structname}{name}})
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a6e538f0db7bcd0432c4b8f4d93e8ba1a}{genx\+End\+Element}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a9f2503df33d43ed933e53e808e92f675}{genx\+Add\+Text}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}})
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a93d3ffbcfa5bc9303b7c7ebb9f9e5eb1}{genx\+Add\+Bounded\+Text}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}}, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}})
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_ad591902f8a3a4c973734c3ccfe43304e}{genx\+Add\+Counted\+Text}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}}, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} byte\+Count)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_aebb233fe14b7f7a7d2b8c90f077ea045}{genx\+Add\+Character}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, int c)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a62586a3df8fe6d32d47162b3d3fb1f65}{genx\+End\+Document}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a6cb424651b9628fca0b41a94237a4d4f}{genx\+Xml\+Declaration}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} ver, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} enc, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} stl)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_ab1ea2650ef0158ec3a823830758b3a0b}{genx\+Doctype\+Declaration}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} re, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} pi, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} si, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} is)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_ab3cc0820ae60674f1dbb699423e81bc6}{genx\+Comment}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} text)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_adf5a56ec7867628422885a55ee41c0e5}{genx\+PI}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} target, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} text)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_af99c2f9a82e1c379bdc86c71a3d92d05}{genx\+Start\+Element\+Literal}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} xmlns, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} \mbox{\hyperlink{structname}{name}})
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a1747990fd26523e8d320a7a7d1feb807}{genx\+Add\+Attribute\+Literal}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} xmlns, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} \mbox{\hyperlink{structname}{name}}, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} value)
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_afb05d76b92ed26ff430d2497e4fead8d}{genx\+Start\+Attribute\+Literal}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} xmlns, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} \mbox{\hyperlink{structname}{name}})
+\item 
+\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} \mbox{\hyperlink{genx_8c_a872bd89f18442829eedb35d3f59e37bb}{genx\+Add\+Namespace\+Literal}} (\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} w, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} uri, \mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} \mbox{\hyperlink{structprefix}{prefix}})
+\item 
+char $\ast$ \mbox{\hyperlink{genx_8c_a4b2ecb6ed1d210ef1a11221c99082bba}{genx\+Get\+Version}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{genx_8c_a5dc1a1eea304803c4111d432c42d635d}\label{genx_8c_a5dc1a1eea304803c4111d432c42d635d}} 
+\index{genx.c@{genx.c}!Boolean@{Boolean}}
+\index{Boolean@{Boolean}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{Boolean}{Boolean}}
+{\footnotesize\ttfamily \#define Boolean~int}
+
+\mbox{\Hypertarget{genx_8c_af19a1883819b2786c275eb1fa8a7ac40}\label{genx_8c_af19a1883819b2786c275eb1fa8a7ac40}} 
+\index{genx.c@{genx.c}!collectPiece@{collectPiece}}
+\index{collectPiece@{collectPiece}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{collectPiece}{collectPiece}}
+{\footnotesize\ttfamily \#define collect\+Piece(\begin{DoxyParamCaption}\item[{}]{w,  }\item[{}]{c,  }\item[{}]{d,  }\item[{}]{size }\end{DoxyParamCaption})~\{if (((c)-\/$>$used+(size))$>$=(c)-\/$>$space)\{if (((w)-\/$>$status=grow\+Collector(w,c,(c)-\/$>$used+(size)))!=\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574baa00ecf572455f7f1f4887ecf683ccac6}{GENX\+\_\+\+SUCCESS}}) return (w)-\/$>$status;\}memcpy((char $\ast$)(c)-\/$>$buf+(c)-\/$>$used,d,size);(c)-\/$>$used+=size;\}}
+
+\mbox{\Hypertarget{genx_8c_a306ebd41c0cd1303b1372c6153f0caf8}\label{genx_8c_a306ebd41c0cd1303b1372c6153f0caf8}} 
+\index{genx.c@{genx.c}!False@{False}}
+\index{False@{False}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{False}{False}}
+{\footnotesize\ttfamily \#define False~0}
+
+\mbox{\Hypertarget{genx_8c_a17bff902dab4121c9c9d98e600e341b3}\label{genx_8c_a17bff902dab4121c9c9d98e600e341b3}} 
+\index{genx.c@{genx.c}!GENX\_VERSION@{GENX\_VERSION}}
+\index{GENX\_VERSION@{GENX\_VERSION}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{GENX\_VERSION}{GENX\_VERSION}}
+{\footnotesize\ttfamily \#define GENX\+\_\+\+VERSION~\char`\"{}cs-\/1\char`\"{}}
+
+\mbox{\Hypertarget{genx_8c_ab184e84e5e61358ac389c373a728f164}\label{genx_8c_ab184e84e5e61358ac389c373a728f164}} 
+\index{genx.c@{genx.c}!SendCheck@{SendCheck}}
+\index{SendCheck@{SendCheck}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{SendCheck}{SendCheck}}
+{\footnotesize\ttfamily \#define Send\+Check(\begin{DoxyParamCaption}\item[{}]{w,  }\item[{}]{s }\end{DoxyParamCaption})~if ((w-\/$>$status=sendx(w,(\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}})s))!=\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574baa00ecf572455f7f1f4887ecf683ccac6}{GENX\+\_\+\+SUCCESS}}) return w-\/$>$status}
+
+\mbox{\Hypertarget{genx_8c_a1a8c1498730d8c3b3e9fdb6618e7ef65}\label{genx_8c_a1a8c1498730d8c3b3e9fdb6618e7ef65}} 
+\index{genx.c@{genx.c}!STRLEN\_XMLNS\_COLON@{STRLEN\_XMLNS\_COLON}}
+\index{STRLEN\_XMLNS\_COLON@{STRLEN\_XMLNS\_COLON}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{STRLEN\_XMLNS\_COLON}{STRLEN\_XMLNS\_COLON}}
+{\footnotesize\ttfamily \#define STRLEN\+\_\+\+XMLNS\+\_\+\+COLON~6}
+
+\mbox{\Hypertarget{genx_8c_add3ca9eefe3b5b754426f51d3043e579}\label{genx_8c_add3ca9eefe3b5b754426f51d3043e579}} 
+\index{genx.c@{genx.c}!True@{True}}
+\index{True@{True}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{True}{True}}
+{\footnotesize\ttfamily \#define True~1}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{genx_8c_a25172ee313519e8eee73a351aa25c5c6}\label{genx_8c_a25172ee313519e8eee73a351aa25c5c6}} 
+\index{genx.c@{genx.c}!attrType@{attrType}}
+\index{attrType@{attrType}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{attrType}{attrType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{genx_8c_a25172ee313519e8eee73a351aa25c5c6}{attr\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ATTR\_NSDECL@{ATTR\_NSDECL}!genx.c@{genx.c}}\index{genx.c@{genx.c}!ATTR\_NSDECL@{ATTR\_NSDECL}}}\mbox{\Hypertarget{genx_8c_a25172ee313519e8eee73a351aa25c5c6afd7b5144471e41a0d7a83f837cc4c839}\label{genx_8c_a25172ee313519e8eee73a351aa25c5c6afd7b5144471e41a0d7a83f837cc4c839}} 
+ATTR\+\_\+\+NSDECL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ATTR\_NAKED@{ATTR\_NAKED}!genx.c@{genx.c}}\index{genx.c@{genx.c}!ATTR\_NAKED@{ATTR\_NAKED}}}\mbox{\Hypertarget{genx_8c_a25172ee313519e8eee73a351aa25c5c6a43d6f0cf49c07f45c267d998ff259fb0}\label{genx_8c_a25172ee313519e8eee73a351aa25c5c6a43d6f0cf49c07f45c267d998ff259fb0}} 
+ATTR\+\_\+\+NAKED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ATTR\_PREFIXED@{ATTR\_PREFIXED}!genx.c@{genx.c}}\index{genx.c@{genx.c}!ATTR\_PREFIXED@{ATTR\_PREFIXED}}}\mbox{\Hypertarget{genx_8c_a25172ee313519e8eee73a351aa25c5c6a622cdf3a4be4a0c64ed82f8edbf98210}\label{genx_8c_a25172ee313519e8eee73a351aa25c5c6a622cdf3a4be4a0c64ed82f8edbf98210}} 
+ATTR\+\_\+\+PREFIXED&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04}\label{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04}} 
+\index{genx.c@{genx.c}!writerSequence@{writerSequence}}
+\index{writerSequence@{writerSequence}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{writerSequence}{writerSequence}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04}{writer\+Sequence}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEQUENCE\_NO\_DOC@{SEQUENCE\_NO\_DOC}!genx.c@{genx.c}}\index{genx.c@{genx.c}!SEQUENCE\_NO\_DOC@{SEQUENCE\_NO\_DOC}}}\mbox{\Hypertarget{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04aa4e8e4b405174135e14f157d1772acde}\label{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04aa4e8e4b405174135e14f157d1772acde}} 
+SEQUENCE\+\_\+\+NO\+\_\+\+DOC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEQUENCE\_PRE\_DOC@{SEQUENCE\_PRE\_DOC}!genx.c@{genx.c}}\index{genx.c@{genx.c}!SEQUENCE\_PRE\_DOC@{SEQUENCE\_PRE\_DOC}}}\mbox{\Hypertarget{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04a19b5136c5e1e6dfe5e265825b1c50d30}\label{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04a19b5136c5e1e6dfe5e265825b1c50d30}} 
+SEQUENCE\+\_\+\+PRE\+\_\+\+DOC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEQUENCE\_POST\_DOC@{SEQUENCE\_POST\_DOC}!genx.c@{genx.c}}\index{genx.c@{genx.c}!SEQUENCE\_POST\_DOC@{SEQUENCE\_POST\_DOC}}}\mbox{\Hypertarget{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04ab8e30b37437c424f00da27431ef54004}\label{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04ab8e30b37437c424f00da27431ef54004}} 
+SEQUENCE\+\_\+\+POST\+\_\+\+DOC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEQUENCE\_START\_TAG@{SEQUENCE\_START\_TAG}!genx.c@{genx.c}}\index{genx.c@{genx.c}!SEQUENCE\_START\_TAG@{SEQUENCE\_START\_TAG}}}\mbox{\Hypertarget{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04a7ff49b25332c5ac9db56ca030b237aee}\label{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04a7ff49b25332c5ac9db56ca030b237aee}} 
+SEQUENCE\+\_\+\+START\+\_\+\+TAG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEQUENCE\_ATTRIBUTES@{SEQUENCE\_ATTRIBUTES}!genx.c@{genx.c}}\index{genx.c@{genx.c}!SEQUENCE\_ATTRIBUTES@{SEQUENCE\_ATTRIBUTES}}}\mbox{\Hypertarget{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04aa948ca357014bfa92e151b76c69f9715}\label{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04aa948ca357014bfa92e151b76c69f9715}} 
+SEQUENCE\+\_\+\+ATTRIBUTES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEQUENCE\_START\_ATTR@{SEQUENCE\_START\_ATTR}!genx.c@{genx.c}}\index{genx.c@{genx.c}!SEQUENCE\_START\_ATTR@{SEQUENCE\_START\_ATTR}}}\mbox{\Hypertarget{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04a887c3a3fa6ff8a13b1379df5eb680495}\label{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04a887c3a3fa6ff8a13b1379df5eb680495}} 
+SEQUENCE\+\_\+\+START\+\_\+\+ATTR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEQUENCE\_CONTENT@{SEQUENCE\_CONTENT}!genx.c@{genx.c}}\index{genx.c@{genx.c}!SEQUENCE\_CONTENT@{SEQUENCE\_CONTENT}}}\mbox{\Hypertarget{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04ad4302520bf382f7426618885b10ddb56}\label{genx_8c_a3eedf52cdf1f0c6c708414a3f3b9dd04ad4302520bf382f7426618885b10ddb56}} 
+SEQUENCE\+\_\+\+CONTENT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{genx_8c_a44146bfa58946a085254626f913a84aa}\label{genx_8c_a44146bfa58946a085254626f913a84aa}} 
+\index{genx.c@{genx.c}!genxAddAttribute@{genxAddAttribute}}
+\index{genxAddAttribute@{genxAddAttribute}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxAddAttribute()}{genxAddAttribute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Add\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae83ef0060ab67b45800cd74d376b33b9}{genx\+Attribute}}}]{a,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{valuestr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a1747990fd26523e8d320a7a7d1feb807}\label{genx_8c_a1747990fd26523e8d320a7a7d1feb807}} 
+\index{genx.c@{genx.c}!genxAddAttributeLiteral@{genxAddAttributeLiteral}}
+\index{genxAddAttributeLiteral@{genxAddAttributeLiteral}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxAddAttributeLiteral()}{genxAddAttributeLiteral()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Add\+Attribute\+Literal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{xmlns,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{name,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a93d3ffbcfa5bc9303b7c7ebb9f9e5eb1}\label{genx_8c_a93d3ffbcfa5bc9303b7c7ebb9f9e5eb1}} 
+\index{genx.c@{genx.c}!genxAddBoundedText@{genxAddBoundedText}}
+\index{genxAddBoundedText@{genxAddBoundedText}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxAddBoundedText()}{genxAddBoundedText()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Add\+Bounded\+Text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{start,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_aebb233fe14b7f7a7d2b8c90f077ea045}\label{genx_8c_aebb233fe14b7f7a7d2b8c90f077ea045}} 
+\index{genx.c@{genx.c}!genxAddCharacter@{genxAddCharacter}}
+\index{genxAddCharacter@{genxAddCharacter}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxAddCharacter()}{genxAddCharacter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Add\+Character (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_ad591902f8a3a4c973734c3ccfe43304e}\label{genx_8c_ad591902f8a3a4c973734c3ccfe43304e}} 
+\index{genx.c@{genx.c}!genxAddCountedText@{genxAddCountedText}}
+\index{genxAddCountedText@{genxAddCountedText}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxAddCountedText()}{genxAddCountedText()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Add\+Counted\+Text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{start,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}}}]{byte\+Count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_ae443b6b20478eee20301566109eeb379}\label{genx_8c_ae443b6b20478eee20301566109eeb379}} 
+\index{genx.c@{genx.c}!genxAddNamespace@{genxAddNamespace}}
+\index{genxAddNamespace@{genxAddNamespace}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxAddNamespace()}{genxAddNamespace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Add\+Namespace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_a2f71bdfb25c233ade286db132f15fc66}{genx\+Namespace}}}]{ns,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{prefix }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a872bd89f18442829eedb35d3f59e37bb}\label{genx_8c_a872bd89f18442829eedb35d3f59e37bb}} 
+\index{genx.c@{genx.c}!genxAddNamespaceLiteral@{genxAddNamespaceLiteral}}
+\index{genxAddNamespaceLiteral@{genxAddNamespaceLiteral}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxAddNamespaceLiteral()}{genxAddNamespaceLiteral()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Add\+Namespace\+Literal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{uri,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{prefix }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a9f2503df33d43ed933e53e808e92f675}\label{genx_8c_a9f2503df33d43ed933e53e808e92f675}} 
+\index{genx.c@{genx.c}!genxAddText@{genxAddText}}
+\index{genxAddText@{genxAddText}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxAddText()}{genxAddText()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Add\+Text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{start }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_ac11dc793ec9375d4e46eb8cd898d9e2d}\label{genx_8c_ac11dc793ec9375d4e46eb8cd898d9e2d}} 
+\index{genx.c@{genx.c}!genxCharClass@{genxCharClass}}
+\index{genxCharClass@{genxCharClass}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxCharClass()}{genxCharClass()}}
+{\footnotesize\ttfamily int genx\+Char\+Class (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_ada0c8407e630376a5369c90fbae87176}\label{genx_8c_ada0c8407e630376a5369c90fbae87176}} 
+\index{genx.c@{genx.c}!genxCheckText@{genxCheckText}}
+\index{genxCheckText@{genxCheckText}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxCheckText()}{genxCheckText()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Check\+Text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_ab3cc0820ae60674f1dbb699423e81bc6}\label{genx_8c_ab3cc0820ae60674f1dbb699423e81bc6}} 
+\index{genx.c@{genx.c}!genxComment@{genxComment}}
+\index{genxComment@{genxComment}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxComment()}{genxComment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Comment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{text }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a12a45b2e03477c2fd5de70694c050466}\label{genx_8c_a12a45b2e03477c2fd5de70694c050466}} 
+\index{genx.c@{genx.c}!genxDeclareAttribute@{genxDeclareAttribute}}
+\index{genxDeclareAttribute@{genxDeclareAttribute}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxDeclareAttribute()}{genxDeclareAttribute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_ae83ef0060ab67b45800cd74d376b33b9}{genx\+Attribute}} genx\+Declare\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a2f71bdfb25c233ade286db132f15fc66}{genx\+Namespace}}}]{ns,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{name,  }\item[{\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} $\ast$}]{statusP }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a8f036e7e0c2c4bdaeb0173307d687067}\label{genx_8c_a8f036e7e0c2c4bdaeb0173307d687067}} 
+\index{genx.c@{genx.c}!genxDeclareElement@{genxDeclareElement}}
+\index{genxDeclareElement@{genxDeclareElement}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxDeclareElement()}{genxDeclareElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_aa85ceabd90df3ba4a09356a99457f06b}{genx\+Element}} genx\+Declare\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a2f71bdfb25c233ade286db132f15fc66}{genx\+Namespace}}}]{ns,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{name,  }\item[{\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} $\ast$}]{statusP }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a58ccc39b27164c9d4df944768a883d78}\label{genx_8c_a58ccc39b27164c9d4df944768a883d78}} 
+\index{genx.c@{genx.c}!genxDeclareNamespace@{genxDeclareNamespace}}
+\index{genxDeclareNamespace@{genxDeclareNamespace}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxDeclareNamespace()}{genxDeclareNamespace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a2f71bdfb25c233ade286db132f15fc66}{genx\+Namespace}} genx\+Declare\+Namespace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{uri,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{default\+Pref,  }\item[{\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} $\ast$}]{statusP }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a98276dd82320b5efbf75c15a18a3b6e9}\label{genx_8c_a98276dd82320b5efbf75c15a18a3b6e9}} 
+\index{genx.c@{genx.c}!genxDispose@{genxDispose}}
+\index{genxDispose@{genxDispose}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxDispose()}{genxDispose()}}
+{\footnotesize\ttfamily void genx\+Dispose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_ab1ea2650ef0158ec3a823830758b3a0b}\label{genx_8c_ab1ea2650ef0158ec3a823830758b3a0b}} 
+\index{genx.c@{genx.c}!genxDoctypeDeclaration@{genxDoctypeDeclaration}}
+\index{genxDoctypeDeclaration@{genxDoctypeDeclaration}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxDoctypeDeclaration()}{genxDoctypeDeclaration()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Doctype\+Declaration (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{re,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{pi,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{si,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{is }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a7ebc06c0aebf88c8f4d4653e2caaeb57}\label{genx_8c_a7ebc06c0aebf88c8f4d4653e2caaeb57}} 
+\index{genx.c@{genx.c}!genxEndAttribute@{genxEndAttribute}}
+\index{genxEndAttribute@{genxEndAttribute}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxEndAttribute()}{genxEndAttribute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+End\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a62586a3df8fe6d32d47162b3d3fb1f65}\label{genx_8c_a62586a3df8fe6d32d47162b3d3fb1f65}} 
+\index{genx.c@{genx.c}!genxEndDocument@{genxEndDocument}}
+\index{genxEndDocument@{genxEndDocument}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxEndDocument()}{genxEndDocument()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+End\+Document (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a6e538f0db7bcd0432c4b8f4d93e8ba1a}\label{genx_8c_a6e538f0db7bcd0432c4b8f4d93e8ba1a}} 
+\index{genx.c@{genx.c}!genxEndElement@{genxEndElement}}
+\index{genxEndElement@{genxEndElement}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxEndElement()}{genxEndElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+End\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a2f484a4cd9af72a5660f198366f19f34}\label{genx_8c_a2f484a4cd9af72a5660f198366f19f34}} 
+\index{genx.c@{genx.c}!genxGetAlloc@{genxGetAlloc}}
+\index{genxGetAlloc@{genxGetAlloc}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxGetAlloc()}{genxGetAlloc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a575737f1221a8d4e97f3e655f3ce9883}{genx\+Alloc}} genx\+Get\+Alloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_aba48980007259bb75531dfb8034ab579}\label{genx_8c_aba48980007259bb75531dfb8034ab579}} 
+\index{genx.c@{genx.c}!genxGetCanonical@{genxGetCanonical}}
+\index{genxGetCanonical@{genxGetCanonical}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxGetCanonical()}{genxGetCanonical()}}
+{\footnotesize\ttfamily int genx\+Get\+Canonical (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a1d486595474902d8272ee121f798eb2a}\label{genx_8c_a1d486595474902d8272ee121f798eb2a}} 
+\index{genx.c@{genx.c}!genxGetCurrentAttribute@{genxGetCurrentAttribute}}
+\index{genxGetCurrentAttribute@{genxGetCurrentAttribute}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxGetCurrentAttribute()}{genxGetCurrentAttribute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Get\+Current\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} $\ast$}]{xmlns,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_ad99391bd65ed69e869f7b99a89786f51}\label{genx_8c_ad99391bd65ed69e869f7b99a89786f51}} 
+\index{genx.c@{genx.c}!genxGetCurrentElement@{genxGetCurrentElement}}
+\index{genxGetCurrentElement@{genxGetCurrentElement}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxGetCurrentElement()}{genxGetCurrentElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Get\+Current\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} $\ast$}]{xmlns,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_ab89ccd565d625598865e4b6d22ec6964}\label{genx_8c_ab89ccd565d625598865e4b6d22ec6964}} 
+\index{genx.c@{genx.c}!genxGetDealloc@{genxGetDealloc}}
+\index{genxGetDealloc@{genxGetDealloc}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxGetDealloc()}{genxGetDealloc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_ae1e818cf216c71cf82abe7edde40dbe6}{genx\+Dealloc}} genx\+Get\+Dealloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a1ad9a39a098f62b2293a9a4fe0442554}\label{genx_8c_a1ad9a39a098f62b2293a9a4fe0442554}} 
+\index{genx.c@{genx.c}!genxGetErrorMessage@{genxGetErrorMessage}}
+\index{genxGetErrorMessage@{genxGetErrorMessage}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxGetErrorMessage()}{genxGetErrorMessage()}}
+{\footnotesize\ttfamily char$\ast$ genx\+Get\+Error\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}}}]{status }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a2e5419978da077d7275ce52df89e64f3}\label{genx_8c_a2e5419978da077d7275ce52df89e64f3}} 
+\index{genx.c@{genx.c}!genxGetNamespacePrefix@{genxGetNamespacePrefix}}
+\index{genxGetNamespacePrefix@{genxGetNamespacePrefix}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxGetNamespacePrefix()}{genxGetNamespacePrefix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a01e6d3532a502d1cada677440674e4c4}{utf8}} genx\+Get\+Namespace\+Prefix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_a2f71bdfb25c233ade286db132f15fc66}{genx\+Namespace}}}]{ns }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a29a5b8ba818749372d2181829c86d59e}\label{genx_8c_a29a5b8ba818749372d2181829c86d59e}} 
+\index{genx.c@{genx.c}!genxGetPrettyPrint@{genxGetPrettyPrint}}
+\index{genxGetPrettyPrint@{genxGetPrettyPrint}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxGetPrettyPrint()}{genxGetPrettyPrint()}}
+{\footnotesize\ttfamily int genx\+Get\+Pretty\+Print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a69648efea45aece1b85f69c6c45370af}\label{genx_8c_a69648efea45aece1b85f69c6c45370af}} 
+\index{genx.c@{genx.c}!genxGetUserData@{genxGetUserData}}
+\index{genxGetUserData@{genxGetUserData}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxGetUserData()}{genxGetUserData()}}
+{\footnotesize\ttfamily void$\ast$ genx\+Get\+User\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a4b2ecb6ed1d210ef1a11221c99082bba}\label{genx_8c_a4b2ecb6ed1d210ef1a11221c99082bba}} 
+\index{genx.c@{genx.c}!genxGetVersion@{genxGetVersion}}
+\index{genxGetVersion@{genxGetVersion}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxGetVersion()}{genxGetVersion()}}
+{\footnotesize\ttfamily char$\ast$ genx\+Get\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a62da274f7b31fb48b44e4e02f9aa792d}\label{genx_8c_a62da274f7b31fb48b44e4e02f9aa792d}} 
+\index{genx.c@{genx.c}!genxLastErrorMessage@{genxLastErrorMessage}}
+\index{genxLastErrorMessage@{genxLastErrorMessage}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxLastErrorMessage()}{genxLastErrorMessage()}}
+{\footnotesize\ttfamily char$\ast$ genx\+Last\+Error\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a5dca72d0ad06d146e4032e963826e324}\label{genx_8c_a5dca72d0ad06d146e4032e963826e324}} 
+\index{genx.c@{genx.c}!genxNew@{genxNew}}
+\index{genxNew@{genxNew}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxNew()}{genxNew()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}} genx\+New (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_a575737f1221a8d4e97f3e655f3ce9883}{genx\+Alloc}}}]{alloc,  }\item[{\mbox{\hyperlink{genx_8h_ae1e818cf216c71cf82abe7edde40dbe6}{genx\+Dealloc}}}]{dealloc,  }\item[{void $\ast$}]{user\+Data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_aa1f28596814ceac1df303564b7e0b3d9}\label{genx_8c_aa1f28596814ceac1df303564b7e0b3d9}} 
+\index{genx.c@{genx.c}!genxNextUnicodeChar@{genxNextUnicodeChar}}
+\index{genxNextUnicodeChar@{genxNextUnicodeChar}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxNextUnicodeChar()}{genxNextUnicodeChar()}}
+{\footnotesize\ttfamily int genx\+Next\+Unicode\+Char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}} $\ast$}]{sp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_adf5a56ec7867628422885a55ee41c0e5}\label{genx_8c_adf5a56ec7867628422885a55ee41c0e5}} 
+\index{genx.c@{genx.c}!genxPI@{genxPI}}
+\index{genxPI@{genxPI}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxPI()}{genxPI()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+PI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{target,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{text }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a768ead9d4c94a26103d2cd73432021b7}\label{genx_8c_a768ead9d4c94a26103d2cd73432021b7}} 
+\index{genx.c@{genx.c}!genxPrettyPrintSuspended@{genxPrettyPrintSuspended}}
+\index{genxPrettyPrintSuspended@{genxPrettyPrintSuspended}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxPrettyPrintSuspended()}{genxPrettyPrintSuspended()}}
+{\footnotesize\ttfamily int genx\+Pretty\+Print\+Suspended (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a733ec21ce3891434c6467125a56277f0}\label{genx_8c_a733ec21ce3891434c6467125a56277f0}} 
+\index{genx.c@{genx.c}!genxReset@{genxReset}}
+\index{genxReset@{genxReset}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxReset()}{genxReset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a3dd0f07eb3e77fe66cf36c7a70fa2d08}\label{genx_8c_a3dd0f07eb3e77fe66cf36c7a70fa2d08}} 
+\index{genx.c@{genx.c}!genxResumePrettyPrint@{genxResumePrettyPrint}}
+\index{genxResumePrettyPrint@{genxResumePrettyPrint}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxResumePrettyPrint()}{genxResumePrettyPrint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Resume\+Pretty\+Print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_afc1d66ce1d73bad09b73bf521b77cba0}\label{genx_8c_afc1d66ce1d73bad09b73bf521b77cba0}} 
+\index{genx.c@{genx.c}!genxScrubText@{genxScrubText}}
+\index{genxScrubText@{genxScrubText}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxScrubText()}{genxScrubText()}}
+{\footnotesize\ttfamily int genx\+Scrub\+Text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{in,  }\item[{\mbox{\hyperlink{genx_8h_a01e6d3532a502d1cada677440674e4c4}{utf8}}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a42722fd772ef61cc16eea9c6f04bf90a}\label{genx_8c_a42722fd772ef61cc16eea9c6f04bf90a}} 
+\index{genx.c@{genx.c}!genxSetAlloc@{genxSetAlloc}}
+\index{genxSetAlloc@{genxSetAlloc}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxSetAlloc()}{genxSetAlloc()}}
+{\footnotesize\ttfamily void genx\+Set\+Alloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a575737f1221a8d4e97f3e655f3ce9883}{genx\+Alloc}}}]{alloc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a57ecaa8ec21936539ec7cb74c8f796fc}\label{genx_8c_a57ecaa8ec21936539ec7cb74c8f796fc}} 
+\index{genx.c@{genx.c}!genxSetCanonical@{genxSetCanonical}}
+\index{genxSetCanonical@{genxSetCanonical}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxSetCanonical()}{genxSetCanonical()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Set\+Canonical (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{int}]{flag }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a0c422ab1bf52142783bdd76f439461b8}\label{genx_8c_a0c422ab1bf52142783bdd76f439461b8}} 
+\index{genx.c@{genx.c}!genxSetCharProps@{genxSetCharProps}}
+\index{genxSetCharProps@{genxSetCharProps}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxSetCharProps()}{genxSetCharProps()}}
+{\footnotesize\ttfamily void genx\+Set\+Char\+Props (\begin{DoxyParamCaption}\item[{char $\ast$}]{p }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a131148d462ff0a9c54861f8d87e43348}\label{genx_8c_a131148d462ff0a9c54861f8d87e43348}} 
+\index{genx.c@{genx.c}!genxSetDealloc@{genxSetDealloc}}
+\index{genxSetDealloc@{genxSetDealloc}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxSetDealloc()}{genxSetDealloc()}}
+{\footnotesize\ttfamily void genx\+Set\+Dealloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_ae1e818cf216c71cf82abe7edde40dbe6}{genx\+Dealloc}}}]{dealloc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a0cd5d9a729ce15a0067bc9e3cdec9729}\label{genx_8c_a0cd5d9a729ce15a0067bc9e3cdec9729}} 
+\index{genx.c@{genx.c}!genxSetPrettyPrint@{genxSetPrettyPrint}}
+\index{genxSetPrettyPrint@{genxSetPrettyPrint}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxSetPrettyPrint()}{genxSetPrettyPrint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Set\+Pretty\+Print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{int}]{ind }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_aa9ead3b56c438ef7268001a9e0dd05dd}\label{genx_8c_aa9ead3b56c438ef7268001a9e0dd05dd}} 
+\index{genx.c@{genx.c}!genxSetUserData@{genxSetUserData}}
+\index{genxSetUserData@{genxSetUserData}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxSetUserData()}{genxSetUserData()}}
+{\footnotesize\ttfamily void genx\+Set\+User\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{void $\ast$}]{user\+Data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a8301402a552887f348ab40a405dc9bea}\label{genx_8c_a8301402a552887f348ab40a405dc9bea}} 
+\index{genx.c@{genx.c}!genxStartAttribute@{genxStartAttribute}}
+\index{genxStartAttribute@{genxStartAttribute}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxStartAttribute()}{genxStartAttribute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Start\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae83ef0060ab67b45800cd74d376b33b9}{genx\+Attribute}}}]{a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_afb05d76b92ed26ff430d2497e4fead8d}\label{genx_8c_afb05d76b92ed26ff430d2497e4fead8d}} 
+\index{genx.c@{genx.c}!genxStartAttributeLiteral@{genxStartAttributeLiteral}}
+\index{genxStartAttributeLiteral@{genxStartAttributeLiteral}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxStartAttributeLiteral()}{genxStartAttributeLiteral()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Start\+Attribute\+Literal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{xmlns,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a1df694db80c08ad48a94237a2bfa5b7e}\label{genx_8c_a1df694db80c08ad48a94237a2bfa5b7e}} 
+\index{genx.c@{genx.c}!genxStartDocSender@{genxStartDocSender}}
+\index{genxStartDocSender@{genxStartDocSender}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxStartDocSender()}{genxStartDocSender()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Start\+Doc\+Sender (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{structgenx_sender}{genx\+Sender}} $\ast$}]{sender }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a2afff0b94371ee3e8d8df369e8afb796}\label{genx_8c_a2afff0b94371ee3e8d8df369e8afb796}} 
+\index{genx.c@{genx.c}!genxStartElement@{genxStartElement}}
+\index{genxStartElement@{genxStartElement}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxStartElement()}{genxStartElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Start\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_aa85ceabd90df3ba4a09356a99457f06b}{genx\+Element}}}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_af99c2f9a82e1c379bdc86c71a3d92d05}\label{genx_8c_af99c2f9a82e1c379bdc86c71a3d92d05}} 
+\index{genx.c@{genx.c}!genxStartElementLiteral@{genxStartElementLiteral}}
+\index{genxStartElementLiteral@{genxStartElementLiteral}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxStartElementLiteral()}{genxStartElementLiteral()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Start\+Element\+Literal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{xmlns,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_aacf0225ee5a0f35fd6271d0a450adc90}\label{genx_8c_aacf0225ee5a0f35fd6271d0a450adc90}} 
+\index{genx.c@{genx.c}!genxSuspendPrettyPrint@{genxSuspendPrettyPrint}}
+\index{genxSuspendPrettyPrint@{genxSuspendPrettyPrint}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxSuspendPrettyPrint()}{genxSuspendPrettyPrint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Suspend\+Pretty\+Print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a475cf470ffccec47144e2140ed5e9782}\label{genx_8c_a475cf470ffccec47144e2140ed5e9782}} 
+\index{genx.c@{genx.c}!genxUnsetDefaultNamespace@{genxUnsetDefaultNamespace}}
+\index{genxUnsetDefaultNamespace@{genxUnsetDefaultNamespace}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxUnsetDefaultNamespace()}{genxUnsetDefaultNamespace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Unset\+Default\+Namespace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{genx_8c_a6cb424651b9628fca0b41a94237a4d4f}\label{genx_8c_a6cb424651b9628fca0b41a94237a4d4f}} 
+\index{genx.c@{genx.c}!genxXmlDeclaration@{genxXmlDeclaration}}
+\index{genxXmlDeclaration@{genxXmlDeclaration}!genx.c@{genx.c}}
+\doxysubsubsection{\texorpdfstring{genxXmlDeclaration()}{genxXmlDeclaration()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{genx_8h_a03b145c8f58d36c634606d0a9fbc574b}{genx\+Status}} genx\+Xml\+Declaration (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{genx_8h_ae93789287148c95be402de1911ac3d19}{genx\+Writer}}}]{w,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{ver,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{enc,  }\item[{\mbox{\hyperlink{genx_8h_a6c0539be42b69177a26e8e17d1042c5a}{const\+Utf8}}}]{stl }\end{DoxyParamCaption})}
+

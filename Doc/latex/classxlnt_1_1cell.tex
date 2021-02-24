@@ -1,0 +1,1323 @@
+\hypertarget{classxlnt_1_1cell}{}\doxysection{xlnt\+::cell Class Reference}
+\label{classxlnt_1_1cell}\index{xlnt::cell@{xlnt::cell}}
+
+
+Describes a unit of data in a worksheet at a specific coordinate and its associated properties.  
+
+
+
+
+{\ttfamily \#include $<$cell.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classxlnt_1_1cell_a982e2b7d6cba0829f1f77631840f957e}{type}} = cell\+\_\+type
+\begin{DoxyCompactList}\small\item\em Alias xlnt\+::cell\+\_\+type to \mbox{\hyperlink{classxlnt_1_1cell_a982e2b7d6cba0829f1f77631840f957e}{xlnt\+::cell\+::type}} since it looks nicer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1cell_ae68911d378fe56f5072274b9c33d3fbd}{cell}} (const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \&)=default
+\begin{DoxyCompactList}\small\item\em Default copy constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell_ad97097919f2c8d8731b2a69b6f837806}{has\+\_\+value}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if value has been set and has not been cleared using \mbox{\hyperlink{classxlnt_1_1cell_a6ca577336de6b92b9820a30d35547a16}{cell\+::clear\+\_\+value()}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxlnt_1_1cell_a1e034f21e14e3eebe8d4059917537e13}{value}} () const
+\begin{DoxyCompactList}\small\item\em Returns the value of this cell as an instance of type T. Overloads exist for most C++ fundamental types like bool, int, etc. as well as for std\+::string and xlnt datetime types\+: date, time, datetime, and timedelta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a6ca577336de6b92b9820a30d35547a16}{clear\+\_\+value}} ()
+\begin{DoxyCompactList}\small\item\em Makes this cell have a value of type null. All other cell attributes are retained. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a35e1ec4101a5e028502cc1c5b9b13334}{value}} (std\+::nullptr\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Sets the type of this cell to null. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_ab570baa69a6377c21af291889b34d101}{value}} (bool boolean\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the value of this cell to the given boolean value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_ac85da6a8e3f3a268c85b2309e12becd6}{value}} (int int\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the value of this cell to the given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a8da11cdd92503ebe8af9b8576844cbf0}{value}} (unsigned int int\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the value of this cell to the given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_af97cd39019d072497d9de6d42863547e}{value}} (long long int int\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the value of this cell to the given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_ac542a0780736254dfd5fdb03a90cec27}{value}} (unsigned long long int int\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the value of this cell to the given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a652a687612d31185cd7a3daf031235e5}{value}} (float float\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the value of this cell to the given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a7021477ef98c344d16db7bfac16d20fa}{value}} (double float\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the value of this cell to the given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a4fc3503df6e1a25186a31de5660fd928}{value}} (const \mbox{\hyperlink{structxlnt_1_1date}{date}} \&date\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the value of this cell to the given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a848bb11dbf23a135d19dcc505be9ff17}{value}} (const \mbox{\hyperlink{structxlnt_1_1time}{time}} \&time\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the value of this cell to the given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a7a4f448a18d5ac662e93b2b7acb2859a}{value}} (const \mbox{\hyperlink{structxlnt_1_1datetime}{datetime}} \&datetime\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the value of this cell to the given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a2963b543d833316c03c377a2bf552855}{value}} (const \mbox{\hyperlink{structxlnt_1_1timedelta}{timedelta}} \&timedelta\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the value of this cell to the given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a072240b642971de572ce61b13409937d}{value}} (const std\+::string \&string\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the value of this cell to the given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_add47fd6aef8b98b2a2f2716bf33c8df1}{value}} (const char $\ast$string\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the value of this cell to the given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a42876d415047f10c8eea4775e8decbe3}{value}} (const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&text\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the value of this cell to the given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a563c707c4687b87823f286d434455b3c}{value}} (const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} other\+\_\+cell)
+\begin{DoxyCompactList}\small\item\em Sets the value and formatting of this cell to that of other\+\_\+cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a3d21c11927e92be6fde589c41081d74b}{value}} (const std\+::string \&string\+\_\+value, bool infer\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Analyzes string\+\_\+value to determine its type, convert it to that type, and set the value of this cell to that converted value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell_a982e2b7d6cba0829f1f77631840f957e}{type}} \mbox{\hyperlink{classxlnt_1_1cell_ad41a2e3eb44b7e32ea0934ccc5446f68}{data\+\_\+type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the type of this cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a19157c5799ea724db4a3fcb10b852ec1}{data\+\_\+type}} (\mbox{\hyperlink{classxlnt_1_1cell_a982e2b7d6cba0829f1f77631840f957e}{type}} t)
+\begin{DoxyCompactList}\small\item\em Sets the type of this cell. This should usually be done indirectly by setting the value of the cell to a value of that type. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell_a15f41aae50aa385ad8d919a6fbf72d78}{garbage\+\_\+collectible}} () const
+\begin{DoxyCompactList}\small\item\em There\textquotesingle{}s no reason to keep a cell which has no value and is not a placeholder. Returns true if this cell has no value, style, isn\textquotesingle{}t merged, etc. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell_a3d2f3a9977020883ce088e30037c1af9}{is\+\_\+date}} () const
+\begin{DoxyCompactList}\small\item\em Returns true iff this cell\textquotesingle{}s number format matches a date format. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1cell_ac03ebad679cd76a97f60c66ee82751f8}{reference}} () const
+\begin{DoxyCompactList}\small\item\em Returns a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} that points to the location of this cell. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1cell_ad24f50cc05ad1c32cb231533e2db6b84}{column}} () const
+\begin{DoxyCompactList}\small\item\em Returns the column of this cell. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1cell_a017794c401ceec5fc8bb7560e63d399d}{column\+\_\+index}} () const
+\begin{DoxyCompactList}\small\item\em Returns the numeric index (A == 1) of the column of this cell. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1cell_a97138f1360c3eed05feeccd338dc773d}{row}} () const
+\begin{DoxyCompactList}\small\item\em Returns the row of this cell. \end{DoxyCompactList}\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classxlnt_1_1cell_ab9905e42246619418ccc9d54492eba7b}{anchor}} () const
+\begin{DoxyCompactList}\small\item\em Returns the location of this cell as an ordered pair (left, top). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1hyperlink}{hyperlink}} \mbox{\hyperlink{classxlnt_1_1cell_a6c4e9fcdccd12bfa2a51531a6c69ed3d}{hyperlink}} () const
+\begin{DoxyCompactList}\small\item\em Returns the relationship of this cell\textquotesingle{}s hyperlink. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_aada130e6847d32ff24ccdb0c2914e567}{hyperlink}} (const std\+::string \&url, const std\+::string \&display=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Adds a hyperlink to this cell pointing to the URI of the given value and sets the text value of the cell to the given parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a95c6180b7138f2de90d2bceeb64fc414}{hyperlink}} (\mbox{\hyperlink{classxlnt_1_1cell}{xlnt\+::cell}} target, const std\+::string \&display=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Adds an internal hyperlink to this cell pointing to the given cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_ab37b7d9927596e4f74251e2e66b53197}{hyperlink}} (\mbox{\hyperlink{classxlnt_1_1range}{xlnt\+::range}} target, const std\+::string \&display=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Adds an internal hyperlink to this cell pointing to the given range. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell_a8f8406a91f1a45fa49392bf3900a58af}{has\+\_\+hyperlink}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this cell has a hyperlink set. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \mbox{\hyperlink{classxlnt_1_1cell_a44a10e4c9b215005197e90f4cfc167d0}{computed\+\_\+alignment}} () const
+\begin{DoxyCompactList}\small\item\em Returns the alignment that should be used when displaying this cell graphically based on the workbook default, the cell-\/level format, and the named style applied to the cell in that order. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1border}{border}} \mbox{\hyperlink{classxlnt_1_1cell_a12c443d8cd32f83fff9c71c7e28c11fc}{computed\+\_\+border}} () const
+\begin{DoxyCompactList}\small\item\em Returns the border that should be used when displaying this cell graphically based on the workbook default, the cell-\/level format, and the named style applied to the cell in that order. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1fill}{fill}} \mbox{\hyperlink{classxlnt_1_1cell_ace43211f128b5a0f55030f8c05ed3f79}{computed\+\_\+fill}} () const
+\begin{DoxyCompactList}\small\item\em Returns the fill that should be used when displaying this cell graphically based on the workbook default, the cell-\/level format, and the named style applied to the cell in that order. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1font}{font}} \mbox{\hyperlink{classxlnt_1_1cell_aad27aef85203a1bb41a6b985dda04b71}{computed\+\_\+font}} () const
+\begin{DoxyCompactList}\small\item\em Returns the font that should be used when displaying this cell graphically based on the workbook default, the cell-\/level format, and the named style applied to the cell in that order. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1cell_ac0eddacef6382060cfc32c22fd5a7355}{computed\+\_\+number\+\_\+format}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number format that should be used when displaying this cell graphically based on the workbook default, the cell-\/level format, and the named style applied to the cell in that order. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1protection}{protection}} \mbox{\hyperlink{classxlnt_1_1cell_a6b381b37f07a77e76d644b25c0d065d4}{computed\+\_\+protection}} () const
+\begin{DoxyCompactList}\small\item\em Returns the protection that should be used when displaying this cell graphically based on the workbook default, the cell-\/level format, and the named style applied to the cell in that order. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell_a2a1cb642a98314cba30ccd23d44d158b}{has\+\_\+format}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this cell has had a format applied to it. \end{DoxyCompactList}\item 
+const class \mbox{\hyperlink{classxlnt_1_1format}{format}} \mbox{\hyperlink{classxlnt_1_1cell_aa75f1990f41d6d1b6f87918b1492ae6a}{format}} () const
+\begin{DoxyCompactList}\small\item\em Returns the format applied to this cell. If this cell has no format, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception will be thrown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a304510f70e88e8c4f3a2a24c37c489da}{format}} (const class \mbox{\hyperlink{classxlnt_1_1format}{format}} new\+\_\+format)
+\begin{DoxyCompactList}\small\item\em Applies the cell-\/level formatting of new\+\_\+format to this cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a05271dc81c862eb36278b54f984439a0}{clear\+\_\+format}} ()
+\begin{DoxyCompactList}\small\item\em Removes the cell-\/level formatting from this cell. This doesn\textquotesingle{}t affect the style that may also be applied to the cell. Throws an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception if no format is applied. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1cell_a48781230fa419e7476d3f8e5d31e0ce5}{number\+\_\+format}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number format of this cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a8414e8ee56aceb5d7dee1030c6278ace}{number\+\_\+format}} (const class \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \&\mbox{\hyperlink{classxlnt_1_1format}{format}})
+\begin{DoxyCompactList}\small\item\em Creates a new format in the workbook, sets its \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} to the given format, and applies the format to this cell. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1font}{font}} \mbox{\hyperlink{classxlnt_1_1cell_a6a412716ca76da72ec3906eba6d28aa0}{font}} () const
+\begin{DoxyCompactList}\small\item\em Returns the font applied to the text in this cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a6b8e726a7b16e50763e966521ac07583}{font}} (const class \mbox{\hyperlink{classxlnt_1_1font}{font}} \&font\+\_\+)
+\begin{DoxyCompactList}\small\item\em Creates a new format in the workbook, sets its font to the given font, and applies the format to this cell. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1fill}{fill}} \mbox{\hyperlink{classxlnt_1_1cell_ae38211ddc3aa8e97cbfbaacd5980d5e2}{fill}} () const
+\begin{DoxyCompactList}\small\item\em Returns the fill applied to this cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a8f5192f1ed23883920e0093444ee464c}{fill}} (const class \mbox{\hyperlink{classxlnt_1_1fill}{fill}} \&fill\+\_\+)
+\begin{DoxyCompactList}\small\item\em Creates a new format in the workbook, sets its fill to the given fill, and applies the format to this cell. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1border}{border}} \mbox{\hyperlink{classxlnt_1_1cell_a50ef586b7e00088b5c58fc5a81ebc5ce}{border}} () const
+\begin{DoxyCompactList}\small\item\em Returns the border of this cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a8a76847b5e342344b6cfd36245b9a4d4}{border}} (const class \mbox{\hyperlink{classxlnt_1_1border}{border}} \&border\+\_\+)
+\begin{DoxyCompactList}\small\item\em Creates a new format in the workbook, sets its border to the given border, and applies the format to this cell. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \mbox{\hyperlink{classxlnt_1_1cell_ae0eb9bbfa7ebcd3cc62c84f29fdb1a76}{alignment}} () const
+\begin{DoxyCompactList}\small\item\em Returns the alignment of the text in this cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a5bb316e1085b8d0b2e3c1c2d5af222f7}{alignment}} (const class \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \&alignment\+\_\+)
+\begin{DoxyCompactList}\small\item\em Creates a new format in the workbook, sets its alignment to the given alignment, and applies the format to this cell. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1protection}{protection}} \mbox{\hyperlink{classxlnt_1_1cell_a3885a1e6d597a339394416e9560fb9dc}{protection}} () const
+\begin{DoxyCompactList}\small\item\em Returns the protection of this cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_ab5cf761d67c2d0246d3c2a50c67525d0}{protection}} (const class \mbox{\hyperlink{classxlnt_1_1protection}{protection}} \&protection\+\_\+)
+\begin{DoxyCompactList}\small\item\em Creates a new format in the workbook, sets its protection to the given protection, and applies the format to this cell. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell_ae3be365cd7ae0343d7cc70e25d573000}{has\+\_\+style}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this cell has had a style applied to it. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1style}{style}} \mbox{\hyperlink{classxlnt_1_1cell_af42d85dad3ef6a495e0610854dd0fe92}{style}} ()
+\begin{DoxyCompactList}\small\item\em Returns a wrapper pointing to the named style applied to this cell. \end{DoxyCompactList}\item 
+const class \mbox{\hyperlink{classxlnt_1_1style}{style}} \mbox{\hyperlink{classxlnt_1_1cell_ae5d7d5f363704389d4da9cd651bbd2d8}{style}} () const
+\begin{DoxyCompactList}\small\item\em Returns a wrapper pointing to the named style applied to this cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a3563a972df331c60e3b626c4d7b0e4d3}{style}} (const class \mbox{\hyperlink{classxlnt_1_1style}{style}} \&new\+\_\+style)
+\begin{DoxyCompactList}\small\item\em Sets the named style applied to this cell to a style named style\+\_\+name. Equivalent to style(\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{new\+\_\+style.\+name()}}). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a8d23e41acba4e34b5f6925f0133cfff4}{style}} (const std\+::string \&style\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Sets the named style applied to this cell to a style named style\+\_\+name. If this style has not been previously created in the workbook, a \mbox{\hyperlink{classxlnt_1_1key__not__found}{key\+\_\+not\+\_\+found}} exception will be thrown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a35e6af229185a1e491752a719aed4c8b}{clear\+\_\+style}} ()
+\begin{DoxyCompactList}\small\item\em Removes the named style from this cell. An \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception will be thrown if this cell has no style. This will not affect the cell format of the cell. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1cell_aff964405ba8223edfd826ca46d89cc12}{formula}} () const
+\begin{DoxyCompactList}\small\item\em Returns the string representation of the formula applied to this cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_ab92332bdae0340d44869ba3d8f832c37}{formula}} (const std\+::string \&formula)
+\begin{DoxyCompactList}\small\item\em Sets the formula of this cell to the given value. This formula string should begin with \textquotesingle{}=\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_aa17f51e47e21bab97f4ef639b1fa3353}{clear\+\_\+formula}} ()
+\begin{DoxyCompactList}\small\item\em Removes the formula from this cell. After this is called, \mbox{\hyperlink{classxlnt_1_1cell_a45d43fff14aec3eebf2d7622ed9c9af3}{has\+\_\+formula()}} will return false. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell_a45d43fff14aec3eebf2d7622ed9c9af3}{has\+\_\+formula}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this cell has had a formula applied to it. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1cell_a7a51abb90f9e716f242512a9f53cf09a}{to\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Returns a string representing the value of this cell. If the data type is not a string, it will be converted according to the number format. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell_aaa1d2e42bda76c780031b22b6f0d65bf}{is\+\_\+merged}} () const
+\begin{DoxyCompactList}\small\item\em Returns true iff this cell has been merged with one or more surrounding cells. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a4c659baf4eb9d8b5c410a28f18fe9639}{merged}} (bool merged)
+\begin{DoxyCompactList}\small\item\em Makes this a merged cell iff merged is true. Generally, this shouldn\textquotesingle{}t be called directly. Instead, use \mbox{\hyperlink{classxlnt_1_1worksheet_a5e51e2f8e3396adfc0a2751a3826aebf}{worksheet\+::merge\+\_\+cells}} on its parent worksheet. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell_acfe7b4e42a96807b7f0195a2bcdd8909}{phonetics\+\_\+visible}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this cell is set to show phonetic information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a5f4648ceda902ce86e5458e2303dc791}{show\+\_\+phonetics}} (bool phonetics)
+\begin{DoxyCompactList}\small\item\em Enables the display of phonetic information on this cell. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1cell_aa12568f71475cebf23aceb97b83273a4}{error}} () const
+\begin{DoxyCompactList}\small\item\em Returns the error string that is stored in this cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a645651a217d2da307f97b9c11743a00d}{error}} (const std\+::string \&error)
+\begin{DoxyCompactList}\small\item\em Directly assigns the value of this cell to be the given error. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1cell_aac3b7ae6981db3d944a4ee6d7aab6cfe}{offset}} (int \mbox{\hyperlink{classxlnt_1_1cell_ad24f50cc05ad1c32cb231533e2db6b84}{column}}, int \mbox{\hyperlink{classxlnt_1_1cell_a97138f1360c3eed05feeccd338dc773d}{row}})
+\begin{DoxyCompactList}\small\item\em Returns a cell from this cell\textquotesingle{}s parent workbook at a relative offset given by the parameters. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1cell_a36c0be4d8df81b2664ffe2b4084a1409}{worksheet}} ()
+\begin{DoxyCompactList}\small\item\em Returns the worksheet that owns this cell. \end{DoxyCompactList}\item 
+const class \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1cell_a89d340cd9baf065f46ecfb03bf9e2a5f}{worksheet}} () const
+\begin{DoxyCompactList}\small\item\em Returns the worksheet that owns this cell. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \& \mbox{\hyperlink{classxlnt_1_1cell_a26d7bb8fe41474c36350c0ce68574ab5}{workbook}} ()
+\begin{DoxyCompactList}\small\item\em Returns the workbook of the worksheet that owns this cell. \end{DoxyCompactList}\item 
+const class \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \& \mbox{\hyperlink{classxlnt_1_1cell_a7c9f132281c98286fa30337bd9d2f8ca}{workbook}} () const
+\begin{DoxyCompactList}\small\item\em Returns the workbook of the worksheet that owns this cell. \end{DoxyCompactList}\item 
+calendar \mbox{\hyperlink{classxlnt_1_1cell_ab081cc6a30847fe3a55ba9793b8e4e74}{base\+\_\+date}} () const
+\begin{DoxyCompactList}\small\item\em Returns the base date of the parent workbook. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1cell_acd23530085a7c0bd5f4637a555cd1cbe}{check\+\_\+string}} (const std\+::string \&to\+\_\+check)
+\begin{DoxyCompactList}\small\item\em Returns to\+\_\+check after verifying and fixing encoding, size, and illegal characters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell_aed816bd54ecd903661e455e51611d78e}{has\+\_\+comment}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if this cell has a comment applied. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a408755a29c60e1710372d25038278dd4}{clear\+\_\+comment}} ()
+\begin{DoxyCompactList}\small\item\em Deletes the comment applied to this cell if it exists. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1comment}{comment}} \mbox{\hyperlink{classxlnt_1_1cell_a964ca78c47ee0118d25163a378853fb9}{comment}} ()
+\begin{DoxyCompactList}\small\item\em Gets the comment applied to this cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a194ed5db9b5c8e2f7d7357248af66b3c}{comment}} (const std\+::string \&text, const std\+::string \&author=\char`\"{}Microsoft Office User\char`\"{})
+\begin{DoxyCompactList}\small\item\em Creates a new comment with the given text and optional author and applies it to the cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a1f8879eebe026b38df7df467ac297e4c}{comment}} (const std\+::string \&comment\+\_\+text, const class \mbox{\hyperlink{classxlnt_1_1font}{font}} \&comment\+\_\+font, const std\+::string \&author=\char`\"{}Microsoft Office User\char`\"{})
+\begin{DoxyCompactList}\small\item\em Creates a new comment with the given text, formatting, and optional author and applies it to the cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell_a1748295ff9acc8f5c7dabd8ea572e3bb}{comment}} (const class \mbox{\hyperlink{classxlnt_1_1comment}{comment}} \&new\+\_\+comment)
+\begin{DoxyCompactList}\small\item\em Apply the comment provided as the only argument to the cell. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classxlnt_1_1cell_a00f2362faaf5b400ec531cb21a867f29}{width}} () const
+\begin{DoxyCompactList}\small\item\em Returns the width of this cell in pixels. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classxlnt_1_1cell_ad52ad5554757d727bd151e6e0847b418}{height}} () const
+\begin{DoxyCompactList}\small\item\em Returns the height of this cell in pixels. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell}{cell}} \& \mbox{\hyperlink{classxlnt_1_1cell_ac887d0f3c09db3356c588cc83e6d4a59}{operator=}} (const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Makes this cell interally point to rhs. The cell data originally pointed to by this cell will be unchanged. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell_a6f16b55e52e20312150303ac842a89d1}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \&comparand) const
+\begin{DoxyCompactList}\small\item\em Returns true if this cell the same cell as comparand (compared by reference). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell_a0f03bc81cb3a176de11dbede267b6379}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \&comparand) const
+\begin{DoxyCompactList}\small\item\em Returns false if this cell the same cell as comparand (compared by reference). \end{DoxyCompactList}\item 
+template$<$$>$ bool \mbox{\hyperlink{classxlnt_1_1cell_aad0a900ac7604ea93d921a24b7e72126}{value}} () const
+\item 
+template$<$$>$ int \mbox{\hyperlink{classxlnt_1_1cell_a176ae426b180122a1441d8c7504ebf90}{value}} () const
+\item 
+template$<$$>$ unsigned int \mbox{\hyperlink{classxlnt_1_1cell_a85462f8d19fc5a28d56ac8834410f1c4}{value}} () const
+\item 
+template$<$$>$ long long int \mbox{\hyperlink{classxlnt_1_1cell_a1f6ae422a3e71c0b7313712522376e5f}{value}} () const
+\item 
+template$<$$>$ unsigned long long \mbox{\hyperlink{classxlnt_1_1cell_ad34a492269e6474ec643b73dc0f92363}{value}} () const
+\item 
+template$<$$>$ float \mbox{\hyperlink{classxlnt_1_1cell_a9e051afb06bec2c548e20e1ca113b871}{value}} () const
+\item 
+template$<$$>$ double \mbox{\hyperlink{classxlnt_1_1cell_a821652b9ed2f24d65cd309dd24cc45e7}{value}} () const
+\item 
+template$<$$>$ \mbox{\hyperlink{structxlnt_1_1date}{date}} \mbox{\hyperlink{classxlnt_1_1cell_a94337f883223bf2d3cd76c3f2cb14ad4}{value}} () const
+\item 
+template$<$$>$ \mbox{\hyperlink{structxlnt_1_1time}{time}} \mbox{\hyperlink{classxlnt_1_1cell_a472419dc37b22c7b0164d2df57298d86}{value}} () const
+\item 
+template$<$$>$ \mbox{\hyperlink{structxlnt_1_1datetime}{datetime}} \mbox{\hyperlink{classxlnt_1_1cell_ab04cdd9933d52dfa9b82b71478f78951}{value}} () const
+\item 
+template$<$$>$ \mbox{\hyperlink{structxlnt_1_1timedelta}{timedelta}} \mbox{\hyperlink{classxlnt_1_1cell_a7a802fae697ada352d8336d8ad420049}{value}} () const
+\item 
+template$<$$>$ \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \mbox{\hyperlink{classxlnt_1_1cell_a0d578f649743c58152b789e7485e4b4d}{value}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::unordered\+\_\+map$<$ std\+::string, int $>$ \& \mbox{\hyperlink{classxlnt_1_1cell_a36cc29dac8046caeac23b602bc3a1d51}{error\+\_\+codes}} ()
+\begin{DoxyCompactList}\small\item\em Returns a map of error strings such as \#DIV/0! and their associated indices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1cell_acbae7dc1ff8c3f97bc43a63aff4015d5}{style}}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1cell_aa217f89c077f57ff91595b37909b58b1}{worksheet}}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1cell_a5c27ff96f65a231e21871a228cbaf740}{detail\+::xlsx\+\_\+consumer}}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1cell_aeaa1b2a5f3d37ddb4b8ca1ebaab144f3}{detail\+::xlsx\+\_\+producer}}
+\item 
+struct \mbox{\hyperlink{classxlnt_1_1cell_a03a1960160d6e8d508d55cdf5d5aa15a}{detail\+::cell\+\_\+impl}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Describes a unit of data in a worksheet at a specific coordinate and its associated properties. 
+
+Properties of interest include style, type, value, and address. The Cell class is required to know its value and type, display options, and any other features of an Excel cell.\+Utilities for referencing cells using Excel\textquotesingle{}s \textquotesingle{}A1\textquotesingle{} column/row nomenclature are also provided. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classxlnt_1_1cell_a982e2b7d6cba0829f1f77631840f957e}\label{classxlnt_1_1cell_a982e2b7d6cba0829f1f77631840f957e}} 
+\index{xlnt::cell@{xlnt::cell}!type@{type}}
+\index{type@{type}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1cell_a982e2b7d6cba0829f1f77631840f957e}{xlnt\+::cell\+::type}} =  cell\+\_\+type}
+
+
+
+Alias xlnt\+::cell\+\_\+type to \mbox{\hyperlink{classxlnt_1_1cell_a982e2b7d6cba0829f1f77631840f957e}{xlnt\+::cell\+::type}} since it looks nicer. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1cell_ae68911d378fe56f5072274b9c33d3fbd}\label{classxlnt_1_1cell_ae68911d378fe56f5072274b9c33d3fbd}} 
+\index{xlnt::cell@{xlnt::cell}!cell@{cell}}
+\index{cell@{cell}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{cell()}{cell()}}
+{\footnotesize\ttfamily xlnt\+::cell\+::cell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default copy constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1cell_ae0eb9bbfa7ebcd3cc62c84f29fdb1a76}\label{classxlnt_1_1cell_ae0eb9bbfa7ebcd3cc62c84f29fdb1a76}} 
+\index{xlnt::cell@{xlnt::cell}!alignment@{alignment}}
+\index{alignment@{alignment}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{alignment()}{alignment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} xlnt\+::cell\+::alignment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the alignment of the text in this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a5bb316e1085b8d0b2e3c1c2d5af222f7}\label{classxlnt_1_1cell_a5bb316e1085b8d0b2e3c1c2d5af222f7}} 
+\index{xlnt::cell@{xlnt::cell}!alignment@{alignment}}
+\index{alignment@{alignment}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{alignment()}{alignment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::alignment (\begin{DoxyParamCaption}\item[{const class \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \&}]{alignment\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Creates a new format in the workbook, sets its alignment to the given alignment, and applies the format to this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ab9905e42246619418ccc9d54492eba7b}\label{classxlnt_1_1cell_ab9905e42246619418ccc9d54492eba7b}} 
+\index{xlnt::cell@{xlnt::cell}!anchor@{anchor}}
+\index{anchor@{anchor}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{anchor()}{anchor()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ xlnt\+::cell\+::anchor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the location of this cell as an ordered pair (left, top). 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ab081cc6a30847fe3a55ba9793b8e4e74}\label{classxlnt_1_1cell_ab081cc6a30847fe3a55ba9793b8e4e74}} 
+\index{xlnt::cell@{xlnt::cell}!base\_date@{base\_date}}
+\index{base\_date@{base\_date}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{base\_date()}{base\_date()}}
+{\footnotesize\ttfamily calendar xlnt\+::cell\+::base\+\_\+date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the base date of the parent workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a50ef586b7e00088b5c58fc5a81ebc5ce}\label{classxlnt_1_1cell_a50ef586b7e00088b5c58fc5a81ebc5ce}} 
+\index{xlnt::cell@{xlnt::cell}!border@{border}}
+\index{border@{border}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{border()}{border()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1border}{border}} xlnt\+::cell\+::border (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the border of this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a8a76847b5e342344b6cfd36245b9a4d4}\label{classxlnt_1_1cell_a8a76847b5e342344b6cfd36245b9a4d4}} 
+\index{xlnt::cell@{xlnt::cell}!border@{border}}
+\index{border@{border}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{border()}{border()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::border (\begin{DoxyParamCaption}\item[{const class \mbox{\hyperlink{classxlnt_1_1border}{border}} \&}]{border\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Creates a new format in the workbook, sets its border to the given border, and applies the format to this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_acd23530085a7c0bd5f4637a555cd1cbe}\label{classxlnt_1_1cell_acd23530085a7c0bd5f4637a555cd1cbe}} 
+\index{xlnt::cell@{xlnt::cell}!check\_string@{check\_string}}
+\index{check\_string@{check\_string}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{check\_string()}{check\_string()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::cell\+::check\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{to\+\_\+check }\end{DoxyParamCaption})}
+
+
+
+Returns to\+\_\+check after verifying and fixing encoding, size, and illegal characters. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a408755a29c60e1710372d25038278dd4}\label{classxlnt_1_1cell_a408755a29c60e1710372d25038278dd4}} 
+\index{xlnt::cell@{xlnt::cell}!clear\_comment@{clear\_comment}}
+\index{clear\_comment@{clear\_comment}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{clear\_comment()}{clear\_comment()}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::clear\+\_\+comment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deletes the comment applied to this cell if it exists. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a05271dc81c862eb36278b54f984439a0}\label{classxlnt_1_1cell_a05271dc81c862eb36278b54f984439a0}} 
+\index{xlnt::cell@{xlnt::cell}!clear\_format@{clear\_format}}
+\index{clear\_format@{clear\_format}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{clear\_format()}{clear\_format()}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::clear\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes the cell-\/level formatting from this cell. This doesn\textquotesingle{}t affect the style that may also be applied to the cell. Throws an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception if no format is applied. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_aa17f51e47e21bab97f4ef639b1fa3353}\label{classxlnt_1_1cell_aa17f51e47e21bab97f4ef639b1fa3353}} 
+\index{xlnt::cell@{xlnt::cell}!clear\_formula@{clear\_formula}}
+\index{clear\_formula@{clear\_formula}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{clear\_formula()}{clear\_formula()}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::clear\+\_\+formula (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes the formula from this cell. After this is called, \mbox{\hyperlink{classxlnt_1_1cell_a45d43fff14aec3eebf2d7622ed9c9af3}{has\+\_\+formula()}} will return false. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a35e6af229185a1e491752a719aed4c8b}\label{classxlnt_1_1cell_a35e6af229185a1e491752a719aed4c8b}} 
+\index{xlnt::cell@{xlnt::cell}!clear\_style@{clear\_style}}
+\index{clear\_style@{clear\_style}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{clear\_style()}{clear\_style()}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::clear\+\_\+style (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes the named style from this cell. An \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception will be thrown if this cell has no style. This will not affect the cell format of the cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a6ca577336de6b92b9820a30d35547a16}\label{classxlnt_1_1cell_a6ca577336de6b92b9820a30d35547a16}} 
+\index{xlnt::cell@{xlnt::cell}!clear\_value@{clear\_value}}
+\index{clear\_value@{clear\_value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{clear\_value()}{clear\_value()}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::clear\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Makes this cell have a value of type null. All other cell attributes are retained. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ad24f50cc05ad1c32cb231533e2db6b84}\label{classxlnt_1_1cell_ad24f50cc05ad1c32cb231533e2db6b84}} 
+\index{xlnt::cell@{xlnt::cell}!column@{column}}
+\index{column@{column}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{column()}{column()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} xlnt\+::cell\+::column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the column of this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a017794c401ceec5fc8bb7560e63d399d}\label{classxlnt_1_1cell_a017794c401ceec5fc8bb7560e63d399d}} 
+\index{xlnt::cell@{xlnt::cell}!column\_index@{column\_index}}
+\index{column\_index@{column\_index}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{column\_index()}{column\_index()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} xlnt\+::cell\+::column\+\_\+index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the numeric index (A == 1) of the column of this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a964ca78c47ee0118d25163a378853fb9}\label{classxlnt_1_1cell_a964ca78c47ee0118d25163a378853fb9}} 
+\index{xlnt::cell@{xlnt::cell}!comment@{comment}}
+\index{comment@{comment}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{comment()}{comment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily class \mbox{\hyperlink{classxlnt_1_1comment}{comment}} xlnt\+::cell\+::comment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the comment applied to this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a1748295ff9acc8f5c7dabd8ea572e3bb}\label{classxlnt_1_1cell_a1748295ff9acc8f5c7dabd8ea572e3bb}} 
+\index{xlnt::cell@{xlnt::cell}!comment@{comment}}
+\index{comment@{comment}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{comment()}{comment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::comment (\begin{DoxyParamCaption}\item[{const class \mbox{\hyperlink{classxlnt_1_1comment}{comment}} \&}]{new\+\_\+comment }\end{DoxyParamCaption})}
+
+
+
+Apply the comment provided as the only argument to the cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a1f8879eebe026b38df7df467ac297e4c}\label{classxlnt_1_1cell_a1f8879eebe026b38df7df467ac297e4c}} 
+\index{xlnt::cell@{xlnt::cell}!comment@{comment}}
+\index{comment@{comment}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{comment()}{comment()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::comment (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{comment\+\_\+text,  }\item[{const class \mbox{\hyperlink{classxlnt_1_1font}{font}} \&}]{comment\+\_\+font,  }\item[{const std\+::string \&}]{author = {\ttfamily \char`\"{}Microsoft~Office~User\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Creates a new comment with the given text, formatting, and optional author and applies it to the cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a194ed5db9b5c8e2f7d7357248af66b3c}\label{classxlnt_1_1cell_a194ed5db9b5c8e2f7d7357248af66b3c}} 
+\index{xlnt::cell@{xlnt::cell}!comment@{comment}}
+\index{comment@{comment}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{comment()}{comment()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::comment (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{const std\+::string \&}]{author = {\ttfamily \char`\"{}Microsoft~Office~User\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Creates a new comment with the given text and optional author and applies it to the cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a44a10e4c9b215005197e90f4cfc167d0}\label{classxlnt_1_1cell_a44a10e4c9b215005197e90f4cfc167d0}} 
+\index{xlnt::cell@{xlnt::cell}!computed\_alignment@{computed\_alignment}}
+\index{computed\_alignment@{computed\_alignment}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{computed\_alignment()}{computed\_alignment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} xlnt\+::cell\+::computed\+\_\+alignment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the alignment that should be used when displaying this cell graphically based on the workbook default, the cell-\/level format, and the named style applied to the cell in that order. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a12c443d8cd32f83fff9c71c7e28c11fc}\label{classxlnt_1_1cell_a12c443d8cd32f83fff9c71c7e28c11fc}} 
+\index{xlnt::cell@{xlnt::cell}!computed\_border@{computed\_border}}
+\index{computed\_border@{computed\_border}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{computed\_border()}{computed\_border()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1border}{border}} xlnt\+::cell\+::computed\+\_\+border (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the border that should be used when displaying this cell graphically based on the workbook default, the cell-\/level format, and the named style applied to the cell in that order. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ace43211f128b5a0f55030f8c05ed3f79}\label{classxlnt_1_1cell_ace43211f128b5a0f55030f8c05ed3f79}} 
+\index{xlnt::cell@{xlnt::cell}!computed\_fill@{computed\_fill}}
+\index{computed\_fill@{computed\_fill}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{computed\_fill()}{computed\_fill()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1fill}{fill}} xlnt\+::cell\+::computed\+\_\+fill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the fill that should be used when displaying this cell graphically based on the workbook default, the cell-\/level format, and the named style applied to the cell in that order. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_aad27aef85203a1bb41a6b985dda04b71}\label{classxlnt_1_1cell_aad27aef85203a1bb41a6b985dda04b71}} 
+\index{xlnt::cell@{xlnt::cell}!computed\_font@{computed\_font}}
+\index{computed\_font@{computed\_font}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{computed\_font()}{computed\_font()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1font}{font}} xlnt\+::cell\+::computed\+\_\+font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the font that should be used when displaying this cell graphically based on the workbook default, the cell-\/level format, and the named style applied to the cell in that order. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ac0eddacef6382060cfc32c22fd5a7355}\label{classxlnt_1_1cell_ac0eddacef6382060cfc32c22fd5a7355}} 
+\index{xlnt::cell@{xlnt::cell}!computed\_number\_format@{computed\_number\_format}}
+\index{computed\_number\_format@{computed\_number\_format}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{computed\_number\_format()}{computed\_number\_format()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::cell\+::computed\+\_\+number\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number format that should be used when displaying this cell graphically based on the workbook default, the cell-\/level format, and the named style applied to the cell in that order. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a6b381b37f07a77e76d644b25c0d065d4}\label{classxlnt_1_1cell_a6b381b37f07a77e76d644b25c0d065d4}} 
+\index{xlnt::cell@{xlnt::cell}!computed\_protection@{computed\_protection}}
+\index{computed\_protection@{computed\_protection}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{computed\_protection()}{computed\_protection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1protection}{protection}} xlnt\+::cell\+::computed\+\_\+protection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the protection that should be used when displaying this cell graphically based on the workbook default, the cell-\/level format, and the named style applied to the cell in that order. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ad41a2e3eb44b7e32ea0934ccc5446f68}\label{classxlnt_1_1cell_ad41a2e3eb44b7e32ea0934ccc5446f68}} 
+\index{xlnt::cell@{xlnt::cell}!data\_type@{data\_type}}
+\index{data\_type@{data\_type}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{data\_type()}{data\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell_a982e2b7d6cba0829f1f77631840f957e}{cell\+::type}} xlnt\+::cell\+::data\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the type of this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a19157c5799ea724db4a3fcb10b852ec1}\label{classxlnt_1_1cell_a19157c5799ea724db4a3fcb10b852ec1}} 
+\index{xlnt::cell@{xlnt::cell}!data\_type@{data\_type}}
+\index{data\_type@{data\_type}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{data\_type()}{data\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::data\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1cell_a982e2b7d6cba0829f1f77631840f957e}{type}}}]{t }\end{DoxyParamCaption})}
+
+
+
+Sets the type of this cell. This should usually be done indirectly by setting the value of the cell to a value of that type. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_aa12568f71475cebf23aceb97b83273a4}\label{classxlnt_1_1cell_aa12568f71475cebf23aceb97b83273a4}} 
+\index{xlnt::cell@{xlnt::cell}!error@{error}}
+\index{error@{error}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string xlnt\+::cell\+::error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the error string that is stored in this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a645651a217d2da307f97b9c11743a00d}\label{classxlnt_1_1cell_a645651a217d2da307f97b9c11743a00d}} 
+\index{xlnt::cell@{xlnt::cell}!error@{error}}
+\index{error@{error}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::error (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{error }\end{DoxyParamCaption})}
+
+
+
+Directly assigns the value of this cell to be the given error. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a36cc29dac8046caeac23b602bc3a1d51}\label{classxlnt_1_1cell_a36cc29dac8046caeac23b602bc3a1d51}} 
+\index{xlnt::cell@{xlnt::cell}!error\_codes@{error\_codes}}
+\index{error\_codes@{error\_codes}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{error\_codes()}{error\_codes()}}
+{\footnotesize\ttfamily const std\+::unordered\+\_\+map$<$ std\+::string, int $>$ \& xlnt\+::cell\+::error\+\_\+codes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a map of error strings such as \#DIV/0! and their associated indices. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ae38211ddc3aa8e97cbfbaacd5980d5e2}\label{classxlnt_1_1cell_ae38211ddc3aa8e97cbfbaacd5980d5e2}} 
+\index{xlnt::cell@{xlnt::cell}!fill@{fill}}
+\index{fill@{fill}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1fill}{fill}} xlnt\+::cell\+::fill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the fill applied to this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a8f5192f1ed23883920e0093444ee464c}\label{classxlnt_1_1cell_a8f5192f1ed23883920e0093444ee464c}} 
+\index{xlnt::cell@{xlnt::cell}!fill@{fill}}
+\index{fill@{fill}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::fill (\begin{DoxyParamCaption}\item[{const class \mbox{\hyperlink{classxlnt_1_1fill}{fill}} \&}]{fill\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Creates a new format in the workbook, sets its fill to the given fill, and applies the format to this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a6a412716ca76da72ec3906eba6d28aa0}\label{classxlnt_1_1cell_a6a412716ca76da72ec3906eba6d28aa0}} 
+\index{xlnt::cell@{xlnt::cell}!font@{font}}
+\index{font@{font}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{font()}{font()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1font}{font}} xlnt\+::cell\+::font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the font applied to the text in this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a6b8e726a7b16e50763e966521ac07583}\label{classxlnt_1_1cell_a6b8e726a7b16e50763e966521ac07583}} 
+\index{xlnt::cell@{xlnt::cell}!font@{font}}
+\index{font@{font}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{font()}{font()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::font (\begin{DoxyParamCaption}\item[{const class \mbox{\hyperlink{classxlnt_1_1font}{font}} \&}]{font\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Creates a new format in the workbook, sets its font to the given font, and applies the format to this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_aa75f1990f41d6d1b6f87918b1492ae6a}\label{classxlnt_1_1cell_aa75f1990f41d6d1b6f87918b1492ae6a}} 
+\index{xlnt::cell@{xlnt::cell}!format@{format}}
+\index{format@{format}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1format}{format}} xlnt\+::cell\+::format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the format applied to this cell. If this cell has no format, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception will be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a304510f70e88e8c4f3a2a24c37c489da}\label{classxlnt_1_1cell_a304510f70e88e8c4f3a2a24c37c489da}} 
+\index{xlnt::cell@{xlnt::cell}!format@{format}}
+\index{format@{format}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::format (\begin{DoxyParamCaption}\item[{const class \mbox{\hyperlink{classxlnt_1_1format}{format}}}]{new\+\_\+format }\end{DoxyParamCaption})}
+
+
+
+Applies the cell-\/level formatting of new\+\_\+format to this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_aff964405ba8223edfd826ca46d89cc12}\label{classxlnt_1_1cell_aff964405ba8223edfd826ca46d89cc12}} 
+\index{xlnt::cell@{xlnt::cell}!formula@{formula}}
+\index{formula@{formula}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{formula()}{formula()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string xlnt\+::cell\+::formula (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the string representation of the formula applied to this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ab92332bdae0340d44869ba3d8f832c37}\label{classxlnt_1_1cell_ab92332bdae0340d44869ba3d8f832c37}} 
+\index{xlnt::cell@{xlnt::cell}!formula@{formula}}
+\index{formula@{formula}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{formula()}{formula()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::formula (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{formula }\end{DoxyParamCaption})}
+
+
+
+Sets the formula of this cell to the given value. This formula string should begin with \textquotesingle{}=\textquotesingle{}. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a15f41aae50aa385ad8d919a6fbf72d78}\label{classxlnt_1_1cell_a15f41aae50aa385ad8d919a6fbf72d78}} 
+\index{xlnt::cell@{xlnt::cell}!garbage\_collectible@{garbage\_collectible}}
+\index{garbage\_collectible@{garbage\_collectible}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{garbage\_collectible()}{garbage\_collectible()}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+::garbage\+\_\+collectible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+There\textquotesingle{}s no reason to keep a cell which has no value and is not a placeholder. Returns true if this cell has no value, style, isn\textquotesingle{}t merged, etc. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_aed816bd54ecd903661e455e51611d78e}\label{classxlnt_1_1cell_aed816bd54ecd903661e455e51611d78e}} 
+\index{xlnt::cell@{xlnt::cell}!has\_comment@{has\_comment}}
+\index{has\_comment@{has\_comment}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{has\_comment()}{has\_comment()}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+::has\+\_\+comment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns true if this cell has a comment applied. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a2a1cb642a98314cba30ccd23d44d158b}\label{classxlnt_1_1cell_a2a1cb642a98314cba30ccd23d44d158b}} 
+\index{xlnt::cell@{xlnt::cell}!has\_format@{has\_format}}
+\index{has\_format@{has\_format}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{has\_format()}{has\_format()}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+::has\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this cell has had a format applied to it. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a45d43fff14aec3eebf2d7622ed9c9af3}\label{classxlnt_1_1cell_a45d43fff14aec3eebf2d7622ed9c9af3}} 
+\index{xlnt::cell@{xlnt::cell}!has\_formula@{has\_formula}}
+\index{has\_formula@{has\_formula}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{has\_formula()}{has\_formula()}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+::has\+\_\+formula (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this cell has had a formula applied to it. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a8f8406a91f1a45fa49392bf3900a58af}\label{classxlnt_1_1cell_a8f8406a91f1a45fa49392bf3900a58af}} 
+\index{xlnt::cell@{xlnt::cell}!has\_hyperlink@{has\_hyperlink}}
+\index{has\_hyperlink@{has\_hyperlink}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{has\_hyperlink()}{has\_hyperlink()}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+::has\+\_\+hyperlink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this cell has a hyperlink set. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ae3be365cd7ae0343d7cc70e25d573000}\label{classxlnt_1_1cell_ae3be365cd7ae0343d7cc70e25d573000}} 
+\index{xlnt::cell@{xlnt::cell}!has\_style@{has\_style}}
+\index{has\_style@{has\_style}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{has\_style()}{has\_style()}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+::has\+\_\+style (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this cell has had a style applied to it. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ad97097919f2c8d8731b2a69b6f837806}\label{classxlnt_1_1cell_ad97097919f2c8d8731b2a69b6f837806}} 
+\index{xlnt::cell@{xlnt::cell}!has\_value@{has\_value}}
+\index{has\_value@{has\_value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{has\_value()}{has\_value()}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+::has\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if value has been set and has not been cleared using \mbox{\hyperlink{classxlnt_1_1cell_a6ca577336de6b92b9820a30d35547a16}{cell\+::clear\+\_\+value()}}. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ad52ad5554757d727bd151e6e0847b418}\label{classxlnt_1_1cell_ad52ad5554757d727bd151e6e0847b418}} 
+\index{xlnt::cell@{xlnt::cell}!height@{height}}
+\index{height@{height}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily double xlnt\+::cell\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the height of this cell in pixels. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a6c4e9fcdccd12bfa2a51531a6c69ed3d}\label{classxlnt_1_1cell_a6c4e9fcdccd12bfa2a51531a6c69ed3d}} 
+\index{xlnt::cell@{xlnt::cell}!hyperlink@{hyperlink}}
+\index{hyperlink@{hyperlink}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{hyperlink()}{hyperlink()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1hyperlink}{hyperlink}} xlnt\+::cell\+::hyperlink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the relationship of this cell\textquotesingle{}s hyperlink. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_aada130e6847d32ff24ccdb0c2914e567}\label{classxlnt_1_1cell_aada130e6847d32ff24ccdb0c2914e567}} 
+\index{xlnt::cell@{xlnt::cell}!hyperlink@{hyperlink}}
+\index{hyperlink@{hyperlink}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{hyperlink()}{hyperlink()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::hyperlink (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{const std\+::string \&}]{display = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Adds a hyperlink to this cell pointing to the URI of the given value and sets the text value of the cell to the given parameter. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a95c6180b7138f2de90d2bceeb64fc414}\label{classxlnt_1_1cell_a95c6180b7138f2de90d2bceeb64fc414}} 
+\index{xlnt::cell@{xlnt::cell}!hyperlink@{hyperlink}}
+\index{hyperlink@{hyperlink}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{hyperlink()}{hyperlink()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::hyperlink (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1cell}{xlnt\+::cell}}}]{target,  }\item[{const std\+::string \&}]{display = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Adds an internal hyperlink to this cell pointing to the given cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ab37b7d9927596e4f74251e2e66b53197}\label{classxlnt_1_1cell_ab37b7d9927596e4f74251e2e66b53197}} 
+\index{xlnt::cell@{xlnt::cell}!hyperlink@{hyperlink}}
+\index{hyperlink@{hyperlink}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{hyperlink()}{hyperlink()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::hyperlink (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1range}{xlnt\+::range}}}]{target,  }\item[{const std\+::string \&}]{display = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Adds an internal hyperlink to this cell pointing to the given range. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a3d2f3a9977020883ce088e30037c1af9}\label{classxlnt_1_1cell_a3d2f3a9977020883ce088e30037c1af9}} 
+\index{xlnt::cell@{xlnt::cell}!is\_date@{is\_date}}
+\index{is\_date@{is\_date}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{is\_date()}{is\_date()}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+::is\+\_\+date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true iff this cell\textquotesingle{}s number format matches a date format. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_aaa1d2e42bda76c780031b22b6f0d65bf}\label{classxlnt_1_1cell_aaa1d2e42bda76c780031b22b6f0d65bf}} 
+\index{xlnt::cell@{xlnt::cell}!is\_merged@{is\_merged}}
+\index{is\_merged@{is\_merged}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{is\_merged()}{is\_merged()}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+::is\+\_\+merged (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true iff this cell has been merged with one or more surrounding cells. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a4c659baf4eb9d8b5c410a28f18fe9639}\label{classxlnt_1_1cell_a4c659baf4eb9d8b5c410a28f18fe9639}} 
+\index{xlnt::cell@{xlnt::cell}!merged@{merged}}
+\index{merged@{merged}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{merged()}{merged()}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::merged (\begin{DoxyParamCaption}\item[{bool}]{merged }\end{DoxyParamCaption})}
+
+
+
+Makes this a merged cell iff merged is true. Generally, this shouldn\textquotesingle{}t be called directly. Instead, use \mbox{\hyperlink{classxlnt_1_1worksheet_a5e51e2f8e3396adfc0a2751a3826aebf}{worksheet\+::merge\+\_\+cells}} on its parent worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a48781230fa419e7476d3f8e5d31e0ce5}\label{classxlnt_1_1cell_a48781230fa419e7476d3f8e5d31e0ce5}} 
+\index{xlnt::cell@{xlnt::cell}!number\_format@{number\_format}}
+\index{number\_format@{number\_format}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{number\_format()}{number\_format()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} xlnt\+::cell\+::number\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number format of this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a8414e8ee56aceb5d7dee1030c6278ace}\label{classxlnt_1_1cell_a8414e8ee56aceb5d7dee1030c6278ace}} 
+\index{xlnt::cell@{xlnt::cell}!number\_format@{number\_format}}
+\index{number\_format@{number\_format}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{number\_format()}{number\_format()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::number\+\_\+format (\begin{DoxyParamCaption}\item[{const class \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \&}]{format }\end{DoxyParamCaption})}
+
+
+
+Creates a new format in the workbook, sets its \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} to the given format, and applies the format to this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_aac3b7ae6981db3d944a4ee6d7aab6cfe}\label{classxlnt_1_1cell_aac3b7ae6981db3d944a4ee6d7aab6cfe}} 
+\index{xlnt::cell@{xlnt::cell}!offset@{offset}}
+\index{offset@{offset}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{offset()}{offset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell}{cell}} xlnt\+::cell\+::offset (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{int}]{row }\end{DoxyParamCaption})}
+
+
+
+Returns a cell from this cell\textquotesingle{}s parent workbook at a relative offset given by the parameters. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a0f03bc81cb3a176de11dbede267b6379}\label{classxlnt_1_1cell_a0f03bc81cb3a176de11dbede267b6379}} 
+\index{xlnt::cell@{xlnt::cell}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \&}]{comparand }\end{DoxyParamCaption}) const}
+
+
+
+Returns false if this cell the same cell as comparand (compared by reference). 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ac887d0f3c09db3356c588cc83e6d4a59}\label{classxlnt_1_1cell_ac887d0f3c09db3356c588cc83e6d4a59}} 
+\index{xlnt::cell@{xlnt::cell}!operator=@{operator=}}
+\index{operator=@{operator=}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \& xlnt\+::cell\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Makes this cell interally point to rhs. The cell data originally pointed to by this cell will be unchanged. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a6f16b55e52e20312150303ac842a89d1}\label{classxlnt_1_1cell_a6f16b55e52e20312150303ac842a89d1}} 
+\index{xlnt::cell@{xlnt::cell}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \&}]{comparand }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this cell the same cell as comparand (compared by reference). 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_acfe7b4e42a96807b7f0195a2bcdd8909}\label{classxlnt_1_1cell_acfe7b4e42a96807b7f0195a2bcdd8909}} 
+\index{xlnt::cell@{xlnt::cell}!phonetics\_visible@{phonetics\_visible}}
+\index{phonetics\_visible@{phonetics\_visible}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{phonetics\_visible()}{phonetics\_visible()}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+::phonetics\+\_\+visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this cell is set to show phonetic information. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a3885a1e6d597a339394416e9560fb9dc}\label{classxlnt_1_1cell_a3885a1e6d597a339394416e9560fb9dc}} 
+\index{xlnt::cell@{xlnt::cell}!protection@{protection}}
+\index{protection@{protection}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{protection()}{protection()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1protection}{protection}} xlnt\+::cell\+::protection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the protection of this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ab5cf761d67c2d0246d3c2a50c67525d0}\label{classxlnt_1_1cell_ab5cf761d67c2d0246d3c2a50c67525d0}} 
+\index{xlnt::cell@{xlnt::cell}!protection@{protection}}
+\index{protection@{protection}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{protection()}{protection()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::protection (\begin{DoxyParamCaption}\item[{const class \mbox{\hyperlink{classxlnt_1_1protection}{protection}} \&}]{protection\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Creates a new format in the workbook, sets its protection to the given protection, and applies the format to this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ac03ebad679cd76a97f60c66ee82751f8}\label{classxlnt_1_1cell_ac03ebad679cd76a97f60c66ee82751f8}} 
+\index{xlnt::cell@{xlnt::cell}!reference@{reference}}
+\index{reference@{reference}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{reference()}{reference()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} xlnt\+::cell\+::reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} that points to the location of this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a97138f1360c3eed05feeccd338dc773d}\label{classxlnt_1_1cell_a97138f1360c3eed05feeccd338dc773d}} 
+\index{xlnt::cell@{xlnt::cell}!row@{row}}
+\index{row@{row}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{row()}{row()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} xlnt\+::cell\+::row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the row of this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a5f4648ceda902ce86e5458e2303dc791}\label{classxlnt_1_1cell_a5f4648ceda902ce86e5458e2303dc791}} 
+\index{xlnt::cell@{xlnt::cell}!show\_phonetics@{show\_phonetics}}
+\index{show\_phonetics@{show\_phonetics}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{show\_phonetics()}{show\_phonetics()}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::show\+\_\+phonetics (\begin{DoxyParamCaption}\item[{bool}]{phonetics }\end{DoxyParamCaption})}
+
+
+
+Enables the display of phonetic information on this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_af42d85dad3ef6a495e0610854dd0fe92}\label{classxlnt_1_1cell_af42d85dad3ef6a495e0610854dd0fe92}} 
+\index{xlnt::cell@{xlnt::cell}!style@{style}}
+\index{style@{style}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{style()}{style()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily class \mbox{\hyperlink{classxlnt_1_1style}{style}} xlnt\+::cell\+::style (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a wrapper pointing to the named style applied to this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ae5d7d5f363704389d4da9cd651bbd2d8}\label{classxlnt_1_1cell_ae5d7d5f363704389d4da9cd651bbd2d8}} 
+\index{xlnt::cell@{xlnt::cell}!style@{style}}
+\index{style@{style}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{style()}{style()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1style}{style}} xlnt\+::cell\+::style (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a wrapper pointing to the named style applied to this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a3563a972df331c60e3b626c4d7b0e4d3}\label{classxlnt_1_1cell_a3563a972df331c60e3b626c4d7b0e4d3}} 
+\index{xlnt::cell@{xlnt::cell}!style@{style}}
+\index{style@{style}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{style()}{style()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::style (\begin{DoxyParamCaption}\item[{const class \mbox{\hyperlink{classxlnt_1_1style}{style}} \&}]{new\+\_\+style }\end{DoxyParamCaption})}
+
+
+
+Sets the named style applied to this cell to a style named style\+\_\+name. Equivalent to style(\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{new\+\_\+style.\+name()}}). 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a8d23e41acba4e34b5f6925f0133cfff4}\label{classxlnt_1_1cell_a8d23e41acba4e34b5f6925f0133cfff4}} 
+\index{xlnt::cell@{xlnt::cell}!style@{style}}
+\index{style@{style}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{style()}{style()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::style (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{style\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Sets the named style applied to this cell to a style named style\+\_\+name. If this style has not been previously created in the workbook, a \mbox{\hyperlink{classxlnt_1_1key__not__found}{key\+\_\+not\+\_\+found}} exception will be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a7a51abb90f9e716f242512a9f53cf09a}\label{classxlnt_1_1cell_a7a51abb90f9e716f242512a9f53cf09a}} 
+\index{xlnt::cell@{xlnt::cell}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::cell\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a string representing the value of this cell. If the data type is not a string, it will be converted according to the number format. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a1e034f21e14e3eebe8d4059917537e13}\label{classxlnt_1_1cell_a1e034f21e14e3eebe8d4059917537e13}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/30]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T xlnt\+::cell\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the value of this cell as an instance of type T. Overloads exist for most C++ fundamental types like bool, int, etc. as well as for std\+::string and xlnt datetime types\+: date, time, datetime, and timedelta. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_aad0a900ac7604ea93d921a24b7e72126}\label{classxlnt_1_1cell_aad0a900ac7604ea93d921a24b7e72126}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/30]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+\mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} xlnt\+::cell\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a176ae426b180122a1441d8c7504ebf90}\label{classxlnt_1_1cell_a176ae426b180122a1441d8c7504ebf90}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [3/30]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+int xlnt\+::cell\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a85462f8d19fc5a28d56ac8834410f1c4}\label{classxlnt_1_1cell_a85462f8d19fc5a28d56ac8834410f1c4}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [4/30]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+unsigned int xlnt\+::cell\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a1f6ae422a3e71c0b7313712522376e5f}\label{classxlnt_1_1cell_a1f6ae422a3e71c0b7313712522376e5f}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [5/30]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+long long int xlnt\+::cell\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ad34a492269e6474ec643b73dc0f92363}\label{classxlnt_1_1cell_ad34a492269e6474ec643b73dc0f92363}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [6/30]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+unsigned long long xlnt\+::cell\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a9e051afb06bec2c548e20e1ca113b871}\label{classxlnt_1_1cell_a9e051afb06bec2c548e20e1ca113b871}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [7/30]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+float xlnt\+::cell\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a821652b9ed2f24d65cd309dd24cc45e7}\label{classxlnt_1_1cell_a821652b9ed2f24d65cd309dd24cc45e7}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [8/30]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+double xlnt\+::cell\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a94337f883223bf2d3cd76c3f2cb14ad4}\label{classxlnt_1_1cell_a94337f883223bf2d3cd76c3f2cb14ad4}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [9/30]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+\mbox{\hyperlink{structxlnt_1_1date}{date}} xlnt\+::cell\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a472419dc37b22c7b0164d2df57298d86}\label{classxlnt_1_1cell_a472419dc37b22c7b0164d2df57298d86}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [10/30]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+\mbox{\hyperlink{structxlnt_1_1time}{time}} xlnt\+::cell\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ab04cdd9933d52dfa9b82b71478f78951}\label{classxlnt_1_1cell_ab04cdd9933d52dfa9b82b71478f78951}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [11/30]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+\mbox{\hyperlink{structxlnt_1_1datetime}{datetime}} xlnt\+::cell\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a7a802fae697ada352d8336d8ad420049}\label{classxlnt_1_1cell_a7a802fae697ada352d8336d8ad420049}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [12/30]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+\mbox{\hyperlink{structxlnt_1_1timedelta}{timedelta}} xlnt\+::cell\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a0d578f649743c58152b789e7485e4b4d}\label{classxlnt_1_1cell_a0d578f649743c58152b789e7485e4b4d}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [13/30]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+\mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} xlnt\+::cell\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ab570baa69a6377c21af291889b34d101}\label{classxlnt_1_1cell_ab570baa69a6377c21af291889b34d101}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [14/30]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::value (\begin{DoxyParamCaption}\item[{bool}]{boolean\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the value of this cell to the given boolean value. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a563c707c4687b87823f286d434455b3c}\label{classxlnt_1_1cell_a563c707c4687b87823f286d434455b3c}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [15/30]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell}{cell}}}]{other\+\_\+cell }\end{DoxyParamCaption})}
+
+
+
+Sets the value and formatting of this cell to that of other\+\_\+cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_add47fd6aef8b98b2a2f2716bf33c8df1}\label{classxlnt_1_1cell_add47fd6aef8b98b2a2f2716bf33c8df1}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [16/30]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::value (\begin{DoxyParamCaption}\item[{const char $\ast$}]{string\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the value of this cell to the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a4fc3503df6e1a25186a31de5660fd928}\label{classxlnt_1_1cell_a4fc3503df6e1a25186a31de5660fd928}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [17/30]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1date}{date}} \&}]{date\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the value of this cell to the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a7a4f448a18d5ac662e93b2b7acb2859a}\label{classxlnt_1_1cell_a7a4f448a18d5ac662e93b2b7acb2859a}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [18/30]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1datetime}{datetime}} \&}]{datetime\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the value of this cell to the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a42876d415047f10c8eea4775e8decbe3}\label{classxlnt_1_1cell_a42876d415047f10c8eea4775e8decbe3}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [19/30]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&}]{text\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the value of this cell to the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a072240b642971de572ce61b13409937d}\label{classxlnt_1_1cell_a072240b642971de572ce61b13409937d}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [20/30]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the value of this cell to the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a3d21c11927e92be6fde589c41081d74b}\label{classxlnt_1_1cell_a3d21c11927e92be6fde589c41081d74b}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [21/30]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string\+\_\+value,  }\item[{bool}]{infer\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Analyzes string\+\_\+value to determine its type, convert it to that type, and set the value of this cell to that converted value. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a848bb11dbf23a135d19dcc505be9ff17}\label{classxlnt_1_1cell_a848bb11dbf23a135d19dcc505be9ff17}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [22/30]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1time}{time}} \&}]{time\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the value of this cell to the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a2963b543d833316c03c377a2bf552855}\label{classxlnt_1_1cell_a2963b543d833316c03c377a2bf552855}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [23/30]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1timedelta}{timedelta}} \&}]{timedelta\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the value of this cell to the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a7021477ef98c344d16db7bfac16d20fa}\label{classxlnt_1_1cell_a7021477ef98c344d16db7bfac16d20fa}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [24/30]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::value (\begin{DoxyParamCaption}\item[{double}]{float\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the value of this cell to the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a652a687612d31185cd7a3daf031235e5}\label{classxlnt_1_1cell_a652a687612d31185cd7a3daf031235e5}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [25/30]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::value (\begin{DoxyParamCaption}\item[{float}]{float\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the value of this cell to the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ac85da6a8e3f3a268c85b2309e12becd6}\label{classxlnt_1_1cell_ac85da6a8e3f3a268c85b2309e12becd6}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [26/30]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::value (\begin{DoxyParamCaption}\item[{int}]{int\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the value of this cell to the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_af97cd39019d072497d9de6d42863547e}\label{classxlnt_1_1cell_af97cd39019d072497d9de6d42863547e}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [27/30]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::value (\begin{DoxyParamCaption}\item[{long long int}]{int\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the value of this cell to the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a35e1ec4101a5e028502cc1c5b9b13334}\label{classxlnt_1_1cell_a35e1ec4101a5e028502cc1c5b9b13334}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [28/30]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::value (\begin{DoxyParamCaption}\item[{std\+::nullptr\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+
+
+Sets the type of this cell to null. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a8da11cdd92503ebe8af9b8576844cbf0}\label{classxlnt_1_1cell_a8da11cdd92503ebe8af9b8576844cbf0}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [29/30]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::value (\begin{DoxyParamCaption}\item[{unsigned int}]{int\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the value of this cell to the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_ac542a0780736254dfd5fdb03a90cec27}\label{classxlnt_1_1cell_ac542a0780736254dfd5fdb03a90cec27}} 
+\index{xlnt::cell@{xlnt::cell}!value@{value}}
+\index{value@{value}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [30/30]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+::value (\begin{DoxyParamCaption}\item[{unsigned long long int}]{int\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the value of this cell to the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a00f2362faaf5b400ec531cb21a867f29}\label{classxlnt_1_1cell_a00f2362faaf5b400ec531cb21a867f29}} 
+\index{xlnt::cell@{xlnt::cell}!width@{width}}
+\index{width@{width}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{width()}{width()}}
+{\footnotesize\ttfamily double xlnt\+::cell\+::width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the width of this cell in pixels. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a26d7bb8fe41474c36350c0ce68574ab5}\label{classxlnt_1_1cell_a26d7bb8fe41474c36350c0ce68574ab5}} 
+\index{xlnt::cell@{xlnt::cell}!workbook@{workbook}}
+\index{workbook@{workbook}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{workbook()}{workbook()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \& xlnt\+::cell\+::workbook (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the workbook of the worksheet that owns this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a7c9f132281c98286fa30337bd9d2f8ca}\label{classxlnt_1_1cell_a7c9f132281c98286fa30337bd9d2f8ca}} 
+\index{xlnt::cell@{xlnt::cell}!workbook@{workbook}}
+\index{workbook@{workbook}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{workbook()}{workbook()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \& xlnt\+::cell\+::workbook (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the workbook of the worksheet that owns this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a36c0be4d8df81b2664ffe2b4084a1409}\label{classxlnt_1_1cell_a36c0be4d8df81b2664ffe2b4084a1409}} 
+\index{xlnt::cell@{xlnt::cell}!worksheet@{worksheet}}
+\index{worksheet@{worksheet}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{worksheet()}{worksheet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily class \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::cell\+::worksheet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the worksheet that owns this cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a89d340cd9baf065f46ecfb03bf9e2a5f}\label{classxlnt_1_1cell_a89d340cd9baf065f46ecfb03bf9e2a5f}} 
+\index{xlnt::cell@{xlnt::cell}!worksheet@{worksheet}}
+\index{worksheet@{worksheet}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{worksheet()}{worksheet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::cell\+::worksheet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the worksheet that owns this cell. 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1cell_a03a1960160d6e8d508d55cdf5d5aa15a}\label{classxlnt_1_1cell_a03a1960160d6e8d508d55cdf5d5aa15a}} 
+\index{xlnt::cell@{xlnt::cell}!detail::cell\_impl@{detail::cell\_impl}}
+\index{detail::cell\_impl@{detail::cell\_impl}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{detail::cell\_impl}{detail::cell\_impl}}
+{\footnotesize\ttfamily friend struct \mbox{\hyperlink{structxlnt_1_1detail_1_1cell__impl}{detail\+::cell\+\_\+impl}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classxlnt_1_1cell_a5c27ff96f65a231e21871a228cbaf740}\label{classxlnt_1_1cell_a5c27ff96f65a231e21871a228cbaf740}} 
+\index{xlnt::cell@{xlnt::cell}!detail::xlsx\_consumer@{detail::xlsx\_consumer}}
+\index{detail::xlsx\_consumer@{detail::xlsx\_consumer}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{detail::xlsx\_consumer}{detail::xlsx\_consumer}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classxlnt_1_1detail_1_1xlsx__consumer}{detail\+::xlsx\+\_\+consumer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classxlnt_1_1cell_aeaa1b2a5f3d37ddb4b8ca1ebaab144f3}\label{classxlnt_1_1cell_aeaa1b2a5f3d37ddb4b8ca1ebaab144f3}} 
+\index{xlnt::cell@{xlnt::cell}!detail::xlsx\_producer@{detail::xlsx\_producer}}
+\index{detail::xlsx\_producer@{detail::xlsx\_producer}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{detail::xlsx\_producer}{detail::xlsx\_producer}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classxlnt_1_1detail_1_1xlsx__producer}{detail\+::xlsx\+\_\+producer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classxlnt_1_1cell_acbae7dc1ff8c3f97bc43a63aff4015d5}\label{classxlnt_1_1cell_acbae7dc1ff8c3f97bc43a63aff4015d5}} 
+\index{xlnt::cell@{xlnt::cell}!style@{style}}
+\index{style@{style}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{style}{style}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1style}{style}} xlnt\+::cell\+::style\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classxlnt_1_1cell_aa217f89c077f57ff91595b37909b58b1}\label{classxlnt_1_1cell_aa217f89c077f57ff91595b37909b58b1}} 
+\index{xlnt::cell@{xlnt::cell}!worksheet@{worksheet}}
+\index{worksheet@{worksheet}!xlnt::cell@{xlnt::cell}}
+\doxysubsubsection{\texorpdfstring{worksheet}{worksheet}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::cell\+::worksheet\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/cell/\mbox{\hyperlink{cell_8hpp}{cell.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/cell/\mbox{\hyperlink{cell_8cpp}{cell.\+cpp}}\end{DoxyCompactItemize}

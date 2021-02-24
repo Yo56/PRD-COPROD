@@ -1,0 +1,207 @@
+\hypertarget{class_c_chantier}{}\doxysection{CChantier Class Reference}
+\label{class_c_chantier}\index{CChantier@{CChantier}}
+
+
+Classe Chantier (Atelier de maintenance)  
+
+
+
+
+{\ttfamily \#include $<$CChantier.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_chantier_ac1d23c5777c6fad40519c6d8a8d9ac02}{CChantier}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_chantier_a934990d8fd0d60dba4c46f81ec193852}{CChantier}} (int id\+Param, string abreviation\+Param, string nom\+Param)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_chantier_ac7b06e4cb210fb19303cfd5b57ea2d27}{CChantier}} (string abreviation\+Param, string nom\+Param)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_chantier_ab01005c3b3ec09832b912ab192c71f5b}{$\sim$\+CChantier}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_c_chantier_aac1152eb9f21e798aa464d66677116b0}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em GET identifiant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_chantier_a81852e248eeb9527d16a7b47284abaa2}{set\+Id}} (int id\+Param)
+\begin{DoxyCompactList}\small\item\em SET id. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_c_chantier_a77c207f4c99c8b6be3108901375b79aa}{get\+Abreviation}} ()
+\begin{DoxyCompactList}\small\item\em GET abreviation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_chantier_a7649438bb8c33c61f9dab5c7306345a3}{set\+Abreviation}} (string abreviation\+Param)
+\begin{DoxyCompactList}\small\item\em SET abreviation. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_c_chantier_a446b0ff59269f8cf0fd787fbf6942cc8}{get\+Nom}} ()
+\begin{DoxyCompactList}\small\item\em GET nom. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_chantier_a216e0cd60e51205f60607464f64f3dc0}{set\+Nom}} (string nom\+Param)
+\begin{DoxyCompactList}\small\item\em SET nom. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe Chantier (Atelier de maintenance) 
+
+La classe permet de creer une instance de chaque site de maintenance constituee des differents attributs permettant son identification. L\textquotesingle{}objet est cree a partir des donnees récuperees dans les fichiers csv. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_chantier_ac1d23c5777c6fad40519c6d8a8d9ac02}\label{class_c_chantier_ac1d23c5777c6fad40519c6d8a8d9ac02}} 
+\index{CChantier@{CChantier}!CChantier@{CChantier}}
+\index{CChantier@{CChantier}!CChantier@{CChantier}}
+\doxysubsubsection{\texorpdfstring{CChantier()}{CChantier()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily CChantier\+::\+CChantier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+Constructeur par defaut de la classe \mbox{\hyperlink{class_c_chantier}{CChantier}} \mbox{\Hypertarget{class_c_chantier_a934990d8fd0d60dba4c46f81ec193852}\label{class_c_chantier_a934990d8fd0d60dba4c46f81ec193852}} 
+\index{CChantier@{CChantier}!CChantier@{CChantier}}
+\index{CChantier@{CChantier}!CChantier@{CChantier}}
+\doxysubsubsection{\texorpdfstring{CChantier()}{CChantier()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily CChantier\+::\+CChantier (\begin{DoxyParamCaption}\item[{int}]{id\+Param,  }\item[{string}]{abreviation\+Param,  }\item[{string}]{nom\+Param }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+Constructeur de la classe \mbox{\hyperlink{class_c_chantier}{CChantier}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Param} & \+: identifiant representant l\textquotesingle{}objet dans le modele CPlex \\
+\hline
+{\em abreviation\+Param} & \+: abreviation SNCF du nom du site \\
+\hline
+{\em nom\+Param} & \+: nom complet du site \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_chantier_ac7b06e4cb210fb19303cfd5b57ea2d27}\label{class_c_chantier_ac7b06e4cb210fb19303cfd5b57ea2d27}} 
+\index{CChantier@{CChantier}!CChantier@{CChantier}}
+\index{CChantier@{CChantier}!CChantier@{CChantier}}
+\doxysubsubsection{\texorpdfstring{CChantier()}{CChantier()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily CChantier\+::\+CChantier (\begin{DoxyParamCaption}\item[{string}]{abreviation\+Param,  }\item[{string}]{nom\+Param }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+Constructeur de la classe \mbox{\hyperlink{class_c_chantier}{CChantier}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em abreviation\+Param} & \+: abreviation SNCF du nom du site \\
+\hline
+{\em nom\+Param} & \+: nom complet du site \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_chantier_ab01005c3b3ec09832b912ab192c71f5b}\label{class_c_chantier_ab01005c3b3ec09832b912ab192c71f5b}} 
+\index{CChantier@{CChantier}!````~CChantier@{$\sim$CChantier}}
+\index{````~CChantier@{$\sim$CChantier}!CChantier@{CChantier}}
+\doxysubsubsection{\texorpdfstring{$\sim$CChantier()}{~CChantier()}}
+{\footnotesize\ttfamily CChantier\+::$\sim$\+CChantier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur. 
+
+Destructeur de la classe \mbox{\hyperlink{class_c_chantier}{CChantier}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_chantier_a77c207f4c99c8b6be3108901375b79aa}\label{class_c_chantier_a77c207f4c99c8b6be3108901375b79aa}} 
+\index{CChantier@{CChantier}!getAbreviation@{getAbreviation}}
+\index{getAbreviation@{getAbreviation}!CChantier@{CChantier}}
+\doxysubsubsection{\texorpdfstring{getAbreviation()}{getAbreviation()}}
+{\footnotesize\ttfamily string CChantier\+::get\+Abreviation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+GET abreviation. 
+
+Methode qui permet d\textquotesingle{}obtenir l\textquotesingle{}abreviation SNCF du nom du site
+
+\begin{DoxyReturn}{Returns}
+l\textquotesingle{}abreviation (chaine de caracteres) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_chantier_aac1152eb9f21e798aa464d66677116b0}\label{class_c_chantier_aac1152eb9f21e798aa464d66677116b0}} 
+\index{CChantier@{CChantier}!getId@{getId}}
+\index{getId@{getId}!CChantier@{CChantier}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int CChantier\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+GET identifiant. 
+
+Methode qui permet d\textquotesingle{}obtenir l\textquotesingle{}identifiant utilise dans la modelisation CPlex
+
+\begin{DoxyReturn}{Returns}
+l\textquotesingle{}identifiant (entier) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_chantier_a446b0ff59269f8cf0fd787fbf6942cc8}\label{class_c_chantier_a446b0ff59269f8cf0fd787fbf6942cc8}} 
+\index{CChantier@{CChantier}!getNom@{getNom}}
+\index{getNom@{getNom}!CChantier@{CChantier}}
+\doxysubsubsection{\texorpdfstring{getNom()}{getNom()}}
+{\footnotesize\ttfamily string CChantier\+::get\+Nom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+GET nom. 
+
+Methode qui permet d\textquotesingle{}obtenir le nom du site complet
+
+\begin{DoxyReturn}{Returns}
+le nom (chaine de caracteres) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_chantier_a7649438bb8c33c61f9dab5c7306345a3}\label{class_c_chantier_a7649438bb8c33c61f9dab5c7306345a3}} 
+\index{CChantier@{CChantier}!setAbreviation@{setAbreviation}}
+\index{setAbreviation@{setAbreviation}!CChantier@{CChantier}}
+\doxysubsubsection{\texorpdfstring{setAbreviation()}{setAbreviation()}}
+{\footnotesize\ttfamily void CChantier\+::set\+Abreviation (\begin{DoxyParamCaption}\item[{string}]{abreviation\+Param }\end{DoxyParamCaption})}
+
+
+
+SET abreviation. 
+
+Methode qui permet de definir l\textquotesingle{}abreviation SNCF du nom du site
+
+
+\begin{DoxyParams}{Parameters}
+{\em abreviation\+Param} & \+: abreviation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_chantier_a81852e248eeb9527d16a7b47284abaa2}\label{class_c_chantier_a81852e248eeb9527d16a7b47284abaa2}} 
+\index{CChantier@{CChantier}!setId@{setId}}
+\index{setId@{setId}!CChantier@{CChantier}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void CChantier\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id\+Param }\end{DoxyParamCaption})}
+
+
+
+SET id. 
+
+Methode qui permet de definir l\textquotesingle{}identifiant utilise dans la modelisation CPlex
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Param} & \+: l\textquotesingle{}identifiant à ajouter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_chantier_a216e0cd60e51205f60607464f64f3dc0}\label{class_c_chantier_a216e0cd60e51205f60607464f64f3dc0}} 
+\index{CChantier@{CChantier}!setNom@{setNom}}
+\index{setNom@{setNom}!CChantier@{CChantier}}
+\doxysubsubsection{\texorpdfstring{setNom()}{setNom()}}
+{\footnotesize\ttfamily void CChantier\+::set\+Nom (\begin{DoxyParamCaption}\item[{string}]{nom\+Param }\end{DoxyParamCaption})}
+
+
+
+SET nom. 
+
+Methode qui permet de definir le nom detaille du site de maintenance
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Param} & \+: nom complet du site \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/\mbox{\hyperlink{_c_chantier_8h}{CChantier.\+h}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/\mbox{\hyperlink{_c_chantier_8cpp}{CChantier.\+cpp}}\end{DoxyCompactItemize}

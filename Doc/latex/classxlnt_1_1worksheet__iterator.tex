@@ -1,0 +1,261 @@
+\hypertarget{classxlnt_1_1worksheet__iterator}{}\doxysection{xlnt\+::worksheet\+\_\+iterator Class Reference}
+\label{classxlnt_1_1worksheet__iterator}\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+
+
+An iterator which is used to iterate over the worksheets in a workbook.  
+
+
+
+
+{\ttfamily \#include $<$worksheet\+\_\+iterator.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_ab8dcca52cae4dc79ef132cae583fade6}{iterator\+\_\+category}} = std\+::bidirectional\+\_\+iterator\+\_\+tag
+\begin{DoxyCompactList}\small\item\em iterator tags required for use with standard algorithms and adapters \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_a3d891d3a265f874bc9c760e9cb31b247}{value\+\_\+type}} = \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}
+\item 
+using \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_a598343c9c45f99a891aeb1a20e6d3034}{difference\+\_\+type}} = std\+::ptrdiff\+\_\+t
+\item 
+using \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_ae63dabd7d91afcf9a770180788dcc628}{pointer}} = \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} $\ast$
+\item 
+using \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_aceea017eae8e930777b4568395c6fbc8}{reference}} = \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet__iterator_ac90be63bc27aa016b520780ea03f093c}{worksheet\+\_\+iterator}} ()=default
+\begin{DoxyCompactList}\small\item\em Default Constructs a worksheet iterator \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet__iterator_aa2aea81f226e0c085e26bb9596cce62b}{worksheet\+\_\+iterator}} (\mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \&wb, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} index)
+\begin{DoxyCompactList}\small\item\em Constructs a worksheet iterator from a workbook and sheet index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet__iterator_aaa09a49789af40b901db90ba35ab9580}{worksheet\+\_\+iterator}} (const \mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \&)=default
+\begin{DoxyCompactList}\small\item\em Copy constructs a worksheet iterator from another iterator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \& \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_a7989246ed63e962e1c0c1ffb3a7303b0}{operator=}} (const \mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \&)=default
+\begin{DoxyCompactList}\small\item\em Copy assigns the iterator so that it points to the same worksheet in the same workbook. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet__iterator_a12a274282cc17ef7a7cdb6f21fdcfd88}{worksheet\+\_\+iterator}} (\mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \&\&)=default
+\begin{DoxyCompactList}\small\item\em Move constructs a worksheet iterator from a temporary iterator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \& \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_a1d94550009207c0393c582f2d493dafa}{operator=}} (\mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \&\&)=default
+\begin{DoxyCompactList}\small\item\em Move assign the iterator from a temporary iterator \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet__iterator_a6c9371bdf947cfd81ffae21083f669f7}{$\sim$worksheet\+\_\+iterator}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet__iterator_aceea017eae8e930777b4568395c6fbc8}{reference}} \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_a066eb8384558a93c7b0e657b17354453}{operator$\ast$}} ()
+\begin{DoxyCompactList}\small\item\em Dereferences the iterator to return the worksheet it is pointing to. If the iterator points to one-\/past-\/the-\/end of the workbook, an \mbox{\hyperlink{classxlnt_1_1invalid__parameter}{invalid\+\_\+parameter}} exception will be thrown. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_aceea017eae8e930777b4568395c6fbc8}{reference}} \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_a2a8a0b164902682fb63bfa92b8dd83f2}{operator$\ast$}} () const
+\begin{DoxyCompactList}\small\item\em Dereferences the iterator to return the worksheet it is pointing to. If the iterator points to one-\/past-\/the-\/end of the workbook, an \mbox{\hyperlink{classxlnt_1_1invalid__parameter}{invalid\+\_\+parameter}} exception will be thrown. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_a9c141f71441b2b0e9c09b83e17e78bca}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \&comparand) const
+\begin{DoxyCompactList}\small\item\em Returns true if this iterator points to the same worksheet as comparand. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_aa252ef49b009ff443e9006f920fb02bd}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \&comparand) const
+\begin{DoxyCompactList}\small\item\em Returns true if this iterator doesn\textquotesingle{}t point to the same worksheet as comparand. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_aab0b828b482bfa0e619433fa844627de}{operator++}} (int)
+\begin{DoxyCompactList}\small\item\em Post-\/increment the iterator\textquotesingle{}s internal workseet index. Returns a copy of the iterator as it was before being incremented. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \& \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_a89f51a2a35bee8298e0ff5f5450b9ebe}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em Pre-\/increment the iterator\textquotesingle{}s internal workseet index. Returns a refernce to the same iterator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_a60af2b4c4518b352593b9e51a2c5d85b}{operator-\/-\/}} (int)
+\begin{DoxyCompactList}\small\item\em Post-\/decrement the iterator\textquotesingle{}s internal workseet index. Returns a copy of the iterator as it was before being incremented. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \& \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_aa6a2c00a830e8ffdf070958d555ab65e}{operator-\/-\/}} ()
+\begin{DoxyCompactList}\small\item\em Pre-\/decrement the iterator\textquotesingle{}s internal workseet index. Returns a refernce to the same iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An iterator which is used to iterate over the worksheets in a workbook. 
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_a598343c9c45f99a891aeb1a20e6d3034}\label{classxlnt_1_1worksheet__iterator_a598343c9c45f99a891aeb1a20e6d3034}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_a598343c9c45f99a891aeb1a20e6d3034}{xlnt\+::worksheet\+\_\+iterator\+::difference\+\_\+type}} =  std\+::ptrdiff\+\_\+t}
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_ab8dcca52cae4dc79ef132cae583fade6}\label{classxlnt_1_1worksheet__iterator_ab8dcca52cae4dc79ef132cae583fade6}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!iterator\_category@{iterator\_category}}
+\index{iterator\_category@{iterator\_category}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_ab8dcca52cae4dc79ef132cae583fade6}{xlnt\+::worksheet\+\_\+iterator\+::iterator\+\_\+category}} =  std\+::bidirectional\+\_\+iterator\+\_\+tag}
+
+
+
+iterator tags required for use with standard algorithms and adapters 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_ae63dabd7d91afcf9a770180788dcc628}\label{classxlnt_1_1worksheet__iterator_ae63dabd7d91afcf9a770180788dcc628}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!pointer@{pointer}}
+\index{pointer@{pointer}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_ae63dabd7d91afcf9a770180788dcc628}{xlnt\+::worksheet\+\_\+iterator\+::pointer}} =  \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} $\ast$}
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_aceea017eae8e930777b4568395c6fbc8}\label{classxlnt_1_1worksheet__iterator_aceea017eae8e930777b4568395c6fbc8}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!reference@{reference}}
+\index{reference@{reference}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_aceea017eae8e930777b4568395c6fbc8}{xlnt\+::worksheet\+\_\+iterator\+::reference}} =  \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}}
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_a3d891d3a265f874bc9c760e9cb31b247}\label{classxlnt_1_1worksheet__iterator_a3d891d3a265f874bc9c760e9cb31b247}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_a3d891d3a265f874bc9c760e9cb31b247}{xlnt\+::worksheet\+\_\+iterator\+::value\+\_\+type}} =  \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_ac90be63bc27aa016b520780ea03f093c}\label{classxlnt_1_1worksheet__iterator_ac90be63bc27aa016b520780ea03f093c}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!worksheet\_iterator@{worksheet\_iterator}}
+\index{worksheet\_iterator@{worksheet\_iterator}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{worksheet\_iterator()}{worksheet\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily xlnt\+::worksheet\+\_\+iterator\+::worksheet\+\_\+iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default Constructs a worksheet iterator 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_aa2aea81f226e0c085e26bb9596cce62b}\label{classxlnt_1_1worksheet__iterator_aa2aea81f226e0c085e26bb9596cce62b}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!worksheet\_iterator@{worksheet\_iterator}}
+\index{worksheet\_iterator@{worksheet\_iterator}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{worksheet\_iterator()}{worksheet\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily xlnt\+::worksheet\+\_\+iterator\+::worksheet\+\_\+iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \&}]{wb,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{index }\end{DoxyParamCaption})}
+
+
+
+Constructs a worksheet iterator from a workbook and sheet index. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_aaa09a49789af40b901db90ba35ab9580}\label{classxlnt_1_1worksheet__iterator_aaa09a49789af40b901db90ba35ab9580}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!worksheet\_iterator@{worksheet\_iterator}}
+\index{worksheet\_iterator@{worksheet\_iterator}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{worksheet\_iterator()}{worksheet\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily xlnt\+::worksheet\+\_\+iterator\+::worksheet\+\_\+iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Copy constructs a worksheet iterator from another iterator. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_a12a274282cc17ef7a7cdb6f21fdcfd88}\label{classxlnt_1_1worksheet__iterator_a12a274282cc17ef7a7cdb6f21fdcfd88}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!worksheet\_iterator@{worksheet\_iterator}}
+\index{worksheet\_iterator@{worksheet\_iterator}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{worksheet\_iterator()}{worksheet\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily xlnt\+::worksheet\+\_\+iterator\+::worksheet\+\_\+iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Move constructs a worksheet iterator from a temporary iterator. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_a6c9371bdf947cfd81ffae21083f669f7}\label{classxlnt_1_1worksheet__iterator_a6c9371bdf947cfd81ffae21083f669f7}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!````~worksheet\_iterator@{$\sim$worksheet\_iterator}}
+\index{````~worksheet\_iterator@{$\sim$worksheet\_iterator}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{$\sim$worksheet\_iterator()}{~worksheet\_iterator()}}
+{\footnotesize\ttfamily xlnt\+::worksheet\+\_\+iterator\+::$\sim$worksheet\+\_\+iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default destructor 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_aa252ef49b009ff443e9006f920fb02bd}\label{classxlnt_1_1worksheet__iterator_aa252ef49b009ff443e9006f920fb02bd}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+\_\+iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \&}]{comparand }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this iterator doesn\textquotesingle{}t point to the same worksheet as comparand. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_a066eb8384558a93c7b0e657b17354453}\label{classxlnt_1_1worksheet__iterator_a066eb8384558a93c7b0e657b17354453}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_aceea017eae8e930777b4568395c6fbc8}{worksheet\+\_\+iterator\+::reference}} xlnt\+::worksheet\+\_\+iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Dereferences the iterator to return the worksheet it is pointing to. If the iterator points to one-\/past-\/the-\/end of the workbook, an \mbox{\hyperlink{classxlnt_1_1invalid__parameter}{invalid\+\_\+parameter}} exception will be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_a2a8a0b164902682fb63bfa92b8dd83f2}\label{classxlnt_1_1worksheet__iterator_a2a8a0b164902682fb63bfa92b8dd83f2}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1worksheet__iterator_aceea017eae8e930777b4568395c6fbc8}{worksheet\+\_\+iterator\+::reference}} xlnt\+::worksheet\+\_\+iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Dereferences the iterator to return the worksheet it is pointing to. If the iterator points to one-\/past-\/the-\/end of the workbook, an \mbox{\hyperlink{classxlnt_1_1invalid__parameter}{invalid\+\_\+parameter}} exception will be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_a89f51a2a35bee8298e0ff5f5450b9ebe}\label{classxlnt_1_1worksheet__iterator_a89f51a2a35bee8298e0ff5f5450b9ebe}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \& xlnt\+::worksheet\+\_\+iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pre-\/increment the iterator\textquotesingle{}s internal workseet index. Returns a refernce to the same iterator. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_aab0b828b482bfa0e619433fa844627de}\label{classxlnt_1_1worksheet__iterator_aab0b828b482bfa0e619433fa844627de}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} xlnt\+::worksheet\+\_\+iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Post-\/increment the iterator\textquotesingle{}s internal workseet index. Returns a copy of the iterator as it was before being incremented. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_aa6a2c00a830e8ffdf070958d555ab65e}\label{classxlnt_1_1worksheet__iterator_aa6a2c00a830e8ffdf070958d555ab65e}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \& xlnt\+::worksheet\+\_\+iterator\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pre-\/decrement the iterator\textquotesingle{}s internal workseet index. Returns a refernce to the same iterator. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_a60af2b4c4518b352593b9e51a2c5d85b}\label{classxlnt_1_1worksheet__iterator_a60af2b4c4518b352593b9e51a2c5d85b}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} xlnt\+::worksheet\+\_\+iterator\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Post-\/decrement the iterator\textquotesingle{}s internal workseet index. Returns a copy of the iterator as it was before being incremented. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_a7989246ed63e962e1c0c1ffb3a7303b0}\label{classxlnt_1_1worksheet__iterator_a7989246ed63e962e1c0c1ffb3a7303b0}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!operator=@{operator=}}
+\index{operator=@{operator=}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}}\& xlnt\+::worksheet\+\_\+iterator\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Copy assigns the iterator so that it points to the same worksheet in the same workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_a1d94550009207c0393c582f2d493dafa}\label{classxlnt_1_1worksheet__iterator_a1d94550009207c0393c582f2d493dafa}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!operator=@{operator=}}
+\index{operator=@{operator=}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}}\& xlnt\+::worksheet\+\_\+iterator\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Move assign the iterator from a temporary iterator 
+
+\mbox{\Hypertarget{classxlnt_1_1worksheet__iterator_a9c141f71441b2b0e9c09b83e17e78bca}\label{classxlnt_1_1worksheet__iterator_a9c141f71441b2b0e9c09b83e17e78bca}} 
+\index{xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::worksheet\_iterator@{xlnt::worksheet\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::worksheet\+\_\+iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}} \&}]{comparand }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this iterator points to the same worksheet as comparand. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/workbook/\mbox{\hyperlink{worksheet__iterator_8hpp}{worksheet\+\_\+iterator.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/workbook/\mbox{\hyperlink{worksheet__iterator_8cpp}{worksheet\+\_\+iterator.\+cpp}}\end{DoxyCompactItemize}

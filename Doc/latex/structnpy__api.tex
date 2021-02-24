@@ -1,0 +1,354 @@
+\hypertarget{structnpy__api}{}\doxysection{npy\+\_\+api Struct Reference}
+\label{structnpy__api}\index{npy\_api@{npy\_api}}
+
+
+{\ttfamily \#include $<$numpy.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structnpy__api_1_1_py_array___dims}{Py\+Array\+\_\+\+Dims}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9}{constants}} \{ \newline
+\mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a170e51546deca56b75e35561a2200f2e}{NPY\+\_\+\+ARRAY\+\_\+\+C\+\_\+\+CONTIGUOUS\+\_\+}} = 0x0001
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a7b11d6dba43dfacba9f2bb31218dc4bf}{NPY\+\_\+\+ARRAY\+\_\+\+F\+\_\+\+CONTIGUOUS\+\_\+}} = 0x0002
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a1d2575092c17e53807b4fce0a937fd2d}{NPY\+\_\+\+ARRAY\+\_\+\+OWNDATA\+\_\+}} = 0x0004
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a4cb1ee9e8edecec35d52b50e55f21b56}{NPY\+\_\+\+ARRAY\+\_\+\+FORCECAST\+\_\+}} = 0x0010
+, \newline
+\mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9aa98a98acb0b0fb0b7f9bd8d0b00cbc9b}{NPY\+\_\+\+ARRAY\+\_\+\+ENSUREARRAY\+\_\+}} = 0x0040
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a079aadab6cba0738f51754ade72180b7}{NPY\+\_\+\+ARRAY\+\_\+\+ALIGNED\+\_\+}} = 0x0100
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a6d7679437ff22ffaa63276ed07f3be99}{NPY\+\_\+\+ARRAY\+\_\+\+WRITEABLE\+\_\+}} = 0x0400
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a7b75818adcb4c286c09d0611c4136312}{NPY\+\_\+\+BOOL\+\_\+}} = 0
+, \newline
+\mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a0d21a6802542c14292fb55e5d13dcaf7}{NPY\+\_\+\+BYTE\+\_\+}}
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a33bd1daf2cee4eac13a71155e374b17a}{NPY\+\_\+\+UBYTE\+\_\+}}
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a2caf791c87f18c293e03963eed0909ef}{NPY\+\_\+\+SHORT\+\_\+}}
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9aad478c8cce9824888bd9938d048a4a81}{NPY\+\_\+\+USHORT\+\_\+}}
+, \newline
+\mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a299ec9c0fa5042ffe924c699d9c69a96}{NPY\+\_\+\+INT\+\_\+}}
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a798fead63316ab008c7e73529bd52143}{NPY\+\_\+\+UINT\+\_\+}}
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9aa294b7951c8cb0e2c8a00aa369e7932b}{NPY\+\_\+\+LONG\+\_\+}}
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9afaa6e2051b69a27df947eb2dec25824d}{NPY\+\_\+\+ULONG\+\_\+}}
+, \newline
+\mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a950a284ce3a919bab01bd699874cf547}{NPY\+\_\+\+LONGLONG\+\_\+}}
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a75b13d5795c66c0dc1478dce160ff20b}{NPY\+\_\+\+ULONGLONG\+\_\+}}
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a7308ad9516a9a2e38b86f9cec8ae12c0}{NPY\+\_\+\+FLOAT\+\_\+}}
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a7d30fb8ebd690f8abf041ac66a6ce548}{NPY\+\_\+\+DOUBLE\+\_\+}}
+, \newline
+\mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a0039597c9aefc43a2d6f50038a055d92}{NPY\+\_\+\+LONGDOUBLE\+\_\+}}
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9af17bc31bac8c717ad29f13a1a14e0522}{NPY\+\_\+\+CFLOAT\+\_\+}}
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a5f36a2568bdb0e8e710d35105e205ccf}{NPY\+\_\+\+CDOUBLE\+\_\+}}
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a62a0d7624d7c1a30f1f3f1d77f685844}{NPY\+\_\+\+CLONGDOUBLE\+\_\+}}
+, \newline
+\mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a76b5e27648b092993295bd54e4fc26fc}{NPY\+\_\+\+OBJECT\+\_\+}} = 17
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a3a2b00922187bc2c7ac24694efe8aee9}{NPY\+\_\+\+STRING\+\_\+}}
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9ac96ae518aa4eb676803c38c9ad9f5f2a}{NPY\+\_\+\+UNICODE\+\_\+}}
+, \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9aa537b91d1bd46786ba85ba704274f801}{NPY\+\_\+\+VOID\+\_\+}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structnpy__api_afc42a9db9fecb476cd2902665a64f891}{Py\+Array\+\_\+\+Check\+\_\+}} (Py\+Object $\ast$obj) const
+\item 
+bool \mbox{\hyperlink{structnpy__api_aadb8a33f970e864d5cefbc6f033d5d71}{Py\+Array\+Descr\+\_\+\+Check\+\_\+}} (Py\+Object $\ast$obj) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structnpy__api}{npy\+\_\+api}} \& \mbox{\hyperlink{structnpy__api_aba897273c4b93bd10e5760f93de85aaf}{get}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int($\ast$ \mbox{\hyperlink{structnpy__api_ab40ac29b4dd4d4b3ff26fca367190a0d}{Py\+Array\+\_\+\+Get\+NDArray\+CFeature\+Version\+\_\+}} )()
+\item 
+Py\+Object $\ast$($\ast$ \mbox{\hyperlink{structnpy__api_a089f8b2eff652a6be196a4a272fda631}{Py\+Array\+\_\+\+Descr\+From\+Type\+\_\+}} )(int)
+\item 
+Py\+Object $\ast$($\ast$ \mbox{\hyperlink{structnpy__api_a011738372f87b4f5c55438b36363d0e7}{Py\+Array\+\_\+\+New\+From\+Descr\+\_\+}} )(Py\+Type\+Object $\ast$, Py\+Object $\ast$, int, Py\+\_\+intptr\+\_\+t $\ast$, Py\+\_\+intptr\+\_\+t $\ast$, void $\ast$, int, Py\+Object $\ast$)
+\item 
+Py\+Object $\ast$($\ast$ \mbox{\hyperlink{structnpy__api_ad040b3ea314996f78176f7a5ddb29177}{Py\+Array\+\_\+\+Descr\+New\+From\+Type\+\_\+}} )(int)
+\item 
+int($\ast$ \mbox{\hyperlink{structnpy__api_a7d5205f195d633125051fe3ade860062}{Py\+Array\+\_\+\+Copy\+Into\+\_\+}} )(Py\+Object $\ast$, Py\+Object $\ast$)
+\item 
+Py\+Object $\ast$($\ast$ \mbox{\hyperlink{structnpy__api_afceedb3de54ec824ebe1904f2518c178}{Py\+Array\+\_\+\+New\+Copy\+\_\+}} )(Py\+Object $\ast$, int)
+\item 
+Py\+Type\+Object $\ast$ \mbox{\hyperlink{structnpy__api_a90606f7c6be32c8206dc496d8925d984}{Py\+Array\+\_\+\+Type\+\_\+}}
+\item 
+Py\+Type\+Object $\ast$ \mbox{\hyperlink{structnpy__api_a00960472c4802c69109ddfa9bb54fca5}{Py\+Void\+Arr\+Type\+\_\+\+Type\+\_\+}}
+\item 
+Py\+Type\+Object $\ast$ \mbox{\hyperlink{structnpy__api_a098d32c95003331ae8cf6c968163153a}{Py\+Array\+Descr\+\_\+\+Type\+\_\+}}
+\item 
+Py\+Object $\ast$($\ast$ \mbox{\hyperlink{structnpy__api_a6a3a67e5494d56be530dac55b4f8c0e9}{Py\+Array\+\_\+\+Descr\+From\+Scalar\+\_\+}} )(Py\+Object $\ast$)
+\item 
+Py\+Object $\ast$($\ast$ \mbox{\hyperlink{structnpy__api_a52ea8d3ec3807fbbe3677778927be208}{Py\+Array\+\_\+\+From\+Any\+\_\+}} )(Py\+Object $\ast$, Py\+Object $\ast$, int, int, int, Py\+Object $\ast$)
+\item 
+int($\ast$ \mbox{\hyperlink{structnpy__api_a194b80a44e3e6fe70a42feb0d01d242e}{Py\+Array\+\_\+\+Descr\+Converter\+\_\+}} )(Py\+Object $\ast$, Py\+Object $\ast$$\ast$)
+\item 
+bool($\ast$ \mbox{\hyperlink{structnpy__api_a679481716d90329a4a5af98fab660a9b}{Py\+Array\+\_\+\+Equiv\+Types\+\_\+}} )(Py\+Object $\ast$, Py\+Object $\ast$)
+\item 
+int($\ast$ \mbox{\hyperlink{structnpy__api_a7083fe79c0c4c3a1b8b3da9d0f1f0e92}{Py\+Array\+\_\+\+Get\+Array\+Params\+From\+Object\+\_\+}} )(Py\+Object $\ast$, Py\+Object $\ast$, char, Py\+Object $\ast$$\ast$, int $\ast$, Py\+\_\+ssize\+\_\+t $\ast$, Py\+Object $\ast$$\ast$, Py\+Object $\ast$)
+\item 
+Py\+Object $\ast$($\ast$ \mbox{\hyperlink{structnpy__api_a5eaf02a66cf52e1e88bf7d2d133580af}{Py\+Array\+\_\+\+Squeeze\+\_\+}} )(Py\+Object $\ast$)
+\item 
+int($\ast$ \mbox{\hyperlink{structnpy__api_a7dd4d69b7cafe7f2faf6bdec7c7a6ef9}{Py\+Array\+\_\+\+Set\+Base\+Object\+\_\+}} )(Py\+Object $\ast$, Py\+Object $\ast$)
+\item 
+Py\+Object $\ast$($\ast$ \mbox{\hyperlink{structnpy__api_ab6563aca51f43ea38b4b7569e780b23d}{Py\+Array\+\_\+\+Resize\+\_\+}} )(Py\+Object $\ast$, \mbox{\hyperlink{structnpy__api_1_1_py_array___dims}{Py\+Array\+\_\+\+Dims}} $\ast$, int, int)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9}} 
+\index{npy\_api@{npy\_api}!constants@{constants}}
+\index{constants@{constants}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{constants}{constants}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9}{npy\+\_\+api\+::constants}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ARRAY\_C\_CONTIGUOUS\_@{NPY\_ARRAY\_C\_CONTIGUOUS\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_ARRAY\_C\_CONTIGUOUS\_@{NPY\_ARRAY\_C\_CONTIGUOUS\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a170e51546deca56b75e35561a2200f2e}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a170e51546deca56b75e35561a2200f2e}} 
+NPY\+\_\+\+ARRAY\+\_\+\+C\+\_\+\+CONTIGUOUS\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ARRAY\_F\_CONTIGUOUS\_@{NPY\_ARRAY\_F\_CONTIGUOUS\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_ARRAY\_F\_CONTIGUOUS\_@{NPY\_ARRAY\_F\_CONTIGUOUS\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a7b11d6dba43dfacba9f2bb31218dc4bf}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a7b11d6dba43dfacba9f2bb31218dc4bf}} 
+NPY\+\_\+\+ARRAY\+\_\+\+F\+\_\+\+CONTIGUOUS\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ARRAY\_OWNDATA\_@{NPY\_ARRAY\_OWNDATA\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_ARRAY\_OWNDATA\_@{NPY\_ARRAY\_OWNDATA\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a1d2575092c17e53807b4fce0a937fd2d}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a1d2575092c17e53807b4fce0a937fd2d}} 
+NPY\+\_\+\+ARRAY\+\_\+\+OWNDATA\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ARRAY\_FORCECAST\_@{NPY\_ARRAY\_FORCECAST\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_ARRAY\_FORCECAST\_@{NPY\_ARRAY\_FORCECAST\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a4cb1ee9e8edecec35d52b50e55f21b56}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a4cb1ee9e8edecec35d52b50e55f21b56}} 
+NPY\+\_\+\+ARRAY\+\_\+\+FORCECAST\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ARRAY\_ENSUREARRAY\_@{NPY\_ARRAY\_ENSUREARRAY\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_ARRAY\_ENSUREARRAY\_@{NPY\_ARRAY\_ENSUREARRAY\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9aa98a98acb0b0fb0b7f9bd8d0b00cbc9b}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9aa98a98acb0b0fb0b7f9bd8d0b00cbc9b}} 
+NPY\+\_\+\+ARRAY\+\_\+\+ENSUREARRAY\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ARRAY\_ALIGNED\_@{NPY\_ARRAY\_ALIGNED\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_ARRAY\_ALIGNED\_@{NPY\_ARRAY\_ALIGNED\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a079aadab6cba0738f51754ade72180b7}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a079aadab6cba0738f51754ade72180b7}} 
+NPY\+\_\+\+ARRAY\+\_\+\+ALIGNED\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ARRAY\_WRITEABLE\_@{NPY\_ARRAY\_WRITEABLE\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_ARRAY\_WRITEABLE\_@{NPY\_ARRAY\_WRITEABLE\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a6d7679437ff22ffaa63276ed07f3be99}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a6d7679437ff22ffaa63276ed07f3be99}} 
+NPY\+\_\+\+ARRAY\+\_\+\+WRITEABLE\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_BOOL\_@{NPY\_BOOL\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_BOOL\_@{NPY\_BOOL\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a7b75818adcb4c286c09d0611c4136312}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a7b75818adcb4c286c09d0611c4136312}} 
+NPY\+\_\+\+BOOL\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_BYTE\_@{NPY\_BYTE\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_BYTE\_@{NPY\_BYTE\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a0d21a6802542c14292fb55e5d13dcaf7}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a0d21a6802542c14292fb55e5d13dcaf7}} 
+NPY\+\_\+\+BYTE\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_UBYTE\_@{NPY\_UBYTE\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_UBYTE\_@{NPY\_UBYTE\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a33bd1daf2cee4eac13a71155e374b17a}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a33bd1daf2cee4eac13a71155e374b17a}} 
+NPY\+\_\+\+UBYTE\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_SHORT\_@{NPY\_SHORT\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_SHORT\_@{NPY\_SHORT\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a2caf791c87f18c293e03963eed0909ef}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a2caf791c87f18c293e03963eed0909ef}} 
+NPY\+\_\+\+SHORT\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_USHORT\_@{NPY\_USHORT\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_USHORT\_@{NPY\_USHORT\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9aad478c8cce9824888bd9938d048a4a81}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9aad478c8cce9824888bd9938d048a4a81}} 
+NPY\+\_\+\+USHORT\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_INT\_@{NPY\_INT\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_INT\_@{NPY\_INT\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a299ec9c0fa5042ffe924c699d9c69a96}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a299ec9c0fa5042ffe924c699d9c69a96}} 
+NPY\+\_\+\+INT\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_UINT\_@{NPY\_UINT\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_UINT\_@{NPY\_UINT\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a798fead63316ab008c7e73529bd52143}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a798fead63316ab008c7e73529bd52143}} 
+NPY\+\_\+\+UINT\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_LONG\_@{NPY\_LONG\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_LONG\_@{NPY\_LONG\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9aa294b7951c8cb0e2c8a00aa369e7932b}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9aa294b7951c8cb0e2c8a00aa369e7932b}} 
+NPY\+\_\+\+LONG\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ULONG\_@{NPY\_ULONG\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_ULONG\_@{NPY\_ULONG\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9afaa6e2051b69a27df947eb2dec25824d}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9afaa6e2051b69a27df947eb2dec25824d}} 
+NPY\+\_\+\+ULONG\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_LONGLONG\_@{NPY\_LONGLONG\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_LONGLONG\_@{NPY\_LONGLONG\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a950a284ce3a919bab01bd699874cf547}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a950a284ce3a919bab01bd699874cf547}} 
+NPY\+\_\+\+LONGLONG\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ULONGLONG\_@{NPY\_ULONGLONG\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_ULONGLONG\_@{NPY\_ULONGLONG\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a75b13d5795c66c0dc1478dce160ff20b}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a75b13d5795c66c0dc1478dce160ff20b}} 
+NPY\+\_\+\+ULONGLONG\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_FLOAT\_@{NPY\_FLOAT\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_FLOAT\_@{NPY\_FLOAT\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a7308ad9516a9a2e38b86f9cec8ae12c0}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a7308ad9516a9a2e38b86f9cec8ae12c0}} 
+NPY\+\_\+\+FLOAT\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_DOUBLE\_@{NPY\_DOUBLE\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_DOUBLE\_@{NPY\_DOUBLE\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a7d30fb8ebd690f8abf041ac66a6ce548}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a7d30fb8ebd690f8abf041ac66a6ce548}} 
+NPY\+\_\+\+DOUBLE\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_LONGDOUBLE\_@{NPY\_LONGDOUBLE\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_LONGDOUBLE\_@{NPY\_LONGDOUBLE\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a0039597c9aefc43a2d6f50038a055d92}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a0039597c9aefc43a2d6f50038a055d92}} 
+NPY\+\_\+\+LONGDOUBLE\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_CFLOAT\_@{NPY\_CFLOAT\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_CFLOAT\_@{NPY\_CFLOAT\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9af17bc31bac8c717ad29f13a1a14e0522}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9af17bc31bac8c717ad29f13a1a14e0522}} 
+NPY\+\_\+\+CFLOAT\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_CDOUBLE\_@{NPY\_CDOUBLE\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_CDOUBLE\_@{NPY\_CDOUBLE\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a5f36a2568bdb0e8e710d35105e205ccf}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a5f36a2568bdb0e8e710d35105e205ccf}} 
+NPY\+\_\+\+CDOUBLE\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_CLONGDOUBLE\_@{NPY\_CLONGDOUBLE\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_CLONGDOUBLE\_@{NPY\_CLONGDOUBLE\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a62a0d7624d7c1a30f1f3f1d77f685844}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a62a0d7624d7c1a30f1f3f1d77f685844}} 
+NPY\+\_\+\+CLONGDOUBLE\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_OBJECT\_@{NPY\_OBJECT\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_OBJECT\_@{NPY\_OBJECT\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a76b5e27648b092993295bd54e4fc26fc}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a76b5e27648b092993295bd54e4fc26fc}} 
+NPY\+\_\+\+OBJECT\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_STRING\_@{NPY\_STRING\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_STRING\_@{NPY\_STRING\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a3a2b00922187bc2c7ac24694efe8aee9}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9a3a2b00922187bc2c7ac24694efe8aee9}} 
+NPY\+\_\+\+STRING\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_UNICODE\_@{NPY\_UNICODE\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_UNICODE\_@{NPY\_UNICODE\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9ac96ae518aa4eb676803c38c9ad9f5f2a}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9ac96ae518aa4eb676803c38c9ad9f5f2a}} 
+NPY\+\_\+\+UNICODE\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_VOID\_@{NPY\_VOID\_}!npy\_api@{npy\_api}}\index{npy\_api@{npy\_api}!NPY\_VOID\_@{NPY\_VOID\_}}}\mbox{\Hypertarget{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9aa537b91d1bd46786ba85ba704274f801}\label{structnpy__api_a788409fb003cbdfdb9adee0cfb6573f9aa537b91d1bd46786ba85ba704274f801}} 
+NPY\+\_\+\+VOID\+\_\+&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnpy__api_aba897273c4b93bd10e5760f93de85aaf}\label{structnpy__api_aba897273c4b93bd10e5760f93de85aaf}} 
+\index{npy\_api@{npy\_api}!get@{get}}
+\index{get@{get}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structnpy__api}{npy\+\_\+api}}\& npy\+\_\+api\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structnpy__api_afc42a9db9fecb476cd2902665a64f891}\label{structnpy__api_afc42a9db9fecb476cd2902665a64f891}} 
+\index{npy\_api@{npy\_api}!PyArray\_Check\_@{PyArray\_Check\_}}
+\index{PyArray\_Check\_@{PyArray\_Check\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_Check\_()}{PyArray\_Check\_()}}
+{\footnotesize\ttfamily bool npy\+\_\+api\+::\+Py\+Array\+\_\+\+Check\+\_\+ (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{obj }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structnpy__api_aadb8a33f970e864d5cefbc6f033d5d71}\label{structnpy__api_aadb8a33f970e864d5cefbc6f033d5d71}} 
+\index{npy\_api@{npy\_api}!PyArrayDescr\_Check\_@{PyArrayDescr\_Check\_}}
+\index{PyArrayDescr\_Check\_@{PyArrayDescr\_Check\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArrayDescr\_Check\_()}{PyArrayDescr\_Check\_()}}
+{\footnotesize\ttfamily bool npy\+\_\+api\+::\+Py\+Array\+Descr\+\_\+\+Check\+\_\+ (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{obj }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structnpy__api_a7d5205f195d633125051fe3ade860062}\label{structnpy__api_a7d5205f195d633125051fe3ade860062}} 
+\index{npy\_api@{npy\_api}!PyArray\_CopyInto\_@{PyArray\_CopyInto\_}}
+\index{PyArray\_CopyInto\_@{PyArray\_CopyInto\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_CopyInto\_}{PyArray\_CopyInto\_}}
+{\footnotesize\ttfamily int($\ast$ npy\+\_\+api\+::\+Py\+Array\+\_\+\+Copy\+Into\+\_\+) (Py\+Object $\ast$, Py\+Object $\ast$)}
+
+\mbox{\Hypertarget{structnpy__api_a194b80a44e3e6fe70a42feb0d01d242e}\label{structnpy__api_a194b80a44e3e6fe70a42feb0d01d242e}} 
+\index{npy\_api@{npy\_api}!PyArray\_DescrConverter\_@{PyArray\_DescrConverter\_}}
+\index{PyArray\_DescrConverter\_@{PyArray\_DescrConverter\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_DescrConverter\_}{PyArray\_DescrConverter\_}}
+{\footnotesize\ttfamily int($\ast$ npy\+\_\+api\+::\+Py\+Array\+\_\+\+Descr\+Converter\+\_\+) (Py\+Object $\ast$, Py\+Object $\ast$$\ast$)}
+
+\mbox{\Hypertarget{structnpy__api_a6a3a67e5494d56be530dac55b4f8c0e9}\label{structnpy__api_a6a3a67e5494d56be530dac55b4f8c0e9}} 
+\index{npy\_api@{npy\_api}!PyArray\_DescrFromScalar\_@{PyArray\_DescrFromScalar\_}}
+\index{PyArray\_DescrFromScalar\_@{PyArray\_DescrFromScalar\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_DescrFromScalar\_}{PyArray\_DescrFromScalar\_}}
+{\footnotesize\ttfamily Py\+Object$\ast$($\ast$ npy\+\_\+api\+::\+Py\+Array\+\_\+\+Descr\+From\+Scalar\+\_\+) (Py\+Object $\ast$)}
+
+\mbox{\Hypertarget{structnpy__api_a089f8b2eff652a6be196a4a272fda631}\label{structnpy__api_a089f8b2eff652a6be196a4a272fda631}} 
+\index{npy\_api@{npy\_api}!PyArray\_DescrFromType\_@{PyArray\_DescrFromType\_}}
+\index{PyArray\_DescrFromType\_@{PyArray\_DescrFromType\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_DescrFromType\_}{PyArray\_DescrFromType\_}}
+{\footnotesize\ttfamily Py\+Object$\ast$($\ast$ npy\+\_\+api\+::\+Py\+Array\+\_\+\+Descr\+From\+Type\+\_\+) (int)}
+
+\mbox{\Hypertarget{structnpy__api_ad040b3ea314996f78176f7a5ddb29177}\label{structnpy__api_ad040b3ea314996f78176f7a5ddb29177}} 
+\index{npy\_api@{npy\_api}!PyArray\_DescrNewFromType\_@{PyArray\_DescrNewFromType\_}}
+\index{PyArray\_DescrNewFromType\_@{PyArray\_DescrNewFromType\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_DescrNewFromType\_}{PyArray\_DescrNewFromType\_}}
+{\footnotesize\ttfamily Py\+Object$\ast$($\ast$ npy\+\_\+api\+::\+Py\+Array\+\_\+\+Descr\+New\+From\+Type\+\_\+) (int)}
+
+\mbox{\Hypertarget{structnpy__api_a679481716d90329a4a5af98fab660a9b}\label{structnpy__api_a679481716d90329a4a5af98fab660a9b}} 
+\index{npy\_api@{npy\_api}!PyArray\_EquivTypes\_@{PyArray\_EquivTypes\_}}
+\index{PyArray\_EquivTypes\_@{PyArray\_EquivTypes\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_EquivTypes\_}{PyArray\_EquivTypes\_}}
+{\footnotesize\ttfamily bool($\ast$ npy\+\_\+api\+::\+Py\+Array\+\_\+\+Equiv\+Types\+\_\+) (Py\+Object $\ast$, Py\+Object $\ast$)}
+
+\mbox{\Hypertarget{structnpy__api_a52ea8d3ec3807fbbe3677778927be208}\label{structnpy__api_a52ea8d3ec3807fbbe3677778927be208}} 
+\index{npy\_api@{npy\_api}!PyArray\_FromAny\_@{PyArray\_FromAny\_}}
+\index{PyArray\_FromAny\_@{PyArray\_FromAny\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_FromAny\_}{PyArray\_FromAny\_}}
+{\footnotesize\ttfamily Py\+Object$\ast$($\ast$ npy\+\_\+api\+::\+Py\+Array\+\_\+\+From\+Any\+\_\+) (Py\+Object $\ast$, Py\+Object $\ast$, int, int, int, Py\+Object $\ast$)}
+
+\mbox{\Hypertarget{structnpy__api_a7083fe79c0c4c3a1b8b3da9d0f1f0e92}\label{structnpy__api_a7083fe79c0c4c3a1b8b3da9d0f1f0e92}} 
+\index{npy\_api@{npy\_api}!PyArray\_GetArrayParamsFromObject\_@{PyArray\_GetArrayParamsFromObject\_}}
+\index{PyArray\_GetArrayParamsFromObject\_@{PyArray\_GetArrayParamsFromObject\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_GetArrayParamsFromObject\_}{PyArray\_GetArrayParamsFromObject\_}}
+{\footnotesize\ttfamily int($\ast$ npy\+\_\+api\+::\+Py\+Array\+\_\+\+Get\+Array\+Params\+From\+Object\+\_\+) (Py\+Object $\ast$, Py\+Object $\ast$, char, Py\+Object $\ast$$\ast$, int $\ast$, Py\+\_\+ssize\+\_\+t $\ast$, Py\+Object $\ast$$\ast$, Py\+Object $\ast$)}
+
+\mbox{\Hypertarget{structnpy__api_ab40ac29b4dd4d4b3ff26fca367190a0d}\label{structnpy__api_ab40ac29b4dd4d4b3ff26fca367190a0d}} 
+\index{npy\_api@{npy\_api}!PyArray\_GetNDArrayCFeatureVersion\_@{PyArray\_GetNDArrayCFeatureVersion\_}}
+\index{PyArray\_GetNDArrayCFeatureVersion\_@{PyArray\_GetNDArrayCFeatureVersion\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_GetNDArrayCFeatureVersion\_}{PyArray\_GetNDArrayCFeatureVersion\_}}
+{\footnotesize\ttfamily unsigned int($\ast$ npy\+\_\+api\+::\+Py\+Array\+\_\+\+Get\+NDArray\+CFeature\+Version\+\_\+) ()}
+
+\mbox{\Hypertarget{structnpy__api_afceedb3de54ec824ebe1904f2518c178}\label{structnpy__api_afceedb3de54ec824ebe1904f2518c178}} 
+\index{npy\_api@{npy\_api}!PyArray\_NewCopy\_@{PyArray\_NewCopy\_}}
+\index{PyArray\_NewCopy\_@{PyArray\_NewCopy\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_NewCopy\_}{PyArray\_NewCopy\_}}
+{\footnotesize\ttfamily Py\+Object$\ast$($\ast$ npy\+\_\+api\+::\+Py\+Array\+\_\+\+New\+Copy\+\_\+) (Py\+Object $\ast$, int)}
+
+\mbox{\Hypertarget{structnpy__api_a011738372f87b4f5c55438b36363d0e7}\label{structnpy__api_a011738372f87b4f5c55438b36363d0e7}} 
+\index{npy\_api@{npy\_api}!PyArray\_NewFromDescr\_@{PyArray\_NewFromDescr\_}}
+\index{PyArray\_NewFromDescr\_@{PyArray\_NewFromDescr\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_NewFromDescr\_}{PyArray\_NewFromDescr\_}}
+{\footnotesize\ttfamily Py\+Object$\ast$($\ast$ npy\+\_\+api\+::\+Py\+Array\+\_\+\+New\+From\+Descr\+\_\+) (Py\+Type\+Object $\ast$, Py\+Object $\ast$, int, Py\+\_\+intptr\+\_\+t $\ast$, Py\+\_\+intptr\+\_\+t $\ast$, void $\ast$, int, Py\+Object $\ast$)}
+
+\mbox{\Hypertarget{structnpy__api_ab6563aca51f43ea38b4b7569e780b23d}\label{structnpy__api_ab6563aca51f43ea38b4b7569e780b23d}} 
+\index{npy\_api@{npy\_api}!PyArray\_Resize\_@{PyArray\_Resize\_}}
+\index{PyArray\_Resize\_@{PyArray\_Resize\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_Resize\_}{PyArray\_Resize\_}}
+{\footnotesize\ttfamily Py\+Object$\ast$($\ast$ npy\+\_\+api\+::\+Py\+Array\+\_\+\+Resize\+\_\+) (Py\+Object $\ast$, \mbox{\hyperlink{structnpy__api_1_1_py_array___dims}{Py\+Array\+\_\+\+Dims}} $\ast$, int, int)}
+
+\mbox{\Hypertarget{structnpy__api_a7dd4d69b7cafe7f2faf6bdec7c7a6ef9}\label{structnpy__api_a7dd4d69b7cafe7f2faf6bdec7c7a6ef9}} 
+\index{npy\_api@{npy\_api}!PyArray\_SetBaseObject\_@{PyArray\_SetBaseObject\_}}
+\index{PyArray\_SetBaseObject\_@{PyArray\_SetBaseObject\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_SetBaseObject\_}{PyArray\_SetBaseObject\_}}
+{\footnotesize\ttfamily int($\ast$ npy\+\_\+api\+::\+Py\+Array\+\_\+\+Set\+Base\+Object\+\_\+) (Py\+Object $\ast$, Py\+Object $\ast$)}
+
+\mbox{\Hypertarget{structnpy__api_a5eaf02a66cf52e1e88bf7d2d133580af}\label{structnpy__api_a5eaf02a66cf52e1e88bf7d2d133580af}} 
+\index{npy\_api@{npy\_api}!PyArray\_Squeeze\_@{PyArray\_Squeeze\_}}
+\index{PyArray\_Squeeze\_@{PyArray\_Squeeze\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_Squeeze\_}{PyArray\_Squeeze\_}}
+{\footnotesize\ttfamily Py\+Object$\ast$($\ast$ npy\+\_\+api\+::\+Py\+Array\+\_\+\+Squeeze\+\_\+) (Py\+Object $\ast$)}
+
+\mbox{\Hypertarget{structnpy__api_a90606f7c6be32c8206dc496d8925d984}\label{structnpy__api_a90606f7c6be32c8206dc496d8925d984}} 
+\index{npy\_api@{npy\_api}!PyArray\_Type\_@{PyArray\_Type\_}}
+\index{PyArray\_Type\_@{PyArray\_Type\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_Type\_}{PyArray\_Type\_}}
+{\footnotesize\ttfamily Py\+Type\+Object$\ast$ npy\+\_\+api\+::\+Py\+Array\+\_\+\+Type\+\_\+}
+
+\mbox{\Hypertarget{structnpy__api_a098d32c95003331ae8cf6c968163153a}\label{structnpy__api_a098d32c95003331ae8cf6c968163153a}} 
+\index{npy\_api@{npy\_api}!PyArrayDescr\_Type\_@{PyArrayDescr\_Type\_}}
+\index{PyArrayDescr\_Type\_@{PyArrayDescr\_Type\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArrayDescr\_Type\_}{PyArrayDescr\_Type\_}}
+{\footnotesize\ttfamily Py\+Type\+Object$\ast$ npy\+\_\+api\+::\+Py\+Array\+Descr\+\_\+\+Type\+\_\+}
+
+\mbox{\Hypertarget{structnpy__api_a00960472c4802c69109ddfa9bb54fca5}\label{structnpy__api_a00960472c4802c69109ddfa9bb54fca5}} 
+\index{npy\_api@{npy\_api}!PyVoidArrType\_Type\_@{PyVoidArrType\_Type\_}}
+\index{PyVoidArrType\_Type\_@{PyVoidArrType\_Type\_}!npy\_api@{npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyVoidArrType\_Type\_}{PyVoidArrType\_Type\_}}
+{\footnotesize\ttfamily Py\+Type\+Object$\ast$ npy\+\_\+api\+::\+Py\+Void\+Arr\+Type\+\_\+\+Type\+\_\+}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{numpy_8h}{numpy.\+h}}\end{DoxyCompactItemize}

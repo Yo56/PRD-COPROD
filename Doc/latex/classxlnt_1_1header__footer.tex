@@ -1,0 +1,623 @@
+\hypertarget{classxlnt_1_1header__footer}{}\doxysection{xlnt\+::header\+\_\+footer Class Reference}
+\label{classxlnt_1_1header__footer}\index{xlnt::header\_footer@{xlnt::header\_footer}}
+
+
+Represents the header and footer of a sheet in a workbook.  
+
+
+
+
+{\ttfamily \#include $<$header\+\_\+footer.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} \{ \mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375a811882fecd5c7618d7099ebbd39ea254}{left}}
+, \mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375aadb115059e28d960fa8badfac5516667}{center}}
+, \mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375a7c4f29407893c334a6cb7a87bf045c0d}{right}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumerates the three possible locations of a header or footer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classxlnt_1_1header__footer_ac8aef07b8c7915236779578d9dd56f95}{has\+\_\+header}} () const
+\begin{DoxyCompactList}\small\item\em True if any text has been added for a header at any location on any page. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1header__footer_affb3fd26b73b730f38ff592c66cc276e}{has\+\_\+footer}} () const
+\begin{DoxyCompactList}\small\item\em True if any text has been added for a footer at any location on any page. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1header__footer_ae9512dcb1d060bcc554930ab6ff3bc0d}{align\+\_\+with\+\_\+margins}} () const
+\begin{DoxyCompactList}\small\item\em True if headers and footers should align to the page margins. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& \mbox{\hyperlink{classxlnt_1_1header__footer_a6cc6f38aad4532f560f0d21d3d319e25}{align\+\_\+with\+\_\+margins}} (bool align)
+\begin{DoxyCompactList}\small\item\em Set to true if headers and footers should align to the page margins. Set to false if headers and footers should align to the edge of the page. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1header__footer_a879194359f873c0687dc5d4933021b1e}{different\+\_\+odd\+\_\+even}} () const
+\begin{DoxyCompactList}\small\item\em True if headers and footers differ based on page number. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1header__footer_ac05acf474f74a04498f3e51839a38716}{different\+\_\+first}} () const
+\begin{DoxyCompactList}\small\item\em True if headers and footers are different on the first page. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1header__footer_a81b33213b4b2f698e40c0a3ac36654c0}{scale\+\_\+with\+\_\+doc}} () const
+\begin{DoxyCompactList}\small\item\em True if headers and footers should scale to match the worksheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& \mbox{\hyperlink{classxlnt_1_1header__footer_a5fff961df0e884c3f47b64cf28b5ae59}{scale\+\_\+with\+\_\+doc}} (bool scale)
+\begin{DoxyCompactList}\small\item\em Set to true if headers and footers should scale to match the worksheet. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1header__footer_adcaa2803a8c3086ea0636a76d64a8d64}{has\+\_\+header}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where) const
+\begin{DoxyCompactList}\small\item\em True if any text has been added at the given location on any page. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1header__footer_a41002cdb73670605ad06c82600fd43cf}{clear\+\_\+header}} ()
+\begin{DoxyCompactList}\small\item\em Remove all headers from all pages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1header__footer_ab0ce2078d5282a5e644e2470b98912cd}{clear\+\_\+header}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where)
+\begin{DoxyCompactList}\small\item\em Remove header at the given location on any page. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& \mbox{\hyperlink{classxlnt_1_1header__footer_ae1f7a4020f046ffcb1fe16ac4d92cdb7}{header}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where, const std\+::string \&text)
+\begin{DoxyCompactList}\small\item\em Add a header at the given location with the given text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& \mbox{\hyperlink{classxlnt_1_1header__footer_a02e94c2e350ae5b339d355b9b1f2527b}{header}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where, const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&text)
+\begin{DoxyCompactList}\small\item\em Add a header at the given location with the given text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \mbox{\hyperlink{classxlnt_1_1header__footer_ad541a1b0d2810005aa0d0bf407db4e98}{header}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where) const
+\begin{DoxyCompactList}\small\item\em Get the text of the header at the given location. If headers are different on odd and even pages, the odd header will be returned. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1header__footer_aa95192610cf92f0e896ce64558316f9a}{has\+\_\+first\+\_\+page\+\_\+header}} () const
+\begin{DoxyCompactList}\small\item\em True if a header has been set for the first page at any location. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1header__footer_a4186945b77ac38eedb4d94f3a3c46df3}{has\+\_\+first\+\_\+page\+\_\+header}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where) const
+\begin{DoxyCompactList}\small\item\em True if a header has been set for the first page at the given location. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1header__footer_a4519ab33736f1813f1a860ee6604a5f9}{clear\+\_\+first\+\_\+page\+\_\+header}} ()
+\begin{DoxyCompactList}\small\item\em Remove all headers from the first page. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1header__footer_adcb3ec25392e6c9762b56bc229b0d39f}{clear\+\_\+first\+\_\+page\+\_\+header}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where)
+\begin{DoxyCompactList}\small\item\em Remove header from the first page at the given location. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& \mbox{\hyperlink{classxlnt_1_1header__footer_a760c6e50ecc615c017d9120c0f20e2fb}{first\+\_\+page\+\_\+header}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where, const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&text)
+\begin{DoxyCompactList}\small\item\em Add a header on the first page at the given location with the given text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \mbox{\hyperlink{classxlnt_1_1header__footer_ac274b86ed31857c21c86e490099d38f5}{first\+\_\+page\+\_\+header}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where) const
+\begin{DoxyCompactList}\small\item\em Get the text of the first page header at the given location. If no first page header has been set, the general header for that location will be returned. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1header__footer_a5676f12900493664e9945d5a7e242b84}{has\+\_\+odd\+\_\+even\+\_\+header}} () const
+\begin{DoxyCompactList}\small\item\em True if different headers have been set for odd and even pages. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1header__footer_af09ec4a355964f7fa11eb19453c45aa4}{has\+\_\+odd\+\_\+even\+\_\+header}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where) const
+\begin{DoxyCompactList}\small\item\em True if different headers have been set for odd and even pages at the given location. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1header__footer_a66d7813a65fafc42b31f5ba2ed7ebb3f}{clear\+\_\+odd\+\_\+even\+\_\+header}} ()
+\begin{DoxyCompactList}\small\item\em Remove odd/even headers at all locations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1header__footer_a24ef1aefcd2f5a2c6ebd844396dcb17f}{clear\+\_\+odd\+\_\+even\+\_\+header}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where)
+\begin{DoxyCompactList}\small\item\em Remove odd/even headers at the given location. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& \mbox{\hyperlink{classxlnt_1_1header__footer_a05c03ee04d479cd9f511612f5058dba4}{odd\+\_\+even\+\_\+header}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where, const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&odd, const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&even)
+\begin{DoxyCompactList}\small\item\em Add a header for odd pages at the given location with the given text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \mbox{\hyperlink{classxlnt_1_1header__footer_a353e598aeac4a22d6434af30b6e667b3}{odd\+\_\+header}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where) const
+\begin{DoxyCompactList}\small\item\em Get the text of the odd page header at the given location. If no odd page header has been set, the general header for that location will be returned. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \mbox{\hyperlink{classxlnt_1_1header__footer_ad01896617b41dcb0ddc96e6cca3f9467}{even\+\_\+header}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where) const
+\begin{DoxyCompactList}\small\item\em Get the text of the even page header at the given location. If no even page header has been set, the general header for that location will be returned. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1header__footer_aa516fa91ca5c43b3e436ec954659eae2}{has\+\_\+footer}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where) const
+\begin{DoxyCompactList}\small\item\em True if any text has been added at the given location on any page. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1header__footer_ac20a33275e5077ceb6f0a4abbd91359c}{clear\+\_\+footer}} ()
+\begin{DoxyCompactList}\small\item\em Remove all footers from all pages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1header__footer_a26a3c587c950a2947806c8cbc340c57c}{clear\+\_\+footer}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where)
+\begin{DoxyCompactList}\small\item\em Remove footer at the given location on any page. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& \mbox{\hyperlink{classxlnt_1_1header__footer_a80c4c4499ac37deeec4575744c84a994}{footer}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where, const std\+::string \&text)
+\begin{DoxyCompactList}\small\item\em Add a footer at the given location with the given text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& \mbox{\hyperlink{classxlnt_1_1header__footer_a0c1a5cdd4ed42fde21bd8d6c43cbb848}{footer}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where, const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&text)
+\begin{DoxyCompactList}\small\item\em Add a footer at the given location with the given text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \mbox{\hyperlink{classxlnt_1_1header__footer_a06df4f7524c9d07f0c4ca4a3675b6a88}{footer}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where) const
+\begin{DoxyCompactList}\small\item\em Get the text of the footer at the given location. If footers are different on odd and even pages, the odd footer will be returned. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1header__footer_a658caad044f3ec6ca5222d70fd1cdd80}{has\+\_\+first\+\_\+page\+\_\+footer}} () const
+\begin{DoxyCompactList}\small\item\em True if a footer has been set for the first page at any location. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1header__footer_aea7f53d22fb50050e1f73a69f043f61a}{has\+\_\+first\+\_\+page\+\_\+footer}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where) const
+\begin{DoxyCompactList}\small\item\em True if a footer has been set for the first page at the given location. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1header__footer_a13a335f5008d6782e98e8752fd1b512a}{clear\+\_\+first\+\_\+page\+\_\+footer}} ()
+\begin{DoxyCompactList}\small\item\em Remove all footers from the first page. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1header__footer_a21c0e1c953802e142cfbd73327f0083e}{clear\+\_\+first\+\_\+page\+\_\+footer}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where)
+\begin{DoxyCompactList}\small\item\em Remove footer from the first page at the given location. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& \mbox{\hyperlink{classxlnt_1_1header__footer_aa58acd473e42d9c5724640b53f59e925}{first\+\_\+page\+\_\+footer}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where, const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&text)
+\begin{DoxyCompactList}\small\item\em Add a footer on the first page at the given location with the given text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \mbox{\hyperlink{classxlnt_1_1header__footer_a98420e617f3e140acd17533efa57a0f2}{first\+\_\+page\+\_\+footer}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where) const
+\begin{DoxyCompactList}\small\item\em Get the text of the first page footer at the given location. If no first page footer has been set, the general footer for that location will be returned. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1header__footer_a2e0bbda6e37523df9dad8ca092939687}{has\+\_\+odd\+\_\+even\+\_\+footer}} () const
+\begin{DoxyCompactList}\small\item\em True if different footers have been set for odd and even pages. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1header__footer_affe46efef5ee2a61d5fe787a9ec8a5aa}{has\+\_\+odd\+\_\+even\+\_\+footer}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where) const
+\begin{DoxyCompactList}\small\item\em True if different footers have been set for odd and even pages at the given location. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1header__footer_abbc526ce7404ba7d013243a37ddd96da}{clear\+\_\+odd\+\_\+even\+\_\+footer}} ()
+\begin{DoxyCompactList}\small\item\em Remove odd/even footers at all locations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1header__footer_afaf54d62e51dcb37fa5dbcdae910239b}{clear\+\_\+odd\+\_\+even\+\_\+footer}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where)
+\begin{DoxyCompactList}\small\item\em Remove odd/even footers at the given location. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& \mbox{\hyperlink{classxlnt_1_1header__footer_a5287d67a6c0827ebb53e5eb69e8bad8f}{odd\+\_\+even\+\_\+footer}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where, const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&odd, const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&even)
+\begin{DoxyCompactList}\small\item\em Add a footer for odd pages at the given location with the given text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \mbox{\hyperlink{classxlnt_1_1header__footer_a33220525fd9d2a8aed42e9e0b7d42902}{odd\+\_\+footer}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where) const
+\begin{DoxyCompactList}\small\item\em Get the text of the odd page footer at the given location. If no odd page footer has been set, the general footer for that location will be returned. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \mbox{\hyperlink{classxlnt_1_1header__footer_a6455d639ac9ec99a6cfd03065f61f9ee}{even\+\_\+footer}} (\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}} where) const
+\begin{DoxyCompactList}\small\item\em Get the text of the even page footer at the given location. If no even page footer has been set, the general footer for that location will be returned. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1header__footer_a1a6d9643c2d7bdcc6cb6210ee7f00731}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \&rhs) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the header and footer of a sheet in a workbook. 
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}\label{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!location@{location}}
+\index{location@{location}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{xlnt\+::header\+\_\+footer\+::location}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumerates the three possible locations of a header or footer. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{left@{left}!xlnt::header\_footer@{xlnt::header\_footer}}\index{xlnt::header\_footer@{xlnt::header\_footer}!left@{left}}}\mbox{\Hypertarget{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375a811882fecd5c7618d7099ebbd39ea254}\label{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375a811882fecd5c7618d7099ebbd39ea254}} 
+left&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{center@{center}!xlnt::header\_footer@{xlnt::header\_footer}}\index{xlnt::header\_footer@{xlnt::header\_footer}!center@{center}}}\mbox{\Hypertarget{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375aadb115059e28d960fa8badfac5516667}\label{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375aadb115059e28d960fa8badfac5516667}} 
+center&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{right@{right}!xlnt::header\_footer@{xlnt::header\_footer}}\index{xlnt::header\_footer@{xlnt::header\_footer}!right@{right}}}\mbox{\Hypertarget{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375a7c4f29407893c334a6cb7a87bf045c0d}\label{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375a7c4f29407893c334a6cb7a87bf045c0d}} 
+right&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1header__footer_ae9512dcb1d060bcc554930ab6ff3bc0d}\label{classxlnt_1_1header__footer_ae9512dcb1d060bcc554930ab6ff3bc0d}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!align\_with\_margins@{align\_with\_margins}}
+\index{align\_with\_margins@{align\_with\_margins}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{align\_with\_margins()}{align\_with\_margins()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::header\+\_\+footer\+::align\+\_\+with\+\_\+margins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+True if headers and footers should align to the page margins. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a6cc6f38aad4532f560f0d21d3d319e25}\label{classxlnt_1_1header__footer_a6cc6f38aad4532f560f0d21d3d319e25}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!align\_with\_margins@{align\_with\_margins}}
+\index{align\_with\_margins@{align\_with\_margins}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{align\_with\_margins()}{align\_with\_margins()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& xlnt\+::header\+\_\+footer\+::align\+\_\+with\+\_\+margins (\begin{DoxyParamCaption}\item[{bool}]{align }\end{DoxyParamCaption})}
+
+
+
+Set to true if headers and footers should align to the page margins. Set to false if headers and footers should align to the edge of the page. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a13a335f5008d6782e98e8752fd1b512a}\label{classxlnt_1_1header__footer_a13a335f5008d6782e98e8752fd1b512a}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!clear\_first\_page\_footer@{clear\_first\_page\_footer}}
+\index{clear\_first\_page\_footer@{clear\_first\_page\_footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{clear\_first\_page\_footer()}{clear\_first\_page\_footer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void xlnt\+::header\+\_\+footer\+::clear\+\_\+first\+\_\+page\+\_\+footer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove all footers from the first page. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a21c0e1c953802e142cfbd73327f0083e}\label{classxlnt_1_1header__footer_a21c0e1c953802e142cfbd73327f0083e}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!clear\_first\_page\_footer@{clear\_first\_page\_footer}}
+\index{clear\_first\_page\_footer@{clear\_first\_page\_footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{clear\_first\_page\_footer()}{clear\_first\_page\_footer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::header\+\_\+footer\+::clear\+\_\+first\+\_\+page\+\_\+footer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption})}
+
+
+
+Remove footer from the first page at the given location. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a4519ab33736f1813f1a860ee6604a5f9}\label{classxlnt_1_1header__footer_a4519ab33736f1813f1a860ee6604a5f9}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!clear\_first\_page\_header@{clear\_first\_page\_header}}
+\index{clear\_first\_page\_header@{clear\_first\_page\_header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{clear\_first\_page\_header()}{clear\_first\_page\_header()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void xlnt\+::header\+\_\+footer\+::clear\+\_\+first\+\_\+page\+\_\+header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove all headers from the first page. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_adcb3ec25392e6c9762b56bc229b0d39f}\label{classxlnt_1_1header__footer_adcb3ec25392e6c9762b56bc229b0d39f}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!clear\_first\_page\_header@{clear\_first\_page\_header}}
+\index{clear\_first\_page\_header@{clear\_first\_page\_header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{clear\_first\_page\_header()}{clear\_first\_page\_header()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::header\+\_\+footer\+::clear\+\_\+first\+\_\+page\+\_\+header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption})}
+
+
+
+Remove header from the first page at the given location. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_ac20a33275e5077ceb6f0a4abbd91359c}\label{classxlnt_1_1header__footer_ac20a33275e5077ceb6f0a4abbd91359c}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!clear\_footer@{clear\_footer}}
+\index{clear\_footer@{clear\_footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{clear\_footer()}{clear\_footer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void xlnt\+::header\+\_\+footer\+::clear\+\_\+footer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove all footers from all pages. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a26a3c587c950a2947806c8cbc340c57c}\label{classxlnt_1_1header__footer_a26a3c587c950a2947806c8cbc340c57c}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!clear\_footer@{clear\_footer}}
+\index{clear\_footer@{clear\_footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{clear\_footer()}{clear\_footer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::header\+\_\+footer\+::clear\+\_\+footer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption})}
+
+
+
+Remove footer at the given location on any page. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a41002cdb73670605ad06c82600fd43cf}\label{classxlnt_1_1header__footer_a41002cdb73670605ad06c82600fd43cf}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!clear\_header@{clear\_header}}
+\index{clear\_header@{clear\_header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{clear\_header()}{clear\_header()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void xlnt\+::header\+\_\+footer\+::clear\+\_\+header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove all headers from all pages. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_ab0ce2078d5282a5e644e2470b98912cd}\label{classxlnt_1_1header__footer_ab0ce2078d5282a5e644e2470b98912cd}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!clear\_header@{clear\_header}}
+\index{clear\_header@{clear\_header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{clear\_header()}{clear\_header()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::header\+\_\+footer\+::clear\+\_\+header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption})}
+
+
+
+Remove header at the given location on any page. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_abbc526ce7404ba7d013243a37ddd96da}\label{classxlnt_1_1header__footer_abbc526ce7404ba7d013243a37ddd96da}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!clear\_odd\_even\_footer@{clear\_odd\_even\_footer}}
+\index{clear\_odd\_even\_footer@{clear\_odd\_even\_footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{clear\_odd\_even\_footer()}{clear\_odd\_even\_footer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void xlnt\+::header\+\_\+footer\+::clear\+\_\+odd\+\_\+even\+\_\+footer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove odd/even footers at all locations. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_afaf54d62e51dcb37fa5dbcdae910239b}\label{classxlnt_1_1header__footer_afaf54d62e51dcb37fa5dbcdae910239b}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!clear\_odd\_even\_footer@{clear\_odd\_even\_footer}}
+\index{clear\_odd\_even\_footer@{clear\_odd\_even\_footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{clear\_odd\_even\_footer()}{clear\_odd\_even\_footer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::header\+\_\+footer\+::clear\+\_\+odd\+\_\+even\+\_\+footer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption})}
+
+
+
+Remove odd/even footers at the given location. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a66d7813a65fafc42b31f5ba2ed7ebb3f}\label{classxlnt_1_1header__footer_a66d7813a65fafc42b31f5ba2ed7ebb3f}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!clear\_odd\_even\_header@{clear\_odd\_even\_header}}
+\index{clear\_odd\_even\_header@{clear\_odd\_even\_header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{clear\_odd\_even\_header()}{clear\_odd\_even\_header()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void xlnt\+::header\+\_\+footer\+::clear\+\_\+odd\+\_\+even\+\_\+header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove odd/even headers at all locations. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a24ef1aefcd2f5a2c6ebd844396dcb17f}\label{classxlnt_1_1header__footer_a24ef1aefcd2f5a2c6ebd844396dcb17f}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!clear\_odd\_even\_header@{clear\_odd\_even\_header}}
+\index{clear\_odd\_even\_header@{clear\_odd\_even\_header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{clear\_odd\_even\_header()}{clear\_odd\_even\_header()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::header\+\_\+footer\+::clear\+\_\+odd\+\_\+even\+\_\+header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption})}
+
+
+
+Remove odd/even headers at the given location. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_ac05acf474f74a04498f3e51839a38716}\label{classxlnt_1_1header__footer_ac05acf474f74a04498f3e51839a38716}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!different\_first@{different\_first}}
+\index{different\_first@{different\_first}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{different\_first()}{different\_first()}}
+{\footnotesize\ttfamily bool xlnt\+::header\+\_\+footer\+::different\+\_\+first (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+True if headers and footers are different on the first page. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a879194359f873c0687dc5d4933021b1e}\label{classxlnt_1_1header__footer_a879194359f873c0687dc5d4933021b1e}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!different\_odd\_even@{different\_odd\_even}}
+\index{different\_odd\_even@{different\_odd\_even}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{different\_odd\_even()}{different\_odd\_even()}}
+{\footnotesize\ttfamily bool xlnt\+::header\+\_\+footer\+::different\+\_\+odd\+\_\+even (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+True if headers and footers differ based on page number. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a6455d639ac9ec99a6cfd03065f61f9ee}\label{classxlnt_1_1header__footer_a6455d639ac9ec99a6cfd03065f61f9ee}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!even\_footer@{even\_footer}}
+\index{even\_footer@{even\_footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{even\_footer()}{even\_footer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} xlnt\+::header\+\_\+footer\+::even\+\_\+footer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption}) const}
+
+
+
+Get the text of the even page footer at the given location. If no even page footer has been set, the general footer for that location will be returned. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_ad01896617b41dcb0ddc96e6cca3f9467}\label{classxlnt_1_1header__footer_ad01896617b41dcb0ddc96e6cca3f9467}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!even\_header@{even\_header}}
+\index{even\_header@{even\_header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{even\_header()}{even\_header()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} xlnt\+::header\+\_\+footer\+::even\+\_\+header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption}) const}
+
+
+
+Get the text of the even page header at the given location. If no even page header has been set, the general header for that location will be returned. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a98420e617f3e140acd17533efa57a0f2}\label{classxlnt_1_1header__footer_a98420e617f3e140acd17533efa57a0f2}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!first\_page\_footer@{first\_page\_footer}}
+\index{first\_page\_footer@{first\_page\_footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{first\_page\_footer()}{first\_page\_footer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} xlnt\+::header\+\_\+footer\+::first\+\_\+page\+\_\+footer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption}) const}
+
+
+
+Get the text of the first page footer at the given location. If no first page footer has been set, the general footer for that location will be returned. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_aa58acd473e42d9c5724640b53f59e925}\label{classxlnt_1_1header__footer_aa58acd473e42d9c5724640b53f59e925}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!first\_page\_footer@{first\_page\_footer}}
+\index{first\_page\_footer@{first\_page\_footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{first\_page\_footer()}{first\_page\_footer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& xlnt\+::header\+\_\+footer\+::first\+\_\+page\+\_\+footer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where,  }\item[{const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Add a footer on the first page at the given location with the given text. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_ac274b86ed31857c21c86e490099d38f5}\label{classxlnt_1_1header__footer_ac274b86ed31857c21c86e490099d38f5}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!first\_page\_header@{first\_page\_header}}
+\index{first\_page\_header@{first\_page\_header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{first\_page\_header()}{first\_page\_header()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} xlnt\+::header\+\_\+footer\+::first\+\_\+page\+\_\+header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption}) const}
+
+
+
+Get the text of the first page header at the given location. If no first page header has been set, the general header for that location will be returned. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a760c6e50ecc615c017d9120c0f20e2fb}\label{classxlnt_1_1header__footer_a760c6e50ecc615c017d9120c0f20e2fb}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!first\_page\_header@{first\_page\_header}}
+\index{first\_page\_header@{first\_page\_header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{first\_page\_header()}{first\_page\_header()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& xlnt\+::header\+\_\+footer\+::first\+\_\+page\+\_\+header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where,  }\item[{const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Add a header on the first page at the given location with the given text. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a06df4f7524c9d07f0c4ca4a3675b6a88}\label{classxlnt_1_1header__footer_a06df4f7524c9d07f0c4ca4a3675b6a88}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!footer@{footer}}
+\index{footer@{footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{footer()}{footer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} xlnt\+::header\+\_\+footer\+::footer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption}) const}
+
+
+
+Get the text of the footer at the given location. If footers are different on odd and even pages, the odd footer will be returned. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a0c1a5cdd4ed42fde21bd8d6c43cbb848}\label{classxlnt_1_1header__footer_a0c1a5cdd4ed42fde21bd8d6c43cbb848}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!footer@{footer}}
+\index{footer@{footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{footer()}{footer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& xlnt\+::header\+\_\+footer\+::footer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where,  }\item[{const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Add a footer at the given location with the given text. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a80c4c4499ac37deeec4575744c84a994}\label{classxlnt_1_1header__footer_a80c4c4499ac37deeec4575744c84a994}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!footer@{footer}}
+\index{footer@{footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{footer()}{footer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& xlnt\+::header\+\_\+footer\+::footer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where,  }\item[{const std\+::string \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Add a footer at the given location with the given text. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a658caad044f3ec6ca5222d70fd1cdd80}\label{classxlnt_1_1header__footer_a658caad044f3ec6ca5222d70fd1cdd80}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!has\_first\_page\_footer@{has\_first\_page\_footer}}
+\index{has\_first\_page\_footer@{has\_first\_page\_footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{has\_first\_page\_footer()}{has\_first\_page\_footer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::header\+\_\+footer\+::has\+\_\+first\+\_\+page\+\_\+footer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+True if a footer has been set for the first page at any location. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_aea7f53d22fb50050e1f73a69f043f61a}\label{classxlnt_1_1header__footer_aea7f53d22fb50050e1f73a69f043f61a}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!has\_first\_page\_footer@{has\_first\_page\_footer}}
+\index{has\_first\_page\_footer@{has\_first\_page\_footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{has\_first\_page\_footer()}{has\_first\_page\_footer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool xlnt\+::header\+\_\+footer\+::has\+\_\+first\+\_\+page\+\_\+footer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption}) const}
+
+
+
+True if a footer has been set for the first page at the given location. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_aa95192610cf92f0e896ce64558316f9a}\label{classxlnt_1_1header__footer_aa95192610cf92f0e896ce64558316f9a}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!has\_first\_page\_header@{has\_first\_page\_header}}
+\index{has\_first\_page\_header@{has\_first\_page\_header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{has\_first\_page\_header()}{has\_first\_page\_header()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::header\+\_\+footer\+::has\+\_\+first\+\_\+page\+\_\+header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+True if a header has been set for the first page at any location. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a4186945b77ac38eedb4d94f3a3c46df3}\label{classxlnt_1_1header__footer_a4186945b77ac38eedb4d94f3a3c46df3}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!has\_first\_page\_header@{has\_first\_page\_header}}
+\index{has\_first\_page\_header@{has\_first\_page\_header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{has\_first\_page\_header()}{has\_first\_page\_header()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool xlnt\+::header\+\_\+footer\+::has\+\_\+first\+\_\+page\+\_\+header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption}) const}
+
+
+
+True if a header has been set for the first page at the given location. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_affb3fd26b73b730f38ff592c66cc276e}\label{classxlnt_1_1header__footer_affb3fd26b73b730f38ff592c66cc276e}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!has\_footer@{has\_footer}}
+\index{has\_footer@{has\_footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{has\_footer()}{has\_footer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::header\+\_\+footer\+::has\+\_\+footer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+True if any text has been added for a footer at any location on any page. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_aa516fa91ca5c43b3e436ec954659eae2}\label{classxlnt_1_1header__footer_aa516fa91ca5c43b3e436ec954659eae2}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!has\_footer@{has\_footer}}
+\index{has\_footer@{has\_footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{has\_footer()}{has\_footer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool xlnt\+::header\+\_\+footer\+::has\+\_\+footer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption}) const}
+
+
+
+True if any text has been added at the given location on any page. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_ac8aef07b8c7915236779578d9dd56f95}\label{classxlnt_1_1header__footer_ac8aef07b8c7915236779578d9dd56f95}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!has\_header@{has\_header}}
+\index{has\_header@{has\_header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{has\_header()}{has\_header()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::header\+\_\+footer\+::has\+\_\+header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+True if any text has been added for a header at any location on any page. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_adcaa2803a8c3086ea0636a76d64a8d64}\label{classxlnt_1_1header__footer_adcaa2803a8c3086ea0636a76d64a8d64}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!has\_header@{has\_header}}
+\index{has\_header@{has\_header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{has\_header()}{has\_header()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool xlnt\+::header\+\_\+footer\+::has\+\_\+header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption}) const}
+
+
+
+True if any text has been added at the given location on any page. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a2e0bbda6e37523df9dad8ca092939687}\label{classxlnt_1_1header__footer_a2e0bbda6e37523df9dad8ca092939687}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!has\_odd\_even\_footer@{has\_odd\_even\_footer}}
+\index{has\_odd\_even\_footer@{has\_odd\_even\_footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{has\_odd\_even\_footer()}{has\_odd\_even\_footer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::header\+\_\+footer\+::has\+\_\+odd\+\_\+even\+\_\+footer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+True if different footers have been set for odd and even pages. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_affe46efef5ee2a61d5fe787a9ec8a5aa}\label{classxlnt_1_1header__footer_affe46efef5ee2a61d5fe787a9ec8a5aa}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!has\_odd\_even\_footer@{has\_odd\_even\_footer}}
+\index{has\_odd\_even\_footer@{has\_odd\_even\_footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{has\_odd\_even\_footer()}{has\_odd\_even\_footer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool xlnt\+::header\+\_\+footer\+::has\+\_\+odd\+\_\+even\+\_\+footer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption}) const}
+
+
+
+True if different footers have been set for odd and even pages at the given location. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a5676f12900493664e9945d5a7e242b84}\label{classxlnt_1_1header__footer_a5676f12900493664e9945d5a7e242b84}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!has\_odd\_even\_header@{has\_odd\_even\_header}}
+\index{has\_odd\_even\_header@{has\_odd\_even\_header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{has\_odd\_even\_header()}{has\_odd\_even\_header()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::header\+\_\+footer\+::has\+\_\+odd\+\_\+even\+\_\+header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+True if different headers have been set for odd and even pages. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_af09ec4a355964f7fa11eb19453c45aa4}\label{classxlnt_1_1header__footer_af09ec4a355964f7fa11eb19453c45aa4}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!has\_odd\_even\_header@{has\_odd\_even\_header}}
+\index{has\_odd\_even\_header@{has\_odd\_even\_header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{has\_odd\_even\_header()}{has\_odd\_even\_header()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool xlnt\+::header\+\_\+footer\+::has\+\_\+odd\+\_\+even\+\_\+header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption}) const}
+
+
+
+True if different headers have been set for odd and even pages at the given location. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_ad541a1b0d2810005aa0d0bf407db4e98}\label{classxlnt_1_1header__footer_ad541a1b0d2810005aa0d0bf407db4e98}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!header@{header}}
+\index{header@{header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{header()}{header()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} xlnt\+::header\+\_\+footer\+::header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption}) const}
+
+
+
+Get the text of the header at the given location. If headers are different on odd and even pages, the odd header will be returned. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a02e94c2e350ae5b339d355b9b1f2527b}\label{classxlnt_1_1header__footer_a02e94c2e350ae5b339d355b9b1f2527b}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!header@{header}}
+\index{header@{header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{header()}{header()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& xlnt\+::header\+\_\+footer\+::header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where,  }\item[{const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Add a header at the given location with the given text. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_ae1f7a4020f046ffcb1fe16ac4d92cdb7}\label{classxlnt_1_1header__footer_ae1f7a4020f046ffcb1fe16ac4d92cdb7}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!header@{header}}
+\index{header@{header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{header()}{header()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& xlnt\+::header\+\_\+footer\+::header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where,  }\item[{const std\+::string \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Add a header at the given location with the given text. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a5287d67a6c0827ebb53e5eb69e8bad8f}\label{classxlnt_1_1header__footer_a5287d67a6c0827ebb53e5eb69e8bad8f}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!odd\_even\_footer@{odd\_even\_footer}}
+\index{odd\_even\_footer@{odd\_even\_footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{odd\_even\_footer()}{odd\_even\_footer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& xlnt\+::header\+\_\+footer\+::odd\+\_\+even\+\_\+footer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where,  }\item[{const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&}]{odd,  }\item[{const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&}]{even }\end{DoxyParamCaption})}
+
+
+
+Add a footer for odd pages at the given location with the given text. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a05c03ee04d479cd9f511612f5058dba4}\label{classxlnt_1_1header__footer_a05c03ee04d479cd9f511612f5058dba4}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!odd\_even\_header@{odd\_even\_header}}
+\index{odd\_even\_header@{odd\_even\_header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{odd\_even\_header()}{odd\_even\_header()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& xlnt\+::header\+\_\+footer\+::odd\+\_\+even\+\_\+header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where,  }\item[{const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&}]{odd,  }\item[{const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&}]{even }\end{DoxyParamCaption})}
+
+
+
+Add a header for odd pages at the given location with the given text. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a33220525fd9d2a8aed42e9e0b7d42902}\label{classxlnt_1_1header__footer_a33220525fd9d2a8aed42e9e0b7d42902}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!odd\_footer@{odd\_footer}}
+\index{odd\_footer@{odd\_footer}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{odd\_footer()}{odd\_footer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} xlnt\+::header\+\_\+footer\+::odd\+\_\+footer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption}) const}
+
+
+
+Get the text of the odd page footer at the given location. If no odd page footer has been set, the general footer for that location will be returned. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a353e598aeac4a22d6434af30b6e667b3}\label{classxlnt_1_1header__footer_a353e598aeac4a22d6434af30b6e667b3}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!odd\_header@{odd\_header}}
+\index{odd\_header@{odd\_header}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{odd\_header()}{odd\_header()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} xlnt\+::header\+\_\+footer\+::odd\+\_\+header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1header__footer_a2e5dabd2d3465ee7f5738befffc43375}{location}}}]{where }\end{DoxyParamCaption}) const}
+
+
+
+Get the text of the odd page header at the given location. If no odd page header has been set, the general header for that location will be returned. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a1a6d9643c2d7bdcc6cb6210ee7f00731}\label{classxlnt_1_1header__footer_a1a6d9643c2d7bdcc6cb6210ee7f00731}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::header\+\_\+footer\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a81b33213b4b2f698e40c0a3ac36654c0}\label{classxlnt_1_1header__footer_a81b33213b4b2f698e40c0a3ac36654c0}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!scale\_with\_doc@{scale\_with\_doc}}
+\index{scale\_with\_doc@{scale\_with\_doc}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{scale\_with\_doc()}{scale\_with\_doc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::header\+\_\+footer\+::scale\+\_\+with\+\_\+doc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+True if headers and footers should scale to match the worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1header__footer_a5fff961df0e884c3f47b64cf28b5ae59}\label{classxlnt_1_1header__footer_a5fff961df0e884c3f47b64cf28b5ae59}} 
+\index{xlnt::header\_footer@{xlnt::header\_footer}!scale\_with\_doc@{scale\_with\_doc}}
+\index{scale\_with\_doc@{scale\_with\_doc}!xlnt::header\_footer@{xlnt::header\_footer}}
+\doxysubsubsection{\texorpdfstring{scale\_with\_doc()}{scale\_with\_doc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}} \& xlnt\+::header\+\_\+footer\+::scale\+\_\+with\+\_\+doc (\begin{DoxyParamCaption}\item[{bool}]{scale }\end{DoxyParamCaption})}
+
+
+
+Set to true if headers and footers should scale to match the worksheet. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/worksheet/\mbox{\hyperlink{header__footer_8hpp}{header\+\_\+footer.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/worksheet/\mbox{\hyperlink{source_2worksheet_2header__footer_8cpp}{header\+\_\+footer.\+cpp}}\end{DoxyCompactItemize}

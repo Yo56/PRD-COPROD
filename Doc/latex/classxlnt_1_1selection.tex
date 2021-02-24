@@ -1,0 +1,186 @@
+\hypertarget{classxlnt_1_1selection}{}\doxysection{xlnt\+::selection Class Reference}
+\label{classxlnt_1_1selection}\index{xlnt::selection@{xlnt::selection}}
+
+
+The selected area of a worksheet.  
+
+
+
+
+{\ttfamily \#include $<$selection.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1selection_a02d2891aef51899a8e4853cfbe12a3ae}{selection}} ()=default
+\begin{DoxyCompactList}\small\item\em default ctor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1selection_a1f15f5ad2979dae999383720477077a9}{selection}} (pane\+\_\+corner quadrant, \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1selection_a87324b54a28a4da1bbeacddb13ee47c3}{active\+\_\+cell}})
+\begin{DoxyCompactList}\small\item\em ctor when no range selected sqref == active\+\_\+cell \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1selection_a7eb7343bbad06e76ea1f917bb479255f}{selection}} (pane\+\_\+corner quadrant, \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1selection_a87324b54a28a4da1bbeacddb13ee47c3}{active\+\_\+cell}}, \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} selected)
+\begin{DoxyCompactList}\small\item\em ctor with selected range sqref must contain active\+\_\+cell \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1selection_a5bf4f32630c254d6650ca6c457259620}{has\+\_\+active\+\_\+cell}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this selection has a defined active cell. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1selection_a87324b54a28a4da1bbeacddb13ee47c3}{active\+\_\+cell}} () const
+\begin{DoxyCompactList}\small\item\em Returns the cell reference of the active cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1selection_a74b5381120da0e242a82d37a510cc87f}{active\+\_\+cell}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&ref)
+\begin{DoxyCompactList}\small\item\em Sets the active cell to that pointed to by ref. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1selection_aec919b23d8857c10bf97015310ba87ea}{has\+\_\+sqref}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this selection has a defined sqref. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1selection_a5192faf85c6aa5df4d682dc49429c086}{sqref}} () const
+\begin{DoxyCompactList}\small\item\em Returns the range encompassed by this selection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1selection_a7021975079a9d6e59d3cc13ac798f4ea}{sqref}} (const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&ref)
+\begin{DoxyCompactList}\small\item\em Sets the range encompassed by this selection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1selection_a708da2b25af667475f9a94576b3b5b67}{sqref}} (const std\+::string \&ref)
+\begin{DoxyCompactList}\small\item\em Sets the range encompassed by this selection. \end{DoxyCompactList}\item 
+pane\+\_\+corner \mbox{\hyperlink{classxlnt_1_1selection_a58e9a2b379e8542f054e4979ebefaec9}{pane}} () const
+\begin{DoxyCompactList}\small\item\em Returns the sheet quadrant of this selection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1selection_a51c1352f1dda41efd6211615cf747bf8}{pane}} (pane\+\_\+corner corner)
+\begin{DoxyCompactList}\small\item\em Sets the sheet quadrant of this selection to corner. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1selection_a89672d407da7d2a6c475edccf8d4226c}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1selection}{selection}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Returns true if this selection is equal to rhs based on its active cell, sqref, and pane. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The selected area of a worksheet. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1selection_a02d2891aef51899a8e4853cfbe12a3ae}\label{classxlnt_1_1selection_a02d2891aef51899a8e4853cfbe12a3ae}} 
+\index{xlnt::selection@{xlnt::selection}!selection@{selection}}
+\index{selection@{selection}!xlnt::selection@{xlnt::selection}}
+\doxysubsubsection{\texorpdfstring{selection()}{selection()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily xlnt\+::selection\+::selection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
+
+
+
+default ctor 
+
+\mbox{\Hypertarget{classxlnt_1_1selection_a1f15f5ad2979dae999383720477077a9}\label{classxlnt_1_1selection_a1f15f5ad2979dae999383720477077a9}} 
+\index{xlnt::selection@{xlnt::selection}!selection@{selection}}
+\index{selection@{selection}!xlnt::selection@{xlnt::selection}}
+\doxysubsubsection{\texorpdfstring{selection()}{selection()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily xlnt\+::selection\+::selection (\begin{DoxyParamCaption}\item[{pane\+\_\+corner}]{quadrant,  }\item[{\mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}}]{active\+\_\+cell }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+ctor when no range selected sqref == active\+\_\+cell 
+
+\mbox{\Hypertarget{classxlnt_1_1selection_a7eb7343bbad06e76ea1f917bb479255f}\label{classxlnt_1_1selection_a7eb7343bbad06e76ea1f917bb479255f}} 
+\index{xlnt::selection@{xlnt::selection}!selection@{selection}}
+\index{selection@{selection}!xlnt::selection@{xlnt::selection}}
+\doxysubsubsection{\texorpdfstring{selection()}{selection()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily xlnt\+::selection\+::selection (\begin{DoxyParamCaption}\item[{pane\+\_\+corner}]{quadrant,  }\item[{\mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}}]{active\+\_\+cell,  }\item[{\mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}}}]{selected }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+ctor with selected range sqref must contain active\+\_\+cell 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1selection_a87324b54a28a4da1bbeacddb13ee47c3}\label{classxlnt_1_1selection_a87324b54a28a4da1bbeacddb13ee47c3}} 
+\index{xlnt::selection@{xlnt::selection}!active\_cell@{active\_cell}}
+\index{active\_cell@{active\_cell}!xlnt::selection@{xlnt::selection}}
+\doxysubsubsection{\texorpdfstring{active\_cell()}{active\_cell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} xlnt\+::selection\+::active\+\_\+cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the cell reference of the active cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1selection_a74b5381120da0e242a82d37a510cc87f}\label{classxlnt_1_1selection_a74b5381120da0e242a82d37a510cc87f}} 
+\index{xlnt::selection@{xlnt::selection}!active\_cell@{active\_cell}}
+\index{active\_cell@{active\_cell}!xlnt::selection@{xlnt::selection}}
+\doxysubsubsection{\texorpdfstring{active\_cell()}{active\_cell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::selection\+::active\+\_\+cell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{ref }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the active cell to that pointed to by ref. 
+
+\mbox{\Hypertarget{classxlnt_1_1selection_a5bf4f32630c254d6650ca6c457259620}\label{classxlnt_1_1selection_a5bf4f32630c254d6650ca6c457259620}} 
+\index{xlnt::selection@{xlnt::selection}!has\_active\_cell@{has\_active\_cell}}
+\index{has\_active\_cell@{has\_active\_cell}!xlnt::selection@{xlnt::selection}}
+\doxysubsubsection{\texorpdfstring{has\_active\_cell()}{has\_active\_cell()}}
+{\footnotesize\ttfamily bool xlnt\+::selection\+::has\+\_\+active\+\_\+cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if this selection has a defined active cell. 
+
+\mbox{\Hypertarget{classxlnt_1_1selection_aec919b23d8857c10bf97015310ba87ea}\label{classxlnt_1_1selection_aec919b23d8857c10bf97015310ba87ea}} 
+\index{xlnt::selection@{xlnt::selection}!has\_sqref@{has\_sqref}}
+\index{has\_sqref@{has\_sqref}!xlnt::selection@{xlnt::selection}}
+\doxysubsubsection{\texorpdfstring{has\_sqref()}{has\_sqref()}}
+{\footnotesize\ttfamily bool xlnt\+::selection\+::has\+\_\+sqref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if this selection has a defined sqref. 
+
+\mbox{\Hypertarget{classxlnt_1_1selection_a89672d407da7d2a6c475edccf8d4226c}\label{classxlnt_1_1selection_a89672d407da7d2a6c475edccf8d4226c}} 
+\index{xlnt::selection@{xlnt::selection}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::selection@{xlnt::selection}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::selection\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1selection}{selection}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if this selection is equal to rhs based on its active cell, sqref, and pane. 
+
+\mbox{\Hypertarget{classxlnt_1_1selection_a58e9a2b379e8542f054e4979ebefaec9}\label{classxlnt_1_1selection_a58e9a2b379e8542f054e4979ebefaec9}} 
+\index{xlnt::selection@{xlnt::selection}!pane@{pane}}
+\index{pane@{pane}!xlnt::selection@{xlnt::selection}}
+\doxysubsubsection{\texorpdfstring{pane()}{pane()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily pane\+\_\+corner xlnt\+::selection\+::pane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the sheet quadrant of this selection. 
+
+\mbox{\Hypertarget{classxlnt_1_1selection_a51c1352f1dda41efd6211615cf747bf8}\label{classxlnt_1_1selection_a51c1352f1dda41efd6211615cf747bf8}} 
+\index{xlnt::selection@{xlnt::selection}!pane@{pane}}
+\index{pane@{pane}!xlnt::selection@{xlnt::selection}}
+\doxysubsubsection{\texorpdfstring{pane()}{pane()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::selection\+::pane (\begin{DoxyParamCaption}\item[{pane\+\_\+corner}]{corner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the sheet quadrant of this selection to corner. 
+
+\mbox{\Hypertarget{classxlnt_1_1selection_a5192faf85c6aa5df4d682dc49429c086}\label{classxlnt_1_1selection_a5192faf85c6aa5df4d682dc49429c086}} 
+\index{xlnt::selection@{xlnt::selection}!sqref@{sqref}}
+\index{sqref@{sqref}!xlnt::selection@{xlnt::selection}}
+\doxysubsubsection{\texorpdfstring{sqref()}{sqref()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} xlnt\+::selection\+::sqref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the range encompassed by this selection. 
+
+\mbox{\Hypertarget{classxlnt_1_1selection_a7021975079a9d6e59d3cc13ac798f4ea}\label{classxlnt_1_1selection_a7021975079a9d6e59d3cc13ac798f4ea}} 
+\index{xlnt::selection@{xlnt::selection}!sqref@{sqref}}
+\index{sqref@{sqref}!xlnt::selection@{xlnt::selection}}
+\doxysubsubsection{\texorpdfstring{sqref()}{sqref()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void xlnt\+::selection\+::sqref (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&}]{ref }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the range encompassed by this selection. 
+
+\mbox{\Hypertarget{classxlnt_1_1selection_a708da2b25af667475f9a94576b3b5b67}\label{classxlnt_1_1selection_a708da2b25af667475f9a94576b3b5b67}} 
+\index{xlnt::selection@{xlnt::selection}!sqref@{sqref}}
+\index{sqref@{sqref}!xlnt::selection@{xlnt::selection}}
+\doxysubsubsection{\texorpdfstring{sqref()}{sqref()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void xlnt\+::selection\+::sqref (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ref }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the range encompassed by this selection. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/worksheet/\mbox{\hyperlink{selection_8hpp}{selection.\+hpp}}\end{DoxyCompactItemize}

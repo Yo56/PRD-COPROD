@@ -1,0 +1,152 @@
+\hypertarget{classtuple__caster}{}\doxysection{tuple\+\_\+caster$<$ Tuple, Ts $>$ Class Template Reference}
+\label{classtuple__caster}\index{tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}}
+
+
+{\ttfamily \#include $<$cast.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{classtuple__caster_a2f1b288b872b4198d752374cb614b24b}{cast\+\_\+op\+\_\+type}} = type
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classtuple__caster_a5068d29ae84a185fbc5e942c17709096}{load}} (\mbox{\hyperlink{classhandle}{handle}} src, bool convert)
+\item 
+\mbox{\hyperlink{classtuple__caster_aafca74b6a6c2bf8297677534a7ac0a31}{operator type}} () \&
+\item 
+\mbox{\hyperlink{classtuple__caster_abdef03c6f4286e4b0b36bc6779d33f83}{operator type}} () \&\&
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{classtuple__caster_ab0a47ea2b14a9771cea035bc44cba5b1}{cast}} (T \&\&src, \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}} policy, \mbox{\hyperlink{classhandle}{handle}} parent)
+\item 
+static \mbox{\hyperlink{descr_8h_ae155873780600c0149950602b31084a9}{PYBIND11\+\_\+\+DESCR}} \mbox{\hyperlink{classtuple__caster_a87c37fba00cfc0c5e40c43c1998ebfa7}{name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$size\+\_\+t... Is$>$ }\\type \mbox{\hyperlink{classtuple__caster_a9f833c2141a2bd5d3ae2625752436aba}{implicit\+\_\+cast}} (\mbox{\hyperlink{structindex__sequence}{index\+\_\+sequence}}$<$ Is... $>$) \&
+\item 
+{\footnotesize template$<$size\+\_\+t... Is$>$ }\\type \mbox{\hyperlink{classtuple__caster_a3101ab61e84c97fd09104355e095b491}{implicit\+\_\+cast}} (\mbox{\hyperlink{structindex__sequence}{index\+\_\+sequence}}$<$ Is... $>$) \&\&
+\item 
+{\footnotesize template$<$size\+\_\+t... Is$>$ }\\bool \mbox{\hyperlink{classtuple__caster_a86bacf2d7f440d7cc2f42620c9622f19}{load\+\_\+impl}} (const \mbox{\hyperlink{classsequence}{sequence}} \&seq, bool convert, \mbox{\hyperlink{structindex__sequence}{index\+\_\+sequence}}$<$ Is... $>$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{classtuple__caster_a69ae2feb001453601165fc693e74584b}{load\+\_\+impl}} (const \mbox{\hyperlink{classsequence}{sequence}} \&, bool, \mbox{\hyperlink{structindex__sequence}{index\+\_\+sequence}}$<$$>$)
+\item 
+{\footnotesize template$<$typename T , size\+\_\+t... Is$>$ }\\static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{classtuple__caster_a85f19b13b0bfda89d32cdc631b1652c0}{cast\+\_\+impl}} (T \&\&src, \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}} policy, \mbox{\hyperlink{classhandle}{handle}} parent, \mbox{\hyperlink{structindex__sequence}{index\+\_\+sequence}}$<$ Is... $>$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Tuple$<$ \mbox{\hyperlink{cast_8h_ab32b52411a6b07420516d79074815713}{make\+\_\+caster}}$<$ Ts $>$... $>$ \mbox{\hyperlink{classtuple__caster_a5a772e6404951d9cbfdfb9d06d342de1}{subcasters}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtuple__caster_a2f1b288b872b4198d752374cb614b24b}\label{classtuple__caster_a2f1b288b872b4198d752374cb614b24b}} 
+\index{tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}!cast\_op\_type@{cast\_op\_type}}
+\index{cast\_op\_type@{cast\_op\_type}!tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{cast\_op\_type}{cast\_op\_type}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+template$<$typename T $>$ \\
+using \mbox{\hyperlink{classtuple__caster}{tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::\mbox{\hyperlink{classtuple__caster_a2f1b288b872b4198d752374cb614b24b}{cast\+\_\+op\+\_\+type}} =  type}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtuple__caster_ab0a47ea2b14a9771cea035bc44cba5b1}\label{classtuple__caster_ab0a47ea2b14a9771cea035bc44cba5b1}} 
+\index{tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}!cast@{cast}}
+\index{cast@{cast}!tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+template$<$typename T $>$ \\
+static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{classtuple__caster}{tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::cast (\begin{DoxyParamCaption}\item[{T \&\&}]{src,  }\item[{\mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}}}]{policy,  }\item[{\mbox{\hyperlink{classhandle}{handle}}}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classtuple__caster_a85f19b13b0bfda89d32cdc631b1652c0}\label{classtuple__caster_a85f19b13b0bfda89d32cdc631b1652c0}} 
+\index{tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}!cast\_impl@{cast\_impl}}
+\index{cast\_impl@{cast\_impl}!tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{cast\_impl()}{cast\_impl()}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+template$<$typename T , size\+\_\+t... Is$>$ \\
+static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{classtuple__caster}{tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::cast\+\_\+impl (\begin{DoxyParamCaption}\item[{T \&\&}]{src,  }\item[{\mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}}}]{policy,  }\item[{\mbox{\hyperlink{classhandle}{handle}}}]{parent,  }\item[{\mbox{\hyperlink{structindex__sequence}{index\+\_\+sequence}}$<$ Is... $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtuple__caster_a9f833c2141a2bd5d3ae2625752436aba}\label{classtuple__caster_a9f833c2141a2bd5d3ae2625752436aba}} 
+\index{tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}!implicit\_cast@{implicit\_cast}}
+\index{implicit\_cast@{implicit\_cast}!tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{implicit\_cast()}{implicit\_cast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+template$<$size\+\_\+t... Is$>$ \\
+type \mbox{\hyperlink{classtuple__caster}{tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::implicit\+\_\+cast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structindex__sequence}{index\+\_\+sequence}}$<$ Is... $>$}]{ }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtuple__caster_a3101ab61e84c97fd09104355e095b491}\label{classtuple__caster_a3101ab61e84c97fd09104355e095b491}} 
+\index{tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}!implicit\_cast@{implicit\_cast}}
+\index{implicit\_cast@{implicit\_cast}!tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{implicit\_cast()}{implicit\_cast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+template$<$size\+\_\+t... Is$>$ \\
+type \mbox{\hyperlink{classtuple__caster}{tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::implicit\+\_\+cast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structindex__sequence}{index\+\_\+sequence}}$<$ Is... $>$}]{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtuple__caster_a5068d29ae84a185fbc5e942c17709096}\label{classtuple__caster_a5068d29ae84a185fbc5e942c17709096}} 
+\index{tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}!load@{load}}
+\index{load@{load}!tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+bool \mbox{\hyperlink{classtuple__caster}{tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandle}{handle}}}]{src,  }\item[{bool}]{convert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtuple__caster_a69ae2feb001453601165fc693e74584b}\label{classtuple__caster_a69ae2feb001453601165fc693e74584b}} 
+\index{tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}!load\_impl@{load\_impl}}
+\index{load\_impl@{load\_impl}!tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{load\_impl()}{load\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+static constexpr bool \mbox{\hyperlink{classtuple__caster}{tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::load\+\_\+impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsequence}{sequence}} \&}]{,  }\item[{bool}]{,  }\item[{\mbox{\hyperlink{structindex__sequence}{index\+\_\+sequence}}$<$$>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtuple__caster_a86bacf2d7f440d7cc2f42620c9622f19}\label{classtuple__caster_a86bacf2d7f440d7cc2f42620c9622f19}} 
+\index{tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}!load\_impl@{load\_impl}}
+\index{load\_impl@{load\_impl}!tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{load\_impl()}{load\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+template$<$size\+\_\+t... Is$>$ \\
+bool \mbox{\hyperlink{classtuple__caster}{tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::load\+\_\+impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsequence}{sequence}} \&}]{seq,  }\item[{bool}]{convert,  }\item[{\mbox{\hyperlink{structindex__sequence}{index\+\_\+sequence}}$<$ Is... $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtuple__caster_a87c37fba00cfc0c5e40c43c1998ebfa7}\label{classtuple__caster_a87c37fba00cfc0c5e40c43c1998ebfa7}} 
+\index{tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}!name@{name}}
+\index{name@{name}!tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+static \mbox{\hyperlink{descr_8h_ae155873780600c0149950602b31084a9}{PYBIND11\+\_\+\+DESCR}} \mbox{\hyperlink{classtuple__caster}{tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::\mbox{\hyperlink{structname}{name}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classtuple__caster_aafca74b6a6c2bf8297677534a7ac0a31}\label{classtuple__caster_aafca74b6a6c2bf8297677534a7ac0a31}} 
+\index{tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}!operator type@{operator type}}
+\index{operator type@{operator type}!tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{operator type()}{operator type()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+\mbox{\hyperlink{classtuple__caster}{tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::operator type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtuple__caster_abdef03c6f4286e4b0b36bc6779d33f83}\label{classtuple__caster_abdef03c6f4286e4b0b36bc6779d33f83}} 
+\index{tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}!operator type@{operator type}}
+\index{operator type@{operator type}!tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{operator type()}{operator type()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+\mbox{\hyperlink{classtuple__caster}{tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::operator type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtuple__caster_a5a772e6404951d9cbfdfb9d06d342de1}\label{classtuple__caster_a5a772e6404951d9cbfdfb9d06d342de1}} 
+\index{tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}!subcasters@{subcasters}}
+\index{subcasters@{subcasters}!tuple\_caster$<$ Tuple, Ts $>$@{tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{subcasters}{subcasters}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+Tuple$<$\mbox{\hyperlink{cast_8h_ab32b52411a6b07420516d79074815713}{make\+\_\+caster}}$<$Ts$>$...$>$ \mbox{\hyperlink{classtuple__caster}{tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::subcasters\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{cast_8h}{cast.\+h}}\end{DoxyCompactItemize}

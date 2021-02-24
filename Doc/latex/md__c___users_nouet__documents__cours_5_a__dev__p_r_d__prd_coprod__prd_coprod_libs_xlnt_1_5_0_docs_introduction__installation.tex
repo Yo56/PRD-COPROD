@@ -1,0 +1,70 @@
+\hypertarget{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_autotoc_md159}{}\doxysection{Binaries}\label{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_autotoc_md159}
+\hypertarget{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_autotoc_md160}{}\doxysection{Homebrew}\label{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_autotoc_md160}
+\hypertarget{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_autotoc_md161}{}\doxysection{Arch}\label{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_autotoc_md161}
+\hypertarget{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_autotoc_md162}{}\doxysection{vcpkg}\label{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_autotoc_md162}
+\hypertarget{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_autotoc_md163}{}\doxysection{Compiling xlnt 1.\+x.\+x from Source on Ubuntu 16.\+04 LTS (\+Xenial Xerus)}\label{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_autotoc_md163}
+Time required\+: Approximately 5 minutes (depending on your internet speed) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-\/get update}
+\DoxyCodeLine{sudo apt-\/get upgrade}
+\DoxyCodeLine{sudo apt-\/get install cmake}
+\DoxyCodeLine{sudo apt-\/get install zlibc}
+
+\end{DoxyCode}
+ The following steps update the compiler and set the appropriate environment variables -\/ see note \mbox{[}1\mbox{]} below for the reason why we need to update the standard available compiler 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo add-\/apt-\/repository ppa:ubuntu-\/toolchain-\/r/test}
+\DoxyCodeLine{sudo apt update}
+\DoxyCodeLine{sudo apt-\/get upgrade}
+\DoxyCodeLine{sudo apt-\/get install gcc-\/6 g++-\/6}
+\DoxyCodeLine{export CC=/usr/bin/gcc-\/6  }
+\DoxyCodeLine{export CXX=/usr/bin/g++-\/6}
+
+\end{DoxyCode}
+ The following steps will intall xlnt Download the zip file from the xlnt repository \href{https://github.com/tfussell/xlnt/archive/master.zip}{\texttt{ https\+://github.\+com/tfussell/xlnt/archive/master.\+zip}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd \string~}
+\DoxyCodeLine{unzip Downloads/xlnt-\/master.zip}
+\DoxyCodeLine{cd xlnt-\/master}
+\DoxyCodeLine{cmake .}
+\DoxyCodeLine{make -\/j 2}
+\DoxyCodeLine{sudo make install}
+
+\end{DoxyCode}
+ The following step will map the shared library names to the location of the corresponding shared library files 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo ldconfig}
+
+\end{DoxyCode}
+ xlnt will now be ready to use on your Ubuntu instance.
+
+\mbox{[}1\mbox{]} Xlnt requires a minimum of gcc 6.\+2.\+0 The most recent gcc version available using the standard APT repositories is gcc 5.\+4.\+0 (obtained through build-\/essential 12.\+1ubuntu2). If these older versions of gcc are used an error \char`\"{}workbook.\+cpp error 1502\+:31 \textquotesingle{}extended\+\_\+property\textquotesingle{} is not a class, namespace or enumeration\char`\"{} will occur during the xlnt make command.\hypertarget{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_autotoc_md164}{}\doxysection{Compiling from Source}\label{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_autotoc_md164}
+Build configurations for Visual Studio, GNU Make, Ninja, and Xcode can be created using \href{https://cmake.org/}{\texttt{ cmake}} v3.\+2+. A full list of cmake generators can be found \href{https://cmake.org/cmake/help/v3.0/manual/cmake-generators.7.html}{\texttt{ here}}. A basic build would look like (starting in the root xlnt directory)\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{cmake ..}
+\DoxyCodeLine{make -\/j8}
+
+\end{DoxyCode}
+
+
+The resulting shared (e.\+g. libxlnt.\+dylib) library would be found in the build/lib directory. Other cmake configuration options for xlnt can be found using \char`\"{}cmake -\/\+LH\char`\"{}. These options include building a static library instead of shared and whether to build sample executables or not. An example of building a static library with an Xcode project\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{cmake -\/D STATIC=ON -\/G Xcode ..}
+\DoxyCodeLine{cmake -\/-\/build .}
+\DoxyCodeLine{cd bin \&\& ./xlnt.test}
+
+\end{DoxyCode}
+ {\itshape Note for Windows\+: cmake defaults to building a 32-\/bit library project. To build a 64-\/bit library, use the Win64 generator} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake -\/G "{}Visual Studio 14 2015 Win64"{} ..}
+
+\end{DoxyCode}
+ 

@@ -1,0 +1,72 @@
+\hypertarget{structmap__caster}{}\doxysection{map\+\_\+caster$<$ Type, Key, Value $>$ Struct Template Reference}
+\label{structmap__caster}\index{map\_caster$<$ Type, Key, Value $>$@{map\_caster$<$ Type, Key, Value $>$}}
+
+
+{\ttfamily \#include $<$stl.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structmap__caster_aec5f554ce2ec2e021aa59de6dd3c6cbc}{key\+\_\+conv}} = \mbox{\hyperlink{cast_8h_ab32b52411a6b07420516d79074815713}{make\+\_\+caster}}$<$ Key $>$
+\item 
+using \mbox{\hyperlink{structmap__caster_a3deb01883f8f6ea4a885047f5335fa87}{value\+\_\+conv}} = \mbox{\hyperlink{cast_8h_ab32b52411a6b07420516d79074815713}{make\+\_\+caster}}$<$ Value $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structmap__caster_aa35d07c2fcaf64c021da0bff1f710992}{load}} (\mbox{\hyperlink{classhandle}{handle}} src, bool convert)
+\item 
+\mbox{\hyperlink{structmap__caster_a9565de89bb9da0b63b5484221dfa5353}{PYBIND11\+\_\+\+TYPE\+\_\+\+CASTER}} (Type, \mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\char`\"{}Dict\mbox{[}\char`\"{})+key\+\_\+conv\+::name()+\mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\char`\"{}, \char`\"{})+\mbox{\hyperlink{classtype__caster__base_ab33c70af4ac76cf1af4c7af37690ff77}{value\+\_\+conv\+::name}}()+\mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\char`\"{}\mbox{]}\char`\"{}))
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{structmap__caster_a445ec6f48f16736f1076420f79f19e92}{cast}} (T \&\&src, \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}} policy, \mbox{\hyperlink{classhandle}{handle}} parent)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structmap__caster_aec5f554ce2ec2e021aa59de6dd3c6cbc}\label{structmap__caster_aec5f554ce2ec2e021aa59de6dd3c6cbc}} 
+\index{map\_caster$<$ Type, Key, Value $>$@{map\_caster$<$ Type, Key, Value $>$}!key\_conv@{key\_conv}}
+\index{key\_conv@{key\_conv}!map\_caster$<$ Type, Key, Value $>$@{map\_caster$<$ Type, Key, Value $>$}}
+\doxysubsubsection{\texorpdfstring{key\_conv}{key\_conv}}
+{\footnotesize\ttfamily template$<$typename Type , typename Key , typename Value $>$ \\
+using \mbox{\hyperlink{structmap__caster}{map\+\_\+caster}}$<$ Type, Key, Value $>$\+::\mbox{\hyperlink{structmap__caster_aec5f554ce2ec2e021aa59de6dd3c6cbc}{key\+\_\+conv}} =  \mbox{\hyperlink{cast_8h_ab32b52411a6b07420516d79074815713}{make\+\_\+caster}}$<$Key$>$}
+
+\mbox{\Hypertarget{structmap__caster_a3deb01883f8f6ea4a885047f5335fa87}\label{structmap__caster_a3deb01883f8f6ea4a885047f5335fa87}} 
+\index{map\_caster$<$ Type, Key, Value $>$@{map\_caster$<$ Type, Key, Value $>$}!value\_conv@{value\_conv}}
+\index{value\_conv@{value\_conv}!map\_caster$<$ Type, Key, Value $>$@{map\_caster$<$ Type, Key, Value $>$}}
+\doxysubsubsection{\texorpdfstring{value\_conv}{value\_conv}}
+{\footnotesize\ttfamily template$<$typename Type , typename Key , typename Value $>$ \\
+using \mbox{\hyperlink{structmap__caster}{map\+\_\+caster}}$<$ Type, Key, Value $>$\+::\mbox{\hyperlink{structmap__caster_a3deb01883f8f6ea4a885047f5335fa87}{value\+\_\+conv}} =  \mbox{\hyperlink{cast_8h_ab32b52411a6b07420516d79074815713}{make\+\_\+caster}}$<$Value$>$}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structmap__caster_a445ec6f48f16736f1076420f79f19e92}\label{structmap__caster_a445ec6f48f16736f1076420f79f19e92}} 
+\index{map\_caster$<$ Type, Key, Value $>$@{map\_caster$<$ Type, Key, Value $>$}!cast@{cast}}
+\index{cast@{cast}!map\_caster$<$ Type, Key, Value $>$@{map\_caster$<$ Type, Key, Value $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}}
+{\footnotesize\ttfamily template$<$typename Type , typename Key , typename Value $>$ \\
+template$<$typename T $>$ \\
+static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{structmap__caster}{map\+\_\+caster}}$<$ Type, Key, Value $>$\+::cast (\begin{DoxyParamCaption}\item[{T \&\&}]{src,  }\item[{\mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}}}]{policy,  }\item[{\mbox{\hyperlink{classhandle}{handle}}}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structmap__caster_aa35d07c2fcaf64c021da0bff1f710992}\label{structmap__caster_aa35d07c2fcaf64c021da0bff1f710992}} 
+\index{map\_caster$<$ Type, Key, Value $>$@{map\_caster$<$ Type, Key, Value $>$}!load@{load}}
+\index{load@{load}!map\_caster$<$ Type, Key, Value $>$@{map\_caster$<$ Type, Key, Value $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$typename Type , typename Key , typename Value $>$ \\
+bool \mbox{\hyperlink{structmap__caster}{map\+\_\+caster}}$<$ Type, Key, Value $>$\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandle}{handle}}}]{src,  }\item[{bool}]{convert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structmap__caster_a9565de89bb9da0b63b5484221dfa5353}\label{structmap__caster_a9565de89bb9da0b63b5484221dfa5353}} 
+\index{map\_caster$<$ Type, Key, Value $>$@{map\_caster$<$ Type, Key, Value $>$}!PYBIND11\_TYPE\_CASTER@{PYBIND11\_TYPE\_CASTER}}
+\index{PYBIND11\_TYPE\_CASTER@{PYBIND11\_TYPE\_CASTER}!map\_caster$<$ Type, Key, Value $>$@{map\_caster$<$ Type, Key, Value $>$}}
+\doxysubsubsection{\texorpdfstring{PYBIND11\_TYPE\_CASTER()}{PYBIND11\_TYPE\_CASTER()}}
+{\footnotesize\ttfamily template$<$typename Type , typename Key , typename Value $>$ \\
+\mbox{\hyperlink{structmap__caster}{map\+\_\+caster}}$<$ Type, Key, Value $>$\+::PYBIND11\+\_\+\+TYPE\+\_\+\+CASTER (\begin{DoxyParamCaption}\item[{Type}]{,  }\item[{\mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\char`\"{}Dict\mbox{[}\char`\"{})+key\+\_\+conv\+::name()+\mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\char`\"{}, \char`\"{})+\mbox{\hyperlink{classtype__caster__base_ab33c70af4ac76cf1af4c7af37690ff77}{value\+\_\+conv\+::name}}()+\mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\char`\"{}\mbox{]}\char`\"{})}]{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{stl_8h}{stl.\+h}}\end{DoxyCompactItemize}

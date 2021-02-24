@@ -1,0 +1,589 @@
+\hypertarget{classxml_1_1parser}{}\doxysection{xml\+::parser Class Reference}
+\label{classxml_1_1parser}\index{xml::parser@{xml::parser}}
+
+
+{\ttfamily \#include $<$parser.\+hxx$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structxml_1_1parser_1_1attribute__value__type}{attribute\+\_\+value\+\_\+type}}
+\item 
+struct \mbox{\hyperlink{structxml_1_1parser_1_1iterator}{iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}} \{ \newline
+\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5a558387ef6c638f8e533dbbaf9747a4ba}{start\+\_\+element}}
+, \mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5a7c58ce8e5f9b2d5d17593351063fb04a}{end\+\_\+element}}
+, \mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5afcefa36b13ff596b93de7f734e3dda04}{start\+\_\+attribute}}
+, \mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5a5bbd798ae603e9e7fef1c2eb5dd233e2}{end\+\_\+attribute}}
+, \newline
+\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5ac08181e48cd3edc8213ff865914bcf59}{characters}}
+, \mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5afdf7fee170872444b58f3b8e6ab2ef5a}{start\+\_\+namespace\+\_\+decl}}
+, \mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5a12d5ff4eaaad00a471c2ad26dfeebe0b}{end\+\_\+namespace\+\_\+decl}}
+, \mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5a3f9e596032a95c527b24cd79d66107d0}{eof}}
+ \}
+\item 
+typedef \mbox{\hyperlink{classxml_1_1qname}{xml\+::qname}} \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}}
+\item 
+typedef \mbox{\hyperlink{structxml_1_1content}{xml\+::content}} \mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{content\+\_\+type}}
+\item 
+typedef unsigned short \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}}
+\item 
+typedef std\+::map$<$ \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}}, \mbox{\hyperlink{structxml_1_1parser_1_1attribute__value__type}{attribute\+\_\+value\+\_\+type}} $>$ \mbox{\hyperlink{classxml_1_1parser_a6a2a8397b1444eef164a7cf1dc6d8036}{attribute\+\_\+map\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxml_1_1parser_a3bd7f4d414073d420036e58a29c985dd}{parser}} (std\+::istream \&, const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_a51a3f23b79380c379c43850de15b0357}{input\+\_\+name}}, \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}}=\mbox{\hyperlink{classxml_1_1parser_a455a5d76cbc7bfa012bf103db493861d}{receive\+\_\+default}})
+\item 
+\mbox{\hyperlink{classxml_1_1parser_a2243b0d3df017e1e97228b163205da90}{parser}} (const void $\ast$data, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} size, const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_a51a3f23b79380c379c43850de15b0357}{input\+\_\+name}}, \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}}=\mbox{\hyperlink{classxml_1_1parser_a455a5d76cbc7bfa012bf103db493861d}{receive\+\_\+default}})
+\item 
+const std\+::string \& \mbox{\hyperlink{classxml_1_1parser_a51a3f23b79380c379c43850de15b0357}{input\+\_\+name}} () const
+\item 
+\mbox{\hyperlink{classxml_1_1parser_a18111e8ef5628993c79a464e51ed7e8b}{$\sim$parser}} ()
+\item 
+\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}} \mbox{\hyperlink{classxml_1_1parser_a93a3697833038f017f99f9402b8c029b}{next}} ()
+\item 
+void \mbox{\hyperlink{classxml_1_1parser_af64fca83498399287dfc1c861e65e86e}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}})
+\item 
+void \mbox{\hyperlink{classxml_1_1parser_a8fadbbbbcb0ee88741744755f9f40be1}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}, const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\item 
+void \mbox{\hyperlink{classxml_1_1parser_a11039d50fcf5cbeb9c7dbe7c6285efc8}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}, const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}})
+\item 
+void \mbox{\hyperlink{classxml_1_1parser_aa97a548045fbd72f94b49e0d5d655f5e}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}, const std\+::string \&\mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}}, const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\item 
+\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}} \mbox{\hyperlink{classxml_1_1parser_a3be862cde468cae84bf774269e09d76c}{peek}} ()
+\item 
+\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}} \mbox{\hyperlink{classxml_1_1parser_ac063f967f6ed5d5e28a0141d73a1384f}{event}} ()
+\item 
+const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \& \mbox{\hyperlink{classxml_1_1parser_a3b2459b1ee0d2b6199e54b130cb8aae9}{qname}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{classxml_1_1parser_a1f5ad07226d4a1f2cf76c5013c00f7a4}{namespace\+\_\+}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{classxml_1_1parser_afefe3ab6e35551669cab25d9edc93b7c}{name}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{classxml_1_1parser_af6c62e42abe385bc137e7a356b152b76}{prefix}} () const
+\item 
+std\+::string \& \mbox{\hyperlink{classxml_1_1parser_adb9411d0548e5dd44e28d98a0e4673d0}{value}} ()
+\item 
+const std\+::string \& \mbox{\hyperlink{classxml_1_1parser_aecfedbed12028cf50bd909a0a696b2fe}{value}} () const
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_aec89f21f76f2fa2b3c470df3c5b6faba}{value}} () const
+\item 
+unsigned long long \mbox{\hyperlink{classxml_1_1parser_a7d38b12cf685c0b9a887a438747ad0a9}{line}} () const
+\item 
+unsigned long long \mbox{\hyperlink{classxml_1_1parser_a2c4948bbbe3488742e906906fb2fd349}{column}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{classxml_1_1parser_a751b45a12b6657f8e2c2a189657c8135}{attribute}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_a0d982c904f3cd0cf6b432fbbc5218032}{attribute}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}) const
+\item 
+std\+::string \mbox{\hyperlink{classxml_1_1parser_ab771cdda282ceaaa37de16f5cd8c6481}{attribute}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, const std\+::string \&default\+\_\+value) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_a39b3a2201c2d8256fdf0635393c6149a}{attribute}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, const T \&default\+\_\+value) const
+\item 
+const std\+::string \& \mbox{\hyperlink{classxml_1_1parser_a0925f34c8323bf677601ae381814c1f3}{attribute}} (const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_a3e95a53d6695a13030b6985d653561ca}{attribute}} (const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}) const
+\item 
+std\+::string \mbox{\hyperlink{classxml_1_1parser_abeb82c5f3f4a2698908827daae6908ed}{attribute}} (const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}, const std\+::string \&default\+\_\+value) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_acf14f7f7ce5c39b5fc3262f9ddfe7148}{attribute}} (const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}, const T \&default\+\_\+value) const
+\item 
+bool \mbox{\hyperlink{classxml_1_1parser_ac051e14253dee4f2bd7282570992b7ea}{attribute\+\_\+present}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}) const
+\item 
+bool \mbox{\hyperlink{classxml_1_1parser_a3f5e3b79670a5c975a0e8dd0e7bfa910}{attribute\+\_\+present}} (const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}) const
+\item 
+const \mbox{\hyperlink{classxml_1_1parser_a6a2a8397b1444eef164a7cf1dc6d8036}{attribute\+\_\+map\+\_\+type}} \& \mbox{\hyperlink{classxml_1_1parser_ac6d71f6036e0fe59478749ba798256fd}{attribute\+\_\+map}} () const
+\item 
+void \mbox{\hyperlink{classxml_1_1parser_a77ae1033d6e39507d812d1fd0d0213f2}{content}} (\mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{content\+\_\+type}})
+\item 
+\mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{content\+\_\+type}} \mbox{\hyperlink{classxml_1_1parser_a2800144e81e6c54ba649e09644a7fdd1}{content}} () const
+\item 
+void \mbox{\hyperlink{classxml_1_1parser_a10137642912737b9aa4a87b8760ef6b4}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}, const std\+::string \&\mbox{\hyperlink{structname}{name}}, \mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{content\+\_\+type}})
+\item 
+void \mbox{\hyperlink{classxml_1_1parser_acd20c0c3e8fe3033264823da88e7d520}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}, const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}, \mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{content\+\_\+type}})
+\item 
+void \mbox{\hyperlink{classxml_1_1parser_aaeb05337fab625a2294890fe4f259eb1}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}, const std\+::string \&\mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}}, const std\+::string \&\mbox{\hyperlink{structname}{name}}, \mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{content\+\_\+type}})
+\item 
+std\+::string \mbox{\hyperlink{classxml_1_1parser_ae3ae86548df6ed498b2a0ef6e10f87a5}{element}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_a06e8c6427cea2aeb29d4fd87a98a8b9d}{element}} ()
+\item 
+std\+::string \mbox{\hyperlink{classxml_1_1parser_a867b47e4dd9082e8b8edbb3b80280c6c}{element}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\item 
+std\+::string \mbox{\hyperlink{classxml_1_1parser_a34d9d8084f1bc2d82dee0ce002b6f5f4}{element}} (const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}})
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_a20148e5af155d780efdc73dfddd6b919}{element}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_af3bb1fb8398672e4e2706f700da03b08}{element}} (const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}})
+\item 
+std\+::string \mbox{\hyperlink{classxml_1_1parser_ae429391743c57c06b7e1528ec4ef74d3}{element}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, const std\+::string \&default\+\_\+value)
+\item 
+std\+::string \mbox{\hyperlink{classxml_1_1parser_a1d1a165b8b300e1ff3faf1646095f2a2}{element}} (const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}, const std\+::string \&default\+\_\+value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_a9a07c888bd695baf0e0d8053d83a57c1}{element}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, const T \&default\+\_\+value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_a1f5ee33432cd35fbbcce4eb19f92aba1}{element}} (const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}, const T \&default\+\_\+value)
+\item 
+\mbox{\hyperlink{structxml_1_1parser_1_1iterator}{iterator}} \mbox{\hyperlink{classxml_1_1parser_ac0aafa5696d60f1a3357e63712db3ef2}{begin}} ()
+\item 
+\mbox{\hyperlink{structxml_1_1parser_1_1iterator}{iterator}} \mbox{\hyperlink{classxml_1_1parser_a271de5b60207a3a5b1f892e32bf9264e}{end}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}} \mbox{\hyperlink{classxml_1_1parser_aab00bbf1ff2a96452f1b9264fb1c1bc6}{receive\+\_\+elements}} = 0x0001
+\item 
+static const \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}} \mbox{\hyperlink{classxml_1_1parser_afa50c85ad19e0204dfa24cf425d110b2}{receive\+\_\+characters}} = 0x0002
+\item 
+static const \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}} \mbox{\hyperlink{classxml_1_1parser_a54c0d11b01d1ec1cd539cf848255497c}{receive\+\_\+attributes\+\_\+map}} = 0x0004
+\item 
+static const \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}} \mbox{\hyperlink{classxml_1_1parser_a970f56d0a84e523f8d54539918b541cc}{receive\+\_\+attributes\+\_\+event}} = 0x0008
+\item 
+static const \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}} \mbox{\hyperlink{classxml_1_1parser_a498d8cf3e1b7b6db26e5bb06ddbe9cee}{receive\+\_\+namespace\+\_\+decls}} = 0x0010
+\item 
+static const \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}} \mbox{\hyperlink{classxml_1_1parser_a455a5d76cbc7bfa012bf103db493861d}{receive\+\_\+default}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classxml_1_1parser_a6a2a8397b1444eef164a7cf1dc6d8036}\label{classxml_1_1parser_a6a2a8397b1444eef164a7cf1dc6d8036}} 
+\index{xml::parser@{xml::parser}!attribute\_map\_type@{attribute\_map\_type}}
+\index{attribute\_map\_type@{attribute\_map\_type}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{attribute\_map\_type}{attribute\_map\_type}}
+{\footnotesize\ttfamily typedef std\+::map$<$\mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}}, \mbox{\hyperlink{structxml_1_1parser_1_1attribute__value__type}{attribute\+\_\+value\+\_\+type}}$>$ \mbox{\hyperlink{classxml_1_1parser_a6a2a8397b1444eef164a7cf1dc6d8036}{xml\+::parser\+::attribute\+\_\+map\+\_\+type}}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}\label{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}} 
+\index{xml::parser@{xml::parser}!content\_type@{content\_type}}
+\index{content\_type@{content\_type}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{content\_type}{content\_type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structxml_1_1content}{xml\+::content}} \mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{xml\+::parser\+::content\+\_\+type}}}
+
+\mbox{\Hypertarget{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}\label{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}} 
+\index{xml::parser@{xml::parser}!feature\_type@{feature\_type}}
+\index{feature\_type@{feature\_type}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{feature\_type}{feature\_type}}
+{\footnotesize\ttfamily typedef unsigned short \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{xml\+::parser\+::feature\+\_\+type}}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}\label{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}} 
+\index{xml::parser@{xml::parser}!qname\_type@{qname\_type}}
+\index{qname\_type@{qname\_type}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{qname\_type}{qname\_type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classxml_1_1qname}{xml\+::qname}} \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{xml\+::parser\+::qname\+\_\+type}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}\label{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}} 
+\index{xml::parser@{xml::parser}!event\_type@{event\_type}}
+\index{event\_type@{event\_type}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{event\_type}{event\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{xml\+::parser\+::event\+\_\+type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{start\_element@{start\_element}!xml::parser@{xml::parser}}\index{xml::parser@{xml::parser}!start\_element@{start\_element}}}\mbox{\Hypertarget{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5a558387ef6c638f8e533dbbaf9747a4ba}\label{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5a558387ef6c638f8e533dbbaf9747a4ba}} 
+start\+\_\+element&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{end\_element@{end\_element}!xml::parser@{xml::parser}}\index{xml::parser@{xml::parser}!end\_element@{end\_element}}}\mbox{\Hypertarget{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5a7c58ce8e5f9b2d5d17593351063fb04a}\label{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5a7c58ce8e5f9b2d5d17593351063fb04a}} 
+end\+\_\+element&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{start\_attribute@{start\_attribute}!xml::parser@{xml::parser}}\index{xml::parser@{xml::parser}!start\_attribute@{start\_attribute}}}\mbox{\Hypertarget{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5afcefa36b13ff596b93de7f734e3dda04}\label{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5afcefa36b13ff596b93de7f734e3dda04}} 
+start\+\_\+attribute&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{end\_attribute@{end\_attribute}!xml::parser@{xml::parser}}\index{xml::parser@{xml::parser}!end\_attribute@{end\_attribute}}}\mbox{\Hypertarget{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5a5bbd798ae603e9e7fef1c2eb5dd233e2}\label{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5a5bbd798ae603e9e7fef1c2eb5dd233e2}} 
+end\+\_\+attribute&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{characters@{characters}!xml::parser@{xml::parser}}\index{xml::parser@{xml::parser}!characters@{characters}}}\mbox{\Hypertarget{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5ac08181e48cd3edc8213ff865914bcf59}\label{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5ac08181e48cd3edc8213ff865914bcf59}} 
+characters&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{start\_namespace\_decl@{start\_namespace\_decl}!xml::parser@{xml::parser}}\index{xml::parser@{xml::parser}!start\_namespace\_decl@{start\_namespace\_decl}}}\mbox{\Hypertarget{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5afdf7fee170872444b58f3b8e6ab2ef5a}\label{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5afdf7fee170872444b58f3b8e6ab2ef5a}} 
+start\+\_\+namespace\+\_\+decl&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{end\_namespace\_decl@{end\_namespace\_decl}!xml::parser@{xml::parser}}\index{xml::parser@{xml::parser}!end\_namespace\_decl@{end\_namespace\_decl}}}\mbox{\Hypertarget{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5a12d5ff4eaaad00a471c2ad26dfeebe0b}\label{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5a12d5ff4eaaad00a471c2ad26dfeebe0b}} 
+end\+\_\+namespace\+\_\+decl&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eof@{eof}!xml::parser@{xml::parser}}\index{xml::parser@{xml::parser}!eof@{eof}}}\mbox{\Hypertarget{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5a3f9e596032a95c527b24cd79d66107d0}\label{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5a3f9e596032a95c527b24cd79d66107d0}} 
+eof&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxml_1_1parser_a3bd7f4d414073d420036e58a29c985dd}\label{classxml_1_1parser_a3bd7f4d414073d420036e58a29c985dd}} 
+\index{xml::parser@{xml::parser}!parser@{parser}}
+\index{parser@{parser}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{parser()}{parser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily xml\+::parser\+::parser (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{const std\+::string \&}]{input\+\_\+name,  }\item[{\mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}}}]{f = {\ttfamily \mbox{\hyperlink{classxml_1_1parser_a455a5d76cbc7bfa012bf103db493861d}{receive\+\_\+default}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a2243b0d3df017e1e97228b163205da90}\label{classxml_1_1parser_a2243b0d3df017e1e97228b163205da90}} 
+\index{xml::parser@{xml::parser}!parser@{parser}}
+\index{parser@{parser}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{parser()}{parser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily xml\+::parser\+::parser (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{size,  }\item[{const std\+::string \&}]{input\+\_\+name,  }\item[{\mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}}}]{f = {\ttfamily \mbox{\hyperlink{classxml_1_1parser_a455a5d76cbc7bfa012bf103db493861d}{receive\+\_\+default}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a18111e8ef5628993c79a464e51ed7e8b}\label{classxml_1_1parser_a18111e8ef5628993c79a464e51ed7e8b}} 
+\index{xml::parser@{xml::parser}!````~parser@{$\sim$parser}}
+\index{````~parser@{$\sim$parser}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{$\sim$parser()}{~parser()}}
+{\footnotesize\ttfamily xml\+::parser\+::$\sim$parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxml_1_1parser_a0925f34c8323bf677601ae381814c1f3}\label{classxml_1_1parser_a0925f34c8323bf677601ae381814c1f3}} 
+\index{xml::parser@{xml::parser}!attribute@{attribute}}
+\index{attribute@{attribute}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{attribute()}{attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily const string \& xml\+::parser\+::attribute (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&}]{qname }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxml_1_1parser_a3e95a53d6695a13030b6985d653561ca}\label{classxml_1_1parser_a3e95a53d6695a13030b6985d653561ca}} 
+\index{xml::parser@{xml::parser}!attribute@{attribute}}
+\index{attribute@{attribute}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{attribute()}{attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T xml\+::parser\+::attribute (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&}]{qname }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_abeb82c5f3f4a2698908827daae6908ed}\label{classxml_1_1parser_abeb82c5f3f4a2698908827daae6908ed}} 
+\index{xml::parser@{xml::parser}!attribute@{attribute}}
+\index{attribute@{attribute}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{attribute()}{attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily std\+::string xml\+::parser\+::attribute (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&}]{qname,  }\item[{const std\+::string \&}]{default\+\_\+value }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxml_1_1parser_acf14f7f7ce5c39b5fc3262f9ddfe7148}\label{classxml_1_1parser_acf14f7f7ce5c39b5fc3262f9ddfe7148}} 
+\index{xml::parser@{xml::parser}!attribute@{attribute}}
+\index{attribute@{attribute}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{attribute()}{attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T xml\+::parser\+::attribute (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&}]{qname,  }\item[{const T \&}]{default\+\_\+value }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxml_1_1parser_a751b45a12b6657f8e2c2a189657c8135}\label{classxml_1_1parser_a751b45a12b6657f8e2c2a189657c8135}} 
+\index{xml::parser@{xml::parser}!attribute@{attribute}}
+\index{attribute@{attribute}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{attribute()}{attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily const std\+::string \& xml\+::parser\+::attribute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a0d982c904f3cd0cf6b432fbbc5218032}\label{classxml_1_1parser_a0d982c904f3cd0cf6b432fbbc5218032}} 
+\index{xml::parser@{xml::parser}!attribute@{attribute}}
+\index{attribute@{attribute}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{attribute()}{attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T xml\+::parser\+::attribute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_ab771cdda282ceaaa37de16f5cd8c6481}\label{classxml_1_1parser_ab771cdda282ceaaa37de16f5cd8c6481}} 
+\index{xml::parser@{xml::parser}!attribute@{attribute}}
+\index{attribute@{attribute}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{attribute()}{attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily std\+::string xml\+::parser\+::attribute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{default\+\_\+value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a39b3a2201c2d8256fdf0635393c6149a}\label{classxml_1_1parser_a39b3a2201c2d8256fdf0635393c6149a}} 
+\index{xml::parser@{xml::parser}!attribute@{attribute}}
+\index{attribute@{attribute}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{attribute()}{attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T xml\+::parser\+::attribute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const T \&}]{default\+\_\+value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_ac6d71f6036e0fe59478749ba798256fd}\label{classxml_1_1parser_ac6d71f6036e0fe59478749ba798256fd}} 
+\index{xml::parser@{xml::parser}!attribute\_map@{attribute\_map}}
+\index{attribute\_map@{attribute\_map}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{attribute\_map()}{attribute\_map()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxml_1_1parser_a6a2a8397b1444eef164a7cf1dc6d8036}{parser\+::attribute\+\_\+map\+\_\+type}} \& xml\+::parser\+::attribute\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a3f5e3b79670a5c975a0e8dd0e7bfa910}\label{classxml_1_1parser_a3f5e3b79670a5c975a0e8dd0e7bfa910}} 
+\index{xml::parser@{xml::parser}!attribute\_present@{attribute\_present}}
+\index{attribute\_present@{attribute\_present}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{attribute\_present()}{attribute\_present()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xml\+::parser\+::attribute\+\_\+present (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&}]{qname }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxml_1_1parser_ac051e14253dee4f2bd7282570992b7ea}\label{classxml_1_1parser_ac051e14253dee4f2bd7282570992b7ea}} 
+\index{xml::parser@{xml::parser}!attribute\_present@{attribute\_present}}
+\index{attribute\_present@{attribute\_present}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{attribute\_present()}{attribute\_present()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool xml\+::parser\+::attribute\+\_\+present (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_ac0aafa5696d60f1a3357e63712db3ef2}\label{classxml_1_1parser_ac0aafa5696d60f1a3357e63712db3ef2}} 
+\index{xml::parser@{xml::parser}!begin@{begin}}
+\index{begin@{begin}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structxml_1_1parser_1_1iterator}{iterator}} xml\+::parser\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a2c4948bbbe3488742e906906fb2fd349}\label{classxml_1_1parser_a2c4948bbbe3488742e906906fb2fd349}} 
+\index{xml::parser@{xml::parser}!column@{column}}
+\index{column@{column}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{column()}{column()}}
+{\footnotesize\ttfamily unsigned long long xml\+::parser\+::column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a2800144e81e6c54ba649e09644a7fdd1}\label{classxml_1_1parser_a2800144e81e6c54ba649e09644a7fdd1}} 
+\index{xml::parser@{xml::parser}!content@{content}}
+\index{content@{content}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{content()}{content()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{parser\+::content\+\_\+type}} xml\+::parser\+::content (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a77ae1033d6e39507d812d1fd0d0213f2}\label{classxml_1_1parser_a77ae1033d6e39507d812d1fd0d0213f2}} 
+\index{xml::parser@{xml::parser}!content@{content}}
+\index{content@{content}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{content()}{content()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xml\+::parser\+::content (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{content\+\_\+type}}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_ae3ae86548df6ed498b2a0ef6e10f87a5}\label{classxml_1_1parser_ae3ae86548df6ed498b2a0ef6e10f87a5}} 
+\index{xml::parser@{xml::parser}!element@{element}}
+\index{element@{element}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [1/10]}}
+{\footnotesize\ttfamily string xml\+::parser\+::element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1parser_a06e8c6427cea2aeb29d4fd87a98a8b9d}\label{classxml_1_1parser_a06e8c6427cea2aeb29d4fd87a98a8b9d}} 
+\index{xml::parser@{xml::parser}!element@{element}}
+\index{element@{element}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [2/10]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T xml\+::parser\+::element\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a34d9d8084f1bc2d82dee0ce002b6f5f4}\label{classxml_1_1parser_a34d9d8084f1bc2d82dee0ce002b6f5f4}} 
+\index{xml::parser@{xml::parser}!element@{element}}
+\index{element@{element}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [3/10]}}
+{\footnotesize\ttfamily std\+::string xml\+::parser\+::element (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&}]{qname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_af3bb1fb8398672e4e2706f700da03b08}\label{classxml_1_1parser_af3bb1fb8398672e4e2706f700da03b08}} 
+\index{xml::parser@{xml::parser}!element@{element}}
+\index{element@{element}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [4/10]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T xml\+::parser\+::element (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&}]{qname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a1d1a165b8b300e1ff3faf1646095f2a2}\label{classxml_1_1parser_a1d1a165b8b300e1ff3faf1646095f2a2}} 
+\index{xml::parser@{xml::parser}!element@{element}}
+\index{element@{element}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [5/10]}}
+{\footnotesize\ttfamily std\+::string xml\+::parser\+::element (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&}]{qname,  }\item[{const std\+::string \&}]{default\+\_\+value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1parser_a1f5ee33432cd35fbbcce4eb19f92aba1}\label{classxml_1_1parser_a1f5ee33432cd35fbbcce4eb19f92aba1}} 
+\index{xml::parser@{xml::parser}!element@{element}}
+\index{element@{element}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [6/10]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T xml\+::parser\+::element (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&}]{qname,  }\item[{const T \&}]{default\+\_\+value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1parser_a867b47e4dd9082e8b8edbb3b80280c6c}\label{classxml_1_1parser_a867b47e4dd9082e8b8edbb3b80280c6c}} 
+\index{xml::parser@{xml::parser}!element@{element}}
+\index{element@{element}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [7/10]}}
+{\footnotesize\ttfamily std\+::string xml\+::parser\+::element (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a20148e5af155d780efdc73dfddd6b919}\label{classxml_1_1parser_a20148e5af155d780efdc73dfddd6b919}} 
+\index{xml::parser@{xml::parser}!element@{element}}
+\index{element@{element}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [8/10]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T xml\+::parser\+::element (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_ae429391743c57c06b7e1528ec4ef74d3}\label{classxml_1_1parser_ae429391743c57c06b7e1528ec4ef74d3}} 
+\index{xml::parser@{xml::parser}!element@{element}}
+\index{element@{element}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [9/10]}}
+{\footnotesize\ttfamily std\+::string xml\+::parser\+::element (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{default\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a9a07c888bd695baf0e0d8053d83a57c1}\label{classxml_1_1parser_a9a07c888bd695baf0e0d8053d83a57c1}} 
+\index{xml::parser@{xml::parser}!element@{element}}
+\index{element@{element}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [10/10]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T xml\+::parser\+::element (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const T \&}]{default\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a271de5b60207a3a5b1f892e32bf9264e}\label{classxml_1_1parser_a271de5b60207a3a5b1f892e32bf9264e}} 
+\index{xml::parser@{xml::parser}!end@{end}}
+\index{end@{end}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structxml_1_1parser_1_1iterator}{iterator}} xml\+::parser\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_ac063f967f6ed5d5e28a0141d73a1384f}\label{classxml_1_1parser_ac063f967f6ed5d5e28a0141d73a1384f}} 
+\index{xml::parser@{xml::parser}!event@{event}}
+\index{event@{event}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{event()}{event()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}} xml\+::parser\+::event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a51a3f23b79380c379c43850de15b0357}\label{classxml_1_1parser_a51a3f23b79380c379c43850de15b0357}} 
+\index{xml::parser@{xml::parser}!input\_name@{input\_name}}
+\index{input\_name@{input\_name}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{input\_name()}{input\_name()}}
+{\footnotesize\ttfamily const std\+::string\& xml\+::parser\+::input\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a7d38b12cf685c0b9a887a438747ad0a9}\label{classxml_1_1parser_a7d38b12cf685c0b9a887a438747ad0a9}} 
+\index{xml::parser@{xml::parser}!line@{line}}
+\index{line@{line}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{line()}{line()}}
+{\footnotesize\ttfamily unsigned long long xml\+::parser\+::line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_afefe3ab6e35551669cab25d9edc93b7c}\label{classxml_1_1parser_afefe3ab6e35551669cab25d9edc93b7c}} 
+\index{xml::parser@{xml::parser}!name@{name}}
+\index{name@{name}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string\& xml\+::parser\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a1f5ad07226d4a1f2cf76c5013c00f7a4}\label{classxml_1_1parser_a1f5ad07226d4a1f2cf76c5013c00f7a4}} 
+\index{xml::parser@{xml::parser}!namespace\_@{namespace\_}}
+\index{namespace\_@{namespace\_}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{namespace\_()}{namespace\_()}}
+{\footnotesize\ttfamily const std\+::string\& xml\+::parser\+::namespace\+\_\+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a93a3697833038f017f99f9402b8c029b}\label{classxml_1_1parser_a93a3697833038f017f99f9402b8c029b}} 
+\index{xml::parser@{xml::parser}!next@{next}}
+\index{next@{next}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{parser\+::event\+\_\+type}} xml\+::parser\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1parser_af64fca83498399287dfc1c861e65e86e}\label{classxml_1_1parser_af64fca83498399287dfc1c861e65e86e}} 
+\index{xml::parser@{xml::parser}!next\_expect@{next\_expect}}
+\index{next\_expect@{next\_expect}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{next\_expect()}{next\_expect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily void xml\+::parser\+::next\+\_\+expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1parser_a11039d50fcf5cbeb9c7dbe7c6285efc8}\label{classxml_1_1parser_a11039d50fcf5cbeb9c7dbe7c6285efc8}} 
+\index{xml::parser@{xml::parser}!next\_expect@{next\_expect}}
+\index{next\_expect@{next\_expect}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{next\_expect()}{next\_expect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily void xml\+::parser\+::next\+\_\+expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}}]{e,  }\item[{const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&}]{qname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_acd20c0c3e8fe3033264823da88e7d520}\label{classxml_1_1parser_acd20c0c3e8fe3033264823da88e7d520}} 
+\index{xml::parser@{xml::parser}!next\_expect@{next\_expect}}
+\index{next\_expect@{next\_expect}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{next\_expect()}{next\_expect()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily void xml\+::parser\+::next\+\_\+expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}}]{e,  }\item[{const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&}]{qname,  }\item[{\mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{content\+\_\+type}}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a8fadbbbbcb0ee88741744755f9f40be1}\label{classxml_1_1parser_a8fadbbbbcb0ee88741744755f9f40be1}} 
+\index{xml::parser@{xml::parser}!next\_expect@{next\_expect}}
+\index{next\_expect@{next\_expect}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{next\_expect()}{next\_expect()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily void xml\+::parser\+::next\+\_\+expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}}]{e,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a10137642912737b9aa4a87b8760ef6b4}\label{classxml_1_1parser_a10137642912737b9aa4a87b8760ef6b4}} 
+\index{xml::parser@{xml::parser}!next\_expect@{next\_expect}}
+\index{next\_expect@{next\_expect}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{next\_expect()}{next\_expect()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily void xml\+::parser\+::next\+\_\+expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}}]{e,  }\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{content\+\_\+type}}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_aa97a548045fbd72f94b49e0d5d655f5e}\label{classxml_1_1parser_aa97a548045fbd72f94b49e0d5d655f5e}} 
+\index{xml::parser@{xml::parser}!next\_expect@{next\_expect}}
+\index{next\_expect@{next\_expect}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{next\_expect()}{next\_expect()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily void xml\+::parser\+::next\+\_\+expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}}]{,  }\item[{const std\+::string \&}]{ns,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1parser_aaeb05337fab625a2294890fe4f259eb1}\label{classxml_1_1parser_aaeb05337fab625a2294890fe4f259eb1}} 
+\index{xml::parser@{xml::parser}!next\_expect@{next\_expect}}
+\index{next\_expect@{next\_expect}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{next\_expect()}{next\_expect()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily void xml\+::parser\+::next\+\_\+expect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}}]{e,  }\item[{const std\+::string \&}]{ns,  }\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{content\+\_\+type}}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a3be862cde468cae84bf774269e09d76c}\label{classxml_1_1parser_a3be862cde468cae84bf774269e09d76c}} 
+\index{xml::parser@{xml::parser}!peek@{peek}}
+\index{peek@{peek}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{parser\+::event\+\_\+type}} xml\+::parser\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_af6c62e42abe385bc137e7a356b152b76}\label{classxml_1_1parser_af6c62e42abe385bc137e7a356b152b76}} 
+\index{xml::parser@{xml::parser}!prefix@{prefix}}
+\index{prefix@{prefix}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{prefix()}{prefix()}}
+{\footnotesize\ttfamily const std\+::string\& xml\+::parser\+::prefix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a3b2459b1ee0d2b6199e54b130cb8aae9}\label{classxml_1_1parser_a3b2459b1ee0d2b6199e54b130cb8aae9}} 
+\index{xml::parser@{xml::parser}!qname@{qname}}
+\index{qname@{qname}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{qname()}{qname()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}}\& xml\+::parser\+::qname (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_adb9411d0548e5dd44e28d98a0e4673d0}\label{classxml_1_1parser_adb9411d0548e5dd44e28d98a0e4673d0}} 
+\index{xml::parser@{xml::parser}!value@{value}}
+\index{value@{value}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::string\& xml\+::parser\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_aecfedbed12028cf50bd909a0a696b2fe}\label{classxml_1_1parser_aecfedbed12028cf50bd909a0a696b2fe}} 
+\index{xml::parser@{xml::parser}!value@{value}}
+\index{value@{value}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily const std\+::string\& xml\+::parser\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_aec89f21f76f2fa2b3c470df3c5b6faba}\label{classxml_1_1parser_aec89f21f76f2fa2b3c470df3c5b6faba}} 
+\index{xml::parser@{xml::parser}!value@{value}}
+\index{value@{value}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T xml\+::parser\+::value\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classxml_1_1parser_af44dc74301afe0d6f637c4d06a99bb3e}\label{classxml_1_1parser_af44dc74301afe0d6f637c4d06a99bb3e}} 
+\index{xml::parser@{xml::parser}!buf@{buf}}
+\index{buf@{buf}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{buf}{buf}}
+{\footnotesize\ttfamily const void$\ast$ xml\+::parser\+::buf}
+
+\mbox{\Hypertarget{classxml_1_1parser_accfc3ad9524574af26e7d47b51f59e69}\label{classxml_1_1parser_accfc3ad9524574af26e7d47b51f59e69}} 
+\index{xml::parser@{xml::parser}!is@{is}}
+\index{is@{is}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{is}{is}}
+{\footnotesize\ttfamily std\+::istream$\ast$ xml\+::parser\+::is}
+
+\mbox{\Hypertarget{classxml_1_1parser_a970f56d0a84e523f8d54539918b541cc}\label{classxml_1_1parser_a970f56d0a84e523f8d54539918b541cc}} 
+\index{xml::parser@{xml::parser}!receive\_attributes\_event@{receive\_attributes\_event}}
+\index{receive\_attributes\_event@{receive\_attributes\_event}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{receive\_attributes\_event}{receive\_attributes\_event}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}} xml\+::parser\+::receive\+\_\+attributes\+\_\+event = 0x0008\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a54c0d11b01d1ec1cd539cf848255497c}\label{classxml_1_1parser_a54c0d11b01d1ec1cd539cf848255497c}} 
+\index{xml::parser@{xml::parser}!receive\_attributes\_map@{receive\_attributes\_map}}
+\index{receive\_attributes\_map@{receive\_attributes\_map}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{receive\_attributes\_map}{receive\_attributes\_map}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}} xml\+::parser\+::receive\+\_\+attributes\+\_\+map = 0x0004\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_afa50c85ad19e0204dfa24cf425d110b2}\label{classxml_1_1parser_afa50c85ad19e0204dfa24cf425d110b2}} 
+\index{xml::parser@{xml::parser}!receive\_characters@{receive\_characters}}
+\index{receive\_characters@{receive\_characters}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{receive\_characters}{receive\_characters}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}} xml\+::parser\+::receive\+\_\+characters = 0x0002\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a455a5d76cbc7bfa012bf103db493861d}\label{classxml_1_1parser_a455a5d76cbc7bfa012bf103db493861d}} 
+\index{xml::parser@{xml::parser}!receive\_default@{receive\_default}}
+\index{receive\_default@{receive\_default}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{receive\_default}{receive\_default}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}} xml\+::parser\+::receive\+\_\+default\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{classxml_1_1parser_aab00bbf1ff2a96452f1b9264fb1c1bc6}{receive\_elements}} |}
+\DoxyCodeLine{                                                \mbox{\hyperlink{classxml_1_1parser_afa50c85ad19e0204dfa24cf425d110b2}{receive\_characters}} |}
+\DoxyCodeLine{                                                \mbox{\hyperlink{classxml_1_1parser_a54c0d11b01d1ec1cd539cf848255497c}{receive\_attributes\_map}}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classxml_1_1parser_aab00bbf1ff2a96452f1b9264fb1c1bc6}\label{classxml_1_1parser_aab00bbf1ff2a96452f1b9264fb1c1bc6}} 
+\index{xml::parser@{xml::parser}!receive\_elements@{receive\_elements}}
+\index{receive\_elements@{receive\_elements}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{receive\_elements}{receive\_elements}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}} xml\+::parser\+::receive\+\_\+elements = 0x0001\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classxml_1_1parser_a498d8cf3e1b7b6db26e5bb06ddbe9cee}\label{classxml_1_1parser_a498d8cf3e1b7b6db26e5bb06ddbe9cee}} 
+\index{xml::parser@{xml::parser}!receive\_namespace\_decls@{receive\_namespace\_decls}}
+\index{receive\_namespace\_decls@{receive\_namespace\_decls}!xml::parser@{xml::parser}}
+\doxysubsubsection{\texorpdfstring{receive\_namespace\_decls}{receive\_namespace\_decls}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}} xml\+::parser\+::receive\+\_\+namespace\+\_\+decls = 0x0010\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/libstudxml/libstudxml/\mbox{\hyperlink{parser_8hxx}{parser.\+hxx}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/libstudxml/libstudxml/\mbox{\hyperlink{parser_8cxx}{parser.\+cxx}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/libstudxml/libstudxml/\mbox{\hyperlink{parser_8ixx}{parser.\+ixx}}\end{DoxyCompactItemize}

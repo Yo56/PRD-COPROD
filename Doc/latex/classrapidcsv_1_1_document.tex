@@ -1,0 +1,880 @@
+\hypertarget{classrapidcsv_1_1_document}{}\doxysection{rapidcsv\+::Document Class Reference}
+\label{classrapidcsv_1_1_document}\index{rapidcsv::Document@{rapidcsv::Document}}
+
+
+Class representing a CSV document.  
+
+
+
+
+{\ttfamily \#include $<$rapidcsv.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrapidcsv_1_1_document_a26a37ce6f20f5a0aae31b88e1ac4982e}{Document}} (const std\+::string \&p\+Path=std\+::string(), const \mbox{\hyperlink{structrapidcsv_1_1_label_params}{Label\+Params}} \&p\+Label\+Params=\mbox{\hyperlink{structrapidcsv_1_1_label_params}{Label\+Params}}(), const \mbox{\hyperlink{structrapidcsv_1_1_separator_params}{Separator\+Params}} \&p\+Separator\+Params=\mbox{\hyperlink{structrapidcsv_1_1_separator_params}{Separator\+Params}}(), const \mbox{\hyperlink{structrapidcsv_1_1_converter_params}{Converter\+Params}} \&p\+Converter\+Params=\mbox{\hyperlink{structrapidcsv_1_1_converter_params}{Converter\+Params}}())
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrapidcsv_1_1_document_ac2b09db2901fc5945bb7eb0064c43bdd}{Document}} (std\+::istream \&p\+Stream, const \mbox{\hyperlink{structrapidcsv_1_1_label_params}{Label\+Params}} \&p\+Label\+Params=\mbox{\hyperlink{structrapidcsv_1_1_label_params}{Label\+Params}}(), const \mbox{\hyperlink{structrapidcsv_1_1_separator_params}{Separator\+Params}} \&p\+Separator\+Params=\mbox{\hyperlink{structrapidcsv_1_1_separator_params}{Separator\+Params}}(), const \mbox{\hyperlink{structrapidcsv_1_1_converter_params}{Converter\+Params}} \&p\+Converter\+Params=\mbox{\hyperlink{structrapidcsv_1_1_converter_params}{Converter\+Params}}())
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrapidcsv_1_1_document_a55ea19679c1118af87b4ab42d2eff4a5}{Load}} (const std\+::string \&p\+Path)
+\begin{DoxyCompactList}\small\item\em Read \mbox{\hyperlink{classrapidcsv_1_1_document}{Document}} data from file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrapidcsv_1_1_document_ab129dd8e98fd623a8b404c4f7bc8ec95}{Load}} (std\+::istream \&p\+Stream)
+\begin{DoxyCompactList}\small\item\em Read \mbox{\hyperlink{classrapidcsv_1_1_document}{Document}} data from stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrapidcsv_1_1_document_a9a20f5cb294ac8e28d312dc3665957fe}{Save}} (const std\+::string \&p\+Path=std\+::string())
+\begin{DoxyCompactList}\small\item\em Write \mbox{\hyperlink{classrapidcsv_1_1_document}{Document}} data to file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrapidcsv_1_1_document_ab0f3254e4cbe582c37395b81f5306e80}{Save}} (std\+::ostream \&p\+Stream)
+\begin{DoxyCompactList}\small\item\em Write \mbox{\hyperlink{classrapidcsv_1_1_document}{Document}} data to stream. \end{DoxyCompactList}\item 
+ssize\+\_\+t \mbox{\hyperlink{classrapidcsv_1_1_document_a097839da89b8be79bbd0a346a0bb7509}{Get\+Column\+Idx}} (const std\+::string \&p\+Column\+Name) const
+\begin{DoxyCompactList}\small\item\em Get column index by name. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{classrapidcsv_1_1_document_a59e6b2b71efa630b0be8c55d349fb0b8}{Get\+Column}} (const size\+\_\+t p\+Column\+Idx) const
+\begin{DoxyCompactList}\small\item\em Get column by index. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{classrapidcsv_1_1_document_af1aa3f4dcbcd2513522465369584cd75}{Get\+Column}} (const size\+\_\+t p\+Column\+Idx, \mbox{\hyperlink{namespacerapidcsv_a5322d7b37e7e9580d68775714e0dff10}{Conv\+Func}}$<$ T $>$ p\+To\+Val) const
+\begin{DoxyCompactList}\small\item\em Get column by index. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{classrapidcsv_1_1_document_a58380ae48f70f6e7110a905b45fea229}{Get\+Column}} (const std\+::string \&p\+Column\+Name) const
+\begin{DoxyCompactList}\small\item\em Get column by name. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{classrapidcsv_1_1_document_ad92a31a92917afab0c35bc577a903b89}{Get\+Column}} (const std\+::string \&p\+Column\+Name, \mbox{\hyperlink{namespacerapidcsv_a5322d7b37e7e9580d68775714e0dff10}{Conv\+Func}}$<$ T $>$ p\+To\+Val) const
+\begin{DoxyCompactList}\small\item\em Get column by name. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classrapidcsv_1_1_document_ae48da50147082a34218c193f93c57259}{Set\+Column}} (const size\+\_\+t p\+Column\+Idx, const std\+::vector$<$ T $>$ \&p\+Column)
+\begin{DoxyCompactList}\small\item\em Set column by index. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classrapidcsv_1_1_document_ab5dcf985afb50279580c751e0f7eec79}{Set\+Column}} (const std\+::string \&p\+Column\+Name, const std\+::vector$<$ T $>$ \&p\+Column)
+\begin{DoxyCompactList}\small\item\em Set column by name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrapidcsv_1_1_document_a1e736e932b9162f74ce6188937099c7d}{Remove\+Column}} (const size\+\_\+t p\+Column\+Idx)
+\begin{DoxyCompactList}\small\item\em Remove column by index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrapidcsv_1_1_document_acf7432447c7fd1308c3b30ebabea6440}{Remove\+Column}} (const std\+::string \&p\+Column\+Name)
+\begin{DoxyCompactList}\small\item\em Remove column by name. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classrapidcsv_1_1_document_ae56d9b1d6b3b0037371032ba0dc0ee5c}{Get\+Column\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get number of data columns (excluding label columns). \end{DoxyCompactList}\item 
+ssize\+\_\+t \mbox{\hyperlink{classrapidcsv_1_1_document_a9c0d1a978bb9b764d13722219b0f4886}{Get\+Row\+Idx}} (const std\+::string \&p\+Row\+Name) const
+\begin{DoxyCompactList}\small\item\em Get row index by name. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{classrapidcsv_1_1_document_a1523dd4eab5d7268f5c7a64867001595}{Get\+Row}} (const size\+\_\+t p\+Row\+Idx) const
+\begin{DoxyCompactList}\small\item\em Get row by index. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{classrapidcsv_1_1_document_a23eb34d1e433ef6d6bc5130f589c4d5a}{Get\+Row}} (const size\+\_\+t p\+Row\+Idx, \mbox{\hyperlink{namespacerapidcsv_a5322d7b37e7e9580d68775714e0dff10}{Conv\+Func}}$<$ T $>$ p\+To\+Val) const
+\begin{DoxyCompactList}\small\item\em Get row by index. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{classrapidcsv_1_1_document_a71e274f4c612ac74fc8804c0b90a5839}{Get\+Row}} (const std\+::string \&p\+Row\+Name) const
+\begin{DoxyCompactList}\small\item\em Get row by name. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{classrapidcsv_1_1_document_aedfb81004014592afbc900c7bfad5b0b}{Get\+Row}} (const std\+::string \&p\+Row\+Name, \mbox{\hyperlink{namespacerapidcsv_a5322d7b37e7e9580d68775714e0dff10}{Conv\+Func}}$<$ T $>$ p\+To\+Val) const
+\begin{DoxyCompactList}\small\item\em Get row by name. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classrapidcsv_1_1_document_a66ad9bc5f756fd0265b6852a325e3e43}{Set\+Row}} (const size\+\_\+t p\+Row\+Idx, const std\+::vector$<$ T $>$ \&p\+Row)
+\begin{DoxyCompactList}\small\item\em Set row by index. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classrapidcsv_1_1_document_a11d51fe0ab92ed52822e68edb6848b96}{Set\+Row}} (const std\+::string \&p\+Row\+Name, const std\+::vector$<$ T $>$ \&p\+Row)
+\begin{DoxyCompactList}\small\item\em Set row by name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrapidcsv_1_1_document_adbcc87ce353137b900b135c42213b78e}{Remove\+Row}} (const size\+\_\+t p\+Row\+Idx)
+\begin{DoxyCompactList}\small\item\em Remove row by index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrapidcsv_1_1_document_a43504afd4fc6e2912e0d004bc841425b}{Remove\+Row}} (const std\+::string \&p\+Row\+Name)
+\begin{DoxyCompactList}\small\item\em Remove row by name. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classrapidcsv_1_1_document_af8d77c33b83ceb7d7be284555db1f09f}{Get\+Row\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get number of data rows (excluding label rows). \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classrapidcsv_1_1_document_a57574b0b63080f7cc270a0ca1e092676}{Get\+Cell}} (const size\+\_\+t p\+Column\+Idx, const size\+\_\+t p\+Row\+Idx) const
+\begin{DoxyCompactList}\small\item\em Get cell by index. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classrapidcsv_1_1_document_a475e75a7292c3a0367b4bce92c9404f5}{Get\+Cell}} (const size\+\_\+t p\+Column\+Idx, const size\+\_\+t p\+Row\+Idx, \mbox{\hyperlink{namespacerapidcsv_a5322d7b37e7e9580d68775714e0dff10}{Conv\+Func}}$<$ T $>$ p\+To\+Val) const
+\begin{DoxyCompactList}\small\item\em Get cell by index. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classrapidcsv_1_1_document_a166f1e2052d1da87e37f84d104070d05}{Get\+Cell}} (const std\+::string \&p\+Column\+Name, const std\+::string \&p\+Row\+Name) const
+\begin{DoxyCompactList}\small\item\em Get cell by name. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classrapidcsv_1_1_document_a9ffdef4e04691991470df4c49b7133f1}{Get\+Cell}} (const std\+::string \&p\+Column\+Name, const std\+::string \&p\+Row\+Name, \mbox{\hyperlink{namespacerapidcsv_a5322d7b37e7e9580d68775714e0dff10}{Conv\+Func}}$<$ T $>$ p\+To\+Val) const
+\begin{DoxyCompactList}\small\item\em Get cell by name. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classrapidcsv_1_1_document_a93d4a249d7d193bfdc0874ef4e2e716c}{Get\+Cell}} (const std\+::string \&p\+Column\+Name, const size\+\_\+t p\+Row\+Idx) const
+\begin{DoxyCompactList}\small\item\em Get cell by column name and row index. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classrapidcsv_1_1_document_af5af1480a4456347fade6354f7d47d8e}{Get\+Cell}} (const std\+::string \&p\+Column\+Name, const size\+\_\+t p\+Row\+Idx, \mbox{\hyperlink{namespacerapidcsv_a5322d7b37e7e9580d68775714e0dff10}{Conv\+Func}}$<$ T $>$ p\+To\+Val) const
+\begin{DoxyCompactList}\small\item\em Get cell by column name and row index. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classrapidcsv_1_1_document_a35499f9c2ad3f708449be46e191d8748}{Get\+Cell}} (const size\+\_\+t p\+Column\+Idx, const std\+::string \&p\+Row\+Name) const
+\begin{DoxyCompactList}\small\item\em Get cell by column index and row name. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classrapidcsv_1_1_document_aa0a96f88a453454a5724dd06844e86f2}{Get\+Cell}} (const size\+\_\+t p\+Column\+Idx, const std\+::string \&p\+Row\+Name, \mbox{\hyperlink{namespacerapidcsv_a5322d7b37e7e9580d68775714e0dff10}{Conv\+Func}}$<$ T $>$ p\+To\+Val) const
+\begin{DoxyCompactList}\small\item\em Get cell by column index and row name. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classrapidcsv_1_1_document_a898aaeab0412ad7de186f669194569f8}{Set\+Cell}} (const size\+\_\+t p\+Column\+Idx, const size\+\_\+t p\+Row\+Idx, const T \&p\+Cell)
+\begin{DoxyCompactList}\small\item\em Set cell by index. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classrapidcsv_1_1_document_ab90e2c413dbdaf29d013d975bf3d1d53}{Set\+Cell}} (const std\+::string \&p\+Column\+Name, const std\+::string \&p\+Row\+Name, const T \&p\+Cell)
+\begin{DoxyCompactList}\small\item\em Set cell by name. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classrapidcsv_1_1_document_ab99520d4b0d4846c072cd131a65639a5}{Get\+Column\+Name}} (const ssize\+\_\+t p\+Column\+Idx)
+\begin{DoxyCompactList}\small\item\em Get column name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrapidcsv_1_1_document_a4c9c8e85a9ccefea28068c460ebb725e}{Set\+Column\+Name}} (size\+\_\+t p\+Column\+Idx, const std\+::string \&p\+Column\+Name)
+\begin{DoxyCompactList}\small\item\em Set column name. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classrapidcsv_1_1_document_a90c8562f50d27cae80623ba9bbfd3d95}{Get\+Column\+Names}} ()
+\begin{DoxyCompactList}\small\item\em Get column names. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classrapidcsv_1_1_document_a02d314902c106a20404d834a18cb5fd1}{Get\+Row\+Name}} (const ssize\+\_\+t p\+Row\+Idx)
+\begin{DoxyCompactList}\small\item\em Get row name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrapidcsv_1_1_document_a5596b4c6751e883584bacf3922316eab}{Set\+Row\+Name}} (size\+\_\+t p\+Row\+Idx, const std\+::string \&p\+Row\+Name)
+\begin{DoxyCompactList}\small\item\em Set row name. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classrapidcsv_1_1_document_a0056283ff602ee5936dabae43e51b0ba}{Get\+Row\+Names}} ()
+\begin{DoxyCompactList}\small\item\em Get row names. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a CSV document. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a26a37ce6f20f5a0aae31b88e1ac4982e}\label{classrapidcsv_1_1_document_a26a37ce6f20f5a0aae31b88e1ac4982e}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!Document@{Document}}
+\index{Document@{Document}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{Document()}{Document()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily rapidcsv\+::\+Document\+::\+Document (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Path = {\ttfamily std\+:\+:string()},  }\item[{const \mbox{\hyperlink{structrapidcsv_1_1_label_params}{Label\+Params}} \&}]{p\+Label\+Params = {\ttfamily \mbox{\hyperlink{structrapidcsv_1_1_label_params}{Label\+Params}}()},  }\item[{const \mbox{\hyperlink{structrapidcsv_1_1_separator_params}{Separator\+Params}} \&}]{p\+Separator\+Params = {\ttfamily \mbox{\hyperlink{structrapidcsv_1_1_separator_params}{Separator\+Params}}()},  }\item[{const \mbox{\hyperlink{structrapidcsv_1_1_converter_params}{Converter\+Params}} \&}]{p\+Converter\+Params = {\ttfamily \mbox{\hyperlink{structrapidcsv_1_1_converter_params}{Converter\+Params}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Path} & specifies the path of an existing CSV-\/file to populate the \mbox{\hyperlink{classrapidcsv_1_1_document}{Document}} data with. \\
+\hline
+{\em p\+Label\+Params} & specifies which row and column should be treated as labels. \\
+\hline
+{\em p\+Separator\+Params} & specifies which field and row separators should be used. \\
+\hline
+{\em p\+Converter\+Params} & specifies how invalid numbers (including empty strings) should be handled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_ac2b09db2901fc5945bb7eb0064c43bdd}\label{classrapidcsv_1_1_document_ac2b09db2901fc5945bb7eb0064c43bdd}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!Document@{Document}}
+\index{Document@{Document}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{Document()}{Document()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily rapidcsv\+::\+Document\+::\+Document (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{p\+Stream,  }\item[{const \mbox{\hyperlink{structrapidcsv_1_1_label_params}{Label\+Params}} \&}]{p\+Label\+Params = {\ttfamily \mbox{\hyperlink{structrapidcsv_1_1_label_params}{Label\+Params}}()},  }\item[{const \mbox{\hyperlink{structrapidcsv_1_1_separator_params}{Separator\+Params}} \&}]{p\+Separator\+Params = {\ttfamily \mbox{\hyperlink{structrapidcsv_1_1_separator_params}{Separator\+Params}}()},  }\item[{const \mbox{\hyperlink{structrapidcsv_1_1_converter_params}{Converter\+Params}} \&}]{p\+Converter\+Params = {\ttfamily \mbox{\hyperlink{structrapidcsv_1_1_converter_params}{Converter\+Params}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Stream} & specifies an input stream to read CSV data from. \\
+\hline
+{\em p\+Label\+Params} & specifies which row and column should be treated as labels. \\
+\hline
+{\em p\+Separator\+Params} & specifies which field and row separators should be used. \\
+\hline
+{\em p\+Converter\+Params} & specifies how invalid numbers (including empty strings) should be handled. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a57574b0b63080f7cc270a0ca1e092676}\label{classrapidcsv_1_1_document_a57574b0b63080f7cc270a0ca1e092676}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetCell@{GetCell}}
+\index{GetCell@{GetCell}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetCell()}{GetCell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T rapidcsv\+::\+Document\+::\+Get\+Cell (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{p\+Column\+Idx,  }\item[{const size\+\_\+t}]{p\+Row\+Idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get cell by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Idx} & zero-\/based column index. \\
+\hline
+{\em p\+Row\+Idx} & zero-\/based row index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cell data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a475e75a7292c3a0367b4bce92c9404f5}\label{classrapidcsv_1_1_document_a475e75a7292c3a0367b4bce92c9404f5}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetCell@{GetCell}}
+\index{GetCell@{GetCell}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetCell()}{GetCell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T rapidcsv\+::\+Document\+::\+Get\+Cell (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{p\+Column\+Idx,  }\item[{const size\+\_\+t}]{p\+Row\+Idx,  }\item[{\mbox{\hyperlink{namespacerapidcsv_a5322d7b37e7e9580d68775714e0dff10}{Conv\+Func}}$<$ T $>$}]{p\+To\+Val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get cell by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Idx} & zero-\/based column index. \\
+\hline
+{\em p\+Row\+Idx} & zero-\/based row index. \\
+\hline
+{\em p\+To\+Val} & conversion function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cell data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a35499f9c2ad3f708449be46e191d8748}\label{classrapidcsv_1_1_document_a35499f9c2ad3f708449be46e191d8748}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetCell@{GetCell}}
+\index{GetCell@{GetCell}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetCell()}{GetCell()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T rapidcsv\+::\+Document\+::\+Get\+Cell (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{p\+Column\+Idx,  }\item[{const std\+::string \&}]{p\+Row\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get cell by column index and row name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Idx} & zero-\/based column index. \\
+\hline
+{\em p\+Row\+Name} & row label name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cell data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_aa0a96f88a453454a5724dd06844e86f2}\label{classrapidcsv_1_1_document_aa0a96f88a453454a5724dd06844e86f2}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetCell@{GetCell}}
+\index{GetCell@{GetCell}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetCell()}{GetCell()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T rapidcsv\+::\+Document\+::\+Get\+Cell (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{p\+Column\+Idx,  }\item[{const std\+::string \&}]{p\+Row\+Name,  }\item[{\mbox{\hyperlink{namespacerapidcsv_a5322d7b37e7e9580d68775714e0dff10}{Conv\+Func}}$<$ T $>$}]{p\+To\+Val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get cell by column index and row name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Idx} & zero-\/based column index. \\
+\hline
+{\em p\+Row\+Name} & row label name. \\
+\hline
+{\em p\+To\+Val} & conversion function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cell data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a93d4a249d7d193bfdc0874ef4e2e716c}\label{classrapidcsv_1_1_document_a93d4a249d7d193bfdc0874ef4e2e716c}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetCell@{GetCell}}
+\index{GetCell@{GetCell}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetCell()}{GetCell()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T rapidcsv\+::\+Document\+::\+Get\+Cell (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Column\+Name,  }\item[{const size\+\_\+t}]{p\+Row\+Idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get cell by column name and row index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Name} & column label name. \\
+\hline
+{\em p\+Row\+Idx} & zero-\/based row index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cell data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_af5af1480a4456347fade6354f7d47d8e}\label{classrapidcsv_1_1_document_af5af1480a4456347fade6354f7d47d8e}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetCell@{GetCell}}
+\index{GetCell@{GetCell}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetCell()}{GetCell()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T rapidcsv\+::\+Document\+::\+Get\+Cell (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Column\+Name,  }\item[{const size\+\_\+t}]{p\+Row\+Idx,  }\item[{\mbox{\hyperlink{namespacerapidcsv_a5322d7b37e7e9580d68775714e0dff10}{Conv\+Func}}$<$ T $>$}]{p\+To\+Val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get cell by column name and row index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Name} & column label name. \\
+\hline
+{\em p\+Row\+Idx} & zero-\/based row index. \\
+\hline
+{\em p\+To\+Val} & conversion function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cell data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a166f1e2052d1da87e37f84d104070d05}\label{classrapidcsv_1_1_document_a166f1e2052d1da87e37f84d104070d05}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetCell@{GetCell}}
+\index{GetCell@{GetCell}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetCell()}{GetCell()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T rapidcsv\+::\+Document\+::\+Get\+Cell (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Column\+Name,  }\item[{const std\+::string \&}]{p\+Row\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get cell by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Name} & column label name. \\
+\hline
+{\em p\+Row\+Name} & row label name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cell data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a9ffdef4e04691991470df4c49b7133f1}\label{classrapidcsv_1_1_document_a9ffdef4e04691991470df4c49b7133f1}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetCell@{GetCell}}
+\index{GetCell@{GetCell}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetCell()}{GetCell()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T rapidcsv\+::\+Document\+::\+Get\+Cell (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Column\+Name,  }\item[{const std\+::string \&}]{p\+Row\+Name,  }\item[{\mbox{\hyperlink{namespacerapidcsv_a5322d7b37e7e9580d68775714e0dff10}{Conv\+Func}}$<$ T $>$}]{p\+To\+Val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get cell by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Name} & column label name. \\
+\hline
+{\em p\+Row\+Name} & row label name. \\
+\hline
+{\em p\+To\+Val} & conversion function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cell data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a59e6b2b71efa630b0be8c55d349fb0b8}\label{classrapidcsv_1_1_document_a59e6b2b71efa630b0be8c55d349fb0b8}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetColumn@{GetColumn}}
+\index{GetColumn@{GetColumn}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetColumn()}{GetColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$T$>$ rapidcsv\+::\+Document\+::\+Get\+Column (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{p\+Column\+Idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get column by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Idx} & zero-\/based column index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of column data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_af1aa3f4dcbcd2513522465369584cd75}\label{classrapidcsv_1_1_document_af1aa3f4dcbcd2513522465369584cd75}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetColumn@{GetColumn}}
+\index{GetColumn@{GetColumn}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetColumn()}{GetColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$T$>$ rapidcsv\+::\+Document\+::\+Get\+Column (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{p\+Column\+Idx,  }\item[{\mbox{\hyperlink{namespacerapidcsv_a5322d7b37e7e9580d68775714e0dff10}{Conv\+Func}}$<$ T $>$}]{p\+To\+Val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get column by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Idx} & zero-\/based column index. \\
+\hline
+{\em p\+To\+Val} & conversion function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of column data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a58380ae48f70f6e7110a905b45fea229}\label{classrapidcsv_1_1_document_a58380ae48f70f6e7110a905b45fea229}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetColumn@{GetColumn}}
+\index{GetColumn@{GetColumn}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetColumn()}{GetColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$T$>$ rapidcsv\+::\+Document\+::\+Get\+Column (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Column\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get column by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Name} & column label name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of column data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_ad92a31a92917afab0c35bc577a903b89}\label{classrapidcsv_1_1_document_ad92a31a92917afab0c35bc577a903b89}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetColumn@{GetColumn}}
+\index{GetColumn@{GetColumn}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetColumn()}{GetColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$T$>$ rapidcsv\+::\+Document\+::\+Get\+Column (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Column\+Name,  }\item[{\mbox{\hyperlink{namespacerapidcsv_a5322d7b37e7e9580d68775714e0dff10}{Conv\+Func}}$<$ T $>$}]{p\+To\+Val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get column by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Name} & column label name. \\
+\hline
+{\em p\+To\+Val} & conversion function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of column data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_ae56d9b1d6b3b0037371032ba0dc0ee5c}\label{classrapidcsv_1_1_document_ae56d9b1d6b3b0037371032ba0dc0ee5c}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetColumnCount@{GetColumnCount}}
+\index{GetColumnCount@{GetColumnCount}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetColumnCount()}{GetColumnCount()}}
+{\footnotesize\ttfamily size\+\_\+t rapidcsv\+::\+Document\+::\+Get\+Column\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get number of data columns (excluding label columns). 
+
+\begin{DoxyReturn}{Returns}
+column count. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a097839da89b8be79bbd0a346a0bb7509}\label{classrapidcsv_1_1_document_a097839da89b8be79bbd0a346a0bb7509}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetColumnIdx@{GetColumnIdx}}
+\index{GetColumnIdx@{GetColumnIdx}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetColumnIdx()}{GetColumnIdx()}}
+{\footnotesize\ttfamily ssize\+\_\+t rapidcsv\+::\+Document\+::\+Get\+Column\+Idx (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Column\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get column index by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Name} & column label name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zero-\/based column index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_ab99520d4b0d4846c072cd131a65639a5}\label{classrapidcsv_1_1_document_ab99520d4b0d4846c072cd131a65639a5}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetColumnName@{GetColumnName}}
+\index{GetColumnName@{GetColumnName}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetColumnName()}{GetColumnName()}}
+{\footnotesize\ttfamily std\+::string rapidcsv\+::\+Document\+::\+Get\+Column\+Name (\begin{DoxyParamCaption}\item[{const ssize\+\_\+t}]{p\+Column\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get column name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Idx} & zero-\/based column index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+column name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a90c8562f50d27cae80623ba9bbfd3d95}\label{classrapidcsv_1_1_document_a90c8562f50d27cae80623ba9bbfd3d95}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetColumnNames@{GetColumnNames}}
+\index{GetColumnNames@{GetColumnNames}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetColumnNames()}{GetColumnNames()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ rapidcsv\+::\+Document\+::\+Get\+Column\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get column names. 
+
+\begin{DoxyReturn}{Returns}
+vector of column names. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a1523dd4eab5d7268f5c7a64867001595}\label{classrapidcsv_1_1_document_a1523dd4eab5d7268f5c7a64867001595}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetRow@{GetRow}}
+\index{GetRow@{GetRow}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetRow()}{GetRow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$T$>$ rapidcsv\+::\+Document\+::\+Get\+Row (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{p\+Row\+Idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get row by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Row\+Idx} & zero-\/based row index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of row data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a23eb34d1e433ef6d6bc5130f589c4d5a}\label{classrapidcsv_1_1_document_a23eb34d1e433ef6d6bc5130f589c4d5a}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetRow@{GetRow}}
+\index{GetRow@{GetRow}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetRow()}{GetRow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$T$>$ rapidcsv\+::\+Document\+::\+Get\+Row (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{p\+Row\+Idx,  }\item[{\mbox{\hyperlink{namespacerapidcsv_a5322d7b37e7e9580d68775714e0dff10}{Conv\+Func}}$<$ T $>$}]{p\+To\+Val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get row by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Row\+Idx} & zero-\/based row index. \\
+\hline
+{\em p\+To\+Val} & conversion function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of row data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a71e274f4c612ac74fc8804c0b90a5839}\label{classrapidcsv_1_1_document_a71e274f4c612ac74fc8804c0b90a5839}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetRow@{GetRow}}
+\index{GetRow@{GetRow}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetRow()}{GetRow()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$T$>$ rapidcsv\+::\+Document\+::\+Get\+Row (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Row\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get row by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Row\+Name} & row label name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of row data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_aedfb81004014592afbc900c7bfad5b0b}\label{classrapidcsv_1_1_document_aedfb81004014592afbc900c7bfad5b0b}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetRow@{GetRow}}
+\index{GetRow@{GetRow}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetRow()}{GetRow()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$T$>$ rapidcsv\+::\+Document\+::\+Get\+Row (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Row\+Name,  }\item[{\mbox{\hyperlink{namespacerapidcsv_a5322d7b37e7e9580d68775714e0dff10}{Conv\+Func}}$<$ T $>$}]{p\+To\+Val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get row by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Row\+Name} & row label name. \\
+\hline
+{\em p\+To\+Val} & conversion function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of row data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_af8d77c33b83ceb7d7be284555db1f09f}\label{classrapidcsv_1_1_document_af8d77c33b83ceb7d7be284555db1f09f}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetRowCount@{GetRowCount}}
+\index{GetRowCount@{GetRowCount}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetRowCount()}{GetRowCount()}}
+{\footnotesize\ttfamily size\+\_\+t rapidcsv\+::\+Document\+::\+Get\+Row\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get number of data rows (excluding label rows). 
+
+\begin{DoxyReturn}{Returns}
+row count. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a9c0d1a978bb9b764d13722219b0f4886}\label{classrapidcsv_1_1_document_a9c0d1a978bb9b764d13722219b0f4886}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetRowIdx@{GetRowIdx}}
+\index{GetRowIdx@{GetRowIdx}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetRowIdx()}{GetRowIdx()}}
+{\footnotesize\ttfamily ssize\+\_\+t rapidcsv\+::\+Document\+::\+Get\+Row\+Idx (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Row\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get row index by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Row\+Name} & row label name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zero-\/based row index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a02d314902c106a20404d834a18cb5fd1}\label{classrapidcsv_1_1_document_a02d314902c106a20404d834a18cb5fd1}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetRowName@{GetRowName}}
+\index{GetRowName@{GetRowName}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetRowName()}{GetRowName()}}
+{\footnotesize\ttfamily std\+::string rapidcsv\+::\+Document\+::\+Get\+Row\+Name (\begin{DoxyParamCaption}\item[{const ssize\+\_\+t}]{p\+Row\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get row name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Row\+Idx} & zero-\/based column index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+row name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a0056283ff602ee5936dabae43e51b0ba}\label{classrapidcsv_1_1_document_a0056283ff602ee5936dabae43e51b0ba}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!GetRowNames@{GetRowNames}}
+\index{GetRowNames@{GetRowNames}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{GetRowNames()}{GetRowNames()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ rapidcsv\+::\+Document\+::\+Get\+Row\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get row names. 
+
+\begin{DoxyReturn}{Returns}
+vector of row names. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a55ea19679c1118af87b4ab42d2eff4a5}\label{classrapidcsv_1_1_document_a55ea19679c1118af87b4ab42d2eff4a5}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!Load@{Load}}
+\index{Load@{Load}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void rapidcsv\+::\+Document\+::\+Load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Read \mbox{\hyperlink{classrapidcsv_1_1_document}{Document}} data from file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Path} & specifies the path of an existing CSV-\/file to populate the \mbox{\hyperlink{classrapidcsv_1_1_document}{Document}} data with. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_ab129dd8e98fd623a8b404c4f7bc8ec95}\label{classrapidcsv_1_1_document_ab129dd8e98fd623a8b404c4f7bc8ec95}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!Load@{Load}}
+\index{Load@{Load}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void rapidcsv\+::\+Document\+::\+Load (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{p\+Stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Read \mbox{\hyperlink{classrapidcsv_1_1_document}{Document}} data from stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Stream} & specifies an input stream to read CSV data from. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a1e736e932b9162f74ce6188937099c7d}\label{classrapidcsv_1_1_document_a1e736e932b9162f74ce6188937099c7d}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!RemoveColumn@{RemoveColumn}}
+\index{RemoveColumn@{RemoveColumn}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{RemoveColumn()}{RemoveColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void rapidcsv\+::\+Document\+::\+Remove\+Column (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{p\+Column\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove column by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Idx} & zero-\/based column index. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_acf7432447c7fd1308c3b30ebabea6440}\label{classrapidcsv_1_1_document_acf7432447c7fd1308c3b30ebabea6440}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!RemoveColumn@{RemoveColumn}}
+\index{RemoveColumn@{RemoveColumn}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{RemoveColumn()}{RemoveColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void rapidcsv\+::\+Document\+::\+Remove\+Column (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Column\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove column by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Name} & column label name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_adbcc87ce353137b900b135c42213b78e}\label{classrapidcsv_1_1_document_adbcc87ce353137b900b135c42213b78e}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!RemoveRow@{RemoveRow}}
+\index{RemoveRow@{RemoveRow}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{RemoveRow()}{RemoveRow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void rapidcsv\+::\+Document\+::\+Remove\+Row (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{p\+Row\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove row by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Row\+Idx} & zero-\/based row index. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a43504afd4fc6e2912e0d004bc841425b}\label{classrapidcsv_1_1_document_a43504afd4fc6e2912e0d004bc841425b}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!RemoveRow@{RemoveRow}}
+\index{RemoveRow@{RemoveRow}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{RemoveRow()}{RemoveRow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void rapidcsv\+::\+Document\+::\+Remove\+Row (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Row\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove row by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Row\+Name} & row label name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a9a20f5cb294ac8e28d312dc3665957fe}\label{classrapidcsv_1_1_document_a9a20f5cb294ac8e28d312dc3665957fe}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!Save@{Save}}
+\index{Save@{Save}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{Save()}{Save()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void rapidcsv\+::\+Document\+::\+Save (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Path = {\ttfamily std\+:\+:string()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Write \mbox{\hyperlink{classrapidcsv_1_1_document}{Document}} data to file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Path} & optionally specifies the path where the CSV-\/file will be created (if not specified, the original path provided when creating or loading the \mbox{\hyperlink{classrapidcsv_1_1_document}{Document}} data will be used). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_ab0f3254e4cbe582c37395b81f5306e80}\label{classrapidcsv_1_1_document_ab0f3254e4cbe582c37395b81f5306e80}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!Save@{Save}}
+\index{Save@{Save}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{Save()}{Save()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void rapidcsv\+::\+Document\+::\+Save (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{p\+Stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Write \mbox{\hyperlink{classrapidcsv_1_1_document}{Document}} data to stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Stream} & specifies an output stream to write the data to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a898aaeab0412ad7de186f669194569f8}\label{classrapidcsv_1_1_document_a898aaeab0412ad7de186f669194569f8}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!SetCell@{SetCell}}
+\index{SetCell@{SetCell}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{SetCell()}{SetCell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void rapidcsv\+::\+Document\+::\+Set\+Cell (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{p\+Column\+Idx,  }\item[{const size\+\_\+t}]{p\+Row\+Idx,  }\item[{const T \&}]{p\+Cell }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set cell by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Row\+Idx} & zero-\/based row index. \\
+\hline
+{\em p\+Column\+Idx} & zero-\/based column index. \\
+\hline
+{\em p\+Cell} & cell data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_ab90e2c413dbdaf29d013d975bf3d1d53}\label{classrapidcsv_1_1_document_ab90e2c413dbdaf29d013d975bf3d1d53}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!SetCell@{SetCell}}
+\index{SetCell@{SetCell}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{SetCell()}{SetCell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void rapidcsv\+::\+Document\+::\+Set\+Cell (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Column\+Name,  }\item[{const std\+::string \&}]{p\+Row\+Name,  }\item[{const T \&}]{p\+Cell }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set cell by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Name} & column label name. \\
+\hline
+{\em p\+Row\+Name} & row label name. \\
+\hline
+{\em p\+Cell} & cell data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_ae48da50147082a34218c193f93c57259}\label{classrapidcsv_1_1_document_ae48da50147082a34218c193f93c57259}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!SetColumn@{SetColumn}}
+\index{SetColumn@{SetColumn}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{SetColumn()}{SetColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void rapidcsv\+::\+Document\+::\+Set\+Column (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{p\+Column\+Idx,  }\item[{const std\+::vector$<$ T $>$ \&}]{p\+Column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set column by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Idx} & zero-\/based column index. \\
+\hline
+{\em p\+Column} & vector of column data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_ab5dcf985afb50279580c751e0f7eec79}\label{classrapidcsv_1_1_document_ab5dcf985afb50279580c751e0f7eec79}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!SetColumn@{SetColumn}}
+\index{SetColumn@{SetColumn}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{SetColumn()}{SetColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void rapidcsv\+::\+Document\+::\+Set\+Column (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Column\+Name,  }\item[{const std\+::vector$<$ T $>$ \&}]{p\+Column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set column by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Name} & column label name. \\
+\hline
+{\em p\+Column} & vector of column data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a4c9c8e85a9ccefea28068c460ebb725e}\label{classrapidcsv_1_1_document_a4c9c8e85a9ccefea28068c460ebb725e}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!SetColumnName@{SetColumnName}}
+\index{SetColumnName@{SetColumnName}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{SetColumnName()}{SetColumnName()}}
+{\footnotesize\ttfamily void rapidcsv\+::\+Document\+::\+Set\+Column\+Name (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p\+Column\+Idx,  }\item[{const std\+::string \&}]{p\+Column\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set column name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Column\+Idx} & zero-\/based column index. \\
+\hline
+{\em p\+Column\+Name} & column name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a66ad9bc5f756fd0265b6852a325e3e43}\label{classrapidcsv_1_1_document_a66ad9bc5f756fd0265b6852a325e3e43}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!SetRow@{SetRow}}
+\index{SetRow@{SetRow}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{SetRow()}{SetRow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void rapidcsv\+::\+Document\+::\+Set\+Row (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{p\+Row\+Idx,  }\item[{const std\+::vector$<$ T $>$ \&}]{p\+Row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set row by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Row\+Idx} & zero-\/based row index. \\
+\hline
+{\em p\+Row} & vector of row data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a11d51fe0ab92ed52822e68edb6848b96}\label{classrapidcsv_1_1_document_a11d51fe0ab92ed52822e68edb6848b96}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!SetRow@{SetRow}}
+\index{SetRow@{SetRow}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{SetRow()}{SetRow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void rapidcsv\+::\+Document\+::\+Set\+Row (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Row\+Name,  }\item[{const std\+::vector$<$ T $>$ \&}]{p\+Row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set row by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Row\+Name} & row label name. \\
+\hline
+{\em p\+Row} & vector of row data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrapidcsv_1_1_document_a5596b4c6751e883584bacf3922316eab}\label{classrapidcsv_1_1_document_a5596b4c6751e883584bacf3922316eab}} 
+\index{rapidcsv::Document@{rapidcsv::Document}!SetRowName@{SetRowName}}
+\index{SetRowName@{SetRowName}!rapidcsv::Document@{rapidcsv::Document}}
+\doxysubsubsection{\texorpdfstring{SetRowName()}{SetRowName()}}
+{\footnotesize\ttfamily void rapidcsv\+::\+Document\+::\+Set\+Row\+Name (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p\+Row\+Idx,  }\item[{const std\+::string \&}]{p\+Row\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set row name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Row\+Idx} & zero-\/based row index. \\
+\hline
+{\em p\+Row\+Name} & row name. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/\mbox{\hyperlink{rapidcsv_8h}{rapidcsv.\+h}}\end{DoxyCompactItemize}

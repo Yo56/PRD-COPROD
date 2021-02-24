@@ -1,0 +1,1709 @@
+\hypertarget{xmlparse_8c}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/xmlparse.c File Reference}
+\label{xmlparse_8c}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/xmlparse.c@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/xmlparse.c}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$libstudxml/details/expat/config.\+h$>$}\newline
+{\ttfamily \#include $<$libstudxml/details/expat/ascii.\+h$>$}\newline
+{\ttfamily \#include $<$libstudxml/details/expat/expat.\+h$>$}\newline
+{\ttfamily \#include $<$libstudxml/details/expat/internal.\+h$>$}\newline
+{\ttfamily \#include $<$libstudxml/details/expat/xmltok.\+h$>$}\newline
+{\ttfamily \#include $<$libstudxml/details/expat/xmlrole.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_n_a_m_e_d}{NAMED}}
+\item 
+struct \mbox{\hyperlink{struct_h_a_s_h___t_a_b_l_e}{HASH\+\_\+\+TABLE}}
+\item 
+struct \mbox{\hyperlink{struct_h_a_s_h___t_a_b_l_e___i_t_e_r}{HASH\+\_\+\+TABLE\+\_\+\+ITER}}
+\item 
+struct \mbox{\hyperlink{structbinding}{binding}}
+\item 
+struct \mbox{\hyperlink{structprefix}{prefix}}
+\item 
+struct \mbox{\hyperlink{struct_t_a_g___n_a_m_e}{TAG\+\_\+\+NAME}}
+\item 
+struct \mbox{\hyperlink{structtag}{tag}}
+\item 
+struct \mbox{\hyperlink{struct_e_n_t_i_t_y}{ENTITY}}
+\item 
+struct \mbox{\hyperlink{struct_c_o_n_t_e_n_t___s_c_a_f_f_o_l_d}{CONTENT\+\_\+\+SCAFFOLD}}
+\item 
+struct \mbox{\hyperlink{structblock}{block}}
+\item 
+struct \mbox{\hyperlink{struct_s_t_r_i_n_g___p_o_o_l}{STRING\+\_\+\+POOL}}
+\item 
+struct \mbox{\hyperlink{structattribute__id}{attribute\+\_\+id}}
+\item 
+struct \mbox{\hyperlink{struct_d_e_f_a_u_l_t___a_t_t_r_i_b_u_t_e}{DEFAULT\+\_\+\+ATTRIBUTE}}
+\item 
+struct \mbox{\hyperlink{struct_n_s___a_t_t}{NS\+\_\+\+ATT}}
+\item 
+struct \mbox{\hyperlink{struct_e_l_e_m_e_n_t___t_y_p_e}{ELEMENT\+\_\+\+TYPE}}
+\item 
+struct \mbox{\hyperlink{struct_d_t_d}{DTD}}
+\item 
+struct \mbox{\hyperlink{structopen__internal__entity}{open\+\_\+internal\+\_\+entity}}
+\item 
+struct \mbox{\hyperlink{struct_x_m_l___parser_struct}{XML\+\_\+\+Parser\+Struct}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a375b1d5bc99cff1692e0875ac1d8a953}{XML\+\_\+\+BUILDING\+\_\+\+EXPAT}}~1
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a361cb41d18ca477abbdbd2ea157d3557}{XML\+\_\+\+ENCODE\+\_\+\+MAX}}~\mbox{\hyperlink{xmltok_8h_a8fefe7b18536c40a32b581a2f40aa2fe}{XML\+\_\+\+UTF8\+\_\+\+ENCODE\+\_\+\+MAX}}
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a243c0ebc4d48626afba079cce7160dc0}{Xml\+Convert}}~\mbox{\hyperlink{xmltok_8h_a2b4273f95ae9afa03fd097aaa807be9e}{Xml\+Utf8\+Convert}}
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_aa0aa4b543a8778d25ce95b5a3550203b}{Xml\+Get\+Internal\+Encoding}}~\mbox{\hyperlink{xmltok_8h_a64165f5cd093ceab395d98e0cb80fc3d}{Xml\+Get\+Utf8\+Internal\+Encoding}}
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a7e11bb4c4079140bfe8a907490e87d52}{Xml\+Get\+Internal\+Encoding\+NS}}~\mbox{\hyperlink{xmltok_8h_a4111b4a4799b494f3f721f5675f0106c}{Xml\+Get\+Utf8\+Internal\+Encoding\+NS}}
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_affd43373927d22c9caad69f323506a3e}{Xml\+Encode}}~\mbox{\hyperlink{xmltok_8h_a56e56e234fd330d912619501fcc01054}{Xml\+Utf8\+Encode}}
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a62142e6359fd5641bb5e0678ca3e1dfe}{MUST\+\_\+\+CONVERT}}(enc,  s)~(!(enc)-\/$>$is\+Utf8)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_aabf84ba1b49d38a26cd4706af414f452}{Xml\+Init\+Encoding\+NS}}~\mbox{\hyperlink{xmltok_8h_a9fa3e317508ec3052e285957e931ae13}{Xml\+Init\+Encoding}}
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a4dc93e90a190ce8de7e813c2e5f55b68}{Xml\+Init\+Unknown\+Encoding\+NS}}~\mbox{\hyperlink{xmltok_8h_a7bd2980a71390ec11b4039e2f10a41da}{Xml\+Init\+Unknown\+Encoding}}
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a7e11bb4c4079140bfe8a907490e87d52}{Xml\+Get\+Internal\+Encoding\+NS}}~\mbox{\hyperlink{xmlparse_8c_aa0aa4b543a8778d25ce95b5a3550203b}{Xml\+Get\+Internal\+Encoding}}
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ae78ba61b9eaaafd2b29a3a3b61a296b9}{Xml\+Parse\+Xml\+Decl\+NS}}~\mbox{\hyperlink{xmltok_8h_a10982a55deba3bb46e373700d7a4ec2e}{Xml\+Parse\+Xml\+Decl}}
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ae4b64ebad65f8eddc2cf1c159ba06f55}{XML\+\_\+T}}(x)~x
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a9810f833cdfe0cddebb60a20257e0e59}{XML\+\_\+L}}(x)~x
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a6b15bd61b34718150a8b92ffc21d49a3}{ROUND\+\_\+\+UP}}(n,  sz)~(((n) + ((sz) -\/ 1)) \& $\sim$((sz) -\/ 1))
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_aebf7e3a011794d1f74e3710a75203b2c}{CHAR\+\_\+\+HASH}}(h,  c)~  (((h) $\ast$ 0x\+F4243) $^\wedge$ (unsigned char)(c))
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a6e9fcd1e2aea63f6d799aff591d89a6a}{SECOND\+\_\+\+HASH}}(hash,  mask,  power)~  ((((hash) \& $\sim$(mask)) $>$$>$ ((power) -\/ 1)) \& ((mask) $>$$>$ 2))
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a1fe8c2d28329fb8ad8e4bc1e77748e15}{PROBE\+\_\+\+STEP}}(hash,  mask,  power)~  ((unsigned char)((\mbox{\hyperlink{xmlparse_8c_a6e9fcd1e2aea63f6d799aff591d89a6a}{SECOND\+\_\+\+HASH}}(hash, mask, power)) $\vert$ 1))
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a836411019fe8b351db35f9a79fea3f48}{INIT\+\_\+\+TAG\+\_\+\+BUF\+\_\+\+SIZE}}~32  /$\ast$ must be a multiple of sizeof(\mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}}) $\ast$/
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a3b0620f311e691900243a0cc71ab7d05}{INIT\+\_\+\+DATA\+\_\+\+BUF\+\_\+\+SIZE}}~1024
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a794ada822e287f29805e4896b0e9b62b}{INIT\+\_\+\+ATTS\+\_\+\+SIZE}}~16
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a58ece3d52c803a3ae784df018f71a42d}{INIT\+\_\+\+ATTS\+\_\+\+VERSION}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a154c2ccca4bd8cc781b8a05c910d8aaa}{INIT\+\_\+\+BLOCK\+\_\+\+SIZE}}~1024
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a455ba2f0e322260b0c454d7da073af0e}{INIT\+\_\+\+BUFFER\+\_\+\+SIZE}}~1024
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_abe06cd496f0f41a085b86aeeb3a31988}{EXPAND\+\_\+\+SPARE}}~24
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a2bdecceeac199b0c8e7e2ccce5ac7490}{INIT\+\_\+\+SCAFFOLD\+\_\+\+ELEMENTS}}~32
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a386cd1d223c3a07e77de4009a70dfc99}{pool\+Start}}(pool)~((pool)-\/$>$\mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}})
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a2e97b873d7bb94bc451bfe3656c314d9}{pool\+End}}(pool)~((pool)-\/$>$ptr)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a634e57fbfe06dcbcfa782dc5950c1c1d}{pool\+Length}}(pool)~((pool)-\/$>$ptr -\/ (pool)-\/$>$\mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}})
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ad856ba8e9a9305a2a0b5539f999bbeaa}{pool\+Chop}}(pool)~((void)-\/-\/(pool-\/$>$ptr))
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ae6cc829455aa2a976f41d93cd3c81162}{pool\+Last\+Char}}(pool)~(((pool)-\/$>$ptr)\mbox{[}-\/1\mbox{]})
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ac42e54028bfc6d8b168cf1eb1936d10e}{pool\+Discard}}(pool)~((pool)-\/$>$ptr = (pool)-\/$>$\mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}})
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a9db839b65943e8e94afadfeff3c8f8a4}{pool\+Finish}}(pool)~((pool)-\/$>$\mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}} = (pool)-\/$>$ptr)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ae072bed74fc5fff224ec324737871399}{pool\+Append\+Char}}(pool,  c)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ab8d499913046f671dedfa9ec2fee39e4}{MALLOC}}(s)~(parser-\/$>$m\+\_\+mem.\+malloc\+\_\+fcn((s)))
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a17d9af8542e3c215a173f67977fb06aa}{REALLOC}}(p,  s)~(parser-\/$>$m\+\_\+mem.\+realloc\+\_\+fcn((p),(s)))
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a02048bf846e8bc87e3ce188e4957ef06}{FREE}}(p)~(parser-\/$>$m\+\_\+mem.\+free\+\_\+fcn((p)))
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}~(parser-\/$>$m\+\_\+user\+Data)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a9e12f8140a29d958bcecacda5a59cbca}{handler\+Arg}}~(parser-\/$>$m\+\_\+handler\+Arg)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a922a52c6d583f208de2de02834e30efd}{start\+Element\+Handler}}~(parser-\/$>$m\+\_\+start\+Element\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a6a38d6f7c95b6156002415993d2c28c6}{end\+Element\+Handler}}~(parser-\/$>$m\+\_\+end\+Element\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ae5a7ce062c7f3598d17434f686efecb5}{character\+Data\+Handler}}~(parser-\/$>$m\+\_\+character\+Data\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a16aeaf3e01c64f9301a6954762951b74}{processing\+Instruction\+Handler}}~        (parser-\/$>$m\+\_\+processing\+Instruction\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a4ae8e829913d65184867babb99eaf289}{comment\+Handler}}~(parser-\/$>$m\+\_\+comment\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a65f06f03eda785674477bcfed1d85f62}{start\+Cdata\+Section\+Handler}}~        (parser-\/$>$m\+\_\+start\+Cdata\+Section\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a0afd2cfae012d84b77e78092b8f60428}{end\+Cdata\+Section\+Handler}}~(parser-\/$>$m\+\_\+end\+Cdata\+Section\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a67f2d0c9fb94706d75a67d63ccda9204}{default\+Handler}}~(parser-\/$>$m\+\_\+default\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a8b81c0ef4b22fa60a1268c1722bf0580}{start\+Doctype\+Decl\+Handler}}~(parser-\/$>$m\+\_\+start\+Doctype\+Decl\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a4bd18e877f70ade25ab75e02f0ce90e3}{end\+Doctype\+Decl\+Handler}}~(parser-\/$>$m\+\_\+end\+Doctype\+Decl\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ac7472317816f3b7da8ee4852ef91eeb5}{unparsed\+Entity\+Decl\+Handler}}~        (parser-\/$>$m\+\_\+unparsed\+Entity\+Decl\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a4654af496a67984a651f956c01b30902}{notation\+Decl\+Handler}}~(parser-\/$>$m\+\_\+notation\+Decl\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a8ae71caf8f589aef75fa7bc71956e0da}{start\+Namespace\+Decl\+Handler}}~        (parser-\/$>$m\+\_\+start\+Namespace\+Decl\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_abd868dfac40b53a57ce9e9563474045f}{end\+Namespace\+Decl\+Handler}}~(parser-\/$>$m\+\_\+end\+Namespace\+Decl\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_aa688fadc801cd636da72805cb7596c0d}{not\+Standalone\+Handler}}~(parser-\/$>$m\+\_\+not\+Standalone\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a694cff29644917f9d1fdb2e550859296}{external\+Entity\+Ref\+Handler}}~        (parser-\/$>$m\+\_\+external\+Entity\+Ref\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a05354e48a97b2791d64152fcb4ca2434}{external\+Entity\+Ref\+Handler\+Arg}}~        (parser-\/$>$m\+\_\+external\+Entity\+Ref\+Handler\+Arg)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ad675f805860a1b401be85d2a3a7708b5}{internal\+Entity\+Ref\+Handler}}~        (parser-\/$>$m\+\_\+internal\+Entity\+Ref\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a1753cfebea0f1d60dbf7d00f2e825bbe}{skipped\+Entity\+Handler}}~(parser-\/$>$m\+\_\+skipped\+Entity\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a49ce74526fcb51273686528a09b34ac3}{unknown\+Encoding\+Handler}}~(parser-\/$>$m\+\_\+unknown\+Encoding\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a1e61af8958b7c3b3f1b64d2ea2cbecc8}{element\+Decl\+Handler}}~(parser-\/$>$m\+\_\+element\+Decl\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ab0e2251928e40680b2418ff0373a954a}{attlist\+Decl\+Handler}}~(parser-\/$>$m\+\_\+attlist\+Decl\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a9e8683e389402cd0b46f3af737955fc1}{entity\+Decl\+Handler}}~(parser-\/$>$m\+\_\+entity\+Decl\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a64170e3e35c6d95084c210e28f48fb00}{xml\+Decl\+Handler}}~(parser-\/$>$m\+\_\+xml\+Decl\+Handler)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a4d1151f66e93840b8a8c9169852a95dd}{encoding}}~(parser-\/$>$m\+\_\+encoding)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a49f744a2302f39b471f72005c0e8836b}{init\+Encoding}}~(parser-\/$>$m\+\_\+init\+Encoding)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a1b33093c602147d9a9c8d532f61c7dd0}{internal\+Encoding}}~(parser-\/$>$m\+\_\+internal\+Encoding)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a56a3130a18d2b72be03748455780e708}{unknown\+Encoding\+Mem}}~(parser-\/$>$m\+\_\+unknown\+Encoding\+Mem)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a9581e7e60c6db8d6a0122b0e559beb0c}{unknown\+Encoding\+Data}}~(parser-\/$>$m\+\_\+unknown\+Encoding\+Data)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a714386346dd4bede749ba4daa41d7586}{unknown\+Encoding\+Handler\+Data}}~  (parser-\/$>$m\+\_\+unknown\+Encoding\+Handler\+Data)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a4711580e5eb92ef35d766bb7c86b9487}{unknown\+Encoding\+Release}}~(parser-\/$>$m\+\_\+unknown\+Encoding\+Release)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a7acee91eaf16102f30a0b769adc0db04}{protocol\+Encoding\+Name}}~(parser-\/$>$m\+\_\+protocol\+Encoding\+Name)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ab269c6a72273579c35715ec77b41b634}{ns}}~(parser-\/$>$m\+\_\+ns)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a70104d002b09d7b6eb9ad34d599a64f0}{ns\+\_\+triplets}}~(parser-\/$>$m\+\_\+ns\+\_\+triplets)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_af493a8c6fd0c8fec5539c52661fda630}{prolog\+State}}~(parser-\/$>$m\+\_\+prolog\+State)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ae2e049b4850fa94870e78619701bbeb0}{processor}}~(parser-\/$>$m\+\_\+processor)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_adf47938902be0f6a9c144226d02fd634}{error\+Code}}~(parser-\/$>$m\+\_\+error\+Code)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a095b4f7c37923ec949d4a63316ab5f4e}{event\+Ptr}}~(parser-\/$>$m\+\_\+event\+Ptr)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ac5fcab6621c83f8c96c04c7cdcd7e88d}{event\+End\+Ptr}}~(parser-\/$>$m\+\_\+event\+End\+Ptr)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_aed5d95cbb171c2dfa8bce638f533a273}{position\+Ptr}}~(parser-\/$>$m\+\_\+position\+Ptr)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a38975acbb6db0fe600f77477050279a4}{position}}~(parser-\/$>$m\+\_\+position)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a5df0641cd43a44ba64ce0d3087d952f9}{open\+Internal\+Entities}}~(parser-\/$>$m\+\_\+open\+Internal\+Entities)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ab276ffc03932347093fbd842a6107e7e}{free\+Internal\+Entities}}~(parser-\/$>$m\+\_\+free\+Internal\+Entities)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a0a72476230b17bb7c062faf0952165a1}{default\+Expand\+Internal\+Entities}}~        (parser-\/$>$m\+\_\+default\+Expand\+Internal\+Entities)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a89227e5719171a2b7a05963fc67fcbc2}{tag\+Level}}~(parser-\/$>$m\+\_\+tag\+Level)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_aaadc06b5dac8070de2c8677210967bdb}{buffer}}~(parser-\/$>$m\+\_\+buffer)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_af0e9c27e1d82202b57e87eebacf0dccf}{buffer\+Ptr}}~(parser-\/$>$m\+\_\+buffer\+Ptr)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a59827c0775f8adab8222031c7c774d45}{buffer\+End}}~(parser-\/$>$m\+\_\+buffer\+End)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ab74018925dc84567939663e8c76b6856}{parse\+End\+Byte\+Index}}~(parser-\/$>$m\+\_\+parse\+End\+Byte\+Index)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a69edecf818e64e82c1e550bdb6520481}{parse\+End\+Ptr}}~(parser-\/$>$m\+\_\+parse\+End\+Ptr)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_aa196955726141832a26d8b852df43b36}{buffer\+Lim}}~(parser-\/$>$m\+\_\+buffer\+Lim)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a243c9d2243ec2a35cd52d3ecf7cb1614}{data\+Buf}}~(parser-\/$>$m\+\_\+data\+Buf)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ad25359f37bbcd96c503ec8031fe995ab}{data\+Buf\+End}}~(parser-\/$>$m\+\_\+data\+Buf\+End)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ab35a2e4e656add004181d213bcf636c6}{\+\_\+dtd}}~(parser-\/$>$m\+\_\+dtd)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ac10942bb14f0f6fefea1e5986743997b}{cur\+Base}}~(parser-\/$>$m\+\_\+cur\+Base)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_afcb60c35c976932aec4feabf7fb93dbd}{decl\+Entity}}~(parser-\/$>$m\+\_\+decl\+Entity)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a2c9f84bb2d7b6ef6a6a06721629b5309}{doctype\+Name}}~(parser-\/$>$m\+\_\+doctype\+Name)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a52cf3e26329a6665642366d608f19a93}{doctype\+Sysid}}~(parser-\/$>$m\+\_\+doctype\+Sysid)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a725bf115f2a36febb31e7aa6f890a9e8}{doctype\+Pubid}}~(parser-\/$>$m\+\_\+doctype\+Pubid)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_aabd2799fe59009c99e55a0d02172e24b}{decl\+Attribute\+Type}}~(parser-\/$>$m\+\_\+decl\+Attribute\+Type)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a443d2b32f4610f80eb466606f314554e}{decl\+Notation\+Name}}~(parser-\/$>$m\+\_\+decl\+Notation\+Name)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a49c865a339297b69d1d5b74e8efe963d}{decl\+Notation\+Public\+Id}}~(parser-\/$>$m\+\_\+decl\+Notation\+Public\+Id)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a323503a05f3d05471fb204b95ba644ed}{decl\+Element\+Type}}~(parser-\/$>$m\+\_\+decl\+Element\+Type)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a09e5ab6ebce8719cab5ab801a7be2f6d}{decl\+Attribute\+Id}}~(parser-\/$>$m\+\_\+decl\+Attribute\+Id)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a72d90a570297f91e21fe6bedbe0c78ac}{decl\+Attribute\+Is\+Cdata}}~(parser-\/$>$m\+\_\+decl\+Attribute\+Is\+Cdata)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a175bed4f9d770eb6f8171fc48bbecedc}{decl\+Attribute\+Is\+Id}}~(parser-\/$>$m\+\_\+decl\+Attribute\+Is\+Id)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_ad9aa870e1aa35543520a0c9d57a06124}{free\+Tag\+List}}~(parser-\/$>$m\+\_\+free\+Tag\+List)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a2e870588ca527c3605dbbbdb4b30c34b}{free\+Binding\+List}}~(parser-\/$>$m\+\_\+free\+Binding\+List)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a3104174926495d41334f41ecf7625d4b}{inherited\+Bindings}}~(parser-\/$>$m\+\_\+inherited\+Bindings)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a158f3ae07186f4c5e0ac37df749ceaec}{tag\+Stack}}~(parser-\/$>$m\+\_\+tag\+Stack)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a5bbadff5cdbbd3feb492c555b546a292}{atts}}~(parser-\/$>$m\+\_\+atts)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_adc65825a80dd14608940f5a9a07d68ab}{atts\+Size}}~(parser-\/$>$m\+\_\+atts\+Size)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a130782f9100283fe154bf08918292c58}{n\+Specified\+Atts}}~(parser-\/$>$m\+\_\+n\+Specified\+Atts)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a01055fe9c05bdbca693e0e22ab85a0e5}{id\+Att\+Index}}~(parser-\/$>$m\+\_\+id\+Att\+Index)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a455151da0e6b245f8a98f00480626376}{ns\+Atts}}~(parser-\/$>$m\+\_\+ns\+Atts)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a4c7a8d2ec61115ce2ee0fbf95f5abe21}{ns\+Atts\+Version}}~(parser-\/$>$m\+\_\+ns\+Atts\+Version)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a50d8728e72c0b424a2d360c599f53779}{ns\+Atts\+Power}}~(parser-\/$>$m\+\_\+ns\+Atts\+Power)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_aea59fdd2111549308a0d031f7fd02599}{att\+Info}}~(parser-\/$>$m\+\_\+att\+Info)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a39a63433fd9ac53dbbe600beb1043adf}{temp\+Pool}}~(parser-\/$>$m\+\_\+temp\+Pool)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a3027782cb1859b39383988b3dc5a32d4}{temp2\+Pool}}~(parser-\/$>$m\+\_\+temp2\+Pool)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a263678263938e54165f88cd889b6ce75}{group\+Connector}}~(parser-\/$>$m\+\_\+group\+Connector)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a694d8b982b62eb3e685dcc3957aa8894}{group\+Size}}~(parser-\/$>$m\+\_\+group\+Size)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a736bbc99314e2a5bf4f783a70cb88b2f}{namespace\+Separator}}~(parser-\/$>$m\+\_\+namespace\+Separator)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a9d763c133618f3e809bea574786ac52d}{parent\+Parser}}~(parser-\/$>$m\+\_\+parent\+Parser)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_aa9b2258587e65f28344754d3377ca60c}{ps\+\_\+parsing}}~(parser-\/$>$m\+\_\+parsing\+Status.\+parsing)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a138303ba865325ae5574c370eec9ae46}{ps\+\_\+final\+Buffer}}~(parser-\/$>$m\+\_\+parsing\+Status.\+final\+Buffer)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_adc80f62ce9a1bc68b9ec1d9d013c2227}{hash\+\_\+secret\+\_\+salt}}~(parser-\/$>$m\+\_\+hash\+\_\+secret\+\_\+salt)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a98b7c00e73b6d8f13214cc4646383aab}{V1}}(a,  b,  c)~\mbox{\hyperlink{xmlparse_8c_a9810f833cdfe0cddebb60a20257e0e59}{XML\+\_\+L}}(\#a)\mbox{\hyperlink{xmlparse_8c_a9810f833cdfe0cddebb60a20257e0e59}{XML\+\_\+L}}(\char`\"{}.\char`\"{})\mbox{\hyperlink{xmlparse_8c_a9810f833cdfe0cddebb60a20257e0e59}{XML\+\_\+L}}(\#b)\mbox{\hyperlink{xmlparse_8c_a9810f833cdfe0cddebb60a20257e0e59}{XML\+\_\+L}}(\char`\"{}.\char`\"{})\mbox{\hyperlink{xmlparse_8c_a9810f833cdfe0cddebb60a20257e0e59}{XML\+\_\+L}}(\#c)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_affd35bbd101bc1b065a2183790195dd1}{V2}}(a,  b,  c)~\mbox{\hyperlink{xmlparse_8c_a9810f833cdfe0cddebb60a20257e0e59}{XML\+\_\+L}}(\char`\"{}expat\+\_\+\char`\"{})V1(a,b,c)
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a1b87d5794a5bcabf1862019a8df60e97}{CONTEXT\+\_\+\+SEP}}~\mbox{\hyperlink{xmlparse_8c_ae4b64ebad65f8eddc2cf1c159ba06f55}{XML\+\_\+T}}(\mbox{\hyperlink{ascii_8h_a0c327eae6ca8b55faf5a07684d33de78}{ASCII\+\_\+\+FF}})
+\item 
+\#define \mbox{\hyperlink{xmlparse_8c_a00541dfec332b4293dd3bbf560742e03}{INIT\+\_\+\+POWER}}~6
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef char \mbox{\hyperlink{xmlparse_8c_ac4b0eb8553f2e9c4325b04af8dac5264}{ICHAR}}
+\item 
+typedef const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$ \mbox{\hyperlink{xmlparse_8c_ab993fe892165ffeae5facd4ab9ded1e9}{KEY}}
+\item 
+typedef struct \mbox{\hyperlink{structbinding}{binding}} \mbox{\hyperlink{xmlparse_8c_aa818f36b0da71b524db7ac927828a784}{BINDING}}
+\item 
+typedef struct \mbox{\hyperlink{structprefix}{prefix}} \mbox{\hyperlink{xmlparse_8c_a205d21b8e7b83068673e6577d3feac7c}{PREFIX}}
+\item 
+typedef struct \mbox{\hyperlink{structtag}{tag}} \mbox{\hyperlink{xmlparse_8c_a4a6f6148fcb8e499092b8ee9c39eeaf8}{TAG}}
+\item 
+typedef struct \mbox{\hyperlink{structblock}{block}} \mbox{\hyperlink{xmlparse_8c_a5f55f84d1be5e95f14784fb9e28490e6}{BLOCK}}
+\item 
+typedef struct \mbox{\hyperlink{structattribute__id}{attribute\+\_\+id}} \mbox{\hyperlink{xmlparse_8c_ad0401547426d01dfab3a36f4237af5bf}{ATTRIBUTE\+\_\+\+ID}}
+\item 
+typedef struct \mbox{\hyperlink{structopen__internal__entity}{open\+\_\+internal\+\_\+entity}} \mbox{\hyperlink{xmlparse_8c_a96bd7b151f14f0a9b8fa8a96f2a6e7d7}{OPEN\+\_\+\+INTERNAL\+\_\+\+ENTITY}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118}{XML\+\_\+\+Error}} \mbox{\hyperlink{internal_8h_af44f68911377fd55f6e1588b0c89b3e5}{PTRCALL}} \mbox{\hyperlink{xmlparse_8c_a91ac003478582480fcfc8c0fd9377cbc}{Processor}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, const char $\ast$\mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}}, const char $\ast$\mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, const char $\ast$$\ast$end\+Ptr)
+\item 
+\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a01f18ce453fd8d56fddd20b95e8c67cb}{XML\+\_\+\+Parser\+Create}} (const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$encoding\+Name)
+\item 
+\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a3762c40e9b7e108bc5c6b399888b4bce}{XML\+\_\+\+Parser\+Create\+NS}} (const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$encoding\+Name, \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} ns\+Sep)
+\item 
+\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a39ec83ab7ecadd8f5a760cd3becd45f4}{XML\+\_\+\+Parser\+Create\+\_\+\+MM}} (const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$encoding\+Name, const \mbox{\hyperlink{struct_x_m_l___memory___handling___suite}{XML\+\_\+\+Memory\+\_\+\+Handling\+\_\+\+Suite}} $\ast$memsuite, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$name\+Sep)
+\item 
+\mbox{\hyperlink{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}{XML\+\_\+\+Bool}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_aacda009967692067b7b37502b0bc8df7}{XML\+\_\+\+Parser\+Reset}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$encoding\+Name)
+\item 
+enum \mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bb}{XML\+\_\+\+Status}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a760f6f635c22ef02952a4864863822f6}{XML\+\_\+\+Set\+Encoding}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$encoding\+Name)
+\item 
+\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a5007cc50cec12841afd76cf150e9cc2d}{XML\+\_\+\+External\+Entity\+Parser\+Create}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} old\+Parser, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$context, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$encoding\+Name)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_afa94bb8a8566c2280106a526ffb6a95b}{XML\+\_\+\+Parser\+Free}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_af02353a908b28e1b4eb2b444ec274890}{XML\+\_\+\+Use\+Parser\+As\+Handler\+Arg}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+enum \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118}{XML\+\_\+\+Error}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_ad0a2e22d4dcc22326917659c9668fa4a}{XML\+\_\+\+Use\+Foreign\+DTD}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}{XML\+\_\+\+Bool}} use\+DTD)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_af07f7d27748e891778eca7a14865a39b}{XML\+\_\+\+Set\+Return\+NSTriplet}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, int do\+\_\+nst)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_acef3ab4e977f1ebcb37c3be9a3879938}{XML\+\_\+\+Set\+User\+Data}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, void $\ast$p)
+\item 
+enum \mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bb}{XML\+\_\+\+Status}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a102ae76f998e2cb8eb542eb08b05b4a4}{XML\+\_\+\+Set\+Base}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$p)
+\item 
+const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_abdb6c85284082fe8a74efa0fa141a1da}{XML\+\_\+\+Get\+Base}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+int \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a25aaf9db249abd012a042c248a9642d6}{XML\+\_\+\+Get\+Specified\+Attribute\+Count}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+int \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a605f45f0d2783982343a5778f6f11851}{XML\+\_\+\+Get\+Id\+Attribute\+Index}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a464be65bf6755de9b7035d55c74d1367}{XML\+\_\+\+Set\+Element\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a504bca048496cfbacf106a5e28564fcd}{XML\+\_\+\+Start\+Element\+Handler}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}}, \mbox{\hyperlink{expat_8h_a12978ae068c1222afbb5a400b5c692b9}{XML\+\_\+\+End\+Element\+Handler}} \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}})
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_ae1ecca353e62eb473f25ac874ad44341}{XML\+\_\+\+Set\+Start\+Element\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a504bca048496cfbacf106a5e28564fcd}{XML\+\_\+\+Start\+Element\+Handler}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}})
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a9a33295b5dfc3c22af331847f0ff705a}{XML\+\_\+\+Set\+End\+Element\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a12978ae068c1222afbb5a400b5c692b9}{XML\+\_\+\+End\+Element\+Handler}} \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}})
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_ae1b46a8b1815c2d11a3b88c0900d8d16}{XML\+\_\+\+Set\+Character\+Data\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_aef3b6006dc0f845ddb482c2b37a44ba1}{XML\+\_\+\+Character\+Data\+Handler}} handler)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a194c76e50a44f5ba64d50ca3579db8a7}{XML\+\_\+\+Set\+Processing\+Instruction\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a550004b1beb44144bd78b9320e211f6c}{XML\+\_\+\+Processing\+Instruction\+Handler}} handler)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_afb073dff3e7cb1dc01a0d30031764bca}{XML\+\_\+\+Set\+Comment\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a0aefc69cadea618f7fc17607c7c3c8ee}{XML\+\_\+\+Comment\+Handler}} handler)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_ae193379d2b09d758e44c6d03e42a0631}{XML\+\_\+\+Set\+Cdata\+Section\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a661776930dd0ace06a3e9acc9bba4b82}{XML\+\_\+\+Start\+Cdata\+Section\+Handler}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}}, \mbox{\hyperlink{expat_8h_a3165868193185fbd43232e41dd211d4f}{XML\+\_\+\+End\+Cdata\+Section\+Handler}} \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}})
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_acff1b6a7a10e86fcb7fe02f01ff45876}{XML\+\_\+\+Set\+Start\+Cdata\+Section\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a661776930dd0ace06a3e9acc9bba4b82}{XML\+\_\+\+Start\+Cdata\+Section\+Handler}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}})
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a8b9ba355810270c0d00f76c722fb3edd}{XML\+\_\+\+Set\+End\+Cdata\+Section\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a3165868193185fbd43232e41dd211d4f}{XML\+\_\+\+End\+Cdata\+Section\+Handler}} \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}})
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a883fafa5002c6df8e098d75827057132}{XML\+\_\+\+Set\+Default\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_afa6c6c71f2c70cfe57c3506534cb70d7}{XML\+\_\+\+Default\+Handler}} handler)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a1c99bb060330d671b4fe7bfa852bad9a}{XML\+\_\+\+Set\+Default\+Handler\+Expand}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_afa6c6c71f2c70cfe57c3506534cb70d7}{XML\+\_\+\+Default\+Handler}} handler)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_ad6b174f1be7b95b1e175c86151d0bdac}{XML\+\_\+\+Set\+Doctype\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_ab748cf612072905843f3488414c19f3b}{XML\+\_\+\+Start\+Doctype\+Decl\+Handler}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}}, \mbox{\hyperlink{expat_8h_a43568a006caf34bcf94e4346031b85a0}{XML\+\_\+\+End\+Doctype\+Decl\+Handler}} \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}})
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_ae1b7981d6b3c94b73474794fa3622dca}{XML\+\_\+\+Set\+Start\+Doctype\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_ab748cf612072905843f3488414c19f3b}{XML\+\_\+\+Start\+Doctype\+Decl\+Handler}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}})
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a0735c84e413353e5840b387a26cd699e}{XML\+\_\+\+Set\+End\+Doctype\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a43568a006caf34bcf94e4346031b85a0}{XML\+\_\+\+End\+Doctype\+Decl\+Handler}} \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}})
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_af84fba5765b4c3edc8fb79ae3078ed44}{XML\+\_\+\+Set\+Unparsed\+Entity\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a67d7a2966d8416e1d8cef6a33ae86453}{XML\+\_\+\+Unparsed\+Entity\+Decl\+Handler}} handler)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a1443eb9edac79dc6b6fc180875974f91}{XML\+\_\+\+Set\+Notation\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_af51763d2819de05e8569320f9ab571c4}{XML\+\_\+\+Notation\+Decl\+Handler}} handler)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a6aff6d9ee0856597f7ede366fc466f45}{XML\+\_\+\+Set\+Namespace\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a58ad7c192f040f8196708f042c8bdc14}{XML\+\_\+\+Start\+Namespace\+Decl\+Handler}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}}, \mbox{\hyperlink{expat_8h_a1414891bd078b546986d463e746ad49c}{XML\+\_\+\+End\+Namespace\+Decl\+Handler}} \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}})
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_abd5e1b94f23420a31f784c7f071c05fc}{XML\+\_\+\+Set\+Start\+Namespace\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a58ad7c192f040f8196708f042c8bdc14}{XML\+\_\+\+Start\+Namespace\+Decl\+Handler}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}})
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a788fd4e2cf86c45f9185d756aa6bb9be}{XML\+\_\+\+Set\+End\+Namespace\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a1414891bd078b546986d463e746ad49c}{XML\+\_\+\+End\+Namespace\+Decl\+Handler}} \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}})
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a36205b954dd7e145efd9c38f22cd9d63}{XML\+\_\+\+Set\+Not\+Standalone\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a8fc3c5ba2270c72ff0a8f9daccd77dd5}{XML\+\_\+\+Not\+Standalone\+Handler}} handler)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_ac22b935c501868c79e42212ade1047fa}{XML\+\_\+\+Set\+External\+Entity\+Ref\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a2d955f5ce3c5401dbe14ba19e8067c01}{XML\+\_\+\+External\+Entity\+Ref\+Handler}} handler)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_af861af5b3b5b6a71ee0e0bcd32a827a0}{XML\+\_\+\+Set\+External\+Entity\+Ref\+Handler\+Arg}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, void $\ast$\mbox{\hyperlink{structarg}{arg}})
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_ad1e95b219bb4413e35faa96879b34010}{XML\+\_\+\+Set\+Skipped\+Entity\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a29e3734cfec01df38715716d53093d5c}{XML\+\_\+\+Skipped\+Entity\+Handler}} handler)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a0dc336d28ebbe1d5b14e41501fd8ddc9}{XML\+\_\+\+Set\+Unknown\+Encoding\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a348625fd90dcc5d880efec9e533fc502}{XML\+\_\+\+Unknown\+Encoding\+Handler}} handler, void $\ast$data)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a3fb5d41e5bd0097e05b5be0d2eda0ac6}{XML\+\_\+\+Set\+Element\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_affe4163d2280b13afb316b81f5650421}{XML\+\_\+\+Element\+Decl\+Handler}} eldecl)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a2764dbc7f78d5a01d111f2738f9348bd}{XML\+\_\+\+Set\+Attlist\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a89899063dae04c58a3f2ef13e22bedbc}{XML\+\_\+\+Attlist\+Decl\+Handler}} attdecl)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_ae71e92fd7ca3228d2d9f6eff5b62ff82}{XML\+\_\+\+Set\+Entity\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_af2f060ea47a43f92b5d23313ceba982a}{XML\+\_\+\+Entity\+Decl\+Handler}} handler)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a83ceb9f75e8d266c0e4da8b398d1537d}{XML\+\_\+\+Set\+Xml\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a636e4276dad64e4f67c7ebb678fcdab4}{XML\+\_\+\+Xml\+Decl\+Handler}} handler)
+\item 
+int \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_ae87007cc8e3e60cc0bb8fe0032932cd7}{XML\+\_\+\+Set\+Param\+Entity\+Parsing}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, enum \mbox{\hyperlink{expat_8h_a83ffd61320d59d0c6c33dfcf1a0c098f}{XML\+\_\+\+Param\+Entity\+Parsing}} pe\+Parsing)
+\item 
+int \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_aca7bec4fc6fd929cf2207ea54183a393}{XML\+\_\+\+Set\+Hash\+Salt}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, unsigned long hash\+\_\+salt)
+\item 
+enum \mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bb}{XML\+\_\+\+Status}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a62a6555a21bb12d37d3ef7baf9972cac}{XML\+\_\+\+Parse}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, const char $\ast$s, int \mbox{\hyperlink{group__python__builtins_gaeff368081ac50b8fe2cc0230d96e3acb}{len}}, int is\+Final)
+\item 
+enum \mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bb}{XML\+\_\+\+Status}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_af02b28fc9c4ab4ed26145ab5d83cea22}{XML\+\_\+\+Parse\+Buffer}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, int \mbox{\hyperlink{group__python__builtins_gaeff368081ac50b8fe2cc0230d96e3acb}{len}}, int is\+Final)
+\item 
+void $\ast$\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a846f46601c54e0bd4e4a996307ba3f9b}{XML\+\_\+\+Get\+Buffer}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, int \mbox{\hyperlink{group__python__builtins_gaeff368081ac50b8fe2cc0230d96e3acb}{len}})
+\item 
+enum \mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bb}{XML\+\_\+\+Status}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a2babb2f5ac4826f4ffb0c14f87984bf5}{XML\+\_\+\+Stop\+Parser}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}{XML\+\_\+\+Bool}} resumable)
+\item 
+enum \mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bb}{XML\+\_\+\+Status}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_aeff65950eef53d5817533fca6af93ae8}{XML\+\_\+\+Resume\+Parser}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a7204cad48398e82b75a68a185619e88f}{XML\+\_\+\+Get\+Parsing\+Status}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{struct_x_m_l___parsing_status}{XML\+\_\+\+Parsing\+Status}} $\ast$status)
+\item 
+enum \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118}{XML\+\_\+\+Error}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a6127be821a2d4cb2be74afc31f41f29f}{XML\+\_\+\+Get\+Error\+Code}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+\mbox{\hyperlink{expat__external_8h_ae2a9a55c7071b0c6da19fea14ce8f504}{XML\+\_\+\+Index}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a643677b451f2ee9103f396de161aab52}{XML\+\_\+\+Get\+Current\+Byte\+Index}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+int \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_af930a6c7c396ff07b8e70b9883602400}{XML\+\_\+\+Get\+Current\+Byte\+Count}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+const char $\ast$\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a4d8d190e2eed2972f15288f78f3486ca}{XML\+\_\+\+Get\+Input\+Context}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, int $\ast$offset, int $\ast$size)
+\item 
+\mbox{\hyperlink{expat__external_8h_ad22a225e6e62127360b44b2f7559f789}{XML\+\_\+\+Size}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a5f0c9f83229fdaa9dcb48a8447045243}{XML\+\_\+\+Get\+Current\+Line\+Number}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+\mbox{\hyperlink{expat__external_8h_ad22a225e6e62127360b44b2f7559f789}{XML\+\_\+\+Size}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a45f92a94ac5382b44a9c3fed893f8921}{XML\+\_\+\+Get\+Current\+Column\+Number}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a362c3420424d6a4c6181af97ca2678c0}{XML\+\_\+\+Free\+Content\+Model}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a791d9e7de669ec5395df17978e1c507e}{XML\+\_\+\+Content}} $\ast$model)
+\item 
+void $\ast$\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a74f8b2d9ee7d5ad1a54d18732d54135b}{XML\+\_\+\+Mem\+Malloc}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} size)
+\item 
+void $\ast$\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a54b947209ad0b01141588900fe33ee5e}{XML\+\_\+\+Mem\+Realloc}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, void $\ast$ptr, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_aa2ce2b1966277c78b16da3efd122a44d}{XML\+\_\+\+Mem\+Free}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, void $\ast$ptr)
+\item 
+void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a822d96f2e6d25c735d31388e2ee7550e}{XML\+\_\+\+Default\+Current}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+const \mbox{\hyperlink{expat__external_8h_a728c9a3114531eaeb70753ba4601c418}{XML\+\_\+\+LChar}} $\ast$\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a41b7167b409d9894c4928e6659b80dd5}{XML\+\_\+\+Error\+String}} (enum \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118}{XML\+\_\+\+Error}} code)
+\item 
+const \mbox{\hyperlink{expat__external_8h_a728c9a3114531eaeb70753ba4601c418}{XML\+\_\+\+LChar}} $\ast$\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_ac65b562b6d15c0187ef971f426a35e71}{XML\+\_\+\+Expat\+Version}} (void)
+\item 
+\mbox{\hyperlink{struct_x_m_l___expat___version}{XML\+\_\+\+Expat\+\_\+\+Version}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_a48973ae7f75c6032603e192b4281efcb}{XML\+\_\+\+Expat\+Version\+Info}} (void)
+\item 
+const \mbox{\hyperlink{struct_x_m_l___feature}{XML\+\_\+\+Feature}} $\ast$\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} \mbox{\hyperlink{xmlparse_8c_aa56362be962a8cb87ddacbe96a50370b}{XML\+\_\+\+Get\+Feature\+List}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{xmlparse_8c_ab35a2e4e656add004181d213bcf636c6}\label{xmlparse_8c_ab35a2e4e656add004181d213bcf636c6}} 
+\index{xmlparse.c@{xmlparse.c}!\_dtd@{\_dtd}}
+\index{\_dtd@{\_dtd}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{\_dtd}{\_dtd}}
+{\footnotesize\ttfamily \#define \+\_\+dtd~(parser-\/$>$m\+\_\+dtd)}
+
+\mbox{\Hypertarget{xmlparse_8c_aea59fdd2111549308a0d031f7fd02599}\label{xmlparse_8c_aea59fdd2111549308a0d031f7fd02599}} 
+\index{xmlparse.c@{xmlparse.c}!attInfo@{attInfo}}
+\index{attInfo@{attInfo}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{attInfo}{attInfo}}
+{\footnotesize\ttfamily \#define att\+Info~(parser-\/$>$m\+\_\+att\+Info)}
+
+\mbox{\Hypertarget{xmlparse_8c_ab0e2251928e40680b2418ff0373a954a}\label{xmlparse_8c_ab0e2251928e40680b2418ff0373a954a}} 
+\index{xmlparse.c@{xmlparse.c}!attlistDeclHandler@{attlistDeclHandler}}
+\index{attlistDeclHandler@{attlistDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{attlistDeclHandler}{attlistDeclHandler}}
+{\footnotesize\ttfamily \#define attlist\+Decl\+Handler~(parser-\/$>$m\+\_\+attlist\+Decl\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_a5bbadff5cdbbd3feb492c555b546a292}\label{xmlparse_8c_a5bbadff5cdbbd3feb492c555b546a292}} 
+\index{xmlparse.c@{xmlparse.c}!atts@{atts}}
+\index{atts@{atts}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{atts}{atts}}
+{\footnotesize\ttfamily \#define atts~(parser-\/$>$m\+\_\+atts)}
+
+\mbox{\Hypertarget{xmlparse_8c_adc65825a80dd14608940f5a9a07d68ab}\label{xmlparse_8c_adc65825a80dd14608940f5a9a07d68ab}} 
+\index{xmlparse.c@{xmlparse.c}!attsSize@{attsSize}}
+\index{attsSize@{attsSize}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{attsSize}{attsSize}}
+{\footnotesize\ttfamily \#define atts\+Size~(parser-\/$>$m\+\_\+atts\+Size)}
+
+\mbox{\Hypertarget{xmlparse_8c_aaadc06b5dac8070de2c8677210967bdb}\label{xmlparse_8c_aaadc06b5dac8070de2c8677210967bdb}} 
+\index{xmlparse.c@{xmlparse.c}!buffer@{buffer}}
+\index{buffer@{buffer}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily \#define \mbox{\hyperlink{classbuffer}{buffer}}~(parser-\/$>$m\+\_\+buffer)}
+
+\mbox{\Hypertarget{xmlparse_8c_a59827c0775f8adab8222031c7c774d45}\label{xmlparse_8c_a59827c0775f8adab8222031c7c774d45}} 
+\index{xmlparse.c@{xmlparse.c}!bufferEnd@{bufferEnd}}
+\index{bufferEnd@{bufferEnd}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{bufferEnd}{bufferEnd}}
+{\footnotesize\ttfamily \#define buffer\+End~(parser-\/$>$m\+\_\+buffer\+End)}
+
+\mbox{\Hypertarget{xmlparse_8c_aa196955726141832a26d8b852df43b36}\label{xmlparse_8c_aa196955726141832a26d8b852df43b36}} 
+\index{xmlparse.c@{xmlparse.c}!bufferLim@{bufferLim}}
+\index{bufferLim@{bufferLim}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{bufferLim}{bufferLim}}
+{\footnotesize\ttfamily \#define buffer\+Lim~(parser-\/$>$m\+\_\+buffer\+Lim)}
+
+\mbox{\Hypertarget{xmlparse_8c_af0e9c27e1d82202b57e87eebacf0dccf}\label{xmlparse_8c_af0e9c27e1d82202b57e87eebacf0dccf}} 
+\index{xmlparse.c@{xmlparse.c}!bufferPtr@{bufferPtr}}
+\index{bufferPtr@{bufferPtr}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{bufferPtr}{bufferPtr}}
+{\footnotesize\ttfamily \#define buffer\+Ptr~(parser-\/$>$m\+\_\+buffer\+Ptr)}
+
+\mbox{\Hypertarget{xmlparse_8c_aebf7e3a011794d1f74e3710a75203b2c}\label{xmlparse_8c_aebf7e3a011794d1f74e3710a75203b2c}} 
+\index{xmlparse.c@{xmlparse.c}!CHAR\_HASH@{CHAR\_HASH}}
+\index{CHAR\_HASH@{CHAR\_HASH}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{CHAR\_HASH}{CHAR\_HASH}}
+{\footnotesize\ttfamily \#define CHAR\+\_\+\+HASH(\begin{DoxyParamCaption}\item[{}]{h,  }\item[{}]{c }\end{DoxyParamCaption})~  (((h) $\ast$ 0x\+F4243) $^\wedge$ (unsigned char)(c))}
+
+\mbox{\Hypertarget{xmlparse_8c_ae5a7ce062c7f3598d17434f686efecb5}\label{xmlparse_8c_ae5a7ce062c7f3598d17434f686efecb5}} 
+\index{xmlparse.c@{xmlparse.c}!characterDataHandler@{characterDataHandler}}
+\index{characterDataHandler@{characterDataHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{characterDataHandler}{characterDataHandler}}
+{\footnotesize\ttfamily \#define character\+Data\+Handler~(parser-\/$>$m\+\_\+character\+Data\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_a4ae8e829913d65184867babb99eaf289}\label{xmlparse_8c_a4ae8e829913d65184867babb99eaf289}} 
+\index{xmlparse.c@{xmlparse.c}!commentHandler@{commentHandler}}
+\index{commentHandler@{commentHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{commentHandler}{commentHandler}}
+{\footnotesize\ttfamily \#define comment\+Handler~(parser-\/$>$m\+\_\+comment\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_a1b87d5794a5bcabf1862019a8df60e97}\label{xmlparse_8c_a1b87d5794a5bcabf1862019a8df60e97}} 
+\index{xmlparse.c@{xmlparse.c}!CONTEXT\_SEP@{CONTEXT\_SEP}}
+\index{CONTEXT\_SEP@{CONTEXT\_SEP}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{CONTEXT\_SEP}{CONTEXT\_SEP}}
+{\footnotesize\ttfamily \#define CONTEXT\+\_\+\+SEP~\mbox{\hyperlink{xmlparse_8c_ae4b64ebad65f8eddc2cf1c159ba06f55}{XML\+\_\+T}}(\mbox{\hyperlink{ascii_8h_a0c327eae6ca8b55faf5a07684d33de78}{ASCII\+\_\+\+FF}})}
+
+\mbox{\Hypertarget{xmlparse_8c_ac10942bb14f0f6fefea1e5986743997b}\label{xmlparse_8c_ac10942bb14f0f6fefea1e5986743997b}} 
+\index{xmlparse.c@{xmlparse.c}!curBase@{curBase}}
+\index{curBase@{curBase}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{curBase}{curBase}}
+{\footnotesize\ttfamily \#define cur\+Base~(parser-\/$>$m\+\_\+cur\+Base)}
+
+\mbox{\Hypertarget{xmlparse_8c_a243c9d2243ec2a35cd52d3ecf7cb1614}\label{xmlparse_8c_a243c9d2243ec2a35cd52d3ecf7cb1614}} 
+\index{xmlparse.c@{xmlparse.c}!dataBuf@{dataBuf}}
+\index{dataBuf@{dataBuf}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{dataBuf}{dataBuf}}
+{\footnotesize\ttfamily \#define data\+Buf~(parser-\/$>$m\+\_\+data\+Buf)}
+
+\mbox{\Hypertarget{xmlparse_8c_ad25359f37bbcd96c503ec8031fe995ab}\label{xmlparse_8c_ad25359f37bbcd96c503ec8031fe995ab}} 
+\index{xmlparse.c@{xmlparse.c}!dataBufEnd@{dataBufEnd}}
+\index{dataBufEnd@{dataBufEnd}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{dataBufEnd}{dataBufEnd}}
+{\footnotesize\ttfamily \#define data\+Buf\+End~(parser-\/$>$m\+\_\+data\+Buf\+End)}
+
+\mbox{\Hypertarget{xmlparse_8c_a09e5ab6ebce8719cab5ab801a7be2f6d}\label{xmlparse_8c_a09e5ab6ebce8719cab5ab801a7be2f6d}} 
+\index{xmlparse.c@{xmlparse.c}!declAttributeId@{declAttributeId}}
+\index{declAttributeId@{declAttributeId}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{declAttributeId}{declAttributeId}}
+{\footnotesize\ttfamily \#define decl\+Attribute\+Id~(parser-\/$>$m\+\_\+decl\+Attribute\+Id)}
+
+\mbox{\Hypertarget{xmlparse_8c_a72d90a570297f91e21fe6bedbe0c78ac}\label{xmlparse_8c_a72d90a570297f91e21fe6bedbe0c78ac}} 
+\index{xmlparse.c@{xmlparse.c}!declAttributeIsCdata@{declAttributeIsCdata}}
+\index{declAttributeIsCdata@{declAttributeIsCdata}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{declAttributeIsCdata}{declAttributeIsCdata}}
+{\footnotesize\ttfamily \#define decl\+Attribute\+Is\+Cdata~(parser-\/$>$m\+\_\+decl\+Attribute\+Is\+Cdata)}
+
+\mbox{\Hypertarget{xmlparse_8c_a175bed4f9d770eb6f8171fc48bbecedc}\label{xmlparse_8c_a175bed4f9d770eb6f8171fc48bbecedc}} 
+\index{xmlparse.c@{xmlparse.c}!declAttributeIsId@{declAttributeIsId}}
+\index{declAttributeIsId@{declAttributeIsId}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{declAttributeIsId}{declAttributeIsId}}
+{\footnotesize\ttfamily \#define decl\+Attribute\+Is\+Id~(parser-\/$>$m\+\_\+decl\+Attribute\+Is\+Id)}
+
+\mbox{\Hypertarget{xmlparse_8c_aabd2799fe59009c99e55a0d02172e24b}\label{xmlparse_8c_aabd2799fe59009c99e55a0d02172e24b}} 
+\index{xmlparse.c@{xmlparse.c}!declAttributeType@{declAttributeType}}
+\index{declAttributeType@{declAttributeType}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{declAttributeType}{declAttributeType}}
+{\footnotesize\ttfamily \#define decl\+Attribute\+Type~(parser-\/$>$m\+\_\+decl\+Attribute\+Type)}
+
+\mbox{\Hypertarget{xmlparse_8c_a323503a05f3d05471fb204b95ba644ed}\label{xmlparse_8c_a323503a05f3d05471fb204b95ba644ed}} 
+\index{xmlparse.c@{xmlparse.c}!declElementType@{declElementType}}
+\index{declElementType@{declElementType}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{declElementType}{declElementType}}
+{\footnotesize\ttfamily \#define decl\+Element\+Type~(parser-\/$>$m\+\_\+decl\+Element\+Type)}
+
+\mbox{\Hypertarget{xmlparse_8c_afcb60c35c976932aec4feabf7fb93dbd}\label{xmlparse_8c_afcb60c35c976932aec4feabf7fb93dbd}} 
+\index{xmlparse.c@{xmlparse.c}!declEntity@{declEntity}}
+\index{declEntity@{declEntity}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{declEntity}{declEntity}}
+{\footnotesize\ttfamily \#define decl\+Entity~(parser-\/$>$m\+\_\+decl\+Entity)}
+
+\mbox{\Hypertarget{xmlparse_8c_a443d2b32f4610f80eb466606f314554e}\label{xmlparse_8c_a443d2b32f4610f80eb466606f314554e}} 
+\index{xmlparse.c@{xmlparse.c}!declNotationName@{declNotationName}}
+\index{declNotationName@{declNotationName}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{declNotationName}{declNotationName}}
+{\footnotesize\ttfamily \#define decl\+Notation\+Name~(parser-\/$>$m\+\_\+decl\+Notation\+Name)}
+
+\mbox{\Hypertarget{xmlparse_8c_a49c865a339297b69d1d5b74e8efe963d}\label{xmlparse_8c_a49c865a339297b69d1d5b74e8efe963d}} 
+\index{xmlparse.c@{xmlparse.c}!declNotationPublicId@{declNotationPublicId}}
+\index{declNotationPublicId@{declNotationPublicId}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{declNotationPublicId}{declNotationPublicId}}
+{\footnotesize\ttfamily \#define decl\+Notation\+Public\+Id~(parser-\/$>$m\+\_\+decl\+Notation\+Public\+Id)}
+
+\mbox{\Hypertarget{xmlparse_8c_a0a72476230b17bb7c062faf0952165a1}\label{xmlparse_8c_a0a72476230b17bb7c062faf0952165a1}} 
+\index{xmlparse.c@{xmlparse.c}!defaultExpandInternalEntities@{defaultExpandInternalEntities}}
+\index{defaultExpandInternalEntities@{defaultExpandInternalEntities}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{defaultExpandInternalEntities}{defaultExpandInternalEntities}}
+{\footnotesize\ttfamily \#define default\+Expand\+Internal\+Entities~        (parser-\/$>$m\+\_\+default\+Expand\+Internal\+Entities)}
+
+\mbox{\Hypertarget{xmlparse_8c_a67f2d0c9fb94706d75a67d63ccda9204}\label{xmlparse_8c_a67f2d0c9fb94706d75a67d63ccda9204}} 
+\index{xmlparse.c@{xmlparse.c}!defaultHandler@{defaultHandler}}
+\index{defaultHandler@{defaultHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{defaultHandler}{defaultHandler}}
+{\footnotesize\ttfamily \#define default\+Handler~(parser-\/$>$m\+\_\+default\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_a2c9f84bb2d7b6ef6a6a06721629b5309}\label{xmlparse_8c_a2c9f84bb2d7b6ef6a6a06721629b5309}} 
+\index{xmlparse.c@{xmlparse.c}!doctypeName@{doctypeName}}
+\index{doctypeName@{doctypeName}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{doctypeName}{doctypeName}}
+{\footnotesize\ttfamily \#define doctype\+Name~(parser-\/$>$m\+\_\+doctype\+Name)}
+
+\mbox{\Hypertarget{xmlparse_8c_a725bf115f2a36febb31e7aa6f890a9e8}\label{xmlparse_8c_a725bf115f2a36febb31e7aa6f890a9e8}} 
+\index{xmlparse.c@{xmlparse.c}!doctypePubid@{doctypePubid}}
+\index{doctypePubid@{doctypePubid}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{doctypePubid}{doctypePubid}}
+{\footnotesize\ttfamily \#define doctype\+Pubid~(parser-\/$>$m\+\_\+doctype\+Pubid)}
+
+\mbox{\Hypertarget{xmlparse_8c_a52cf3e26329a6665642366d608f19a93}\label{xmlparse_8c_a52cf3e26329a6665642366d608f19a93}} 
+\index{xmlparse.c@{xmlparse.c}!doctypeSysid@{doctypeSysid}}
+\index{doctypeSysid@{doctypeSysid}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{doctypeSysid}{doctypeSysid}}
+{\footnotesize\ttfamily \#define doctype\+Sysid~(parser-\/$>$m\+\_\+doctype\+Sysid)}
+
+\mbox{\Hypertarget{xmlparse_8c_a1e61af8958b7c3b3f1b64d2ea2cbecc8}\label{xmlparse_8c_a1e61af8958b7c3b3f1b64d2ea2cbecc8}} 
+\index{xmlparse.c@{xmlparse.c}!elementDeclHandler@{elementDeclHandler}}
+\index{elementDeclHandler@{elementDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{elementDeclHandler}{elementDeclHandler}}
+{\footnotesize\ttfamily \#define element\+Decl\+Handler~(parser-\/$>$m\+\_\+element\+Decl\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_a4d1151f66e93840b8a8c9169852a95dd}\label{xmlparse_8c_a4d1151f66e93840b8a8c9169852a95dd}} 
+\index{xmlparse.c@{xmlparse.c}!encoding@{encoding}}
+\index{encoding@{encoding}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{encoding}{encoding}}
+{\footnotesize\ttfamily \#define \mbox{\hyperlink{structencoding}{encoding}}~(parser-\/$>$m\+\_\+encoding)}
+
+\mbox{\Hypertarget{xmlparse_8c_a0afd2cfae012d84b77e78092b8f60428}\label{xmlparse_8c_a0afd2cfae012d84b77e78092b8f60428}} 
+\index{xmlparse.c@{xmlparse.c}!endCdataSectionHandler@{endCdataSectionHandler}}
+\index{endCdataSectionHandler@{endCdataSectionHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{endCdataSectionHandler}{endCdataSectionHandler}}
+{\footnotesize\ttfamily \#define end\+Cdata\+Section\+Handler~(parser-\/$>$m\+\_\+end\+Cdata\+Section\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_a4bd18e877f70ade25ab75e02f0ce90e3}\label{xmlparse_8c_a4bd18e877f70ade25ab75e02f0ce90e3}} 
+\index{xmlparse.c@{xmlparse.c}!endDoctypeDeclHandler@{endDoctypeDeclHandler}}
+\index{endDoctypeDeclHandler@{endDoctypeDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{endDoctypeDeclHandler}{endDoctypeDeclHandler}}
+{\footnotesize\ttfamily \#define end\+Doctype\+Decl\+Handler~(parser-\/$>$m\+\_\+end\+Doctype\+Decl\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_a6a38d6f7c95b6156002415993d2c28c6}\label{xmlparse_8c_a6a38d6f7c95b6156002415993d2c28c6}} 
+\index{xmlparse.c@{xmlparse.c}!endElementHandler@{endElementHandler}}
+\index{endElementHandler@{endElementHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{endElementHandler}{endElementHandler}}
+{\footnotesize\ttfamily \#define end\+Element\+Handler~(parser-\/$>$m\+\_\+end\+Element\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_abd868dfac40b53a57ce9e9563474045f}\label{xmlparse_8c_abd868dfac40b53a57ce9e9563474045f}} 
+\index{xmlparse.c@{xmlparse.c}!endNamespaceDeclHandler@{endNamespaceDeclHandler}}
+\index{endNamespaceDeclHandler@{endNamespaceDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{endNamespaceDeclHandler}{endNamespaceDeclHandler}}
+{\footnotesize\ttfamily \#define end\+Namespace\+Decl\+Handler~(parser-\/$>$m\+\_\+end\+Namespace\+Decl\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_a9e8683e389402cd0b46f3af737955fc1}\label{xmlparse_8c_a9e8683e389402cd0b46f3af737955fc1}} 
+\index{xmlparse.c@{xmlparse.c}!entityDeclHandler@{entityDeclHandler}}
+\index{entityDeclHandler@{entityDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{entityDeclHandler}{entityDeclHandler}}
+{\footnotesize\ttfamily \#define entity\+Decl\+Handler~(parser-\/$>$m\+\_\+entity\+Decl\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_adf47938902be0f6a9c144226d02fd634}\label{xmlparse_8c_adf47938902be0f6a9c144226d02fd634}} 
+\index{xmlparse.c@{xmlparse.c}!errorCode@{errorCode}}
+\index{errorCode@{errorCode}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{errorCode}{errorCode}}
+{\footnotesize\ttfamily \#define error\+Code~(parser-\/$>$m\+\_\+error\+Code)}
+
+\mbox{\Hypertarget{xmlparse_8c_ac5fcab6621c83f8c96c04c7cdcd7e88d}\label{xmlparse_8c_ac5fcab6621c83f8c96c04c7cdcd7e88d}} 
+\index{xmlparse.c@{xmlparse.c}!eventEndPtr@{eventEndPtr}}
+\index{eventEndPtr@{eventEndPtr}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{eventEndPtr}{eventEndPtr}}
+{\footnotesize\ttfamily \#define event\+End\+Ptr~(parser-\/$>$m\+\_\+event\+End\+Ptr)}
+
+\mbox{\Hypertarget{xmlparse_8c_a095b4f7c37923ec949d4a63316ab5f4e}\label{xmlparse_8c_a095b4f7c37923ec949d4a63316ab5f4e}} 
+\index{xmlparse.c@{xmlparse.c}!eventPtr@{eventPtr}}
+\index{eventPtr@{eventPtr}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{eventPtr}{eventPtr}}
+{\footnotesize\ttfamily \#define event\+Ptr~(parser-\/$>$m\+\_\+event\+Ptr)}
+
+\mbox{\Hypertarget{xmlparse_8c_abe06cd496f0f41a085b86aeeb3a31988}\label{xmlparse_8c_abe06cd496f0f41a085b86aeeb3a31988}} 
+\index{xmlparse.c@{xmlparse.c}!EXPAND\_SPARE@{EXPAND\_SPARE}}
+\index{EXPAND\_SPARE@{EXPAND\_SPARE}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{EXPAND\_SPARE}{EXPAND\_SPARE}}
+{\footnotesize\ttfamily \#define EXPAND\+\_\+\+SPARE~24}
+
+\mbox{\Hypertarget{xmlparse_8c_a694cff29644917f9d1fdb2e550859296}\label{xmlparse_8c_a694cff29644917f9d1fdb2e550859296}} 
+\index{xmlparse.c@{xmlparse.c}!externalEntityRefHandler@{externalEntityRefHandler}}
+\index{externalEntityRefHandler@{externalEntityRefHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{externalEntityRefHandler}{externalEntityRefHandler}}
+{\footnotesize\ttfamily \#define external\+Entity\+Ref\+Handler~        (parser-\/$>$m\+\_\+external\+Entity\+Ref\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_a05354e48a97b2791d64152fcb4ca2434}\label{xmlparse_8c_a05354e48a97b2791d64152fcb4ca2434}} 
+\index{xmlparse.c@{xmlparse.c}!externalEntityRefHandlerArg@{externalEntityRefHandlerArg}}
+\index{externalEntityRefHandlerArg@{externalEntityRefHandlerArg}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{externalEntityRefHandlerArg}{externalEntityRefHandlerArg}}
+{\footnotesize\ttfamily \#define external\+Entity\+Ref\+Handler\+Arg~        (parser-\/$>$m\+\_\+external\+Entity\+Ref\+Handler\+Arg)}
+
+\mbox{\Hypertarget{xmlparse_8c_a02048bf846e8bc87e3ce188e4957ef06}\label{xmlparse_8c_a02048bf846e8bc87e3ce188e4957ef06}} 
+\index{xmlparse.c@{xmlparse.c}!FREE@{FREE}}
+\index{FREE@{FREE}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{FREE}{FREE}}
+{\footnotesize\ttfamily \#define FREE(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})~(parser-\/$>$m\+\_\+mem.\+free\+\_\+fcn((p)))}
+
+\mbox{\Hypertarget{xmlparse_8c_a2e870588ca527c3605dbbbdb4b30c34b}\label{xmlparse_8c_a2e870588ca527c3605dbbbdb4b30c34b}} 
+\index{xmlparse.c@{xmlparse.c}!freeBindingList@{freeBindingList}}
+\index{freeBindingList@{freeBindingList}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{freeBindingList}{freeBindingList}}
+{\footnotesize\ttfamily \#define free\+Binding\+List~(parser-\/$>$m\+\_\+free\+Binding\+List)}
+
+\mbox{\Hypertarget{xmlparse_8c_ab276ffc03932347093fbd842a6107e7e}\label{xmlparse_8c_ab276ffc03932347093fbd842a6107e7e}} 
+\index{xmlparse.c@{xmlparse.c}!freeInternalEntities@{freeInternalEntities}}
+\index{freeInternalEntities@{freeInternalEntities}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{freeInternalEntities}{freeInternalEntities}}
+{\footnotesize\ttfamily \#define free\+Internal\+Entities~(parser-\/$>$m\+\_\+free\+Internal\+Entities)}
+
+\mbox{\Hypertarget{xmlparse_8c_ad9aa870e1aa35543520a0c9d57a06124}\label{xmlparse_8c_ad9aa870e1aa35543520a0c9d57a06124}} 
+\index{xmlparse.c@{xmlparse.c}!freeTagList@{freeTagList}}
+\index{freeTagList@{freeTagList}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{freeTagList}{freeTagList}}
+{\footnotesize\ttfamily \#define free\+Tag\+List~(parser-\/$>$m\+\_\+free\+Tag\+List)}
+
+\mbox{\Hypertarget{xmlparse_8c_a263678263938e54165f88cd889b6ce75}\label{xmlparse_8c_a263678263938e54165f88cd889b6ce75}} 
+\index{xmlparse.c@{xmlparse.c}!groupConnector@{groupConnector}}
+\index{groupConnector@{groupConnector}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{groupConnector}{groupConnector}}
+{\footnotesize\ttfamily \#define group\+Connector~(parser-\/$>$m\+\_\+group\+Connector)}
+
+\mbox{\Hypertarget{xmlparse_8c_a694d8b982b62eb3e685dcc3957aa8894}\label{xmlparse_8c_a694d8b982b62eb3e685dcc3957aa8894}} 
+\index{xmlparse.c@{xmlparse.c}!groupSize@{groupSize}}
+\index{groupSize@{groupSize}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{groupSize}{groupSize}}
+{\footnotesize\ttfamily \#define group\+Size~(parser-\/$>$m\+\_\+group\+Size)}
+
+\mbox{\Hypertarget{xmlparse_8c_a9e12f8140a29d958bcecacda5a59cbca}\label{xmlparse_8c_a9e12f8140a29d958bcecacda5a59cbca}} 
+\index{xmlparse.c@{xmlparse.c}!handlerArg@{handlerArg}}
+\index{handlerArg@{handlerArg}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{handlerArg}{handlerArg}}
+{\footnotesize\ttfamily \#define handler\+Arg~(parser-\/$>$m\+\_\+handler\+Arg)}
+
+\mbox{\Hypertarget{xmlparse_8c_adc80f62ce9a1bc68b9ec1d9d013c2227}\label{xmlparse_8c_adc80f62ce9a1bc68b9ec1d9d013c2227}} 
+\index{xmlparse.c@{xmlparse.c}!hash\_secret\_salt@{hash\_secret\_salt}}
+\index{hash\_secret\_salt@{hash\_secret\_salt}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{hash\_secret\_salt}{hash\_secret\_salt}}
+{\footnotesize\ttfamily \#define hash\+\_\+secret\+\_\+salt~(parser-\/$>$m\+\_\+hash\+\_\+secret\+\_\+salt)}
+
+\mbox{\Hypertarget{xmlparse_8c_a01055fe9c05bdbca693e0e22ab85a0e5}\label{xmlparse_8c_a01055fe9c05bdbca693e0e22ab85a0e5}} 
+\index{xmlparse.c@{xmlparse.c}!idAttIndex@{idAttIndex}}
+\index{idAttIndex@{idAttIndex}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{idAttIndex}{idAttIndex}}
+{\footnotesize\ttfamily \#define id\+Att\+Index~(parser-\/$>$m\+\_\+id\+Att\+Index)}
+
+\mbox{\Hypertarget{xmlparse_8c_a3104174926495d41334f41ecf7625d4b}\label{xmlparse_8c_a3104174926495d41334f41ecf7625d4b}} 
+\index{xmlparse.c@{xmlparse.c}!inheritedBindings@{inheritedBindings}}
+\index{inheritedBindings@{inheritedBindings}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{inheritedBindings}{inheritedBindings}}
+{\footnotesize\ttfamily \#define inherited\+Bindings~(parser-\/$>$m\+\_\+inherited\+Bindings)}
+
+\mbox{\Hypertarget{xmlparse_8c_a794ada822e287f29805e4896b0e9b62b}\label{xmlparse_8c_a794ada822e287f29805e4896b0e9b62b}} 
+\index{xmlparse.c@{xmlparse.c}!INIT\_ATTS\_SIZE@{INIT\_ATTS\_SIZE}}
+\index{INIT\_ATTS\_SIZE@{INIT\_ATTS\_SIZE}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{INIT\_ATTS\_SIZE}{INIT\_ATTS\_SIZE}}
+{\footnotesize\ttfamily \#define INIT\+\_\+\+ATTS\+\_\+\+SIZE~16}
+
+\mbox{\Hypertarget{xmlparse_8c_a58ece3d52c803a3ae784df018f71a42d}\label{xmlparse_8c_a58ece3d52c803a3ae784df018f71a42d}} 
+\index{xmlparse.c@{xmlparse.c}!INIT\_ATTS\_VERSION@{INIT\_ATTS\_VERSION}}
+\index{INIT\_ATTS\_VERSION@{INIT\_ATTS\_VERSION}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{INIT\_ATTS\_VERSION}{INIT\_ATTS\_VERSION}}
+{\footnotesize\ttfamily \#define INIT\+\_\+\+ATTS\+\_\+\+VERSION~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{xmlparse_8c_a154c2ccca4bd8cc781b8a05c910d8aaa}\label{xmlparse_8c_a154c2ccca4bd8cc781b8a05c910d8aaa}} 
+\index{xmlparse.c@{xmlparse.c}!INIT\_BLOCK\_SIZE@{INIT\_BLOCK\_SIZE}}
+\index{INIT\_BLOCK\_SIZE@{INIT\_BLOCK\_SIZE}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{INIT\_BLOCK\_SIZE}{INIT\_BLOCK\_SIZE}}
+{\footnotesize\ttfamily \#define INIT\+\_\+\+BLOCK\+\_\+\+SIZE~1024}
+
+\mbox{\Hypertarget{xmlparse_8c_a455ba2f0e322260b0c454d7da073af0e}\label{xmlparse_8c_a455ba2f0e322260b0c454d7da073af0e}} 
+\index{xmlparse.c@{xmlparse.c}!INIT\_BUFFER\_SIZE@{INIT\_BUFFER\_SIZE}}
+\index{INIT\_BUFFER\_SIZE@{INIT\_BUFFER\_SIZE}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{INIT\_BUFFER\_SIZE}{INIT\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define INIT\+\_\+\+BUFFER\+\_\+\+SIZE~1024}
+
+\mbox{\Hypertarget{xmlparse_8c_a3b0620f311e691900243a0cc71ab7d05}\label{xmlparse_8c_a3b0620f311e691900243a0cc71ab7d05}} 
+\index{xmlparse.c@{xmlparse.c}!INIT\_DATA\_BUF\_SIZE@{INIT\_DATA\_BUF\_SIZE}}
+\index{INIT\_DATA\_BUF\_SIZE@{INIT\_DATA\_BUF\_SIZE}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{INIT\_DATA\_BUF\_SIZE}{INIT\_DATA\_BUF\_SIZE}}
+{\footnotesize\ttfamily \#define INIT\+\_\+\+DATA\+\_\+\+BUF\+\_\+\+SIZE~1024}
+
+\mbox{\Hypertarget{xmlparse_8c_a00541dfec332b4293dd3bbf560742e03}\label{xmlparse_8c_a00541dfec332b4293dd3bbf560742e03}} 
+\index{xmlparse.c@{xmlparse.c}!INIT\_POWER@{INIT\_POWER}}
+\index{INIT\_POWER@{INIT\_POWER}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{INIT\_POWER}{INIT\_POWER}}
+{\footnotesize\ttfamily \#define INIT\+\_\+\+POWER~6}
+
+\mbox{\Hypertarget{xmlparse_8c_a2bdecceeac199b0c8e7e2ccce5ac7490}\label{xmlparse_8c_a2bdecceeac199b0c8e7e2ccce5ac7490}} 
+\index{xmlparse.c@{xmlparse.c}!INIT\_SCAFFOLD\_ELEMENTS@{INIT\_SCAFFOLD\_ELEMENTS}}
+\index{INIT\_SCAFFOLD\_ELEMENTS@{INIT\_SCAFFOLD\_ELEMENTS}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{INIT\_SCAFFOLD\_ELEMENTS}{INIT\_SCAFFOLD\_ELEMENTS}}
+{\footnotesize\ttfamily \#define INIT\+\_\+\+SCAFFOLD\+\_\+\+ELEMENTS~32}
+
+\mbox{\Hypertarget{xmlparse_8c_a836411019fe8b351db35f9a79fea3f48}\label{xmlparse_8c_a836411019fe8b351db35f9a79fea3f48}} 
+\index{xmlparse.c@{xmlparse.c}!INIT\_TAG\_BUF\_SIZE@{INIT\_TAG\_BUF\_SIZE}}
+\index{INIT\_TAG\_BUF\_SIZE@{INIT\_TAG\_BUF\_SIZE}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{INIT\_TAG\_BUF\_SIZE}{INIT\_TAG\_BUF\_SIZE}}
+{\footnotesize\ttfamily \#define INIT\+\_\+\+TAG\+\_\+\+BUF\+\_\+\+SIZE~32  /$\ast$ must be a multiple of sizeof(\mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}}) $\ast$/}
+
+\mbox{\Hypertarget{xmlparse_8c_a49f744a2302f39b471f72005c0e8836b}\label{xmlparse_8c_a49f744a2302f39b471f72005c0e8836b}} 
+\index{xmlparse.c@{xmlparse.c}!initEncoding@{initEncoding}}
+\index{initEncoding@{initEncoding}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{initEncoding}{initEncoding}}
+{\footnotesize\ttfamily \#define init\+Encoding~(parser-\/$>$m\+\_\+init\+Encoding)}
+
+\mbox{\Hypertarget{xmlparse_8c_a1b33093c602147d9a9c8d532f61c7dd0}\label{xmlparse_8c_a1b33093c602147d9a9c8d532f61c7dd0}} 
+\index{xmlparse.c@{xmlparse.c}!internalEncoding@{internalEncoding}}
+\index{internalEncoding@{internalEncoding}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{internalEncoding}{internalEncoding}}
+{\footnotesize\ttfamily \#define internal\+Encoding~(parser-\/$>$m\+\_\+internal\+Encoding)}
+
+\mbox{\Hypertarget{xmlparse_8c_ad675f805860a1b401be85d2a3a7708b5}\label{xmlparse_8c_ad675f805860a1b401be85d2a3a7708b5}} 
+\index{xmlparse.c@{xmlparse.c}!internalEntityRefHandler@{internalEntityRefHandler}}
+\index{internalEntityRefHandler@{internalEntityRefHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{internalEntityRefHandler}{internalEntityRefHandler}}
+{\footnotesize\ttfamily \#define internal\+Entity\+Ref\+Handler~        (parser-\/$>$m\+\_\+internal\+Entity\+Ref\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_ab8d499913046f671dedfa9ec2fee39e4}\label{xmlparse_8c_ab8d499913046f671dedfa9ec2fee39e4}} 
+\index{xmlparse.c@{xmlparse.c}!MALLOC@{MALLOC}}
+\index{MALLOC@{MALLOC}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{MALLOC}{MALLOC}}
+{\footnotesize\ttfamily \#define MALLOC(\begin{DoxyParamCaption}\item[{}]{s }\end{DoxyParamCaption})~(parser-\/$>$m\+\_\+mem.\+malloc\+\_\+fcn((s)))}
+
+\mbox{\Hypertarget{xmlparse_8c_a62142e6359fd5641bb5e0678ca3e1dfe}\label{xmlparse_8c_a62142e6359fd5641bb5e0678ca3e1dfe}} 
+\index{xmlparse.c@{xmlparse.c}!MUST\_CONVERT@{MUST\_CONVERT}}
+\index{MUST\_CONVERT@{MUST\_CONVERT}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{MUST\_CONVERT}{MUST\_CONVERT}}
+{\footnotesize\ttfamily \#define MUST\+\_\+\+CONVERT(\begin{DoxyParamCaption}\item[{}]{enc,  }\item[{}]{s }\end{DoxyParamCaption})~(!(enc)-\/$>$is\+Utf8)}
+
+\mbox{\Hypertarget{xmlparse_8c_a736bbc99314e2a5bf4f783a70cb88b2f}\label{xmlparse_8c_a736bbc99314e2a5bf4f783a70cb88b2f}} 
+\index{xmlparse.c@{xmlparse.c}!namespaceSeparator@{namespaceSeparator}}
+\index{namespaceSeparator@{namespaceSeparator}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{namespaceSeparator}{namespaceSeparator}}
+{\footnotesize\ttfamily \#define namespace\+Separator~(parser-\/$>$m\+\_\+namespace\+Separator)}
+
+\mbox{\Hypertarget{xmlparse_8c_a4654af496a67984a651f956c01b30902}\label{xmlparse_8c_a4654af496a67984a651f956c01b30902}} 
+\index{xmlparse.c@{xmlparse.c}!notationDeclHandler@{notationDeclHandler}}
+\index{notationDeclHandler@{notationDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{notationDeclHandler}{notationDeclHandler}}
+{\footnotesize\ttfamily \#define notation\+Decl\+Handler~(parser-\/$>$m\+\_\+notation\+Decl\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_aa688fadc801cd636da72805cb7596c0d}\label{xmlparse_8c_aa688fadc801cd636da72805cb7596c0d}} 
+\index{xmlparse.c@{xmlparse.c}!notStandaloneHandler@{notStandaloneHandler}}
+\index{notStandaloneHandler@{notStandaloneHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{notStandaloneHandler}{notStandaloneHandler}}
+{\footnotesize\ttfamily \#define not\+Standalone\+Handler~(parser-\/$>$m\+\_\+not\+Standalone\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_ab269c6a72273579c35715ec77b41b634}\label{xmlparse_8c_ab269c6a72273579c35715ec77b41b634}} 
+\index{xmlparse.c@{xmlparse.c}!ns@{ns}}
+\index{ns@{ns}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{ns}{ns}}
+{\footnotesize\ttfamily \#define ns~(parser-\/$>$m\+\_\+ns)}
+
+\mbox{\Hypertarget{xmlparse_8c_a70104d002b09d7b6eb9ad34d599a64f0}\label{xmlparse_8c_a70104d002b09d7b6eb9ad34d599a64f0}} 
+\index{xmlparse.c@{xmlparse.c}!ns\_triplets@{ns\_triplets}}
+\index{ns\_triplets@{ns\_triplets}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{ns\_triplets}{ns\_triplets}}
+{\footnotesize\ttfamily \#define ns\+\_\+triplets~(parser-\/$>$m\+\_\+ns\+\_\+triplets)}
+
+\mbox{\Hypertarget{xmlparse_8c_a455151da0e6b245f8a98f00480626376}\label{xmlparse_8c_a455151da0e6b245f8a98f00480626376}} 
+\index{xmlparse.c@{xmlparse.c}!nsAtts@{nsAtts}}
+\index{nsAtts@{nsAtts}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{nsAtts}{nsAtts}}
+{\footnotesize\ttfamily \#define ns\+Atts~(parser-\/$>$m\+\_\+ns\+Atts)}
+
+\mbox{\Hypertarget{xmlparse_8c_a50d8728e72c0b424a2d360c599f53779}\label{xmlparse_8c_a50d8728e72c0b424a2d360c599f53779}} 
+\index{xmlparse.c@{xmlparse.c}!nsAttsPower@{nsAttsPower}}
+\index{nsAttsPower@{nsAttsPower}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{nsAttsPower}{nsAttsPower}}
+{\footnotesize\ttfamily \#define ns\+Atts\+Power~(parser-\/$>$m\+\_\+ns\+Atts\+Power)}
+
+\mbox{\Hypertarget{xmlparse_8c_a4c7a8d2ec61115ce2ee0fbf95f5abe21}\label{xmlparse_8c_a4c7a8d2ec61115ce2ee0fbf95f5abe21}} 
+\index{xmlparse.c@{xmlparse.c}!nsAttsVersion@{nsAttsVersion}}
+\index{nsAttsVersion@{nsAttsVersion}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{nsAttsVersion}{nsAttsVersion}}
+{\footnotesize\ttfamily \#define ns\+Atts\+Version~(parser-\/$>$m\+\_\+ns\+Atts\+Version)}
+
+\mbox{\Hypertarget{xmlparse_8c_a130782f9100283fe154bf08918292c58}\label{xmlparse_8c_a130782f9100283fe154bf08918292c58}} 
+\index{xmlparse.c@{xmlparse.c}!nSpecifiedAtts@{nSpecifiedAtts}}
+\index{nSpecifiedAtts@{nSpecifiedAtts}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{nSpecifiedAtts}{nSpecifiedAtts}}
+{\footnotesize\ttfamily \#define n\+Specified\+Atts~(parser-\/$>$m\+\_\+n\+Specified\+Atts)}
+
+\mbox{\Hypertarget{xmlparse_8c_a5df0641cd43a44ba64ce0d3087d952f9}\label{xmlparse_8c_a5df0641cd43a44ba64ce0d3087d952f9}} 
+\index{xmlparse.c@{xmlparse.c}!openInternalEntities@{openInternalEntities}}
+\index{openInternalEntities@{openInternalEntities}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{openInternalEntities}{openInternalEntities}}
+{\footnotesize\ttfamily \#define open\+Internal\+Entities~(parser-\/$>$m\+\_\+open\+Internal\+Entities)}
+
+\mbox{\Hypertarget{xmlparse_8c_a9d763c133618f3e809bea574786ac52d}\label{xmlparse_8c_a9d763c133618f3e809bea574786ac52d}} 
+\index{xmlparse.c@{xmlparse.c}!parentParser@{parentParser}}
+\index{parentParser@{parentParser}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{parentParser}{parentParser}}
+{\footnotesize\ttfamily \#define parent\+Parser~(parser-\/$>$m\+\_\+parent\+Parser)}
+
+\mbox{\Hypertarget{xmlparse_8c_ab74018925dc84567939663e8c76b6856}\label{xmlparse_8c_ab74018925dc84567939663e8c76b6856}} 
+\index{xmlparse.c@{xmlparse.c}!parseEndByteIndex@{parseEndByteIndex}}
+\index{parseEndByteIndex@{parseEndByteIndex}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{parseEndByteIndex}{parseEndByteIndex}}
+{\footnotesize\ttfamily \#define parse\+End\+Byte\+Index~(parser-\/$>$m\+\_\+parse\+End\+Byte\+Index)}
+
+\mbox{\Hypertarget{xmlparse_8c_a69edecf818e64e82c1e550bdb6520481}\label{xmlparse_8c_a69edecf818e64e82c1e550bdb6520481}} 
+\index{xmlparse.c@{xmlparse.c}!parseEndPtr@{parseEndPtr}}
+\index{parseEndPtr@{parseEndPtr}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{parseEndPtr}{parseEndPtr}}
+{\footnotesize\ttfamily \#define parse\+End\+Ptr~(parser-\/$>$m\+\_\+parse\+End\+Ptr)}
+
+\mbox{\Hypertarget{xmlparse_8c_ae072bed74fc5fff224ec324737871399}\label{xmlparse_8c_ae072bed74fc5fff224ec324737871399}} 
+\index{xmlparse.c@{xmlparse.c}!poolAppendChar@{poolAppendChar}}
+\index{poolAppendChar@{poolAppendChar}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{poolAppendChar}{poolAppendChar}}
+{\footnotesize\ttfamily \#define pool\+Append\+Char(\begin{DoxyParamCaption}\item[{}]{pool,  }\item[{}]{c }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((pool)-\/>ptr == (pool)-\/>end \&\& !poolGrow(pool)) \(\backslash\)}
+\DoxyCodeLine{   ? 0 \(\backslash\)}
+\DoxyCodeLine{   : ((*((pool)-\/>ptr)++ = c), 1))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{xmlparse_8c_ad856ba8e9a9305a2a0b5539f999bbeaa}\label{xmlparse_8c_ad856ba8e9a9305a2a0b5539f999bbeaa}} 
+\index{xmlparse.c@{xmlparse.c}!poolChop@{poolChop}}
+\index{poolChop@{poolChop}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{poolChop}{poolChop}}
+{\footnotesize\ttfamily \#define pool\+Chop(\begin{DoxyParamCaption}\item[{}]{pool }\end{DoxyParamCaption})~((void)-\/-\/(pool-\/$>$ptr))}
+
+\mbox{\Hypertarget{xmlparse_8c_ac42e54028bfc6d8b168cf1eb1936d10e}\label{xmlparse_8c_ac42e54028bfc6d8b168cf1eb1936d10e}} 
+\index{xmlparse.c@{xmlparse.c}!poolDiscard@{poolDiscard}}
+\index{poolDiscard@{poolDiscard}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{poolDiscard}{poolDiscard}}
+{\footnotesize\ttfamily \#define pool\+Discard(\begin{DoxyParamCaption}\item[{}]{pool }\end{DoxyParamCaption})~((pool)-\/$>$ptr = (pool)-\/$>$\mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}})}
+
+\mbox{\Hypertarget{xmlparse_8c_a2e97b873d7bb94bc451bfe3656c314d9}\label{xmlparse_8c_a2e97b873d7bb94bc451bfe3656c314d9}} 
+\index{xmlparse.c@{xmlparse.c}!poolEnd@{poolEnd}}
+\index{poolEnd@{poolEnd}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{poolEnd}{poolEnd}}
+{\footnotesize\ttfamily \#define pool\+End(\begin{DoxyParamCaption}\item[{}]{pool }\end{DoxyParamCaption})~((pool)-\/$>$ptr)}
+
+\mbox{\Hypertarget{xmlparse_8c_a9db839b65943e8e94afadfeff3c8f8a4}\label{xmlparse_8c_a9db839b65943e8e94afadfeff3c8f8a4}} 
+\index{xmlparse.c@{xmlparse.c}!poolFinish@{poolFinish}}
+\index{poolFinish@{poolFinish}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{poolFinish}{poolFinish}}
+{\footnotesize\ttfamily \#define pool\+Finish(\begin{DoxyParamCaption}\item[{}]{pool }\end{DoxyParamCaption})~((pool)-\/$>$\mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}} = (pool)-\/$>$ptr)}
+
+\mbox{\Hypertarget{xmlparse_8c_ae6cc829455aa2a976f41d93cd3c81162}\label{xmlparse_8c_ae6cc829455aa2a976f41d93cd3c81162}} 
+\index{xmlparse.c@{xmlparse.c}!poolLastChar@{poolLastChar}}
+\index{poolLastChar@{poolLastChar}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{poolLastChar}{poolLastChar}}
+{\footnotesize\ttfamily \#define pool\+Last\+Char(\begin{DoxyParamCaption}\item[{}]{pool }\end{DoxyParamCaption})~(((pool)-\/$>$ptr)\mbox{[}-\/1\mbox{]})}
+
+\mbox{\Hypertarget{xmlparse_8c_a634e57fbfe06dcbcfa782dc5950c1c1d}\label{xmlparse_8c_a634e57fbfe06dcbcfa782dc5950c1c1d}} 
+\index{xmlparse.c@{xmlparse.c}!poolLength@{poolLength}}
+\index{poolLength@{poolLength}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{poolLength}{poolLength}}
+{\footnotesize\ttfamily \#define pool\+Length(\begin{DoxyParamCaption}\item[{}]{pool }\end{DoxyParamCaption})~((pool)-\/$>$ptr -\/ (pool)-\/$>$\mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}})}
+
+\mbox{\Hypertarget{xmlparse_8c_a386cd1d223c3a07e77de4009a70dfc99}\label{xmlparse_8c_a386cd1d223c3a07e77de4009a70dfc99}} 
+\index{xmlparse.c@{xmlparse.c}!poolStart@{poolStart}}
+\index{poolStart@{poolStart}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{poolStart}{poolStart}}
+{\footnotesize\ttfamily \#define pool\+Start(\begin{DoxyParamCaption}\item[{}]{pool }\end{DoxyParamCaption})~((pool)-\/$>$\mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}})}
+
+\mbox{\Hypertarget{xmlparse_8c_a38975acbb6db0fe600f77477050279a4}\label{xmlparse_8c_a38975acbb6db0fe600f77477050279a4}} 
+\index{xmlparse.c@{xmlparse.c}!position@{position}}
+\index{position@{position}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \#define \mbox{\hyperlink{structposition}{position}}~(parser-\/$>$m\+\_\+position)}
+
+\mbox{\Hypertarget{xmlparse_8c_aed5d95cbb171c2dfa8bce638f533a273}\label{xmlparse_8c_aed5d95cbb171c2dfa8bce638f533a273}} 
+\index{xmlparse.c@{xmlparse.c}!positionPtr@{positionPtr}}
+\index{positionPtr@{positionPtr}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{positionPtr}{positionPtr}}
+{\footnotesize\ttfamily \#define position\+Ptr~(parser-\/$>$m\+\_\+position\+Ptr)}
+
+\mbox{\Hypertarget{xmlparse_8c_a1fe8c2d28329fb8ad8e4bc1e77748e15}\label{xmlparse_8c_a1fe8c2d28329fb8ad8e4bc1e77748e15}} 
+\index{xmlparse.c@{xmlparse.c}!PROBE\_STEP@{PROBE\_STEP}}
+\index{PROBE\_STEP@{PROBE\_STEP}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{PROBE\_STEP}{PROBE\_STEP}}
+{\footnotesize\ttfamily \#define PROBE\+\_\+\+STEP(\begin{DoxyParamCaption}\item[{}]{hash,  }\item[{}]{mask,  }\item[{}]{power }\end{DoxyParamCaption})~  ((unsigned char)((\mbox{\hyperlink{xmlparse_8c_a6e9fcd1e2aea63f6d799aff591d89a6a}{SECOND\+\_\+\+HASH}}(hash, mask, power)) $\vert$ 1))}
+
+\mbox{\Hypertarget{xmlparse_8c_a16aeaf3e01c64f9301a6954762951b74}\label{xmlparse_8c_a16aeaf3e01c64f9301a6954762951b74}} 
+\index{xmlparse.c@{xmlparse.c}!processingInstructionHandler@{processingInstructionHandler}}
+\index{processingInstructionHandler@{processingInstructionHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{processingInstructionHandler}{processingInstructionHandler}}
+{\footnotesize\ttfamily \#define processing\+Instruction\+Handler~        (parser-\/$>$m\+\_\+processing\+Instruction\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_ae2e049b4850fa94870e78619701bbeb0}\label{xmlparse_8c_ae2e049b4850fa94870e78619701bbeb0}} 
+\index{xmlparse.c@{xmlparse.c}!processor@{processor}}
+\index{processor@{processor}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{processor}{processor}}
+{\footnotesize\ttfamily \#define processor~(parser-\/$>$m\+\_\+processor)}
+
+\mbox{\Hypertarget{xmlparse_8c_af493a8c6fd0c8fec5539c52661fda630}\label{xmlparse_8c_af493a8c6fd0c8fec5539c52661fda630}} 
+\index{xmlparse.c@{xmlparse.c}!prologState@{prologState}}
+\index{prologState@{prologState}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{prologState}{prologState}}
+{\footnotesize\ttfamily \#define prolog\+State~(parser-\/$>$m\+\_\+prolog\+State)}
+
+\mbox{\Hypertarget{xmlparse_8c_a7acee91eaf16102f30a0b769adc0db04}\label{xmlparse_8c_a7acee91eaf16102f30a0b769adc0db04}} 
+\index{xmlparse.c@{xmlparse.c}!protocolEncodingName@{protocolEncodingName}}
+\index{protocolEncodingName@{protocolEncodingName}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{protocolEncodingName}{protocolEncodingName}}
+{\footnotesize\ttfamily \#define protocol\+Encoding\+Name~(parser-\/$>$m\+\_\+protocol\+Encoding\+Name)}
+
+\mbox{\Hypertarget{xmlparse_8c_a138303ba865325ae5574c370eec9ae46}\label{xmlparse_8c_a138303ba865325ae5574c370eec9ae46}} 
+\index{xmlparse.c@{xmlparse.c}!ps\_finalBuffer@{ps\_finalBuffer}}
+\index{ps\_finalBuffer@{ps\_finalBuffer}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{ps\_finalBuffer}{ps\_finalBuffer}}
+{\footnotesize\ttfamily \#define ps\+\_\+final\+Buffer~(parser-\/$>$m\+\_\+parsing\+Status.\+final\+Buffer)}
+
+\mbox{\Hypertarget{xmlparse_8c_aa9b2258587e65f28344754d3377ca60c}\label{xmlparse_8c_aa9b2258587e65f28344754d3377ca60c}} 
+\index{xmlparse.c@{xmlparse.c}!ps\_parsing@{ps\_parsing}}
+\index{ps\_parsing@{ps\_parsing}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{ps\_parsing}{ps\_parsing}}
+{\footnotesize\ttfamily \#define ps\+\_\+parsing~(parser-\/$>$m\+\_\+parsing\+Status.\+parsing)}
+
+\mbox{\Hypertarget{xmlparse_8c_a17d9af8542e3c215a173f67977fb06aa}\label{xmlparse_8c_a17d9af8542e3c215a173f67977fb06aa}} 
+\index{xmlparse.c@{xmlparse.c}!REALLOC@{REALLOC}}
+\index{REALLOC@{REALLOC}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{REALLOC}{REALLOC}}
+{\footnotesize\ttfamily \#define REALLOC(\begin{DoxyParamCaption}\item[{}]{p,  }\item[{}]{s }\end{DoxyParamCaption})~(parser-\/$>$m\+\_\+mem.\+realloc\+\_\+fcn((p),(s)))}
+
+\mbox{\Hypertarget{xmlparse_8c_a6b15bd61b34718150a8b92ffc21d49a3}\label{xmlparse_8c_a6b15bd61b34718150a8b92ffc21d49a3}} 
+\index{xmlparse.c@{xmlparse.c}!ROUND\_UP@{ROUND\_UP}}
+\index{ROUND\_UP@{ROUND\_UP}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{ROUND\_UP}{ROUND\_UP}}
+{\footnotesize\ttfamily \#define ROUND\+\_\+\+UP(\begin{DoxyParamCaption}\item[{}]{n,  }\item[{}]{sz }\end{DoxyParamCaption})~(((n) + ((sz) -\/ 1)) \& $\sim$((sz) -\/ 1))}
+
+\mbox{\Hypertarget{xmlparse_8c_a6e9fcd1e2aea63f6d799aff591d89a6a}\label{xmlparse_8c_a6e9fcd1e2aea63f6d799aff591d89a6a}} 
+\index{xmlparse.c@{xmlparse.c}!SECOND\_HASH@{SECOND\_HASH}}
+\index{SECOND\_HASH@{SECOND\_HASH}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{SECOND\_HASH}{SECOND\_HASH}}
+{\footnotesize\ttfamily \#define SECOND\+\_\+\+HASH(\begin{DoxyParamCaption}\item[{}]{hash,  }\item[{}]{mask,  }\item[{}]{power }\end{DoxyParamCaption})~  ((((hash) \& $\sim$(mask)) $>$$>$ ((power) -\/ 1)) \& ((mask) $>$$>$ 2))}
+
+\mbox{\Hypertarget{xmlparse_8c_a1753cfebea0f1d60dbf7d00f2e825bbe}\label{xmlparse_8c_a1753cfebea0f1d60dbf7d00f2e825bbe}} 
+\index{xmlparse.c@{xmlparse.c}!skippedEntityHandler@{skippedEntityHandler}}
+\index{skippedEntityHandler@{skippedEntityHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{skippedEntityHandler}{skippedEntityHandler}}
+{\footnotesize\ttfamily \#define skipped\+Entity\+Handler~(parser-\/$>$m\+\_\+skipped\+Entity\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_a65f06f03eda785674477bcfed1d85f62}\label{xmlparse_8c_a65f06f03eda785674477bcfed1d85f62}} 
+\index{xmlparse.c@{xmlparse.c}!startCdataSectionHandler@{startCdataSectionHandler}}
+\index{startCdataSectionHandler@{startCdataSectionHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{startCdataSectionHandler}{startCdataSectionHandler}}
+{\footnotesize\ttfamily \#define start\+Cdata\+Section\+Handler~        (parser-\/$>$m\+\_\+start\+Cdata\+Section\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_a8b81c0ef4b22fa60a1268c1722bf0580}\label{xmlparse_8c_a8b81c0ef4b22fa60a1268c1722bf0580}} 
+\index{xmlparse.c@{xmlparse.c}!startDoctypeDeclHandler@{startDoctypeDeclHandler}}
+\index{startDoctypeDeclHandler@{startDoctypeDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{startDoctypeDeclHandler}{startDoctypeDeclHandler}}
+{\footnotesize\ttfamily \#define start\+Doctype\+Decl\+Handler~(parser-\/$>$m\+\_\+start\+Doctype\+Decl\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_a922a52c6d583f208de2de02834e30efd}\label{xmlparse_8c_a922a52c6d583f208de2de02834e30efd}} 
+\index{xmlparse.c@{xmlparse.c}!startElementHandler@{startElementHandler}}
+\index{startElementHandler@{startElementHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{startElementHandler}{startElementHandler}}
+{\footnotesize\ttfamily \#define start\+Element\+Handler~(parser-\/$>$m\+\_\+start\+Element\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_a8ae71caf8f589aef75fa7bc71956e0da}\label{xmlparse_8c_a8ae71caf8f589aef75fa7bc71956e0da}} 
+\index{xmlparse.c@{xmlparse.c}!startNamespaceDeclHandler@{startNamespaceDeclHandler}}
+\index{startNamespaceDeclHandler@{startNamespaceDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{startNamespaceDeclHandler}{startNamespaceDeclHandler}}
+{\footnotesize\ttfamily \#define start\+Namespace\+Decl\+Handler~        (parser-\/$>$m\+\_\+start\+Namespace\+Decl\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_a89227e5719171a2b7a05963fc67fcbc2}\label{xmlparse_8c_a89227e5719171a2b7a05963fc67fcbc2}} 
+\index{xmlparse.c@{xmlparse.c}!tagLevel@{tagLevel}}
+\index{tagLevel@{tagLevel}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{tagLevel}{tagLevel}}
+{\footnotesize\ttfamily \#define tag\+Level~(parser-\/$>$m\+\_\+tag\+Level)}
+
+\mbox{\Hypertarget{xmlparse_8c_a158f3ae07186f4c5e0ac37df749ceaec}\label{xmlparse_8c_a158f3ae07186f4c5e0ac37df749ceaec}} 
+\index{xmlparse.c@{xmlparse.c}!tagStack@{tagStack}}
+\index{tagStack@{tagStack}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{tagStack}{tagStack}}
+{\footnotesize\ttfamily \#define tag\+Stack~(parser-\/$>$m\+\_\+tag\+Stack)}
+
+\mbox{\Hypertarget{xmlparse_8c_a3027782cb1859b39383988b3dc5a32d4}\label{xmlparse_8c_a3027782cb1859b39383988b3dc5a32d4}} 
+\index{xmlparse.c@{xmlparse.c}!temp2Pool@{temp2Pool}}
+\index{temp2Pool@{temp2Pool}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{temp2Pool}{temp2Pool}}
+{\footnotesize\ttfamily \#define temp2\+Pool~(parser-\/$>$m\+\_\+temp2\+Pool)}
+
+\mbox{\Hypertarget{xmlparse_8c_a39a63433fd9ac53dbbe600beb1043adf}\label{xmlparse_8c_a39a63433fd9ac53dbbe600beb1043adf}} 
+\index{xmlparse.c@{xmlparse.c}!tempPool@{tempPool}}
+\index{tempPool@{tempPool}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{tempPool}{tempPool}}
+{\footnotesize\ttfamily \#define temp\+Pool~(parser-\/$>$m\+\_\+temp\+Pool)}
+
+\mbox{\Hypertarget{xmlparse_8c_a9581e7e60c6db8d6a0122b0e559beb0c}\label{xmlparse_8c_a9581e7e60c6db8d6a0122b0e559beb0c}} 
+\index{xmlparse.c@{xmlparse.c}!unknownEncodingData@{unknownEncodingData}}
+\index{unknownEncodingData@{unknownEncodingData}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{unknownEncodingData}{unknownEncodingData}}
+{\footnotesize\ttfamily \#define unknown\+Encoding\+Data~(parser-\/$>$m\+\_\+unknown\+Encoding\+Data)}
+
+\mbox{\Hypertarget{xmlparse_8c_a49ce74526fcb51273686528a09b34ac3}\label{xmlparse_8c_a49ce74526fcb51273686528a09b34ac3}} 
+\index{xmlparse.c@{xmlparse.c}!unknownEncodingHandler@{unknownEncodingHandler}}
+\index{unknownEncodingHandler@{unknownEncodingHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{unknownEncodingHandler}{unknownEncodingHandler}}
+{\footnotesize\ttfamily \#define unknown\+Encoding\+Handler~(parser-\/$>$m\+\_\+unknown\+Encoding\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_a714386346dd4bede749ba4daa41d7586}\label{xmlparse_8c_a714386346dd4bede749ba4daa41d7586}} 
+\index{xmlparse.c@{xmlparse.c}!unknownEncodingHandlerData@{unknownEncodingHandlerData}}
+\index{unknownEncodingHandlerData@{unknownEncodingHandlerData}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{unknownEncodingHandlerData}{unknownEncodingHandlerData}}
+{\footnotesize\ttfamily \#define unknown\+Encoding\+Handler\+Data~  (parser-\/$>$m\+\_\+unknown\+Encoding\+Handler\+Data)}
+
+\mbox{\Hypertarget{xmlparse_8c_a56a3130a18d2b72be03748455780e708}\label{xmlparse_8c_a56a3130a18d2b72be03748455780e708}} 
+\index{xmlparse.c@{xmlparse.c}!unknownEncodingMem@{unknownEncodingMem}}
+\index{unknownEncodingMem@{unknownEncodingMem}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{unknownEncodingMem}{unknownEncodingMem}}
+{\footnotesize\ttfamily \#define unknown\+Encoding\+Mem~(parser-\/$>$m\+\_\+unknown\+Encoding\+Mem)}
+
+\mbox{\Hypertarget{xmlparse_8c_a4711580e5eb92ef35d766bb7c86b9487}\label{xmlparse_8c_a4711580e5eb92ef35d766bb7c86b9487}} 
+\index{xmlparse.c@{xmlparse.c}!unknownEncodingRelease@{unknownEncodingRelease}}
+\index{unknownEncodingRelease@{unknownEncodingRelease}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{unknownEncodingRelease}{unknownEncodingRelease}}
+{\footnotesize\ttfamily \#define unknown\+Encoding\+Release~(parser-\/$>$m\+\_\+unknown\+Encoding\+Release)}
+
+\mbox{\Hypertarget{xmlparse_8c_ac7472317816f3b7da8ee4852ef91eeb5}\label{xmlparse_8c_ac7472317816f3b7da8ee4852ef91eeb5}} 
+\index{xmlparse.c@{xmlparse.c}!unparsedEntityDeclHandler@{unparsedEntityDeclHandler}}
+\index{unparsedEntityDeclHandler@{unparsedEntityDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{unparsedEntityDeclHandler}{unparsedEntityDeclHandler}}
+{\footnotesize\ttfamily \#define unparsed\+Entity\+Decl\+Handler~        (parser-\/$>$m\+\_\+unparsed\+Entity\+Decl\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}\label{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}} 
+\index{xmlparse.c@{xmlparse.c}!userData@{userData}}
+\index{userData@{userData}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{userData}{userData}}
+{\footnotesize\ttfamily \#define user\+Data~(parser-\/$>$m\+\_\+user\+Data)}
+
+\mbox{\Hypertarget{xmlparse_8c_a98b7c00e73b6d8f13214cc4646383aab}\label{xmlparse_8c_a98b7c00e73b6d8f13214cc4646383aab}} 
+\index{xmlparse.c@{xmlparse.c}!V1@{V1}}
+\index{V1@{V1}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{V1}{V1}}
+{\footnotesize\ttfamily \#define V1(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{c }\end{DoxyParamCaption})~\mbox{\hyperlink{xmlparse_8c_a9810f833cdfe0cddebb60a20257e0e59}{XML\+\_\+L}}(\#a)\mbox{\hyperlink{xmlparse_8c_a9810f833cdfe0cddebb60a20257e0e59}{XML\+\_\+L}}(\char`\"{}.\char`\"{})\mbox{\hyperlink{xmlparse_8c_a9810f833cdfe0cddebb60a20257e0e59}{XML\+\_\+L}}(\#b)\mbox{\hyperlink{xmlparse_8c_a9810f833cdfe0cddebb60a20257e0e59}{XML\+\_\+L}}(\char`\"{}.\char`\"{})\mbox{\hyperlink{xmlparse_8c_a9810f833cdfe0cddebb60a20257e0e59}{XML\+\_\+L}}(\#c)}
+
+\mbox{\Hypertarget{xmlparse_8c_affd35bbd101bc1b065a2183790195dd1}\label{xmlparse_8c_affd35bbd101bc1b065a2183790195dd1}} 
+\index{xmlparse.c@{xmlparse.c}!V2@{V2}}
+\index{V2@{V2}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{V2}{V2}}
+{\footnotesize\ttfamily \#define V2(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{c }\end{DoxyParamCaption})~\mbox{\hyperlink{xmlparse_8c_a9810f833cdfe0cddebb60a20257e0e59}{XML\+\_\+L}}(\char`\"{}expat\+\_\+\char`\"{})V1(a,b,c)}
+
+\mbox{\Hypertarget{xmlparse_8c_a375b1d5bc99cff1692e0875ac1d8a953}\label{xmlparse_8c_a375b1d5bc99cff1692e0875ac1d8a953}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_BUILDING\_EXPAT@{XML\_BUILDING\_EXPAT}}
+\index{XML\_BUILDING\_EXPAT@{XML\_BUILDING\_EXPAT}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_BUILDING\_EXPAT}{XML\_BUILDING\_EXPAT}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+BUILDING\+\_\+\+EXPAT~1}
+
+\mbox{\Hypertarget{xmlparse_8c_a361cb41d18ca477abbdbd2ea157d3557}\label{xmlparse_8c_a361cb41d18ca477abbdbd2ea157d3557}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_ENCODE\_MAX@{XML\_ENCODE\_MAX}}
+\index{XML\_ENCODE\_MAX@{XML\_ENCODE\_MAX}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_ENCODE\_MAX}{XML\_ENCODE\_MAX}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+ENCODE\+\_\+\+MAX~\mbox{\hyperlink{xmltok_8h_a8fefe7b18536c40a32b581a2f40aa2fe}{XML\+\_\+\+UTF8\+\_\+\+ENCODE\+\_\+\+MAX}}}
+
+\mbox{\Hypertarget{xmlparse_8c_a9810f833cdfe0cddebb60a20257e0e59}\label{xmlparse_8c_a9810f833cdfe0cddebb60a20257e0e59}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_L@{XML\_L}}
+\index{XML\_L@{XML\_L}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_L}{XML\_L}}
+{\footnotesize\ttfamily \#define XML\+\_\+L(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~x}
+
+\mbox{\Hypertarget{xmlparse_8c_ae4b64ebad65f8eddc2cf1c159ba06f55}\label{xmlparse_8c_ae4b64ebad65f8eddc2cf1c159ba06f55}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_T@{XML\_T}}
+\index{XML\_T@{XML\_T}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_T}{XML\_T}}
+{\footnotesize\ttfamily \#define XML\+\_\+T(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~x}
+
+\mbox{\Hypertarget{xmlparse_8c_a243c0ebc4d48626afba079cce7160dc0}\label{xmlparse_8c_a243c0ebc4d48626afba079cce7160dc0}} 
+\index{xmlparse.c@{xmlparse.c}!XmlConvert@{XmlConvert}}
+\index{XmlConvert@{XmlConvert}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XmlConvert}{XmlConvert}}
+{\footnotesize\ttfamily \#define Xml\+Convert~\mbox{\hyperlink{xmltok_8h_a2b4273f95ae9afa03fd097aaa807be9e}{Xml\+Utf8\+Convert}}}
+
+\mbox{\Hypertarget{xmlparse_8c_a64170e3e35c6d95084c210e28f48fb00}\label{xmlparse_8c_a64170e3e35c6d95084c210e28f48fb00}} 
+\index{xmlparse.c@{xmlparse.c}!xmlDeclHandler@{xmlDeclHandler}}
+\index{xmlDeclHandler@{xmlDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{xmlDeclHandler}{xmlDeclHandler}}
+{\footnotesize\ttfamily \#define xml\+Decl\+Handler~(parser-\/$>$m\+\_\+xml\+Decl\+Handler)}
+
+\mbox{\Hypertarget{xmlparse_8c_affd43373927d22c9caad69f323506a3e}\label{xmlparse_8c_affd43373927d22c9caad69f323506a3e}} 
+\index{xmlparse.c@{xmlparse.c}!XmlEncode@{XmlEncode}}
+\index{XmlEncode@{XmlEncode}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XmlEncode}{XmlEncode}}
+{\footnotesize\ttfamily \#define Xml\+Encode~\mbox{\hyperlink{xmltok_8h_a56e56e234fd330d912619501fcc01054}{Xml\+Utf8\+Encode}}}
+
+\mbox{\Hypertarget{xmlparse_8c_aa0aa4b543a8778d25ce95b5a3550203b}\label{xmlparse_8c_aa0aa4b543a8778d25ce95b5a3550203b}} 
+\index{xmlparse.c@{xmlparse.c}!XmlGetInternalEncoding@{XmlGetInternalEncoding}}
+\index{XmlGetInternalEncoding@{XmlGetInternalEncoding}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XmlGetInternalEncoding}{XmlGetInternalEncoding}}
+{\footnotesize\ttfamily \#define Xml\+Get\+Internal\+Encoding~\mbox{\hyperlink{xmltok_8h_a64165f5cd093ceab395d98e0cb80fc3d}{Xml\+Get\+Utf8\+Internal\+Encoding}}}
+
+\mbox{\Hypertarget{xmlparse_8c_a7e11bb4c4079140bfe8a907490e87d52}\label{xmlparse_8c_a7e11bb4c4079140bfe8a907490e87d52}} 
+\index{xmlparse.c@{xmlparse.c}!XmlGetInternalEncodingNS@{XmlGetInternalEncodingNS}}
+\index{XmlGetInternalEncodingNS@{XmlGetInternalEncodingNS}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XmlGetInternalEncodingNS}{XmlGetInternalEncodingNS}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define Xml\+Get\+Internal\+Encoding\+NS~\mbox{\hyperlink{xmltok_8h_a4111b4a4799b494f3f721f5675f0106c}{Xml\+Get\+Utf8\+Internal\+Encoding\+NS}}}
+
+\mbox{\Hypertarget{xmlparse_8c_a7e11bb4c4079140bfe8a907490e87d52}\label{xmlparse_8c_a7e11bb4c4079140bfe8a907490e87d52}} 
+\index{xmlparse.c@{xmlparse.c}!XmlGetInternalEncodingNS@{XmlGetInternalEncodingNS}}
+\index{XmlGetInternalEncodingNS@{XmlGetInternalEncodingNS}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XmlGetInternalEncodingNS}{XmlGetInternalEncodingNS}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define Xml\+Get\+Internal\+Encoding\+NS~\mbox{\hyperlink{xmlparse_8c_aa0aa4b543a8778d25ce95b5a3550203b}{Xml\+Get\+Internal\+Encoding}}}
+
+\mbox{\Hypertarget{xmlparse_8c_aabf84ba1b49d38a26cd4706af414f452}\label{xmlparse_8c_aabf84ba1b49d38a26cd4706af414f452}} 
+\index{xmlparse.c@{xmlparse.c}!XmlInitEncodingNS@{XmlInitEncodingNS}}
+\index{XmlInitEncodingNS@{XmlInitEncodingNS}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XmlInitEncodingNS}{XmlInitEncodingNS}}
+{\footnotesize\ttfamily \#define Xml\+Init\+Encoding\+NS~\mbox{\hyperlink{xmltok_8h_a9fa3e317508ec3052e285957e931ae13}{Xml\+Init\+Encoding}}}
+
+\mbox{\Hypertarget{xmlparse_8c_a4dc93e90a190ce8de7e813c2e5f55b68}\label{xmlparse_8c_a4dc93e90a190ce8de7e813c2e5f55b68}} 
+\index{xmlparse.c@{xmlparse.c}!XmlInitUnknownEncodingNS@{XmlInitUnknownEncodingNS}}
+\index{XmlInitUnknownEncodingNS@{XmlInitUnknownEncodingNS}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XmlInitUnknownEncodingNS}{XmlInitUnknownEncodingNS}}
+{\footnotesize\ttfamily \#define Xml\+Init\+Unknown\+Encoding\+NS~\mbox{\hyperlink{xmltok_8h_a7bd2980a71390ec11b4039e2f10a41da}{Xml\+Init\+Unknown\+Encoding}}}
+
+\mbox{\Hypertarget{xmlparse_8c_ae78ba61b9eaaafd2b29a3a3b61a296b9}\label{xmlparse_8c_ae78ba61b9eaaafd2b29a3a3b61a296b9}} 
+\index{xmlparse.c@{xmlparse.c}!XmlParseXmlDeclNS@{XmlParseXmlDeclNS}}
+\index{XmlParseXmlDeclNS@{XmlParseXmlDeclNS}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XmlParseXmlDeclNS}{XmlParseXmlDeclNS}}
+{\footnotesize\ttfamily \#define Xml\+Parse\+Xml\+Decl\+NS~\mbox{\hyperlink{xmltok_8h_a10982a55deba3bb46e373700d7a4ec2e}{Xml\+Parse\+Xml\+Decl}}}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{xmlparse_8c_ad0401547426d01dfab3a36f4237af5bf}\label{xmlparse_8c_ad0401547426d01dfab3a36f4237af5bf}} 
+\index{xmlparse.c@{xmlparse.c}!ATTRIBUTE\_ID@{ATTRIBUTE\_ID}}
+\index{ATTRIBUTE\_ID@{ATTRIBUTE\_ID}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{ATTRIBUTE\_ID}{ATTRIBUTE\_ID}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structattribute__id}{attribute\+\_\+id}} \mbox{\hyperlink{xmlparse_8c_ad0401547426d01dfab3a36f4237af5bf}{ATTRIBUTE\+\_\+\+ID}}}
+
+\mbox{\Hypertarget{xmlparse_8c_aa818f36b0da71b524db7ac927828a784}\label{xmlparse_8c_aa818f36b0da71b524db7ac927828a784}} 
+\index{xmlparse.c@{xmlparse.c}!BINDING@{BINDING}}
+\index{BINDING@{BINDING}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{BINDING}{BINDING}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structbinding}{binding}} \mbox{\hyperlink{xmlparse_8c_aa818f36b0da71b524db7ac927828a784}{BINDING}}}
+
+\mbox{\Hypertarget{xmlparse_8c_a5f55f84d1be5e95f14784fb9e28490e6}\label{xmlparse_8c_a5f55f84d1be5e95f14784fb9e28490e6}} 
+\index{xmlparse.c@{xmlparse.c}!BLOCK@{BLOCK}}
+\index{BLOCK@{BLOCK}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{BLOCK}{BLOCK}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structblock}{block}} \mbox{\hyperlink{xmlparse_8c_a5f55f84d1be5e95f14784fb9e28490e6}{BLOCK}}}
+
+\mbox{\Hypertarget{xmlparse_8c_ac4b0eb8553f2e9c4325b04af8dac5264}\label{xmlparse_8c_ac4b0eb8553f2e9c4325b04af8dac5264}} 
+\index{xmlparse.c@{xmlparse.c}!ICHAR@{ICHAR}}
+\index{ICHAR@{ICHAR}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{ICHAR}{ICHAR}}
+{\footnotesize\ttfamily typedef char \mbox{\hyperlink{xmlparse_8c_ac4b0eb8553f2e9c4325b04af8dac5264}{ICHAR}}}
+
+\mbox{\Hypertarget{xmlparse_8c_ab993fe892165ffeae5facd4ab9ded1e9}\label{xmlparse_8c_ab993fe892165ffeae5facd4ab9ded1e9}} 
+\index{xmlparse.c@{xmlparse.c}!KEY@{KEY}}
+\index{KEY@{KEY}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{KEY}{KEY}}
+{\footnotesize\ttfamily typedef const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}}$\ast$ \mbox{\hyperlink{xmlparse_8c_ab993fe892165ffeae5facd4ab9ded1e9}{KEY}}}
+
+\mbox{\Hypertarget{xmlparse_8c_a96bd7b151f14f0a9b8fa8a96f2a6e7d7}\label{xmlparse_8c_a96bd7b151f14f0a9b8fa8a96f2a6e7d7}} 
+\index{xmlparse.c@{xmlparse.c}!OPEN\_INTERNAL\_ENTITY@{OPEN\_INTERNAL\_ENTITY}}
+\index{OPEN\_INTERNAL\_ENTITY@{OPEN\_INTERNAL\_ENTITY}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{OPEN\_INTERNAL\_ENTITY}{OPEN\_INTERNAL\_ENTITY}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structopen__internal__entity}{open\+\_\+internal\+\_\+entity}} \mbox{\hyperlink{xmlparse_8c_a96bd7b151f14f0a9b8fa8a96f2a6e7d7}{OPEN\+\_\+\+INTERNAL\+\_\+\+ENTITY}}}
+
+\mbox{\Hypertarget{xmlparse_8c_a205d21b8e7b83068673e6577d3feac7c}\label{xmlparse_8c_a205d21b8e7b83068673e6577d3feac7c}} 
+\index{xmlparse.c@{xmlparse.c}!PREFIX@{PREFIX}}
+\index{PREFIX@{PREFIX}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{PREFIX}{PREFIX}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structprefix}{prefix}} \mbox{\hyperlink{xmlparse_8c_a205d21b8e7b83068673e6577d3feac7c}{PREFIX}}}
+
+\mbox{\Hypertarget{xmlparse_8c_a4a6f6148fcb8e499092b8ee9c39eeaf8}\label{xmlparse_8c_a4a6f6148fcb8e499092b8ee9c39eeaf8}} 
+\index{xmlparse.c@{xmlparse.c}!TAG@{TAG}}
+\index{TAG@{TAG}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{TAG}{TAG}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structtag}{tag}} \mbox{\hyperlink{xmlparse_8c_a4a6f6148fcb8e499092b8ee9c39eeaf8}{TAG}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{xmlparse_8c_a91ac003478582480fcfc8c0fd9377cbc}\label{xmlparse_8c_a91ac003478582480fcfc8c0fd9377cbc}} 
+\index{xmlparse.c@{xmlparse.c}!Processor@{Processor}}
+\index{Processor@{Processor}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{Processor()}{Processor()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118}{XML\+\_\+\+Error}} \mbox{\hyperlink{internal_8h_af44f68911377fd55f6e1588b0c89b3e5}{PTRCALL}} Processor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{const char $\ast$}]{start,  }\item[{const char $\ast$}]{end,  }\item[{const char $\ast$$\ast$}]{end\+Ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a822d96f2e6d25c735d31388e2ee7550e}\label{xmlparse_8c_a822d96f2e6d25c735d31388e2ee7550e}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_DefaultCurrent@{XML\_DefaultCurrent}}
+\index{XML\_DefaultCurrent@{XML\_DefaultCurrent}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_DefaultCurrent()}{XML\_DefaultCurrent()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Default\+Current (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a41b7167b409d9894c4928e6659b80dd5}\label{xmlparse_8c_a41b7167b409d9894c4928e6659b80dd5}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_ErrorString@{XML\_ErrorString}}
+\index{XML\_ErrorString@{XML\_ErrorString}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_ErrorString()}{XML\_ErrorString()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{expat__external_8h_a728c9a3114531eaeb70753ba4601c418}{XML\+\_\+\+LChar}}$\ast$ \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Error\+String (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118}{XML\+\_\+\+Error}}}]{code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_ac65b562b6d15c0187ef971f426a35e71}\label{xmlparse_8c_ac65b562b6d15c0187ef971f426a35e71}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_ExpatVersion@{XML\_ExpatVersion}}
+\index{XML\_ExpatVersion@{XML\_ExpatVersion}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_ExpatVersion()}{XML\_ExpatVersion()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{expat__external_8h_a728c9a3114531eaeb70753ba4601c418}{XML\+\_\+\+LChar}}$\ast$ \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Expat\+Version (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a48973ae7f75c6032603e192b4281efcb}\label{xmlparse_8c_a48973ae7f75c6032603e192b4281efcb}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_ExpatVersionInfo@{XML\_ExpatVersionInfo}}
+\index{XML\_ExpatVersionInfo@{XML\_ExpatVersionInfo}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_ExpatVersionInfo()}{XML\_ExpatVersionInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_x_m_l___expat___version}{XML\+\_\+\+Expat\+\_\+\+Version}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Expat\+Version\+Info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a5007cc50cec12841afd76cf150e9cc2d}\label{xmlparse_8c_a5007cc50cec12841afd76cf150e9cc2d}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_ExternalEntityParserCreate@{XML\_ExternalEntityParserCreate}}
+\index{XML\_ExternalEntityParserCreate@{XML\_ExternalEntityParserCreate}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_ExternalEntityParserCreate()}{XML\_ExternalEntityParserCreate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+External\+Entity\+Parser\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{old\+Parser,  }\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{context,  }\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{encoding\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a362c3420424d6a4c6181af97ca2678c0}\label{xmlparse_8c_a362c3420424d6a4c6181af97ca2678c0}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_FreeContentModel@{XML\_FreeContentModel}}
+\index{XML\_FreeContentModel@{XML\_FreeContentModel}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_FreeContentModel()}{XML\_FreeContentModel()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Free\+Content\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a791d9e7de669ec5395df17978e1c507e}{XML\+\_\+\+Content}} $\ast$}]{model }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_abdb6c85284082fe8a74efa0fa141a1da}\label{xmlparse_8c_abdb6c85284082fe8a74efa0fa141a1da}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_GetBase@{XML\_GetBase}}
+\index{XML\_GetBase@{XML\_GetBase}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_GetBase()}{XML\_GetBase()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}}$\ast$ \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Get\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a846f46601c54e0bd4e4a996307ba3f9b}\label{xmlparse_8c_a846f46601c54e0bd4e4a996307ba3f9b}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_GetBuffer@{XML\_GetBuffer}}
+\index{XML\_GetBuffer@{XML\_GetBuffer}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_GetBuffer()}{XML\_GetBuffer()}}
+{\footnotesize\ttfamily void$\ast$ \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Get\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_af930a6c7c396ff07b8e70b9883602400}\label{xmlparse_8c_af930a6c7c396ff07b8e70b9883602400}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_GetCurrentByteCount@{XML\_GetCurrentByteCount}}
+\index{XML\_GetCurrentByteCount@{XML\_GetCurrentByteCount}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_GetCurrentByteCount()}{XML\_GetCurrentByteCount()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Get\+Current\+Byte\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a643677b451f2ee9103f396de161aab52}\label{xmlparse_8c_a643677b451f2ee9103f396de161aab52}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_GetCurrentByteIndex@{XML\_GetCurrentByteIndex}}
+\index{XML\_GetCurrentByteIndex@{XML\_GetCurrentByteIndex}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_GetCurrentByteIndex()}{XML\_GetCurrentByteIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expat__external_8h_ae2a9a55c7071b0c6da19fea14ce8f504}{XML\+\_\+\+Index}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Get\+Current\+Byte\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a45f92a94ac5382b44a9c3fed893f8921}\label{xmlparse_8c_a45f92a94ac5382b44a9c3fed893f8921}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_GetCurrentColumnNumber@{XML\_GetCurrentColumnNumber}}
+\index{XML\_GetCurrentColumnNumber@{XML\_GetCurrentColumnNumber}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_GetCurrentColumnNumber()}{XML\_GetCurrentColumnNumber()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expat__external_8h_ad22a225e6e62127360b44b2f7559f789}{XML\+\_\+\+Size}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Get\+Current\+Column\+Number (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a5f0c9f83229fdaa9dcb48a8447045243}\label{xmlparse_8c_a5f0c9f83229fdaa9dcb48a8447045243}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_GetCurrentLineNumber@{XML\_GetCurrentLineNumber}}
+\index{XML\_GetCurrentLineNumber@{XML\_GetCurrentLineNumber}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_GetCurrentLineNumber()}{XML\_GetCurrentLineNumber()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expat__external_8h_ad22a225e6e62127360b44b2f7559f789}{XML\+\_\+\+Size}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Get\+Current\+Line\+Number (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a6127be821a2d4cb2be74afc31f41f29f}\label{xmlparse_8c_a6127be821a2d4cb2be74afc31f41f29f}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_GetErrorCode@{XML\_GetErrorCode}}
+\index{XML\_GetErrorCode@{XML\_GetErrorCode}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_GetErrorCode()}{XML\_GetErrorCode()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118}{XML\+\_\+\+Error}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Get\+Error\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_aa56362be962a8cb87ddacbe96a50370b}\label{xmlparse_8c_aa56362be962a8cb87ddacbe96a50370b}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_GetFeatureList@{XML\_GetFeatureList}}
+\index{XML\_GetFeatureList@{XML\_GetFeatureList}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_GetFeatureList()}{XML\_GetFeatureList()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_x_m_l___feature}{XML\+\_\+\+Feature}}$\ast$ \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Get\+Feature\+List (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a605f45f0d2783982343a5778f6f11851}\label{xmlparse_8c_a605f45f0d2783982343a5778f6f11851}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_GetIdAttributeIndex@{XML\_GetIdAttributeIndex}}
+\index{XML\_GetIdAttributeIndex@{XML\_GetIdAttributeIndex}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_GetIdAttributeIndex()}{XML\_GetIdAttributeIndex()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Get\+Id\+Attribute\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a4d8d190e2eed2972f15288f78f3486ca}\label{xmlparse_8c_a4d8d190e2eed2972f15288f78f3486ca}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_GetInputContext@{XML\_GetInputContext}}
+\index{XML\_GetInputContext@{XML\_GetInputContext}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_GetInputContext()}{XML\_GetInputContext()}}
+{\footnotesize\ttfamily const char$\ast$ \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Get\+Input\+Context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{int $\ast$}]{offset,  }\item[{int $\ast$}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a7204cad48398e82b75a68a185619e88f}\label{xmlparse_8c_a7204cad48398e82b75a68a185619e88f}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_GetParsingStatus@{XML\_GetParsingStatus}}
+\index{XML\_GetParsingStatus@{XML\_GetParsingStatus}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_GetParsingStatus()}{XML\_GetParsingStatus()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Get\+Parsing\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{struct_x_m_l___parsing_status}{XML\+\_\+\+Parsing\+Status}} $\ast$}]{status }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a25aaf9db249abd012a042c248a9642d6}\label{xmlparse_8c_a25aaf9db249abd012a042c248a9642d6}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_GetSpecifiedAttributeCount@{XML\_GetSpecifiedAttributeCount}}
+\index{XML\_GetSpecifiedAttributeCount@{XML\_GetSpecifiedAttributeCount}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_GetSpecifiedAttributeCount()}{XML\_GetSpecifiedAttributeCount()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Get\+Specified\+Attribute\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_aa2ce2b1966277c78b16da3efd122a44d}\label{xmlparse_8c_aa2ce2b1966277c78b16da3efd122a44d}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_MemFree@{XML\_MemFree}}
+\index{XML\_MemFree@{XML\_MemFree}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_MemFree()}{XML\_MemFree()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Mem\+Free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a74f8b2d9ee7d5ad1a54d18732d54135b}\label{xmlparse_8c_a74f8b2d9ee7d5ad1a54d18732d54135b}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_MemMalloc@{XML\_MemMalloc}}
+\index{XML\_MemMalloc@{XML\_MemMalloc}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_MemMalloc()}{XML\_MemMalloc()}}
+{\footnotesize\ttfamily void$\ast$ \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Mem\+Malloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a54b947209ad0b01141588900fe33ee5e}\label{xmlparse_8c_a54b947209ad0b01141588900fe33ee5e}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_MemRealloc@{XML\_MemRealloc}}
+\index{XML\_MemRealloc@{XML\_MemRealloc}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_MemRealloc()}{XML\_MemRealloc()}}
+{\footnotesize\ttfamily void$\ast$ \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Mem\+Realloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{void $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a62a6555a21bb12d37d3ef7baf9972cac}\label{xmlparse_8c_a62a6555a21bb12d37d3ef7baf9972cac}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_Parse@{XML\_Parse}}
+\index{XML\_Parse@{XML\_Parse}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_Parse()}{XML\_Parse()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bb}{XML\+\_\+\+Status}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{const char $\ast$}]{s,  }\item[{int}]{len,  }\item[{int}]{is\+Final }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_af02b28fc9c4ab4ed26145ab5d83cea22}\label{xmlparse_8c_af02b28fc9c4ab4ed26145ab5d83cea22}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_ParseBuffer@{XML\_ParseBuffer}}
+\index{XML\_ParseBuffer@{XML\_ParseBuffer}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_ParseBuffer()}{XML\_ParseBuffer()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bb}{XML\+\_\+\+Status}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Parse\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{int}]{len,  }\item[{int}]{is\+Final }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a01f18ce453fd8d56fddd20b95e8c67cb}\label{xmlparse_8c_a01f18ce453fd8d56fddd20b95e8c67cb}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_ParserCreate@{XML\_ParserCreate}}
+\index{XML\_ParserCreate@{XML\_ParserCreate}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_ParserCreate()}{XML\_ParserCreate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Parser\+Create (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{encoding\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a39ec83ab7ecadd8f5a760cd3becd45f4}\label{xmlparse_8c_a39ec83ab7ecadd8f5a760cd3becd45f4}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_ParserCreate\_MM@{XML\_ParserCreate\_MM}}
+\index{XML\_ParserCreate\_MM@{XML\_ParserCreate\_MM}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_ParserCreate\_MM()}{XML\_ParserCreate\_MM()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Parser\+Create\+\_\+\+MM (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{encoding\+Name,  }\item[{const \mbox{\hyperlink{struct_x_m_l___memory___handling___suite}{XML\+\_\+\+Memory\+\_\+\+Handling\+\_\+\+Suite}} $\ast$}]{memsuite,  }\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{name\+Sep }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a3762c40e9b7e108bc5c6b399888b4bce}\label{xmlparse_8c_a3762c40e9b7e108bc5c6b399888b4bce}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_ParserCreateNS@{XML\_ParserCreateNS}}
+\index{XML\_ParserCreateNS@{XML\_ParserCreateNS}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_ParserCreateNS()}{XML\_ParserCreateNS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Parser\+Create\+NS (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{encoding\+Name,  }\item[{\mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}}}]{ns\+Sep }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_afa94bb8a8566c2280106a526ffb6a95b}\label{xmlparse_8c_afa94bb8a8566c2280106a526ffb6a95b}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_ParserFree@{XML\_ParserFree}}
+\index{XML\_ParserFree@{XML\_ParserFree}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_ParserFree()}{XML\_ParserFree()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Parser\+Free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_aacda009967692067b7b37502b0bc8df7}\label{xmlparse_8c_aacda009967692067b7b37502b0bc8df7}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_ParserReset@{XML\_ParserReset}}
+\index{XML\_ParserReset@{XML\_ParserReset}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_ParserReset()}{XML\_ParserReset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}{XML\+\_\+\+Bool}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Parser\+Reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{encoding\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_aeff65950eef53d5817533fca6af93ae8}\label{xmlparse_8c_aeff65950eef53d5817533fca6af93ae8}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_ResumeParser@{XML\_ResumeParser}}
+\index{XML\_ResumeParser@{XML\_ResumeParser}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_ResumeParser()}{XML\_ResumeParser()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bb}{XML\+\_\+\+Status}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Resume\+Parser (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a2764dbc7f78d5a01d111f2738f9348bd}\label{xmlparse_8c_a2764dbc7f78d5a01d111f2738f9348bd}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetAttlistDeclHandler@{XML\_SetAttlistDeclHandler}}
+\index{XML\_SetAttlistDeclHandler@{XML\_SetAttlistDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetAttlistDeclHandler()}{XML\_SetAttlistDeclHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Attlist\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a89899063dae04c58a3f2ef13e22bedbc}{XML\+\_\+\+Attlist\+Decl\+Handler}}}]{attdecl }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a102ae76f998e2cb8eb542eb08b05b4a4}\label{xmlparse_8c_a102ae76f998e2cb8eb542eb08b05b4a4}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetBase@{XML\_SetBase}}
+\index{XML\_SetBase@{XML\_SetBase}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetBase()}{XML\_SetBase()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bb}{XML\+\_\+\+Status}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_ae193379d2b09d758e44c6d03e42a0631}\label{xmlparse_8c_ae193379d2b09d758e44c6d03e42a0631}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetCdataSectionHandler@{XML\_SetCdataSectionHandler}}
+\index{XML\_SetCdataSectionHandler@{XML\_SetCdataSectionHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetCdataSectionHandler()}{XML\_SetCdataSectionHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Cdata\+Section\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a661776930dd0ace06a3e9acc9bba4b82}{XML\+\_\+\+Start\+Cdata\+Section\+Handler}}}]{start,  }\item[{\mbox{\hyperlink{expat_8h_a3165868193185fbd43232e41dd211d4f}{XML\+\_\+\+End\+Cdata\+Section\+Handler}}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_ae1b46a8b1815c2d11a3b88c0900d8d16}\label{xmlparse_8c_ae1b46a8b1815c2d11a3b88c0900d8d16}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetCharacterDataHandler@{XML\_SetCharacterDataHandler}}
+\index{XML\_SetCharacterDataHandler@{XML\_SetCharacterDataHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetCharacterDataHandler()}{XML\_SetCharacterDataHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Character\+Data\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_aef3b6006dc0f845ddb482c2b37a44ba1}{XML\+\_\+\+Character\+Data\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_afb073dff3e7cb1dc01a0d30031764bca}\label{xmlparse_8c_afb073dff3e7cb1dc01a0d30031764bca}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetCommentHandler@{XML\_SetCommentHandler}}
+\index{XML\_SetCommentHandler@{XML\_SetCommentHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetCommentHandler()}{XML\_SetCommentHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Comment\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a0aefc69cadea618f7fc17607c7c3c8ee}{XML\+\_\+\+Comment\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a883fafa5002c6df8e098d75827057132}\label{xmlparse_8c_a883fafa5002c6df8e098d75827057132}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetDefaultHandler@{XML\_SetDefaultHandler}}
+\index{XML\_SetDefaultHandler@{XML\_SetDefaultHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetDefaultHandler()}{XML\_SetDefaultHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Default\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_afa6c6c71f2c70cfe57c3506534cb70d7}{XML\+\_\+\+Default\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a1c99bb060330d671b4fe7bfa852bad9a}\label{xmlparse_8c_a1c99bb060330d671b4fe7bfa852bad9a}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetDefaultHandlerExpand@{XML\_SetDefaultHandlerExpand}}
+\index{XML\_SetDefaultHandlerExpand@{XML\_SetDefaultHandlerExpand}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetDefaultHandlerExpand()}{XML\_SetDefaultHandlerExpand()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Default\+Handler\+Expand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_afa6c6c71f2c70cfe57c3506534cb70d7}{XML\+\_\+\+Default\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_ad6b174f1be7b95b1e175c86151d0bdac}\label{xmlparse_8c_ad6b174f1be7b95b1e175c86151d0bdac}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetDoctypeDeclHandler@{XML\_SetDoctypeDeclHandler}}
+\index{XML\_SetDoctypeDeclHandler@{XML\_SetDoctypeDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetDoctypeDeclHandler()}{XML\_SetDoctypeDeclHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Doctype\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_ab748cf612072905843f3488414c19f3b}{XML\+\_\+\+Start\+Doctype\+Decl\+Handler}}}]{start,  }\item[{\mbox{\hyperlink{expat_8h_a43568a006caf34bcf94e4346031b85a0}{XML\+\_\+\+End\+Doctype\+Decl\+Handler}}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a3fb5d41e5bd0097e05b5be0d2eda0ac6}\label{xmlparse_8c_a3fb5d41e5bd0097e05b5be0d2eda0ac6}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetElementDeclHandler@{XML\_SetElementDeclHandler}}
+\index{XML\_SetElementDeclHandler@{XML\_SetElementDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetElementDeclHandler()}{XML\_SetElementDeclHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Element\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_affe4163d2280b13afb316b81f5650421}{XML\+\_\+\+Element\+Decl\+Handler}}}]{eldecl }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a464be65bf6755de9b7035d55c74d1367}\label{xmlparse_8c_a464be65bf6755de9b7035d55c74d1367}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetElementHandler@{XML\_SetElementHandler}}
+\index{XML\_SetElementHandler@{XML\_SetElementHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetElementHandler()}{XML\_SetElementHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Element\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a504bca048496cfbacf106a5e28564fcd}{XML\+\_\+\+Start\+Element\+Handler}}}]{start,  }\item[{\mbox{\hyperlink{expat_8h_a12978ae068c1222afbb5a400b5c692b9}{XML\+\_\+\+End\+Element\+Handler}}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a760f6f635c22ef02952a4864863822f6}\label{xmlparse_8c_a760f6f635c22ef02952a4864863822f6}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetEncoding@{XML\_SetEncoding}}
+\index{XML\_SetEncoding@{XML\_SetEncoding}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetEncoding()}{XML\_SetEncoding()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bb}{XML\+\_\+\+Status}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Encoding (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{encoding\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a8b9ba355810270c0d00f76c722fb3edd}\label{xmlparse_8c_a8b9ba355810270c0d00f76c722fb3edd}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetEndCdataSectionHandler@{XML\_SetEndCdataSectionHandler}}
+\index{XML\_SetEndCdataSectionHandler@{XML\_SetEndCdataSectionHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetEndCdataSectionHandler()}{XML\_SetEndCdataSectionHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+End\+Cdata\+Section\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a3165868193185fbd43232e41dd211d4f}{XML\+\_\+\+End\+Cdata\+Section\+Handler}}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a0735c84e413353e5840b387a26cd699e}\label{xmlparse_8c_a0735c84e413353e5840b387a26cd699e}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetEndDoctypeDeclHandler@{XML\_SetEndDoctypeDeclHandler}}
+\index{XML\_SetEndDoctypeDeclHandler@{XML\_SetEndDoctypeDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetEndDoctypeDeclHandler()}{XML\_SetEndDoctypeDeclHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+End\+Doctype\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a43568a006caf34bcf94e4346031b85a0}{XML\+\_\+\+End\+Doctype\+Decl\+Handler}}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a9a33295b5dfc3c22af331847f0ff705a}\label{xmlparse_8c_a9a33295b5dfc3c22af331847f0ff705a}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetEndElementHandler@{XML\_SetEndElementHandler}}
+\index{XML\_SetEndElementHandler@{XML\_SetEndElementHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetEndElementHandler()}{XML\_SetEndElementHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+End\+Element\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a12978ae068c1222afbb5a400b5c692b9}{XML\+\_\+\+End\+Element\+Handler}}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a788fd4e2cf86c45f9185d756aa6bb9be}\label{xmlparse_8c_a788fd4e2cf86c45f9185d756aa6bb9be}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetEndNamespaceDeclHandler@{XML\_SetEndNamespaceDeclHandler}}
+\index{XML\_SetEndNamespaceDeclHandler@{XML\_SetEndNamespaceDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetEndNamespaceDeclHandler()}{XML\_SetEndNamespaceDeclHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+End\+Namespace\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a1414891bd078b546986d463e746ad49c}{XML\+\_\+\+End\+Namespace\+Decl\+Handler}}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_ae71e92fd7ca3228d2d9f6eff5b62ff82}\label{xmlparse_8c_ae71e92fd7ca3228d2d9f6eff5b62ff82}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetEntityDeclHandler@{XML\_SetEntityDeclHandler}}
+\index{XML\_SetEntityDeclHandler@{XML\_SetEntityDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetEntityDeclHandler()}{XML\_SetEntityDeclHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Entity\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_af2f060ea47a43f92b5d23313ceba982a}{XML\+\_\+\+Entity\+Decl\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_ac22b935c501868c79e42212ade1047fa}\label{xmlparse_8c_ac22b935c501868c79e42212ade1047fa}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetExternalEntityRefHandler@{XML\_SetExternalEntityRefHandler}}
+\index{XML\_SetExternalEntityRefHandler@{XML\_SetExternalEntityRefHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetExternalEntityRefHandler()}{XML\_SetExternalEntityRefHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+External\+Entity\+Ref\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a2d955f5ce3c5401dbe14ba19e8067c01}{XML\+\_\+\+External\+Entity\+Ref\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_af861af5b3b5b6a71ee0e0bcd32a827a0}\label{xmlparse_8c_af861af5b3b5b6a71ee0e0bcd32a827a0}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetExternalEntityRefHandlerArg@{XML\_SetExternalEntityRefHandlerArg}}
+\index{XML\_SetExternalEntityRefHandlerArg@{XML\_SetExternalEntityRefHandlerArg}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetExternalEntityRefHandlerArg()}{XML\_SetExternalEntityRefHandlerArg()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+External\+Entity\+Ref\+Handler\+Arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_aca7bec4fc6fd929cf2207ea54183a393}\label{xmlparse_8c_aca7bec4fc6fd929cf2207ea54183a393}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetHashSalt@{XML\_SetHashSalt}}
+\index{XML\_SetHashSalt@{XML\_SetHashSalt}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetHashSalt()}{XML\_SetHashSalt()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Hash\+Salt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{unsigned long}]{hash\+\_\+salt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a6aff6d9ee0856597f7ede366fc466f45}\label{xmlparse_8c_a6aff6d9ee0856597f7ede366fc466f45}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetNamespaceDeclHandler@{XML\_SetNamespaceDeclHandler}}
+\index{XML\_SetNamespaceDeclHandler@{XML\_SetNamespaceDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetNamespaceDeclHandler()}{XML\_SetNamespaceDeclHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Namespace\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a58ad7c192f040f8196708f042c8bdc14}{XML\+\_\+\+Start\+Namespace\+Decl\+Handler}}}]{start,  }\item[{\mbox{\hyperlink{expat_8h_a1414891bd078b546986d463e746ad49c}{XML\+\_\+\+End\+Namespace\+Decl\+Handler}}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a1443eb9edac79dc6b6fc180875974f91}\label{xmlparse_8c_a1443eb9edac79dc6b6fc180875974f91}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetNotationDeclHandler@{XML\_SetNotationDeclHandler}}
+\index{XML\_SetNotationDeclHandler@{XML\_SetNotationDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetNotationDeclHandler()}{XML\_SetNotationDeclHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Notation\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_af51763d2819de05e8569320f9ab571c4}{XML\+\_\+\+Notation\+Decl\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a36205b954dd7e145efd9c38f22cd9d63}\label{xmlparse_8c_a36205b954dd7e145efd9c38f22cd9d63}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetNotStandaloneHandler@{XML\_SetNotStandaloneHandler}}
+\index{XML\_SetNotStandaloneHandler@{XML\_SetNotStandaloneHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetNotStandaloneHandler()}{XML\_SetNotStandaloneHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Not\+Standalone\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a8fc3c5ba2270c72ff0a8f9daccd77dd5}{XML\+\_\+\+Not\+Standalone\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_ae87007cc8e3e60cc0bb8fe0032932cd7}\label{xmlparse_8c_ae87007cc8e3e60cc0bb8fe0032932cd7}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetParamEntityParsing@{XML\_SetParamEntityParsing}}
+\index{XML\_SetParamEntityParsing@{XML\_SetParamEntityParsing}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetParamEntityParsing()}{XML\_SetParamEntityParsing()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Param\+Entity\+Parsing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{enum \mbox{\hyperlink{expat_8h_a83ffd61320d59d0c6c33dfcf1a0c098f}{XML\+\_\+\+Param\+Entity\+Parsing}}}]{pe\+Parsing }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a194c76e50a44f5ba64d50ca3579db8a7}\label{xmlparse_8c_a194c76e50a44f5ba64d50ca3579db8a7}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetProcessingInstructionHandler@{XML\_SetProcessingInstructionHandler}}
+\index{XML\_SetProcessingInstructionHandler@{XML\_SetProcessingInstructionHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetProcessingInstructionHandler()}{XML\_SetProcessingInstructionHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Processing\+Instruction\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a550004b1beb44144bd78b9320e211f6c}{XML\+\_\+\+Processing\+Instruction\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_af07f7d27748e891778eca7a14865a39b}\label{xmlparse_8c_af07f7d27748e891778eca7a14865a39b}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetReturnNSTriplet@{XML\_SetReturnNSTriplet}}
+\index{XML\_SetReturnNSTriplet@{XML\_SetReturnNSTriplet}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetReturnNSTriplet()}{XML\_SetReturnNSTriplet()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Return\+NSTriplet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{int}]{do\+\_\+nst }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_ad1e95b219bb4413e35faa96879b34010}\label{xmlparse_8c_ad1e95b219bb4413e35faa96879b34010}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetSkippedEntityHandler@{XML\_SetSkippedEntityHandler}}
+\index{XML\_SetSkippedEntityHandler@{XML\_SetSkippedEntityHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetSkippedEntityHandler()}{XML\_SetSkippedEntityHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Skipped\+Entity\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a29e3734cfec01df38715716d53093d5c}{XML\+\_\+\+Skipped\+Entity\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_acff1b6a7a10e86fcb7fe02f01ff45876}\label{xmlparse_8c_acff1b6a7a10e86fcb7fe02f01ff45876}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetStartCdataSectionHandler@{XML\_SetStartCdataSectionHandler}}
+\index{XML\_SetStartCdataSectionHandler@{XML\_SetStartCdataSectionHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetStartCdataSectionHandler()}{XML\_SetStartCdataSectionHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Start\+Cdata\+Section\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a661776930dd0ace06a3e9acc9bba4b82}{XML\+\_\+\+Start\+Cdata\+Section\+Handler}}}]{start }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_ae1b7981d6b3c94b73474794fa3622dca}\label{xmlparse_8c_ae1b7981d6b3c94b73474794fa3622dca}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetStartDoctypeDeclHandler@{XML\_SetStartDoctypeDeclHandler}}
+\index{XML\_SetStartDoctypeDeclHandler@{XML\_SetStartDoctypeDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetStartDoctypeDeclHandler()}{XML\_SetStartDoctypeDeclHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Start\+Doctype\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_ab748cf612072905843f3488414c19f3b}{XML\+\_\+\+Start\+Doctype\+Decl\+Handler}}}]{start }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_ae1ecca353e62eb473f25ac874ad44341}\label{xmlparse_8c_ae1ecca353e62eb473f25ac874ad44341}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetStartElementHandler@{XML\_SetStartElementHandler}}
+\index{XML\_SetStartElementHandler@{XML\_SetStartElementHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetStartElementHandler()}{XML\_SetStartElementHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Start\+Element\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a504bca048496cfbacf106a5e28564fcd}{XML\+\_\+\+Start\+Element\+Handler}}}]{start }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_abd5e1b94f23420a31f784c7f071c05fc}\label{xmlparse_8c_abd5e1b94f23420a31f784c7f071c05fc}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetStartNamespaceDeclHandler@{XML\_SetStartNamespaceDeclHandler}}
+\index{XML\_SetStartNamespaceDeclHandler@{XML\_SetStartNamespaceDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetStartNamespaceDeclHandler()}{XML\_SetStartNamespaceDeclHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Start\+Namespace\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a58ad7c192f040f8196708f042c8bdc14}{XML\+\_\+\+Start\+Namespace\+Decl\+Handler}}}]{start }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a0dc336d28ebbe1d5b14e41501fd8ddc9}\label{xmlparse_8c_a0dc336d28ebbe1d5b14e41501fd8ddc9}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetUnknownEncodingHandler@{XML\_SetUnknownEncodingHandler}}
+\index{XML\_SetUnknownEncodingHandler@{XML\_SetUnknownEncodingHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetUnknownEncodingHandler()}{XML\_SetUnknownEncodingHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Unknown\+Encoding\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a348625fd90dcc5d880efec9e533fc502}{XML\+\_\+\+Unknown\+Encoding\+Handler}}}]{handler,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_af84fba5765b4c3edc8fb79ae3078ed44}\label{xmlparse_8c_af84fba5765b4c3edc8fb79ae3078ed44}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetUnparsedEntityDeclHandler@{XML\_SetUnparsedEntityDeclHandler}}
+\index{XML\_SetUnparsedEntityDeclHandler@{XML\_SetUnparsedEntityDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetUnparsedEntityDeclHandler()}{XML\_SetUnparsedEntityDeclHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Unparsed\+Entity\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a67d7a2966d8416e1d8cef6a33ae86453}{XML\+\_\+\+Unparsed\+Entity\+Decl\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_acef3ab4e977f1ebcb37c3be9a3879938}\label{xmlparse_8c_acef3ab4e977f1ebcb37c3be9a3879938}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetUserData@{XML\_SetUserData}}
+\index{XML\_SetUserData@{XML\_SetUserData}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetUserData()}{XML\_SetUserData()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+User\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a83ceb9f75e8d266c0e4da8b398d1537d}\label{xmlparse_8c_a83ceb9f75e8d266c0e4da8b398d1537d}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_SetXmlDeclHandler@{XML\_SetXmlDeclHandler}}
+\index{XML\_SetXmlDeclHandler@{XML\_SetXmlDeclHandler}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_SetXmlDeclHandler()}{XML\_SetXmlDeclHandler()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Set\+Xml\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a636e4276dad64e4f67c7ebb678fcdab4}{XML\+\_\+\+Xml\+Decl\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_a2babb2f5ac4826f4ffb0c14f87984bf5}\label{xmlparse_8c_a2babb2f5ac4826f4ffb0c14f87984bf5}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_StopParser@{XML\_StopParser}}
+\index{XML\_StopParser@{XML\_StopParser}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_StopParser()}{XML\_StopParser()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bb}{XML\+\_\+\+Status}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Stop\+Parser (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}{XML\+\_\+\+Bool}}}]{resumable }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_ad0a2e22d4dcc22326917659c9668fa4a}\label{xmlparse_8c_ad0a2e22d4dcc22326917659c9668fa4a}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_UseForeignDTD@{XML\_UseForeignDTD}}
+\index{XML\_UseForeignDTD@{XML\_UseForeignDTD}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_UseForeignDTD()}{XML\_UseForeignDTD()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118}{XML\+\_\+\+Error}} \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Use\+Foreign\+DTD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}{XML\+\_\+\+Bool}}}]{use\+DTD }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xmlparse_8c_af02353a908b28e1b4eb2b444ec274890}\label{xmlparse_8c_af02353a908b28e1b4eb2b444ec274890}} 
+\index{xmlparse.c@{xmlparse.c}!XML\_UseParserAsHandlerArg@{XML\_UseParserAsHandlerArg}}
+\index{XML\_UseParserAsHandlerArg@{XML\_UseParserAsHandlerArg}!xmlparse.c@{xmlparse.c}}
+\doxysubsubsection{\texorpdfstring{XML\_UseParserAsHandlerArg()}{XML\_UseParserAsHandlerArg()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} XML\+\_\+\+Use\+Parser\+As\+Handler\+Arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+

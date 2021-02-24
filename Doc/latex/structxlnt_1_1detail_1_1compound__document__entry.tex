@@ -1,0 +1,195 @@
+\hypertarget{structxlnt_1_1detail_1_1compound__document__entry}{}\doxysection{xlnt\+::detail\+::compound\+\_\+document\+\_\+entry Struct Reference}
+\label{structxlnt_1_1detail_1_1compound__document__entry}\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}
+
+
+{\ttfamily \#include $<$compound\+\_\+document.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfec}{entry\+\_\+type}} \+: std\+::uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfecace2c8aed9c2fa0cfbed56cbda4d8bf07}{Empty}} = 0
+, \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfeca33fff0a3c1fb847d69ca96a6e59d5040}{User\+Storage}} = 1
+, \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfecafbe3860105b3d92d6d8fc1460ee93916}{User\+Stream}} = 2
+, \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfecafce93fc5b2f41c2251b952c76f045498}{Lock\+Bytes}} = 3
+, \newline
+\mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfeca5ad234cb2cde4266195252a23ca7d84e}{Property}} = 4
+, \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfecab90e75ce1e8a10ffc6c32aebbeb3f672}{Root\+Storage}} = 5
+ \}
+\item 
+enum class \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_a6d3ad6695de4866fa1f596bec4975021}{entry\+\_\+color}} \+: std\+::uint8\+\_\+t \{ \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_a6d3ad6695de4866fa1f596bec4975021aee38e4d5dd68c4e440825018d549cb47}{Red}} = 0
+, \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_a6d3ad6695de4866fa1f596bec4975021ae90dfb84e30edf611e326eeb04d680de}{Black}} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_adecb84ea3e48e8e2b0ee0f103aa00323}{name}} (const std\+::string \&new\+\_\+name)
+\item 
+std\+::string \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_a3cf40119ff61f0960d2b9a988a7f2c27}{name}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::array$<$ char16\+\_\+t, 32 $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_abc248ae83c0ae1cd27691aa6d31c7847}{name\+\_\+array}} = \{ \{ 0 \} \}
+\item 
+std\+::uint16\+\_\+t \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_ade8b3b628576c20b39e38fd5763e80b5}{name\+\_\+length}} = 2
+\item 
+\mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfec}{entry\+\_\+type}} \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_a0ef41425ff43656ad631ae7de03a5c03}{type}} = \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfecace2c8aed9c2fa0cfbed56cbda4d8bf07}{entry\+\_\+type\+::\+Empty}}
+\item 
+\mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_a6d3ad6695de4866fa1f596bec4975021}{entry\+\_\+color}} \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_a70b96300647b99d65aa64af37e991f3b}{color}} = \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_a6d3ad6695de4866fa1f596bec4975021ae90dfb84e30edf611e326eeb04d680de}{entry\+\_\+color\+::\+Black}}
+\item 
+\mbox{\hyperlink{namespacexlnt_1_1detail_a5a72a356aef500bbdc2ec21d574aab16}{directory\+\_\+id}} \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_aa78ebede6b7c660759995189908a164a}{prev}} = -\/1
+\item 
+\mbox{\hyperlink{namespacexlnt_1_1detail_a5a72a356aef500bbdc2ec21d574aab16}{directory\+\_\+id}} \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_a690c7747db4594ebe9c68fa6332580a9}{next}} = -\/1
+\item 
+\mbox{\hyperlink{namespacexlnt_1_1detail_a5a72a356aef500bbdc2ec21d574aab16}{directory\+\_\+id}} \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_a814f6331d2b1de4c49354a6431a344ac}{child}} = -\/1
+\item 
+std\+::array$<$ std\+::uint8\+\_\+t, 36 $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_ad4a182e8957cf3a72181f68e1727694d}{ignore}}
+\item 
+\mbox{\hyperlink{namespacexlnt_1_1detail_a402aaa292e1a497014f5308bb81d1053}{sector\+\_\+id}} \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_ac085df2e1ca6b26856c90346f680f8d6}{start}} = -\/2
+\item 
+std\+::uint32\+\_\+t \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_a6b3c0fd9c98cf7d8096d88abdefe2036}{size}} = 0
+\item 
+std\+::uint32\+\_\+t \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_a957a84559fdb5edc1f2996e231c85a2e}{ignore2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_a6d3ad6695de4866fa1f596bec4975021}\label{structxlnt_1_1detail_1_1compound__document__entry_a6d3ad6695de4866fa1f596bec4975021}} 
+\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!entry\_color@{entry\_color}}
+\index{entry\_color@{entry\_color}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}
+\doxysubsubsection{\texorpdfstring{entry\_color}{entry\_color}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_a6d3ad6695de4866fa1f596bec4975021}{xlnt\+::detail\+::compound\+\_\+document\+\_\+entry\+::entry\+\_\+color}} \+: std\+::uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Red@{Red}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!Red@{Red}}}\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_a6d3ad6695de4866fa1f596bec4975021aee38e4d5dd68c4e440825018d549cb47}\label{structxlnt_1_1detail_1_1compound__document__entry_a6d3ad6695de4866fa1f596bec4975021aee38e4d5dd68c4e440825018d549cb47}} 
+Red&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Black@{Black}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!Black@{Black}}}\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_a6d3ad6695de4866fa1f596bec4975021ae90dfb84e30edf611e326eeb04d680de}\label{structxlnt_1_1detail_1_1compound__document__entry_a6d3ad6695de4866fa1f596bec4975021ae90dfb84e30edf611e326eeb04d680de}} 
+Black&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfec}\label{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfec}} 
+\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!entry\_type@{entry\_type}}
+\index{entry\_type@{entry\_type}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}
+\doxysubsubsection{\texorpdfstring{entry\_type}{entry\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfec}{xlnt\+::detail\+::compound\+\_\+document\+\_\+entry\+::entry\+\_\+type}} \+: std\+::uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Empty@{Empty}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!Empty@{Empty}}}\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfecace2c8aed9c2fa0cfbed56cbda4d8bf07}\label{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfecace2c8aed9c2fa0cfbed56cbda4d8bf07}} 
+Empty&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UserStorage@{UserStorage}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!UserStorage@{UserStorage}}}\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfeca33fff0a3c1fb847d69ca96a6e59d5040}\label{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfeca33fff0a3c1fb847d69ca96a6e59d5040}} 
+User\+Storage&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UserStream@{UserStream}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!UserStream@{UserStream}}}\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfecafbe3860105b3d92d6d8fc1460ee93916}\label{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfecafbe3860105b3d92d6d8fc1460ee93916}} 
+User\+Stream&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LockBytes@{LockBytes}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!LockBytes@{LockBytes}}}\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfecafce93fc5b2f41c2251b952c76f045498}\label{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfecafce93fc5b2f41c2251b952c76f045498}} 
+Lock\+Bytes&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Property@{Property}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!Property@{Property}}}\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfeca5ad234cb2cde4266195252a23ca7d84e}\label{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfeca5ad234cb2cde4266195252a23ca7d84e}} 
+Property&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RootStorage@{RootStorage}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!RootStorage@{RootStorage}}}\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfecab90e75ce1e8a10ffc6c32aebbeb3f672}\label{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfecab90e75ce1e8a10ffc6c32aebbeb3f672}} 
+Root\+Storage&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_a3cf40119ff61f0960d2b9a988a7f2c27}\label{structxlnt_1_1detail_1_1compound__document__entry_a3cf40119ff61f0960d2b9a988a7f2c27}} 
+\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!name@{name}}
+\index{name@{name}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string xlnt\+::detail\+::compound\+\_\+document\+\_\+entry\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_adecb84ea3e48e8e2b0ee0f103aa00323}\label{structxlnt_1_1detail_1_1compound__document__entry_adecb84ea3e48e8e2b0ee0f103aa00323}} 
+\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!name@{name}}
+\index{name@{name}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::detail\+::compound\+\_\+document\+\_\+entry\+::name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_a814f6331d2b1de4c49354a6431a344ac}\label{structxlnt_1_1detail_1_1compound__document__entry_a814f6331d2b1de4c49354a6431a344ac}} 
+\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!child@{child}}
+\index{child@{child}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}
+\doxysubsubsection{\texorpdfstring{child}{child}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacexlnt_1_1detail_a5a72a356aef500bbdc2ec21d574aab16}{directory\+\_\+id}} xlnt\+::detail\+::compound\+\_\+document\+\_\+entry\+::child = -\/1}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_a70b96300647b99d65aa64af37e991f3b}\label{structxlnt_1_1detail_1_1compound__document__entry_a70b96300647b99d65aa64af37e991f3b}} 
+\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!color@{color}}
+\index{color@{color}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_a6d3ad6695de4866fa1f596bec4975021}{entry\+\_\+color}} xlnt\+::detail\+::compound\+\_\+document\+\_\+entry\+::color = \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_a6d3ad6695de4866fa1f596bec4975021ae90dfb84e30edf611e326eeb04d680de}{entry\+\_\+color\+::\+Black}}}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_ad4a182e8957cf3a72181f68e1727694d}\label{structxlnt_1_1detail_1_1compound__document__entry_ad4a182e8957cf3a72181f68e1727694d}} 
+\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!ignore@{ignore}}
+\index{ignore@{ignore}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}
+\doxysubsubsection{\texorpdfstring{ignore}{ignore}}
+{\footnotesize\ttfamily std\+::array$<$std\+::uint8\+\_\+t, 36$>$ xlnt\+::detail\+::compound\+\_\+document\+\_\+entry\+::ignore}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_a957a84559fdb5edc1f2996e231c85a2e}\label{structxlnt_1_1detail_1_1compound__document__entry_a957a84559fdb5edc1f2996e231c85a2e}} 
+\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!ignore2@{ignore2}}
+\index{ignore2@{ignore2}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}
+\doxysubsubsection{\texorpdfstring{ignore2}{ignore2}}
+{\footnotesize\ttfamily std\+::uint32\+\_\+t xlnt\+::detail\+::compound\+\_\+document\+\_\+entry\+::ignore2}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_abc248ae83c0ae1cd27691aa6d31c7847}\label{structxlnt_1_1detail_1_1compound__document__entry_abc248ae83c0ae1cd27691aa6d31c7847}} 
+\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!name\_array@{name\_array}}
+\index{name\_array@{name\_array}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}
+\doxysubsubsection{\texorpdfstring{name\_array}{name\_array}}
+{\footnotesize\ttfamily std\+::array$<$char16\+\_\+t, 32$>$ xlnt\+::detail\+::compound\+\_\+document\+\_\+entry\+::name\+\_\+array = \{ \{ 0 \} \}}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_ade8b3b628576c20b39e38fd5763e80b5}\label{structxlnt_1_1detail_1_1compound__document__entry_ade8b3b628576c20b39e38fd5763e80b5}} 
+\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!name\_length@{name\_length}}
+\index{name\_length@{name\_length}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}
+\doxysubsubsection{\texorpdfstring{name\_length}{name\_length}}
+{\footnotesize\ttfamily std\+::uint16\+\_\+t xlnt\+::detail\+::compound\+\_\+document\+\_\+entry\+::name\+\_\+length = 2}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_a690c7747db4594ebe9c68fa6332580a9}\label{structxlnt_1_1detail_1_1compound__document__entry_a690c7747db4594ebe9c68fa6332580a9}} 
+\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!next@{next}}
+\index{next@{next}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacexlnt_1_1detail_a5a72a356aef500bbdc2ec21d574aab16}{directory\+\_\+id}} xlnt\+::detail\+::compound\+\_\+document\+\_\+entry\+::next = -\/1}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_aa78ebede6b7c660759995189908a164a}\label{structxlnt_1_1detail_1_1compound__document__entry_aa78ebede6b7c660759995189908a164a}} 
+\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!prev@{prev}}
+\index{prev@{prev}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}
+\doxysubsubsection{\texorpdfstring{prev}{prev}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacexlnt_1_1detail_a5a72a356aef500bbdc2ec21d574aab16}{directory\+\_\+id}} xlnt\+::detail\+::compound\+\_\+document\+\_\+entry\+::prev = -\/1}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_a6b3c0fd9c98cf7d8096d88abdefe2036}\label{structxlnt_1_1detail_1_1compound__document__entry_a6b3c0fd9c98cf7d8096d88abdefe2036}} 
+\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!size@{size}}
+\index{size@{size}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily std\+::uint32\+\_\+t xlnt\+::detail\+::compound\+\_\+document\+\_\+entry\+::size = 0}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_ac085df2e1ca6b26856c90346f680f8d6}\label{structxlnt_1_1detail_1_1compound__document__entry_ac085df2e1ca6b26856c90346f680f8d6}} 
+\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!start@{start}}
+\index{start@{start}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacexlnt_1_1detail_a402aaa292e1a497014f5308bb81d1053}{sector\+\_\+id}} xlnt\+::detail\+::compound\+\_\+document\+\_\+entry\+::start = -\/2}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1compound__document__entry_a0ef41425ff43656ad631ae7de03a5c03}\label{structxlnt_1_1detail_1_1compound__document__entry_a0ef41425ff43656ad631ae7de03a5c03}} 
+\index{xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}!type@{type}}
+\index{type@{type}!xlnt::detail::compound\_document\_entry@{xlnt::detail::compound\_document\_entry}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfec}{entry\+\_\+type}} xlnt\+::detail\+::compound\+\_\+document\+\_\+entry\+::type = \mbox{\hyperlink{structxlnt_1_1detail_1_1compound__document__entry_ad480743ff0e6a9ed98b5b9f734edbfecace2c8aed9c2fa0cfbed56cbda4d8bf07}{entry\+\_\+type\+::\+Empty}}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/detail/cryptography/\mbox{\hyperlink{compound__document_8hpp}{compound\+\_\+document.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,27 @@
+\href{https://travis-ci.org/tfussell/xlnt}{\texttt{ }} \href{https://ci.appveyor.com/project/tfussell/xlnt}{\texttt{ }} \href{https://coveralls.io/github/tfussell/xlnt?branch=master}{\texttt{ }} \href{https://tfussell.gitbooks.io/xlnt/content/}{\texttt{ }} \href{http://opensource.org/licenses/MIT}{\texttt{ }}\hypertarget{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0__r_e_a_d_m_e_autotoc_md183}{}\doxysection{Introduction}\label{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0__r_e_a_d_m_e_autotoc_md183}
+xlnt is a modern C++ library for manipulating spreadsheets in memory and reading/writing them from/to XLSX files as described in \href{http://www.ecma-international.org/publications/standards/Ecma-376.htm}{\texttt{ ECMA 376 4th edition}}. The first public release of xlnt version 1.\+0 was on May 10th, 2017. Current work is focused on increasing compatibility, improving performance, and brainstorming future development goals. For a high-\/level summary of what you can do with this library, see \href{https://tfussell.gitbooks.io/xlnt/content/docs/introduction/Features.html}{\texttt{ the feature list}}. Contributions are welcome in the form of pull requests or discussions on \href{https://github.com/tfussell/xlnt/issues}{\texttt{ the repository\textquotesingle{}s Issues page}}.\hypertarget{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0__r_e_a_d_m_e_autotoc_md184}{}\doxysection{Example}\label{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0__r_e_a_d_m_e_autotoc_md184}
+Including xlnt in your project, creating a new spreadsheet, and saving it as \char`\"{}example.\+xlsx\char`\"{}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{\#include <xlnt/xlnt.hpp>}
+\DoxyCodeLine{}
+\DoxyCodeLine{int main()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    xlnt::workbook wb;}
+\DoxyCodeLine{    xlnt::worksheet ws = wb.active\_sheet();}
+\DoxyCodeLine{    ws.cell("{}A1"{}).value(5);}
+\DoxyCodeLine{    ws.cell("{}B2"{}).value("{}string data"{});}
+\DoxyCodeLine{    ws.cell("{}C3"{}).formula("{}=RAND()"{});}
+\DoxyCodeLine{    ws.merge\_cells("{}C3:C4"{});}
+\DoxyCodeLine{    ws.freeze\_panes("{}B2"{});}
+\DoxyCodeLine{    wb.save("{}example.xlsx"{});}
+\DoxyCodeLine{    return 0;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{// compile with -\/std=c++14 -\/Ixlnt/include -\/lxlnt}
+
+\end{DoxyCode}
+\hypertarget{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0__r_e_a_d_m_e_autotoc_md185}{}\doxysection{Documentation}\label{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0__r_e_a_d_m_e_autotoc_md185}
+Documentation for the current release of xlnt is available \href{https://tfussell.gitbooks.io/xlnt/content/}{\texttt{ here}}.\hypertarget{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0__r_e_a_d_m_e_autotoc_md186}{}\doxysection{License}\label{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0__r_e_a_d_m_e_autotoc_md186}
+xlnt is released to the public for free under the terms of the MIT License. See \href{https://github.com/tfussell/xlnt/blob/master/LICENSE.md}{\texttt{ LICENSE.\+md}} for the full text of the license and the licenses of xlnt\textquotesingle{}s third-\/party dependencies. \href{https://github.com/tfussell/xlnt/blob/master/LICENSE.md}{\texttt{ LICENSE.\+md}} should be distributed alongside any assemblies that use xlnt in source or compiled form. 

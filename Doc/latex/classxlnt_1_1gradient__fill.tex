@@ -1,0 +1,247 @@
+\hypertarget{classxlnt_1_1gradient__fill}{}\doxysection{xlnt\+::gradient\+\_\+fill Class Reference}
+\label{classxlnt_1_1gradient__fill}\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+
+
+Encapsulates a fill which transitions between colors at particular \char`\"{}stops\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$fill.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1gradient__fill_a03e46edf93b70291af0efaf9ad5e6bae}{gradient\+\_\+fill}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a default linear fill \end{DoxyCompactList}\item 
+gradient\+\_\+fill\+\_\+type \mbox{\hyperlink{classxlnt_1_1gradient__fill_aab6c3ec87a87a71db7623c9257f0323c}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the type of this gradient fill \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \& \mbox{\hyperlink{classxlnt_1_1gradient__fill_a1236facd367829a4099d1ef0e4282cbf}{type}} (gradient\+\_\+fill\+\_\+type new\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Sets the type of this gradient fill \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \& \mbox{\hyperlink{classxlnt_1_1gradient__fill_a8919c541701f31b5f2e14b32a432234a}{degree}} (double degree)
+\begin{DoxyCompactList}\small\item\em Sets the angle of the gradient in degrees \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classxlnt_1_1gradient__fill_a95fc57383cbace5ade240a8d0a7c5022}{degree}} () const
+\begin{DoxyCompactList}\small\item\em Returns the angle of the gradient \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classxlnt_1_1gradient__fill_a97a30274386e2b92165710ca6d31fdb6}{left}} () const
+\begin{DoxyCompactList}\small\item\em Returns the distance from the left where the gradient starts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \& \mbox{\hyperlink{classxlnt_1_1gradient__fill_aa438df8bf832b4f5c1d62742f524c478}{left}} (double value)
+\begin{DoxyCompactList}\small\item\em Sets the distance from the left where the gradient starts. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classxlnt_1_1gradient__fill_a6c66bcee46292f78ed974899be97e5ec}{right}} () const
+\begin{DoxyCompactList}\small\item\em Returns the distance from the right where the gradient starts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \& \mbox{\hyperlink{classxlnt_1_1gradient__fill_a552db6ff5d7ee76d6179212da2ce1f8c}{right}} (double value)
+\begin{DoxyCompactList}\small\item\em Sets the distance from the right where the gradient starts. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classxlnt_1_1gradient__fill_a6a5fd51b1492a6bfb56d65619aa6fe44}{top}} () const
+\begin{DoxyCompactList}\small\item\em Returns the distance from the top where the gradient starts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \& \mbox{\hyperlink{classxlnt_1_1gradient__fill_a5a0121d0202f313f98fa2bb1718f8e5d}{top}} (double value)
+\begin{DoxyCompactList}\small\item\em Sets the distance from the top where the gradient starts. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classxlnt_1_1gradient__fill_a64266c055bde44c2d9273031f0bea1d0}{bottom}} () const
+\begin{DoxyCompactList}\small\item\em Returns the distance from the bottom where the gradient starts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \& \mbox{\hyperlink{classxlnt_1_1gradient__fill_a8043f24d82b1e83eecce0a8ba3b1ee99}{bottom}} (double value)
+\begin{DoxyCompactList}\small\item\em Sets the distance from the bottom where the gradient starts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \& \mbox{\hyperlink{classxlnt_1_1gradient__fill_a819c0c01ed84a0ae0d085aea9ecc81b6}{add\+\_\+stop}} (double \mbox{\hyperlink{structposition}{position}}, \mbox{\hyperlink{classxlnt_1_1color}{color}} stop\+\_\+color)
+\begin{DoxyCompactList}\small\item\em Adds a gradient stop at position with the given color. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \& \mbox{\hyperlink{classxlnt_1_1gradient__fill_ac7bfb3ab39ec4594759fd39911fa00be}{clear\+\_\+stops}} ()
+\begin{DoxyCompactList}\small\item\em Deletes all stops from the gradient. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ double, \mbox{\hyperlink{classxlnt_1_1color}{color}} $>$ \mbox{\hyperlink{classxlnt_1_1gradient__fill_a46089cd9a49b91a28172ef63dfbdc40b}{stops}} () const
+\begin{DoxyCompactList}\small\item\em Returns all of the gradient stops. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1gradient__fill_a21c27a1d93df81edfa53dd88eb37603b}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if the gradient is equivalent to other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1gradient__fill_a6089153370f7591a15823c1dad05e6e8}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \&\mbox{\hyperlink{classxlnt_1_1gradient__fill_a6c66bcee46292f78ed974899be97e5ec}{right}}) const
+\begin{DoxyCompactList}\small\item\em Returns true if the gradient is not equivalent to other. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encapsulates a fill which transitions between colors at particular \char`\"{}stops\char`\"{}. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_a03e46edf93b70291af0efaf9ad5e6bae}\label{classxlnt_1_1gradient__fill_a03e46edf93b70291af0efaf9ad5e6bae}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!gradient\_fill@{gradient\_fill}}
+\index{gradient\_fill@{gradient\_fill}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{gradient\_fill()}{gradient\_fill()}}
+{\footnotesize\ttfamily xlnt\+::gradient\+\_\+fill\+::gradient\+\_\+fill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a default linear fill 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_a819c0c01ed84a0ae0d085aea9ecc81b6}\label{classxlnt_1_1gradient__fill_a819c0c01ed84a0ae0d085aea9ecc81b6}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!add\_stop@{add\_stop}}
+\index{add\_stop@{add\_stop}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{add\_stop()}{add\_stop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \& xlnt\+::gradient\+\_\+fill\+::add\+\_\+stop (\begin{DoxyParamCaption}\item[{double}]{position,  }\item[{\mbox{\hyperlink{classxlnt_1_1color}{color}}}]{stop\+\_\+color }\end{DoxyParamCaption})}
+
+
+
+Adds a gradient stop at position with the given color. 
+
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_a64266c055bde44c2d9273031f0bea1d0}\label{classxlnt_1_1gradient__fill_a64266c055bde44c2d9273031f0bea1d0}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!bottom@{bottom}}
+\index{bottom@{bottom}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{bottom()}{bottom()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double xlnt\+::gradient\+\_\+fill\+::bottom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the distance from the bottom where the gradient starts. 
+
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_a8043f24d82b1e83eecce0a8ba3b1ee99}\label{classxlnt_1_1gradient__fill_a8043f24d82b1e83eecce0a8ba3b1ee99}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!bottom@{bottom}}
+\index{bottom@{bottom}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{bottom()}{bottom()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \& xlnt\+::gradient\+\_\+fill\+::bottom (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the distance from the bottom where the gradient starts. 
+
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_ac7bfb3ab39ec4594759fd39911fa00be}\label{classxlnt_1_1gradient__fill_ac7bfb3ab39ec4594759fd39911fa00be}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!clear\_stops@{clear\_stops}}
+\index{clear\_stops@{clear\_stops}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{clear\_stops()}{clear\_stops()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \& xlnt\+::gradient\+\_\+fill\+::clear\+\_\+stops (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deletes all stops from the gradient. 
+
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_a95fc57383cbace5ade240a8d0a7c5022}\label{classxlnt_1_1gradient__fill_a95fc57383cbace5ade240a8d0a7c5022}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!degree@{degree}}
+\index{degree@{degree}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{degree()}{degree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double xlnt\+::gradient\+\_\+fill\+::degree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the angle of the gradient 
+
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_a8919c541701f31b5f2e14b32a432234a}\label{classxlnt_1_1gradient__fill_a8919c541701f31b5f2e14b32a432234a}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!degree@{degree}}
+\index{degree@{degree}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{degree()}{degree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \& xlnt\+::gradient\+\_\+fill\+::degree (\begin{DoxyParamCaption}\item[{double}]{degree }\end{DoxyParamCaption})}
+
+
+
+Sets the angle of the gradient in degrees 
+
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_a97a30274386e2b92165710ca6d31fdb6}\label{classxlnt_1_1gradient__fill_a97a30274386e2b92165710ca6d31fdb6}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!left@{left}}
+\index{left@{left}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{left()}{left()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double xlnt\+::gradient\+\_\+fill\+::left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the distance from the left where the gradient starts. 
+
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_aa438df8bf832b4f5c1d62742f524c478}\label{classxlnt_1_1gradient__fill_aa438df8bf832b4f5c1d62742f524c478}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!left@{left}}
+\index{left@{left}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{left()}{left()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \& xlnt\+::gradient\+\_\+fill\+::left (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the distance from the left where the gradient starts. 
+
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_a6089153370f7591a15823c1dad05e6e8}\label{classxlnt_1_1gradient__fill_a6089153370f7591a15823c1dad05e6e8}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool xlnt\+::gradient\+\_\+fill\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \&}]{right }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the gradient is not equivalent to other. 
+
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_a21c27a1d93df81edfa53dd88eb37603b}\label{classxlnt_1_1gradient__fill_a21c27a1d93df81edfa53dd88eb37603b}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::gradient\+\_\+fill\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the gradient is equivalent to other. 
+
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_a6c66bcee46292f78ed974899be97e5ec}\label{classxlnt_1_1gradient__fill_a6c66bcee46292f78ed974899be97e5ec}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!right@{right}}
+\index{right@{right}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{right()}{right()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double xlnt\+::gradient\+\_\+fill\+::right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the distance from the right where the gradient starts. 
+
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_a552db6ff5d7ee76d6179212da2ce1f8c}\label{classxlnt_1_1gradient__fill_a552db6ff5d7ee76d6179212da2ce1f8c}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!right@{right}}
+\index{right@{right}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{right()}{right()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \& xlnt\+::gradient\+\_\+fill\+::right (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the distance from the right where the gradient starts. 
+
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_a46089cd9a49b91a28172ef63dfbdc40b}\label{classxlnt_1_1gradient__fill_a46089cd9a49b91a28172ef63dfbdc40b}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!stops@{stops}}
+\index{stops@{stops}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{stops()}{stops()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ double, \mbox{\hyperlink{classxlnt_1_1color}{color}} $>$ xlnt\+::gradient\+\_\+fill\+::stops (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns all of the gradient stops. 
+
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_a6a5fd51b1492a6bfb56d65619aa6fe44}\label{classxlnt_1_1gradient__fill_a6a5fd51b1492a6bfb56d65619aa6fe44}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!top@{top}}
+\index{top@{top}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{top()}{top()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double xlnt\+::gradient\+\_\+fill\+::top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the distance from the top where the gradient starts. 
+
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_a5a0121d0202f313f98fa2bb1718f8e5d}\label{classxlnt_1_1gradient__fill_a5a0121d0202f313f98fa2bb1718f8e5d}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!top@{top}}
+\index{top@{top}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{top()}{top()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \& xlnt\+::gradient\+\_\+fill\+::top (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the distance from the top where the gradient starts. 
+
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_aab6c3ec87a87a71db7623c9257f0323c}\label{classxlnt_1_1gradient__fill_aab6c3ec87a87a71db7623c9257f0323c}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!type@{type}}
+\index{type@{type}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily gradient\+\_\+fill\+\_\+type xlnt\+::gradient\+\_\+fill\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the type of this gradient fill 
+
+\mbox{\Hypertarget{classxlnt_1_1gradient__fill_a1236facd367829a4099d1ef0e4282cbf}\label{classxlnt_1_1gradient__fill_a1236facd367829a4099d1ef0e4282cbf}} 
+\index{xlnt::gradient\_fill@{xlnt::gradient\_fill}!type@{type}}
+\index{type@{type}!xlnt::gradient\_fill@{xlnt::gradient\_fill}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \& xlnt\+::gradient\+\_\+fill\+::type (\begin{DoxyParamCaption}\item[{gradient\+\_\+fill\+\_\+type}]{new\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Sets the type of this gradient fill 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/styles/\mbox{\hyperlink{fill_8hpp}{fill.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/styles/\mbox{\hyperlink{fill_8cpp}{fill.\+cpp}}\end{DoxyCompactItemize}

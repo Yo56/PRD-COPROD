@@ -1,0 +1,58 @@
+\hypertarget{structpyobject__caster}{}\doxysection{pyobject\+\_\+caster$<$ type $>$ Struct Template Reference}
+\label{structpyobject__caster}\index{pyobject\_caster$<$ type $>$@{pyobject\_caster$<$ type $>$}}
+
+
+{\ttfamily \#include $<$cast.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T  = type, enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same$<$ T, handle $>$\+::value, int $>$  = 0$>$ }\\bool \mbox{\hyperlink{structpyobject__caster_a68cb5b39f3864f5a6c13bc0b99ad3a3b}{load}} (\mbox{\hyperlink{classhandle}{handle}} src, bool)
+\item 
+{\footnotesize template$<$typename T  = type, enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ object, T $>$\+::value, int $>$  = 0$>$ }\\bool \mbox{\hyperlink{structpyobject__caster_a68cb5b39f3864f5a6c13bc0b99ad3a3b}{load}} (\mbox{\hyperlink{classhandle}{handle}} src, bool)
+\item 
+\mbox{\hyperlink{structpyobject__caster_a1ca888b58c73906b8984a5ad081565b8}{PYBIND11\+\_\+\+TYPE\+\_\+\+CASTER}} (type, \mbox{\hyperlink{structhandle__type__name}{handle\+\_\+type\+\_\+name}}$<$ type $>$\+::\mbox{\hyperlink{structname}{name}}())
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{structpyobject__caster_abbc19d02ced2a17c0ddaa8e9b695be31}{cast}} (const \mbox{\hyperlink{classhandle}{handle}} \&src, \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}}, \mbox{\hyperlink{classhandle}{handle}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpyobject__caster_abbc19d02ced2a17c0ddaa8e9b695be31}\label{structpyobject__caster_abbc19d02ced2a17c0ddaa8e9b695be31}} 
+\index{pyobject\_caster$<$ type $>$@{pyobject\_caster$<$ type $>$}!cast@{cast}}
+\index{cast@{cast}!pyobject\_caster$<$ type $>$@{pyobject\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{structpyobject__caster}{pyobject\+\_\+caster}}$<$ type $>$\+::cast (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhandle}{handle}} \&}]{src,  }\item[{\mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}}}]{,  }\item[{\mbox{\hyperlink{classhandle}{handle}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpyobject__caster_a68cb5b39f3864f5a6c13bc0b99ad3a3b}\label{structpyobject__caster_a68cb5b39f3864f5a6c13bc0b99ad3a3b}} 
+\index{pyobject\_caster$<$ type $>$@{pyobject\_caster$<$ type $>$}!load@{load}}
+\index{load@{load}!pyobject\_caster$<$ type $>$@{pyobject\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+template$<$typename T  = type, enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same$<$ T, handle $>$\+::value, int $>$  = 0$>$ \\
+bool \mbox{\hyperlink{structpyobject__caster}{pyobject\+\_\+caster}}$<$ type $>$\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandle}{handle}}}]{src,  }\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structpyobject__caster_a68cb5b39f3864f5a6c13bc0b99ad3a3b}\label{structpyobject__caster_a68cb5b39f3864f5a6c13bc0b99ad3a3b}} 
+\index{pyobject\_caster$<$ type $>$@{pyobject\_caster$<$ type $>$}!load@{load}}
+\index{load@{load}!pyobject\_caster$<$ type $>$@{pyobject\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+template$<$typename T  = type, enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ object, T $>$\+::value, int $>$  = 0$>$ \\
+bool \mbox{\hyperlink{structpyobject__caster}{pyobject\+\_\+caster}}$<$ type $>$\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandle}{handle}}}]{src,  }\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structpyobject__caster_a1ca888b58c73906b8984a5ad081565b8}\label{structpyobject__caster_a1ca888b58c73906b8984a5ad081565b8}} 
+\index{pyobject\_caster$<$ type $>$@{pyobject\_caster$<$ type $>$}!PYBIND11\_TYPE\_CASTER@{PYBIND11\_TYPE\_CASTER}}
+\index{PYBIND11\_TYPE\_CASTER@{PYBIND11\_TYPE\_CASTER}!pyobject\_caster$<$ type $>$@{pyobject\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{PYBIND11\_TYPE\_CASTER()}{PYBIND11\_TYPE\_CASTER()}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+\mbox{\hyperlink{structpyobject__caster}{pyobject\+\_\+caster}}$<$ type $>$\+::PYBIND11\+\_\+\+TYPE\+\_\+\+CASTER (\begin{DoxyParamCaption}\item[{type}]{,  }\item[{\mbox{\hyperlink{structhandle__type__name}{handle\+\_\+type\+\_\+name}}$<$ type $>$}]{\+::name() }\end{DoxyParamCaption})}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{cast_8h}{cast.\+h}}\end{DoxyCompactItemize}

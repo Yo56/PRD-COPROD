@@ -1,0 +1,142 @@
+\hypertarget{classxlnt_1_1fill}{}\doxysection{xlnt\+::fill Class Reference}
+\label{classxlnt_1_1fill}\index{xlnt::fill@{xlnt::fill}}
+
+
+Describes the fill style of a particular cell.  
+
+
+
+
+{\ttfamily \#include $<$fill.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1fill_a916bd9cad7ccc9b8fa42cfa4f9496ac7}{fill}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a fill initialized as a none-\/type pattern fill with no foreground or background colors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1fill_a5d21db433471f0a3b13d4b2bc9b542ac}{fill}} (const \mbox{\hyperlink{classxlnt_1_1pattern__fill}{pattern\+\_\+fill}} \&\mbox{\hyperlink{fill_8hpp_a7eb778c471c5522fe3f4b7ebdc4c0760}{pattern}})
+\begin{DoxyCompactList}\small\item\em Constructs a fill initialized as a pattern fill based on the given pattern. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1fill_a9257ea1ca92cdbe32b7aa8d387e4f03b}{fill}} (const \mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \&gradient)
+\begin{DoxyCompactList}\small\item\em Constructs a fill initialized as a gradient fill based on the given gradient. \end{DoxyCompactList}\item 
+fill\+\_\+type \mbox{\hyperlink{classxlnt_1_1fill_aedf565ce4bd1b7de16b1b6a153c8420d}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the fill\+\_\+type of this fill depending on how it was constructed. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \mbox{\hyperlink{classxlnt_1_1fill_a12780f09e2de0bbc36fa2e0782c16d2c}{gradient\+\_\+fill}} () const
+\begin{DoxyCompactList}\small\item\em Returns the gradient fill represented by this fill. Throws an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception if this is not a gradient fill. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1pattern__fill}{pattern\+\_\+fill}} \mbox{\hyperlink{classxlnt_1_1fill_a53bf0c87b9d3788b379efe63db18e70b}{pattern\+\_\+fill}} () const
+\begin{DoxyCompactList}\small\item\em Returns the pattern fill represented by this fill. Throws an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception if this is not a pattern fill. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1fill_a57f928a894ad6330cc1f21049b92d957}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1fill}{fill}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if left is exactly equal to right. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1fill_a085877def0784b2a87cb8561c6dc0526}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1fill}{fill}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if left is not exactly equal to right. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classxlnt_1_1fill}{fill}} \mbox{\hyperlink{classxlnt_1_1fill_aa2ba7b8c63f8f6d62de63c3df58cc456}{solid}} (const \mbox{\hyperlink{classxlnt_1_1color}{color}} \&fill\+\_\+color)
+\begin{DoxyCompactList}\small\item\em Helper method for the most common use case, setting the fill color of a cell to a single solid color. The foreground and background colors of a fill are not the same as the foreground and background colors of a cell. When setting a fill color in Excel, a new fill is created with the given color as the fill\textquotesingle{}s fg\+Color and index color number 64 as the bg\+Color. This method creates a fill in the same way. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Describes the fill style of a particular cell. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1fill_a916bd9cad7ccc9b8fa42cfa4f9496ac7}\label{classxlnt_1_1fill_a916bd9cad7ccc9b8fa42cfa4f9496ac7}} 
+\index{xlnt::fill@{xlnt::fill}!fill@{fill}}
+\index{fill@{fill}!xlnt::fill@{xlnt::fill}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily xlnt\+::fill\+::fill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a fill initialized as a none-\/type pattern fill with no foreground or background colors. 
+
+\mbox{\Hypertarget{classxlnt_1_1fill_a5d21db433471f0a3b13d4b2bc9b542ac}\label{classxlnt_1_1fill_a5d21db433471f0a3b13d4b2bc9b542ac}} 
+\index{xlnt::fill@{xlnt::fill}!fill@{fill}}
+\index{fill@{fill}!xlnt::fill@{xlnt::fill}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily xlnt\+::fill\+::fill (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1pattern__fill}{pattern\+\_\+fill}} \&}]{pattern }\end{DoxyParamCaption})}
+
+
+
+Constructs a fill initialized as a pattern fill based on the given pattern. 
+
+\mbox{\Hypertarget{classxlnt_1_1fill_a9257ea1ca92cdbe32b7aa8d387e4f03b}\label{classxlnt_1_1fill_a9257ea1ca92cdbe32b7aa8d387e4f03b}} 
+\index{xlnt::fill@{xlnt::fill}!fill@{fill}}
+\index{fill@{fill}!xlnt::fill@{xlnt::fill}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily xlnt\+::fill\+::fill (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} \&}]{gradient }\end{DoxyParamCaption})}
+
+
+
+Constructs a fill initialized as a gradient fill based on the given gradient. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1fill_a12780f09e2de0bbc36fa2e0782c16d2c}\label{classxlnt_1_1fill_a12780f09e2de0bbc36fa2e0782c16d2c}} 
+\index{xlnt::fill@{xlnt::fill}!gradient\_fill@{gradient\_fill}}
+\index{gradient\_fill@{gradient\_fill}!xlnt::fill@{xlnt::fill}}
+\doxysubsubsection{\texorpdfstring{gradient\_fill()}{gradient\_fill()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}} xlnt\+::fill\+::gradient\+\_\+fill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the gradient fill represented by this fill. Throws an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception if this is not a gradient fill. 
+
+\mbox{\Hypertarget{classxlnt_1_1fill_a085877def0784b2a87cb8561c6dc0526}\label{classxlnt_1_1fill_a085877def0784b2a87cb8561c6dc0526}} 
+\index{xlnt::fill@{xlnt::fill}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::fill@{xlnt::fill}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool xlnt\+::fill\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1fill}{fill}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if left is not exactly equal to right. 
+
+\mbox{\Hypertarget{classxlnt_1_1fill_a57f928a894ad6330cc1f21049b92d957}\label{classxlnt_1_1fill_a57f928a894ad6330cc1f21049b92d957}} 
+\index{xlnt::fill@{xlnt::fill}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::fill@{xlnt::fill}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::fill\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1fill}{fill}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if left is exactly equal to right. 
+
+\mbox{\Hypertarget{classxlnt_1_1fill_a53bf0c87b9d3788b379efe63db18e70b}\label{classxlnt_1_1fill_a53bf0c87b9d3788b379efe63db18e70b}} 
+\index{xlnt::fill@{xlnt::fill}!pattern\_fill@{pattern\_fill}}
+\index{pattern\_fill@{pattern\_fill}!xlnt::fill@{xlnt::fill}}
+\doxysubsubsection{\texorpdfstring{pattern\_fill()}{pattern\_fill()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1pattern__fill}{pattern\+\_\+fill}} xlnt\+::fill\+::pattern\+\_\+fill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the pattern fill represented by this fill. Throws an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception if this is not a pattern fill. 
+
+\mbox{\Hypertarget{classxlnt_1_1fill_aa2ba7b8c63f8f6d62de63c3df58cc456}\label{classxlnt_1_1fill_aa2ba7b8c63f8f6d62de63c3df58cc456}} 
+\index{xlnt::fill@{xlnt::fill}!solid@{solid}}
+\index{solid@{solid}!xlnt::fill@{xlnt::fill}}
+\doxysubsubsection{\texorpdfstring{solid()}{solid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1fill}{fill}} xlnt\+::fill\+::solid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1color}{color}} \&}]{fill\+\_\+color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Helper method for the most common use case, setting the fill color of a cell to a single solid color. The foreground and background colors of a fill are not the same as the foreground and background colors of a cell. When setting a fill color in Excel, a new fill is created with the given color as the fill\textquotesingle{}s fg\+Color and index color number 64 as the bg\+Color. This method creates a fill in the same way. 
+
+\mbox{\Hypertarget{classxlnt_1_1fill_aedf565ce4bd1b7de16b1b6a153c8420d}\label{classxlnt_1_1fill_aedf565ce4bd1b7de16b1b6a153c8420d}} 
+\index{xlnt::fill@{xlnt::fill}!type@{type}}
+\index{type@{type}!xlnt::fill@{xlnt::fill}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily fill\+\_\+type xlnt\+::fill\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the fill\+\_\+type of this fill depending on how it was constructed. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/styles/\mbox{\hyperlink{fill_8hpp}{fill.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/styles/\mbox{\hyperlink{fill_8cpp}{fill.\+cpp}}\end{DoxyCompactItemize}

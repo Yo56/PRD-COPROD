@@ -1,0 +1,83 @@
+\hypertarget{classgeneric__type}{}\doxysection{generic\+\_\+type Class Reference}
+\label{classgeneric__type}\index{generic\_type@{generic\_type}}
+
+
+Generic support for creating new Python heap types.  
+
+
+
+
+{\ttfamily \#include $<$pybind11.\+h$>$}
+
+Inheritance diagram for generic\+\_\+type\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classgeneric__type}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgeneric__type_a0eaa0586a2e56b3e69d296572ca7091e}{initialize}} (const \mbox{\hyperlink{structtype__record}{type\+\_\+record}} \&rec)
+\item 
+void \mbox{\hyperlink{classgeneric__type_aa102cbe989b604345c02dcd821f6c5b2}{mark\+\_\+parents\+\_\+nonsimple}} (Py\+Type\+Object $\ast$value)
+\begin{DoxyCompactList}\small\item\em Helper function which tags all parents of a type using mult. inheritance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgeneric__type_abc4faaa9d97d488abb99634dc3f0b88f}{install\+\_\+buffer\+\_\+funcs}} (\mbox{\hyperlink{structbuffer__info}{buffer\+\_\+info}} $\ast$($\ast$get\+\_\+buffer)(Py\+Object $\ast$, void $\ast$), void $\ast$get\+\_\+buffer\+\_\+data)
+\item 
+void \mbox{\hyperlink{classgeneric__type_ae2d880643f063c443337137658d24607}{def\+\_\+property\+\_\+static\+\_\+impl}} (const char $\ast$\mbox{\hyperlink{structname}{name}}, \mbox{\hyperlink{classhandle}{handle}} fget, \mbox{\hyperlink{classhandle}{handle}} fset, detail\+::function\+\_\+record $\ast$rec\+\_\+fget)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... $>$ }\\class \mbox{\hyperlink{classgeneric__type_a978adea7a2c683287b544ebc130469fb}{class\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Generic support for creating new Python heap types. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgeneric__type_ae2d880643f063c443337137658d24607}\label{classgeneric__type_ae2d880643f063c443337137658d24607}} 
+\index{generic\_type@{generic\_type}!def\_property\_static\_impl@{def\_property\_static\_impl}}
+\index{def\_property\_static\_impl@{def\_property\_static\_impl}!generic\_type@{generic\_type}}
+\doxysubsubsection{\texorpdfstring{def\_property\_static\_impl()}{def\_property\_static\_impl()}}
+{\footnotesize\ttfamily void generic\+\_\+type\+::def\+\_\+property\+\_\+static\+\_\+impl (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{classhandle}{handle}}}]{fget,  }\item[{\mbox{\hyperlink{classhandle}{handle}}}]{fset,  }\item[{detail\+::function\+\_\+record $\ast$}]{rec\+\_\+fget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classgeneric__type_a0eaa0586a2e56b3e69d296572ca7091e}\label{classgeneric__type_a0eaa0586a2e56b3e69d296572ca7091e}} 
+\index{generic\_type@{generic\_type}!initialize@{initialize}}
+\index{initialize@{initialize}!generic\_type@{generic\_type}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void generic\+\_\+type\+::initialize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtype__record}{type\+\_\+record}} \&}]{rec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classgeneric__type_abc4faaa9d97d488abb99634dc3f0b88f}\label{classgeneric__type_abc4faaa9d97d488abb99634dc3f0b88f}} 
+\index{generic\_type@{generic\_type}!install\_buffer\_funcs@{install\_buffer\_funcs}}
+\index{install\_buffer\_funcs@{install\_buffer\_funcs}!generic\_type@{generic\_type}}
+\doxysubsubsection{\texorpdfstring{install\_buffer\_funcs()}{install\_buffer\_funcs()}}
+{\footnotesize\ttfamily void generic\+\_\+type\+::install\+\_\+buffer\+\_\+funcs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbuffer__info}{buffer\+\_\+info}} $\ast$($\ast$)(Py\+Object $\ast$, void $\ast$)}]{get\+\_\+buffer,  }\item[{void $\ast$}]{get\+\_\+buffer\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classgeneric__type_aa102cbe989b604345c02dcd821f6c5b2}\label{classgeneric__type_aa102cbe989b604345c02dcd821f6c5b2}} 
+\index{generic\_type@{generic\_type}!mark\_parents\_nonsimple@{mark\_parents\_nonsimple}}
+\index{mark\_parents\_nonsimple@{mark\_parents\_nonsimple}!generic\_type@{generic\_type}}
+\doxysubsubsection{\texorpdfstring{mark\_parents\_nonsimple()}{mark\_parents\_nonsimple()}}
+{\footnotesize\ttfamily void generic\+\_\+type\+::mark\+\_\+parents\+\_\+nonsimple (\begin{DoxyParamCaption}\item[{Py\+Type\+Object $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Helper function which tags all parents of a type using mult. inheritance. 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classgeneric__type_a978adea7a2c683287b544ebc130469fb}\label{classgeneric__type_a978adea7a2c683287b544ebc130469fb}} 
+\index{generic\_type@{generic\_type}!class\_@{class\_}}
+\index{class\_@{class\_}!generic\_type@{generic\_type}}
+\doxysubsubsection{\texorpdfstring{class\_}{class\_}}
+{\footnotesize\ttfamily template$<$typename... $>$ \\
+friend class \mbox{\hyperlink{classclass__}{class\+\_\+}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{pybind11_8h}{pybind11.\+h}}\end{DoxyCompactItemize}

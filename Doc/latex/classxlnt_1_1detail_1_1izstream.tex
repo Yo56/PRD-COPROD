@@ -1,0 +1,103 @@
+\hypertarget{classxlnt_1_1detail_1_1izstream}{}\doxysection{xlnt\+::detail\+::izstream Class Reference}
+\label{classxlnt_1_1detail_1_1izstream}\index{xlnt::detail::izstream@{xlnt::detail::izstream}}
+
+
+Reads an archive containing a number of files from an istream and allows them to be decompressed into an istream.  
+
+
+
+
+{\ttfamily \#include $<$zstream.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1detail_1_1izstream_aea9e24df4d12d4d3186fa0c9cd54627c}{izstream}} (std\+::istream \&stream)
+\begin{DoxyCompactList}\small\item\em Construct a new zip\+\_\+file\+\_\+reader which reads a ZIP archive from the given stream. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classxlnt_1_1detail_1_1izstream_ae91c821fefac8996141f39d66c4179fa}{$\sim$izstream}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ std\+::streambuf $>$ \mbox{\hyperlink{classxlnt_1_1detail_1_1izstream_ad300351bbc73f34c7f338db49c330fb4}{open}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&file) const
+\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1detail_1_1izstream_ae9bf3108cb18f7d9b79bf56b508c395d}{read}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&file) const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1path}{path}} $>$ \mbox{\hyperlink{classxlnt_1_1detail_1_1izstream_a8ce15c86953cba1b9bd758708c7e216b}{files}} () const
+\item 
+bool \mbox{\hyperlink{classxlnt_1_1detail_1_1izstream_a4dc996ff5afdb43019635c91a823f0a4}{has\+\_\+file}} (const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&filename) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reads an archive containing a number of files from an istream and allows them to be decompressed into an istream. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1izstream_aea9e24df4d12d4d3186fa0c9cd54627c}\label{classxlnt_1_1detail_1_1izstream_aea9e24df4d12d4d3186fa0c9cd54627c}} 
+\index{xlnt::detail::izstream@{xlnt::detail::izstream}!izstream@{izstream}}
+\index{izstream@{izstream}!xlnt::detail::izstream@{xlnt::detail::izstream}}
+\doxysubsubsection{\texorpdfstring{izstream()}{izstream()}}
+{\footnotesize\ttfamily xlnt\+::detail\+::izstream\+::izstream (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{stream }\end{DoxyParamCaption})}
+
+
+
+Construct a new zip\+\_\+file\+\_\+reader which reads a ZIP archive from the given stream. 
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1izstream_ae91c821fefac8996141f39d66c4179fa}\label{classxlnt_1_1detail_1_1izstream_ae91c821fefac8996141f39d66c4179fa}} 
+\index{xlnt::detail::izstream@{xlnt::detail::izstream}!````~izstream@{$\sim$izstream}}
+\index{````~izstream@{$\sim$izstream}!xlnt::detail::izstream@{xlnt::detail::izstream}}
+\doxysubsubsection{\texorpdfstring{$\sim$izstream()}{~izstream()}}
+{\footnotesize\ttfamily xlnt\+::detail\+::izstream\+::$\sim$izstream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1izstream_a8ce15c86953cba1b9bd758708c7e216b}\label{classxlnt_1_1detail_1_1izstream_a8ce15c86953cba1b9bd758708c7e216b}} 
+\index{xlnt::detail::izstream@{xlnt::detail::izstream}!files@{files}}
+\index{files@{files}!xlnt::detail::izstream@{xlnt::detail::izstream}}
+\doxysubsubsection{\texorpdfstring{files()}{files()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1path}{path}} $>$ xlnt\+::detail\+::izstream\+::files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1izstream_a4dc996ff5afdb43019635c91a823f0a4}\label{classxlnt_1_1detail_1_1izstream_a4dc996ff5afdb43019635c91a823f0a4}} 
+\index{xlnt::detail::izstream@{xlnt::detail::izstream}!has\_file@{has\_file}}
+\index{has\_file@{has\_file}!xlnt::detail::izstream@{xlnt::detail::izstream}}
+\doxysubsubsection{\texorpdfstring{has\_file()}{has\_file()}}
+{\footnotesize\ttfamily bool xlnt\+::detail\+::izstream\+::has\+\_\+file (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{filename }\end{DoxyParamCaption}) const}
+
+
+
+
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1izstream_ad300351bbc73f34c7f338db49c330fb4}\label{classxlnt_1_1detail_1_1izstream_ad300351bbc73f34c7f338db49c330fb4}} 
+\index{xlnt::detail::izstream@{xlnt::detail::izstream}!open@{open}}
+\index{open@{open}!xlnt::detail::izstream@{xlnt::detail::izstream}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ std\+::streambuf $>$ xlnt\+::detail\+::izstream\+::open (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{file }\end{DoxyParamCaption}) const}
+
+
+
+
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1izstream_ae9bf3108cb18f7d9b79bf56b508c395d}\label{classxlnt_1_1detail_1_1izstream_ae9bf3108cb18f7d9b79bf56b508c395d}} 
+\index{xlnt::detail::izstream@{xlnt::detail::izstream}!read@{read}}
+\index{read@{read}!xlnt::detail::izstream@{xlnt::detail::izstream}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::detail\+::izstream\+::read (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&}]{file }\end{DoxyParamCaption}) const}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/detail/serialization/\mbox{\hyperlink{zstream_8hpp}{zstream.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/detail/serialization/\mbox{\hyperlink{zstream_8cpp}{zstream.\+cpp}}\end{DoxyCompactItemize}

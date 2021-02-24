@@ -1,0 +1,374 @@
+\hypertarget{xmlrole_8h}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/xmlrole.h File Reference}
+\label{xmlrole_8h}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/xmlrole.h@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/xmlrole.h}}
+{\ttfamily \#include $<$libstudxml/details/expat/xmltok.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structprolog__state}{prolog\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{xmlrole_8h_a0a4f3d87e091406f2a2df9cd51d49324}{Xml\+Token\+Role}}(\mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}},  tok,  ptr,  \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  enc)~ (((\mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}})-\/$>$handler)(\mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}}, tok, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, enc))
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structprolog__state}{prolog\+\_\+state}} \mbox{\hyperlink{xmlrole_8h_a5831a1391b0ce8d742d9481c7526d065}{PROLOG\+\_\+\+STATE}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca0b9dedf112d095b71e8562e21c639348}{XML\+\_\+\+ROLE\+\_\+\+ERROR}} = -\/1
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca8372e087fddd26267b09123bc48ac018}{XML\+\_\+\+ROLE\+\_\+\+NONE}} = 0
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06caad666adf8b80ac7ced3393e683aeceea}{XML\+\_\+\+ROLE\+\_\+\+XML\+\_\+\+DECL}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca8bd6cf5213a025c2c2fffaaaec9c0bfb}{XML\+\_\+\+ROLE\+\_\+\+INSTANCE\+\_\+\+START}}
+, \newline
+\mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca2f7c6010cd325a463676f6b30abc970f}{XML\+\_\+\+ROLE\+\_\+\+DOCTYPE\+\_\+\+NONE}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca92f7b335f72ea4ffcf84a8b1aab0f9ac}{XML\+\_\+\+ROLE\+\_\+\+DOCTYPE\+\_\+\+NAME}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca598ef6eae91a56f74afe7956ecf0da20}{XML\+\_\+\+ROLE\+\_\+\+DOCTYPE\+\_\+\+SYSTEM\+\_\+\+ID}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cad76268d6c961bf625fc854144d909a61}{XML\+\_\+\+ROLE\+\_\+\+DOCTYPE\+\_\+\+PUBLIC\+\_\+\+ID}}
+, \newline
+\mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca1a469027da44c3a6e081696f737733ef}{XML\+\_\+\+ROLE\+\_\+\+DOCTYPE\+\_\+\+INTERNAL\+\_\+\+SUBSET}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca3d7daa30cf8f4b3004bae1c1ae21b437}{XML\+\_\+\+ROLE\+\_\+\+DOCTYPE\+\_\+\+CLOSE}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca9c0d57b51506aea11cefe61f5483052a}{XML\+\_\+\+ROLE\+\_\+\+GENERAL\+\_\+\+ENTITY\+\_\+\+NAME}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca9e98f0efb4cd71a84b4ce0ebecd91793}{XML\+\_\+\+ROLE\+\_\+\+PARAM\+\_\+\+ENTITY\+\_\+\+NAME}}
+, \newline
+\mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca7bcca88b29b6ccee2ef0df13f985543c}{XML\+\_\+\+ROLE\+\_\+\+ENTITY\+\_\+\+NONE}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06caf657c8085194f409b1ffcdbf92d7f655}{XML\+\_\+\+ROLE\+\_\+\+ENTITY\+\_\+\+VALUE}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca537f0b204f45596fdddbe6b405851c44}{XML\+\_\+\+ROLE\+\_\+\+ENTITY\+\_\+\+SYSTEM\+\_\+\+ID}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca87d321e63be3a8369909291855d6115b}{XML\+\_\+\+ROLE\+\_\+\+ENTITY\+\_\+\+PUBLIC\+\_\+\+ID}}
+, \newline
+\mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca198b24754d68b10b5f9c791536450f10}{XML\+\_\+\+ROLE\+\_\+\+ENTITY\+\_\+\+COMPLETE}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca467719e66ae7926a59087069b9368a5e}{XML\+\_\+\+ROLE\+\_\+\+ENTITY\+\_\+\+NOTATION\+\_\+\+NAME}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06caab49a093623d772bb0e9297892872908}{XML\+\_\+\+ROLE\+\_\+\+NOTATION\+\_\+\+NONE}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca94a48a00021d5fcb4851de51643f9cec}{XML\+\_\+\+ROLE\+\_\+\+NOTATION\+\_\+\+NAME}}
+, \newline
+\mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca61fdf71b5297d9c7626013df65527621}{XML\+\_\+\+ROLE\+\_\+\+NOTATION\+\_\+\+SYSTEM\+\_\+\+ID}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca253e9486c71a037493f38b415f52d86f}{XML\+\_\+\+ROLE\+\_\+\+NOTATION\+\_\+\+NO\+\_\+\+SYSTEM\+\_\+\+ID}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca0a76a66a8eb59d664a859e22d8666367}{XML\+\_\+\+ROLE\+\_\+\+NOTATION\+\_\+\+PUBLIC\+\_\+\+ID}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca6f9234f811735fc7da516df8a75df7cb}{XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+NAME}}
+, \newline
+\mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4d7d02fadac8b54a7dbf53504dfb2f63}{XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+TYPE\+\_\+\+CDATA}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca797a890e203e57bc7f4616246d57ef51}{XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+TYPE\+\_\+\+ID}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cadbf028aa4880d7a39738b112031edb32}{XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+TYPE\+\_\+\+IDREF}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cad26277a98149ffa6156352d62a6f573a}{XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+TYPE\+\_\+\+IDREFS}}
+, \newline
+\mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca1dad3a5b304f818f3f5994a1c4be3b79}{XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+TYPE\+\_\+\+ENTITY}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca32d49a10d836ee44276255b20fbea0c9}{XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+TYPE\+\_\+\+ENTITIES}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca7554c6e26e5b831654f84a4990e544a5}{XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+TYPE\+\_\+\+NMTOKEN}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4ac1086cddb4424df95d55c7db46e644}{XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+TYPE\+\_\+\+NMTOKENS}}
+, \newline
+\mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca5274f5e42f274dcf10fdca662648d76a}{XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+ENUM\+\_\+\+VALUE}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca586deb38ba44682edcf55d7d329a02ab}{XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+NOTATION\+\_\+\+VALUE}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca575bfda0453729777866196f1cd9065b}{XML\+\_\+\+ROLE\+\_\+\+ATTLIST\+\_\+\+NONE}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4c6f52beffa0e7deb4efc763fbac11f6}{XML\+\_\+\+ROLE\+\_\+\+ATTLIST\+\_\+\+ELEMENT\+\_\+\+NAME}}
+, \newline
+\mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4d087af7ede5e37e16f451a083edeab1}{XML\+\_\+\+ROLE\+\_\+\+IMPLIED\+\_\+\+ATTRIBUTE\+\_\+\+VALUE}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cabdeeacffd32f1927597eefc859a83bcd}{XML\+\_\+\+ROLE\+\_\+\+REQUIRED\+\_\+\+ATTRIBUTE\+\_\+\+VALUE}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06caaa84b7cf4ec95131fa51f9a786ec4feb}{XML\+\_\+\+ROLE\+\_\+\+DEFAULT\+\_\+\+ATTRIBUTE\+\_\+\+VALUE}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cac51ebb351510cbafb77e4cc73be8357e}{XML\+\_\+\+ROLE\+\_\+\+FIXED\+\_\+\+ATTRIBUTE\+\_\+\+VALUE}}
+, \newline
+\mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca840a41180e9805d0960c516a8906fe2d}{XML\+\_\+\+ROLE\+\_\+\+ELEMENT\+\_\+\+NONE}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cae45617bcc35ffdee7bcf1e055dca53d2}{XML\+\_\+\+ROLE\+\_\+\+ELEMENT\+\_\+\+NAME}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca6fc6423b893a7dfabb31be51a18ddff8}{XML\+\_\+\+ROLE\+\_\+\+CONTENT\+\_\+\+ANY}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cac3ccb9853fce364a2d237780f31ee0f3}{XML\+\_\+\+ROLE\+\_\+\+CONTENT\+\_\+\+EMPTY}}
+, \newline
+\mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca119d4c922966d4179e145380cd267aba}{XML\+\_\+\+ROLE\+\_\+\+CONTENT\+\_\+\+PCDATA}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cac037042e06312eacaebdd188c1e7e3c8}{XML\+\_\+\+ROLE\+\_\+\+GROUP\+\_\+\+OPEN}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca3429913bc1074f0cd2996878e123ef0e}{XML\+\_\+\+ROLE\+\_\+\+GROUP\+\_\+\+CLOSE}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca0fb8d95436dc0e9972bd922b8351a85a}{XML\+\_\+\+ROLE\+\_\+\+GROUP\+\_\+\+CLOSE\+\_\+\+REP}}
+, \newline
+\mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4cd65f84a948c6e8cfb8d36cd0583a00}{XML\+\_\+\+ROLE\+\_\+\+GROUP\+\_\+\+CLOSE\+\_\+\+OPT}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cab9162094a0ea8ff600befe000eaa1e98}{XML\+\_\+\+ROLE\+\_\+\+GROUP\+\_\+\+CLOSE\+\_\+\+PLUS}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca0393cd5d6a472443bd483ef6956d28ca}{XML\+\_\+\+ROLE\+\_\+\+GROUP\+\_\+\+CHOICE}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca485bd6c78a06a2afcba6c4672157801d}{XML\+\_\+\+ROLE\+\_\+\+GROUP\+\_\+\+SEQUENCE}}
+, \newline
+\mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca54c7177a93ed4d5d2e7ddbbc49d9c04c}{XML\+\_\+\+ROLE\+\_\+\+CONTENT\+\_\+\+ELEMENT}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca15ddc192a1200a956947c59ce88530a7}{XML\+\_\+\+ROLE\+\_\+\+CONTENT\+\_\+\+ELEMENT\+\_\+\+REP}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cad0f0fa7dea1913ef271f04140495a63f}{XML\+\_\+\+ROLE\+\_\+\+CONTENT\+\_\+\+ELEMENT\+\_\+\+OPT}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca9821ba5cf191151ecda0499662fa8bb9}{XML\+\_\+\+ROLE\+\_\+\+CONTENT\+\_\+\+ELEMENT\+\_\+\+PLUS}}
+, \newline
+\mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca662ff9e2ba52e02533dddf560916a383}{XML\+\_\+\+ROLE\+\_\+\+PI}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4da16b7d440ed775ada91c1f496ccc49}{XML\+\_\+\+ROLE\+\_\+\+COMMENT}}
+, \mbox{\hyperlink{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca323b0cf7a07a6ceb034f2a2b6c0db71e}{XML\+\_\+\+ROLE\+\_\+\+PARAM\+\_\+\+ENTITY\+\_\+\+REF}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{xmlrole_8h_a5466b47f4c4beeca9c3019913c8402e0}{Xml\+Prolog\+State\+Init}} (\mbox{\hyperlink{xmlrole_8h_a5831a1391b0ce8d742d9481c7526d065}{PROLOG\+\_\+\+STATE}} $\ast$)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{xmlrole_8h_a0a4f3d87e091406f2a2df9cd51d49324}\label{xmlrole_8h_a0a4f3d87e091406f2a2df9cd51d49324}} 
+\index{xmlrole.h@{xmlrole.h}!XmlTokenRole@{XmlTokenRole}}
+\index{XmlTokenRole@{XmlTokenRole}!xmlrole.h@{xmlrole.h}}
+\doxysubsubsection{\texorpdfstring{XmlTokenRole}{XmlTokenRole}}
+{\footnotesize\ttfamily \#define Xml\+Token\+Role(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}},  }\item[{}]{tok,  }\item[{}]{ptr,  }\item[{}]{\mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}},  }\item[{}]{enc }\end{DoxyParamCaption})~ (((\mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}})-\/$>$handler)(\mbox{\hyperlink{string__to__double_8cpp_af63a1df0d582366f7a03c46143e3ae0e}{state}}, tok, ptr, \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}}, enc))}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{xmlrole_8h_a5831a1391b0ce8d742d9481c7526d065}\label{xmlrole_8h_a5831a1391b0ce8d742d9481c7526d065}} 
+\index{xmlrole.h@{xmlrole.h}!PROLOG\_STATE@{PROLOG\_STATE}}
+\index{PROLOG\_STATE@{PROLOG\_STATE}!xmlrole.h@{xmlrole.h}}
+\doxysubsubsection{\texorpdfstring{PROLOG\_STATE}{PROLOG\_STATE}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structprolog__state}{prolog\+\_\+state}} \mbox{\hyperlink{xmlrole_8h_a5831a1391b0ce8d742d9481c7526d065}{PROLOG\+\_\+\+STATE}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06c}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06c}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ERROR@{XML\_ROLE\_ERROR}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ERROR@{XML\_ROLE\_ERROR}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca0b9dedf112d095b71e8562e21c639348}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca0b9dedf112d095b71e8562e21c639348}} 
+XML\+\_\+\+ROLE\+\_\+\+ERROR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_NONE@{XML\_ROLE\_NONE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_NONE@{XML\_ROLE\_NONE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca8372e087fddd26267b09123bc48ac018}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca8372e087fddd26267b09123bc48ac018}} 
+XML\+\_\+\+ROLE\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_XML\_DECL@{XML\_ROLE\_XML\_DECL}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_XML\_DECL@{XML\_ROLE\_XML\_DECL}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06caad666adf8b80ac7ced3393e683aeceea}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06caad666adf8b80ac7ced3393e683aeceea}} 
+XML\+\_\+\+ROLE\+\_\+\+XML\+\_\+\+DECL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_INSTANCE\_START@{XML\_ROLE\_INSTANCE\_START}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_INSTANCE\_START@{XML\_ROLE\_INSTANCE\_START}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca8bd6cf5213a025c2c2fffaaaec9c0bfb}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca8bd6cf5213a025c2c2fffaaaec9c0bfb}} 
+XML\+\_\+\+ROLE\+\_\+\+INSTANCE\+\_\+\+START&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_DOCTYPE\_NONE@{XML\_ROLE\_DOCTYPE\_NONE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_DOCTYPE\_NONE@{XML\_ROLE\_DOCTYPE\_NONE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca2f7c6010cd325a463676f6b30abc970f}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca2f7c6010cd325a463676f6b30abc970f}} 
+XML\+\_\+\+ROLE\+\_\+\+DOCTYPE\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_DOCTYPE\_NAME@{XML\_ROLE\_DOCTYPE\_NAME}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_DOCTYPE\_NAME@{XML\_ROLE\_DOCTYPE\_NAME}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca92f7b335f72ea4ffcf84a8b1aab0f9ac}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca92f7b335f72ea4ffcf84a8b1aab0f9ac}} 
+XML\+\_\+\+ROLE\+\_\+\+DOCTYPE\+\_\+\+NAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_DOCTYPE\_SYSTEM\_ID@{XML\_ROLE\_DOCTYPE\_SYSTEM\_ID}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_DOCTYPE\_SYSTEM\_ID@{XML\_ROLE\_DOCTYPE\_SYSTEM\_ID}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca598ef6eae91a56f74afe7956ecf0da20}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca598ef6eae91a56f74afe7956ecf0da20}} 
+XML\+\_\+\+ROLE\+\_\+\+DOCTYPE\+\_\+\+SYSTEM\+\_\+\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_DOCTYPE\_PUBLIC\_ID@{XML\_ROLE\_DOCTYPE\_PUBLIC\_ID}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_DOCTYPE\_PUBLIC\_ID@{XML\_ROLE\_DOCTYPE\_PUBLIC\_ID}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cad76268d6c961bf625fc854144d909a61}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cad76268d6c961bf625fc854144d909a61}} 
+XML\+\_\+\+ROLE\+\_\+\+DOCTYPE\+\_\+\+PUBLIC\+\_\+\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_DOCTYPE\_INTERNAL\_SUBSET@{XML\_ROLE\_DOCTYPE\_INTERNAL\_SUBSET}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_DOCTYPE\_INTERNAL\_SUBSET@{XML\_ROLE\_DOCTYPE\_INTERNAL\_SUBSET}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca1a469027da44c3a6e081696f737733ef}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca1a469027da44c3a6e081696f737733ef}} 
+XML\+\_\+\+ROLE\+\_\+\+DOCTYPE\+\_\+\+INTERNAL\+\_\+\+SUBSET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_DOCTYPE\_CLOSE@{XML\_ROLE\_DOCTYPE\_CLOSE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_DOCTYPE\_CLOSE@{XML\_ROLE\_DOCTYPE\_CLOSE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca3d7daa30cf8f4b3004bae1c1ae21b437}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca3d7daa30cf8f4b3004bae1c1ae21b437}} 
+XML\+\_\+\+ROLE\+\_\+\+DOCTYPE\+\_\+\+CLOSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_GENERAL\_ENTITY\_NAME@{XML\_ROLE\_GENERAL\_ENTITY\_NAME}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_GENERAL\_ENTITY\_NAME@{XML\_ROLE\_GENERAL\_ENTITY\_NAME}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca9c0d57b51506aea11cefe61f5483052a}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca9c0d57b51506aea11cefe61f5483052a}} 
+XML\+\_\+\+ROLE\+\_\+\+GENERAL\+\_\+\+ENTITY\+\_\+\+NAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_PARAM\_ENTITY\_NAME@{XML\_ROLE\_PARAM\_ENTITY\_NAME}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_PARAM\_ENTITY\_NAME@{XML\_ROLE\_PARAM\_ENTITY\_NAME}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca9e98f0efb4cd71a84b4ce0ebecd91793}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca9e98f0efb4cd71a84b4ce0ebecd91793}} 
+XML\+\_\+\+ROLE\+\_\+\+PARAM\+\_\+\+ENTITY\+\_\+\+NAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ENTITY\_NONE@{XML\_ROLE\_ENTITY\_NONE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ENTITY\_NONE@{XML\_ROLE\_ENTITY\_NONE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca7bcca88b29b6ccee2ef0df13f985543c}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca7bcca88b29b6ccee2ef0df13f985543c}} 
+XML\+\_\+\+ROLE\+\_\+\+ENTITY\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ENTITY\_VALUE@{XML\_ROLE\_ENTITY\_VALUE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ENTITY\_VALUE@{XML\_ROLE\_ENTITY\_VALUE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06caf657c8085194f409b1ffcdbf92d7f655}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06caf657c8085194f409b1ffcdbf92d7f655}} 
+XML\+\_\+\+ROLE\+\_\+\+ENTITY\+\_\+\+VALUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ENTITY\_SYSTEM\_ID@{XML\_ROLE\_ENTITY\_SYSTEM\_ID}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ENTITY\_SYSTEM\_ID@{XML\_ROLE\_ENTITY\_SYSTEM\_ID}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca537f0b204f45596fdddbe6b405851c44}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca537f0b204f45596fdddbe6b405851c44}} 
+XML\+\_\+\+ROLE\+\_\+\+ENTITY\+\_\+\+SYSTEM\+\_\+\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ENTITY\_PUBLIC\_ID@{XML\_ROLE\_ENTITY\_PUBLIC\_ID}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ENTITY\_PUBLIC\_ID@{XML\_ROLE\_ENTITY\_PUBLIC\_ID}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca87d321e63be3a8369909291855d6115b}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca87d321e63be3a8369909291855d6115b}} 
+XML\+\_\+\+ROLE\+\_\+\+ENTITY\+\_\+\+PUBLIC\+\_\+\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ENTITY\_COMPLETE@{XML\_ROLE\_ENTITY\_COMPLETE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ENTITY\_COMPLETE@{XML\_ROLE\_ENTITY\_COMPLETE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca198b24754d68b10b5f9c791536450f10}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca198b24754d68b10b5f9c791536450f10}} 
+XML\+\_\+\+ROLE\+\_\+\+ENTITY\+\_\+\+COMPLETE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ENTITY\_NOTATION\_NAME@{XML\_ROLE\_ENTITY\_NOTATION\_NAME}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ENTITY\_NOTATION\_NAME@{XML\_ROLE\_ENTITY\_NOTATION\_NAME}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca467719e66ae7926a59087069b9368a5e}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca467719e66ae7926a59087069b9368a5e}} 
+XML\+\_\+\+ROLE\+\_\+\+ENTITY\+\_\+\+NOTATION\+\_\+\+NAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_NOTATION\_NONE@{XML\_ROLE\_NOTATION\_NONE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_NOTATION\_NONE@{XML\_ROLE\_NOTATION\_NONE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06caab49a093623d772bb0e9297892872908}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06caab49a093623d772bb0e9297892872908}} 
+XML\+\_\+\+ROLE\+\_\+\+NOTATION\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_NOTATION\_NAME@{XML\_ROLE\_NOTATION\_NAME}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_NOTATION\_NAME@{XML\_ROLE\_NOTATION\_NAME}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca94a48a00021d5fcb4851de51643f9cec}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca94a48a00021d5fcb4851de51643f9cec}} 
+XML\+\_\+\+ROLE\+\_\+\+NOTATION\+\_\+\+NAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_NOTATION\_SYSTEM\_ID@{XML\_ROLE\_NOTATION\_SYSTEM\_ID}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_NOTATION\_SYSTEM\_ID@{XML\_ROLE\_NOTATION\_SYSTEM\_ID}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca61fdf71b5297d9c7626013df65527621}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca61fdf71b5297d9c7626013df65527621}} 
+XML\+\_\+\+ROLE\+\_\+\+NOTATION\+\_\+\+SYSTEM\+\_\+\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_NOTATION\_NO\_SYSTEM\_ID@{XML\_ROLE\_NOTATION\_NO\_SYSTEM\_ID}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_NOTATION\_NO\_SYSTEM\_ID@{XML\_ROLE\_NOTATION\_NO\_SYSTEM\_ID}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca253e9486c71a037493f38b415f52d86f}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca253e9486c71a037493f38b415f52d86f}} 
+XML\+\_\+\+ROLE\+\_\+\+NOTATION\+\_\+\+NO\+\_\+\+SYSTEM\+\_\+\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_NOTATION\_PUBLIC\_ID@{XML\_ROLE\_NOTATION\_PUBLIC\_ID}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_NOTATION\_PUBLIC\_ID@{XML\_ROLE\_NOTATION\_PUBLIC\_ID}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca0a76a66a8eb59d664a859e22d8666367}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca0a76a66a8eb59d664a859e22d8666367}} 
+XML\+\_\+\+ROLE\+\_\+\+NOTATION\+\_\+\+PUBLIC\+\_\+\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ATTRIBUTE\_NAME@{XML\_ROLE\_ATTRIBUTE\_NAME}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ATTRIBUTE\_NAME@{XML\_ROLE\_ATTRIBUTE\_NAME}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca6f9234f811735fc7da516df8a75df7cb}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca6f9234f811735fc7da516df8a75df7cb}} 
+XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+NAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ATTRIBUTE\_TYPE\_CDATA@{XML\_ROLE\_ATTRIBUTE\_TYPE\_CDATA}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ATTRIBUTE\_TYPE\_CDATA@{XML\_ROLE\_ATTRIBUTE\_TYPE\_CDATA}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4d7d02fadac8b54a7dbf53504dfb2f63}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4d7d02fadac8b54a7dbf53504dfb2f63}} 
+XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+TYPE\+\_\+\+CDATA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ATTRIBUTE\_TYPE\_ID@{XML\_ROLE\_ATTRIBUTE\_TYPE\_ID}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ATTRIBUTE\_TYPE\_ID@{XML\_ROLE\_ATTRIBUTE\_TYPE\_ID}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca797a890e203e57bc7f4616246d57ef51}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca797a890e203e57bc7f4616246d57ef51}} 
+XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+TYPE\+\_\+\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ATTRIBUTE\_TYPE\_IDREF@{XML\_ROLE\_ATTRIBUTE\_TYPE\_IDREF}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ATTRIBUTE\_TYPE\_IDREF@{XML\_ROLE\_ATTRIBUTE\_TYPE\_IDREF}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cadbf028aa4880d7a39738b112031edb32}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cadbf028aa4880d7a39738b112031edb32}} 
+XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+TYPE\+\_\+\+IDREF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ATTRIBUTE\_TYPE\_IDREFS@{XML\_ROLE\_ATTRIBUTE\_TYPE\_IDREFS}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ATTRIBUTE\_TYPE\_IDREFS@{XML\_ROLE\_ATTRIBUTE\_TYPE\_IDREFS}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cad26277a98149ffa6156352d62a6f573a}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cad26277a98149ffa6156352d62a6f573a}} 
+XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+TYPE\+\_\+\+IDREFS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ATTRIBUTE\_TYPE\_ENTITY@{XML\_ROLE\_ATTRIBUTE\_TYPE\_ENTITY}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ATTRIBUTE\_TYPE\_ENTITY@{XML\_ROLE\_ATTRIBUTE\_TYPE\_ENTITY}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca1dad3a5b304f818f3f5994a1c4be3b79}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca1dad3a5b304f818f3f5994a1c4be3b79}} 
+XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+TYPE\+\_\+\+ENTITY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ATTRIBUTE\_TYPE\_ENTITIES@{XML\_ROLE\_ATTRIBUTE\_TYPE\_ENTITIES}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ATTRIBUTE\_TYPE\_ENTITIES@{XML\_ROLE\_ATTRIBUTE\_TYPE\_ENTITIES}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca32d49a10d836ee44276255b20fbea0c9}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca32d49a10d836ee44276255b20fbea0c9}} 
+XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+TYPE\+\_\+\+ENTITIES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ATTRIBUTE\_TYPE\_NMTOKEN@{XML\_ROLE\_ATTRIBUTE\_TYPE\_NMTOKEN}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ATTRIBUTE\_TYPE\_NMTOKEN@{XML\_ROLE\_ATTRIBUTE\_TYPE\_NMTOKEN}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca7554c6e26e5b831654f84a4990e544a5}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca7554c6e26e5b831654f84a4990e544a5}} 
+XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+TYPE\+\_\+\+NMTOKEN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ATTRIBUTE\_TYPE\_NMTOKENS@{XML\_ROLE\_ATTRIBUTE\_TYPE\_NMTOKENS}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ATTRIBUTE\_TYPE\_NMTOKENS@{XML\_ROLE\_ATTRIBUTE\_TYPE\_NMTOKENS}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4ac1086cddb4424df95d55c7db46e644}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4ac1086cddb4424df95d55c7db46e644}} 
+XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+TYPE\+\_\+\+NMTOKENS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ATTRIBUTE\_ENUM\_VALUE@{XML\_ROLE\_ATTRIBUTE\_ENUM\_VALUE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ATTRIBUTE\_ENUM\_VALUE@{XML\_ROLE\_ATTRIBUTE\_ENUM\_VALUE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca5274f5e42f274dcf10fdca662648d76a}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca5274f5e42f274dcf10fdca662648d76a}} 
+XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+ENUM\+\_\+\+VALUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ATTRIBUTE\_NOTATION\_VALUE@{XML\_ROLE\_ATTRIBUTE\_NOTATION\_VALUE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ATTRIBUTE\_NOTATION\_VALUE@{XML\_ROLE\_ATTRIBUTE\_NOTATION\_VALUE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca586deb38ba44682edcf55d7d329a02ab}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca586deb38ba44682edcf55d7d329a02ab}} 
+XML\+\_\+\+ROLE\+\_\+\+ATTRIBUTE\+\_\+\+NOTATION\+\_\+\+VALUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ATTLIST\_NONE@{XML\_ROLE\_ATTLIST\_NONE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ATTLIST\_NONE@{XML\_ROLE\_ATTLIST\_NONE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca575bfda0453729777866196f1cd9065b}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca575bfda0453729777866196f1cd9065b}} 
+XML\+\_\+\+ROLE\+\_\+\+ATTLIST\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ATTLIST\_ELEMENT\_NAME@{XML\_ROLE\_ATTLIST\_ELEMENT\_NAME}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ATTLIST\_ELEMENT\_NAME@{XML\_ROLE\_ATTLIST\_ELEMENT\_NAME}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4c6f52beffa0e7deb4efc763fbac11f6}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4c6f52beffa0e7deb4efc763fbac11f6}} 
+XML\+\_\+\+ROLE\+\_\+\+ATTLIST\+\_\+\+ELEMENT\+\_\+\+NAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_IMPLIED\_ATTRIBUTE\_VALUE@{XML\_ROLE\_IMPLIED\_ATTRIBUTE\_VALUE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_IMPLIED\_ATTRIBUTE\_VALUE@{XML\_ROLE\_IMPLIED\_ATTRIBUTE\_VALUE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4d087af7ede5e37e16f451a083edeab1}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4d087af7ede5e37e16f451a083edeab1}} 
+XML\+\_\+\+ROLE\+\_\+\+IMPLIED\+\_\+\+ATTRIBUTE\+\_\+\+VALUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_REQUIRED\_ATTRIBUTE\_VALUE@{XML\_ROLE\_REQUIRED\_ATTRIBUTE\_VALUE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_REQUIRED\_ATTRIBUTE\_VALUE@{XML\_ROLE\_REQUIRED\_ATTRIBUTE\_VALUE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cabdeeacffd32f1927597eefc859a83bcd}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cabdeeacffd32f1927597eefc859a83bcd}} 
+XML\+\_\+\+ROLE\+\_\+\+REQUIRED\+\_\+\+ATTRIBUTE\+\_\+\+VALUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_DEFAULT\_ATTRIBUTE\_VALUE@{XML\_ROLE\_DEFAULT\_ATTRIBUTE\_VALUE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_DEFAULT\_ATTRIBUTE\_VALUE@{XML\_ROLE\_DEFAULT\_ATTRIBUTE\_VALUE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06caaa84b7cf4ec95131fa51f9a786ec4feb}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06caaa84b7cf4ec95131fa51f9a786ec4feb}} 
+XML\+\_\+\+ROLE\+\_\+\+DEFAULT\+\_\+\+ATTRIBUTE\+\_\+\+VALUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_FIXED\_ATTRIBUTE\_VALUE@{XML\_ROLE\_FIXED\_ATTRIBUTE\_VALUE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_FIXED\_ATTRIBUTE\_VALUE@{XML\_ROLE\_FIXED\_ATTRIBUTE\_VALUE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cac51ebb351510cbafb77e4cc73be8357e}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cac51ebb351510cbafb77e4cc73be8357e}} 
+XML\+\_\+\+ROLE\+\_\+\+FIXED\+\_\+\+ATTRIBUTE\+\_\+\+VALUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ELEMENT\_NONE@{XML\_ROLE\_ELEMENT\_NONE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ELEMENT\_NONE@{XML\_ROLE\_ELEMENT\_NONE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca840a41180e9805d0960c516a8906fe2d}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca840a41180e9805d0960c516a8906fe2d}} 
+XML\+\_\+\+ROLE\+\_\+\+ELEMENT\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_ELEMENT\_NAME@{XML\_ROLE\_ELEMENT\_NAME}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_ELEMENT\_NAME@{XML\_ROLE\_ELEMENT\_NAME}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cae45617bcc35ffdee7bcf1e055dca53d2}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cae45617bcc35ffdee7bcf1e055dca53d2}} 
+XML\+\_\+\+ROLE\+\_\+\+ELEMENT\+\_\+\+NAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_CONTENT\_ANY@{XML\_ROLE\_CONTENT\_ANY}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_CONTENT\_ANY@{XML\_ROLE\_CONTENT\_ANY}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca6fc6423b893a7dfabb31be51a18ddff8}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca6fc6423b893a7dfabb31be51a18ddff8}} 
+XML\+\_\+\+ROLE\+\_\+\+CONTENT\+\_\+\+ANY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_CONTENT\_EMPTY@{XML\_ROLE\_CONTENT\_EMPTY}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_CONTENT\_EMPTY@{XML\_ROLE\_CONTENT\_EMPTY}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cac3ccb9853fce364a2d237780f31ee0f3}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cac3ccb9853fce364a2d237780f31ee0f3}} 
+XML\+\_\+\+ROLE\+\_\+\+CONTENT\+\_\+\+EMPTY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_CONTENT\_PCDATA@{XML\_ROLE\_CONTENT\_PCDATA}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_CONTENT\_PCDATA@{XML\_ROLE\_CONTENT\_PCDATA}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca119d4c922966d4179e145380cd267aba}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca119d4c922966d4179e145380cd267aba}} 
+XML\+\_\+\+ROLE\+\_\+\+CONTENT\+\_\+\+PCDATA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_GROUP\_OPEN@{XML\_ROLE\_GROUP\_OPEN}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_GROUP\_OPEN@{XML\_ROLE\_GROUP\_OPEN}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cac037042e06312eacaebdd188c1e7e3c8}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cac037042e06312eacaebdd188c1e7e3c8}} 
+XML\+\_\+\+ROLE\+\_\+\+GROUP\+\_\+\+OPEN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_GROUP\_CLOSE@{XML\_ROLE\_GROUP\_CLOSE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_GROUP\_CLOSE@{XML\_ROLE\_GROUP\_CLOSE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca3429913bc1074f0cd2996878e123ef0e}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca3429913bc1074f0cd2996878e123ef0e}} 
+XML\+\_\+\+ROLE\+\_\+\+GROUP\+\_\+\+CLOSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_GROUP\_CLOSE\_REP@{XML\_ROLE\_GROUP\_CLOSE\_REP}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_GROUP\_CLOSE\_REP@{XML\_ROLE\_GROUP\_CLOSE\_REP}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca0fb8d95436dc0e9972bd922b8351a85a}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca0fb8d95436dc0e9972bd922b8351a85a}} 
+XML\+\_\+\+ROLE\+\_\+\+GROUP\+\_\+\+CLOSE\+\_\+\+REP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_GROUP\_CLOSE\_OPT@{XML\_ROLE\_GROUP\_CLOSE\_OPT}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_GROUP\_CLOSE\_OPT@{XML\_ROLE\_GROUP\_CLOSE\_OPT}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4cd65f84a948c6e8cfb8d36cd0583a00}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4cd65f84a948c6e8cfb8d36cd0583a00}} 
+XML\+\_\+\+ROLE\+\_\+\+GROUP\+\_\+\+CLOSE\+\_\+\+OPT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_GROUP\_CLOSE\_PLUS@{XML\_ROLE\_GROUP\_CLOSE\_PLUS}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_GROUP\_CLOSE\_PLUS@{XML\_ROLE\_GROUP\_CLOSE\_PLUS}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cab9162094a0ea8ff600befe000eaa1e98}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cab9162094a0ea8ff600befe000eaa1e98}} 
+XML\+\_\+\+ROLE\+\_\+\+GROUP\+\_\+\+CLOSE\+\_\+\+PLUS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_GROUP\_CHOICE@{XML\_ROLE\_GROUP\_CHOICE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_GROUP\_CHOICE@{XML\_ROLE\_GROUP\_CHOICE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca0393cd5d6a472443bd483ef6956d28ca}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca0393cd5d6a472443bd483ef6956d28ca}} 
+XML\+\_\+\+ROLE\+\_\+\+GROUP\+\_\+\+CHOICE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_GROUP\_SEQUENCE@{XML\_ROLE\_GROUP\_SEQUENCE}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_GROUP\_SEQUENCE@{XML\_ROLE\_GROUP\_SEQUENCE}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca485bd6c78a06a2afcba6c4672157801d}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca485bd6c78a06a2afcba6c4672157801d}} 
+XML\+\_\+\+ROLE\+\_\+\+GROUP\+\_\+\+SEQUENCE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_CONTENT\_ELEMENT@{XML\_ROLE\_CONTENT\_ELEMENT}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_CONTENT\_ELEMENT@{XML\_ROLE\_CONTENT\_ELEMENT}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca54c7177a93ed4d5d2e7ddbbc49d9c04c}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca54c7177a93ed4d5d2e7ddbbc49d9c04c}} 
+XML\+\_\+\+ROLE\+\_\+\+CONTENT\+\_\+\+ELEMENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_CONTENT\_ELEMENT\_REP@{XML\_ROLE\_CONTENT\_ELEMENT\_REP}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_CONTENT\_ELEMENT\_REP@{XML\_ROLE\_CONTENT\_ELEMENT\_REP}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca15ddc192a1200a956947c59ce88530a7}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca15ddc192a1200a956947c59ce88530a7}} 
+XML\+\_\+\+ROLE\+\_\+\+CONTENT\+\_\+\+ELEMENT\+\_\+\+REP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_CONTENT\_ELEMENT\_OPT@{XML\_ROLE\_CONTENT\_ELEMENT\_OPT}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_CONTENT\_ELEMENT\_OPT@{XML\_ROLE\_CONTENT\_ELEMENT\_OPT}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cad0f0fa7dea1913ef271f04140495a63f}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06cad0f0fa7dea1913ef271f04140495a63f}} 
+XML\+\_\+\+ROLE\+\_\+\+CONTENT\+\_\+\+ELEMENT\+\_\+\+OPT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_CONTENT\_ELEMENT\_PLUS@{XML\_ROLE\_CONTENT\_ELEMENT\_PLUS}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_CONTENT\_ELEMENT\_PLUS@{XML\_ROLE\_CONTENT\_ELEMENT\_PLUS}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca9821ba5cf191151ecda0499662fa8bb9}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca9821ba5cf191151ecda0499662fa8bb9}} 
+XML\+\_\+\+ROLE\+\_\+\+CONTENT\+\_\+\+ELEMENT\+\_\+\+PLUS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_PI@{XML\_ROLE\_PI}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_PI@{XML\_ROLE\_PI}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca662ff9e2ba52e02533dddf560916a383}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca662ff9e2ba52e02533dddf560916a383}} 
+XML\+\_\+\+ROLE\+\_\+\+PI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_COMMENT@{XML\_ROLE\_COMMENT}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_COMMENT@{XML\_ROLE\_COMMENT}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4da16b7d440ed775ada91c1f496ccc49}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca4da16b7d440ed775ada91c1f496ccc49}} 
+XML\+\_\+\+ROLE\+\_\+\+COMMENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ROLE\_PARAM\_ENTITY\_REF@{XML\_ROLE\_PARAM\_ENTITY\_REF}!xmlrole.h@{xmlrole.h}}\index{xmlrole.h@{xmlrole.h}!XML\_ROLE\_PARAM\_ENTITY\_REF@{XML\_ROLE\_PARAM\_ENTITY\_REF}}}\mbox{\Hypertarget{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca323b0cf7a07a6ceb034f2a2b6c0db71e}\label{xmlrole_8h_adc29c2ff13d900c2f185ee95427fb06ca323b0cf7a07a6ceb034f2a2b6c0db71e}} 
+XML\+\_\+\+ROLE\+\_\+\+PARAM\+\_\+\+ENTITY\+\_\+\+REF&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{xmlrole_8h_a5466b47f4c4beeca9c3019913c8402e0}\label{xmlrole_8h_a5466b47f4c4beeca9c3019913c8402e0}} 
+\index{xmlrole.h@{xmlrole.h}!XmlPrologStateInit@{XmlPrologStateInit}}
+\index{XmlPrologStateInit@{XmlPrologStateInit}!xmlrole.h@{xmlrole.h}}
+\doxysubsubsection{\texorpdfstring{XmlPrologStateInit()}{XmlPrologStateInit()}}
+{\footnotesize\ttfamily void Xml\+Prolog\+State\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{xmlrole_8h_a5831a1391b0ce8d742d9481c7526d065}{PROLOG\+\_\+\+STATE}} $\ast$}]{state }\end{DoxyParamCaption})}
+

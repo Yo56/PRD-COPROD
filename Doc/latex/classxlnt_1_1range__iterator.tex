@@ -1,0 +1,261 @@
+\hypertarget{classxlnt_1_1range__iterator}{}\doxysection{xlnt\+::range\+\_\+iterator Class Reference}
+\label{classxlnt_1_1range__iterator}\index{xlnt::range\_iterator@{xlnt::range\_iterator}}
+
+
+An iterator used by worksheet and range for traversing a 2D grid of cells by row/column then across that row/column.  
+
+
+
+
+{\ttfamily \#include $<$range\+\_\+iterator.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classxlnt_1_1range__iterator_a0b0dd16ede9a0dfe99ebb71d95ca7f46}{iterator\+\_\+category}} = std\+::bidirectional\+\_\+iterator\+\_\+tag
+\begin{DoxyCompactList}\small\item\em iterator tags required for use with standard algorithms and adapters \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classxlnt_1_1range__iterator_ab93d8d8126b6670773afb327e597d97c}{value\+\_\+type}} = \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}}
+\item 
+using \mbox{\hyperlink{classxlnt_1_1range__iterator_a9196e3c17f16c89df51c0cdf91bcd7db}{difference\+\_\+type}} = std\+::ptrdiff\+\_\+t
+\item 
+using \mbox{\hyperlink{classxlnt_1_1range__iterator_a7e2a0d621db7aa2aaa969adeacbdb14e}{pointer}} = \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} $\ast$
+\item 
+using \mbox{\hyperlink{classxlnt_1_1range__iterator_a152f6c993a4dc77cae6995acfe10b0f9}{reference}} = \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1range__iterator_a600a74d19b455b9ff0d0a68a7b9e1227}{range\+\_\+iterator}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructs a range iterator \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__iterator_a0689aa53713e881ffd56ca9d92c6d141}{range\+\_\+iterator}} (\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \&ws, const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&cursor, const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&bounds, major\+\_\+order order, bool skip\+\_\+null)
+\begin{DoxyCompactList}\small\item\em Constructs a range iterator on a worksheet, cell pointing to the current row or column, range bounds, an order, and whether or not to skip null column/rows. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__iterator_af0cd1538f67b41d72989e9458f7e4965}{range\+\_\+iterator}} (const \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \&)=default
+\begin{DoxyCompactList}\small\item\em Default copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \& \mbox{\hyperlink{classxlnt_1_1range__iterator_aa9d1db7fff54c597b73d4954592a7b08}{operator=}} (const \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \&)=default
+\begin{DoxyCompactList}\small\item\em Default assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__iterator_a3af12f64f02ad3dce9458c493bd47373}{range\+\_\+iterator}} (\mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \&\&)=default
+\begin{DoxyCompactList}\small\item\em Default move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \& \mbox{\hyperlink{classxlnt_1_1range__iterator_a36d8f8a228408d7ab544095be956dcbc}{operator=}} (\mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \&\&)=default
+\begin{DoxyCompactList}\small\item\em Default move assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__iterator_a34d5944ff07e2e0828eba123f591b752}{$\sim$range\+\_\+iterator}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__iterator_a152f6c993a4dc77cae6995acfe10b0f9}{reference}} \mbox{\hyperlink{classxlnt_1_1range__iterator_a326c41a907a928acce46d8a614beccf7}{operator$\ast$}} ()
+\begin{DoxyCompactList}\small\item\em Dereference the iterator to return a column or row. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1range__iterator_a152f6c993a4dc77cae6995acfe10b0f9}{reference}} \mbox{\hyperlink{classxlnt_1_1range__iterator_a99391b4e47d13d8efb4a985b60aca693}{operator$\ast$}} () const
+\begin{DoxyCompactList}\small\item\em Dereference the iterator to return a column or row. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1range__iterator_ad46c845c9530e89dbebec9bfabd8d327}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this iterator is equivalent to other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1range__iterator_ac79d6c3368a027886303d728e144e248}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this iterator is not equivalent to other. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \& \mbox{\hyperlink{classxlnt_1_1range__iterator_a29b7d2ac7a472e254d136f7a2905560f}{operator-\/-\/}} ()
+\begin{DoxyCompactList}\small\item\em Pre-\/decrement the iterator to point to the previous row/column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1range__iterator_accf2df8c85efeee29d4c1827710d6c0d}{operator-\/-\/}} (int)
+\begin{DoxyCompactList}\small\item\em Post-\/decrement the iterator to point to the previous row/column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \& \mbox{\hyperlink{classxlnt_1_1range__iterator_aa0fe575b961ca11db3a2b349fdc3b73d}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em Pre-\/increment the iterator to point to the next row/column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1range__iterator_a5c214dbd47c0ccae499e118b0fc858ae}{operator++}} (int)
+\begin{DoxyCompactList}\small\item\em Post-\/increment the iterator to point to the next row/column. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An iterator used by worksheet and range for traversing a 2D grid of cells by row/column then across that row/column. 
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_a9196e3c17f16c89df51c0cdf91bcd7db}\label{classxlnt_1_1range__iterator_a9196e3c17f16c89df51c0cdf91bcd7db}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1range__iterator_a9196e3c17f16c89df51c0cdf91bcd7db}{xlnt\+::range\+\_\+iterator\+::difference\+\_\+type}} =  std\+::ptrdiff\+\_\+t}
+
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_a0b0dd16ede9a0dfe99ebb71d95ca7f46}\label{classxlnt_1_1range__iterator_a0b0dd16ede9a0dfe99ebb71d95ca7f46}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!iterator\_category@{iterator\_category}}
+\index{iterator\_category@{iterator\_category}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1range__iterator_a0b0dd16ede9a0dfe99ebb71d95ca7f46}{xlnt\+::range\+\_\+iterator\+::iterator\+\_\+category}} =  std\+::bidirectional\+\_\+iterator\+\_\+tag}
+
+
+
+iterator tags required for use with standard algorithms and adapters 
+
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_a7e2a0d621db7aa2aaa969adeacbdb14e}\label{classxlnt_1_1range__iterator_a7e2a0d621db7aa2aaa969adeacbdb14e}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!pointer@{pointer}}
+\index{pointer@{pointer}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1range__iterator_a7e2a0d621db7aa2aaa969adeacbdb14e}{xlnt\+::range\+\_\+iterator\+::pointer}} =  \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} $\ast$}
+
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_a152f6c993a4dc77cae6995acfe10b0f9}\label{classxlnt_1_1range__iterator_a152f6c993a4dc77cae6995acfe10b0f9}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!reference@{reference}}
+\index{reference@{reference}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1range__iterator_a152f6c993a4dc77cae6995acfe10b0f9}{xlnt\+::range\+\_\+iterator\+::reference}} =  \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}}}
+
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_ab93d8d8126b6670773afb327e597d97c}\label{classxlnt_1_1range__iterator_ab93d8d8126b6670773afb327e597d97c}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1range__iterator_ab93d8d8126b6670773afb327e597d97c}{xlnt\+::range\+\_\+iterator\+::value\+\_\+type}} =  \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_a600a74d19b455b9ff0d0a68a7b9e1227}\label{classxlnt_1_1range__iterator_a600a74d19b455b9ff0d0a68a7b9e1227}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!range\_iterator@{range\_iterator}}
+\index{range\_iterator@{range\_iterator}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{range\_iterator()}{range\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily xlnt\+::range\+\_\+iterator\+::range\+\_\+iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructs a range iterator 
+
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_a0689aa53713e881ffd56ca9d92c6d141}\label{classxlnt_1_1range__iterator_a0689aa53713e881ffd56ca9d92c6d141}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!range\_iterator@{range\_iterator}}
+\index{range\_iterator@{range\_iterator}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{range\_iterator()}{range\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily xlnt\+::range\+\_\+iterator\+::range\+\_\+iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \&}]{ws,  }\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{cursor,  }\item[{const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&}]{bounds,  }\item[{major\+\_\+order}]{order,  }\item[{bool}]{skip\+\_\+null }\end{DoxyParamCaption})}
+
+
+
+Constructs a range iterator on a worksheet, cell pointing to the current row or column, range bounds, an order, and whether or not to skip null column/rows. 
+
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_af0cd1538f67b41d72989e9458f7e4965}\label{classxlnt_1_1range__iterator_af0cd1538f67b41d72989e9458f7e4965}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!range\_iterator@{range\_iterator}}
+\index{range\_iterator@{range\_iterator}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{range\_iterator()}{range\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily xlnt\+::range\+\_\+iterator\+::range\+\_\+iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default copy constructor. 
+
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_a3af12f64f02ad3dce9458c493bd47373}\label{classxlnt_1_1range__iterator_a3af12f64f02ad3dce9458c493bd47373}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!range\_iterator@{range\_iterator}}
+\index{range\_iterator@{range\_iterator}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{range\_iterator()}{range\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily xlnt\+::range\+\_\+iterator\+::range\+\_\+iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default move constructor. 
+
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_a34d5944ff07e2e0828eba123f591b752}\label{classxlnt_1_1range__iterator_a34d5944ff07e2e0828eba123f591b752}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!````~range\_iterator@{$\sim$range\_iterator}}
+\index{````~range\_iterator@{$\sim$range\_iterator}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{$\sim$range\_iterator()}{~range\_iterator()}}
+{\footnotesize\ttfamily xlnt\+::range\+\_\+iterator\+::$\sim$range\+\_\+iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default destructor 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_ac79d6c3368a027886303d728e144e248}\label{classxlnt_1_1range__iterator_ac79d6c3368a027886303d728e144e248}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool xlnt\+::range\+\_\+iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this iterator is not equivalent to other. 
+
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_a326c41a907a928acce46d8a614beccf7}\label{classxlnt_1_1range__iterator_a326c41a907a928acce46d8a614beccf7}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range__iterator_a152f6c993a4dc77cae6995acfe10b0f9}{range\+\_\+iterator\+::reference}} xlnt\+::range\+\_\+iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Dereference the iterator to return a column or row. 
+
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_a99391b4e47d13d8efb4a985b60aca693}\label{classxlnt_1_1range__iterator_a99391b4e47d13d8efb4a985b60aca693}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1range__iterator_a152f6c993a4dc77cae6995acfe10b0f9}{range\+\_\+iterator\+::reference}} xlnt\+::range\+\_\+iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Dereference the iterator to return a column or row. 
+
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_aa0fe575b961ca11db3a2b349fdc3b73d}\label{classxlnt_1_1range__iterator_aa0fe575b961ca11db3a2b349fdc3b73d}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \& xlnt\+::range\+\_\+iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pre-\/increment the iterator to point to the next row/column. 
+
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_a5c214dbd47c0ccae499e118b0fc858ae}\label{classxlnt_1_1range__iterator_a5c214dbd47c0ccae499e118b0fc858ae}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} xlnt\+::range\+\_\+iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Post-\/increment the iterator to point to the next row/column. 
+
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_a29b7d2ac7a472e254d136f7a2905560f}\label{classxlnt_1_1range__iterator_a29b7d2ac7a472e254d136f7a2905560f}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \& xlnt\+::range\+\_\+iterator\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pre-\/decrement the iterator to point to the previous row/column. 
+
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_accf2df8c85efeee29d4c1827710d6c0d}\label{classxlnt_1_1range__iterator_accf2df8c85efeee29d4c1827710d6c0d}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} xlnt\+::range\+\_\+iterator\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Post-\/decrement the iterator to point to the previous row/column. 
+
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_aa9d1db7fff54c597b73d4954592a7b08}\label{classxlnt_1_1range__iterator_aa9d1db7fff54c597b73d4954592a7b08}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!operator=@{operator=}}
+\index{operator=@{operator=}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}}\& xlnt\+::range\+\_\+iterator\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default assignment operator. 
+
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_a36d8f8a228408d7ab544095be956dcbc}\label{classxlnt_1_1range__iterator_a36d8f8a228408d7ab544095be956dcbc}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!operator=@{operator=}}
+\index{operator=@{operator=}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}}\& xlnt\+::range\+\_\+iterator\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default move assignment operator. 
+
+\mbox{\Hypertarget{classxlnt_1_1range__iterator_ad46c845c9530e89dbebec9bfabd8d327}\label{classxlnt_1_1range__iterator_ad46c845c9530e89dbebec9bfabd8d327}} 
+\index{xlnt::range\_iterator@{xlnt::range\_iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::range\_iterator@{xlnt::range\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::range\+\_\+iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this iterator is equivalent to other. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/worksheet/\mbox{\hyperlink{range__iterator_8hpp}{range\+\_\+iterator.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/worksheet/\mbox{\hyperlink{range__iterator_8cpp}{range\+\_\+iterator.\+cpp}}\end{DoxyCompactItemize}

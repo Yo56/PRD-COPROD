@@ -1,0 +1,359 @@
+\hypertarget{classclass__}{}\doxysection{class\+\_\+$<$ type\+\_\+, options $>$ Class Template Reference}
+\label{classclass__}\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+
+
+{\ttfamily \#include $<$pybind11.\+h$>$}
+
+Inheritance diagram for class\+\_\+$<$ type\+\_\+, options $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classclass__}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classclass___a90e08a4ecffb596c1f1055f47747ad91}{type}} = type\+\_\+
+\item 
+using \mbox{\hyperlink{classclass___a18716f57a4db37eb2e5482309e5253c4}{type\+\_\+alias}} = \mbox{\hyperlink{common_8h_a9ec2c72f4073efb0fb0bd007b0616f0a}{detail\+::exactly\+\_\+one\+\_\+t}}$<$ is\+\_\+subtype, void, options... $>$
+\item 
+using \mbox{\hyperlink{classclass___ad22258342739bda577366b3a13a98796}{holder\+\_\+type}} = \mbox{\hyperlink{common_8h_a9ec2c72f4073efb0fb0bd007b0616f0a}{detail\+::exactly\+\_\+one\+\_\+t}}$<$ is\+\_\+holder, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classclass___a90e08a4ecffb596c1f1055f47747ad91}{type}} $>$, options... $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Extra$>$ }\\\mbox{\hyperlink{classclass___a0c0ddf3d9d90319b5ca87ebdcac4cf28}{class\+\_\+}} (\mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{structscope}{scope}}, const char $\ast$\mbox{\hyperlink{structname}{name}}, const Extra \&... extra)
+\item 
+{\footnotesize template$<$typename Func , typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___a94b10f477ed961e4b85ea7da9eda16c7}{def}} (const char $\ast$name\+\_\+, Func \&\&f, const Extra \&... extra)
+\item 
+{\footnotesize template$<$typename Func , typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___a691aae941b44e34c7351731f269fcaff}{def\+\_\+static}} (const char $\ast$name\+\_\+, Func \&\&f, const Extra \&... extra)
+\item 
+{\footnotesize template$<$detail\+::op\+\_\+id id, detail\+::op\+\_\+type ot, typename L , typename R , typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___a33f32e20792b94c7dd2b6c8440d15050}{def}} (const detail\+::op\+\_\+$<$ id, ot, L, R $>$ \&op, const Extra \&... extra)
+\item 
+{\footnotesize template$<$detail\+::op\+\_\+id id, detail\+::op\+\_\+type ot, typename L , typename R , typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___a4cab61de13f33263eb6a31dd91dfdeb9}{def\+\_\+cast}} (const detail\+::op\+\_\+$<$ id, ot, L, R $>$ \&op, const Extra \&... extra)
+\item 
+{\footnotesize template$<$typename... Args, typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___a16831ebe430bdd68dd46a008ffe36837}{def}} (const \mbox{\hyperlink{pybind11_8h_a73e0f81b0944ea98afee999f7db95ab5}{detail\+::init}}$<$ Args... $>$ \&\mbox{\hyperlink{structinit}{init}}, const Extra \&... extra)
+\item 
+{\footnotesize template$<$typename... Args, typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___af22b5b169c7d6e11d9b92241f3c5091c}{def}} (const \mbox{\hyperlink{pybind11_8h_a67a00d7b433527cbf6591341d099d39b}{detail\+::init\+\_\+alias}}$<$ Args... $>$ \&\mbox{\hyperlink{structinit}{init}}, const Extra \&... extra)
+\item 
+{\footnotesize template$<$typename Func $>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___acbd135c9fd33010bc99085e5d333bf55}{def\+\_\+buffer}} (Func \&\&func)
+\item 
+{\footnotesize template$<$typename Return , typename Class , typename... Args$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___a13babe9644a320b11f55d4c737780397}{def\+\_\+buffer}} (Return(Class\+::$\ast$func)(Args...))
+\item 
+{\footnotesize template$<$typename Return , typename Class , typename... Args$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___a96ca3406293a4a91090f419590358cd0}{def\+\_\+buffer}} (Return(Class\+::$\ast$func)(Args...) const)
+\item 
+{\footnotesize template$<$typename C , typename D , typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___a3018817da2690cc989745c7d744438cb}{def\+\_\+readwrite}} (const char $\ast$\mbox{\hyperlink{structname}{name}}, D C\+::$\ast$pm, const Extra \&... extra)
+\item 
+{\footnotesize template$<$typename C , typename D , typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___ac98b5db2ad54da585cc9d28a8748e420}{def\+\_\+readonly}} (const char $\ast$\mbox{\hyperlink{structname}{name}}, const D C\+::$\ast$pm, const Extra \&...extra)
+\item 
+{\footnotesize template$<$typename D , typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___ab5f2fa205966fb138364019ff23d96de}{def\+\_\+readwrite\+\_\+static}} (const char $\ast$\mbox{\hyperlink{structname}{name}}, D $\ast$pm, const Extra \&...extra)
+\item 
+{\footnotesize template$<$typename D , typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___aaa095752a8d0fc1bd45e4404502df5e9}{def\+\_\+readonly\+\_\+static}} (const char $\ast$\mbox{\hyperlink{structname}{name}}, const D $\ast$pm, const Extra \&...extra)
+\item 
+{\footnotesize template$<$typename Getter , typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___a0b005f5ca971191308806807682cdf94}{def\+\_\+property\+\_\+readonly}} (const char $\ast$\mbox{\hyperlink{structname}{name}}, const Getter \&fget, const Extra \&...extra)
+\begin{DoxyCompactList}\small\item\em Uses \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841aa39bc0596cb125c1605a78fbd287df7f}{return\+\_\+value\+\_\+policy\+::reference\+\_\+internal}} by default. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___ac7f87d627ffe20ca113b2c42eb746d45}{def\+\_\+property\+\_\+readonly}} (const char $\ast$\mbox{\hyperlink{structname}{name}}, const \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}} \&fget, const Extra \&...extra)
+\begin{DoxyCompactList}\small\item\em Uses \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}}\textquotesingle{}s return\+\_\+value\+\_\+policy by default. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Getter , typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___afa89332683e8e7e134472d5dc83ba6b3}{def\+\_\+property\+\_\+readonly\+\_\+static}} (const char $\ast$\mbox{\hyperlink{structname}{name}}, const Getter \&fget, const Extra \&...extra)
+\begin{DoxyCompactList}\small\item\em Uses \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841ab8af13ea9c8fe890c9979a1fa8dbde22}{return\+\_\+value\+\_\+policy\+::reference}} by default. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___a84efdefa8be30cf8fe803793474430c1}{def\+\_\+property\+\_\+readonly\+\_\+static}} (const char $\ast$\mbox{\hyperlink{structname}{name}}, const \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}} \&fget, const Extra \&...extra)
+\begin{DoxyCompactList}\small\item\em Uses \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}}\textquotesingle{}s return\+\_\+value\+\_\+policy by default. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Getter , typename Setter , typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___a2f2cd90a7ae2f7895e0b0caadac82f6f}{def\+\_\+property}} (const char $\ast$\mbox{\hyperlink{structname}{name}}, const Getter \&fget, const Setter \&fset, const Extra \&...extra)
+\begin{DoxyCompactList}\small\item\em Uses \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841aa39bc0596cb125c1605a78fbd287df7f}{return\+\_\+value\+\_\+policy\+::reference\+\_\+internal}} by default. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Getter , typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___a14c7125697800c6b8987c1c5f15aaea9}{def\+\_\+property}} (const char $\ast$\mbox{\hyperlink{structname}{name}}, const Getter \&fget, const \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}} \&fset, const Extra \&...extra)
+\item 
+{\footnotesize template$<$typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___ab976d0a595ac11629949c1faa8b2e09d}{def\+\_\+property}} (const char $\ast$\mbox{\hyperlink{structname}{name}}, const \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}} \&fget, const \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}} \&fset, const Extra \&...extra)
+\begin{DoxyCompactList}\small\item\em Uses \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}}\textquotesingle{}s return\+\_\+value\+\_\+policy by default. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Getter , typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___ab78c60e008d354283f76eef3b7c6e221}{def\+\_\+property\+\_\+static}} (const char $\ast$\mbox{\hyperlink{structname}{name}}, const Getter \&fget, const \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}} \&fset, const Extra \&...extra)
+\begin{DoxyCompactList}\small\item\em Uses \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841ab8af13ea9c8fe890c9979a1fa8dbde22}{return\+\_\+value\+\_\+policy\+::reference}} by default. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Extra$>$ }\\\mbox{\hyperlink{classclass__}{class\+\_\+}} \& \mbox{\hyperlink{classclass___a1c2c3cfa3f7ba78fcb344a716dcc59a3}{def\+\_\+property\+\_\+static}} (const char $\ast$\mbox{\hyperlink{structname}{name}}, const \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}} \&fget, const \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}} \&fset, const Extra \&...extra)
+\begin{DoxyCompactList}\small\item\em Uses \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}}\textquotesingle{}s return\+\_\+value\+\_\+policy by default. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Base , detail\+::enable\+\_\+if\+\_\+t$<$ is\+\_\+base$<$ Base $>$\+::value, int $>$  = 0$>$ }\\static void \mbox{\hyperlink{classclass___a118815a833b1fe76c91536afdfc1f305}{add\+\_\+base}} (detail\+::type\+\_\+record \&rec)
+\item 
+{\footnotesize template$<$typename Base , detail\+::enable\+\_\+if\+\_\+t$<$!is\+\_\+base$<$ Base $>$\+::value, int $>$  = 0$>$ }\\static void \mbox{\hyperlink{classclass___a3e06e8a15ef89f19a08a9ca0bf8277de}{add\+\_\+base}} (detail\+::type\+\_\+record \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+constexpr static bool \mbox{\hyperlink{classclass___adc028ddb268afeb2f697ea6c0b820772}{has\+\_\+alias}} = !std\+::is\+\_\+void$<$\mbox{\hyperlink{classclass___a18716f57a4db37eb2e5482309e5253c4}{type\+\_\+alias}}$>$\+::value
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classclass___ad22258342739bda577366b3a13a98796}\label{classclass___ad22258342739bda577366b3a13a98796}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!holder\_type@{holder\_type}}
+\index{holder\_type@{holder\_type}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{holder\_type}{holder\_type}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+using \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::\mbox{\hyperlink{classclass___ad22258342739bda577366b3a13a98796}{holder\+\_\+type}} =  \mbox{\hyperlink{common_8h_a9ec2c72f4073efb0fb0bd007b0616f0a}{detail\+::exactly\+\_\+one\+\_\+t}}$<$is\+\_\+holder, std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classclass___a90e08a4ecffb596c1f1055f47747ad91}{type}}$>$, options...$>$}
+
+\mbox{\Hypertarget{classclass___a90e08a4ecffb596c1f1055f47747ad91}\label{classclass___a90e08a4ecffb596c1f1055f47747ad91}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!type@{type}}
+\index{type@{type}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+using \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::\mbox{\hyperlink{classclass___a90e08a4ecffb596c1f1055f47747ad91}{type}} =  type\+\_\+}
+
+\mbox{\Hypertarget{classclass___a18716f57a4db37eb2e5482309e5253c4}\label{classclass___a18716f57a4db37eb2e5482309e5253c4}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!type\_alias@{type\_alias}}
+\index{type\_alias@{type\_alias}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{type\_alias}{type\_alias}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+using \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::\mbox{\hyperlink{classclass___a18716f57a4db37eb2e5482309e5253c4}{type\+\_\+alias}} =  \mbox{\hyperlink{common_8h_a9ec2c72f4073efb0fb0bd007b0616f0a}{detail\+::exactly\+\_\+one\+\_\+t}}$<$is\+\_\+subtype, void, options...$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classclass___a0c0ddf3d9d90319b5ca87ebdcac4cf28}\label{classclass___a0c0ddf3d9d90319b5ca87ebdcac4cf28}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!class\_@{class\_}}
+\index{class\_@{class\_}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{class\_()}{class\_()}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::\mbox{\hyperlink{classclass__}{class\+\_\+}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandle}{handle}}}]{scope,  }\item[{const char $\ast$}]{name,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classclass___a3e06e8a15ef89f19a08a9ca0bf8277de}\label{classclass___a3e06e8a15ef89f19a08a9ca0bf8277de}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!add\_base@{add\_base}}
+\index{add\_base@{add\_base}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{add\_base()}{add\_base()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename Base , detail\+::enable\+\_\+if\+\_\+t$<$!is\+\_\+base$<$ Base $>$\+::value, int $>$  = 0$>$ \\
+static void \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::add\+\_\+base (\begin{DoxyParamCaption}\item[{detail\+::type\+\_\+record \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classclass___a118815a833b1fe76c91536afdfc1f305}\label{classclass___a118815a833b1fe76c91536afdfc1f305}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!add\_base@{add\_base}}
+\index{add\_base@{add\_base}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{add\_base()}{add\_base()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename Base , detail\+::enable\+\_\+if\+\_\+t$<$ is\+\_\+base$<$ Base $>$\+::value, int $>$  = 0$>$ \\
+static void \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::add\+\_\+base (\begin{DoxyParamCaption}\item[{detail\+::type\+\_\+record \&}]{rec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classclass___a94b10f477ed961e4b85ea7da9eda16c7}\label{classclass___a94b10f477ed961e4b85ea7da9eda16c7}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def@{def}}
+\index{def@{def}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def()}{def()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename Func , typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name\+\_\+,  }\item[{Func \&\&}]{f,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classclass___a16831ebe430bdd68dd46a008ffe36837}\label{classclass___a16831ebe430bdd68dd46a008ffe36837}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def@{def}}
+\index{def@{def}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def()}{def()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename... Args, typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{pybind11_8h_a73e0f81b0944ea98afee999f7db95ab5}{detail\+::init}}$<$ Args... $>$ \&}]{init,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classclass___af22b5b169c7d6e11d9b92241f3c5091c}\label{classclass___af22b5b169c7d6e11d9b92241f3c5091c}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def@{def}}
+\index{def@{def}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def()}{def()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename... Args, typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{pybind11_8h_a67a00d7b433527cbf6591341d099d39b}{detail\+::init\+\_\+alias}}$<$ Args... $>$ \&}]{init,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classclass___a33f32e20792b94c7dd2b6c8440d15050}\label{classclass___a33f32e20792b94c7dd2b6c8440d15050}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def@{def}}
+\index{def@{def}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def()}{def()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$detail\+::op\+\_\+id id, detail\+::op\+\_\+type ot, typename L , typename R , typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def (\begin{DoxyParamCaption}\item[{const detail\+::op\+\_\+$<$ id, ot, L, R $>$ \&}]{op,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classclass___acbd135c9fd33010bc99085e5d333bf55}\label{classclass___acbd135c9fd33010bc99085e5d333bf55}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_buffer@{def\_buffer}}
+\index{def\_buffer@{def\_buffer}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_buffer()}{def\_buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename Func $>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+buffer (\begin{DoxyParamCaption}\item[{Func \&\&}]{func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classclass___a96ca3406293a4a91090f419590358cd0}\label{classclass___a96ca3406293a4a91090f419590358cd0}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_buffer@{def\_buffer}}
+\index{def\_buffer@{def\_buffer}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_buffer()}{def\_buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename Return , typename Class , typename... Args$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+buffer (\begin{DoxyParamCaption}\item[{Return(Class\+::$\ast$)(Args...) const}]{func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classclass___a13babe9644a320b11f55d4c737780397}\label{classclass___a13babe9644a320b11f55d4c737780397}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_buffer@{def\_buffer}}
+\index{def\_buffer@{def\_buffer}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_buffer()}{def\_buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename Return , typename Class , typename... Args$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+buffer (\begin{DoxyParamCaption}\item[{Return(Class\+::$\ast$)(Args...)}]{func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classclass___a4cab61de13f33263eb6a31dd91dfdeb9}\label{classclass___a4cab61de13f33263eb6a31dd91dfdeb9}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_cast@{def\_cast}}
+\index{def\_cast@{def\_cast}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_cast()}{def\_cast()}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$detail\+::op\+\_\+id id, detail\+::op\+\_\+type ot, typename L , typename R , typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+cast (\begin{DoxyParamCaption}\item[{const detail\+::op\+\_\+$<$ id, ot, L, R $>$ \&}]{op,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classclass___ab976d0a595ac11629949c1faa8b2e09d}\label{classclass___ab976d0a595ac11629949c1faa8b2e09d}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_property@{def\_property}}
+\index{def\_property@{def\_property}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_property()}{def\_property()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+property (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}} \&}]{fget,  }\item[{const \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}} \&}]{fset,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Uses \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}}\textquotesingle{}s return\+\_\+value\+\_\+policy by default. 
+
+\mbox{\Hypertarget{classclass___a14c7125697800c6b8987c1c5f15aaea9}\label{classclass___a14c7125697800c6b8987c1c5f15aaea9}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_property@{def\_property}}
+\index{def\_property@{def\_property}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_property()}{def\_property()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename Getter , typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+property (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const Getter \&}]{fget,  }\item[{const \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}} \&}]{fset,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classclass___a2f2cd90a7ae2f7895e0b0caadac82f6f}\label{classclass___a2f2cd90a7ae2f7895e0b0caadac82f6f}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_property@{def\_property}}
+\index{def\_property@{def\_property}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_property()}{def\_property()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename Getter , typename Setter , typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+property (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const Getter \&}]{fget,  }\item[{const Setter \&}]{fset,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Uses \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841aa39bc0596cb125c1605a78fbd287df7f}{return\+\_\+value\+\_\+policy\+::reference\+\_\+internal}} by default. 
+
+\mbox{\Hypertarget{classclass___ac7f87d627ffe20ca113b2c42eb746d45}\label{classclass___ac7f87d627ffe20ca113b2c42eb746d45}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_property\_readonly@{def\_property\_readonly}}
+\index{def\_property\_readonly@{def\_property\_readonly}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_property\_readonly()}{def\_property\_readonly()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+property\+\_\+readonly (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}} \&}]{fget,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Uses \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}}\textquotesingle{}s return\+\_\+value\+\_\+policy by default. 
+
+\mbox{\Hypertarget{classclass___a0b005f5ca971191308806807682cdf94}\label{classclass___a0b005f5ca971191308806807682cdf94}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_property\_readonly@{def\_property\_readonly}}
+\index{def\_property\_readonly@{def\_property\_readonly}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_property\_readonly()}{def\_property\_readonly()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename Getter , typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+property\+\_\+readonly (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const Getter \&}]{fget,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Uses \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841aa39bc0596cb125c1605a78fbd287df7f}{return\+\_\+value\+\_\+policy\+::reference\+\_\+internal}} by default. 
+
+\mbox{\Hypertarget{classclass___a84efdefa8be30cf8fe803793474430c1}\label{classclass___a84efdefa8be30cf8fe803793474430c1}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_property\_readonly\_static@{def\_property\_readonly\_static}}
+\index{def\_property\_readonly\_static@{def\_property\_readonly\_static}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_property\_readonly\_static()}{def\_property\_readonly\_static()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+property\+\_\+readonly\+\_\+static (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}} \&}]{fget,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Uses \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}}\textquotesingle{}s return\+\_\+value\+\_\+policy by default. 
+
+\mbox{\Hypertarget{classclass___afa89332683e8e7e134472d5dc83ba6b3}\label{classclass___afa89332683e8e7e134472d5dc83ba6b3}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_property\_readonly\_static@{def\_property\_readonly\_static}}
+\index{def\_property\_readonly\_static@{def\_property\_readonly\_static}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_property\_readonly\_static()}{def\_property\_readonly\_static()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename Getter , typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+property\+\_\+readonly\+\_\+static (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const Getter \&}]{fget,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Uses \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841ab8af13ea9c8fe890c9979a1fa8dbde22}{return\+\_\+value\+\_\+policy\+::reference}} by default. 
+
+\mbox{\Hypertarget{classclass___a1c2c3cfa3f7ba78fcb344a716dcc59a3}\label{classclass___a1c2c3cfa3f7ba78fcb344a716dcc59a3}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_property\_static@{def\_property\_static}}
+\index{def\_property\_static@{def\_property\_static}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_property\_static()}{def\_property\_static()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+property\+\_\+static (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}} \&}]{fget,  }\item[{const \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}} \&}]{fset,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Uses \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}}\textquotesingle{}s return\+\_\+value\+\_\+policy by default. 
+
+\mbox{\Hypertarget{classclass___ab78c60e008d354283f76eef3b7c6e221}\label{classclass___ab78c60e008d354283f76eef3b7c6e221}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_property\_static@{def\_property\_static}}
+\index{def\_property\_static@{def\_property\_static}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_property\_static()}{def\_property\_static()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename Getter , typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+property\+\_\+static (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const Getter \&}]{fget,  }\item[{const \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}} \&}]{fset,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Uses \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841ab8af13ea9c8fe890c9979a1fa8dbde22}{return\+\_\+value\+\_\+policy\+::reference}} by default. 
+
+\mbox{\Hypertarget{classclass___ac98b5db2ad54da585cc9d28a8748e420}\label{classclass___ac98b5db2ad54da585cc9d28a8748e420}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_readonly@{def\_readonly}}
+\index{def\_readonly@{def\_readonly}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_readonly()}{def\_readonly()}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename C , typename D , typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+readonly (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const D C\+::$\ast$}]{pm,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classclass___aaa095752a8d0fc1bd45e4404502df5e9}\label{classclass___aaa095752a8d0fc1bd45e4404502df5e9}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_readonly\_static@{def\_readonly\_static}}
+\index{def\_readonly\_static@{def\_readonly\_static}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_readonly\_static()}{def\_readonly\_static()}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename D , typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+readonly\+\_\+static (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const D $\ast$}]{pm,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classclass___a3018817da2690cc989745c7d744438cb}\label{classclass___a3018817da2690cc989745c7d744438cb}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_readwrite@{def\_readwrite}}
+\index{def\_readwrite@{def\_readwrite}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_readwrite()}{def\_readwrite()}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename C , typename D , typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+readwrite (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{D C\+::$\ast$}]{pm,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classclass___ab5f2fa205966fb138364019ff23d96de}\label{classclass___ab5f2fa205966fb138364019ff23d96de}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_readwrite\_static@{def\_readwrite\_static}}
+\index{def\_readwrite\_static@{def\_readwrite\_static}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_readwrite\_static()}{def\_readwrite\_static()}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename D , typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+readwrite\+\_\+static (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{D $\ast$}]{pm,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classclass___a691aae941b44e34c7351731f269fcaff}\label{classclass___a691aae941b44e34c7351731f269fcaff}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!def\_static@{def\_static}}
+\index{def\_static@{def\_static}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{def\_static()}{def\_static()}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+template$<$typename Func , typename... Extra$>$ \\
+\mbox{\hyperlink{classclass__}{class\+\_\+}}\& \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::def\+\_\+static (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name\+\_\+,  }\item[{Func \&\&}]{f,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classclass___adc028ddb268afeb2f697ea6c0b820772}\label{classclass___adc028ddb268afeb2f697ea6c0b820772}} 
+\index{class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}!has\_alias@{has\_alias}}
+\index{has\_alias@{has\_alias}!class\_$<$ type\_, options $>$@{class\_$<$ type\_, options $>$}}
+\doxysubsubsection{\texorpdfstring{has\_alias}{has\_alias}}
+{\footnotesize\ttfamily template$<$typename type\+\_\+ , typename... options$>$ \\
+constexpr static bool \mbox{\hyperlink{classclass__}{class\+\_\+}}$<$ type\+\_\+, \mbox{\hyperlink{classoptions}{options}} $>$\+::has\+\_\+alias = !std\+::is\+\_\+void$<$\mbox{\hyperlink{classclass___a18716f57a4db37eb2e5482309e5253c4}{type\+\_\+alias}}$>$\+::value\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{pybind11_8h}{pybind11.\+h}}\end{DoxyCompactItemize}

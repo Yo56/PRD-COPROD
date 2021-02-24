@@ -1,0 +1,1578 @@
+\hypertarget{classxlnt_1_1workbook}{}\doxysection{xlnt\+::workbook Class Reference}
+\label{classxlnt_1_1workbook}\index{xlnt::workbook@{xlnt::workbook}}
+
+
+workbook is the container for all other parts of the document.  
+
+
+
+
+{\ttfamily \#include $<$workbook.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classxlnt_1_1workbook_ae2f1be96b599bc45f067d70609821312}{iterator}} = \mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em typedef for the iterator used for iterating through this workbook (non-\/const) in a range-\/based for loop. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classxlnt_1_1workbook_a4bcfb01cc3e1863dfa355f27c1eb6938}{const\+\_\+iterator}} = \mbox{\hyperlink{classxlnt_1_1const__worksheet__iterator}{const\+\_\+worksheet\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em typedef for the iterator used for iterating through this workbook (const) in a range-\/based for loop. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classxlnt_1_1workbook_acbadbee48fbc52777b43a05e0ae474c1}{reverse\+\_\+iterator}} = std\+::reverse\+\_\+iterator$<$ \mbox{\hyperlink{classxlnt_1_1workbook_ae2f1be96b599bc45f067d70609821312}{iterator}} $>$
+\begin{DoxyCompactList}\small\item\em typedef for the iterator used for iterating through this workbook (non-\/const) in a range-\/based for loop in reverse order using std\+::make\+\_\+reverse\+\_\+iterator. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classxlnt_1_1workbook_a7d1b42fa3144d4eba9e1ca3cbc85ae7c}{const\+\_\+reverse\+\_\+iterator}} = std\+::reverse\+\_\+iterator$<$ \mbox{\hyperlink{classxlnt_1_1workbook_a4bcfb01cc3e1863dfa355f27c1eb6938}{const\+\_\+iterator}} $>$
+\begin{DoxyCompactList}\small\item\em typedef for the iterator used for iterating through this workbook (const) in a range-\/based for loop in reverse order using std\+::make\+\_\+reverse\+\_\+iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1workbook_a833468d87f0683c0f13f09eacfc422ba}{workbook}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. Constructs a workbook containing a single empty worksheet using \mbox{\hyperlink{classxlnt_1_1workbook_a6b4088d80b9fb40a1c965d8f19441a41}{workbook\+::empty()}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1workbook_aabe2c4076508526709173ce7b1844960}{workbook}} (const \mbox{\hyperlink{classxlnt_1_1path}{xlnt\+::path}} \&file)
+\begin{DoxyCompactList}\small\item\em load the xlsx file at path \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1workbook_aa42e9d910a6c8960f296236fb1096193}{workbook}} (const \mbox{\hyperlink{classxlnt_1_1path}{xlnt\+::path}} \&file, const std\+::string \&password)
+\begin{DoxyCompactList}\small\item\em load the encrpyted xlsx file at path \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1workbook_a767f3db85df3ccdd357d59e354622596}{workbook}} (std\+::istream \&data)
+\begin{DoxyCompactList}\small\item\em construct the workbook from any data stream where the data is the binary form of a workbook \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1workbook_a0523e9012cb4917e76038ea3da432b43}{workbook}} (std\+::istream \&data, const std\+::string \&password)
+\begin{DoxyCompactList}\small\item\em construct the workbook from any data stream where the data is the binary form of an encrypted workbook \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1workbook_a63732bb538e5cbcaac6ec014a445d5eb}{workbook}} (\mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \&\&other)
+\begin{DoxyCompactList}\small\item\em Move constructor. Constructs a workbook from existing workbook, other. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1workbook_aa43405161ce26b7e171cc05b8461835c}{workbook}} (const \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. Constructs this workbook from existing workbook, other. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1workbook_a12ddbfa450b8bc3dc3d7b049f39d57e9}{$\sim$workbook}} ()
+\begin{DoxyCompactList}\small\item\em Destroys this workbook, deallocating all internal storage space. Any pimpl wrapper classes (e.\+g. cell) pointing into this workbook will be invalid after this is executed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1workbook_a9ef148f73657168a019d85193af7adc1}{create\+\_\+sheet}} ()
+\begin{DoxyCompactList}\small\item\em Creates and returns a sheet after the last sheet in this workbook. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1workbook_a123c1c070aa39142512d1cdc669e5f37}{create\+\_\+sheet}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1workbook_a681f4aa4cc186a4238c0e207eb12def9}{index}})
+\begin{DoxyCompactList}\small\item\em Creates and returns a sheet at the specified index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1workbook_a477fd883865f426a0c4a38905e0c03ad}{create\+\_\+sheet\+\_\+with\+\_\+rel}} (const std\+::string \&\mbox{\hyperlink{classxlnt_1_1workbook_a767a08afda3d464c0b9c9d80dcb4a3c3}{title}}, const \mbox{\hyperlink{classxlnt_1_1relationship}{relationship}} \&rel)
+\begin{DoxyCompactList}\small\item\em TODO\+: This should be private... \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1workbook_aa0b8cf49d7cc4bbb98a9bd21fc939896}{copy\+\_\+sheet}} (\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}})
+\begin{DoxyCompactList}\small\item\em Creates and returns a new sheet after the last sheet initializing it with all of the data from the provided worksheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1workbook_a55d04adc74fc9b52f9a08d604eb00f87}{copy\+\_\+sheet}} (\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1workbook_a681f4aa4cc186a4238c0e207eb12def9}{index}})
+\begin{DoxyCompactList}\small\item\em Creates and returns a new sheet at the specified index initializing it with all of the data from the provided worksheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1workbook_a611b6b2587e8530a81dd086d0eb0b11b}{active\+\_\+sheet}} ()
+\begin{DoxyCompactList}\small\item\em Returns the worksheet that is determined to be active. An active sheet is that which is initially shown by the spreadsheet editor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1workbook_a3e0382e7d5bc111386f53e1802f5e59e}{sheet\+\_\+by\+\_\+title}} (const std\+::string \&\mbox{\hyperlink{classxlnt_1_1workbook_a767a08afda3d464c0b9c9d80dcb4a3c3}{title}})
+\begin{DoxyCompactList}\small\item\em Returns the worksheet with the given name. This may throw an exception if the sheet isn\textquotesingle{}t found. Use workbook\+::contains(const std\+::string \&) to make sure the sheet exists before calling this method. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1workbook_ab7a1e6a42a4fbb1c436a93e6c2e6a516}{sheet\+\_\+by\+\_\+title}} (const std\+::string \&\mbox{\hyperlink{classxlnt_1_1workbook_a767a08afda3d464c0b9c9d80dcb4a3c3}{title}}) const
+\begin{DoxyCompactList}\small\item\em Returns the worksheet with the given name. This may throw an exception if the sheet isn\textquotesingle{}t found. Use workbook\+::contains(const std\+::string \&) to make sure the sheet exists before calling this method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1workbook_af1b3ed735b5d9be4115f9ac987081913}{sheet\+\_\+by\+\_\+index}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1workbook_a681f4aa4cc186a4238c0e207eb12def9}{index}})
+\begin{DoxyCompactList}\small\item\em Returns the worksheet at the given index. This will throw an exception if index is greater than or equal to the number of sheets in this workbook. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1workbook_abd4099049718a28e09ae5c049058415a}{sheet\+\_\+by\+\_\+index}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1workbook_a681f4aa4cc186a4238c0e207eb12def9}{index}}) const
+\begin{DoxyCompactList}\small\item\em Returns the worksheet at the given index. This will throw an exception if index is greater than or equal to the number of sheets in this workbook. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1workbook_a0e78f73956583af3c8ccd5085509374f}{sheet\+\_\+by\+\_\+id}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} id)
+\begin{DoxyCompactList}\small\item\em Returns the worksheet with a sheet\+Id of id. Sheet IDs are arbitrary numbers that uniquely identify a sheet. Most users won\textquotesingle{}t need this. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1workbook_ac64ccc2aa44cb168d437ec4b0a1a1a55}{sheet\+\_\+by\+\_\+id}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} id) const
+\begin{DoxyCompactList}\small\item\em Returns the worksheet with a sheet\+Id of id. Sheet IDs are arbitrary numbers that uniquely identify a sheet. Most users won\textquotesingle{}t need this. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1workbook_a2d97a8d513cc0b36e99cc065b990c7e5}{contains}} (const std\+::string \&\mbox{\hyperlink{classxlnt_1_1workbook_a767a08afda3d464c0b9c9d80dcb4a3c3}{title}}) const
+\begin{DoxyCompactList}\small\item\em Returns true if this workbook contains a sheet with the given title. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1workbook_a681f4aa4cc186a4238c0e207eb12def9}{index}} (\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}})
+\begin{DoxyCompactList}\small\item\em Returns the index of the given worksheet. The worksheet must be owned by this workbook. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a2471d1ef981a728d5a302c2de8a08da3}{remove\+\_\+sheet}} (\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}})
+\begin{DoxyCompactList}\small\item\em Removes the given worksheet from this workbook. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a9004e7a2752485b27bf063f6e12c2ace}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Sets the contents of this workbook to be equivalent to that of a workbook returned by \mbox{\hyperlink{classxlnt_1_1workbook_a6b4088d80b9fb40a1c965d8f19441a41}{workbook\+::empty()}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1workbook_ae2f1be96b599bc45f067d70609821312}{iterator}} \mbox{\hyperlink{classxlnt_1_1workbook_a85f937d1f1c203b7cc7187eb41bc0480}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the first worksheet in this workbook. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1workbook_ae2f1be96b599bc45f067d70609821312}{iterator}} \mbox{\hyperlink{classxlnt_1_1workbook_a1f4f65d238199cbd3a5ff4f3f537e224}{end}} ()
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the worksheet following the last worksheet of the workbook. This worksheet acts as a placeholder; attempting to access it will cause an exception to be thrown. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1workbook_a4bcfb01cc3e1863dfa355f27c1eb6938}{const\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1workbook_a65be0e7316aeb5a7dca5b787236560fe}{begin}} () const
+\begin{DoxyCompactList}\small\item\em Returns a const iterator to the first worksheet in this workbook. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1workbook_a4bcfb01cc3e1863dfa355f27c1eb6938}{const\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1workbook_ae0bba07094349bd5ee3157e5b59a9e2e}{end}} () const
+\begin{DoxyCompactList}\small\item\em Returns a const iterator to the worksheet following the last worksheet of the workbook. This worksheet acts as a placeholder; attempting to access it will cause an exception to be thrown. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1workbook_a4bcfb01cc3e1863dfa355f27c1eb6938}{const\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1workbook_ad73d0400208f1ba8d033368fed16ca4f}{cbegin}} () const
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the first worksheet in this workbook. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1workbook_a4bcfb01cc3e1863dfa355f27c1eb6938}{const\+\_\+iterator}} \mbox{\hyperlink{classxlnt_1_1workbook_aeb6f93ab12f9db098c293c76f8d176e0}{cend}} () const
+\begin{DoxyCompactList}\small\item\em Returns a const iterator to the worksheet following the last worksheet of the workbook. This worksheet acts as a placeholder; attempting to access it will cause an exception to be thrown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a993aa46199d76b4bc24b3b16733cfa13}{apply\+\_\+to\+\_\+cells}} (std\+::function$<$ void(\mbox{\hyperlink{classxlnt_1_1cell}{cell}})$>$ f)
+\begin{DoxyCompactList}\small\item\em Applies the function \char`\"{}f\char`\"{} to every non-\/empty cell in every worksheet in this workbook. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classxlnt_1_1workbook_ace8a3436cd08d64708084ba9d277cf09}{sheet\+\_\+titles}} () const
+\begin{DoxyCompactList}\small\item\em Returns a temporary vector containing the titles of each sheet in the order of the sheets in the workbook. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1workbook_a6de32e90786dc838bda2c921ff7c7ef3}{sheet\+\_\+count}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of sheets in this workbook. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1workbook_abc6c82900353834cd14ec131270d3e18}{has\+\_\+core\+\_\+property}} (\mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029d}{xlnt\+::core\+\_\+property}} type) const
+\begin{DoxyCompactList}\small\item\em Returns true if the workbook has the core property with the given name. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029d}{xlnt\+::core\+\_\+property}} $>$ \mbox{\hyperlink{classxlnt_1_1workbook_afa49fcecaeaef2bad6e028eea604ab72}{core\+\_\+properties}} () const
+\begin{DoxyCompactList}\small\item\em Returns a vector of the type of each core property that is set to a particular value in this workbook. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1variant}{variant}} \mbox{\hyperlink{classxlnt_1_1workbook_a1b8a8b01b1b3b09b89b99ea9c9337714}{core\+\_\+property}} (\mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029d}{xlnt\+::core\+\_\+property}} type) const
+\begin{DoxyCompactList}\small\item\em Returns the value of the given core property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a31886abd4984228b8117f51ef8a17490}{core\+\_\+property}} (\mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029d}{xlnt\+::core\+\_\+property}} type, const \mbox{\hyperlink{classxlnt_1_1variant}{variant}} \&value)
+\begin{DoxyCompactList}\small\item\em Sets the given core property to the provided value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1workbook_a7085469bc589720ed7ecfcf3f1284e05}{has\+\_\+extended\+\_\+property}} (\mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5}{xlnt\+::extended\+\_\+property}} type) const
+\begin{DoxyCompactList}\small\item\em Returns true if the workbook has the extended property with the given name. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5}{xlnt\+::extended\+\_\+property}} $>$ \mbox{\hyperlink{classxlnt_1_1workbook_a7cd33c11e3929a5381099d2797d886f8}{extended\+\_\+properties}} () const
+\begin{DoxyCompactList}\small\item\em Returns a vector of the type of each extended property that is set to a particular value in this workbook. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1variant}{variant}} \mbox{\hyperlink{classxlnt_1_1workbook_a7c50cc677ffaf4c7a9577bfc4c07ef55}{extended\+\_\+property}} (\mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5}{xlnt\+::extended\+\_\+property}} type) const
+\begin{DoxyCompactList}\small\item\em Returns the value of the given extended property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a1a2e03e9ced399aa3bba796680276dea}{extended\+\_\+property}} (\mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5}{xlnt\+::extended\+\_\+property}} type, const \mbox{\hyperlink{classxlnt_1_1variant}{variant}} \&value)
+\begin{DoxyCompactList}\small\item\em Sets the given extended property to the provided value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1workbook_a7fe86dca0cf73068ee222f91c9b6af26}{has\+\_\+custom\+\_\+property}} (const std\+::string \&property\+\_\+name) const
+\begin{DoxyCompactList}\small\item\em Returns true if the workbook has the custom property with the given name. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classxlnt_1_1workbook_a30ad3041b561dae675e37eb9c0094299}{custom\+\_\+properties}} () const
+\begin{DoxyCompactList}\small\item\em Returns a vector of the name of each custom property that is set to a particular value in this workbook. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1variant}{variant}} \mbox{\hyperlink{classxlnt_1_1workbook_a269f36e3283e19a758a6890fa89b3fbf}{custom\+\_\+property}} (const std\+::string \&property\+\_\+name) const
+\begin{DoxyCompactList}\small\item\em Returns the value of the given custom property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_afe7c588e77a1f812c33842c29e715878}{custom\+\_\+property}} (const std\+::string \&property\+\_\+name, const \mbox{\hyperlink{classxlnt_1_1variant}{variant}} \&value)
+\begin{DoxyCompactList}\small\item\em Creates a new custom property in this workbook and sets it to the provided value. \end{DoxyCompactList}\item 
+calendar \mbox{\hyperlink{classxlnt_1_1workbook_a80163555fb42a5529fed34a3a16f8863}{base\+\_\+date}} () const
+\begin{DoxyCompactList}\small\item\em Returns the base date used by this workbook. This will generally be windows\+\_\+1900 except on Apple based systems when it will default to mac\+\_\+1904 unless otherwise set via {\ttfamily void \mbox{\hyperlink{classxlnt_1_1workbook_a255ea03fb00c34a414bd7d025b2812fe}{workbook\+::base\+\_\+date(calendar base\+\_\+date)}}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a255ea03fb00c34a414bd7d025b2812fe}{base\+\_\+date}} (calendar base\+\_\+date)
+\begin{DoxyCompactList}\small\item\em Sets the base date style of this workbook. This is the date and time that a numeric value of 0 represents. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1workbook_af44100a63859e6a8a43b6bbe063467db}{has\+\_\+title}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this workbook has had its title set. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1workbook_a767a08afda3d464c0b9c9d80dcb4a3c3}{title}} () const
+\begin{DoxyCompactList}\small\item\em Returns the title of this workbook. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_ad11588655cb15f5ea9ed21233c61f39b}{title}} (const std\+::string \&title)
+\begin{DoxyCompactList}\small\item\em Sets the title of this workbook to title. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_ab9e1d7d89cf090bc99ba8c3294bc61ab}{abs\+\_\+path}} (const std\+::string \&\mbox{\hyperlink{classxlnt_1_1path}{path}})
+\begin{DoxyCompactList}\small\item\em Sets the absolute path of this workbook to path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a1ccbb79db2289f31a7c7f4014a4d1b5b}{arch\+\_\+id\+\_\+flags}} (const \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} flags)
+\begin{DoxyCompactList}\small\item\em Sets the Arch\+ID flags of this workbook to flags. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1named__range}{xlnt\+::named\+\_\+range}} $>$ \mbox{\hyperlink{classxlnt_1_1workbook_a776553c6b3470685901b03722b2d7f36}{named\+\_\+ranges}} () const
+\begin{DoxyCompactList}\small\item\em Returns a vector of the named ranges in this workbook. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a424ec3ca238fe529de5421e8b91b26a1}{create\+\_\+named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}, const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&reference)
+\begin{DoxyCompactList}\small\item\em Creates a new names range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a49ddbcb4ce8af349949fc1ba8ad925b0}{create\+\_\+named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}, const std\+::string \&reference\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Creates a new names range. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1workbook_a0738aca0f6f9228d12e3a0bd45036917}{has\+\_\+named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}) const
+\begin{DoxyCompactList}\small\item\em Returns true if a named range of the given name exists in the workbook. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1workbook_adb52963419bd676a6367675822a953c0}{named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\begin{DoxyCompactList}\small\item\em Returns the named range with the given name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a12f202b67bad4a9bddb162e540459d11}{remove\+\_\+named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\begin{DoxyCompactList}\small\item\em Deletes the named range with the given name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_aeadec7536f669d4cf356753fa49f3b6b}{save}} (std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&data) const
+\begin{DoxyCompactList}\small\item\em Serializes the workbook into an XLSX file and saves the bytes into byte vector data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_ad52bae127b687629c50388511d3efa7b}{save}} (std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&data, const std\+::string \&password) const
+\begin{DoxyCompactList}\small\item\em Serializes the workbook into an XLSX file encrypted with the given password and saves the bytes into byte vector data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_afdda068926fbd9b649cbb863cc194a5c}{save}} (const std\+::string \&filename) const
+\begin{DoxyCompactList}\small\item\em Serializes the workbook into an XLSX file and saves the data into a file named filename. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_aadab1b2286bfe8b5f955bae09abf064a}{save}} (const std\+::string \&filename, const std\+::string \&password) const
+\begin{DoxyCompactList}\small\item\em Serializes the workbook into an XLSX file encrypted with the given password and loads the bytes into a file named filename. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_af9cc0c2dc0c7466a751496a48bdf42ac}{save}} (const \mbox{\hyperlink{classxlnt_1_1path}{xlnt\+::path}} \&filename) const
+\begin{DoxyCompactList}\small\item\em Serializes the workbook into an XLSX file and saves the data into a file named filename. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_aba72a11bef5cfeba6dbdc6fda6277f93}{save}} (const \mbox{\hyperlink{classxlnt_1_1path}{xlnt\+::path}} \&filename, const std\+::string \&password) const
+\begin{DoxyCompactList}\small\item\em Serializes the workbook into an XLSX file encrypted with the given password and loads the bytes into a file named filename. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a6850eb6a525cdff4b549b687d2f59c2d}{save}} (std\+::ostream \&stream) const
+\begin{DoxyCompactList}\small\item\em Serializes the workbook into an XLSX file and saves the data into stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_af205c8493a7e928a5d0a515c288eee49}{save}} (std\+::ostream \&stream, const std\+::string \&password) const
+\begin{DoxyCompactList}\small\item\em Serializes the workbook into an XLSX file encrypted with the given password and loads the bytes into the given stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_ad835d8c19e8312765035c46d212c8c3f}{load}} (const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Interprets byte vector data as an XLSX file and sets the content of this workbook to match that file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a4a79b92c32e259d72dc049c491b8182f}{load}} (const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&data, const std\+::string \&password)
+\begin{DoxyCompactList}\small\item\em Interprets byte vector data as an XLSX file encrypted with the given password and sets the content of this workbook to match that file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a4cdba244fd180934d961f9ad39e8edc1}{load}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Interprets file with the given filename as an XLSX file and sets the content of this workbook to match that file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a94b53390ea78261bb4e198a6956b1738}{load}} (const std\+::string \&filename, const std\+::string \&password)
+\begin{DoxyCompactList}\small\item\em Interprets file with the given filename as an XLSX file encrypted with the given password and sets the content of this workbook to match that file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_af52a71ac7b10d357601b9a4cc0f5aa5b}{load}} (const \mbox{\hyperlink{classxlnt_1_1path}{xlnt\+::path}} \&filename)
+\begin{DoxyCompactList}\small\item\em Interprets file with the given filename as an XLSX file and sets the content of this workbook to match that file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a8bf547513ee82f7c029a246aea50d965}{load}} (const \mbox{\hyperlink{classxlnt_1_1path}{xlnt\+::path}} \&filename, const std\+::string \&password)
+\begin{DoxyCompactList}\small\item\em Interprets file with the given filename as an XLSX file encrypted with the given password and sets the content of this workbook to match that file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_aaed45d3eeb5cb1f1da48becc3ef64e0a}{load}} (std\+::istream \&stream)
+\begin{DoxyCompactList}\small\item\em Interprets data in stream as an XLSX file and sets the content of this workbook to match that file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a7f7297a19ac80cf20b79cd77b4e4efde}{load}} (std\+::istream \&stream, const std\+::string \&password)
+\begin{DoxyCompactList}\small\item\em Interprets data in stream as an XLSX file encrypted with the given password and sets the content of this workbook to match that file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1workbook_a688bac5dc153275cbadb1173941d2873}{has\+\_\+view}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this workbook has a view. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1workbook__view}{workbook\+\_\+view}} \mbox{\hyperlink{classxlnt_1_1workbook_a38783491f5a090b92299b2e44f81fa6d}{view}} () const
+\begin{DoxyCompactList}\small\item\em Returns the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a689896c1ebfb9dba606bbfc7cbcd5b1f}{view}} (const \mbox{\hyperlink{classxlnt_1_1workbook__view}{workbook\+\_\+view}} \&view)
+\begin{DoxyCompactList}\small\item\em Sets the view to view. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1workbook_aa6a39d1daeb8304ec1bb55b7863f1b11}{has\+\_\+code\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if a code name has been set for this workbook. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1workbook_a987a232ba82f37044a056f178e2ad69b}{code\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the code name that was set for this workbook. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a9d7be7eb4c280451b018e63b5ad8cd2a}{code\+\_\+name}} (const std\+::string \&code\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Sets the code name of this workbook to code\+\_\+name. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1workbook_a4972c77c92ccd06559de16de86833135}{has\+\_\+file\+\_\+version}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this workbook has a file version. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1workbook_a682a585084f7fa8254f19f3f4abc400c}{app\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the App\+Name workbook file property. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1workbook_a6d22a2b5776b58994c0e746f1c82f123}{last\+\_\+edited}} () const
+\begin{DoxyCompactList}\small\item\em Returns the Last\+Edited workbook file property. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1workbook_a046be4caba0c55af13c88bceabc21e23}{lowest\+\_\+edited}} () const
+\begin{DoxyCompactList}\small\item\em Returns the Lowest\+Edited workbook file property. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1workbook_a0af8f387784d19aa51b934f4087fe16e}{rup\+\_\+build}} () const
+\begin{DoxyCompactList}\small\item\em Returns the Rup\+Build workbook file property. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1workbook_a21c6b08580d01d41f7786bd93c902a22}{has\+\_\+theme}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this workbook has a theme defined. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1theme}{xlnt\+::theme}} \& \mbox{\hyperlink{classxlnt_1_1workbook_a1065725b271fc12f28529d5ce9a95188}{theme}} () const
+\begin{DoxyCompactList}\small\item\em Returns a const reference to this workbook\textquotesingle{}s theme. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a5490b36d17a3121f1ed487be06ec3ee4}{theme}} (const class \mbox{\hyperlink{classxlnt_1_1theme}{theme}} \&value)
+\begin{DoxyCompactList}\small\item\em Sets the theme to value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1format}{xlnt\+::format}} \mbox{\hyperlink{classxlnt_1_1workbook_a26aaa1f893992621d1058e1e300f8e97}{format}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} format\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Returns the cell format at the given index. The index is the position of the format in xl/styles.\+xml. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1format}{xlnt\+::format}} \mbox{\hyperlink{classxlnt_1_1workbook_a1333c571c638ad61893a60233c14dc89}{format}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} format\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Returns the cell format at the given index. The index is the position of the format in xl/styles.\+xml. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1format}{xlnt\+::format}} \mbox{\hyperlink{classxlnt_1_1workbook_a7195f09e69e62e953735bd4d3458ec78}{create\+\_\+format}} (bool default\+\_\+format=false)
+\begin{DoxyCompactList}\small\item\em Creates a new format and returns it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a0460152745a9801d2ff5d44ee12cc5ba}{clear\+\_\+formats}} ()
+\begin{DoxyCompactList}\small\item\em Clear all cell-\/level formatting and formats from the styelsheet. This leaves all other styling in place (e.\+g. named styles). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1workbook_a21ddb585620af57719db5d1299dbaab1}{has\+\_\+style}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}) const
+\begin{DoxyCompactList}\small\item\em Returns true if this workbook has a style with a name of name. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1style}{style}} \mbox{\hyperlink{classxlnt_1_1workbook_ae3c7cbfbe873f63caffb9330a4fc2736}{style}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\begin{DoxyCompactList}\small\item\em Returns the named style with the given name. \end{DoxyCompactList}\item 
+const class \mbox{\hyperlink{classxlnt_1_1style}{style}} \mbox{\hyperlink{classxlnt_1_1workbook_a8ae112dec6955e868c332825657860d2}{style}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}) const
+\begin{DoxyCompactList}\small\item\em Returns the named style with the given name. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1style}{style}} \mbox{\hyperlink{classxlnt_1_1workbook_a5bff992e2fdc47cbf80ef242c95adf50}{create\+\_\+style}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\begin{DoxyCompactList}\small\item\em Creates a new style and returns it. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1style}{style}} \mbox{\hyperlink{classxlnt_1_1workbook_a7010ce4e4b12c9d16a7039b3358c17f3}{create\+\_\+builtin\+\_\+style}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} builtin\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Creates a new style and returns it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a953c5f9fa269606dbd92cac48e89635a}{clear\+\_\+styles}} ()
+\begin{DoxyCompactList}\small\item\em Clear all named styles from cells and remove the styles from from the styelsheet. This leaves all other styling in place (e.\+g. cell formats). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a55074b419176614d1d2515952de13cd9}{default\+\_\+slicer\+\_\+style}} (const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Sets the default slicer style to the given value. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1workbook_a531d36bd620b251d07c82496b1788077}{default\+\_\+slicer\+\_\+style}} () const
+\begin{DoxyCompactList}\small\item\em Returns the default slicer style. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a0bf18f2c8d7f4b0e6284b71830000c01}{enable\+\_\+known\+\_\+fonts}} ()
+\begin{DoxyCompactList}\small\item\em Enables known\+Fonts in stylesheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a51326c9e04e77021605b73d810fea63e}{disable\+\_\+known\+\_\+fonts}} ()
+\begin{DoxyCompactList}\small\item\em Disables known\+Fonts in stylesheet. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1workbook_a8a82720d03407c490cb261aef33188ce}{known\+\_\+fonts\+\_\+enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if known\+Fonts are enabled in the stylesheet. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1manifest}{manifest}} \& \mbox{\hyperlink{classxlnt_1_1workbook_a584d4cfeb0fa3deae6cb8eafa70bc9bb}{manifest}} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the workbook\textquotesingle{}s internal manifest. \end{DoxyCompactList}\item 
+const class \mbox{\hyperlink{classxlnt_1_1manifest}{manifest}} \& \mbox{\hyperlink{classxlnt_1_1workbook_aa60636892e2844d2a07ced3d948caee1}{manifest}} () const
+\begin{DoxyCompactList}\small\item\em Returns a reference to the workbook\textquotesingle{}s internal manifest. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1workbook_a33f2f7db17a773cd3f7702c26d2d8681}{add\+\_\+shared\+\_\+string}} (const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&shared, bool allow\+\_\+duplicates=false)
+\begin{DoxyCompactList}\small\item\em Append a shared string to the shared string collection in this workbook. This should not generally be called unless you know what you\textquotesingle{}re doing. If allow\+\_\+duplicates is false and the string is already in the collection, it will not be added. Returns the index of the added string. \end{DoxyCompactList}\item 
+const std\+::map$<$ \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}, \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} $>$ \& \mbox{\hyperlink{classxlnt_1_1workbook_a61806ab9e54788ca4ff63b36f6a7f324}{shared\+\_\+strings\+\_\+by\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Returns a reference to the shared string ordered by id \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \& \mbox{\hyperlink{classxlnt_1_1workbook_a359df829ad66257c280decada567e00a}{shared\+\_\+strings}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1workbook_a681f4aa4cc186a4238c0e207eb12def9}{index}}) const
+\begin{DoxyCompactList}\small\item\em Returns a reference to the shared string related to the specified index \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}}, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}, \mbox{\hyperlink{classxlnt_1_1rich__text__hash}{rich\+\_\+text\+\_\+hash}} $>$ \& \mbox{\hyperlink{classxlnt_1_1workbook_aa23f2c8724f57637ef6bc65e45a36d56}{shared\+\_\+strings}} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the shared strings being used by cells in this workbook. \end{DoxyCompactList}\item 
+const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}}, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}, \mbox{\hyperlink{classxlnt_1_1rich__text__hash}{rich\+\_\+text\+\_\+hash}} $>$ \& \mbox{\hyperlink{classxlnt_1_1workbook_ab9e7b8d2d66b32400c0bbd4125a2c190}{shared\+\_\+strings}} () const
+\begin{DoxyCompactList}\small\item\em Returns a reference to the shared strings being used by cells in this workbook. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_a6065b51bce10063394f2a9d552915d1c}{thumbnail}} (const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&thumbnail, const std\+::string \&extension, const std\+::string \&content\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Sets the workbook\textquotesingle{}s thumbnail to the given vector of bytes, thumbnail, with the given extension (e.\+g. jpg) and content\+\_\+type (e.\+g. image/jpeg). \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \& \mbox{\hyperlink{classxlnt_1_1workbook_af1e46ad6511fe3c2e1e2d768479dc8ff}{thumbnail}} () const
+\begin{DoxyCompactList}\small\item\em Returns a vector of bytes representing the workbook\textquotesingle{}s thumbnail. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1workbook_ad9117218cd4446e36c910b7fd158b771}{has\+\_\+calculation\+\_\+properties}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this workbook has any calculation properties set. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1calculation__properties}{calculation\+\_\+properties}} \mbox{\hyperlink{classxlnt_1_1workbook_a61daa25a144d3848924d3174298e159c}{calculation\+\_\+properties}} () const
+\begin{DoxyCompactList}\small\item\em Returns the calculation properties used in this workbook. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1workbook_ae798e6baa0054c88086aa75e3d6a385e}{calculation\+\_\+properties}} (const class \mbox{\hyperlink{classxlnt_1_1calculation__properties}{calculation\+\_\+properties}} \&props)
+\begin{DoxyCompactList}\small\item\em Sets the calculation properties of this workbook to props. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \& \mbox{\hyperlink{classxlnt_1_1workbook_a4566743b50523bacf605705d3ce1faaf}{operator=}} (\mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} other)
+\begin{DoxyCompactList}\small\item\em Set the contents of this workbook to be equal to those of \char`\"{}other\char`\"{}. Other is passed as value to allow for copy-\/swap idiom. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1workbook_ab268cb437640f05acdb5d9e0e73b231e}{operator\mbox{[}$\,$\mbox{]}}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\begin{DoxyCompactList}\small\item\em Return the worksheet with a title of \char`\"{}name\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1workbook_a61298c4b9a08d7ee1c2ecf5c5d37d73d}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1workbook_a681f4aa4cc186a4238c0e207eb12def9}{index}})
+\begin{DoxyCompactList}\small\item\em Return the worksheet at \char`\"{}index\char`\"{}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1workbook_a926b6ac71828ff6eb14854fba8562ccf}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Return true if this workbook internal implementation points to the same memory as rhs\textquotesingle{}s. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1workbook_a8145cec54c36504f609babb342c40df3}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Return true if this workbook internal implementation doesn\textquotesingle{}t point to the same memory as rhs\textquotesingle{}s. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \mbox{\hyperlink{classxlnt_1_1workbook_a6b4088d80b9fb40a1c965d8f19441a41}{empty}} ()
+\begin{DoxyCompactList}\small\item\em Constructs and returns an empty workbook similar to a default. Excel workbook \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1workbook_a8096f5b50cedaf1bf28b5017acf32dd7}{streaming\+\_\+workbook\+\_\+reader}}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1workbook_a2b22a8cfb2fb426bfaad8dee4c888707}{worksheet}}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1workbook_a5c27ff96f65a231e21871a228cbaf740}{detail\+::xlsx\+\_\+consumer}}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1workbook_aeaa1b2a5f3d37ddb4b8ca1ebaab144f3}{detail\+::xlsx\+\_\+producer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+workbook is the container for all other parts of the document. 
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classxlnt_1_1workbook_a4bcfb01cc3e1863dfa355f27c1eb6938}\label{classxlnt_1_1workbook_a4bcfb01cc3e1863dfa355f27c1eb6938}} 
+\index{xlnt::workbook@{xlnt::workbook}!const\_iterator@{const\_iterator}}
+\index{const\_iterator@{const\_iterator}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{const\_iterator}{const\_iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1workbook_a4bcfb01cc3e1863dfa355f27c1eb6938}{xlnt\+::workbook\+::const\+\_\+iterator}} =  \mbox{\hyperlink{classxlnt_1_1const__worksheet__iterator}{const\+\_\+worksheet\+\_\+iterator}}}
+
+
+
+typedef for the iterator used for iterating through this workbook (const) in a range-\/based for loop. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a7d1b42fa3144d4eba9e1ca3cbc85ae7c}\label{classxlnt_1_1workbook_a7d1b42fa3144d4eba9e1ca3cbc85ae7c}} 
+\index{xlnt::workbook@{xlnt::workbook}!const\_reverse\_iterator@{const\_reverse\_iterator}}
+\index{const\_reverse\_iterator@{const\_reverse\_iterator}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{const\_reverse\_iterator}{const\_reverse\_iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1workbook_a7d1b42fa3144d4eba9e1ca3cbc85ae7c}{xlnt\+::workbook\+::const\+\_\+reverse\+\_\+iterator}} =  std\+::reverse\+\_\+iterator$<$\mbox{\hyperlink{classxlnt_1_1workbook_a4bcfb01cc3e1863dfa355f27c1eb6938}{const\+\_\+iterator}}$>$}
+
+
+
+typedef for the iterator used for iterating through this workbook (const) in a range-\/based for loop in reverse order using std\+::make\+\_\+reverse\+\_\+iterator. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_ae2f1be96b599bc45f067d70609821312}\label{classxlnt_1_1workbook_ae2f1be96b599bc45f067d70609821312}} 
+\index{xlnt::workbook@{xlnt::workbook}!iterator@{iterator}}
+\index{iterator@{iterator}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1workbook_ae2f1be96b599bc45f067d70609821312}{xlnt\+::workbook\+::iterator}} =  \mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}}}
+
+
+
+typedef for the iterator used for iterating through this workbook (non-\/const) in a range-\/based for loop. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_acbadbee48fbc52777b43a05e0ae474c1}\label{classxlnt_1_1workbook_acbadbee48fbc52777b43a05e0ae474c1}} 
+\index{xlnt::workbook@{xlnt::workbook}!reverse\_iterator@{reverse\_iterator}}
+\index{reverse\_iterator@{reverse\_iterator}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{reverse\_iterator}{reverse\_iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1workbook_acbadbee48fbc52777b43a05e0ae474c1}{xlnt\+::workbook\+::reverse\+\_\+iterator}} =  std\+::reverse\+\_\+iterator$<$\mbox{\hyperlink{classxlnt_1_1workbook_ae2f1be96b599bc45f067d70609821312}{iterator}}$>$}
+
+
+
+typedef for the iterator used for iterating through this workbook (non-\/const) in a range-\/based for loop in reverse order using std\+::make\+\_\+reverse\+\_\+iterator. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1workbook_a833468d87f0683c0f13f09eacfc422ba}\label{classxlnt_1_1workbook_a833468d87f0683c0f13f09eacfc422ba}} 
+\index{xlnt::workbook@{xlnt::workbook}!workbook@{workbook}}
+\index{workbook@{workbook}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{workbook()}{workbook()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily xlnt\+::workbook\+::workbook (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. Constructs a workbook containing a single empty worksheet using \mbox{\hyperlink{classxlnt_1_1workbook_a6b4088d80b9fb40a1c965d8f19441a41}{workbook\+::empty()}}. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_aabe2c4076508526709173ce7b1844960}\label{classxlnt_1_1workbook_aabe2c4076508526709173ce7b1844960}} 
+\index{xlnt::workbook@{xlnt::workbook}!workbook@{workbook}}
+\index{workbook@{workbook}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{workbook()}{workbook()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily xlnt\+::workbook\+::workbook (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{xlnt\+::path}} \&}]{file }\end{DoxyParamCaption})}
+
+
+
+load the xlsx file at path 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_aa42e9d910a6c8960f296236fb1096193}\label{classxlnt_1_1workbook_aa42e9d910a6c8960f296236fb1096193}} 
+\index{xlnt::workbook@{xlnt::workbook}!workbook@{workbook}}
+\index{workbook@{workbook}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{workbook()}{workbook()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily xlnt\+::workbook\+::workbook (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{xlnt\+::path}} \&}]{file,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+
+
+load the encrpyted xlsx file at path 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a767f3db85df3ccdd357d59e354622596}\label{classxlnt_1_1workbook_a767f3db85df3ccdd357d59e354622596}} 
+\index{xlnt::workbook@{xlnt::workbook}!workbook@{workbook}}
+\index{workbook@{workbook}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{workbook()}{workbook()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily xlnt\+::workbook\+::workbook (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{data }\end{DoxyParamCaption})}
+
+
+
+construct the workbook from any data stream where the data is the binary form of a workbook 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a0523e9012cb4917e76038ea3da432b43}\label{classxlnt_1_1workbook_a0523e9012cb4917e76038ea3da432b43}} 
+\index{xlnt::workbook@{xlnt::workbook}!workbook@{workbook}}
+\index{workbook@{workbook}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{workbook()}{workbook()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily xlnt\+::workbook\+::workbook (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{data,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+
+
+construct the workbook from any data stream where the data is the binary form of an encrypted workbook 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a63732bb538e5cbcaac6ec014a445d5eb}\label{classxlnt_1_1workbook_a63732bb538e5cbcaac6ec014a445d5eb}} 
+\index{xlnt::workbook@{xlnt::workbook}!workbook@{workbook}}
+\index{workbook@{workbook}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{workbook()}{workbook()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily xlnt\+::workbook\+::workbook (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \&\&}]{other }\end{DoxyParamCaption})}
+
+
+
+Move constructor. Constructs a workbook from existing workbook, other. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_aa43405161ce26b7e171cc05b8461835c}\label{classxlnt_1_1workbook_aa43405161ce26b7e171cc05b8461835c}} 
+\index{xlnt::workbook@{xlnt::workbook}!workbook@{workbook}}
+\index{workbook@{workbook}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{workbook()}{workbook()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily xlnt\+::workbook\+::workbook (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. Constructs this workbook from existing workbook, other. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a12ddbfa450b8bc3dc3d7b049f39d57e9}\label{classxlnt_1_1workbook_a12ddbfa450b8bc3dc3d7b049f39d57e9}} 
+\index{xlnt::workbook@{xlnt::workbook}!````~workbook@{$\sim$workbook}}
+\index{````~workbook@{$\sim$workbook}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{$\sim$workbook()}{~workbook()}}
+{\footnotesize\ttfamily xlnt\+::workbook\+::$\sim$workbook (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroys this workbook, deallocating all internal storage space. Any pimpl wrapper classes (e.\+g. cell) pointing into this workbook will be invalid after this is executed. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1workbook_ab9e1d7d89cf090bc99ba8c3294bc61ab}\label{classxlnt_1_1workbook_ab9e1d7d89cf090bc99ba8c3294bc61ab}} 
+\index{xlnt::workbook@{xlnt::workbook}!abs\_path@{abs\_path}}
+\index{abs\_path@{abs\_path}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{abs\_path()}{abs\_path()}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::abs\+\_\+path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Sets the absolute path of this workbook to path. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a611b6b2587e8530a81dd086d0eb0b11b}\label{classxlnt_1_1workbook_a611b6b2587e8530a81dd086d0eb0b11b}} 
+\index{xlnt::workbook@{xlnt::workbook}!active\_sheet@{active\_sheet}}
+\index{active\_sheet@{active\_sheet}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{active\_sheet()}{active\_sheet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::workbook\+::active\+\_\+sheet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the worksheet that is determined to be active. An active sheet is that which is initially shown by the spreadsheet editor. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a33f2f7db17a773cd3f7702c26d2d8681}\label{classxlnt_1_1workbook_a33f2f7db17a773cd3f7702c26d2d8681}} 
+\index{xlnt::workbook@{xlnt::workbook}!add\_shared\_string@{add\_shared\_string}}
+\index{add\_shared\_string@{add\_shared\_string}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{add\_shared\_string()}{add\_shared\_string()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::workbook\+::add\+\_\+shared\+\_\+string (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&}]{shared,  }\item[{bool}]{allow\+\_\+duplicates = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Append a shared string to the shared string collection in this workbook. This should not generally be called unless you know what you\textquotesingle{}re doing. If allow\+\_\+duplicates is false and the string is already in the collection, it will not be added. Returns the index of the added string. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a682a585084f7fa8254f19f3f4abc400c}\label{classxlnt_1_1workbook_a682a585084f7fa8254f19f3f4abc400c}} 
+\index{xlnt::workbook@{xlnt::workbook}!app\_name@{app\_name}}
+\index{app\_name@{app\_name}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{app\_name()}{app\_name()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::workbook\+::app\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the App\+Name workbook file property. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a993aa46199d76b4bc24b3b16733cfa13}\label{classxlnt_1_1workbook_a993aa46199d76b4bc24b3b16733cfa13}} 
+\index{xlnt::workbook@{xlnt::workbook}!apply\_to\_cells@{apply\_to\_cells}}
+\index{apply\_to\_cells@{apply\_to\_cells}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{apply\_to\_cells()}{apply\_to\_cells()}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::apply\+\_\+to\+\_\+cells (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{classxlnt_1_1cell}{cell}})$>$}]{f }\end{DoxyParamCaption})}
+
+
+
+Applies the function \char`\"{}f\char`\"{} to every non-\/empty cell in every worksheet in this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a1ccbb79db2289f31a7c7f4014a4d1b5b}\label{classxlnt_1_1workbook_a1ccbb79db2289f31a7c7f4014a4d1b5b}} 
+\index{xlnt::workbook@{xlnt::workbook}!arch\_id\_flags@{arch\_id\_flags}}
+\index{arch\_id\_flags@{arch\_id\_flags}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{arch\_id\_flags()}{arch\_id\_flags()}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::arch\+\_\+id\+\_\+flags (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Sets the Arch\+ID flags of this workbook to flags. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a80163555fb42a5529fed34a3a16f8863}\label{classxlnt_1_1workbook_a80163555fb42a5529fed34a3a16f8863}} 
+\index{xlnt::workbook@{xlnt::workbook}!base\_date@{base\_date}}
+\index{base\_date@{base\_date}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{base\_date()}{base\_date()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily calendar xlnt\+::workbook\+::base\+\_\+date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the base date used by this workbook. This will generally be windows\+\_\+1900 except on Apple based systems when it will default to mac\+\_\+1904 unless otherwise set via {\ttfamily void \mbox{\hyperlink{classxlnt_1_1workbook_a255ea03fb00c34a414bd7d025b2812fe}{workbook\+::base\+\_\+date(calendar base\+\_\+date)}}}. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a255ea03fb00c34a414bd7d025b2812fe}\label{classxlnt_1_1workbook_a255ea03fb00c34a414bd7d025b2812fe}} 
+\index{xlnt::workbook@{xlnt::workbook}!base\_date@{base\_date}}
+\index{base\_date@{base\_date}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{base\_date()}{base\_date()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::base\+\_\+date (\begin{DoxyParamCaption}\item[{calendar}]{base\+\_\+date }\end{DoxyParamCaption})}
+
+
+
+Sets the base date style of this workbook. This is the date and time that a numeric value of 0 represents. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a85f937d1f1c203b7cc7187eb41bc0480}\label{classxlnt_1_1workbook_a85f937d1f1c203b7cc7187eb41bc0480}} 
+\index{xlnt::workbook@{xlnt::workbook}!begin@{begin}}
+\index{begin@{begin}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1workbook_ae2f1be96b599bc45f067d70609821312}{workbook\+::iterator}} xlnt\+::workbook\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns an iterator to the first worksheet in this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a65be0e7316aeb5a7dca5b787236560fe}\label{classxlnt_1_1workbook_a65be0e7316aeb5a7dca5b787236560fe}} 
+\index{xlnt::workbook@{xlnt::workbook}!begin@{begin}}
+\index{begin@{begin}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1workbook_a4bcfb01cc3e1863dfa355f27c1eb6938}{workbook\+::const\+\_\+iterator}} xlnt\+::workbook\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a const iterator to the first worksheet in this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a61daa25a144d3848924d3174298e159c}\label{classxlnt_1_1workbook_a61daa25a144d3848924d3174298e159c}} 
+\index{xlnt::workbook@{xlnt::workbook}!calculation\_properties@{calculation\_properties}}
+\index{calculation\_properties@{calculation\_properties}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{calculation\_properties()}{calculation\_properties()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily class \mbox{\hyperlink{classxlnt_1_1calculation__properties}{calculation\+\_\+properties}} xlnt\+::workbook\+::calculation\+\_\+properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the calculation properties used in this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_ae798e6baa0054c88086aa75e3d6a385e}\label{classxlnt_1_1workbook_ae798e6baa0054c88086aa75e3d6a385e}} 
+\index{xlnt::workbook@{xlnt::workbook}!calculation\_properties@{calculation\_properties}}
+\index{calculation\_properties@{calculation\_properties}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{calculation\_properties()}{calculation\_properties()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::calculation\+\_\+properties (\begin{DoxyParamCaption}\item[{const class \mbox{\hyperlink{classxlnt_1_1calculation__properties}{calculation\+\_\+properties}} \&}]{props }\end{DoxyParamCaption})}
+
+
+
+Sets the calculation properties of this workbook to props. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_ad73d0400208f1ba8d033368fed16ca4f}\label{classxlnt_1_1workbook_ad73d0400208f1ba8d033368fed16ca4f}} 
+\index{xlnt::workbook@{xlnt::workbook}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{cbegin()}{cbegin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1workbook_a4bcfb01cc3e1863dfa355f27c1eb6938}{workbook\+::const\+\_\+iterator}} xlnt\+::workbook\+::cbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns an iterator to the first worksheet in this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_aeb6f93ab12f9db098c293c76f8d176e0}\label{classxlnt_1_1workbook_aeb6f93ab12f9db098c293c76f8d176e0}} 
+\index{xlnt::workbook@{xlnt::workbook}!cend@{cend}}
+\index{cend@{cend}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{cend()}{cend()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1workbook_a4bcfb01cc3e1863dfa355f27c1eb6938}{workbook\+::const\+\_\+iterator}} xlnt\+::workbook\+::cend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a const iterator to the worksheet following the last worksheet of the workbook. This worksheet acts as a placeholder; attempting to access it will cause an exception to be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a9004e7a2752485b27bf063f6e12c2ace}\label{classxlnt_1_1workbook_a9004e7a2752485b27bf063f6e12c2ace}} 
+\index{xlnt::workbook@{xlnt::workbook}!clear@{clear}}
+\index{clear@{clear}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets the contents of this workbook to be equivalent to that of a workbook returned by \mbox{\hyperlink{classxlnt_1_1workbook_a6b4088d80b9fb40a1c965d8f19441a41}{workbook\+::empty()}}. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a0460152745a9801d2ff5d44ee12cc5ba}\label{classxlnt_1_1workbook_a0460152745a9801d2ff5d44ee12cc5ba}} 
+\index{xlnt::workbook@{xlnt::workbook}!clear\_formats@{clear\_formats}}
+\index{clear\_formats@{clear\_formats}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{clear\_formats()}{clear\_formats()}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::clear\+\_\+formats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear all cell-\/level formatting and formats from the styelsheet. This leaves all other styling in place (e.\+g. named styles). 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a953c5f9fa269606dbd92cac48e89635a}\label{classxlnt_1_1workbook_a953c5f9fa269606dbd92cac48e89635a}} 
+\index{xlnt::workbook@{xlnt::workbook}!clear\_styles@{clear\_styles}}
+\index{clear\_styles@{clear\_styles}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{clear\_styles()}{clear\_styles()}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::clear\+\_\+styles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear all named styles from cells and remove the styles from from the styelsheet. This leaves all other styling in place (e.\+g. cell formats). 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a987a232ba82f37044a056f178e2ad69b}\label{classxlnt_1_1workbook_a987a232ba82f37044a056f178e2ad69b}} 
+\index{xlnt::workbook@{xlnt::workbook}!code\_name@{code\_name}}
+\index{code\_name@{code\_name}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{code\_name()}{code\_name()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string xlnt\+::workbook\+::code\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the code name that was set for this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a9d7be7eb4c280451b018e63b5ad8cd2a}\label{classxlnt_1_1workbook_a9d7be7eb4c280451b018e63b5ad8cd2a}} 
+\index{xlnt::workbook@{xlnt::workbook}!code\_name@{code\_name}}
+\index{code\_name@{code\_name}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{code\_name()}{code\_name()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::code\+\_\+name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{code\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Sets the code name of this workbook to code\+\_\+name. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a2d97a8d513cc0b36e99cc065b990c7e5}\label{classxlnt_1_1workbook_a2d97a8d513cc0b36e99cc065b990c7e5}} 
+\index{xlnt::workbook@{xlnt::workbook}!contains@{contains}}
+\index{contains@{contains}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool xlnt\+::workbook\+::contains (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this workbook contains a sheet with the given title. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_aa0b8cf49d7cc4bbb98a9bd21fc939896}\label{classxlnt_1_1workbook_aa0b8cf49d7cc4bbb98a9bd21fc939896}} 
+\index{xlnt::workbook@{xlnt::workbook}!copy\_sheet@{copy\_sheet}}
+\index{copy\_sheet@{copy\_sheet}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{copy\_sheet()}{copy\_sheet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::workbook\+::copy\+\_\+sheet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}}]{worksheet }\end{DoxyParamCaption})}
+
+
+
+Creates and returns a new sheet after the last sheet initializing it with all of the data from the provided worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a55d04adc74fc9b52f9a08d604eb00f87}\label{classxlnt_1_1workbook_a55d04adc74fc9b52f9a08d604eb00f87}} 
+\index{xlnt::workbook@{xlnt::workbook}!copy\_sheet@{copy\_sheet}}
+\index{copy\_sheet@{copy\_sheet}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{copy\_sheet()}{copy\_sheet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::workbook\+::copy\+\_\+sheet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}}]{worksheet,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{index }\end{DoxyParamCaption})}
+
+
+
+Creates and returns a new sheet at the specified index initializing it with all of the data from the provided worksheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_afa49fcecaeaef2bad6e028eea604ab72}\label{classxlnt_1_1workbook_afa49fcecaeaef2bad6e028eea604ab72}} 
+\index{xlnt::workbook@{xlnt::workbook}!core\_properties@{core\_properties}}
+\index{core\_properties@{core\_properties}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{core\_properties()}{core\_properties()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029d}{xlnt\+::core\+\_\+property}} $>$ xlnt\+::workbook\+::core\+\_\+properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a vector of the type of each core property that is set to a particular value in this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a1b8a8b01b1b3b09b89b99ea9c9337714}\label{classxlnt_1_1workbook_a1b8a8b01b1b3b09b89b99ea9c9337714}} 
+\index{xlnt::workbook@{xlnt::workbook}!core\_property@{core\_property}}
+\index{core\_property@{core\_property}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{core\_property()}{core\_property()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1variant}{variant}} xlnt\+::workbook\+::core\+\_\+property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029d}{xlnt\+::core\+\_\+property}}}]{type }\end{DoxyParamCaption}) const}
+
+
+
+Returns the value of the given core property. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a31886abd4984228b8117f51ef8a17490}\label{classxlnt_1_1workbook_a31886abd4984228b8117f51ef8a17490}} 
+\index{xlnt::workbook@{xlnt::workbook}!core\_property@{core\_property}}
+\index{core\_property@{core\_property}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{core\_property()}{core\_property()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::core\+\_\+property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029d}{xlnt\+::core\+\_\+property}}}]{type,  }\item[{const \mbox{\hyperlink{classxlnt_1_1variant}{variant}} \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the given core property to the provided value. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a7010ce4e4b12c9d16a7039b3358c17f3}\label{classxlnt_1_1workbook_a7010ce4e4b12c9d16a7039b3358c17f3}} 
+\index{xlnt::workbook@{xlnt::workbook}!create\_builtin\_style@{create\_builtin\_style}}
+\index{create\_builtin\_style@{create\_builtin\_style}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{create\_builtin\_style()}{create\_builtin\_style()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1style}{style}} xlnt\+::workbook\+::create\+\_\+builtin\+\_\+style (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{builtin\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Creates a new style and returns it. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a7195f09e69e62e953735bd4d3458ec78}\label{classxlnt_1_1workbook_a7195f09e69e62e953735bd4d3458ec78}} 
+\index{xlnt::workbook@{xlnt::workbook}!create\_format@{create\_format}}
+\index{create\_format@{create\_format}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{create\_format()}{create\_format()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1format}{format}} xlnt\+::workbook\+::create\+\_\+format (\begin{DoxyParamCaption}\item[{bool}]{default\+\_\+format = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Creates a new format and returns it. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a424ec3ca238fe529de5421e8b91b26a1}\label{classxlnt_1_1workbook_a424ec3ca238fe529de5421e8b91b26a1}} 
+\index{xlnt::workbook@{xlnt::workbook}!create\_named\_range@{create\_named\_range}}
+\index{create\_named\_range@{create\_named\_range}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{create\_named\_range()}{create\_named\_range()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::create\+\_\+named\+\_\+range (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}}]{worksheet,  }\item[{const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&}]{reference }\end{DoxyParamCaption})}
+
+
+
+Creates a new names range. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a49ddbcb4ce8af349949fc1ba8ad925b0}\label{classxlnt_1_1workbook_a49ddbcb4ce8af349949fc1ba8ad925b0}} 
+\index{xlnt::workbook@{xlnt::workbook}!create\_named\_range@{create\_named\_range}}
+\index{create\_named\_range@{create\_named\_range}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{create\_named\_range()}{create\_named\_range()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::create\+\_\+named\+\_\+range (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}}]{worksheet,  }\item[{const std\+::string \&}]{reference\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Creates a new names range. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a9ef148f73657168a019d85193af7adc1}\label{classxlnt_1_1workbook_a9ef148f73657168a019d85193af7adc1}} 
+\index{xlnt::workbook@{xlnt::workbook}!create\_sheet@{create\_sheet}}
+\index{create\_sheet@{create\_sheet}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{create\_sheet()}{create\_sheet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::workbook\+::create\+\_\+sheet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates and returns a sheet after the last sheet in this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a123c1c070aa39142512d1cdc669e5f37}\label{classxlnt_1_1workbook_a123c1c070aa39142512d1cdc669e5f37}} 
+\index{xlnt::workbook@{xlnt::workbook}!create\_sheet@{create\_sheet}}
+\index{create\_sheet@{create\_sheet}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{create\_sheet()}{create\_sheet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::workbook\+::create\+\_\+sheet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{index }\end{DoxyParamCaption})}
+
+
+
+Creates and returns a sheet at the specified index. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a477fd883865f426a0c4a38905e0c03ad}\label{classxlnt_1_1workbook_a477fd883865f426a0c4a38905e0c03ad}} 
+\index{xlnt::workbook@{xlnt::workbook}!create\_sheet\_with\_rel@{create\_sheet\_with\_rel}}
+\index{create\_sheet\_with\_rel@{create\_sheet\_with\_rel}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{create\_sheet\_with\_rel()}{create\_sheet\_with\_rel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::workbook\+::create\+\_\+sheet\+\_\+with\+\_\+rel (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title,  }\item[{const \mbox{\hyperlink{classxlnt_1_1relationship}{relationship}} \&}]{rel }\end{DoxyParamCaption})}
+
+
+
+TODO\+: This should be private... 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a5bff992e2fdc47cbf80ef242c95adf50}\label{classxlnt_1_1workbook_a5bff992e2fdc47cbf80ef242c95adf50}} 
+\index{xlnt::workbook@{xlnt::workbook}!create\_style@{create\_style}}
+\index{create\_style@{create\_style}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{create\_style()}{create\_style()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1style}{style}} xlnt\+::workbook\+::create\+\_\+style (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Creates a new style and returns it. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a30ad3041b561dae675e37eb9c0094299}\label{classxlnt_1_1workbook_a30ad3041b561dae675e37eb9c0094299}} 
+\index{xlnt::workbook@{xlnt::workbook}!custom\_properties@{custom\_properties}}
+\index{custom\_properties@{custom\_properties}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{custom\_properties()}{custom\_properties()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ xlnt\+::workbook\+::custom\+\_\+properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a vector of the name of each custom property that is set to a particular value in this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a269f36e3283e19a758a6890fa89b3fbf}\label{classxlnt_1_1workbook_a269f36e3283e19a758a6890fa89b3fbf}} 
+\index{xlnt::workbook@{xlnt::workbook}!custom\_property@{custom\_property}}
+\index{custom\_property@{custom\_property}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{custom\_property()}{custom\_property()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1variant}{variant}} xlnt\+::workbook\+::custom\+\_\+property (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{property\+\_\+name }\end{DoxyParamCaption}) const}
+
+
+
+Returns the value of the given custom property. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_afe7c588e77a1f812c33842c29e715878}\label{classxlnt_1_1workbook_afe7c588e77a1f812c33842c29e715878}} 
+\index{xlnt::workbook@{xlnt::workbook}!custom\_property@{custom\_property}}
+\index{custom\_property@{custom\_property}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{custom\_property()}{custom\_property()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::custom\+\_\+property (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{property\+\_\+name,  }\item[{const \mbox{\hyperlink{classxlnt_1_1variant}{variant}} \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Creates a new custom property in this workbook and sets it to the provided value. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a531d36bd620b251d07c82496b1788077}\label{classxlnt_1_1workbook_a531d36bd620b251d07c82496b1788077}} 
+\index{xlnt::workbook@{xlnt::workbook}!default\_slicer\_style@{default\_slicer\_style}}
+\index{default\_slicer\_style@{default\_slicer\_style}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{default\_slicer\_style()}{default\_slicer\_style()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string xlnt\+::workbook\+::default\+\_\+slicer\+\_\+style (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the default slicer style. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a55074b419176614d1d2515952de13cd9}\label{classxlnt_1_1workbook_a55074b419176614d1d2515952de13cd9}} 
+\index{xlnt::workbook@{xlnt::workbook}!default\_slicer\_style@{default\_slicer\_style}}
+\index{default\_slicer\_style@{default\_slicer\_style}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{default\_slicer\_style()}{default\_slicer\_style()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::default\+\_\+slicer\+\_\+style (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the default slicer style to the given value. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a51326c9e04e77021605b73d810fea63e}\label{classxlnt_1_1workbook_a51326c9e04e77021605b73d810fea63e}} 
+\index{xlnt::workbook@{xlnt::workbook}!disable\_known\_fonts@{disable\_known\_fonts}}
+\index{disable\_known\_fonts@{disable\_known\_fonts}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{disable\_known\_fonts()}{disable\_known\_fonts()}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::disable\+\_\+known\+\_\+fonts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disables known\+Fonts in stylesheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a6b4088d80b9fb40a1c965d8f19441a41}\label{classxlnt_1_1workbook_a6b4088d80b9fb40a1c965d8f19441a41}} 
+\index{xlnt::workbook@{xlnt::workbook}!empty@{empty}}
+\index{empty@{empty}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} xlnt\+::workbook\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constructs and returns an empty workbook similar to a default. Excel workbook 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a0bf18f2c8d7f4b0e6284b71830000c01}\label{classxlnt_1_1workbook_a0bf18f2c8d7f4b0e6284b71830000c01}} 
+\index{xlnt::workbook@{xlnt::workbook}!enable\_known\_fonts@{enable\_known\_fonts}}
+\index{enable\_known\_fonts@{enable\_known\_fonts}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{enable\_known\_fonts()}{enable\_known\_fonts()}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::enable\+\_\+known\+\_\+fonts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables known\+Fonts in stylesheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a1f4f65d238199cbd3a5ff4f3f537e224}\label{classxlnt_1_1workbook_a1f4f65d238199cbd3a5ff4f3f537e224}} 
+\index{xlnt::workbook@{xlnt::workbook}!end@{end}}
+\index{end@{end}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1workbook_ae2f1be96b599bc45f067d70609821312}{workbook\+::iterator}} xlnt\+::workbook\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns an iterator to the worksheet following the last worksheet of the workbook. This worksheet acts as a placeholder; attempting to access it will cause an exception to be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_ae0bba07094349bd5ee3157e5b59a9e2e}\label{classxlnt_1_1workbook_ae0bba07094349bd5ee3157e5b59a9e2e}} 
+\index{xlnt::workbook@{xlnt::workbook}!end@{end}}
+\index{end@{end}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1workbook_a4bcfb01cc3e1863dfa355f27c1eb6938}{workbook\+::const\+\_\+iterator}} xlnt\+::workbook\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a const iterator to the worksheet following the last worksheet of the workbook. This worksheet acts as a placeholder; attempting to access it will cause an exception to be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a7cd33c11e3929a5381099d2797d886f8}\label{classxlnt_1_1workbook_a7cd33c11e3929a5381099d2797d886f8}} 
+\index{xlnt::workbook@{xlnt::workbook}!extended\_properties@{extended\_properties}}
+\index{extended\_properties@{extended\_properties}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{extended\_properties()}{extended\_properties()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5}{xlnt\+::extended\+\_\+property}} $>$ xlnt\+::workbook\+::extended\+\_\+properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a vector of the type of each extended property that is set to a particular value in this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a7c50cc677ffaf4c7a9577bfc4c07ef55}\label{classxlnt_1_1workbook_a7c50cc677ffaf4c7a9577bfc4c07ef55}} 
+\index{xlnt::workbook@{xlnt::workbook}!extended\_property@{extended\_property}}
+\index{extended\_property@{extended\_property}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{extended\_property()}{extended\_property()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1variant}{variant}} xlnt\+::workbook\+::extended\+\_\+property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5}{xlnt\+::extended\+\_\+property}}}]{type }\end{DoxyParamCaption}) const}
+
+
+
+Returns the value of the given extended property. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a1a2e03e9ced399aa3bba796680276dea}\label{classxlnt_1_1workbook_a1a2e03e9ced399aa3bba796680276dea}} 
+\index{xlnt::workbook@{xlnt::workbook}!extended\_property@{extended\_property}}
+\index{extended\_property@{extended\_property}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{extended\_property()}{extended\_property()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::extended\+\_\+property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5}{xlnt\+::extended\+\_\+property}}}]{type,  }\item[{const \mbox{\hyperlink{classxlnt_1_1variant}{variant}} \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the given extended property to the provided value. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a26aaa1f893992621d1058e1e300f8e97}\label{classxlnt_1_1workbook_a26aaa1f893992621d1058e1e300f8e97}} 
+\index{xlnt::workbook@{xlnt::workbook}!format@{format}}
+\index{format@{format}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1format}{format}} xlnt\+::workbook\+::format (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{format\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Returns the cell format at the given index. The index is the position of the format in xl/styles.\+xml. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a1333c571c638ad61893a60233c14dc89}\label{classxlnt_1_1workbook_a1333c571c638ad61893a60233c14dc89}} 
+\index{xlnt::workbook@{xlnt::workbook}!format@{format}}
+\index{format@{format}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1format}{format}} xlnt\+::workbook\+::format (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{format\+\_\+index }\end{DoxyParamCaption}) const}
+
+
+
+Returns the cell format at the given index. The index is the position of the format in xl/styles.\+xml. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_ad9117218cd4446e36c910b7fd158b771}\label{classxlnt_1_1workbook_ad9117218cd4446e36c910b7fd158b771}} 
+\index{xlnt::workbook@{xlnt::workbook}!has\_calculation\_properties@{has\_calculation\_properties}}
+\index{has\_calculation\_properties@{has\_calculation\_properties}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{has\_calculation\_properties()}{has\_calculation\_properties()}}
+{\footnotesize\ttfamily bool xlnt\+::workbook\+::has\+\_\+calculation\+\_\+properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this workbook has any calculation properties set. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_aa6a39d1daeb8304ec1bb55b7863f1b11}\label{classxlnt_1_1workbook_aa6a39d1daeb8304ec1bb55b7863f1b11}} 
+\index{xlnt::workbook@{xlnt::workbook}!has\_code\_name@{has\_code\_name}}
+\index{has\_code\_name@{has\_code\_name}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{has\_code\_name()}{has\_code\_name()}}
+{\footnotesize\ttfamily bool xlnt\+::workbook\+::has\+\_\+code\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if a code name has been set for this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_abc6c82900353834cd14ec131270d3e18}\label{classxlnt_1_1workbook_abc6c82900353834cd14ec131270d3e18}} 
+\index{xlnt::workbook@{xlnt::workbook}!has\_core\_property@{has\_core\_property}}
+\index{has\_core\_property@{has\_core\_property}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{has\_core\_property()}{has\_core\_property()}}
+{\footnotesize\ttfamily bool xlnt\+::workbook\+::has\+\_\+core\+\_\+property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029d}{xlnt\+::core\+\_\+property}}}]{type }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the workbook has the core property with the given name. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a7fe86dca0cf73068ee222f91c9b6af26}\label{classxlnt_1_1workbook_a7fe86dca0cf73068ee222f91c9b6af26}} 
+\index{xlnt::workbook@{xlnt::workbook}!has\_custom\_property@{has\_custom\_property}}
+\index{has\_custom\_property@{has\_custom\_property}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{has\_custom\_property()}{has\_custom\_property()}}
+{\footnotesize\ttfamily bool xlnt\+::workbook\+::has\+\_\+custom\+\_\+property (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{property\+\_\+name }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the workbook has the custom property with the given name. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a7085469bc589720ed7ecfcf3f1284e05}\label{classxlnt_1_1workbook_a7085469bc589720ed7ecfcf3f1284e05}} 
+\index{xlnt::workbook@{xlnt::workbook}!has\_extended\_property@{has\_extended\_property}}
+\index{has\_extended\_property@{has\_extended\_property}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{has\_extended\_property()}{has\_extended\_property()}}
+{\footnotesize\ttfamily bool xlnt\+::workbook\+::has\+\_\+extended\+\_\+property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5}{xlnt\+::extended\+\_\+property}}}]{type }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the workbook has the extended property with the given name. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a4972c77c92ccd06559de16de86833135}\label{classxlnt_1_1workbook_a4972c77c92ccd06559de16de86833135}} 
+\index{xlnt::workbook@{xlnt::workbook}!has\_file\_version@{has\_file\_version}}
+\index{has\_file\_version@{has\_file\_version}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{has\_file\_version()}{has\_file\_version()}}
+{\footnotesize\ttfamily bool xlnt\+::workbook\+::has\+\_\+file\+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this workbook has a file version. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a0738aca0f6f9228d12e3a0bd45036917}\label{classxlnt_1_1workbook_a0738aca0f6f9228d12e3a0bd45036917}} 
+\index{xlnt::workbook@{xlnt::workbook}!has\_named\_range@{has\_named\_range}}
+\index{has\_named\_range@{has\_named\_range}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{has\_named\_range()}{has\_named\_range()}}
+{\footnotesize\ttfamily bool xlnt\+::workbook\+::has\+\_\+named\+\_\+range (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if a named range of the given name exists in the workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a21ddb585620af57719db5d1299dbaab1}\label{classxlnt_1_1workbook_a21ddb585620af57719db5d1299dbaab1}} 
+\index{xlnt::workbook@{xlnt::workbook}!has\_style@{has\_style}}
+\index{has\_style@{has\_style}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{has\_style()}{has\_style()}}
+{\footnotesize\ttfamily bool xlnt\+::workbook\+::has\+\_\+style (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this workbook has a style with a name of name. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a21c6b08580d01d41f7786bd93c902a22}\label{classxlnt_1_1workbook_a21c6b08580d01d41f7786bd93c902a22}} 
+\index{xlnt::workbook@{xlnt::workbook}!has\_theme@{has\_theme}}
+\index{has\_theme@{has\_theme}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{has\_theme()}{has\_theme()}}
+{\footnotesize\ttfamily bool xlnt\+::workbook\+::has\+\_\+theme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this workbook has a theme defined. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_af44100a63859e6a8a43b6bbe063467db}\label{classxlnt_1_1workbook_af44100a63859e6a8a43b6bbe063467db}} 
+\index{xlnt::workbook@{xlnt::workbook}!has\_title@{has\_title}}
+\index{has\_title@{has\_title}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{has\_title()}{has\_title()}}
+{\footnotesize\ttfamily bool xlnt\+::workbook\+::has\+\_\+title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this workbook has had its title set. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a688bac5dc153275cbadb1173941d2873}\label{classxlnt_1_1workbook_a688bac5dc153275cbadb1173941d2873}} 
+\index{xlnt::workbook@{xlnt::workbook}!has\_view@{has\_view}}
+\index{has\_view@{has\_view}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{has\_view()}{has\_view()}}
+{\footnotesize\ttfamily bool xlnt\+::workbook\+::has\+\_\+view (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this workbook has a view. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a681f4aa4cc186a4238c0e207eb12def9}\label{classxlnt_1_1workbook_a681f4aa4cc186a4238c0e207eb12def9}} 
+\index{xlnt::workbook@{xlnt::workbook}!index@{index}}
+\index{index@{index}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::workbook\+::index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}}]{worksheet }\end{DoxyParamCaption})}
+
+
+
+Returns the index of the given worksheet. The worksheet must be owned by this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a8a82720d03407c490cb261aef33188ce}\label{classxlnt_1_1workbook_a8a82720d03407c490cb261aef33188ce}} 
+\index{xlnt::workbook@{xlnt::workbook}!known\_fonts\_enabled@{known\_fonts\_enabled}}
+\index{known\_fonts\_enabled@{known\_fonts\_enabled}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{known\_fonts\_enabled()}{known\_fonts\_enabled()}}
+{\footnotesize\ttfamily bool xlnt\+::workbook\+::known\+\_\+fonts\+\_\+enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if known\+Fonts are enabled in the stylesheet. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a6d22a2b5776b58994c0e746f1c82f123}\label{classxlnt_1_1workbook_a6d22a2b5776b58994c0e746f1c82f123}} 
+\index{xlnt::workbook@{xlnt::workbook}!last\_edited@{last\_edited}}
+\index{last\_edited@{last\_edited}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{last\_edited()}{last\_edited()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::workbook\+::last\+\_\+edited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the Last\+Edited workbook file property. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a4cdba244fd180934d961f9ad39e8edc1}\label{classxlnt_1_1workbook_a4cdba244fd180934d961f9ad39e8edc1}} 
+\index{xlnt::workbook@{xlnt::workbook}!load@{load}}
+\index{load@{load}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Interprets file with the given filename as an XLSX file and sets the content of this workbook to match that file. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a94b53390ea78261bb4e198a6956b1738}\label{classxlnt_1_1workbook_a94b53390ea78261bb4e198a6956b1738}} 
+\index{xlnt::workbook@{xlnt::workbook}!load@{load}}
+\index{load@{load}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+
+
+Interprets file with the given filename as an XLSX file encrypted with the given password and sets the content of this workbook to match that file. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_ad835d8c19e8312765035c46d212c8c3f}\label{classxlnt_1_1workbook_ad835d8c19e8312765035c46d212c8c3f}} 
+\index{xlnt::workbook@{xlnt::workbook}!load@{load}}
+\index{load@{load}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::load (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Interprets byte vector data as an XLSX file and sets the content of this workbook to match that file. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a4a79b92c32e259d72dc049c491b8182f}\label{classxlnt_1_1workbook_a4a79b92c32e259d72dc049c491b8182f}} 
+\index{xlnt::workbook@{xlnt::workbook}!load@{load}}
+\index{load@{load}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::load (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&}]{data,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+
+
+Interprets byte vector data as an XLSX file encrypted with the given password and sets the content of this workbook to match that file. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_af52a71ac7b10d357601b9a4cc0f5aa5b}\label{classxlnt_1_1workbook_af52a71ac7b10d357601b9a4cc0f5aa5b}} 
+\index{xlnt::workbook@{xlnt::workbook}!load@{load}}
+\index{load@{load}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::load (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{xlnt\+::path}} \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Interprets file with the given filename as an XLSX file and sets the content of this workbook to match that file. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a8bf547513ee82f7c029a246aea50d965}\label{classxlnt_1_1workbook_a8bf547513ee82f7c029a246aea50d965}} 
+\index{xlnt::workbook@{xlnt::workbook}!load@{load}}
+\index{load@{load}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::load (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{xlnt\+::path}} \&}]{filename,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+
+
+Interprets file with the given filename as an XLSX file encrypted with the given password and sets the content of this workbook to match that file. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_aaed45d3eeb5cb1f1da48becc3ef64e0a}\label{classxlnt_1_1workbook_aaed45d3eeb5cb1f1da48becc3ef64e0a}} 
+\index{xlnt::workbook@{xlnt::workbook}!load@{load}}
+\index{load@{load}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::load (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{stream }\end{DoxyParamCaption})}
+
+
+
+Interprets data in stream as an XLSX file and sets the content of this workbook to match that file. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a7f7297a19ac80cf20b79cd77b4e4efde}\label{classxlnt_1_1workbook_a7f7297a19ac80cf20b79cd77b4e4efde}} 
+\index{xlnt::workbook@{xlnt::workbook}!load@{load}}
+\index{load@{load}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::load (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{stream,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+
+
+Interprets data in stream as an XLSX file encrypted with the given password and sets the content of this workbook to match that file. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a046be4caba0c55af13c88bceabc21e23}\label{classxlnt_1_1workbook_a046be4caba0c55af13c88bceabc21e23}} 
+\index{xlnt::workbook@{xlnt::workbook}!lowest\_edited@{lowest\_edited}}
+\index{lowest\_edited@{lowest\_edited}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{lowest\_edited()}{lowest\_edited()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::workbook\+::lowest\+\_\+edited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the Lowest\+Edited workbook file property. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a584d4cfeb0fa3deae6cb8eafa70bc9bb}\label{classxlnt_1_1workbook_a584d4cfeb0fa3deae6cb8eafa70bc9bb}} 
+\index{xlnt::workbook@{xlnt::workbook}!manifest@{manifest}}
+\index{manifest@{manifest}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{manifest()}{manifest()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1manifest}{manifest}} \& xlnt\+::workbook\+::manifest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a reference to the workbook\textquotesingle{}s internal manifest. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_aa60636892e2844d2a07ced3d948caee1}\label{classxlnt_1_1workbook_aa60636892e2844d2a07ced3d948caee1}} 
+\index{xlnt::workbook@{xlnt::workbook}!manifest@{manifest}}
+\index{manifest@{manifest}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{manifest()}{manifest()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1manifest}{manifest}} \& xlnt\+::workbook\+::manifest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a reference to the workbook\textquotesingle{}s internal manifest. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_adb52963419bd676a6367675822a953c0}\label{classxlnt_1_1workbook_adb52963419bd676a6367675822a953c0}} 
+\index{xlnt::workbook@{xlnt::workbook}!named\_range@{named\_range}}
+\index{named\_range@{named\_range}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{named\_range()}{named\_range()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range}{range}} xlnt\+::workbook\+::named\+\_\+range (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Returns the named range with the given name. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a776553c6b3470685901b03722b2d7f36}\label{classxlnt_1_1workbook_a776553c6b3470685901b03722b2d7f36}} 
+\index{xlnt::workbook@{xlnt::workbook}!named\_ranges@{named\_ranges}}
+\index{named\_ranges@{named\_ranges}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{named\_ranges()}{named\_ranges()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1named__range}{named\+\_\+range}} $>$ xlnt\+::workbook\+::named\+\_\+ranges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a vector of the named ranges in this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a8145cec54c36504f609babb342c40df3}\label{classxlnt_1_1workbook_a8145cec54c36504f609babb342c40df3}} 
+\index{xlnt::workbook@{xlnt::workbook}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool xlnt\+::workbook\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Return true if this workbook internal implementation doesn\textquotesingle{}t point to the same memory as rhs\textquotesingle{}s. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a4566743b50523bacf605705d3ce1faaf}\label{classxlnt_1_1workbook_a4566743b50523bacf605705d3ce1faaf}} 
+\index{xlnt::workbook@{xlnt::workbook}!operator=@{operator=}}
+\index{operator=@{operator=}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \& xlnt\+::workbook\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1workbook}{workbook}}}]{other }\end{DoxyParamCaption})}
+
+
+
+Set the contents of this workbook to be equal to those of \char`\"{}other\char`\"{}. Other is passed as value to allow for copy-\/swap idiom. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a926b6ac71828ff6eb14854fba8562ccf}\label{classxlnt_1_1workbook_a926b6ac71828ff6eb14854fba8562ccf}} 
+\index{xlnt::workbook@{xlnt::workbook}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::workbook\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Return true if this workbook internal implementation points to the same memory as rhs\textquotesingle{}s. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_ab268cb437640f05acdb5d9e0e73b231e}\label{classxlnt_1_1workbook_ab268cb437640f05acdb5d9e0e73b231e}} 
+\index{xlnt::workbook@{xlnt::workbook}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::workbook\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Return the worksheet with a title of \char`\"{}name\char`\"{}. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a61298c4b9a08d7ee1c2ecf5c5d37d73d}\label{classxlnt_1_1workbook_a61298c4b9a08d7ee1c2ecf5c5d37d73d}} 
+\index{xlnt::workbook@{xlnt::workbook}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::workbook\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{index }\end{DoxyParamCaption})}
+
+
+
+Return the worksheet at \char`\"{}index\char`\"{}. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a12f202b67bad4a9bddb162e540459d11}\label{classxlnt_1_1workbook_a12f202b67bad4a9bddb162e540459d11}} 
+\index{xlnt::workbook@{xlnt::workbook}!remove\_named\_range@{remove\_named\_range}}
+\index{remove\_named\_range@{remove\_named\_range}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{remove\_named\_range()}{remove\_named\_range()}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::remove\+\_\+named\+\_\+range (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Deletes the named range with the given name. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a2471d1ef981a728d5a302c2de8a08da3}\label{classxlnt_1_1workbook_a2471d1ef981a728d5a302c2de8a08da3}} 
+\index{xlnt::workbook@{xlnt::workbook}!remove\_sheet@{remove\_sheet}}
+\index{remove\_sheet@{remove\_sheet}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{remove\_sheet()}{remove\_sheet()}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::remove\+\_\+sheet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}}]{worksheet }\end{DoxyParamCaption})}
+
+
+
+Removes the given worksheet from this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a0af8f387784d19aa51b934f4087fe16e}\label{classxlnt_1_1workbook_a0af8f387784d19aa51b934f4087fe16e}} 
+\index{xlnt::workbook@{xlnt::workbook}!rup\_build@{rup\_build}}
+\index{rup\_build@{rup\_build}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{rup\_build()}{rup\_build()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::workbook\+::rup\+\_\+build (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the Rup\+Build workbook file property. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_afdda068926fbd9b649cbb863cc194a5c}\label{classxlnt_1_1workbook_afdda068926fbd9b649cbb863cc194a5c}} 
+\index{xlnt::workbook@{xlnt::workbook}!save@{save}}
+\index{save@{save}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::save (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const}
+
+
+
+Serializes the workbook into an XLSX file and saves the data into a file named filename. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_aadab1b2286bfe8b5f955bae09abf064a}\label{classxlnt_1_1workbook_aadab1b2286bfe8b5f955bae09abf064a}} 
+\index{xlnt::workbook@{xlnt::workbook}!save@{save}}
+\index{save@{save}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::save (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption}) const}
+
+
+
+Serializes the workbook into an XLSX file encrypted with the given password and loads the bytes into a file named filename. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_af9cc0c2dc0c7466a751496a48bdf42ac}\label{classxlnt_1_1workbook_af9cc0c2dc0c7466a751496a48bdf42ac}} 
+\index{xlnt::workbook@{xlnt::workbook}!save@{save}}
+\index{save@{save}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::save (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{xlnt\+::path}} \&}]{filename }\end{DoxyParamCaption}) const}
+
+
+
+Serializes the workbook into an XLSX file and saves the data into a file named filename. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_aba72a11bef5cfeba6dbdc6fda6277f93}\label{classxlnt_1_1workbook_aba72a11bef5cfeba6dbdc6fda6277f93}} 
+\index{xlnt::workbook@{xlnt::workbook}!save@{save}}
+\index{save@{save}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::save (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1path}{xlnt\+::path}} \&}]{filename,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption}) const}
+
+
+
+Serializes the workbook into an XLSX file encrypted with the given password and loads the bytes into a file named filename. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a6850eb6a525cdff4b549b687d2f59c2d}\label{classxlnt_1_1workbook_a6850eb6a525cdff4b549b687d2f59c2d}} 
+\index{xlnt::workbook@{xlnt::workbook}!save@{save}}
+\index{save@{save}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::save (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream }\end{DoxyParamCaption}) const}
+
+
+
+Serializes the workbook into an XLSX file and saves the data into stream. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_af205c8493a7e928a5d0a515c288eee49}\label{classxlnt_1_1workbook_af205c8493a7e928a5d0a515c288eee49}} 
+\index{xlnt::workbook@{xlnt::workbook}!save@{save}}
+\index{save@{save}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::save (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption}) const}
+
+
+
+Serializes the workbook into an XLSX file encrypted with the given password and loads the bytes into the given stream. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_aeadec7536f669d4cf356753fa49f3b6b}\label{classxlnt_1_1workbook_aeadec7536f669d4cf356753fa49f3b6b}} 
+\index{xlnt::workbook@{xlnt::workbook}!save@{save}}
+\index{save@{save}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::save (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&}]{data }\end{DoxyParamCaption}) const}
+
+
+
+Serializes the workbook into an XLSX file and saves the bytes into byte vector data. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_ad52bae127b687629c50388511d3efa7b}\label{classxlnt_1_1workbook_ad52bae127b687629c50388511d3efa7b}} 
+\index{xlnt::workbook@{xlnt::workbook}!save@{save}}
+\index{save@{save}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::save (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&}]{data,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption}) const}
+
+
+
+Serializes the workbook into an XLSX file encrypted with the given password and saves the bytes into byte vector data. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_aa23f2c8724f57637ef6bc65e45a36d56}\label{classxlnt_1_1workbook_aa23f2c8724f57637ef6bc65e45a36d56}} 
+\index{xlnt::workbook@{xlnt::workbook}!shared\_strings@{shared\_strings}}
+\index{shared\_strings@{shared\_strings}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{shared\_strings()}{shared\_strings()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}}, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}, \mbox{\hyperlink{classxlnt_1_1rich__text__hash}{rich\+\_\+text\+\_\+hash}} $>$ \& xlnt\+::workbook\+::shared\+\_\+strings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a reference to the shared strings being used by cells in this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_ab9e7b8d2d66b32400c0bbd4125a2c190}\label{classxlnt_1_1workbook_ab9e7b8d2d66b32400c0bbd4125a2c190}} 
+\index{xlnt::workbook@{xlnt::workbook}!shared\_strings@{shared\_strings}}
+\index{shared\_strings@{shared\_strings}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{shared\_strings()}{shared\_strings()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}}, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}, \mbox{\hyperlink{classxlnt_1_1rich__text__hash}{rich\+\_\+text\+\_\+hash}} $>$ \& xlnt\+::workbook\+::shared\+\_\+strings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a reference to the shared strings being used by cells in this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a359df829ad66257c280decada567e00a}\label{classxlnt_1_1workbook_a359df829ad66257c280decada567e00a}} 
+\index{xlnt::workbook@{xlnt::workbook}!shared\_strings@{shared\_strings}}
+\index{shared\_strings@{shared\_strings}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{shared\_strings()}{shared\_strings()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \& xlnt\+::workbook\+::shared\+\_\+strings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns a reference to the shared string related to the specified index 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a61806ab9e54788ca4ff63b36f6a7f324}\label{classxlnt_1_1workbook_a61806ab9e54788ca4ff63b36f6a7f324}} 
+\index{xlnt::workbook@{xlnt::workbook}!shared\_strings\_by\_id@{shared\_strings\_by\_id}}
+\index{shared\_strings\_by\_id@{shared\_strings\_by\_id}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{shared\_strings\_by\_id()}{shared\_strings\_by\_id()}}
+{\footnotesize\ttfamily const std\+::map$<$ \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}, \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} $>$ \& xlnt\+::workbook\+::shared\+\_\+strings\+\_\+by\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a reference to the shared string ordered by id 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a0e78f73956583af3c8ccd5085509374f}\label{classxlnt_1_1workbook_a0e78f73956583af3c8ccd5085509374f}} 
+\index{xlnt::workbook@{xlnt::workbook}!sheet\_by\_id@{sheet\_by\_id}}
+\index{sheet\_by\_id@{sheet\_by\_id}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{sheet\_by\_id()}{sheet\_by\_id()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::workbook\+::sheet\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Returns the worksheet with a sheet\+Id of id. Sheet IDs are arbitrary numbers that uniquely identify a sheet. Most users won\textquotesingle{}t need this. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_ac64ccc2aa44cb168d437ec4b0a1a1a55}\label{classxlnt_1_1workbook_ac64ccc2aa44cb168d437ec4b0a1a1a55}} 
+\index{xlnt::workbook@{xlnt::workbook}!sheet\_by\_id@{sheet\_by\_id}}
+\index{sheet\_by\_id@{sheet\_by\_id}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{sheet\_by\_id()}{sheet\_by\_id()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::workbook\+::sheet\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Returns the worksheet with a sheet\+Id of id. Sheet IDs are arbitrary numbers that uniquely identify a sheet. Most users won\textquotesingle{}t need this. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_af1b3ed735b5d9be4115f9ac987081913}\label{classxlnt_1_1workbook_af1b3ed735b5d9be4115f9ac987081913}} 
+\index{xlnt::workbook@{xlnt::workbook}!sheet\_by\_index@{sheet\_by\_index}}
+\index{sheet\_by\_index@{sheet\_by\_index}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{sheet\_by\_index()}{sheet\_by\_index()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::workbook\+::sheet\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{index }\end{DoxyParamCaption})}
+
+
+
+Returns the worksheet at the given index. This will throw an exception if index is greater than or equal to the number of sheets in this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_abd4099049718a28e09ae5c049058415a}\label{classxlnt_1_1workbook_abd4099049718a28e09ae5c049058415a}} 
+\index{xlnt::workbook@{xlnt::workbook}!sheet\_by\_index@{sheet\_by\_index}}
+\index{sheet\_by\_index@{sheet\_by\_index}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{sheet\_by\_index()}{sheet\_by\_index()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::workbook\+::sheet\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns the worksheet at the given index. This will throw an exception if index is greater than or equal to the number of sheets in this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a3e0382e7d5bc111386f53e1802f5e59e}\label{classxlnt_1_1workbook_a3e0382e7d5bc111386f53e1802f5e59e}} 
+\index{xlnt::workbook@{xlnt::workbook}!sheet\_by\_title@{sheet\_by\_title}}
+\index{sheet\_by\_title@{sheet\_by\_title}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{sheet\_by\_title()}{sheet\_by\_title()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::workbook\+::sheet\+\_\+by\+\_\+title (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title }\end{DoxyParamCaption})}
+
+
+
+Returns the worksheet with the given name. This may throw an exception if the sheet isn\textquotesingle{}t found. Use workbook\+::contains(const std\+::string \&) to make sure the sheet exists before calling this method. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_ab7a1e6a42a4fbb1c436a93e6c2e6a516}\label{classxlnt_1_1workbook_ab7a1e6a42a4fbb1c436a93e6c2e6a516}} 
+\index{xlnt::workbook@{xlnt::workbook}!sheet\_by\_title@{sheet\_by\_title}}
+\index{sheet\_by\_title@{sheet\_by\_title}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{sheet\_by\_title()}{sheet\_by\_title()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} xlnt\+::workbook\+::sheet\+\_\+by\+\_\+title (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title }\end{DoxyParamCaption}) const}
+
+
+
+Returns the worksheet with the given name. This may throw an exception if the sheet isn\textquotesingle{}t found. Use workbook\+::contains(const std\+::string \&) to make sure the sheet exists before calling this method. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a6de32e90786dc838bda2c921ff7c7ef3}\label{classxlnt_1_1workbook_a6de32e90786dc838bda2c921ff7c7ef3}} 
+\index{xlnt::workbook@{xlnt::workbook}!sheet\_count@{sheet\_count}}
+\index{sheet\_count@{sheet\_count}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{sheet\_count()}{sheet\_count()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::workbook\+::sheet\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number of sheets in this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_ace8a3436cd08d64708084ba9d277cf09}\label{classxlnt_1_1workbook_ace8a3436cd08d64708084ba9d277cf09}} 
+\index{xlnt::workbook@{xlnt::workbook}!sheet\_titles@{sheet\_titles}}
+\index{sheet\_titles@{sheet\_titles}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{sheet\_titles()}{sheet\_titles()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ xlnt\+::workbook\+::sheet\+\_\+titles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a temporary vector containing the titles of each sheet in the order of the sheets in the workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_ae3c7cbfbe873f63caffb9330a4fc2736}\label{classxlnt_1_1workbook_ae3c7cbfbe873f63caffb9330a4fc2736}} 
+\index{xlnt::workbook@{xlnt::workbook}!style@{style}}
+\index{style@{style}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{style()}{style()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1style}{style}} xlnt\+::workbook\+::style (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Returns the named style with the given name. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a8ae112dec6955e868c332825657860d2}\label{classxlnt_1_1workbook_a8ae112dec6955e868c332825657860d2}} 
+\index{xlnt::workbook@{xlnt::workbook}!style@{style}}
+\index{style@{style}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{style()}{style()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1style}{style}} xlnt\+::workbook\+::style (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Returns the named style with the given name. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a1065725b271fc12f28529d5ce9a95188}\label{classxlnt_1_1workbook_a1065725b271fc12f28529d5ce9a95188}} 
+\index{xlnt::workbook@{xlnt::workbook}!theme@{theme}}
+\index{theme@{theme}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{theme()}{theme()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1theme}{theme}} \& xlnt\+::workbook\+::theme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a const reference to this workbook\textquotesingle{}s theme. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a5490b36d17a3121f1ed487be06ec3ee4}\label{classxlnt_1_1workbook_a5490b36d17a3121f1ed487be06ec3ee4}} 
+\index{xlnt::workbook@{xlnt::workbook}!theme@{theme}}
+\index{theme@{theme}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{theme()}{theme()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::theme (\begin{DoxyParamCaption}\item[{const class \mbox{\hyperlink{classxlnt_1_1theme}{theme}} \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the theme to value. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_af1e46ad6511fe3c2e1e2d768479dc8ff}\label{classxlnt_1_1workbook_af1e46ad6511fe3c2e1e2d768479dc8ff}} 
+\index{xlnt::workbook@{xlnt::workbook}!thumbnail@{thumbnail}}
+\index{thumbnail@{thumbnail}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{thumbnail()}{thumbnail()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \& xlnt\+::workbook\+::thumbnail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a vector of bytes representing the workbook\textquotesingle{}s thumbnail. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a6065b51bce10063394f2a9d552915d1c}\label{classxlnt_1_1workbook_a6065b51bce10063394f2a9d552915d1c}} 
+\index{xlnt::workbook@{xlnt::workbook}!thumbnail@{thumbnail}}
+\index{thumbnail@{thumbnail}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{thumbnail()}{thumbnail()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::thumbnail (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&}]{thumbnail,  }\item[{const std\+::string \&}]{extension,  }\item[{const std\+::string \&}]{content\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Sets the workbook\textquotesingle{}s thumbnail to the given vector of bytes, thumbnail, with the given extension (e.\+g. jpg) and content\+\_\+type (e.\+g. image/jpeg). 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a767a08afda3d464c0b9c9d80dcb4a3c3}\label{classxlnt_1_1workbook_a767a08afda3d464c0b9c9d80dcb4a3c3}} 
+\index{xlnt::workbook@{xlnt::workbook}!title@{title}}
+\index{title@{title}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string xlnt\+::workbook\+::title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the title of this workbook. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_ad11588655cb15f5ea9ed21233c61f39b}\label{classxlnt_1_1workbook_ad11588655cb15f5ea9ed21233c61f39b}} 
+\index{xlnt::workbook@{xlnt::workbook}!title@{title}}
+\index{title@{title}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::title (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title }\end{DoxyParamCaption})}
+
+
+
+Sets the title of this workbook to title. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a38783491f5a090b92299b2e44f81fa6d}\label{classxlnt_1_1workbook_a38783491f5a090b92299b2e44f81fa6d}} 
+\index{xlnt::workbook@{xlnt::workbook}!view@{view}}
+\index{view@{view}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{view()}{view()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1workbook__view}{workbook\+\_\+view}} xlnt\+::workbook\+::view (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the view. 
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a689896c1ebfb9dba606bbfc7cbcd5b1f}\label{classxlnt_1_1workbook_a689896c1ebfb9dba606bbfc7cbcd5b1f}} 
+\index{xlnt::workbook@{xlnt::workbook}!view@{view}}
+\index{view@{view}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{view()}{view()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::workbook\+::view (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1workbook__view}{workbook\+\_\+view}} \&}]{view }\end{DoxyParamCaption})}
+
+
+
+Sets the view to view. 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1workbook_a5c27ff96f65a231e21871a228cbaf740}\label{classxlnt_1_1workbook_a5c27ff96f65a231e21871a228cbaf740}} 
+\index{xlnt::workbook@{xlnt::workbook}!detail::xlsx\_consumer@{detail::xlsx\_consumer}}
+\index{detail::xlsx\_consumer@{detail::xlsx\_consumer}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{detail::xlsx\_consumer}{detail::xlsx\_consumer}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classxlnt_1_1detail_1_1xlsx__consumer}{detail\+::xlsx\+\_\+consumer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_aeaa1b2a5f3d37ddb4b8ca1ebaab144f3}\label{classxlnt_1_1workbook_aeaa1b2a5f3d37ddb4b8ca1ebaab144f3}} 
+\index{xlnt::workbook@{xlnt::workbook}!detail::xlsx\_producer@{detail::xlsx\_producer}}
+\index{detail::xlsx\_producer@{detail::xlsx\_producer}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{detail::xlsx\_producer}{detail::xlsx\_producer}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classxlnt_1_1detail_1_1xlsx__producer}{detail\+::xlsx\+\_\+producer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a8096f5b50cedaf1bf28b5017acf32dd7}\label{classxlnt_1_1workbook_a8096f5b50cedaf1bf28b5017acf32dd7}} 
+\index{xlnt::workbook@{xlnt::workbook}!streaming\_workbook\_reader@{streaming\_workbook\_reader}}
+\index{streaming\_workbook\_reader@{streaming\_workbook\_reader}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{streaming\_workbook\_reader}{streaming\_workbook\_reader}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader}{streaming\+\_\+workbook\+\_\+reader}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classxlnt_1_1workbook_a2b22a8cfb2fb426bfaad8dee4c888707}\label{classxlnt_1_1workbook_a2b22a8cfb2fb426bfaad8dee4c888707}} 
+\index{xlnt::workbook@{xlnt::workbook}!worksheet@{worksheet}}
+\index{worksheet@{worksheet}!xlnt::workbook@{xlnt::workbook}}
+\doxysubsubsection{\texorpdfstring{worksheet}{worksheet}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/workbook/\mbox{\hyperlink{workbook_8hpp}{workbook.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/workbook/\mbox{\hyperlink{workbook_8cpp}{workbook.\+cpp}}\end{DoxyCompactItemize}

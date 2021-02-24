@@ -1,0 +1,187 @@
+\hypertarget{classxlnt_1_1detail_1_1binary__writer}{}\doxysection{xlnt\+::detail\+::binary\+\_\+writer$<$ T $>$ Class Template Reference}
+\label{classxlnt_1_1detail_1_1binary__writer}\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+
+
+{\ttfamily \#include $<$binary.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_ad782fe6ea09b83589cc7676cacaf928a}{binary\+\_\+writer}} (std\+::vector$<$ T $>$ \&\mbox{\hyperlink{classbytes}{bytes}})
+\item 
+\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_a604704102a13da0ce8cab889141f0ea1}{binary\+\_\+writer}} (const \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{binary\+\_\+writer}} \&other)
+\item 
+\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_add5b6923ecd95ad8977b4b34ad79820e}{$\sim$binary\+\_\+writer}} ()
+\item 
+\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{binary\+\_\+writer}} \& \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_ae4eb9c83fe3bd49826a9af5eec1ca226}{operator=}} (const \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{binary\+\_\+writer}} \&other)
+\item 
+std\+::vector$<$ T $>$ \& \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_afbea99ce211fcb9bbce5e94991e5ab5c}{data}} ()
+\item 
+{\footnotesize template$<$typename U $>$ }\\void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_a51bf407ccd43bac3a4eb08027da855c3}{assign}} (const std\+::vector$<$ U $>$ \&ints)
+\item 
+{\footnotesize template$<$typename U $>$ }\\void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_a24e6f0010ebc52a8684b831772411e45}{assign}} (const std\+::basic\+\_\+string$<$ U $>$ \&string)
+\item 
+void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_ab0a1d174e377fa089881146ce3cb21be}{offset}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} new\+\_\+offset)
+\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_a58bd423510967cbbdd7140c308fe99c6}{offset}} () const
+\item 
+void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_ae64892e66e0b2699433204ffa93bd672}{reset}} ()
+\item 
+{\footnotesize template$<$typename U $>$ }\\void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_a4873d34d8cb603b7367fc4b56bcd8b7f}{write}} (U value)
+\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_a9b3826cca06eea6defb8992b0f00421e}{count}} () const
+\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_a5c0b310a1b6fe58d291818d728cc58a9}{bytes}} () const
+\item 
+void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_a2754428c7a3ad7b3ff6c2daf818f5111}{resize}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} new\+\_\+size, \mbox{\hyperlink{namespacexlnt_1_1detail_abcc760986493a708fba920f75d04fb04}{byte}} \mbox{\hyperlink{classxlnt_1_1fill}{fill}}=0)
+\item 
+void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_a50387c44a91538e70cb59195faff80b8}{extend}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} amount, \mbox{\hyperlink{namespacexlnt_1_1detail_abcc760986493a708fba920f75d04fb04}{byte}} \mbox{\hyperlink{classxlnt_1_1fill}{fill}}=0)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacexlnt_1_1detail_abcc760986493a708fba920f75d04fb04}{byte}} $>$\+::\mbox{\hyperlink{classiterator}{iterator}} \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_a42bd0b02eacb4bd2729666c3eff1dcfc}{iterator}} ()
+\item 
+{\footnotesize template$<$typename U $>$ }\\void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_a05c3c1e3adceb934462c3c93782bd840}{append}} (const std\+::vector$<$ U $>$ \&\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_afbea99ce211fcb9bbce5e94991e5ab5c}{data}})
+\item 
+{\footnotesize template$<$typename U $>$ }\\void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer_a035de25e581328eef0140c5233d76602}{append}} (\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{binary\+\_\+reader}}$<$ U $>$ \&reader, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} reader\+\_\+element\+\_\+count)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_ad782fe6ea09b83589cc7676cacaf928a}\label{classxlnt_1_1detail_1_1binary__writer_ad782fe6ea09b83589cc7676cacaf928a}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!binary\_writer@{binary\_writer}}
+\index{binary\_writer@{binary\_writer}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{binary\_writer()}{binary\_writer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{binary\+\_\+writer}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_a604704102a13da0ce8cab889141f0ea1}\label{classxlnt_1_1detail_1_1binary__writer_a604704102a13da0ce8cab889141f0ea1}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!binary\_writer@{binary\_writer}}
+\index{binary\_writer@{binary\_writer}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{binary\_writer()}{binary\_writer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{binary\+\_\+writer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{binary\+\_\+writer}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_add5b6923ecd95ad8977b4b34ad79820e}\label{classxlnt_1_1detail_1_1binary__writer_add5b6923ecd95ad8977b4b34ad79820e}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!````~binary\_writer@{$\sim$binary\_writer}}
+\index{````~binary\_writer@{$\sim$binary\_writer}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$binary\_writer()}{~binary\_writer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{binary\+\_\+writer}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_a035de25e581328eef0140c5233d76602}\label{classxlnt_1_1detail_1_1binary__writer_a035de25e581328eef0140c5233d76602}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!append@{append}}
+\index{append@{append}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::append (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{binary\+\_\+reader}}$<$ U $>$ \&}]{reader,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{reader\+\_\+element\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_a05c3c1e3adceb934462c3c93782bd840}\label{classxlnt_1_1detail_1_1binary__writer_a05c3c1e3adceb934462c3c93782bd840}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!append@{append}}
+\index{append@{append}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::append (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ U $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_a24e6f0010ebc52a8684b831772411e45}\label{classxlnt_1_1detail_1_1binary__writer_a24e6f0010ebc52a8684b831772411e45}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!assign@{assign}}
+\index{assign@{assign}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{assign()}{assign()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::assign (\begin{DoxyParamCaption}\item[{const std\+::basic\+\_\+string$<$ U $>$ \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_a51bf407ccd43bac3a4eb08027da855c3}\label{classxlnt_1_1detail_1_1binary__writer_a51bf407ccd43bac3a4eb08027da855c3}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!assign@{assign}}
+\index{assign@{assign}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{assign()}{assign()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::assign (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ U $>$ \&}]{ints }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_a5c0b310a1b6fe58d291818d728cc58a9}\label{classxlnt_1_1detail_1_1binary__writer_a5c0b310a1b6fe58d291818d728cc58a9}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!bytes@{bytes}}
+\index{bytes@{bytes}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{bytes()}{bytes()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::\mbox{\hyperlink{classbytes}{bytes}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_a9b3826cca06eea6defb8992b0f00421e}\label{classxlnt_1_1detail_1_1binary__writer_a9b3826cca06eea6defb8992b0f00421e}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!count@{count}}
+\index{count@{count}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_afbea99ce211fcb9bbce5e94991e5ab5c}\label{classxlnt_1_1detail_1_1binary__writer_afbea99ce211fcb9bbce5e94991e5ab5c}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!data@{data}}
+\index{data@{data}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$T$>$\& \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_a50387c44a91538e70cb59195faff80b8}\label{classxlnt_1_1detail_1_1binary__writer_a50387c44a91538e70cb59195faff80b8}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!extend@{extend}}
+\index{extend@{extend}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{extend()}{extend()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::extend (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{amount,  }\item[{\mbox{\hyperlink{namespacexlnt_1_1detail_abcc760986493a708fba920f75d04fb04}{byte}}}]{fill = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_a42bd0b02eacb4bd2729666c3eff1dcfc}\label{classxlnt_1_1detail_1_1binary__writer_a42bd0b02eacb4bd2729666c3eff1dcfc}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!iterator@{iterator}}
+\index{iterator@{iterator}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{iterator()}{iterator()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$\mbox{\hyperlink{namespacexlnt_1_1detail_abcc760986493a708fba920f75d04fb04}{byte}}$>$\+::\mbox{\hyperlink{classiterator}{iterator}} \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::\mbox{\hyperlink{classiterator}{iterator}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_a58bd423510967cbbdd7140c308fe99c6}\label{classxlnt_1_1detail_1_1binary__writer_a58bd423510967cbbdd7140c308fe99c6}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!offset@{offset}}
+\index{offset@{offset}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{offset()}{offset()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_ab0a1d174e377fa089881146ce3cb21be}\label{classxlnt_1_1detail_1_1binary__writer_ab0a1d174e377fa089881146ce3cb21be}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!offset@{offset}}
+\index{offset@{offset}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{offset()}{offset()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{new\+\_\+offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_ae4eb9c83fe3bd49826a9af5eec1ca226}\label{classxlnt_1_1detail_1_1binary__writer_ae4eb9c83fe3bd49826a9af5eec1ca226}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{binary\+\_\+writer}}\& \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{binary\+\_\+writer}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_ae64892e66e0b2699433204ffa93bd672}\label{classxlnt_1_1detail_1_1binary__writer_ae64892e66e0b2699433204ffa93bd672}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!reset@{reset}}
+\index{reset@{reset}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_a2754428c7a3ad7b3ff6c2daf818f5111}\label{classxlnt_1_1detail_1_1binary__writer_a2754428c7a3ad7b3ff6c2daf818f5111}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!resize@{resize}}
+\index{resize@{resize}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{new\+\_\+size,  }\item[{\mbox{\hyperlink{namespacexlnt_1_1detail_abcc760986493a708fba920f75d04fb04}{byte}}}]{fill = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__writer_a4873d34d8cb603b7367fc4b56bcd8b7f}\label{classxlnt_1_1detail_1_1binary__writer_a4873d34d8cb603b7367fc4b56bcd8b7f}} 
+\index{xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}!write@{write}}
+\index{write@{write}!xlnt::detail::binary\_writer$<$ T $>$@{xlnt::detail::binary\_writer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__writer}{xlnt\+::detail\+::binary\+\_\+writer}}$<$ T $>$\+::write (\begin{DoxyParamCaption}\item[{U}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/detail/\mbox{\hyperlink{binary_8hpp}{binary.\+hpp}}\end{DoxyCompactItemize}

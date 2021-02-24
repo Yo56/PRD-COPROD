@@ -1,0 +1,256 @@
+\hypertarget{structxlnt_1_1datetime}{}\doxysection{xlnt\+::datetime Struct Reference}
+\label{structxlnt_1_1datetime}\index{xlnt::datetime@{xlnt::datetime}}
+
+
+A datetime is a combination of a date and a time.  
+
+
+
+
+{\ttfamily \#include $<$datetime.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structxlnt_1_1datetime_a407bca2a122b33493e5531c8a28377fb}{datetime}} (const \mbox{\hyperlink{structxlnt_1_1date}{date}} \&d, const \mbox{\hyperlink{structxlnt_1_1time}{time}} \&t)
+\begin{DoxyCompactList}\small\item\em Constructs a datetime from a date and a time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structxlnt_1_1datetime_aada1949e7087284ab49f7882e14409fe}{datetime}} (int year\+\_\+, int month\+\_\+, int day\+\_\+, int hour\+\_\+=0, int minute\+\_\+=0, int second\+\_\+=0, int microsecond\+\_\+=0)
+\begin{DoxyCompactList}\small\item\em Constructs a datetime from a year, month, and day plus optional hour, minute, second, and microsecond. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structxlnt_1_1datetime_a244c0b83e2b245a826338c453c0b6660}{to\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Returns a string represenation of this date and time. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structxlnt_1_1datetime_a3980987307bc0d456e4ea875e9395857}{to\+\_\+iso\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Returns an ISO-\/formatted string representation of this date and time. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structxlnt_1_1datetime_ad9a9ab17521f9178289bd8d8bb98cba4}{to\+\_\+number}} (calendar base\+\_\+date) const
+\begin{DoxyCompactList}\small\item\em Returns this datetime as a number of seconds since 1900 or 1904 (depending on base\+\_\+date provided). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structxlnt_1_1datetime_a69f8f5359eb14282cf9c9a8de4f51d14}{operator==}} (const \mbox{\hyperlink{structxlnt_1_1datetime}{datetime}} \&comparand) const
+\begin{DoxyCompactList}\small\item\em Returns true if this datetime is equivalent to comparand. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structxlnt_1_1datetime_a216dce8193c1221127293960592665b6}{weekday}} () const
+\begin{DoxyCompactList}\small\item\em Calculates and returns the day of the week that this date represents in the range 0 to 6 where 0 represents Sunday. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structxlnt_1_1datetime}{datetime}} \mbox{\hyperlink{structxlnt_1_1datetime_a4ead0bf5502a71be0709815a4441439d}{now}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current date and time according to the system time. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structxlnt_1_1datetime}{datetime}} \mbox{\hyperlink{structxlnt_1_1datetime_acda56e3033b42c71795d425d75207a76}{today}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current date and time according to the system time. This is equivalent to \mbox{\hyperlink{structxlnt_1_1datetime_a4ead0bf5502a71be0709815a4441439d}{datetime\+::now()}}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structxlnt_1_1datetime}{datetime}} \mbox{\hyperlink{structxlnt_1_1datetime_aefeeca149f22c85e6dc05e82f550e2cd}{from\+\_\+number}} (double \mbox{\hyperlink{cell__type_8hpp_af31813e2131200936cf54234db95808d}{number}}, calendar base\+\_\+date)
+\begin{DoxyCompactList}\small\item\em Returns a datetime from number by converting the integer part into a date and the fractional part into a time according to \mbox{\hyperlink{structxlnt_1_1date_a687843bb38ce593c75593e5d90ebd23e}{date\+::from\+\_\+number}} and \mbox{\hyperlink{structxlnt_1_1time_a57fc697aa54ed9c2efbc39c1a72696ec}{time\+::from\+\_\+number}}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structxlnt_1_1datetime}{datetime}} \mbox{\hyperlink{structxlnt_1_1datetime_ad99b968540cfc09b664663eb04000a1c}{from\+\_\+iso\+\_\+string}} (const std\+::string \&iso\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Returns a datetime equivalent to the ISO-\/formatted string iso\+\_\+string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structxlnt_1_1datetime_a666b5386bf511954084de696fa8a06c3}{year}}
+\begin{DoxyCompactList}\small\item\em The year \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structxlnt_1_1datetime_a8ba8fd2c9e5982dd48b0e2456d74c43d}{month}}
+\begin{DoxyCompactList}\small\item\em The month \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structxlnt_1_1datetime_ae4749df5a75589bfce9291491f1884fb}{day}}
+\begin{DoxyCompactList}\small\item\em The day \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structxlnt_1_1datetime_a76dedf91a34d3c93e4a2b4fbcf9fd1ad}{hour}}
+\begin{DoxyCompactList}\small\item\em The hour \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structxlnt_1_1datetime_ae22d74ce838a8c0b7f519aa1956279c1}{minute}}
+\begin{DoxyCompactList}\small\item\em The minute \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structxlnt_1_1datetime_a114f4e1a49a93305d536016501af5c33}{second}}
+\begin{DoxyCompactList}\small\item\em The second \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structxlnt_1_1datetime_a243a45a282fb6565006d050797c1b27d}{microsecond}}
+\begin{DoxyCompactList}\small\item\em The microsecond \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A datetime is a combination of a date and a time. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structxlnt_1_1datetime_a407bca2a122b33493e5531c8a28377fb}\label{structxlnt_1_1datetime_a407bca2a122b33493e5531c8a28377fb}} 
+\index{xlnt::datetime@{xlnt::datetime}!datetime@{datetime}}
+\index{datetime@{datetime}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{datetime()}{datetime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily xlnt\+::datetime\+::datetime (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1date}{date}} \&}]{d,  }\item[{const \mbox{\hyperlink{structxlnt_1_1time}{time}} \&}]{t }\end{DoxyParamCaption})}
+
+
+
+Constructs a datetime from a date and a time. 
+
+\mbox{\Hypertarget{structxlnt_1_1datetime_aada1949e7087284ab49f7882e14409fe}\label{structxlnt_1_1datetime_aada1949e7087284ab49f7882e14409fe}} 
+\index{xlnt::datetime@{xlnt::datetime}!datetime@{datetime}}
+\index{datetime@{datetime}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{datetime()}{datetime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily xlnt\+::datetime\+::datetime (\begin{DoxyParamCaption}\item[{int}]{year\+\_\+,  }\item[{int}]{month\+\_\+,  }\item[{int}]{day\+\_\+,  }\item[{int}]{hour\+\_\+ = {\ttfamily 0},  }\item[{int}]{minute\+\_\+ = {\ttfamily 0},  }\item[{int}]{second\+\_\+ = {\ttfamily 0},  }\item[{int}]{microsecond\+\_\+ = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructs a datetime from a year, month, and day plus optional hour, minute, second, and microsecond. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structxlnt_1_1datetime_ad99b968540cfc09b664663eb04000a1c}\label{structxlnt_1_1datetime_ad99b968540cfc09b664663eb04000a1c}} 
+\index{xlnt::datetime@{xlnt::datetime}!from\_iso\_string@{from\_iso\_string}}
+\index{from\_iso\_string@{from\_iso\_string}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{from\_iso\_string()}{from\_iso\_string()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structxlnt_1_1datetime}{datetime}} xlnt\+::datetime\+::from\+\_\+iso\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{iso\+\_\+string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a datetime equivalent to the ISO-\/formatted string iso\+\_\+string. 
+
+\mbox{\Hypertarget{structxlnt_1_1datetime_aefeeca149f22c85e6dc05e82f550e2cd}\label{structxlnt_1_1datetime_aefeeca149f22c85e6dc05e82f550e2cd}} 
+\index{xlnt::datetime@{xlnt::datetime}!from\_number@{from\_number}}
+\index{from\_number@{from\_number}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{from\_number()}{from\_number()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structxlnt_1_1datetime}{datetime}} xlnt\+::datetime\+::from\+\_\+number (\begin{DoxyParamCaption}\item[{double}]{number,  }\item[{calendar}]{base\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a datetime from number by converting the integer part into a date and the fractional part into a time according to \mbox{\hyperlink{structxlnt_1_1date_a687843bb38ce593c75593e5d90ebd23e}{date\+::from\+\_\+number}} and \mbox{\hyperlink{structxlnt_1_1time_a57fc697aa54ed9c2efbc39c1a72696ec}{time\+::from\+\_\+number}}. 
+
+\mbox{\Hypertarget{structxlnt_1_1datetime_a4ead0bf5502a71be0709815a4441439d}\label{structxlnt_1_1datetime_a4ead0bf5502a71be0709815a4441439d}} 
+\index{xlnt::datetime@{xlnt::datetime}!now@{now}}
+\index{now@{now}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{now()}{now()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structxlnt_1_1datetime}{datetime}} xlnt\+::datetime\+::now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the current date and time according to the system time. 
+
+\mbox{\Hypertarget{structxlnt_1_1datetime_a69f8f5359eb14282cf9c9a8de4f51d14}\label{structxlnt_1_1datetime_a69f8f5359eb14282cf9c9a8de4f51d14}} 
+\index{xlnt::datetime@{xlnt::datetime}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::datetime\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1datetime}{datetime}} \&}]{comparand }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this datetime is equivalent to comparand. 
+
+\mbox{\Hypertarget{structxlnt_1_1datetime_a3980987307bc0d456e4ea875e9395857}\label{structxlnt_1_1datetime_a3980987307bc0d456e4ea875e9395857}} 
+\index{xlnt::datetime@{xlnt::datetime}!to\_iso\_string@{to\_iso\_string}}
+\index{to\_iso\_string@{to\_iso\_string}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{to\_iso\_string()}{to\_iso\_string()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::datetime\+::to\+\_\+iso\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns an ISO-\/formatted string representation of this date and time. 
+
+\mbox{\Hypertarget{structxlnt_1_1datetime_ad9a9ab17521f9178289bd8d8bb98cba4}\label{structxlnt_1_1datetime_ad9a9ab17521f9178289bd8d8bb98cba4}} 
+\index{xlnt::datetime@{xlnt::datetime}!to\_number@{to\_number}}
+\index{to\_number@{to\_number}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{to\_number()}{to\_number()}}
+{\footnotesize\ttfamily double xlnt\+::datetime\+::to\+\_\+number (\begin{DoxyParamCaption}\item[{calendar}]{base\+\_\+date }\end{DoxyParamCaption}) const}
+
+
+
+Returns this datetime as a number of seconds since 1900 or 1904 (depending on base\+\_\+date provided). 
+
+\mbox{\Hypertarget{structxlnt_1_1datetime_a244c0b83e2b245a826338c453c0b6660}\label{structxlnt_1_1datetime_a244c0b83e2b245a826338c453c0b6660}} 
+\index{xlnt::datetime@{xlnt::datetime}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::datetime\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a string represenation of this date and time. 
+
+\mbox{\Hypertarget{structxlnt_1_1datetime_acda56e3033b42c71795d425d75207a76}\label{structxlnt_1_1datetime_acda56e3033b42c71795d425d75207a76}} 
+\index{xlnt::datetime@{xlnt::datetime}!today@{today}}
+\index{today@{today}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{today()}{today()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structxlnt_1_1datetime}{datetime}} xlnt\+::datetime\+::today (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the current date and time according to the system time. This is equivalent to \mbox{\hyperlink{structxlnt_1_1datetime_a4ead0bf5502a71be0709815a4441439d}{datetime\+::now()}}. 
+
+\mbox{\Hypertarget{structxlnt_1_1datetime_a216dce8193c1221127293960592665b6}\label{structxlnt_1_1datetime_a216dce8193c1221127293960592665b6}} 
+\index{xlnt::datetime@{xlnt::datetime}!weekday@{weekday}}
+\index{weekday@{weekday}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{weekday()}{weekday()}}
+{\footnotesize\ttfamily int xlnt\+::datetime\+::weekday (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Calculates and returns the day of the week that this date represents in the range 0 to 6 where 0 represents Sunday. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structxlnt_1_1datetime_ae4749df5a75589bfce9291491f1884fb}\label{structxlnt_1_1datetime_ae4749df5a75589bfce9291491f1884fb}} 
+\index{xlnt::datetime@{xlnt::datetime}!day@{day}}
+\index{day@{day}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{day}{day}}
+{\footnotesize\ttfamily int xlnt\+::datetime\+::day}
+
+
+
+The day 
+
+\mbox{\Hypertarget{structxlnt_1_1datetime_a76dedf91a34d3c93e4a2b4fbcf9fd1ad}\label{structxlnt_1_1datetime_a76dedf91a34d3c93e4a2b4fbcf9fd1ad}} 
+\index{xlnt::datetime@{xlnt::datetime}!hour@{hour}}
+\index{hour@{hour}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{hour}{hour}}
+{\footnotesize\ttfamily int xlnt\+::datetime\+::hour}
+
+
+
+The hour 
+
+\mbox{\Hypertarget{structxlnt_1_1datetime_a243a45a282fb6565006d050797c1b27d}\label{structxlnt_1_1datetime_a243a45a282fb6565006d050797c1b27d}} 
+\index{xlnt::datetime@{xlnt::datetime}!microsecond@{microsecond}}
+\index{microsecond@{microsecond}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{microsecond}{microsecond}}
+{\footnotesize\ttfamily int xlnt\+::datetime\+::microsecond}
+
+
+
+The microsecond 
+
+\mbox{\Hypertarget{structxlnt_1_1datetime_ae22d74ce838a8c0b7f519aa1956279c1}\label{structxlnt_1_1datetime_ae22d74ce838a8c0b7f519aa1956279c1}} 
+\index{xlnt::datetime@{xlnt::datetime}!minute@{minute}}
+\index{minute@{minute}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{minute}{minute}}
+{\footnotesize\ttfamily int xlnt\+::datetime\+::minute}
+
+
+
+The minute 
+
+\mbox{\Hypertarget{structxlnt_1_1datetime_a8ba8fd2c9e5982dd48b0e2456d74c43d}\label{structxlnt_1_1datetime_a8ba8fd2c9e5982dd48b0e2456d74c43d}} 
+\index{xlnt::datetime@{xlnt::datetime}!month@{month}}
+\index{month@{month}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{month}{month}}
+{\footnotesize\ttfamily int xlnt\+::datetime\+::month}
+
+
+
+The month 
+
+\mbox{\Hypertarget{structxlnt_1_1datetime_a114f4e1a49a93305d536016501af5c33}\label{structxlnt_1_1datetime_a114f4e1a49a93305d536016501af5c33}} 
+\index{xlnt::datetime@{xlnt::datetime}!second@{second}}
+\index{second@{second}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{second}{second}}
+{\footnotesize\ttfamily int xlnt\+::datetime\+::second}
+
+
+
+The second 
+
+\mbox{\Hypertarget{structxlnt_1_1datetime_a666b5386bf511954084de696fa8a06c3}\label{structxlnt_1_1datetime_a666b5386bf511954084de696fa8a06c3}} 
+\index{xlnt::datetime@{xlnt::datetime}!year@{year}}
+\index{year@{year}!xlnt::datetime@{xlnt::datetime}}
+\doxysubsubsection{\texorpdfstring{year}{year}}
+{\footnotesize\ttfamily int xlnt\+::datetime\+::year}
+
+
+
+The year 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/utils/\mbox{\hyperlink{datetime_8hpp}{datetime.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/utils/\mbox{\hyperlink{datetime_8cpp}{datetime.\+cpp}}\end{DoxyCompactItemize}

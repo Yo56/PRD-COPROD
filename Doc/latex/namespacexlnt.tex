@@ -1,0 +1,776 @@
+\hypertarget{namespacexlnt}{}\doxysection{xlnt Namespace Reference}
+\label{namespacexlnt}\index{xlnt@{xlnt}}
+
+
+Enumerates the possible types a cell can be determined by it\textquotesingle{}s current value.  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacexlnt_1_1benchmarks}{benchmarks}}
+\item 
+ \mbox{\hyperlink{namespacexlnt_1_1detail}{detail}}
+\item 
+ \mbox{\hyperlink{namespacexlnt_1_1drawing}{drawing}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1cell}{cell}}
+\begin{DoxyCompactList}\small\item\em Describes a unit of data in a worksheet at a specific coordinate and its associated properties. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structxlnt_1_1cell__reference__hash}{cell\+\_\+reference\+\_\+hash}}
+\begin{DoxyCompactList}\small\item\em Functor for hashing a cell reference. Allows for use of std\+::unordered\+\_\+set$<$cell\+\_\+reference, cel\+\_\+reference\+\_\+hash$>$ and similar. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}
+\begin{DoxyCompactList}\small\item\em An object used to refer to a cell. References have two parts, the column and the row. In Excel, the reference string A1 refers to the top-\/left-\/most cell. A \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} can be initialized from a string of this form or a 1-\/indexed ordered pair of the form column, row. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1comment}{comment}}
+\begin{DoxyCompactList}\small\item\em A comment can be applied to a cell to provide extra information about its contents. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1hyperlink}{hyperlink}}
+\begin{DoxyCompactList}\small\item\em Describes a hyperlink pointing from a cell to another cell or a URL. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Columns can be referred to as a string A,B,...Z,AA,AB,..,ZZ,AAA,...,ZZZ or as a 1-\/indexed index. This class encapsulates both of these forms of column referencing and allows for conversions between them. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structxlnt_1_1column__hash}{column\+\_\+hash}}
+\begin{DoxyCompactList}\small\item\em Functor for hashing a column. Allows for use of std\+::unordered\+\_\+set$<$column\+\_\+t, column\+\_\+hash$>$ and similar. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structxlnt_1_1phonetic__run}{phonetic\+\_\+run}}
+\begin{DoxyCompactList}\small\item\em Encapsulates a run of text that \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}}
+\begin{DoxyCompactList}\small\item\em Encapsulates zero or more formatted text runs where a text run is a string of text with the same defined formatting. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1rich__text__hash}{rich\+\_\+text\+\_\+hash}}
+\item 
+struct \mbox{\hyperlink{structxlnt_1_1rich__text__run}{rich\+\_\+text\+\_\+run}}
+\begin{DoxyCompactList}\small\item\em Typedef a \mbox{\hyperlink{structxlnt_1_1rich__text__run}{rich\+\_\+text\+\_\+run}} as a pair of string and optional font. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1ext__list}{ext\+\_\+list}}
+\begin{DoxyCompactList}\small\item\em A list of xml extensions that may or may not be understood by the parser preservation is required for round-\/tripping even if extension is not understood \mbox{[}serialised\+: ext\+Lst\mbox{]} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1manifest}{manifest}}
+\begin{DoxyCompactList}\small\item\em The manifest keeps track of all files in the OOXML package and their type and relationships. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1relationship}{relationship}}
+\begin{DoxyCompactList}\small\item\em Represents an association between a source Package or part, and a target object which can be a part or external resource. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1uri}{uri}}
+\begin{DoxyCompactList}\small\item\em Encapsulates a uniform resource identifier (URI) as described by RFC 3986. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}}
+\begin{DoxyCompactList}\small\item\em Alignment options that determine how text should be displayed within a cell. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1border}{border}}
+\begin{DoxyCompactList}\small\item\em Describes the border style of a particular cell. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1indexed__color}{indexed\+\_\+color}}
+\begin{DoxyCompactList}\small\item\em An indexed color encapsulates a simple index to a color in the indexed\+Colors of the stylesheet. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1theme__color}{theme\+\_\+color}}
+\begin{DoxyCompactList}\small\item\em A theme color encapsulates a color derived from the theme. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1rgb__color}{rgb\+\_\+color}}
+\begin{DoxyCompactList}\small\item\em An RGB color describes a color in terms of its red, green, blue, and alpha components. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1color}{color}}
+\begin{DoxyCompactList}\small\item\em Colors can be applied to many parts of a cell\textquotesingle{}s style. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1condition}{condition}}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1conditional__format}{conditional\+\_\+format}}
+\begin{DoxyCompactList}\small\item\em Describes a conditional format that will be applied to all cells in the associated range that satisfy the condition. This can only be constructed using methods on worksheet or range. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1pattern__fill}{pattern\+\_\+fill}}
+\begin{DoxyCompactList}\small\item\em Represents a fill which colors the cell based on a foreground and background color and a pattern. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1gradient__fill}{gradient\+\_\+fill}}
+\begin{DoxyCompactList}\small\item\em Encapsulates a fill which transitions between colors at particular \char`\"{}stops\char`\"{}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1fill}{fill}}
+\begin{DoxyCompactList}\small\item\em Describes the fill style of a particular cell. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1font}{font}}
+\begin{DoxyCompactList}\small\item\em Describes the font style of a particular cell. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1optional}{optional}}
+\begin{DoxyCompactList}\small\item\em Many settings in xlnt are allowed to not have a value set. This class encapsulates a value which may or may not be set. Memory is allocated within the optional class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1format}{format}}
+\begin{DoxyCompactList}\small\item\em Describes the formatting of a particular cell. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}}
+\begin{DoxyCompactList}\small\item\em Describes the number formatting applied to text and numbers within a certain cell. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1protection}{protection}}
+\begin{DoxyCompactList}\small\item\em Describes the protection style of a particular cell. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1style}{style}}
+\begin{DoxyCompactList}\small\item\em Describes a style which has a name and can be applied to multiple individual formats. In Excel this is a \char`\"{}\+Cell Style\char`\"{}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structxlnt_1_1date}{date}}
+\begin{DoxyCompactList}\small\item\em A date is a specific day specified in terms of a year, month, and day. It can also be initialized as a number of days since a base date using \mbox{\hyperlink{structxlnt_1_1date_a687843bb38ce593c75593e5d90ebd23e}{date\+::from\+\_\+number}}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structxlnt_1_1datetime}{datetime}}
+\begin{DoxyCompactList}\small\item\em A datetime is a combination of a date and a time. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1exception}{exception}}
+\begin{DoxyCompactList}\small\item\em Parent type of all custom exceptions thrown in this library. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1invalid__parameter}{invalid\+\_\+parameter}}
+\begin{DoxyCompactList}\small\item\em Exception for a bad parameter value \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1invalid__sheet__title}{invalid\+\_\+sheet\+\_\+title}}
+\begin{DoxyCompactList}\small\item\em Exception for bad sheet names. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1missing__number__format}{missing\+\_\+number\+\_\+format}}
+\begin{DoxyCompactList}\small\item\em Exception when a referenced number format is not in the stylesheet. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1invalid__file}{invalid\+\_\+file}}
+\begin{DoxyCompactList}\small\item\em Exception for trying to open a non-\/\+XLSX file. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1illegal__character}{illegal\+\_\+character}}
+\begin{DoxyCompactList}\small\item\em The data submitted which cannot be used directly in Excel files. It must be removed or escaped. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1invalid__data__type}{invalid\+\_\+data\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Exception for any data type inconsistencies. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1invalid__column__index}{invalid\+\_\+column\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em Exception for bad column indices in A1-\/style cell references. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1invalid__cell__reference}{invalid\+\_\+cell\+\_\+reference}}
+\begin{DoxyCompactList}\small\item\em Exception for converting between numeric and A1-\/style cell references. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}}
+\begin{DoxyCompactList}\small\item\em Exception when setting a class\textquotesingle{}s attribute to an invalid value \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1key__not__found}{key\+\_\+not\+\_\+found}}
+\begin{DoxyCompactList}\small\item\em Exception for a key that doesn\textquotesingle{}t exist in a container \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1no__visible__worksheets}{no\+\_\+visible\+\_\+worksheets}}
+\begin{DoxyCompactList}\small\item\em Exception for a workbook with no visible worksheets \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1unhandled__switch__case}{unhandled\+\_\+switch\+\_\+case}}
+\begin{DoxyCompactList}\small\item\em Debug exception for a switch that fell through to the default case \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1unsupported}{unsupported}}
+\begin{DoxyCompactList}\small\item\em Exception for attempting to use a feature which is not supported \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1path}{path}}
+\begin{DoxyCompactList}\small\item\em Encapsulates a path that points to location in a filesystem. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structxlnt_1_1scoped__enum__hash}{scoped\+\_\+enum\+\_\+hash}}
+\begin{DoxyCompactList}\small\item\em Allows a scoped enum (aka \char`\"{}enum class\char`\"{}) to be used as a key in a std\+::unordered\+\_\+map. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structxlnt_1_1time}{time}}
+\begin{DoxyCompactList}\small\item\em A time is a specific time of the day specified in terms of an hour, minute, second, and microsecond (0-\/999999). It can also be initialized as a fraction of a day using \mbox{\hyperlink{structxlnt_1_1time_a57fc697aa54ed9c2efbc39c1a72696ec}{time\+::from\+\_\+number}}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structxlnt_1_1timedelta}{timedelta}}
+\begin{DoxyCompactList}\small\item\em Represents a span of time between two datetimes. This is not fully supported yet throughout the library. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1variant}{variant}}
+\begin{DoxyCompactList}\small\item\em Represents an object that can have variable type. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1calculation__properties}{calculation\+\_\+properties}}
+\begin{DoxyCompactList}\small\item\em Workbook file properties relating to calculations. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1document__security}{document\+\_\+security}}
+\begin{DoxyCompactList}\small\item\em Properties governing how the data in a workbook should be protected. These values can be ignored by consumers. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1external__book}{external\+\_\+book}}
+\begin{DoxyCompactList}\small\item\em A reference to an external workbook for use in formulae. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1named__range}{named\+\_\+range}}
+\begin{DoxyCompactList}\small\item\em A 2D range of cells in a worksheet that is referred to by name. ws-\/$>$range(\char`\"{}\+A1\+:\+B2\char`\"{}) could be replaced by ws-\/$>$range(\char`\"{}range1\char`\"{}) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader}{streaming\+\_\+workbook\+\_\+reader}}
+\begin{DoxyCompactList}\small\item\em workbook is the container for all other parts of the document. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1streaming__workbook__writer}{streaming\+\_\+workbook\+\_\+writer}}
+\begin{DoxyCompactList}\small\item\em workbook is the container for all other parts of the document. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1theme}{theme}}
+\begin{DoxyCompactList}\small\item\em A theme is a combination of fonts, colors, and effects. This isn\textquotesingle{}t really supported yet. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}}
+\begin{DoxyCompactList}\small\item\em workbook is the container for all other parts of the document. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1workbook__view}{workbook\+\_\+view}}
+\begin{DoxyCompactList}\small\item\em A workbook can be opened in multiple windows with different views. This class represents a particular view used by one window. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1worksheet__iterator}{worksheet\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em An iterator which is used to iterate over the worksheets in a workbook. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1const__worksheet__iterator}{const\+\_\+worksheet\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em An iterator which is used to iterate over the worksheets in a const workbook. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1cell__iterator}{cell\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em A cell iterator iterates over a 1D range by row or by column. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1const__cell__iterator}{const\+\_\+cell\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em A cell iterator iterates over a 1D range by row or by column. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}}
+\begin{DoxyCompactList}\small\item\em A cell vector is a linear (1D) range of cells, either vertical or horizontal depending on the major order specified in the constructor. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1column__properties}{column\+\_\+properties}}
+\begin{DoxyCompactList}\small\item\em Properties applied to a column in a worksheet. Columns can have a size and a style. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1header__footer}{header\+\_\+footer}}
+\begin{DoxyCompactList}\small\item\em Represents the header and footer of a sheet in a workbook. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1page__margins}{page\+\_\+margins}}
+\begin{DoxyCompactList}\small\item\em Describes the margins around a worksheet for printing. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structxlnt_1_1page__setup}{page\+\_\+setup}}
+\begin{DoxyCompactList}\small\item\em Describes how a worksheet will be converted into a page during printing. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structxlnt_1_1pane}{pane}}
+\begin{DoxyCompactList}\small\item\em A fixed portion of a worksheet. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1phonetic__pr}{phonetic\+\_\+pr}}
+\begin{DoxyCompactList}\small\item\em Phonetic properties Element provides a collection of properties that affect display of East Asian Languages \mbox{[}Serialised phonetic\+Pr\mbox{]} \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structxlnt_1_1print__options}{print\+\_\+options}}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1range}{range}}
+\begin{DoxyCompactList}\small\item\em A range is a 2D collection of cells with defined extens that can be iterated upon. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em An iterator used by worksheet and range for traversing a 2D grid of cells by row/column then across that row/column. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1const__range__iterator}{const\+\_\+range\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em A const version of \mbox{\hyperlink{classxlnt_1_1range__iterator}{range\+\_\+iterator}} which does not allow modification to the dereferenced \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} describes a rectangular area of a worksheet with positive width and height defined by a top-\/left and bottom-\/right corner. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1row__properties}{row\+\_\+properties}}
+\begin{DoxyCompactList}\small\item\em The properties of a row in a worksheet. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1selection}{selection}}
+\begin{DoxyCompactList}\small\item\em The selected area of a worksheet. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1sheet__format__properties}{sheet\+\_\+format\+\_\+properties}}
+\begin{DoxyCompactList}\small\item\em General worksheet formatting properties. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structxlnt_1_1sheet__pr}{sheet\+\_\+pr}}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1sheet__protection}{sheet\+\_\+protection}}
+\begin{DoxyCompactList}\small\item\em Protection applied to a particular worksheet to prevent it from being modified. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1sheet__view}{sheet\+\_\+view}}
+\begin{DoxyCompactList}\small\item\em Describes a view of a worksheet. Worksheets can have multiple views which show the data differently. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}
+\begin{DoxyCompactList}\small\item\em A worksheet is a 2D array of cells starting with cell A1 in the top-\/left corner and extending indefinitely down and right as needed. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classxlnt_1_1python__streambuf}{python\+\_\+streambuf}}
+\item 
+struct \mbox{\hyperlink{structxlnt_1_1constants}{constants}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} = std\+::uint32\+\_\+t
+\begin{DoxyCompactList}\small\item\em All rows should be referred to by an instance of this type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacexlnt_a8dc0eda024e26470579fd066826f64f3}{row\+\_\+or\+\_\+col\+\_\+t}} \+: int \{ \mbox{\hyperlink{namespacexlnt_a8dc0eda024e26470579fd066826f64f3af1965a857bc285d26fe22023aa5ab50d}{row}}
+, \mbox{\hyperlink{namespacexlnt_a8dc0eda024e26470579fd066826f64f3a1afd32818d1c9525f82aff4c09efd254}{column}}
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacexlnt_a48b08fbcfa6c350d50d193b4f3feb0a1}{color\+\_\+type}} \{ \mbox{\hyperlink{namespacexlnt_a48b08fbcfa6c350d50d193b4f3feb0a1a7efb96e1de8fcda98dee6e2a29a521f0}{indexed}}
+, \mbox{\hyperlink{namespacexlnt_a48b08fbcfa6c350d50d193b4f3feb0a1af484570d7cf557020e11ace406901b10}{theme}}
+, \mbox{\hyperlink{namespacexlnt_a48b08fbcfa6c350d50d193b4f3feb0a1aef70a6546536ccd835479f6cddc0188e}{rgb}}
+ \}
+\begin{DoxyCompactList}\small\item\em Some colors are references to colors rather than having a particular RGB value. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029d}{core\+\_\+property}} \{ \newline
+\mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029dac4ef352f74e502ef5e7bc98e6f4e493d}{category}}
+, \mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da1c0020a801c87fc4f059dcc2a113e632}{content\+\_\+status}}
+, \mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029dae2fa538867c3830a859a5b17ab24644b}{created}}
+, \mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029daee2433259b0fe399b40e81d2c98a38b6}{creator}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da67daf92c833c41c95db874e18fcb2786}{description}}
+, \mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029daf393f3f5e496869a15bc72cbfd56f541}{identifier}}
+, \mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da59aeb2c9970b7b25be2fab2317e31fcb}{keywords}}
+, \mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da8512ae7d57b1396273f76fe6ed341a23}{language}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da473795ce4b1f1eff494b35c914f579d3}{last\+\_\+modified\+\_\+by}}
+, \mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da7665c7ff6d2dd1d2062f59073b3cf1a0}{last\+\_\+printed}}
+, \mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da9ae73c65f418e6f79ceb4f0e4a4b98d5}{modified}}
+, \mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029dab5f927bae9a11c2967a368e3e9bd9e75}{revision}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029dab5e3374e43f6544852f7751dfc529100}{subject}}
+, \mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029dad5d3db1765287eef77d7927cc956f50a}{title}}
+, \mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da2af72f100c356273d46284f6fd1dfc08}{version}}
+ \}
+\begin{DoxyCompactList}\small\item\em Every core property in a workbook must be one of these types. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5}{extended\+\_\+property}} \{ \newline
+\mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a3676d55f84497cbeadfc614c1b1b62fc}{application}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a5e603fe8549380dcb8b43465eef93edd}{app\+\_\+version}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a2593c7ce3ff937293feb1e61c152e551}{characters}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5aa9e18381fda96489c3b7acc605bce3cd}{characters\+\_\+with\+\_\+spaces}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a93c731f1c3a84ef05cd54d044c379eaa}{company}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5ab4ebbdcbd4e3f3ee3496c0a6297aa034}{dig\+\_\+sig}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5afcd4b06a11e1941cf0590ab7208c8293}{doc\+\_\+security}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a9b9157340a1bfcdad9ca36c5e50f1962}{heading\+\_\+pairs}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5aa85a2c42db352712814114ab409bb394}{hidden\+\_\+slides}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5ac0bc14d36ed9e270b38bc8348b23f0d0}{h\+\_\+links}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a82493a2f628b27c2a73c23b49ca01e6a}{hyperlink\+\_\+base}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5aa920557033f86d6ad96c2129714b11d4}{hyperlinks\+\_\+changed}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a980da98409d058c365664ff7ea33dd6b}{lines}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5ac3cb81b049eaa85c73a4de84e4d5bbd5}{links\+\_\+up\+\_\+to\+\_\+date}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a1d0258c2440a8d19e716292b231e3190}{manager}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a834859a15c5769d5658a51e2381eb80e}{m\+\_\+m\+\_\+clips}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a4358b5009c67d0e31d7fbf1663fcd3bf}{notes}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5ab3b32a2d422265cd25c3323ed0157f81}{pages}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5ad070fd4ebb68ed9399034d1a708e978c}{paragraphs}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a2ef1bc10c171978d2c8804a0378c66a9}{presentation\+\_\+format}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a79519e6e6d5f987eba8fec956ef3569a}{scale\+\_\+crop}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a759626e7be199f37a261c5fb1b26fcf5}{shared\+\_\+doc}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5af4d5c52946e476c66dfc36433c82aa78}{slides}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a8dbe92c724f41906fcb820e6d873a5a0}{template\+\_\+}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a6db91eda377b1f25258bcb59971b1f3c}{titles\+\_\+of\+\_\+parts}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a843b9f46c0bf720976d53057a3b40877}{total\+\_\+time}}
+, \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a89759e1284e2479b991d2669de104942}{words}}
+ \}
+\begin{DoxyCompactList}\small\item\em Every extended property in a workbook must be one of these types. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespacexlnt_ab0c3101c39024923299c02588cf84fab}{sheet\+\_\+view\+\_\+type}} \{ \mbox{\hyperlink{namespacexlnt_ab0c3101c39024923299c02588cf84fabafea087517c26fadd409bd4b9dc642555}{normal}}
+, \mbox{\hyperlink{namespacexlnt_ab0c3101c39024923299c02588cf84faba773fe03eb8113c0fe5cc533ce4a4e71f}{page\+\_\+break\+\_\+preview}}
+, \mbox{\hyperlink{namespacexlnt_ab0c3101c39024923299c02588cf84faba23552f57484c5ed0ce8301c052df8b09}{page\+\_\+layout}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of possible types of sheet views \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool \mbox{\hyperlink{namespacexlnt_a87898d966ebb2cf7326f2ef778daad96}{operator==}} (std\+::nullptr\+\_\+t, const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \&\mbox{\hyperlink{classxlnt_1_1cell}{cell}})
+\begin{DoxyCompactList}\small\item\em Returns true if this cell is uninitialized. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool \mbox{\hyperlink{namespacexlnt_a7802113e587a86dcfc4bdc0ccd404ab3}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \&\mbox{\hyperlink{classxlnt_1_1cell}{cell}}, std\+::nullptr\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Returns true if this cell is uninitialized. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} std\+::ostream \& \mbox{\hyperlink{namespacexlnt_a51a9f54016ae86168addb7eea204212d}{operator$<$$<$}} (std\+::ostream \&stream, const \mbox{\hyperlink{classxlnt_1_1cell}{xlnt\+::cell}} \&\mbox{\hyperlink{classxlnt_1_1cell}{cell}})
+\begin{DoxyCompactList}\small\item\em Convenience function for writing cell to an ostream. Uses \mbox{\hyperlink{classxlnt_1_1cell_a7a51abb90f9e716f242512a9f53cf09a}{cell\+::to\+\_\+string()}} internally. \end{DoxyCompactList}\item 
+template$<$$>$ std\+::string \mbox{\hyperlink{namespacexlnt_a415ca763052fe616a4d8372bccb7f684}{cell\+::value$<$ std\+::string $>$}} () const
+\item 
+bool \mbox{\hyperlink{namespacexlnt_a65c4210b114358a6ccfcdb89537f0d5a}{operator==}} (const \mbox{\hyperlink{structxlnt_1_1ext__list_1_1ext}{ext\+\_\+list\+::ext}} \&lhs, const \mbox{\hyperlink{structxlnt_1_1ext__list_1_1ext}{ext\+\_\+list\+::ext}} \&rhs)
+\item 
+bool \mbox{\hyperlink{namespacexlnt_a7b9126cda8582b08af4bc56649da73c2}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1calculation__properties}{calculation\+\_\+properties}} \&lhs, const \mbox{\hyperlink{classxlnt_1_1calculation__properties}{calculation\+\_\+properties}} \&rhs)
+\item 
+bool \mbox{\hyperlink{namespacexlnt_affb2440325ffde78da1573704a2e5464}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1workbook__view}{workbook\+\_\+view}} \&lhs, const \mbox{\hyperlink{classxlnt_1_1workbook__view}{workbook\+\_\+view}} \&rhs)
+\item 
+bool \mbox{\hyperlink{namespacexlnt_a2b842e584ae4c71e0a38a963b8197958}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1column__properties}{column\+\_\+properties}} \&lhs, const \mbox{\hyperlink{classxlnt_1_1column__properties}{column\+\_\+properties}} \&rhs)
+\item 
+bool \mbox{\hyperlink{namespacexlnt_acdaaf06ed7df2cf86601ac4e1c4b4402}{operator==}} (const \mbox{\hyperlink{structxlnt_1_1print__options}{print\+\_\+options}} \&lhs, const \mbox{\hyperlink{structxlnt_1_1print__options}{print\+\_\+options}} \&rhs)
+\item 
+\mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool \mbox{\hyperlink{namespacexlnt_af23cf5411c67ef324e627ccc9ab45c7b}{operator==}} (const std\+::string \&reference\+\_\+string, const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&ref)
+\begin{DoxyCompactList}\small\item\em Returns true if the string representation of the range is equivalent to ref. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool \mbox{\hyperlink{namespacexlnt_a5b38d0aa27eacd5908295d0bb6ae2271}{operator==}} (const char $\ast$reference\+\_\+string, const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&ref)
+\begin{DoxyCompactList}\small\item\em Returns true if the string representation of the range is equivalent to ref. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool \mbox{\hyperlink{namespacexlnt_a427646713a34d6803c6338e09315c84e}{operator!=}} (const std\+::string \&reference\+\_\+string, const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&ref)
+\begin{DoxyCompactList}\small\item\em Returns true if the string representation of the range is not equivalent to ref. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool \mbox{\hyperlink{namespacexlnt_a7f1bbdd14fd50ad785111d2e4da32649}{operator!=}} (const char $\ast$reference\+\_\+string, const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&ref)
+\begin{DoxyCompactList}\small\item\em Returns true if the string representation of the range is not equivalent to ref. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacexlnt_a952330fed611130a362aa8446d010314}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1row__properties}{row\+\_\+properties}} \&lhs, const \mbox{\hyperlink{classxlnt_1_1row__properties}{row\+\_\+properties}} \&rhs)
+\item 
+bool \mbox{\hyperlink{namespacexlnt_a96bd5f3d5578fdcac8a60d1c096792f4}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1sheet__format__properties}{sheet\+\_\+format\+\_\+properties}} \&lhs, const \mbox{\hyperlink{classxlnt_1_1sheet__format__properties}{sheet\+\_\+format\+\_\+properties}} \&rhs)
+\item 
+bool \mbox{\hyperlink{namespacexlnt_a62c97b6b6850a20033805905884e80a1}{operator==}} (const \mbox{\hyperlink{structxlnt_1_1sheet__pr}{sheet\+\_\+pr}} \&lhs, const \mbox{\hyperlink{structxlnt_1_1sheet__pr}{sheet\+\_\+pr}} \&rhs)
+\item 
+\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \mbox{\hyperlink{namespacexlnt_aebe47f0cf2f86bdb768820ae1344075c}{operator+}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} lhs, const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&rhs)
+\item 
+\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \mbox{\hyperlink{namespacexlnt_a386259a67eebc150448a71bf30887be9}{operator-\/}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} lhs, const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&rhs)
+\item 
+bool \mbox{\hyperlink{namespacexlnt_abaddfecdb4c1d97c4a6bfd234816f2ad}{operator$>$}} (const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}, const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}})
+\item 
+bool \mbox{\hyperlink{namespacexlnt_aed3d660dcbef0a8b8ee76d612cd4750d}{operator$>$=}} (const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}, const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}})
+\item 
+bool \mbox{\hyperlink{namespacexlnt_aa385c45b3ae3f25ad0e665f2d3e9d663}{operator$<$}} (const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}, const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}})
+\item 
+bool \mbox{\hyperlink{namespacexlnt_ad3421f4f5c8a1b2a590baaa1a54f22e4}{operator$<$=}} (const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}, const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}})
+\item 
+void \mbox{\hyperlink{namespacexlnt_af71f79e47be6a25b150550b994f3d306}{swap}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}, \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}})
+\item 
+const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \& \mbox{\hyperlink{namespacexlnt_aaea1ec35281e76156330bf4788ba0394}{excel\+\_\+thumbnail}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Enumerates the possible types a cell can be determined by it\textquotesingle{}s current value. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}\label{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}} 
+\index{xlnt@{xlnt}!row\_t@{row\_t}}
+\index{row\_t@{row\_t}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{row\_t}{row\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{xlnt\+::row\+\_\+t}} = typedef std\+::uint32\+\_\+t}
+
+
+
+All rows should be referred to by an instance of this type. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacexlnt_a48b08fbcfa6c350d50d193b4f3feb0a1}\label{namespacexlnt_a48b08fbcfa6c350d50d193b4f3feb0a1}} 
+\index{xlnt@{xlnt}!color\_type@{color\_type}}
+\index{color\_type@{color\_type}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{color\_type}{color\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacexlnt_a48b08fbcfa6c350d50d193b4f3feb0a1}{xlnt\+::color\+\_\+type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Some colors are references to colors rather than having a particular RGB value. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{indexed@{indexed}!xlnt@{xlnt}}\index{xlnt@{xlnt}!indexed@{indexed}}}\mbox{\Hypertarget{namespacexlnt_a48b08fbcfa6c350d50d193b4f3feb0a1a7efb96e1de8fcda98dee6e2a29a521f0}\label{namespacexlnt_a48b08fbcfa6c350d50d193b4f3feb0a1a7efb96e1de8fcda98dee6e2a29a521f0}} 
+indexed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{theme@{theme}!xlnt@{xlnt}}\index{xlnt@{xlnt}!theme@{theme}}}\mbox{\Hypertarget{namespacexlnt_a48b08fbcfa6c350d50d193b4f3feb0a1af484570d7cf557020e11ace406901b10}\label{namespacexlnt_a48b08fbcfa6c350d50d193b4f3feb0a1af484570d7cf557020e11ace406901b10}} 
+theme&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{rgb@{rgb}!xlnt@{xlnt}}\index{xlnt@{xlnt}!rgb@{rgb}}}\mbox{\Hypertarget{namespacexlnt_a48b08fbcfa6c350d50d193b4f3feb0a1aef70a6546536ccd835479f6cddc0188e}\label{namespacexlnt_a48b08fbcfa6c350d50d193b4f3feb0a1aef70a6546536ccd835479f6cddc0188e}} 
+rgb&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacexlnt_a71da3b08e3863a52b72b08a571ec029d}\label{namespacexlnt_a71da3b08e3863a52b72b08a571ec029d}} 
+\index{xlnt@{xlnt}!core\_property@{core\_property}}
+\index{core\_property@{core\_property}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{core\_property}{core\_property}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacexlnt_a71da3b08e3863a52b72b08a571ec029d}{xlnt\+::core\+\_\+property}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Every core property in a workbook must be one of these types. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{category@{category}!xlnt@{xlnt}}\index{xlnt@{xlnt}!category@{category}}}\mbox{\Hypertarget{namespacexlnt_a71da3b08e3863a52b72b08a571ec029dac4ef352f74e502ef5e7bc98e6f4e493d}\label{namespacexlnt_a71da3b08e3863a52b72b08a571ec029dac4ef352f74e502ef5e7bc98e6f4e493d}} 
+category&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{content\_status@{content\_status}!xlnt@{xlnt}}\index{xlnt@{xlnt}!content\_status@{content\_status}}}\mbox{\Hypertarget{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da1c0020a801c87fc4f059dcc2a113e632}\label{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da1c0020a801c87fc4f059dcc2a113e632}} 
+content\+\_\+status&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{created@{created}!xlnt@{xlnt}}\index{xlnt@{xlnt}!created@{created}}}\mbox{\Hypertarget{namespacexlnt_a71da3b08e3863a52b72b08a571ec029dae2fa538867c3830a859a5b17ab24644b}\label{namespacexlnt_a71da3b08e3863a52b72b08a571ec029dae2fa538867c3830a859a5b17ab24644b}} 
+created&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{creator@{creator}!xlnt@{xlnt}}\index{xlnt@{xlnt}!creator@{creator}}}\mbox{\Hypertarget{namespacexlnt_a71da3b08e3863a52b72b08a571ec029daee2433259b0fe399b40e81d2c98a38b6}\label{namespacexlnt_a71da3b08e3863a52b72b08a571ec029daee2433259b0fe399b40e81d2c98a38b6}} 
+creator&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{description@{description}!xlnt@{xlnt}}\index{xlnt@{xlnt}!description@{description}}}\mbox{\Hypertarget{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da67daf92c833c41c95db874e18fcb2786}\label{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da67daf92c833c41c95db874e18fcb2786}} 
+description&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{identifier@{identifier}!xlnt@{xlnt}}\index{xlnt@{xlnt}!identifier@{identifier}}}\mbox{\Hypertarget{namespacexlnt_a71da3b08e3863a52b72b08a571ec029daf393f3f5e496869a15bc72cbfd56f541}\label{namespacexlnt_a71da3b08e3863a52b72b08a571ec029daf393f3f5e496869a15bc72cbfd56f541}} 
+identifier&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{keywords@{keywords}!xlnt@{xlnt}}\index{xlnt@{xlnt}!keywords@{keywords}}}\mbox{\Hypertarget{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da59aeb2c9970b7b25be2fab2317e31fcb}\label{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da59aeb2c9970b7b25be2fab2317e31fcb}} 
+keywords&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{language@{language}!xlnt@{xlnt}}\index{xlnt@{xlnt}!language@{language}}}\mbox{\Hypertarget{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da8512ae7d57b1396273f76fe6ed341a23}\label{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da8512ae7d57b1396273f76fe6ed341a23}} 
+language&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{last\_modified\_by@{last\_modified\_by}!xlnt@{xlnt}}\index{xlnt@{xlnt}!last\_modified\_by@{last\_modified\_by}}}\mbox{\Hypertarget{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da473795ce4b1f1eff494b35c914f579d3}\label{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da473795ce4b1f1eff494b35c914f579d3}} 
+last\+\_\+modified\+\_\+by&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{last\_printed@{last\_printed}!xlnt@{xlnt}}\index{xlnt@{xlnt}!last\_printed@{last\_printed}}}\mbox{\Hypertarget{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da7665c7ff6d2dd1d2062f59073b3cf1a0}\label{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da7665c7ff6d2dd1d2062f59073b3cf1a0}} 
+last\+\_\+printed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{modified@{modified}!xlnt@{xlnt}}\index{xlnt@{xlnt}!modified@{modified}}}\mbox{\Hypertarget{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da9ae73c65f418e6f79ceb4f0e4a4b98d5}\label{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da9ae73c65f418e6f79ceb4f0e4a4b98d5}} 
+modified&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{revision@{revision}!xlnt@{xlnt}}\index{xlnt@{xlnt}!revision@{revision}}}\mbox{\Hypertarget{namespacexlnt_a71da3b08e3863a52b72b08a571ec029dab5f927bae9a11c2967a368e3e9bd9e75}\label{namespacexlnt_a71da3b08e3863a52b72b08a571ec029dab5f927bae9a11c2967a368e3e9bd9e75}} 
+revision&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{subject@{subject}!xlnt@{xlnt}}\index{xlnt@{xlnt}!subject@{subject}}}\mbox{\Hypertarget{namespacexlnt_a71da3b08e3863a52b72b08a571ec029dab5e3374e43f6544852f7751dfc529100}\label{namespacexlnt_a71da3b08e3863a52b72b08a571ec029dab5e3374e43f6544852f7751dfc529100}} 
+subject&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{title@{title}!xlnt@{xlnt}}\index{xlnt@{xlnt}!title@{title}}}\mbox{\Hypertarget{namespacexlnt_a71da3b08e3863a52b72b08a571ec029dad5d3db1765287eef77d7927cc956f50a}\label{namespacexlnt_a71da3b08e3863a52b72b08a571ec029dad5d3db1765287eef77d7927cc956f50a}} 
+title&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{version@{version}!xlnt@{xlnt}}\index{xlnt@{xlnt}!version@{version}}}\mbox{\Hypertarget{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da2af72f100c356273d46284f6fd1dfc08}\label{namespacexlnt_a71da3b08e3863a52b72b08a571ec029da2af72f100c356273d46284f6fd1dfc08}} 
+version&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5}} 
+\index{xlnt@{xlnt}!extended\_property@{extended\_property}}
+\index{extended\_property@{extended\_property}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{extended\_property}{extended\_property}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5}{xlnt\+::extended\+\_\+property}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Every extended property in a workbook must be one of these types. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{application@{application}!xlnt@{xlnt}}\index{xlnt@{xlnt}!application@{application}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a3676d55f84497cbeadfc614c1b1b62fc}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a3676d55f84497cbeadfc614c1b1b62fc}} 
+application&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{app\_version@{app\_version}!xlnt@{xlnt}}\index{xlnt@{xlnt}!app\_version@{app\_version}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a5e603fe8549380dcb8b43465eef93edd}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a5e603fe8549380dcb8b43465eef93edd}} 
+app\+\_\+version&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{characters@{characters}!xlnt@{xlnt}}\index{xlnt@{xlnt}!characters@{characters}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a2593c7ce3ff937293feb1e61c152e551}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a2593c7ce3ff937293feb1e61c152e551}} 
+characters&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{characters\_with\_spaces@{characters\_with\_spaces}!xlnt@{xlnt}}\index{xlnt@{xlnt}!characters\_with\_spaces@{characters\_with\_spaces}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5aa9e18381fda96489c3b7acc605bce3cd}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5aa9e18381fda96489c3b7acc605bce3cd}} 
+characters\+\_\+with\+\_\+spaces&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{company@{company}!xlnt@{xlnt}}\index{xlnt@{xlnt}!company@{company}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a93c731f1c3a84ef05cd54d044c379eaa}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a93c731f1c3a84ef05cd54d044c379eaa}} 
+company&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dig\_sig@{dig\_sig}!xlnt@{xlnt}}\index{xlnt@{xlnt}!dig\_sig@{dig\_sig}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5ab4ebbdcbd4e3f3ee3496c0a6297aa034}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5ab4ebbdcbd4e3f3ee3496c0a6297aa034}} 
+dig\+\_\+sig&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{doc\_security@{doc\_security}!xlnt@{xlnt}}\index{xlnt@{xlnt}!doc\_security@{doc\_security}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5afcd4b06a11e1941cf0590ab7208c8293}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5afcd4b06a11e1941cf0590ab7208c8293}} 
+doc\+\_\+security&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{heading\_pairs@{heading\_pairs}!xlnt@{xlnt}}\index{xlnt@{xlnt}!heading\_pairs@{heading\_pairs}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a9b9157340a1bfcdad9ca36c5e50f1962}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a9b9157340a1bfcdad9ca36c5e50f1962}} 
+heading\+\_\+pairs&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hidden\_slides@{hidden\_slides}!xlnt@{xlnt}}\index{xlnt@{xlnt}!hidden\_slides@{hidden\_slides}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5aa85a2c42db352712814114ab409bb394}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5aa85a2c42db352712814114ab409bb394}} 
+hidden\+\_\+slides&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{h\_links@{h\_links}!xlnt@{xlnt}}\index{xlnt@{xlnt}!h\_links@{h\_links}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5ac0bc14d36ed9e270b38bc8348b23f0d0}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5ac0bc14d36ed9e270b38bc8348b23f0d0}} 
+h\+\_\+links&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hyperlink\_base@{hyperlink\_base}!xlnt@{xlnt}}\index{xlnt@{xlnt}!hyperlink\_base@{hyperlink\_base}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a82493a2f628b27c2a73c23b49ca01e6a}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a82493a2f628b27c2a73c23b49ca01e6a}} 
+hyperlink\+\_\+base&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hyperlinks\_changed@{hyperlinks\_changed}!xlnt@{xlnt}}\index{xlnt@{xlnt}!hyperlinks\_changed@{hyperlinks\_changed}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5aa920557033f86d6ad96c2129714b11d4}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5aa920557033f86d6ad96c2129714b11d4}} 
+hyperlinks\+\_\+changed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{lines@{lines}!xlnt@{xlnt}}\index{xlnt@{xlnt}!lines@{lines}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a980da98409d058c365664ff7ea33dd6b}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a980da98409d058c365664ff7ea33dd6b}} 
+lines&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{links\_up\_to\_date@{links\_up\_to\_date}!xlnt@{xlnt}}\index{xlnt@{xlnt}!links\_up\_to\_date@{links\_up\_to\_date}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5ac3cb81b049eaa85c73a4de84e4d5bbd5}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5ac3cb81b049eaa85c73a4de84e4d5bbd5}} 
+links\+\_\+up\+\_\+to\+\_\+date&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{manager@{manager}!xlnt@{xlnt}}\index{xlnt@{xlnt}!manager@{manager}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a1d0258c2440a8d19e716292b231e3190}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a1d0258c2440a8d19e716292b231e3190}} 
+manager&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\_m\_clips@{m\_m\_clips}!xlnt@{xlnt}}\index{xlnt@{xlnt}!m\_m\_clips@{m\_m\_clips}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a834859a15c5769d5658a51e2381eb80e}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a834859a15c5769d5658a51e2381eb80e}} 
+m\+\_\+m\+\_\+clips&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{notes@{notes}!xlnt@{xlnt}}\index{xlnt@{xlnt}!notes@{notes}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a4358b5009c67d0e31d7fbf1663fcd3bf}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a4358b5009c67d0e31d7fbf1663fcd3bf}} 
+notes&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pages@{pages}!xlnt@{xlnt}}\index{xlnt@{xlnt}!pages@{pages}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5ab3b32a2d422265cd25c3323ed0157f81}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5ab3b32a2d422265cd25c3323ed0157f81}} 
+pages&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{paragraphs@{paragraphs}!xlnt@{xlnt}}\index{xlnt@{xlnt}!paragraphs@{paragraphs}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5ad070fd4ebb68ed9399034d1a708e978c}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5ad070fd4ebb68ed9399034d1a708e978c}} 
+paragraphs&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{presentation\_format@{presentation\_format}!xlnt@{xlnt}}\index{xlnt@{xlnt}!presentation\_format@{presentation\_format}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a2ef1bc10c171978d2c8804a0378c66a9}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a2ef1bc10c171978d2c8804a0378c66a9}} 
+presentation\+\_\+format&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{scale\_crop@{scale\_crop}!xlnt@{xlnt}}\index{xlnt@{xlnt}!scale\_crop@{scale\_crop}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a79519e6e6d5f987eba8fec956ef3569a}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a79519e6e6d5f987eba8fec956ef3569a}} 
+scale\+\_\+crop&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{shared\_doc@{shared\_doc}!xlnt@{xlnt}}\index{xlnt@{xlnt}!shared\_doc@{shared\_doc}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a759626e7be199f37a261c5fb1b26fcf5}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a759626e7be199f37a261c5fb1b26fcf5}} 
+shared\+\_\+doc&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{slides@{slides}!xlnt@{xlnt}}\index{xlnt@{xlnt}!slides@{slides}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5af4d5c52946e476c66dfc36433c82aa78}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5af4d5c52946e476c66dfc36433c82aa78}} 
+slides&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{template\_@{template\_}!xlnt@{xlnt}}\index{xlnt@{xlnt}!template\_@{template\_}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a8dbe92c724f41906fcb820e6d873a5a0}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a8dbe92c724f41906fcb820e6d873a5a0}} 
+template\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{titles\_of\_parts@{titles\_of\_parts}!xlnt@{xlnt}}\index{xlnt@{xlnt}!titles\_of\_parts@{titles\_of\_parts}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a6db91eda377b1f25258bcb59971b1f3c}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a6db91eda377b1f25258bcb59971b1f3c}} 
+titles\+\_\+of\+\_\+parts&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{total\_time@{total\_time}!xlnt@{xlnt}}\index{xlnt@{xlnt}!total\_time@{total\_time}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a843b9f46c0bf720976d53057a3b40877}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a843b9f46c0bf720976d53057a3b40877}} 
+total\+\_\+time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{words@{words}!xlnt@{xlnt}}\index{xlnt@{xlnt}!words@{words}}}\mbox{\Hypertarget{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a89759e1284e2479b991d2669de104942}\label{namespacexlnt_af19e407c73cf8ee3bd956e4f6ea490f5a89759e1284e2479b991d2669de104942}} 
+words&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacexlnt_a8dc0eda024e26470579fd066826f64f3}\label{namespacexlnt_a8dc0eda024e26470579fd066826f64f3}} 
+\index{xlnt@{xlnt}!row\_or\_col\_t@{row\_or\_col\_t}}
+\index{row\_or\_col\_t@{row\_or\_col\_t}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{row\_or\_col\_t}{row\_or\_col\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacexlnt_a8dc0eda024e26470579fd066826f64f3}{xlnt\+::row\+\_\+or\+\_\+col\+\_\+t}} \+: int\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{row@{row}!xlnt@{xlnt}}\index{xlnt@{xlnt}!row@{row}}}\mbox{\Hypertarget{namespacexlnt_a8dc0eda024e26470579fd066826f64f3af1965a857bc285d26fe22023aa5ab50d}\label{namespacexlnt_a8dc0eda024e26470579fd066826f64f3af1965a857bc285d26fe22023aa5ab50d}} 
+row&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{column@{column}!xlnt@{xlnt}}\index{xlnt@{xlnt}!column@{column}}}\mbox{\Hypertarget{namespacexlnt_a8dc0eda024e26470579fd066826f64f3a1afd32818d1c9525f82aff4c09efd254}\label{namespacexlnt_a8dc0eda024e26470579fd066826f64f3a1afd32818d1c9525f82aff4c09efd254}} 
+column&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacexlnt_ab0c3101c39024923299c02588cf84fab}\label{namespacexlnt_ab0c3101c39024923299c02588cf84fab}} 
+\index{xlnt@{xlnt}!sheet\_view\_type@{sheet\_view\_type}}
+\index{sheet\_view\_type@{sheet\_view\_type}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{sheet\_view\_type}{sheet\_view\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacexlnt_ab0c3101c39024923299c02588cf84fab}{xlnt\+::sheet\+\_\+view\+\_\+type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration of possible types of sheet views 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{normal@{normal}!xlnt@{xlnt}}\index{xlnt@{xlnt}!normal@{normal}}}\mbox{\Hypertarget{namespacexlnt_ab0c3101c39024923299c02588cf84fabafea087517c26fadd409bd4b9dc642555}\label{namespacexlnt_ab0c3101c39024923299c02588cf84fabafea087517c26fadd409bd4b9dc642555}} 
+normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{page\_break\_preview@{page\_break\_preview}!xlnt@{xlnt}}\index{xlnt@{xlnt}!page\_break\_preview@{page\_break\_preview}}}\mbox{\Hypertarget{namespacexlnt_ab0c3101c39024923299c02588cf84faba773fe03eb8113c0fe5cc533ce4a4e71f}\label{namespacexlnt_ab0c3101c39024923299c02588cf84faba773fe03eb8113c0fe5cc533ce4a4e71f}} 
+page\+\_\+break\+\_\+preview&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{page\_layout@{page\_layout}!xlnt@{xlnt}}\index{xlnt@{xlnt}!page\_layout@{page\_layout}}}\mbox{\Hypertarget{namespacexlnt_ab0c3101c39024923299c02588cf84faba23552f57484c5ed0ce8301c052df8b09}\label{namespacexlnt_ab0c3101c39024923299c02588cf84faba23552f57484c5ed0ce8301c052df8b09}} 
+page\+\_\+layout&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacexlnt_a415ca763052fe616a4d8372bccb7f684}\label{namespacexlnt_a415ca763052fe616a4d8372bccb7f684}} 
+\index{xlnt@{xlnt}!cell::value$<$ std::string $>$@{cell::value$<$ std::string $>$}}
+\index{cell::value$<$ std::string $>$@{cell::value$<$ std::string $>$}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{cell::value$<$ std::string $>$()}{cell::value< std::string >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+std\+::string \mbox{\hyperlink{classxlnt_1_1cell_a1e034f21e14e3eebe8d4059917537e13}{xlnt\+::cell\+::value}}$<$ std\+::string $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{namespacexlnt_aaea1ec35281e76156330bf4788ba0394}\label{namespacexlnt_aaea1ec35281e76156330bf4788ba0394}} 
+\index{xlnt@{xlnt}!excel\_thumbnail@{excel\_thumbnail}}
+\index{excel\_thumbnail@{excel\_thumbnail}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{excel\_thumbnail()}{excel\_thumbnail()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \& xlnt\+::excel\+\_\+thumbnail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacexlnt_a7f1bbdd14fd50ad785111d2e4da32649}\label{namespacexlnt_a7f1bbdd14fd50ad785111d2e4da32649}} 
+\index{xlnt@{xlnt}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool xlnt\+::operator!= (\begin{DoxyParamCaption}\item[{const char $\ast$}]{reference\+\_\+string,  }\item[{const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&}]{ref }\end{DoxyParamCaption})}
+
+
+
+Returns true if the string representation of the range is not equivalent to ref. 
+
+\mbox{\Hypertarget{namespacexlnt_a427646713a34d6803c6338e09315c84e}\label{namespacexlnt_a427646713a34d6803c6338e09315c84e}} 
+\index{xlnt@{xlnt}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool xlnt\+::operator!= (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{reference\+\_\+string,  }\item[{const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&}]{ref }\end{DoxyParamCaption})}
+
+
+
+Returns true if the string representation of the range is not equivalent to ref. 
+
+\mbox{\Hypertarget{namespacexlnt_aebe47f0cf2f86bdb768820ae1344075c}\label{namespacexlnt_aebe47f0cf2f86bdb768820ae1344075c}} 
+\index{xlnt@{xlnt}!operator+@{operator+}}
+\index{operator+@{operator+}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} xlnt\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}}]{lhs,  }\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacexlnt_a386259a67eebc150448a71bf30887be9}\label{namespacexlnt_a386259a67eebc150448a71bf30887be9}} 
+\index{xlnt@{xlnt}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} xlnt\+::operator-\/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}}]{lhs,  }\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacexlnt_aa385c45b3ae3f25ad0e665f2d3e9d663}\label{namespacexlnt_aa385c45b3ae3f25ad0e665f2d3e9d663}} 
+\index{xlnt@{xlnt}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool xlnt\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&}]{left,  }\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{right }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacexlnt_a51a9f54016ae86168addb7eea204212d}\label{namespacexlnt_a51a9f54016ae86168addb7eea204212d}} 
+\index{xlnt@{xlnt}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} std\+::ostream \& xlnt\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream,  }\item[{const \mbox{\hyperlink{classxlnt_1_1cell}{xlnt\+::cell}} \&}]{cell }\end{DoxyParamCaption})}
+
+
+
+Convenience function for writing cell to an ostream. Uses \mbox{\hyperlink{classxlnt_1_1cell_a7a51abb90f9e716f242512a9f53cf09a}{cell\+::to\+\_\+string()}} internally. 
+
+\mbox{\Hypertarget{namespacexlnt_ad3421f4f5c8a1b2a590baaa1a54f22e4}\label{namespacexlnt_ad3421f4f5c8a1b2a590baaa1a54f22e4}} 
+\index{xlnt@{xlnt}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily bool xlnt\+::operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&}]{left,  }\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{right }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacexlnt_a7b9126cda8582b08af4bc56649da73c2}\label{namespacexlnt_a7b9126cda8582b08af4bc56649da73c2}} 
+\index{xlnt@{xlnt}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily bool xlnt\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1calculation__properties}{calculation\+\_\+properties}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classxlnt_1_1calculation__properties}{calculation\+\_\+properties}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacexlnt_a7802113e587a86dcfc4bdc0ccd404ab3}\label{namespacexlnt_a7802113e587a86dcfc4bdc0ccd404ab3}} 
+\index{xlnt@{xlnt}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily bool xlnt\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \&}]{cell,  }\item[{std\+::nullptr\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns true if this cell is uninitialized. 
+
+\mbox{\Hypertarget{namespacexlnt_a5b38d0aa27eacd5908295d0bb6ae2271}\label{namespacexlnt_a5b38d0aa27eacd5908295d0bb6ae2271}} 
+\index{xlnt@{xlnt}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool xlnt\+::operator== (\begin{DoxyParamCaption}\item[{const char $\ast$}]{reference\+\_\+string,  }\item[{const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&}]{ref }\end{DoxyParamCaption})}
+
+
+
+Returns true if the string representation of the range is equivalent to ref. 
+
+\mbox{\Hypertarget{namespacexlnt_a2b842e584ae4c71e0a38a963b8197958}\label{namespacexlnt_a2b842e584ae4c71e0a38a963b8197958}} 
+\index{xlnt@{xlnt}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily bool xlnt\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__properties}{column\+\_\+properties}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classxlnt_1_1column__properties}{column\+\_\+properties}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacexlnt_a65c4210b114358a6ccfcdb89537f0d5a}\label{namespacexlnt_a65c4210b114358a6ccfcdb89537f0d5a}} 
+\index{xlnt@{xlnt}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily bool xlnt\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1ext__list_1_1ext}{ext\+\_\+list\+::ext}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{structxlnt_1_1ext__list_1_1ext}{ext\+\_\+list\+::ext}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacexlnt_acdaaf06ed7df2cf86601ac4e1c4b4402}\label{namespacexlnt_acdaaf06ed7df2cf86601ac4e1c4b4402}} 
+\index{xlnt@{xlnt}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily bool xlnt\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1print__options}{print\+\_\+options}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{structxlnt_1_1print__options}{print\+\_\+options}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacexlnt_a952330fed611130a362aa8446d010314}\label{namespacexlnt_a952330fed611130a362aa8446d010314}} 
+\index{xlnt@{xlnt}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily bool xlnt\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1row__properties}{row\+\_\+properties}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classxlnt_1_1row__properties}{row\+\_\+properties}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacexlnt_a96bd5f3d5578fdcac8a60d1c096792f4}\label{namespacexlnt_a96bd5f3d5578fdcac8a60d1c096792f4}} 
+\index{xlnt@{xlnt}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily bool xlnt\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1sheet__format__properties}{sheet\+\_\+format\+\_\+properties}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classxlnt_1_1sheet__format__properties}{sheet\+\_\+format\+\_\+properties}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacexlnt_a62c97b6b6850a20033805905884e80a1}\label{namespacexlnt_a62c97b6b6850a20033805905884e80a1}} 
+\index{xlnt@{xlnt}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily bool xlnt\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1sheet__pr}{sheet\+\_\+pr}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{structxlnt_1_1sheet__pr}{sheet\+\_\+pr}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacexlnt_af23cf5411c67ef324e627ccc9ab45c7b}\label{namespacexlnt_af23cf5411c67ef324e627ccc9ab45c7b}} 
+\index{xlnt@{xlnt}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{xlnt__config_8hpp_ad97fc05b85eba23053616e2fc11f8267}{XLNT\+\_\+\+API}} bool xlnt\+::operator== (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{reference\+\_\+string,  }\item[{const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&}]{ref }\end{DoxyParamCaption})}
+
+
+
+Returns true if the string representation of the range is equivalent to ref. 
+
+\mbox{\Hypertarget{namespacexlnt_affb2440325ffde78da1573704a2e5464}\label{namespacexlnt_affb2440325ffde78da1573704a2e5464}} 
+\index{xlnt@{xlnt}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily bool xlnt\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1workbook__view}{workbook\+\_\+view}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classxlnt_1_1workbook__view}{workbook\+\_\+view}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacexlnt_a87898d966ebb2cf7326f2ef778daad96}\label{namespacexlnt_a87898d966ebb2cf7326f2ef778daad96}} 
+\index{xlnt@{xlnt}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily bool xlnt\+::operator== (\begin{DoxyParamCaption}\item[{std\+::nullptr\+\_\+t}]{,  }\item[{const \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \&}]{cell }\end{DoxyParamCaption})}
+
+
+
+Returns true if this cell is uninitialized. 
+
+\mbox{\Hypertarget{namespacexlnt_abaddfecdb4c1d97c4a6bfd234816f2ad}\label{namespacexlnt_abaddfecdb4c1d97c4a6bfd234816f2ad}} 
+\index{xlnt@{xlnt}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool xlnt\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&}]{left,  }\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{right }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacexlnt_aed3d660dcbef0a8b8ee76d612cd4750d}\label{namespacexlnt_aed3d660dcbef0a8b8ee76d612cd4750d}} 
+\index{xlnt@{xlnt}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool xlnt\+::operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \&}]{left,  }\item[{const \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{right }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacexlnt_af71f79e47be6a25b150550b994f3d306}\label{namespacexlnt_af71f79e47be6a25b150550b994f3d306}} 
+\index{xlnt@{xlnt}!swap@{swap}}
+\index{swap@{swap}!xlnt@{xlnt}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void xlnt\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{left,  }\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \&}]{right }\end{DoxyParamCaption})}
+

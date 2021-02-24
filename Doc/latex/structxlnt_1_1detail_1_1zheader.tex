@@ -1,0 +1,123 @@
+\hypertarget{structxlnt_1_1detail_1_1zheader}{}\doxysection{xlnt\+::detail\+::zheader Struct Reference}
+\label{structxlnt_1_1detail_1_1zheader}\index{xlnt::detail::zheader@{xlnt::detail::zheader}}
+
+
+A structure representing the header that occurs before each compressed file in a ZIP archive and again at the end of the file with more information.  
+
+
+
+
+{\ttfamily \#include $<$zstream.\+hpp$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::uint16\+\_\+t \mbox{\hyperlink{structxlnt_1_1detail_1_1zheader_aab5d849f904fd4a2670bbd64d410fd82}{version}} = 20
+\item 
+std\+::uint16\+\_\+t \mbox{\hyperlink{structxlnt_1_1detail_1_1zheader_ac97ed696b5c9f57e91a57c1d2252af79}{flags}} = 0
+\item 
+std\+::uint16\+\_\+t \mbox{\hyperlink{structxlnt_1_1detail_1_1zheader_a8b79eb229ad66dfb354fb94dda45d04f}{compression\+\_\+type}} = 8
+\item 
+std\+::uint16\+\_\+t \mbox{\hyperlink{structxlnt_1_1detail_1_1zheader_a9921da16938b3a7ea04d69d558c22d5f}{stamp\+\_\+date}} = 0
+\item 
+std\+::uint16\+\_\+t \mbox{\hyperlink{structxlnt_1_1detail_1_1zheader_a70c9b3ee38600f84af61e6bcc7c5af39}{stamp\+\_\+time}} = 0
+\item 
+std\+::uint32\+\_\+t \mbox{\hyperlink{structxlnt_1_1detail_1_1zheader_a2d06349b0b75cd5c543d270fa4d9a8e8}{crc}} = 0
+\item 
+std\+::uint32\+\_\+t \mbox{\hyperlink{structxlnt_1_1detail_1_1zheader_ac089270a1d6a957dd062df47b49315a4}{compressed\+\_\+size}} = 0
+\item 
+std\+::uint32\+\_\+t \mbox{\hyperlink{structxlnt_1_1detail_1_1zheader_a967382469c84791808a9e32e4e9575d3}{uncompressed\+\_\+size}} = 0
+\item 
+std\+::string \mbox{\hyperlink{structxlnt_1_1detail_1_1zheader_ac533296cec9d726cc2281a03439a5f15}{filename}}
+\item 
+std\+::string \mbox{\hyperlink{structxlnt_1_1detail_1_1zheader_a9423dbe58293cac191922fbfe479c45a}{comment}}
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{structxlnt_1_1detail_1_1zheader_adbf0ca7548a5e9d05091ff002e691d27}{extra}}
+\item 
+std\+::uint32\+\_\+t \mbox{\hyperlink{structxlnt_1_1detail_1_1zheader_a5dc7e6a60e51231e067d8ee76add857b}{header\+\_\+offset}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A structure representing the header that occurs before each compressed file in a ZIP archive and again at the end of the file with more information. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1zheader_a9423dbe58293cac191922fbfe479c45a}\label{structxlnt_1_1detail_1_1zheader_a9423dbe58293cac191922fbfe479c45a}} 
+\index{xlnt::detail::zheader@{xlnt::detail::zheader}!comment@{comment}}
+\index{comment@{comment}!xlnt::detail::zheader@{xlnt::detail::zheader}}
+\doxysubsubsection{\texorpdfstring{comment}{comment}}
+{\footnotesize\ttfamily std\+::string xlnt\+::detail\+::zheader\+::comment}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1zheader_ac089270a1d6a957dd062df47b49315a4}\label{structxlnt_1_1detail_1_1zheader_ac089270a1d6a957dd062df47b49315a4}} 
+\index{xlnt::detail::zheader@{xlnt::detail::zheader}!compressed\_size@{compressed\_size}}
+\index{compressed\_size@{compressed\_size}!xlnt::detail::zheader@{xlnt::detail::zheader}}
+\doxysubsubsection{\texorpdfstring{compressed\_size}{compressed\_size}}
+{\footnotesize\ttfamily std\+::uint32\+\_\+t xlnt\+::detail\+::zheader\+::compressed\+\_\+size = 0}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1zheader_a8b79eb229ad66dfb354fb94dda45d04f}\label{structxlnt_1_1detail_1_1zheader_a8b79eb229ad66dfb354fb94dda45d04f}} 
+\index{xlnt::detail::zheader@{xlnt::detail::zheader}!compression\_type@{compression\_type}}
+\index{compression\_type@{compression\_type}!xlnt::detail::zheader@{xlnt::detail::zheader}}
+\doxysubsubsection{\texorpdfstring{compression\_type}{compression\_type}}
+{\footnotesize\ttfamily std\+::uint16\+\_\+t xlnt\+::detail\+::zheader\+::compression\+\_\+type = 8}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1zheader_a2d06349b0b75cd5c543d270fa4d9a8e8}\label{structxlnt_1_1detail_1_1zheader_a2d06349b0b75cd5c543d270fa4d9a8e8}} 
+\index{xlnt::detail::zheader@{xlnt::detail::zheader}!crc@{crc}}
+\index{crc@{crc}!xlnt::detail::zheader@{xlnt::detail::zheader}}
+\doxysubsubsection{\texorpdfstring{crc}{crc}}
+{\footnotesize\ttfamily std\+::uint32\+\_\+t xlnt\+::detail\+::zheader\+::crc = 0}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1zheader_adbf0ca7548a5e9d05091ff002e691d27}\label{structxlnt_1_1detail_1_1zheader_adbf0ca7548a5e9d05091ff002e691d27}} 
+\index{xlnt::detail::zheader@{xlnt::detail::zheader}!extra@{extra}}
+\index{extra@{extra}!xlnt::detail::zheader@{xlnt::detail::zheader}}
+\doxysubsubsection{\texorpdfstring{extra}{extra}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::uint8\+\_\+t$>$ xlnt\+::detail\+::zheader\+::extra}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1zheader_ac533296cec9d726cc2281a03439a5f15}\label{structxlnt_1_1detail_1_1zheader_ac533296cec9d726cc2281a03439a5f15}} 
+\index{xlnt::detail::zheader@{xlnt::detail::zheader}!filename@{filename}}
+\index{filename@{filename}!xlnt::detail::zheader@{xlnt::detail::zheader}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily std\+::string xlnt\+::detail\+::zheader\+::filename}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1zheader_ac97ed696b5c9f57e91a57c1d2252af79}\label{structxlnt_1_1detail_1_1zheader_ac97ed696b5c9f57e91a57c1d2252af79}} 
+\index{xlnt::detail::zheader@{xlnt::detail::zheader}!flags@{flags}}
+\index{flags@{flags}!xlnt::detail::zheader@{xlnt::detail::zheader}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily std\+::uint16\+\_\+t xlnt\+::detail\+::zheader\+::flags = 0}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1zheader_a5dc7e6a60e51231e067d8ee76add857b}\label{structxlnt_1_1detail_1_1zheader_a5dc7e6a60e51231e067d8ee76add857b}} 
+\index{xlnt::detail::zheader@{xlnt::detail::zheader}!header\_offset@{header\_offset}}
+\index{header\_offset@{header\_offset}!xlnt::detail::zheader@{xlnt::detail::zheader}}
+\doxysubsubsection{\texorpdfstring{header\_offset}{header\_offset}}
+{\footnotesize\ttfamily std\+::uint32\+\_\+t xlnt\+::detail\+::zheader\+::header\+\_\+offset = 0}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1zheader_a9921da16938b3a7ea04d69d558c22d5f}\label{structxlnt_1_1detail_1_1zheader_a9921da16938b3a7ea04d69d558c22d5f}} 
+\index{xlnt::detail::zheader@{xlnt::detail::zheader}!stamp\_date@{stamp\_date}}
+\index{stamp\_date@{stamp\_date}!xlnt::detail::zheader@{xlnt::detail::zheader}}
+\doxysubsubsection{\texorpdfstring{stamp\_date}{stamp\_date}}
+{\footnotesize\ttfamily std\+::uint16\+\_\+t xlnt\+::detail\+::zheader\+::stamp\+\_\+date = 0}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1zheader_a70c9b3ee38600f84af61e6bcc7c5af39}\label{structxlnt_1_1detail_1_1zheader_a70c9b3ee38600f84af61e6bcc7c5af39}} 
+\index{xlnt::detail::zheader@{xlnt::detail::zheader}!stamp\_time@{stamp\_time}}
+\index{stamp\_time@{stamp\_time}!xlnt::detail::zheader@{xlnt::detail::zheader}}
+\doxysubsubsection{\texorpdfstring{stamp\_time}{stamp\_time}}
+{\footnotesize\ttfamily std\+::uint16\+\_\+t xlnt\+::detail\+::zheader\+::stamp\+\_\+time = 0}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1zheader_a967382469c84791808a9e32e4e9575d3}\label{structxlnt_1_1detail_1_1zheader_a967382469c84791808a9e32e4e9575d3}} 
+\index{xlnt::detail::zheader@{xlnt::detail::zheader}!uncompressed\_size@{uncompressed\_size}}
+\index{uncompressed\_size@{uncompressed\_size}!xlnt::detail::zheader@{xlnt::detail::zheader}}
+\doxysubsubsection{\texorpdfstring{uncompressed\_size}{uncompressed\_size}}
+{\footnotesize\ttfamily std\+::uint32\+\_\+t xlnt\+::detail\+::zheader\+::uncompressed\+\_\+size = 0}
+
+\mbox{\Hypertarget{structxlnt_1_1detail_1_1zheader_aab5d849f904fd4a2670bbd64d410fd82}\label{structxlnt_1_1detail_1_1zheader_aab5d849f904fd4a2670bbd64d410fd82}} 
+\index{xlnt::detail::zheader@{xlnt::detail::zheader}!version@{version}}
+\index{version@{version}!xlnt::detail::zheader@{xlnt::detail::zheader}}
+\doxysubsubsection{\texorpdfstring{version}{version}}
+{\footnotesize\ttfamily std\+::uint16\+\_\+t xlnt\+::detail\+::zheader\+::version = 20}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/detail/serialization/\mbox{\hyperlink{zstream_8hpp}{zstream.\+hpp}}\end{DoxyCompactItemize}

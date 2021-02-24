@@ -1,0 +1,47 @@
+\hypertarget{test__suite_8hpp}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.5.0/tests/helpers/test\+\_\+suite.hpp File Reference}
+\label{test__suite_8hpp}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/tests/helpers/test\_suite.hpp@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/tests/helpers/test\_suite.hpp}}
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$helpers/assertions.\+hpp$>$}\newline
+{\ttfamily \#include $<$helpers/path\+\_\+helper.\+hpp$>$}\newline
+{\ttfamily \#include $<$helpers/timing.\+hpp$>$}\newline
+{\ttfamily \#include $<$helpers/xml\+\_\+helper.\+hpp$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtest__status}{test\+\_\+status}}
+\item 
+class \mbox{\hyperlink{classtest__suite}{test\+\_\+suite}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{test__suite_8hpp_a0bd0895f1a8ed5f61f9a64af5eec83f0}{register\+\_\+test}}(test)~register\+\_\+test\+\_\+internal(\mbox{[}this\mbox{]}() \{ test(); \}, \mbox{\hyperlink{test__suite_8hpp_a0215a5b68b11271ca0c3701d909b9add}{build\+\_\+name}}(\+\_\+\+\_\+\+FUNCTION\+\_\+\+\_\+, \#test));
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{test__suite_8hpp_a0215a5b68b11271ca0c3701d909b9add}{build\+\_\+name}} (const std\+::string \&pretty, const std\+::string \&method)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{test__suite_8hpp_a0bd0895f1a8ed5f61f9a64af5eec83f0}\label{test__suite_8hpp_a0bd0895f1a8ed5f61f9a64af5eec83f0}} 
+\index{test\_suite.hpp@{test\_suite.hpp}!register\_test@{register\_test}}
+\index{register\_test@{register\_test}!test\_suite.hpp@{test\_suite.hpp}}
+\doxysubsubsection{\texorpdfstring{register\_test}{register\_test}}
+{\footnotesize\ttfamily \#define register\+\_\+test(\begin{DoxyParamCaption}\item[{}]{test }\end{DoxyParamCaption})~register\+\_\+test\+\_\+internal(\mbox{[}this\mbox{]}() \{ test(); \}, \mbox{\hyperlink{test__suite_8hpp_a0215a5b68b11271ca0c3701d909b9add}{build\+\_\+name}}(\+\_\+\+\_\+\+FUNCTION\+\_\+\+\_\+, \#test));}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__suite_8hpp_a0215a5b68b11271ca0c3701d909b9add}\label{test__suite_8hpp_a0215a5b68b11271ca0c3701d909b9add}} 
+\index{test\_suite.hpp@{test\_suite.hpp}!build\_name@{build\_name}}
+\index{build\_name@{build\_name}!test\_suite.hpp@{test\_suite.hpp}}
+\doxysubsubsection{\texorpdfstring{build\_name()}{build\_name()}}
+{\footnotesize\ttfamily std\+::string build\+\_\+name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pretty,  }\item[{const std\+::string \&}]{method }\end{DoxyParamCaption})}
+

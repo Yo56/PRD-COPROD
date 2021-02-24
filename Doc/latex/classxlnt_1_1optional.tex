@@ -1,0 +1,268 @@
+\hypertarget{classxlnt_1_1optional}{}\doxysection{xlnt\+::optional$<$ T $>$ Class Template Reference}
+\label{classxlnt_1_1optional}\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+
+
+Many settings in xlnt are allowed to not have a value set. This class encapsulates a value which may or may not be set. Memory is allocated within the optional class.  
+
+
+
+
+{\ttfamily \#include $<$optional.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1optional_acedf3f5e541d8676733466d22437ac07}{optional}} () noexcept
+\begin{DoxyCompactList}\small\item\em Default contructor. \mbox{\hyperlink{classxlnt_1_1optional_a699e2f6ac064c6e9ed2df057333ef272}{is\+\_\+set()}} will be false initially. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1optional_aece097363228b6732af8532826e700c4}{optional}} (const T \&value) noexcept(\mbox{\hyperlink{optional_8hpp_aea90f3fc6e46914aa6e0edd308a3af4e}{XLNT\+\_\+\+NOEXCEPT\+\_\+\+VALUE\+\_\+\+COMPAT}}(ctor\+\_\+copy\+\_\+\+T\+\_\+noexcept\{\}))
+\begin{DoxyCompactList}\small\item\em Constructs this optional with a value. noexcept if T copy ctor is noexcept \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1optional_add30a25c587f83085124907878db3338}{optional}} (T \&\&value) noexcept(\mbox{\hyperlink{optional_8hpp_aea90f3fc6e46914aa6e0edd308a3af4e}{XLNT\+\_\+\+NOEXCEPT\+\_\+\+VALUE\+\_\+\+COMPAT}}(ctor\+\_\+move\+\_\+\+T\+\_\+noexcept\{\}))
+\begin{DoxyCompactList}\small\item\em Constructs this optional with a value. noexcept if T move ctor is noexcept \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1optional_aa3598338d41508f65995f41af537cbac}{optional}} (const \mbox{\hyperlink{classxlnt_1_1optional}{optional}} \&other) noexcept(\mbox{\hyperlink{optional_8hpp_aea90f3fc6e46914aa6e0edd308a3af4e}{XLNT\+\_\+\+NOEXCEPT\+\_\+\+VALUE\+\_\+\+COMPAT}}(copy\+\_\+ctor\+\_\+noexcept\{\}))
+\begin{DoxyCompactList}\small\item\em Copy constructs this optional from other noexcept if T copy ctor is noexcept \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1optional_abdaf5bba83f1f356593013e97a428b85}{optional}} (\mbox{\hyperlink{classxlnt_1_1optional}{optional}} \&\&other) noexcept(\mbox{\hyperlink{optional_8hpp_aea90f3fc6e46914aa6e0edd308a3af4e}{XLNT\+\_\+\+NOEXCEPT\+\_\+\+VALUE\+\_\+\+COMPAT}}(move\+\_\+ctor\+\_\+noexcept\{\}))
+\begin{DoxyCompactList}\small\item\em Move constructs this optional from other. Clears the value from other if set noexcept if T move ctor is noexcept \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}} \& \mbox{\hyperlink{classxlnt_1_1optional_a7b47c3299049daedd792b88aba493236}{operator=}} (const \mbox{\hyperlink{classxlnt_1_1optional}{optional}} \&other) noexcept(\mbox{\hyperlink{optional_8hpp_aea90f3fc6e46914aa6e0edd308a3af4e}{XLNT\+\_\+\+NOEXCEPT\+\_\+\+VALUE\+\_\+\+COMPAT}}(set\+\_\+copy\+\_\+noexcept\+\_\+t\{\} \&\&clear\+\_\+noexcept\+\_\+t\{\}))
+\begin{DoxyCompactList}\small\item\em Copy assignment of this optional from other noexcept if set and clear are noexcept for T\& \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}} \& \mbox{\hyperlink{classxlnt_1_1optional_aa596e2e500164364cfa0ea8dbb0df5cc}{operator=}} (\mbox{\hyperlink{classxlnt_1_1optional}{optional}} \&\&other) noexcept(\mbox{\hyperlink{optional_8hpp_aea90f3fc6e46914aa6e0edd308a3af4e}{XLNT\+\_\+\+NOEXCEPT\+\_\+\+VALUE\+\_\+\+COMPAT}}(set\+\_\+move\+\_\+noexcept\+\_\+t\{\} \&\&clear\+\_\+noexcept\+\_\+t\{\}))
+\begin{DoxyCompactList}\small\item\em Move assignment of this optional from other noexcept if set and clear are noexcept for T\&\& \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1optional_a6ac5ec8058d63db4ce1847961fd867ac}{$\sim$optional}} () noexcept
+\begin{DoxyCompactList}\small\item\em Destructor cleans up the T instance if set \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1optional_a699e2f6ac064c6e9ed2df057333ef272}{is\+\_\+set}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns true if this object currently has a value set. This should be called before accessing the value with \mbox{\hyperlink{classxlnt_1_1optional_a9b7ab8dc40108f1887274ac61261c605}{optional\+::get()}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1optional_ac444e04412d597d9b846e5e797585ded}{set}} (const T \&value) noexcept(\mbox{\hyperlink{optional_8hpp_aea90f3fc6e46914aa6e0edd308a3af4e}{XLNT\+\_\+\+NOEXCEPT\+\_\+\+VALUE\+\_\+\+COMPAT}}(set\+\_\+copy\+\_\+noexcept\+\_\+t\{\}))
+\begin{DoxyCompactList}\small\item\em Copies the value into the stored value \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1optional_ac57a2fbed642b5ff01dddd92de66e860}{set}} (T \&\&value) noexcept(\mbox{\hyperlink{optional_8hpp_aea90f3fc6e46914aa6e0edd308a3af4e}{XLNT\+\_\+\+NOEXCEPT\+\_\+\+VALUE\+\_\+\+COMPAT}}(set\+\_\+move\+\_\+noexcept\+\_\+t\{\}))
+\begin{DoxyCompactList}\small\item\em Moves the value into the stored value \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}} \& \mbox{\hyperlink{classxlnt_1_1optional_a74daf640ecb71b40a316454324984302}{operator=}} (const T \&rhs) noexcept(\mbox{\hyperlink{optional_8hpp_aea90f3fc6e46914aa6e0edd308a3af4e}{XLNT\+\_\+\+NOEXCEPT\+\_\+\+VALUE\+\_\+\+COMPAT}}(set\+\_\+copy\+\_\+noexcept\+\_\+t\{\}))
+\begin{DoxyCompactList}\small\item\em Assignment operator overload. Equivalent to setting the value using \mbox{\hyperlink{classxlnt_1_1optional_ac444e04412d597d9b846e5e797585ded}{optional\+::set}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}} \& \mbox{\hyperlink{classxlnt_1_1optional_a5763e3a52e36e4359006f86d5096fdad}{operator=}} (T \&\&rhs) noexcept(\mbox{\hyperlink{optional_8hpp_aea90f3fc6e46914aa6e0edd308a3af4e}{XLNT\+\_\+\+NOEXCEPT\+\_\+\+VALUE\+\_\+\+COMPAT}}(set\+\_\+move\+\_\+noexcept\+\_\+t\{\}))
+\begin{DoxyCompactList}\small\item\em Assignment operator overload. Equivalent to setting the value using \mbox{\hyperlink{classxlnt_1_1optional_ac444e04412d597d9b846e5e797585ded}{optional\+::set}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1optional_ae4d67c42b95e71781652f06a113a60cc}{clear}} () noexcept(\mbox{\hyperlink{optional_8hpp_aea90f3fc6e46914aa6e0edd308a3af4e}{XLNT\+\_\+\+NOEXCEPT\+\_\+\+VALUE\+\_\+\+COMPAT}}(clear\+\_\+noexcept\+\_\+t\{\}))
+\begin{DoxyCompactList}\small\item\em After this is called, \mbox{\hyperlink{classxlnt_1_1optional_a699e2f6ac064c6e9ed2df057333ef272}{is\+\_\+set()}} will return false until a new value is provided. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classxlnt_1_1optional_a9b7ab8dc40108f1887274ac61261c605}{get}} ()
+\begin{DoxyCompactList}\small\item\em Gets the value. If no value has been initialized in this object, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{xlnt\+::invalid\+\_\+attribute}} exception will be thrown. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classxlnt_1_1optional_a2cbf835dc08d686335f21b6dda82b641}{get}} () const
+\begin{DoxyCompactList}\small\item\em Gets the value. If no value has been initialized in this object, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{xlnt\+::invalid\+\_\+attribute}} exception will be thrown. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1optional_a7a8c849efef832c32fbbaeec35f96ef5}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ T $>$ \&other) const noexcept
+\begin{DoxyCompactList}\small\item\em Returns true if neither this nor other have a value or both have a value and those values are equal according to their equality operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1optional_ac1927d03f1240a2975eec55e36602b68}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ T $>$ \&other) const noexcept
+\begin{DoxyCompactList}\small\item\em Returns false if neither this nor other have a value or both have a value and those values are equal according to their equality operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class xlnt\+::optional$<$ T $>$}
+
+Many settings in xlnt are allowed to not have a value set. This class encapsulates a value which may or may not be set. Memory is allocated within the optional class. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1optional_acedf3f5e541d8676733466d22437ac07}\label{classxlnt_1_1optional_acedf3f5e541d8676733466d22437ac07}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!optional@{optional}}
+\index{optional@{optional}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{optional()}{optional()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::\mbox{\hyperlink{classxlnt_1_1optional}{optional}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Default contructor. \mbox{\hyperlink{classxlnt_1_1optional_a699e2f6ac064c6e9ed2df057333ef272}{is\+\_\+set()}} will be false initially. 
+
+\mbox{\Hypertarget{classxlnt_1_1optional_aece097363228b6732af8532826e700c4}\label{classxlnt_1_1optional_aece097363228b6732af8532826e700c4}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!optional@{optional}}
+\index{optional@{optional}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{optional()}{optional()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::\mbox{\hyperlink{classxlnt_1_1optional}{optional}} (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Constructs this optional with a value. noexcept if T copy ctor is noexcept 
+
+\mbox{\Hypertarget{classxlnt_1_1optional_add30a25c587f83085124907878db3338}\label{classxlnt_1_1optional_add30a25c587f83085124907878db3338}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!optional@{optional}}
+\index{optional@{optional}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{optional()}{optional()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::\mbox{\hyperlink{classxlnt_1_1optional}{optional}} (\begin{DoxyParamCaption}\item[{T \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Constructs this optional with a value. noexcept if T move ctor is noexcept 
+
+\mbox{\Hypertarget{classxlnt_1_1optional_aa3598338d41508f65995f41af537cbac}\label{classxlnt_1_1optional_aa3598338d41508f65995f41af537cbac}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!optional@{optional}}
+\index{optional@{optional}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{optional()}{optional()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::\mbox{\hyperlink{classxlnt_1_1optional}{optional}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Copy constructs this optional from other noexcept if T copy ctor is noexcept 
+
+\mbox{\Hypertarget{classxlnt_1_1optional_abdaf5bba83f1f356593013e97a428b85}\label{classxlnt_1_1optional_abdaf5bba83f1f356593013e97a428b85}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!optional@{optional}}
+\index{optional@{optional}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{optional()}{optional()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::\mbox{\hyperlink{classxlnt_1_1optional}{optional}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ T $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructs this optional from other. Clears the value from other if set noexcept if T move ctor is noexcept 
+
+\mbox{\Hypertarget{classxlnt_1_1optional_a6ac5ec8058d63db4ce1847961fd867ac}\label{classxlnt_1_1optional_a6ac5ec8058d63db4ce1847961fd867ac}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!````~optional@{$\sim$optional}}
+\index{````~optional@{$\sim$optional}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$optional()}{~optional()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classxlnt_1_1optional}{optional}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Destructor cleans up the T instance if set 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1optional_ae4d67c42b95e71781652f06a113a60cc}\label{classxlnt_1_1optional_ae4d67c42b95e71781652f06a113a60cc}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+After this is called, \mbox{\hyperlink{classxlnt_1_1optional_a699e2f6ac064c6e9ed2df057333ef272}{is\+\_\+set()}} will return false until a new value is provided. 
+
+\mbox{\Hypertarget{classxlnt_1_1optional_a9b7ab8dc40108f1887274ac61261c605}\label{classxlnt_1_1optional_a9b7ab8dc40108f1887274ac61261c605}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!get@{get}}
+\index{get@{get}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the value. If no value has been initialized in this object, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{xlnt\+::invalid\+\_\+attribute}} exception will be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1optional_a2cbf835dc08d686335f21b6dda82b641}\label{classxlnt_1_1optional_a2cbf835dc08d686335f21b6dda82b641}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!get@{get}}
+\index{get@{get}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T\& \mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the value. If no value has been initialized in this object, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{xlnt\+::invalid\+\_\+attribute}} exception will be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1optional_a699e2f6ac064c6e9ed2df057333ef272}\label{classxlnt_1_1optional_a699e2f6ac064c6e9ed2df057333ef272}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!is\_set@{is\_set}}
+\index{is\_set@{is\_set}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{is\_set()}{is\_set()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::is\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Returns true if this object currently has a value set. This should be called before accessing the value with \mbox{\hyperlink{classxlnt_1_1optional_a9b7ab8dc40108f1887274ac61261c605}{optional\+::get()}}. 
+
+\mbox{\Hypertarget{classxlnt_1_1optional_ac1927d03f1240a2975eec55e36602b68}\label{classxlnt_1_1optional_ac1927d03f1240a2975eec55e36602b68}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Returns false if neither this nor other have a value or both have a value and those values are equal according to their equality operator. 
+
+\mbox{\Hypertarget{classxlnt_1_1optional_a7b47c3299049daedd792b88aba493236}\label{classxlnt_1_1optional_a7b47c3299049daedd792b88aba493236}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}\& \mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Copy assignment of this optional from other noexcept if set and clear are noexcept for T\& 
+
+\mbox{\Hypertarget{classxlnt_1_1optional_a74daf640ecb71b40a316454324984302}\label{classxlnt_1_1optional_a74daf640ecb71b40a316454324984302}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}\& \mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const T \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Assignment operator overload. Equivalent to setting the value using \mbox{\hyperlink{classxlnt_1_1optional_ac444e04412d597d9b846e5e797585ded}{optional\+::set}}. 
+
+\mbox{\Hypertarget{classxlnt_1_1optional_aa596e2e500164364cfa0ea8dbb0df5cc}\label{classxlnt_1_1optional_aa596e2e500164364cfa0ea8dbb0df5cc}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}\& \mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ T $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment of this optional from other noexcept if set and clear are noexcept for T\&\& 
+
+\mbox{\Hypertarget{classxlnt_1_1optional_a5763e3a52e36e4359006f86d5096fdad}\label{classxlnt_1_1optional_a5763e3a52e36e4359006f86d5096fdad}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}\& \mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{T \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Assignment operator overload. Equivalent to setting the value using \mbox{\hyperlink{classxlnt_1_1optional_ac444e04412d597d9b846e5e797585ded}{optional\+::set}}. 
+
+\mbox{\Hypertarget{classxlnt_1_1optional_a7a8c849efef832c32fbbaeec35f96ef5}\label{classxlnt_1_1optional_a7a8c849efef832c32fbbaeec35f96ef5}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Returns true if neither this nor other have a value or both have a value and those values are equal according to their equality operator. 
+
+\mbox{\Hypertarget{classxlnt_1_1optional_ac444e04412d597d9b846e5e797585ded}\label{classxlnt_1_1optional_ac444e04412d597d9b846e5e797585ded}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!set@{set}}
+\index{set@{set}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::\mbox{\hyperlink{classset}{set}} (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Copies the value into the stored value 
+
+\mbox{\Hypertarget{classxlnt_1_1optional_ac57a2fbed642b5ff01dddd92de66e860}\label{classxlnt_1_1optional_ac57a2fbed642b5ff01dddd92de66e860}} 
+\index{xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}!set@{set}}
+\index{set@{set}!xlnt::optional$<$ T $>$@{xlnt::optional$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classxlnt_1_1optional}{xlnt\+::optional}}$<$ T $>$\+::\mbox{\hyperlink{classset}{set}} (\begin{DoxyParamCaption}\item[{T \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Moves the value into the stored value 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/styles/\mbox{\hyperlink{format_8hpp}{format.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/utils/\mbox{\hyperlink{optional_8hpp}{optional.\+hpp}}\end{DoxyCompactItemize}

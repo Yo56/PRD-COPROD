@@ -1,0 +1,201 @@
+\hypertarget{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__examples_autotoc_md154}{}\doxysubsection{Simple -\/ reading from an existing xlsx spread sheet.}\label{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__examples_autotoc_md154}
+The following C plus plus code will read the values from an xlsx file and print the string values to the screen. This is a very simple example to get you started.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#include <iostream>}
+\DoxyCodeLine{\#include <xlnt/xlnt.hpp>}
+\DoxyCodeLine{}
+\DoxyCodeLine{int main()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    xlnt::workbook wb;}
+\DoxyCodeLine{    wb.load("{}/home/timothymccallum/test.xlsx"{});}
+\DoxyCodeLine{    auto ws = wb.active\_sheet();}
+\DoxyCodeLine{    std::clog << "{}Processing spread sheet"{} << std::endl;}
+\DoxyCodeLine{    for (auto row : ws.rows(false)) }
+\DoxyCodeLine{    \{ }
+\DoxyCodeLine{        for (auto cell : row) }
+\DoxyCodeLine{    \{ }
+\DoxyCodeLine{        std::clog << cell.to\_string() << std::endl;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    std::clog << "{}Processing complete"{} << std::endl;}
+\DoxyCodeLine{    return 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ Save the contents of the above file 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{/home/timothymccallum/process.cpp}
+
+\end{DoxyCode}
+ Compile by typing the following command 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{g++ -\/std=c++14 -\/lxlnt process.cpp -\/o process}
+
+\end{DoxyCode}
+ Excecute by typing the following command 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./process}
+
+\end{DoxyCode}
+ The output of the program, in my case, is as follows 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Processing spread sheet}
+\DoxyCodeLine{This is cell A1.}
+\DoxyCodeLine{This is cell B1}
+\DoxyCodeLine{… and this is cell C1}
+\DoxyCodeLine{We are now on the second row at cell A2}
+\DoxyCodeLine{B2}
+\DoxyCodeLine{C2}
+\DoxyCodeLine{Processing complete}
+
+\end{DoxyCode}
+ As you can see the process.\+cpp file simply walks through the spread sheet values row by row and column by column (A1, B1, C1, A2, B2, C2 and so on).\hypertarget{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__examples_autotoc_md155}{}\doxysubsection{Simple -\/ storing a spread sheet in a 2 dimensional C++ Vector for further processing}\label{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__examples_autotoc_md155}
+Loading a spread sheet into a Vector provides oppourtunities for you to perform high performance processing. There will be more examples on performing fast look-\/ups, merging data, performing deduplication and more. For now, let\textquotesingle{}s just learn how to get the spread sheet loaded into memory. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#include <iostream>}
+\DoxyCodeLine{\#include <xlnt/xlnt.hpp>}
+\DoxyCodeLine{\#include <vector>}
+\DoxyCodeLine{}
+\DoxyCodeLine{int main()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    xlnt::workbook wb;}
+\DoxyCodeLine{    wb.load("{}/home/timothymccallum/test.xlsx"{});}
+\DoxyCodeLine{    auto ws = wb.active\_sheet();}
+\DoxyCodeLine{    std::clog << "{}Processing spread sheet"{} << std::endl;}
+\DoxyCodeLine{    std::clog << "{}Creating a single vector which stores the whole spread sheet"{} << std::endl;}
+\DoxyCodeLine{    std::vector< std::vector<std::string> > theWholeSpreadSheet;}
+\DoxyCodeLine{    for (auto row : ws.rows(false)) }
+\DoxyCodeLine{    \{ }
+\DoxyCodeLine{        std::clog << "{}Creating a fresh vector for just this row in the spread sheet"{} << std::endl;}
+\DoxyCodeLine{    std::vector<std::string> aSingleRow;}
+\DoxyCodeLine{    for (auto cell : row) }
+\DoxyCodeLine{    \{ }
+\DoxyCodeLine{        std::clog << "{}Adding this cell to the row"{} << std::endl;}
+\DoxyCodeLine{        aSingleRow.push\_back(cell.to\_string());}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    std::clog << "{}Adding this entire row to the vector which stores the whole spread sheet"{} << std::endl;}
+\DoxyCodeLine{    theWholeSpreadSheet.push\_back(aSingleRow);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    std::clog << "{}Processing complete"{} << std::endl;}
+\DoxyCodeLine{    std::clog << "{}Reading the vector and printing output to the screen"{} << std::endl;}
+\DoxyCodeLine{    for (int rowInt = 0; rowInt < theWholeSpreadSheet.size(); rowInt++)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        for (int colInt = 0; colInt < theWholeSpreadSheet.at(rowInt).size(); colInt++)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        std::cout << theWholeSpreadSheet.at(rowInt).at(colInt) << std::endl;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    return 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ Save the contents of the above file 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{/home/timothymccallum/process.cpp}
+
+\end{DoxyCode}
+ Compile by typing the following command 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{g++ -\/std=c++14 -\/lxlnt process.cpp -\/o process}
+
+\end{DoxyCode}
+ Excecute by typing the following command 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./process}
+
+\end{DoxyCode}
+ The output of the program, in my case, is as follows 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Processing spread sheet}
+\DoxyCodeLine{Creating a single vector which stores the whole spread sheet}
+\DoxyCodeLine{Creating a fresh vector for just this row in the spread sheet}
+\DoxyCodeLine{Adding this cell to the row}
+\DoxyCodeLine{Adding this cell to the row}
+\DoxyCodeLine{Adding this cell to the row}
+\DoxyCodeLine{Adding this entire row to the vector which stores the whole spread sheet}
+\DoxyCodeLine{Creating a fresh vector for just this row in the spread sheet}
+\DoxyCodeLine{Adding this cell to the row}
+\DoxyCodeLine{Adding this cell to the row}
+\DoxyCodeLine{Adding this cell to the row}
+\DoxyCodeLine{Adding this entire row to the vector which stores the whole spread sheet}
+\DoxyCodeLine{Processing complete}
+\DoxyCodeLine{Reading the vector and printing output to the screen}
+\DoxyCodeLine{This is cell A1.}
+\DoxyCodeLine{This is cell B1}
+\DoxyCodeLine{… and this is cell C1}
+\DoxyCodeLine{We are now on the second row at cell A2}
+\DoxyCodeLine{B2}
+\DoxyCodeLine{C2}
+
+\end{DoxyCode}
+ You will have noticed that this process is very fast. If you type the \char`\"{}time\char`\"{} as shown below, you can measure just how fast loading and retrieving your spread sheet is, using xlnt; In this case only a fraction of a second. More on this later. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{time ./process }
+\DoxyCodeLine{...}
+\DoxyCodeLine{real    0m0.044s}
+
+\end{DoxyCode}
+ \hypertarget{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__examples_autotoc_md156}{}\doxysubsection{Simple -\/ writing values to a new xlsx spread sheet.}\label{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__examples_autotoc_md156}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#include <iostream>}
+\DoxyCodeLine{\#include <xlnt/xlnt.hpp>}
+\DoxyCodeLine{\#include <vector>}
+\DoxyCodeLine{\#include <string>}
+\DoxyCodeLine{}
+\DoxyCodeLine{int main()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    //Creating a 2 dimensional vector which we will write values to}
+\DoxyCodeLine{    std::vector< std::vector<std::string> > wholeWorksheet;}
+\DoxyCodeLine{    //Looping through each row (100 rows as per the second argument in the for loop)}
+\DoxyCodeLine{    for (int outer = 0; outer < 100; outer++)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        //Creating a fresh vector for a fresh row}
+\DoxyCodeLine{    std::vector<std::string> singleRow;}
+\DoxyCodeLine{    //Looping through each of the columns (100 as per the second argument in the for loop) in this particular row}
+\DoxyCodeLine{    for(int inner = 0; inner < 100; inner++)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        //Adding a single value in each cell of the row }
+\DoxyCodeLine{        std::string val = std::to\_string(inner + 1);}
+\DoxyCodeLine{        singleRow.push\_back(val);           }
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    //Adding the single row to the 2 dimensional vector}
+\DoxyCodeLine{    wholeWorksheet.push\_back(singleRow);}
+\DoxyCodeLine{    std::clog << "{}Writing to row "{} << outer << "{} in the vector "{} << std::endl;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    //Writing to the spread sheet}
+\DoxyCodeLine{    //Creating the output workbook }
+\DoxyCodeLine{    std::clog << "{}Creating workbook"{} << std::endl;}
+\DoxyCodeLine{    xlnt::workbook wbOut;}
+\DoxyCodeLine{    //Setting the destination output file name}
+\DoxyCodeLine{    std::string dest\_filename = "{}output.xlsx"{};}
+\DoxyCodeLine{    //Creating the output worksheet}
+\DoxyCodeLine{    xlnt::worksheet wsOut = wbOut.active\_sheet();}
+\DoxyCodeLine{    //Giving the output worksheet a title/name}
+\DoxyCodeLine{    wsOut.title("{}data"{});}
+\DoxyCodeLine{    //We will now be looping through the 2 dimensional vector which we created above}
+\DoxyCodeLine{    //In this case we have two iterators one for the outer loop (row) and one for the inner loop (column)}
+\DoxyCodeLine{    std::clog << "{}Looping through vector and writing to spread sheet"{} << std::endl;}
+\DoxyCodeLine{    for (int fOut = 0; fOut < wholeWorksheet.size(); fOut++)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        std::clog << "{}Row"{} << fOut << std::endl;}
+\DoxyCodeLine{        for (int fIn = 0; fIn < wholeWorksheet.at(fOut).size(); fIn++)}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            //Take notice of the difference between accessing the vector and accessing the work sheet}
+\DoxyCodeLine{        //As you may already know Excel spread sheets start at row 1 and column 1 (not row 0 and column 0 like you would expect from a C++ vector) }
+\DoxyCodeLine{        //In short the xlnt cell reference starts at column 1 row 1 (hence the + 1s below) and the vector reference starts at row 0 and column 0}
+\DoxyCodeLine{        wsOut.cell(xlnt::cell\_reference(fIn + 1, fOut + 1)).value(wholeWorksheet.at(fOut).at(fIn));}
+\DoxyCodeLine{        //Further clarification to avoid confusion}
+\DoxyCodeLine{        //Cell reference arguments are (column number, row number); e.g. cell\_reference(fIn + 1, fOut + 1)}
+\DoxyCodeLine{        //Vector arguments are (row number, column number); e.g. wholeWorksheet.at(fOut).at(fIn)}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    std::clog << "{}Finished writing spread sheet"{} << std::endl;}
+\DoxyCodeLine{    wbOut.save(dest\_filename); }
+\DoxyCodeLine{    return 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ This process is also quite quick; a time command showed that xlnt was able to create and write 10, 000 values to the output spread sheet in 0.\+582 seconds. 

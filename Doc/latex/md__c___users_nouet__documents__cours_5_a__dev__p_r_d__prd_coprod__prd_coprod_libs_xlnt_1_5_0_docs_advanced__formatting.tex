@@ -1,0 +1,38 @@
+\hypertarget{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_advanced__formatting_autotoc_md16}{}\doxysection{Format vs. Style}\label{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_advanced__formatting_autotoc_md16}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{\#include <iostream>}
+\DoxyCodeLine{\#include <xlnt/xlnt.hpp>}
+\DoxyCodeLine{}
+\DoxyCodeLine{int main()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    xlnt::workbook wb;}
+\DoxyCodeLine{    auto cell = wb.active\_sheet().cell("{}A1"{});}
+\DoxyCodeLine{    return 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+In the context of xlnt, format and style have specific distinct meanings. A style in xlnt corresponds to a named style created in the \char`\"{}\+Cell styles\char`\"{} dropdown in Excel. It must have a name and optionally any of\+: alignment, border, fill, font, number format, protection. A format in xlnt corresponds to the alignment, border, fill, font, number format, and protection settings applied to a cell via right-\/click-\/$>$\char`\"{}\+Format Cells\char`\"{}. A cell can have both a format and a style. The style properties will generally override the format properties.\hypertarget{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_advanced__formatting_autotoc_md17}{}\doxysection{Number Formatting}\label{md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_advanced__formatting_autotoc_md17}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c++\}}
+\DoxyCodeLine{\#include <iostream>}
+\DoxyCodeLine{\#include <xlnt/xlnt.hpp>}
+\DoxyCodeLine{}
+\DoxyCodeLine{int main()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    xlnt::workbook wb;}
+\DoxyCodeLine{    auto cell = wb.active\_sheet().cell("{}A1"{});}
+\DoxyCodeLine{    cell.number\_format(xlnt::number\_format::percentage());}
+\DoxyCodeLine{    cell.value(0.513);}
+\DoxyCodeLine{    std::cout << cell.to\_string() << std::endl;}
+\DoxyCodeLine{    return 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+An \mbox{\hyperlink{classxlnt_1_1number__format}{xlnt\+::number\+\_\+format}} is the format code used when displaying a value in a cell. For example, a number\+\_\+format of \char`\"{}0.\+00\char`\"{} implies that the number 13.\+726 should be displayed as \char`\"{}13.\+73\char`\"{}. Many number formats are built-\/in to Excel and can be access with \mbox{\hyperlink{classxlnt_1_1number__format}{xlnt\+::number\+\_\+format}} static constructors. Other custom number formats can be created by passing a string to the \href{\#cell-const-cell-amp}{\texttt{ xlnt\+::number\+\_\+format constructor}}. 

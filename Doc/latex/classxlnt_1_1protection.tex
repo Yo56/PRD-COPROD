@@ -1,0 +1,166 @@
+\hypertarget{classxlnt_1_1protection}{}\doxysection{xlnt\+::protection Class Reference}
+\label{classxlnt_1_1protection}\index{xlnt::protection@{xlnt::protection}}
+
+
+Describes the protection style of a particular cell.  
+
+
+
+
+{\ttfamily \#include $<$protection.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1protection_ad483886999b58c88fe2af396805bab0d}{protection}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a default unlocked unhidden protection object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1protection_aa36b344195cbfaa4def03d288484d08b}{locked}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if cells using this protection should be locked. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1protection}{protection}} \& \mbox{\hyperlink{classxlnt_1_1protection_a915450395425b48cbb2b8409808ea2e1}{locked}} (bool locked)
+\begin{DoxyCompactList}\small\item\em Sets the locked state of the protection to locked and returns a reference to the protection. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1protection_a2575b73b1288548458bc26d084ecd564}{hidden}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if cells using this protection should be hidden. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1protection}{protection}} \& \mbox{\hyperlink{classxlnt_1_1protection_a2610dc16d76a89cc440bbe60282d3dfa}{hidden}} (bool hidden)
+\begin{DoxyCompactList}\small\item\em Sets the hidden state of the protection to hidden and returns a reference to the protection. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1protection_ac788c2194987ab53c18e1a3327ba9e7f}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1protection}{protection}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this protections is equivalent to right. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1protection_a7f3a6dcd4f2272adb4278ef170b1f21f}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1protection}{protection}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this protection is not equivalent to right. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classxlnt_1_1protection}{protection}} \mbox{\hyperlink{classxlnt_1_1protection_a0437e1dbdce314f4f2d8b39ba065674e}{unlocked\+\_\+and\+\_\+visible}} ()
+\begin{DoxyCompactList}\small\item\em Returns an unlocked and unhidden protection object. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classxlnt_1_1protection}{protection}} \mbox{\hyperlink{classxlnt_1_1protection_a48de362e1d8a0fdcdb02b9b82aacc3ce}{locked\+\_\+and\+\_\+visible}} ()
+\begin{DoxyCompactList}\small\item\em Returns a locked and unhidden protection object. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classxlnt_1_1protection}{protection}} \mbox{\hyperlink{classxlnt_1_1protection_aaafe695bfcda2cdeead264c993f25117}{unlocked\+\_\+and\+\_\+hidden}} ()
+\begin{DoxyCompactList}\small\item\em Returns an unlocked and hidden protection object. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classxlnt_1_1protection}{protection}} \mbox{\hyperlink{classxlnt_1_1protection_a7262a1bc5c7119460fb7a9b22a0d05a9}{locked\+\_\+and\+\_\+hidden}} ()
+\begin{DoxyCompactList}\small\item\em Returns a locked and hidden protection object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Describes the protection style of a particular cell. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1protection_ad483886999b58c88fe2af396805bab0d}\label{classxlnt_1_1protection_ad483886999b58c88fe2af396805bab0d}} 
+\index{xlnt::protection@{xlnt::protection}!protection@{protection}}
+\index{protection@{protection}!xlnt::protection@{xlnt::protection}}
+\doxysubsubsection{\texorpdfstring{protection()}{protection()}}
+{\footnotesize\ttfamily xlnt\+::protection\+::protection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a default unlocked unhidden protection object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1protection_a2575b73b1288548458bc26d084ecd564}\label{classxlnt_1_1protection_a2575b73b1288548458bc26d084ecd564}} 
+\index{xlnt::protection@{xlnt::protection}!hidden@{hidden}}
+\index{hidden@{hidden}!xlnt::protection@{xlnt::protection}}
+\doxysubsubsection{\texorpdfstring{hidden()}{hidden()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::protection\+::hidden (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if cells using this protection should be hidden. 
+
+\mbox{\Hypertarget{classxlnt_1_1protection_a2610dc16d76a89cc440bbe60282d3dfa}\label{classxlnt_1_1protection_a2610dc16d76a89cc440bbe60282d3dfa}} 
+\index{xlnt::protection@{xlnt::protection}!hidden@{hidden}}
+\index{hidden@{hidden}!xlnt::protection@{xlnt::protection}}
+\doxysubsubsection{\texorpdfstring{hidden()}{hidden()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1protection}{protection}} \& xlnt\+::protection\+::hidden (\begin{DoxyParamCaption}\item[{bool}]{hidden }\end{DoxyParamCaption})}
+
+
+
+Sets the hidden state of the protection to hidden and returns a reference to the protection. 
+
+\mbox{\Hypertarget{classxlnt_1_1protection_aa36b344195cbfaa4def03d288484d08b}\label{classxlnt_1_1protection_aa36b344195cbfaa4def03d288484d08b}} 
+\index{xlnt::protection@{xlnt::protection}!locked@{locked}}
+\index{locked@{locked}!xlnt::protection@{xlnt::protection}}
+\doxysubsubsection{\texorpdfstring{locked()}{locked()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::protection\+::locked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if cells using this protection should be locked. 
+
+\mbox{\Hypertarget{classxlnt_1_1protection_a915450395425b48cbb2b8409808ea2e1}\label{classxlnt_1_1protection_a915450395425b48cbb2b8409808ea2e1}} 
+\index{xlnt::protection@{xlnt::protection}!locked@{locked}}
+\index{locked@{locked}!xlnt::protection@{xlnt::protection}}
+\doxysubsubsection{\texorpdfstring{locked()}{locked()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1protection}{protection}} \& xlnt\+::protection\+::locked (\begin{DoxyParamCaption}\item[{bool}]{locked }\end{DoxyParamCaption})}
+
+
+
+Sets the locked state of the protection to locked and returns a reference to the protection. 
+
+\mbox{\Hypertarget{classxlnt_1_1protection_a7262a1bc5c7119460fb7a9b22a0d05a9}\label{classxlnt_1_1protection_a7262a1bc5c7119460fb7a9b22a0d05a9}} 
+\index{xlnt::protection@{xlnt::protection}!locked\_and\_hidden@{locked\_and\_hidden}}
+\index{locked\_and\_hidden@{locked\_and\_hidden}!xlnt::protection@{xlnt::protection}}
+\doxysubsubsection{\texorpdfstring{locked\_and\_hidden()}{locked\_and\_hidden()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1protection}{protection}} xlnt\+::protection\+::locked\+\_\+and\+\_\+hidden (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a locked and hidden protection object. 
+
+\mbox{\Hypertarget{classxlnt_1_1protection_a48de362e1d8a0fdcdb02b9b82aacc3ce}\label{classxlnt_1_1protection_a48de362e1d8a0fdcdb02b9b82aacc3ce}} 
+\index{xlnt::protection@{xlnt::protection}!locked\_and\_visible@{locked\_and\_visible}}
+\index{locked\_and\_visible@{locked\_and\_visible}!xlnt::protection@{xlnt::protection}}
+\doxysubsubsection{\texorpdfstring{locked\_and\_visible()}{locked\_and\_visible()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1protection}{protection}} xlnt\+::protection\+::locked\+\_\+and\+\_\+visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a locked and unhidden protection object. 
+
+\mbox{\Hypertarget{classxlnt_1_1protection_a7f3a6dcd4f2272adb4278ef170b1f21f}\label{classxlnt_1_1protection_a7f3a6dcd4f2272adb4278ef170b1f21f}} 
+\index{xlnt::protection@{xlnt::protection}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::protection@{xlnt::protection}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool xlnt\+::protection\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1protection}{protection}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this protection is not equivalent to right. 
+
+\mbox{\Hypertarget{classxlnt_1_1protection_ac788c2194987ab53c18e1a3327ba9e7f}\label{classxlnt_1_1protection_ac788c2194987ab53c18e1a3327ba9e7f}} 
+\index{xlnt::protection@{xlnt::protection}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::protection@{xlnt::protection}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::protection\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1protection}{protection}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this protections is equivalent to right. 
+
+\mbox{\Hypertarget{classxlnt_1_1protection_aaafe695bfcda2cdeead264c993f25117}\label{classxlnt_1_1protection_aaafe695bfcda2cdeead264c993f25117}} 
+\index{xlnt::protection@{xlnt::protection}!unlocked\_and\_hidden@{unlocked\_and\_hidden}}
+\index{unlocked\_and\_hidden@{unlocked\_and\_hidden}!xlnt::protection@{xlnt::protection}}
+\doxysubsubsection{\texorpdfstring{unlocked\_and\_hidden()}{unlocked\_and\_hidden()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1protection}{protection}} xlnt\+::protection\+::unlocked\+\_\+and\+\_\+hidden (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns an unlocked and hidden protection object. 
+
+\mbox{\Hypertarget{classxlnt_1_1protection_a0437e1dbdce314f4f2d8b39ba065674e}\label{classxlnt_1_1protection_a0437e1dbdce314f4f2d8b39ba065674e}} 
+\index{xlnt::protection@{xlnt::protection}!unlocked\_and\_visible@{unlocked\_and\_visible}}
+\index{unlocked\_and\_visible@{unlocked\_and\_visible}!xlnt::protection@{xlnt::protection}}
+\doxysubsubsection{\texorpdfstring{unlocked\_and\_visible()}{unlocked\_and\_visible()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1protection}{protection}} xlnt\+::protection\+::unlocked\+\_\+and\+\_\+visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns an unlocked and unhidden protection object. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/styles/\mbox{\hyperlink{protection_8hpp}{protection.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/styles/\mbox{\hyperlink{protection_8cpp}{protection.\+cpp}}\end{DoxyCompactItemize}

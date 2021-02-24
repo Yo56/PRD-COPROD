@@ -1,0 +1,68 @@
+\hypertarget{namespacexlntpyarrow}{}\doxysection{xlntpyarrow Namespace Reference}
+\label{namespacexlntpyarrow}\index{xlntpyarrow@{xlntpyarrow}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacexlntpyarrow_ac0a2e569f31994756daa252bc988cfab}{cell\+\_\+to\+\_\+pyarrow\+\_\+array}} (cell, type)
+\item 
+def \mbox{\hyperlink{namespacexlntpyarrow_a9b59a62dbc10e14d2099e34e0ed78eb8}{xlsx2arrow}} (io, sheetname)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{namespacexlntpyarrow_a7a4f6f5d8105e98a00514f4acc4af11b}{COLUMN\+\_\+\+TYPE\+\_\+\+FIELD}}
+\item 
+\mbox{\hyperlink{namespacexlntpyarrow_a6ea67d5a733e6b9888b779f8d209c96c}{file}} = open(\textquotesingle{}tmp.\+xlsx\textquotesingle{}, \textquotesingle{}rb\textquotesingle{})
+\item 
+def \mbox{\hyperlink{namespacexlntpyarrow_ae9f76b72e1c7ace085d22e733893007d}{table}} = \mbox{\hyperlink{namespacexlntpyarrow_a9b59a62dbc10e14d2099e34e0ed78eb8}{xlsx2arrow}}(\mbox{\hyperlink{namespacexlntpyarrow_a6ea67d5a733e6b9888b779f8d209c96c}{file}}, \textquotesingle{}Sheet1\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacexlntpyarrow_ac0a2e569f31994756daa252bc988cfab}\label{namespacexlntpyarrow_ac0a2e569f31994756daa252bc988cfab}} 
+\index{xlntpyarrow@{xlntpyarrow}!cell\_to\_pyarrow\_array@{cell\_to\_pyarrow\_array}}
+\index{cell\_to\_pyarrow\_array@{cell\_to\_pyarrow\_array}!xlntpyarrow@{xlntpyarrow}}
+\doxysubsubsection{\texorpdfstring{cell\_to\_pyarrow\_array()}{cell\_to\_pyarrow\_array()}}
+{\footnotesize\ttfamily def xlntpyarrow.\+cell\+\_\+to\+\_\+pyarrow\+\_\+array (\begin{DoxyParamCaption}\item[{}]{cell,  }\item[{}]{type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacexlntpyarrow_a9b59a62dbc10e14d2099e34e0ed78eb8}\label{namespacexlntpyarrow_a9b59a62dbc10e14d2099e34e0ed78eb8}} 
+\index{xlntpyarrow@{xlntpyarrow}!xlsx2arrow@{xlsx2arrow}}
+\index{xlsx2arrow@{xlsx2arrow}!xlntpyarrow@{xlntpyarrow}}
+\doxysubsubsection{\texorpdfstring{xlsx2arrow()}{xlsx2arrow()}}
+{\footnotesize\ttfamily def xlntpyarrow.\+xlsx2arrow (\begin{DoxyParamCaption}\item[{}]{io,  }\item[{}]{sheetname }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacexlntpyarrow_a7a4f6f5d8105e98a00514f4acc4af11b}\label{namespacexlntpyarrow_a7a4f6f5d8105e98a00514f4acc4af11b}} 
+\index{xlntpyarrow@{xlntpyarrow}!COLUMN\_TYPE\_FIELD@{COLUMN\_TYPE\_FIELD}}
+\index{COLUMN\_TYPE\_FIELD@{COLUMN\_TYPE\_FIELD}!xlntpyarrow@{xlntpyarrow}}
+\doxysubsubsection{\texorpdfstring{COLUMN\_TYPE\_FIELD}{COLUMN\_TYPE\_FIELD}}
+{\footnotesize\ttfamily dictionary xlntpyarrow.\+COLUMN\+\_\+\+TYPE\+\_\+\+FIELD}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     xpa.Cell.Type.Number: pa.float64,}
+\DoxyCodeLine{3     xpa.Cell.Type.SharedString: pa.string,}
+\DoxyCodeLine{4     xpa.Cell.Type.InlineString: pa.string,}
+\DoxyCodeLine{5     xpa.Cell.Type.FormulaString: pa.string,}
+\DoxyCodeLine{6     xpa.Cell.Type.Error: pa.string,}
+\DoxyCodeLine{7     xpa.Cell.Type.Boolean: pa.bool\_,}
+\DoxyCodeLine{8     xpa.Cell.Type.Date: pa.date32,}
+\DoxyCodeLine{9     xpa.Cell.Type.Empty: pa.string,}
+\DoxyCodeLine{10 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacexlntpyarrow_a6ea67d5a733e6b9888b779f8d209c96c}\label{namespacexlntpyarrow_a6ea67d5a733e6b9888b779f8d209c96c}} 
+\index{xlntpyarrow@{xlntpyarrow}!file@{file}}
+\index{file@{file}!xlntpyarrow@{xlntpyarrow}}
+\doxysubsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily xlntpyarrow.\+file = open(\textquotesingle{}tmp.\+xlsx\textquotesingle{}, \textquotesingle{}rb\textquotesingle{})}
+
+\mbox{\Hypertarget{namespacexlntpyarrow_ae9f76b72e1c7ace085d22e733893007d}\label{namespacexlntpyarrow_ae9f76b72e1c7ace085d22e733893007d}} 
+\index{xlntpyarrow@{xlntpyarrow}!table@{table}}
+\index{table@{table}!xlntpyarrow@{xlntpyarrow}}
+\doxysubsubsection{\texorpdfstring{table}{table}}
+{\footnotesize\ttfamily def xlntpyarrow.\+table = \mbox{\hyperlink{namespacexlntpyarrow_a9b59a62dbc10e14d2099e34e0ed78eb8}{xlsx2arrow}}(\mbox{\hyperlink{namespacexlntpyarrow_a6ea67d5a733e6b9888b779f8d209c96c}{file}}, \textquotesingle{}Sheet1\textquotesingle{})}
+

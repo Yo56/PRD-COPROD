@@ -1,0 +1,100 @@
+\hypertarget{classxlnt_1_1ext__list}{}\doxysection{xlnt\+::ext\+\_\+list Class Reference}
+\label{classxlnt_1_1ext__list}\index{xlnt::ext\_list@{xlnt::ext\_list}}
+
+
+A list of xml extensions that may or may not be understood by the parser preservation is required for round-\/tripping even if extension is not understood \mbox{[}serialised\+: ext\+Lst\mbox{]}  
+
+
+
+
+{\ttfamily \#include $<$ext\+\_\+list.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structxlnt_1_1ext__list_1_1ext}{ext}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1ext__list_adfe9cfebbbd1841a3c771bdf62a1c708}{ext\+\_\+list}} ()=default
+\item 
+\mbox{\hyperlink{classxlnt_1_1ext__list_a3baf5bf63cad03156bdf6ae16cd8f326}{ext\+\_\+list}} (\mbox{\hyperlink{classxml_1_1parser}{xml\+::parser}} \&parser, const std\+::string \&\mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}})
+\item 
+void \mbox{\hyperlink{classxlnt_1_1ext__list_acade0964d9f0584c8e3d0f22d2c937d4}{serialize}} (\mbox{\hyperlink{classxml_1_1serializer}{xml\+::serializer}} \&serialiser, const std\+::string \&\mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}})
+\item 
+void \mbox{\hyperlink{classxlnt_1_1ext__list_a0d69c44b55b8925c88121adf851fe5b4}{add\+\_\+extension}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&ID, const std\+::string \&element)
+\item 
+bool \mbox{\hyperlink{classxlnt_1_1ext__list_ab0090dc62d40ad3c41201ac928371994}{has\+\_\+extension}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&extension\+\_\+uri) const
+\item 
+const \mbox{\hyperlink{structxlnt_1_1ext__list_1_1ext}{ext}} \& \mbox{\hyperlink{classxlnt_1_1ext__list_adce3d5faf3be58167bc4ef73421da5f3}{extension}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&extension\+\_\+uri) const
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{structxlnt_1_1ext__list_1_1ext}{ext}} $>$ \& \mbox{\hyperlink{classxlnt_1_1ext__list_aecc60fedca8e61507170d51db05bd45a}{extensions}} () const
+\item 
+bool \mbox{\hyperlink{classxlnt_1_1ext__list_ad42e2026ea60eb404f052f13fe0b7e54}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1ext__list}{ext\+\_\+list}} \&rhs) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A list of xml extensions that may or may not be understood by the parser preservation is required for round-\/tripping even if extension is not understood \mbox{[}serialised\+: ext\+Lst\mbox{]} 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1ext__list_adfe9cfebbbd1841a3c771bdf62a1c708}\label{classxlnt_1_1ext__list_adfe9cfebbbd1841a3c771bdf62a1c708}} 
+\index{xlnt::ext\_list@{xlnt::ext\_list}!ext\_list@{ext\_list}}
+\index{ext\_list@{ext\_list}!xlnt::ext\_list@{xlnt::ext\_list}}
+\doxysubsubsection{\texorpdfstring{ext\_list()}{ext\_list()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily xlnt\+::ext\+\_\+list\+::ext\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classxlnt_1_1ext__list_a3baf5bf63cad03156bdf6ae16cd8f326}\label{classxlnt_1_1ext__list_a3baf5bf63cad03156bdf6ae16cd8f326}} 
+\index{xlnt::ext\_list@{xlnt::ext\_list}!ext\_list@{ext\_list}}
+\index{ext\_list@{ext\_list}!xlnt::ext\_list@{xlnt::ext\_list}}
+\doxysubsubsection{\texorpdfstring{ext\_list()}{ext\_list()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily xlnt\+::ext\+\_\+list\+::ext\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxml_1_1parser}{xml\+::parser}} \&}]{parser,  }\item[{const std\+::string \&}]{ns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1ext__list_a0d69c44b55b8925c88121adf851fe5b4}\label{classxlnt_1_1ext__list_a0d69c44b55b8925c88121adf851fe5b4}} 
+\index{xlnt::ext\_list@{xlnt::ext\_list}!add\_extension@{add\_extension}}
+\index{add\_extension@{add\_extension}!xlnt::ext\_list@{xlnt::ext\_list}}
+\doxysubsubsection{\texorpdfstring{add\_extension()}{add\_extension()}}
+{\footnotesize\ttfamily void xlnt\+::ext\+\_\+list\+::add\+\_\+extension (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&}]{ID,  }\item[{const std\+::string \&}]{element }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxlnt_1_1ext__list_adce3d5faf3be58167bc4ef73421da5f3}\label{classxlnt_1_1ext__list_adce3d5faf3be58167bc4ef73421da5f3}} 
+\index{xlnt::ext\_list@{xlnt::ext\_list}!extension@{extension}}
+\index{extension@{extension}!xlnt::ext\_list@{xlnt::ext\_list}}
+\doxysubsubsection{\texorpdfstring{extension()}{extension()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structxlnt_1_1ext__list_1_1ext}{ext\+\_\+list\+::ext}} \& xlnt\+::ext\+\_\+list\+::extension (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&}]{extension\+\_\+uri }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1ext__list_aecc60fedca8e61507170d51db05bd45a}\label{classxlnt_1_1ext__list_aecc60fedca8e61507170d51db05bd45a}} 
+\index{xlnt::ext\_list@{xlnt::ext\_list}!extensions@{extensions}}
+\index{extensions@{extensions}!xlnt::ext\_list@{xlnt::ext\_list}}
+\doxysubsubsection{\texorpdfstring{extensions()}{extensions()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{structxlnt_1_1ext__list_1_1ext}{ext\+\_\+list\+::ext}} $>$ \& xlnt\+::ext\+\_\+list\+::extensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1ext__list_ab0090dc62d40ad3c41201ac928371994}\label{classxlnt_1_1ext__list_ab0090dc62d40ad3c41201ac928371994}} 
+\index{xlnt::ext\_list@{xlnt::ext\_list}!has\_extension@{has\_extension}}
+\index{has\_extension@{has\_extension}!xlnt::ext\_list@{xlnt::ext\_list}}
+\doxysubsubsection{\texorpdfstring{has\_extension()}{has\_extension()}}
+{\footnotesize\ttfamily bool xlnt\+::ext\+\_\+list\+::has\+\_\+extension (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&}]{extension\+\_\+uri }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1ext__list_ad42e2026ea60eb404f052f13fe0b7e54}\label{classxlnt_1_1ext__list_ad42e2026ea60eb404f052f13fe0b7e54}} 
+\index{xlnt::ext\_list@{xlnt::ext\_list}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::ext\_list@{xlnt::ext\_list}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::ext\+\_\+list\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1ext__list}{ext\+\_\+list}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1ext__list_acade0964d9f0584c8e3d0f22d2c937d4}\label{classxlnt_1_1ext__list_acade0964d9f0584c8e3d0f22d2c937d4}} 
+\index{xlnt::ext\_list@{xlnt::ext\_list}!serialize@{serialize}}
+\index{serialize@{serialize}!xlnt::ext\_list@{xlnt::ext\_list}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily void xlnt\+::ext\+\_\+list\+::serialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxml_1_1serializer}{xml\+::serializer}} \&}]{serialiser,  }\item[{const std\+::string \&}]{ns }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/packaging/\mbox{\hyperlink{ext__list_8hpp}{ext\+\_\+list.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/packaging/\mbox{\hyperlink{ext__list_8cpp}{ext\+\_\+list.\+cpp}}\end{DoxyCompactItemize}

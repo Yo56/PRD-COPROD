@@ -1,0 +1,212 @@
+\hypertarget{xmltok__impl_8h}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/xmltok\+\_\+impl.h File Reference}
+\label{xmltok__impl_8h}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/xmltok\_impl.h@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/xmltok\_impl.h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daf1445ac7418fac6433665dd4cb25b842}{BT\+\_\+\+NONXML}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da1dd477b3caa23066e259826fe70946b1}{BT\+\_\+\+MALFORM}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da7d017445ec53bd09e5eeff1375a24085}{BT\+\_\+\+LT}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da5f373000ee9356fc8324bc78b226107d}{BT\+\_\+\+AMP}}
+, \newline
+\mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2dac61e1c1ccf21f11c2ca5e3db9f3d4a27}{BT\+\_\+\+RSQB}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa7ae9304c0f083bc599e73c43dfc64c0}{BT\+\_\+\+LEAD2}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da5dcb727c048e5eeada131ec2d8f1d6af}{BT\+\_\+\+LEAD3}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da362acf1180e3e9728c8c783c0844a85d}{BT\+\_\+\+LEAD4}}
+, \newline
+\mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da767f018e2621e469ee3e7fbe6b38631b}{BT\+\_\+\+TRAIL}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da7763d351aad43e164c219d4689d9ec4e}{BT\+\_\+\+CR}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da850be9548133967cf527018acd7876bc}{BT\+\_\+\+LF}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da940eec8c3f51a389e6d0e41c0c25cfb8}{BT\+\_\+\+GT}}
+, \newline
+\mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da24d713ebdb9bac2516d92b6da2450636}{BT\+\_\+\+QUOT}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da68248e693c7400b3e8d52ce132c4104c}{BT\+\_\+\+APOS}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daea07480e0a23df000d36942e581899ef}{BT\+\_\+\+EQUALS}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da9d1b288ad992fda5a0c586b755b59363}{BT\+\_\+\+QUEST}}
+, \newline
+\mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da362702de426dad4caca210def76dd4c2}{BT\+\_\+\+EXCL}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da7316097efa72950071791767298f629d}{BT\+\_\+\+SOL}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da09e2f684b49fcb200e009429cd7cc74a}{BT\+\_\+\+SEMI}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2dafe81dc790d76409a02154de26b8251c6}{BT\+\_\+\+NUM}}
+, \newline
+\mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2dab8bfd097f261b8b8b5f75c65e99d03e5}{BT\+\_\+\+LSQB}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da4e9610641d4ae8a4405f2dbb0d4b2dbb}{BT\+\_\+S}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa972422ebb0aeceea7affe39b0199fef}{BT\+\_\+\+NMSTRT}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da6d9d753b8fd003ef79a302cb1d60049c}{BT\+\_\+\+COLON}}
+, \newline
+\mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da0b8928caa03f4601ba6c691799bd8ede}{BT\+\_\+\+HEX}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2dad8b2413c442953824a490b10db0c7826}{BT\+\_\+\+DIGIT}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa258f92721d66e4c0645a41f8e872009}{BT\+\_\+\+NAME}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da367124334f44d43e0587de9b2e5facb9}{BT\+\_\+\+MINUS}}
+, \newline
+\mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da7589604cbf9db3d93da44338b3abfd7e}{BT\+\_\+\+OTHER}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da1965752c9f453ad11f8547186380b95c}{BT\+\_\+\+NONASCII}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da18eb32e7d7554e3fb214974f52552833}{BT\+\_\+\+PERCNT}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da09f605fbbd0c5fea4aa3545e62c3826b}{BT\+\_\+\+LPAR}}
+, \newline
+\mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da1d3cb2b408b80b7e1eff5ac4e07340ae}{BT\+\_\+\+RPAR}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daad428a411b4367efdccc7547ba75f62a}{BT\+\_\+\+AST}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da05a3a727cfcb7d4d5e03cb4ef847898d}{BT\+\_\+\+PLUS}}
+, \mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da2dd023e4ffdb2a7a2fa7856d7cff53ae}{BT\+\_\+\+COMMA}}
+, \newline
+\mbox{\hyperlink{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2dab6aaac9d8dec07b7341c8cacfc26ead7}{BT\+\_\+\+VERBAR}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2d}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2d}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_NONXML@{BT\_NONXML}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_NONXML@{BT\_NONXML}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daf1445ac7418fac6433665dd4cb25b842}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daf1445ac7418fac6433665dd4cb25b842}} 
+BT\+\_\+\+NONXML&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_MALFORM@{BT\_MALFORM}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_MALFORM@{BT\_MALFORM}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da1dd477b3caa23066e259826fe70946b1}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da1dd477b3caa23066e259826fe70946b1}} 
+BT\+\_\+\+MALFORM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_LT@{BT\_LT}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_LT@{BT\_LT}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da7d017445ec53bd09e5eeff1375a24085}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da7d017445ec53bd09e5eeff1375a24085}} 
+BT\+\_\+\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_AMP@{BT\_AMP}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_AMP@{BT\_AMP}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da5f373000ee9356fc8324bc78b226107d}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da5f373000ee9356fc8324bc78b226107d}} 
+BT\+\_\+\+AMP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_RSQB@{BT\_RSQB}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_RSQB@{BT\_RSQB}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2dac61e1c1ccf21f11c2ca5e3db9f3d4a27}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2dac61e1c1ccf21f11c2ca5e3db9f3d4a27}} 
+BT\+\_\+\+RSQB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_LEAD2@{BT\_LEAD2}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_LEAD2@{BT\_LEAD2}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa7ae9304c0f083bc599e73c43dfc64c0}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa7ae9304c0f083bc599e73c43dfc64c0}} 
+BT\+\_\+\+LEAD2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_LEAD3@{BT\_LEAD3}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_LEAD3@{BT\_LEAD3}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da5dcb727c048e5eeada131ec2d8f1d6af}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da5dcb727c048e5eeada131ec2d8f1d6af}} 
+BT\+\_\+\+LEAD3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_LEAD4@{BT\_LEAD4}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_LEAD4@{BT\_LEAD4}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da362acf1180e3e9728c8c783c0844a85d}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da362acf1180e3e9728c8c783c0844a85d}} 
+BT\+\_\+\+LEAD4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_TRAIL@{BT\_TRAIL}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_TRAIL@{BT\_TRAIL}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da767f018e2621e469ee3e7fbe6b38631b}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da767f018e2621e469ee3e7fbe6b38631b}} 
+BT\+\_\+\+TRAIL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_CR@{BT\_CR}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_CR@{BT\_CR}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da7763d351aad43e164c219d4689d9ec4e}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da7763d351aad43e164c219d4689d9ec4e}} 
+BT\+\_\+\+CR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_LF@{BT\_LF}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_LF@{BT\_LF}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da850be9548133967cf527018acd7876bc}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da850be9548133967cf527018acd7876bc}} 
+BT\+\_\+\+LF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_GT@{BT\_GT}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_GT@{BT\_GT}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da940eec8c3f51a389e6d0e41c0c25cfb8}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da940eec8c3f51a389e6d0e41c0c25cfb8}} 
+BT\+\_\+\+GT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_QUOT@{BT\_QUOT}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_QUOT@{BT\_QUOT}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da24d713ebdb9bac2516d92b6da2450636}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da24d713ebdb9bac2516d92b6da2450636}} 
+BT\+\_\+\+QUOT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_APOS@{BT\_APOS}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_APOS@{BT\_APOS}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da68248e693c7400b3e8d52ce132c4104c}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da68248e693c7400b3e8d52ce132c4104c}} 
+BT\+\_\+\+APOS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_EQUALS@{BT\_EQUALS}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_EQUALS@{BT\_EQUALS}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daea07480e0a23df000d36942e581899ef}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daea07480e0a23df000d36942e581899ef}} 
+BT\+\_\+\+EQUALS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_QUEST@{BT\_QUEST}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_QUEST@{BT\_QUEST}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da9d1b288ad992fda5a0c586b755b59363}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da9d1b288ad992fda5a0c586b755b59363}} 
+BT\+\_\+\+QUEST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_EXCL@{BT\_EXCL}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_EXCL@{BT\_EXCL}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da362702de426dad4caca210def76dd4c2}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da362702de426dad4caca210def76dd4c2}} 
+BT\+\_\+\+EXCL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_SOL@{BT\_SOL}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_SOL@{BT\_SOL}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da7316097efa72950071791767298f629d}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da7316097efa72950071791767298f629d}} 
+BT\+\_\+\+SOL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_SEMI@{BT\_SEMI}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_SEMI@{BT\_SEMI}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da09e2f684b49fcb200e009429cd7cc74a}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da09e2f684b49fcb200e009429cd7cc74a}} 
+BT\+\_\+\+SEMI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_NUM@{BT\_NUM}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_NUM@{BT\_NUM}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2dafe81dc790d76409a02154de26b8251c6}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2dafe81dc790d76409a02154de26b8251c6}} 
+BT\+\_\+\+NUM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_LSQB@{BT\_LSQB}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_LSQB@{BT\_LSQB}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2dab8bfd097f261b8b8b5f75c65e99d03e5}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2dab8bfd097f261b8b8b5f75c65e99d03e5}} 
+BT\+\_\+\+LSQB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_S@{BT\_S}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_S@{BT\_S}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da4e9610641d4ae8a4405f2dbb0d4b2dbb}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da4e9610641d4ae8a4405f2dbb0d4b2dbb}} 
+BT\+\_\+S&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_NMSTRT@{BT\_NMSTRT}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_NMSTRT@{BT\_NMSTRT}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa972422ebb0aeceea7affe39b0199fef}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa972422ebb0aeceea7affe39b0199fef}} 
+BT\+\_\+\+NMSTRT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_COLON@{BT\_COLON}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_COLON@{BT\_COLON}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da6d9d753b8fd003ef79a302cb1d60049c}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da6d9d753b8fd003ef79a302cb1d60049c}} 
+BT\+\_\+\+COLON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_HEX@{BT\_HEX}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_HEX@{BT\_HEX}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da0b8928caa03f4601ba6c691799bd8ede}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da0b8928caa03f4601ba6c691799bd8ede}} 
+BT\+\_\+\+HEX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_DIGIT@{BT\_DIGIT}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_DIGIT@{BT\_DIGIT}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2dad8b2413c442953824a490b10db0c7826}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2dad8b2413c442953824a490b10db0c7826}} 
+BT\+\_\+\+DIGIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_NAME@{BT\_NAME}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_NAME@{BT\_NAME}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa258f92721d66e4c0645a41f8e872009}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa258f92721d66e4c0645a41f8e872009}} 
+BT\+\_\+\+NAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_MINUS@{BT\_MINUS}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_MINUS@{BT\_MINUS}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da367124334f44d43e0587de9b2e5facb9}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da367124334f44d43e0587de9b2e5facb9}} 
+BT\+\_\+\+MINUS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_OTHER@{BT\_OTHER}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_OTHER@{BT\_OTHER}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da7589604cbf9db3d93da44338b3abfd7e}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da7589604cbf9db3d93da44338b3abfd7e}} 
+BT\+\_\+\+OTHER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_NONASCII@{BT\_NONASCII}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_NONASCII@{BT\_NONASCII}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da1965752c9f453ad11f8547186380b95c}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da1965752c9f453ad11f8547186380b95c}} 
+BT\+\_\+\+NONASCII&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_PERCNT@{BT\_PERCNT}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_PERCNT@{BT\_PERCNT}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da18eb32e7d7554e3fb214974f52552833}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da18eb32e7d7554e3fb214974f52552833}} 
+BT\+\_\+\+PERCNT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_LPAR@{BT\_LPAR}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_LPAR@{BT\_LPAR}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da09f605fbbd0c5fea4aa3545e62c3826b}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da09f605fbbd0c5fea4aa3545e62c3826b}} 
+BT\+\_\+\+LPAR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_RPAR@{BT\_RPAR}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_RPAR@{BT\_RPAR}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da1d3cb2b408b80b7e1eff5ac4e07340ae}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da1d3cb2b408b80b7e1eff5ac4e07340ae}} 
+BT\+\_\+\+RPAR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_AST@{BT\_AST}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_AST@{BT\_AST}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daad428a411b4367efdccc7547ba75f62a}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2daad428a411b4367efdccc7547ba75f62a}} 
+BT\+\_\+\+AST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_PLUS@{BT\_PLUS}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_PLUS@{BT\_PLUS}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da05a3a727cfcb7d4d5e03cb4ef847898d}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da05a3a727cfcb7d4d5e03cb4ef847898d}} 
+BT\+\_\+\+PLUS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_COMMA@{BT\_COMMA}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_COMMA@{BT\_COMMA}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da2dd023e4ffdb2a7a2fa7856d7cff53ae}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2da2dd023e4ffdb2a7a2fa7856d7cff53ae}} 
+BT\+\_\+\+COMMA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_VERBAR@{BT\_VERBAR}!xmltok\_impl.h@{xmltok\_impl.h}}\index{xmltok\_impl.h@{xmltok\_impl.h}!BT\_VERBAR@{BT\_VERBAR}}}\mbox{\Hypertarget{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2dab6aaac9d8dec07b7341c8cacfc26ead7}\label{xmltok__impl_8h_a0411cd49bb5b71852cecd93bcbf0ca2dab6aaac9d8dec07b7341c8cacfc26ead7}} 
+BT\+\_\+\+VERBAR&\\
+\hline
+
+\end{DoxyEnumFields}

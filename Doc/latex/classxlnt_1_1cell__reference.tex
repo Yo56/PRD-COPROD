@@ -1,0 +1,358 @@
+\hypertarget{classxlnt_1_1cell__reference}{}\doxysection{xlnt\+::cell\+\_\+reference Class Reference}
+\label{classxlnt_1_1cell__reference}\index{xlnt::cell\_reference@{xlnt::cell\_reference}}
+
+
+An object used to refer to a cell. References have two parts, the column and the row. In Excel, the reference string A1 refers to the top-\/left-\/most cell. A \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} can be initialized from a string of this form or a 1-\/indexed ordered pair of the form column, row.  
+
+
+
+
+{\ttfamily \#include $<$cell\+\_\+reference.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1cell__reference_a887456e0d0eac9992095e326a5972d0e}{cell\+\_\+reference}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor makes a reference to the top-\/left-\/most cell, \char`\"{}\+A1\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__reference_a77280366f25fb056007f79ee48067ca3}{cell\+\_\+reference}} (const char $\ast$reference\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} from a string reprenting a cell coordinate (e.\+g. \$\+B14). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__reference_a37bf13621245efe44c222c126d0625a3}{cell\+\_\+reference}} (const std\+::string \&reference\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} from a string reprenting a cell coordinate (e.\+g. \$\+B14). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__reference_af575675cd87ad091308df383845d1163}{cell\+\_\+reference}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1cell__reference_a124bb06ee3aff3b1e3faa9e4f2c8dcf7}{column}}, \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1cell__reference_acce80520bdd12d5a6dd8b1d1d1b3f942}{row}})
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} from a 1-\/indexed column index and row index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \& \mbox{\hyperlink{classxlnt_1_1cell__reference_ad7316e80383467c30d98cb8ac9a5c1e6}{make\+\_\+absolute}} (bool absolute\+\_\+column=true, bool absolute\+\_\+row=true)
+\begin{DoxyCompactList}\small\item\em Converts a coordinate to an absolute coordinate string (e.\+g. B12 -\/$>$ \$B\$12) Defaulting to true, absolute\+\_\+column and absolute\+\_\+row can optionally control whether the resulting \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} has an absolute column (e.\+g. B12 -\/$>$ \$\+B12) and absolute row (e.\+g. B12 -\/$>$ B\$12) respectively. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell__reference_a702e0aabcf69bfe4ddb564a387c3fcce}{column\+\_\+absolute}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the reference refers to an absolute column, otherwise false. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell__reference_aec14906310ae29cae94e34b776bf859d}{column\+\_\+absolute}} (bool absolute\+\_\+column)
+\begin{DoxyCompactList}\small\item\em Makes this reference have an absolute column if absolute\+\_\+column is true, otherwise not absolute. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell__reference_ab2be2ba25bded757a81bd54b5787cc3b}{row\+\_\+absolute}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the reference refers to an absolute row, otherwise false. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell__reference_a0d0434387768bd31f543122800478dd2}{row\+\_\+absolute}} (bool absolute\+\_\+row)
+\begin{DoxyCompactList}\small\item\em Makes this reference have an absolute row if absolute\+\_\+row is true, otherwise not absolute. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1cell__reference_a124bb06ee3aff3b1e3faa9e4f2c8dcf7}{column}} () const
+\begin{DoxyCompactList}\small\item\em Returns a string that identifies the column of this reference (e.\+g. second column from left is \char`\"{}\+B\char`\"{}) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell__reference_a21d29399cf443da4e42ba6996de8f518}{column}} (const std\+::string \&column\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Sets the column of this reference from a string that identifies a particular column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1cell__reference_ad0d42653dcc3ed6daf69e6a273c48191}{column\+\_\+index}} () const
+\begin{DoxyCompactList}\small\item\em Returns a 1-\/indexed numeric index of the column of this reference. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell__reference_aa9ceac8c2d33418ad365211addd1bdac}{column\+\_\+index}} (\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1cell__reference_a124bb06ee3aff3b1e3faa9e4f2c8dcf7}{column}})
+\begin{DoxyCompactList}\small\item\em Sets the column of this reference from a 1-\/indexed number that identifies a particular column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1cell__reference_acce80520bdd12d5a6dd8b1d1d1b3f942}{row}} () const
+\begin{DoxyCompactList}\small\item\em Returns a 1-\/indexed numeric index of the row of this reference. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1cell__reference_afc31295202956ff6e654b02b5acf0930}{row}} (\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} row)
+\begin{DoxyCompactList}\small\item\em Sets the row of this reference from a 1-\/indexed number that identifies a particular row. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1cell__reference_a5ff2b47947164dc7cad3a289e84c1b4e}{make\+\_\+offset}} (int column\+\_\+offset, int row\+\_\+offset) const
+\begin{DoxyCompactList}\small\item\em Returns a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} offset from this \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} by the number of columns and rows specified by the parameters. A negative value for column\+\_\+offset or row\+\_\+offset results in a reference above or left of this \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}, respectively. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1cell__reference_ac79e961a120faa927fb6d1e7827886ff}{to\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Returns a string like \char`\"{}\+A1\char`\"{} for cell\+\_\+reference(1, 1). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1cell__reference_a4612bcfb2c51d44c529d50ab3bb0ffcb}{to\+\_\+range}} () const
+\begin{DoxyCompactList}\small\item\em Returns a 1x1 \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} containing only this \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1cell__reference_a00cd26ea0b1cbb1a38eb4cfda429701f}{operator,}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&other) const
+\begin{DoxyCompactList}\small\item\em I\textquotesingle{}ve always wanted to overload the comma operator. \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}(\char`\"{}\+A\char`\"{}, 1), \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}(\char`\"{}\+B\char`\"{}, 1) will return \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}}(\mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}(\char`\"{}\+A\char`\"{}, 1), \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}(\char`\"{}\+B\char`\"{}, 1)) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell__reference_a17ddbe3794cf7cf369c09d5f99e4902e}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&comparand) const
+\begin{DoxyCompactList}\small\item\em Returns true if this reference is identical to comparand including in absoluteness of column and row. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell__reference_a3427504ddd1ca620a50a9b44577803f3}{operator==}} (const std\+::string \&reference\+\_\+string) const
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} from reference\+\_\+string and return the result of their comparison. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell__reference_ac07803daf0556fd094735f74f9a233c3}{operator==}} (const char $\ast$reference\+\_\+string) const
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} from reference\+\_\+string and return the result of their comparison. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell__reference_a88240ac3674452940493a129480c9482}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&comparand) const
+\begin{DoxyCompactList}\small\item\em Returns true if this reference is not identical to comparand including in absoluteness of column and row. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell__reference_ae8d7a76a6e52c73b7cd1389bd20f0170}{operator!=}} (const std\+::string \&reference\+\_\+string) const
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} from reference\+\_\+string and return the result of their comparison. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1cell__reference_a06d27875051ebfe747afb71b51fd9b3a}{operator!=}} (const char $\ast$reference\+\_\+string) const
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} from reference\+\_\+string and return the result of their comparison. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::pair$<$ std\+::string, \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} $>$ \mbox{\hyperlink{classxlnt_1_1cell__reference_a3260bc058ab33f60f58feeb7e3248c9d}{split\+\_\+reference}} (const std\+::string \&reference\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Splits a coordinate string like \char`\"{}\+A1\char`\"{} into an equivalent pair like \{\char`\"{}\+A\char`\"{}, 1\}. \end{DoxyCompactList}\item 
+static std\+::pair$<$ std\+::string, \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} $>$ \mbox{\hyperlink{classxlnt_1_1cell__reference_ac0f49128777ef44de66d34cd184ccc01}{split\+\_\+reference}} (const std\+::string \&reference\+\_\+string, bool \&absolute\+\_\+column, bool \&absolute\+\_\+row)
+\begin{DoxyCompactList}\small\item\em Splits a coordinate string like \char`\"{}\+A1\char`\"{} into an equivalent pair like \{\char`\"{}\+A\char`\"{}, 1\}. Reference parameters absolute\+\_\+column and absolute\+\_\+row will be set to true if column part or row part are prefixed by a dollar-\/sign indicating they are absolute, otherwise false. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An object used to refer to a cell. References have two parts, the column and the row. In Excel, the reference string A1 refers to the top-\/left-\/most cell. A \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} can be initialized from a string of this form or a 1-\/indexed ordered pair of the form column, row. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_a887456e0d0eac9992095e326a5972d0e}\label{classxlnt_1_1cell__reference_a887456e0d0eac9992095e326a5972d0e}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!cell\_reference@{cell\_reference}}
+\index{cell\_reference@{cell\_reference}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{cell\_reference()}{cell\_reference()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily xlnt\+::cell\+\_\+reference\+::cell\+\_\+reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor makes a reference to the top-\/left-\/most cell, \char`\"{}\+A1\char`\"{}. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_a77280366f25fb056007f79ee48067ca3}\label{classxlnt_1_1cell__reference_a77280366f25fb056007f79ee48067ca3}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!cell\_reference@{cell\_reference}}
+\index{cell\_reference@{cell\_reference}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{cell\_reference()}{cell\_reference()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily xlnt\+::cell\+\_\+reference\+::cell\+\_\+reference (\begin{DoxyParamCaption}\item[{const char $\ast$}]{reference\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} from a string reprenting a cell coordinate (e.\+g. \$\+B14). 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_a37bf13621245efe44c222c126d0625a3}\label{classxlnt_1_1cell__reference_a37bf13621245efe44c222c126d0625a3}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!cell\_reference@{cell\_reference}}
+\index{cell\_reference@{cell\_reference}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{cell\_reference()}{cell\_reference()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily xlnt\+::cell\+\_\+reference\+::cell\+\_\+reference (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{reference\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} from a string reprenting a cell coordinate (e.\+g. \$\+B14). 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_af575675cd87ad091308df383845d1163}\label{classxlnt_1_1cell__reference_af575675cd87ad091308df383845d1163}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!cell\_reference@{cell\_reference}}
+\index{cell\_reference@{cell\_reference}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{cell\_reference()}{cell\_reference()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily xlnt\+::cell\+\_\+reference\+::cell\+\_\+reference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}}]{column,  }\item[{\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}}]{row }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} from a 1-\/indexed column index and row index. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_a124bb06ee3aff3b1e3faa9e4f2c8dcf7}\label{classxlnt_1_1cell__reference_a124bb06ee3aff3b1e3faa9e4f2c8dcf7}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!column@{column}}
+\index{column@{column}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{column()}{column()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}} xlnt\+::cell\+\_\+reference\+::column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a string that identifies the column of this reference (e.\+g. second column from left is \char`\"{}\+B\char`\"{}) 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_a21d29399cf443da4e42ba6996de8f518}\label{classxlnt_1_1cell__reference_a21d29399cf443da4e42ba6996de8f518}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!column@{column}}
+\index{column@{column}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{column()}{column()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+\_\+reference\+::column (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{column\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Sets the column of this reference from a string that identifies a particular column. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_a702e0aabcf69bfe4ddb564a387c3fcce}\label{classxlnt_1_1cell__reference_a702e0aabcf69bfe4ddb564a387c3fcce}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!column\_absolute@{column\_absolute}}
+\index{column\_absolute@{column\_absolute}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{column\_absolute()}{column\_absolute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+\_\+reference\+::column\+\_\+absolute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the reference refers to an absolute column, otherwise false. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_aec14906310ae29cae94e34b776bf859d}\label{classxlnt_1_1cell__reference_aec14906310ae29cae94e34b776bf859d}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!column\_absolute@{column\_absolute}}
+\index{column\_absolute@{column\_absolute}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{column\_absolute()}{column\_absolute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+\_\+reference\+::column\+\_\+absolute (\begin{DoxyParamCaption}\item[{bool}]{absolute\+\_\+column }\end{DoxyParamCaption})}
+
+
+
+Makes this reference have an absolute column if absolute\+\_\+column is true, otherwise not absolute. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_ad0d42653dcc3ed6daf69e6a273c48191}\label{classxlnt_1_1cell__reference_ad0d42653dcc3ed6daf69e6a273c48191}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!column\_index@{column\_index}}
+\index{column\_index@{column\_index}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{column\_index()}{column\_index()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1column__t_ab514d159582ca03315e0f020dc8efedd}{column\+\_\+t\+::index\+\_\+t}} xlnt\+::cell\+\_\+reference\+::column\+\_\+index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a 1-\/indexed numeric index of the column of this reference. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_aa9ceac8c2d33418ad365211addd1bdac}\label{classxlnt_1_1cell__reference_aa9ceac8c2d33418ad365211addd1bdac}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!column\_index@{column\_index}}
+\index{column\_index@{column\_index}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{column\_index()}{column\_index()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+\_\+reference\+::column\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classxlnt_1_1column__t}{column\+\_\+t}}}]{column }\end{DoxyParamCaption})}
+
+
+
+Sets the column of this reference from a 1-\/indexed number that identifies a particular column. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_ad7316e80383467c30d98cb8ac9a5c1e6}\label{classxlnt_1_1cell__reference_ad7316e80383467c30d98cb8ac9a5c1e6}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!make\_absolute@{make\_absolute}}
+\index{make\_absolute@{make\_absolute}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{make\_absolute()}{make\_absolute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \& xlnt\+::cell\+\_\+reference\+::make\+\_\+absolute (\begin{DoxyParamCaption}\item[{bool}]{absolute\+\_\+column = {\ttfamily true},  }\item[{bool}]{absolute\+\_\+row = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Converts a coordinate to an absolute coordinate string (e.\+g. B12 -\/$>$ \$B\$12) Defaulting to true, absolute\+\_\+column and absolute\+\_\+row can optionally control whether the resulting \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} has an absolute column (e.\+g. B12 -\/$>$ \$\+B12) and absolute row (e.\+g. B12 -\/$>$ B\$12) respectively. 
+
+This is functionally equivalent to\+: \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} copy($\ast$this); copy.\+column\+\_\+absolute(absolute\+\_\+column); copy.\+row\+\_\+absolute(absolute\+\_\+row); return copy; \mbox{\Hypertarget{classxlnt_1_1cell__reference_a5ff2b47947164dc7cad3a289e84c1b4e}\label{classxlnt_1_1cell__reference_a5ff2b47947164dc7cad3a289e84c1b4e}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!make\_offset@{make\_offset}}
+\index{make\_offset@{make\_offset}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{make\_offset()}{make\_offset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} xlnt\+::cell\+\_\+reference\+::make\+\_\+offset (\begin{DoxyParamCaption}\item[{int}]{column\+\_\+offset,  }\item[{int}]{row\+\_\+offset }\end{DoxyParamCaption}) const}
+
+
+
+Returns a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} offset from this \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} by the number of columns and rows specified by the parameters. A negative value for column\+\_\+offset or row\+\_\+offset results in a reference above or left of this \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}, respectively. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_a88240ac3674452940493a129480c9482}\label{classxlnt_1_1cell__reference_a88240ac3674452940493a129480c9482}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+\_\+reference\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{comparand }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this reference is not identical to comparand including in absoluteness of column and row. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_a06d27875051ebfe747afb71b51fd9b3a}\label{classxlnt_1_1cell__reference_a06d27875051ebfe747afb71b51fd9b3a}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+\_\+reference\+::operator!= (\begin{DoxyParamCaption}\item[{const char $\ast$}]{reference\+\_\+string }\end{DoxyParamCaption}) const}
+
+
+
+Constructs a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} from reference\+\_\+string and return the result of their comparison. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_ae8d7a76a6e52c73b7cd1389bd20f0170}\label{classxlnt_1_1cell__reference_ae8d7a76a6e52c73b7cd1389bd20f0170}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+\_\+reference\+::operator!= (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{reference\+\_\+string }\end{DoxyParamCaption}) const}
+
+
+
+Constructs a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} from reference\+\_\+string and return the result of their comparison. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_a00cd26ea0b1cbb1a38eb4cfda429701f}\label{classxlnt_1_1cell__reference_a00cd26ea0b1cbb1a38eb4cfda429701f}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!operator,@{operator,}}
+\index{operator,@{operator,}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{operator,()}{operator,()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} xlnt\+::cell\+\_\+reference\+::operator, (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+I\textquotesingle{}ve always wanted to overload the comma operator. \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}(\char`\"{}\+A\char`\"{}, 1), \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}(\char`\"{}\+B\char`\"{}, 1) will return \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}}(\mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}(\char`\"{}\+A\char`\"{}, 1), \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}(\char`\"{}\+B\char`\"{}, 1)) 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_a17ddbe3794cf7cf369c09d5f99e4902e}\label{classxlnt_1_1cell__reference_a17ddbe3794cf7cf369c09d5f99e4902e}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+\_\+reference\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&}]{comparand }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this reference is identical to comparand including in absoluteness of column and row. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_ac07803daf0556fd094735f74f9a233c3}\label{classxlnt_1_1cell__reference_ac07803daf0556fd094735f74f9a233c3}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+\_\+reference\+::operator== (\begin{DoxyParamCaption}\item[{const char $\ast$}]{reference\+\_\+string }\end{DoxyParamCaption}) const}
+
+
+
+Constructs a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} from reference\+\_\+string and return the result of their comparison. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_a3427504ddd1ca620a50a9b44577803f3}\label{classxlnt_1_1cell__reference_a3427504ddd1ca620a50a9b44577803f3}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+\_\+reference\+::operator== (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{reference\+\_\+string }\end{DoxyParamCaption}) const}
+
+
+
+Constructs a \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} from reference\+\_\+string and return the result of their comparison. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_acce80520bdd12d5a6dd8b1d1d1b3f942}\label{classxlnt_1_1cell__reference_acce80520bdd12d5a6dd8b1d1d1b3f942}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!row@{row}}
+\index{row@{row}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{row()}{row()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} xlnt\+::cell\+\_\+reference\+::row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a 1-\/indexed numeric index of the row of this reference. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_afc31295202956ff6e654b02b5acf0930}\label{classxlnt_1_1cell__reference_afc31295202956ff6e654b02b5acf0930}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!row@{row}}
+\index{row@{row}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{row()}{row()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+\_\+reference\+::row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}}}]{row }\end{DoxyParamCaption})}
+
+
+
+Sets the row of this reference from a 1-\/indexed number that identifies a particular row. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_ab2be2ba25bded757a81bd54b5787cc3b}\label{classxlnt_1_1cell__reference_ab2be2ba25bded757a81bd54b5787cc3b}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!row\_absolute@{row\_absolute}}
+\index{row\_absolute@{row\_absolute}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{row\_absolute()}{row\_absolute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::cell\+\_\+reference\+::row\+\_\+absolute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the reference refers to an absolute row, otherwise false. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_a0d0434387768bd31f543122800478dd2}\label{classxlnt_1_1cell__reference_a0d0434387768bd31f543122800478dd2}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!row\_absolute@{row\_absolute}}
+\index{row\_absolute@{row\_absolute}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{row\_absolute()}{row\_absolute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::cell\+\_\+reference\+::row\+\_\+absolute (\begin{DoxyParamCaption}\item[{bool}]{absolute\+\_\+row }\end{DoxyParamCaption})}
+
+
+
+Makes this reference have an absolute row if absolute\+\_\+row is true, otherwise not absolute. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_a3260bc058ab33f60f58feeb7e3248c9d}\label{classxlnt_1_1cell__reference_a3260bc058ab33f60f58feeb7e3248c9d}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!split\_reference@{split\_reference}}
+\index{split\_reference@{split\_reference}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{split\_reference()}{split\_reference()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::pair$<$ std\+::string, \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} $>$ xlnt\+::cell\+\_\+reference\+::split\+\_\+reference (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{reference\+\_\+string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Splits a coordinate string like \char`\"{}\+A1\char`\"{} into an equivalent pair like \{\char`\"{}\+A\char`\"{}, 1\}. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_ac0f49128777ef44de66d34cd184ccc01}\label{classxlnt_1_1cell__reference_ac0f49128777ef44de66d34cd184ccc01}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!split\_reference@{split\_reference}}
+\index{split\_reference@{split\_reference}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{split\_reference()}{split\_reference()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::pair$<$ std\+::string, \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} $>$ xlnt\+::cell\+\_\+reference\+::split\+\_\+reference (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{reference\+\_\+string,  }\item[{bool \&}]{absolute\+\_\+column,  }\item[{bool \&}]{absolute\+\_\+row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Splits a coordinate string like \char`\"{}\+A1\char`\"{} into an equivalent pair like \{\char`\"{}\+A\char`\"{}, 1\}. Reference parameters absolute\+\_\+column and absolute\+\_\+row will be set to true if column part or row part are prefixed by a dollar-\/sign indicating they are absolute, otherwise false. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_a4612bcfb2c51d44c529d50ab3bb0ffcb}\label{classxlnt_1_1cell__reference_a4612bcfb2c51d44c529d50ab3bb0ffcb}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!to\_range@{to\_range}}
+\index{to\_range@{to\_range}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{to\_range()}{to\_range()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} xlnt\+::cell\+\_\+reference\+::to\+\_\+range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a 1x1 \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} containing only this \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}}. 
+
+\mbox{\Hypertarget{classxlnt_1_1cell__reference_ac79e961a120faa927fb6d1e7827886ff}\label{classxlnt_1_1cell__reference_ac79e961a120faa927fb6d1e7827886ff}} 
+\index{xlnt::cell\_reference@{xlnt::cell\_reference}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!xlnt::cell\_reference@{xlnt::cell\_reference}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::cell\+\_\+reference\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a string like \char`\"{}\+A1\char`\"{} for cell\+\_\+reference(1, 1). 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/cell/\mbox{\hyperlink{cell__reference_8hpp}{cell\+\_\+reference.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/cell/\mbox{\hyperlink{cell__reference_8cpp}{cell\+\_\+reference.\+cpp}}\end{DoxyCompactItemize}

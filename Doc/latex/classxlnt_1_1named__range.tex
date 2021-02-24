@@ -1,0 +1,129 @@
+\hypertarget{classxlnt_1_1named__range}{}\doxysection{xlnt\+::named\+\_\+range Class Reference}
+\label{classxlnt_1_1named__range}\index{xlnt::named\_range@{xlnt::named\_range}}
+
+
+A 2D range of cells in a worksheet that is referred to by name. ws-\/$>$range(\char`\"{}\+A1\+:\+B2\char`\"{}) could be replaced by ws-\/$>$range(\char`\"{}range1\char`\"{})  
+
+
+
+
+{\ttfamily \#include $<$named\+\_\+range.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classxlnt_1_1named__range_a6788af33a4cacc0ea35261d20fbc3168}{target}} = std\+::pair$<$ \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}, \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} $>$
+\begin{DoxyCompactList}\small\item\em Type alias for the combination of sheet and range this \mbox{\hyperlink{classxlnt_1_1named__range}{named\+\_\+range}} points to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1named__range_af8a3e3ab32239820b9e0b7ea06294b4e}{named\+\_\+range}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a named range that has no name and has no targets. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1named__range_a742fca52881c98cd04711c367d44f035}{named\+\_\+range}} (const \mbox{\hyperlink{classxlnt_1_1named__range}{named\+\_\+range}} \&other)
+\begin{DoxyCompactList}\small\item\em Constructs a named range by copying its name and targets from other. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1named__range_a01cb2a222e5e9e66e01c353abc1a26bb}{named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, const std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1named__range_a6788af33a4cacc0ea35261d20fbc3168}{target}} $>$ \&\mbox{\hyperlink{classxlnt_1_1named__range_afc2507020f844c62e2e33115a8dfbe03}{targets}})
+\begin{DoxyCompactList}\small\item\em Constructs a named range with the given name and targets. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1named__range_a0a222382314b775955dbba4047b914a6}{name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the name of this range. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1named__range_a6788af33a4cacc0ea35261d20fbc3168}{target}} $>$ \& \mbox{\hyperlink{classxlnt_1_1named__range_afc2507020f844c62e2e33115a8dfbe03}{targets}} () const
+\begin{DoxyCompactList}\small\item\em Returns the set of targets of this named range as a vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1named__range}{named\+\_\+range}} \& \mbox{\hyperlink{classxlnt_1_1named__range_a918e18c9b7c9fce14a9f8e3dcade7ff8}{operator=}} (const \mbox{\hyperlink{classxlnt_1_1named__range}{named\+\_\+range}} \&other)
+\begin{DoxyCompactList}\small\item\em Assigns the name and targets of this \mbox{\hyperlink{classxlnt_1_1named__range}{named\+\_\+range}} to that of other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1named__range_a9a271eac53a1084bba5a4d7b90e580d4}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1named__range}{named\+\_\+range}} \&rhs) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A 2D range of cells in a worksheet that is referred to by name. ws-\/$>$range(\char`\"{}\+A1\+:\+B2\char`\"{}) could be replaced by ws-\/$>$range(\char`\"{}range1\char`\"{}) 
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classxlnt_1_1named__range_a6788af33a4cacc0ea35261d20fbc3168}\label{classxlnt_1_1named__range_a6788af33a4cacc0ea35261d20fbc3168}} 
+\index{xlnt::named\_range@{xlnt::named\_range}!target@{target}}
+\index{target@{target}!xlnt::named\_range@{xlnt::named\_range}}
+\doxysubsubsection{\texorpdfstring{target}{target}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classxlnt_1_1named__range_a6788af33a4cacc0ea35261d20fbc3168}{xlnt\+::named\+\_\+range\+::target}} =  std\+::pair$<$\mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}}, \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}}$>$}
+
+
+
+Type alias for the combination of sheet and range this \mbox{\hyperlink{classxlnt_1_1named__range}{named\+\_\+range}} points to. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1named__range_af8a3e3ab32239820b9e0b7ea06294b4e}\label{classxlnt_1_1named__range_af8a3e3ab32239820b9e0b7ea06294b4e}} 
+\index{xlnt::named\_range@{xlnt::named\_range}!named\_range@{named\_range}}
+\index{named\_range@{named\_range}!xlnt::named\_range@{xlnt::named\_range}}
+\doxysubsubsection{\texorpdfstring{named\_range()}{named\_range()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily xlnt\+::named\+\_\+range\+::named\+\_\+range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a named range that has no name and has no targets. 
+
+\mbox{\Hypertarget{classxlnt_1_1named__range_a742fca52881c98cd04711c367d44f035}\label{classxlnt_1_1named__range_a742fca52881c98cd04711c367d44f035}} 
+\index{xlnt::named\_range@{xlnt::named\_range}!named\_range@{named\_range}}
+\index{named\_range@{named\_range}!xlnt::named\_range@{xlnt::named\_range}}
+\doxysubsubsection{\texorpdfstring{named\_range()}{named\_range()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily xlnt\+::named\+\_\+range\+::named\+\_\+range (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1named__range}{named\+\_\+range}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Constructs a named range by copying its name and targets from other. 
+
+\mbox{\Hypertarget{classxlnt_1_1named__range_a01cb2a222e5e9e66e01c353abc1a26bb}\label{classxlnt_1_1named__range_a01cb2a222e5e9e66e01c353abc1a26bb}} 
+\index{xlnt::named\_range@{xlnt::named\_range}!named\_range@{named\_range}}
+\index{named\_range@{named\_range}!xlnt::named\_range@{xlnt::named\_range}}
+\doxysubsubsection{\texorpdfstring{named\_range()}{named\_range()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily xlnt\+::named\+\_\+range\+::named\+\_\+range (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1named__range_a6788af33a4cacc0ea35261d20fbc3168}{target}} $>$ \&}]{targets }\end{DoxyParamCaption})}
+
+
+
+Constructs a named range with the given name and targets. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1named__range_a0a222382314b775955dbba4047b914a6}\label{classxlnt_1_1named__range_a0a222382314b775955dbba4047b914a6}} 
+\index{xlnt::named\_range@{xlnt::named\_range}!name@{name}}
+\index{name@{name}!xlnt::named\_range@{xlnt::named\_range}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string xlnt\+::named\+\_\+range\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the name of this range. 
+
+\mbox{\Hypertarget{classxlnt_1_1named__range_a918e18c9b7c9fce14a9f8e3dcade7ff8}\label{classxlnt_1_1named__range_a918e18c9b7c9fce14a9f8e3dcade7ff8}} 
+\index{xlnt::named\_range@{xlnt::named\_range}!operator=@{operator=}}
+\index{operator=@{operator=}!xlnt::named\_range@{xlnt::named\_range}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1named__range}{named\+\_\+range}} \& xlnt\+::named\+\_\+range\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1named__range}{named\+\_\+range}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Assigns the name and targets of this \mbox{\hyperlink{classxlnt_1_1named__range}{named\+\_\+range}} to that of other. 
+
+\mbox{\Hypertarget{classxlnt_1_1named__range_a9a271eac53a1084bba5a4d7b90e580d4}\label{classxlnt_1_1named__range_a9a271eac53a1084bba5a4d7b90e580d4}} 
+\index{xlnt::named\_range@{xlnt::named\_range}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::named\_range@{xlnt::named\_range}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::named\+\_\+range\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1named__range}{named\+\_\+range}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxlnt_1_1named__range_afc2507020f844c62e2e33115a8dfbe03}\label{classxlnt_1_1named__range_afc2507020f844c62e2e33115a8dfbe03}} 
+\index{xlnt::named\_range@{xlnt::named\_range}!targets@{targets}}
+\index{targets@{targets}!xlnt::named\_range@{xlnt::named\_range}}
+\doxysubsubsection{\texorpdfstring{targets()}{targets()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classxlnt_1_1named__range_a6788af33a4cacc0ea35261d20fbc3168}{named\+\_\+range\+::target}} $>$ \& xlnt\+::named\+\_\+range\+::targets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the set of targets of this named range as a vector. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/workbook/\mbox{\hyperlink{named__range_8hpp}{named\+\_\+range.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/workbook/\mbox{\hyperlink{named__range_8cpp}{named\+\_\+range.\+cpp}}\end{DoxyCompactItemize}

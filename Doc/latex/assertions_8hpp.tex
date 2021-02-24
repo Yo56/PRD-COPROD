@@ -1,0 +1,130 @@
+\hypertarget{assertions_8hpp}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.5.0/tests/helpers/assertions.hpp File Reference}
+\label{assertions_8hpp}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/tests/helpers/assertions.hpp@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/tests/helpers/assertions.hpp}}
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include $<$xlnt/utils/exceptions.\+hpp$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{assertions_8hpp_af97df72a40914e7723fca2c793c523b5}{XLNT\+\_\+\+STRINGIFYX}}(x)~\#x
+\item 
+\#define \mbox{\hyperlink{assertions_8hpp_a1aa39e025655fdfc8f01fcd6daedff7b}{XLNT\+\_\+\+STRINGIFY}}(x)~\mbox{\hyperlink{assertions_8hpp_af97df72a40914e7723fca2c793c523b5}{XLNT\+\_\+\+STRINGIFYX}}(x)
+\item 
+\#define \mbox{\hyperlink{assertions_8hpp_a8a16888c2ad6a9ed395f0178f96d2aaa}{xlnt\+\_\+assert}}(expression)
+\item 
+\#define \mbox{\hyperlink{assertions_8hpp_a5d2756df44b343fcb3bdfaf9b0b46440}{xlnt\+\_\+assert\+\_\+throws\+\_\+nothing}}(expression)
+\item 
+\#define \mbox{\hyperlink{assertions_8hpp_aae9b7a77c74300ef311f9fb705f46ebb}{xlnt\+\_\+assert\+\_\+throws}}(expression,  exception\+\_\+type)
+\item 
+\#define \mbox{\hyperlink{assertions_8hpp_aa52c020774e7cdb15a789ad2711b1779}{xlnt\+\_\+assert\+\_\+equals}}(\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}},  \mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}})~\mbox{\hyperlink{assertions_8hpp_a8a16888c2ad6a9ed395f0178f96d2aaa}{xlnt\+\_\+assert}}((\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}) == (\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}}))
+\item 
+\#define \mbox{\hyperlink{assertions_8hpp_ad026cf5049f92f630821e78608fc0ce9}{xlnt\+\_\+assert\+\_\+differs}}(\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}},  \mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}})~\mbox{\hyperlink{assertions_8hpp_a8a16888c2ad6a9ed395f0178f96d2aaa}{xlnt\+\_\+assert}}((\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}) != (\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}}))
+\item 
+\#define \mbox{\hyperlink{assertions_8hpp_a53bea0adf95652a03f86f2242f57ea65}{xlnt\+\_\+assert\+\_\+delta}}(\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}},  \mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}},  delta)~\mbox{\hyperlink{assertions_8hpp_a8a16888c2ad6a9ed395f0178f96d2aaa}{xlnt\+\_\+assert}}(std\+::abs((\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}) -\/ (\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}})) $<$= (delta))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{assertions_8hpp_a8a16888c2ad6a9ed395f0178f96d2aaa}\label{assertions_8hpp_a8a16888c2ad6a9ed395f0178f96d2aaa}} 
+\index{assertions.hpp@{assertions.hpp}!xlnt\_assert@{xlnt\_assert}}
+\index{xlnt\_assert@{xlnt\_assert}!assertions.hpp@{assertions.hpp}}
+\doxysubsubsection{\texorpdfstring{xlnt\_assert}{xlnt\_assert}}
+{\footnotesize\ttfamily \#define xlnt\+\_\+assert(\begin{DoxyParamCaption}\item[{}]{expression }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do}                                                                        \(\backslash\)}
+\DoxyCodeLine{    \{                                                                         \(\backslash\)}
+\DoxyCodeLine{        try                                                                   \(\backslash\)}
+\DoxyCodeLine{        \{                                                                     \(\backslash\)}
+\DoxyCodeLine{            if (expression) \textcolor{keywordflow}{break};                                            \(\backslash\)}
+\DoxyCodeLine{        \}                                                                     \(\backslash\)}
+\DoxyCodeLine{        catch (std::exception \& ex)                                           \(\backslash\)}
+\DoxyCodeLine{        \{                                                                     \(\backslash\)}
+\DoxyCodeLine{            throw ex;                                                         \(\backslash\)}
+\DoxyCodeLine{        \}                                                                     \(\backslash\)}
+\DoxyCodeLine{        catch (...)                                                           \(\backslash\)}
+\DoxyCodeLine{        \{                                                                     \(\backslash\)}
+\DoxyCodeLine{        \}                                                                     \(\backslash\)}
+\DoxyCodeLine{        throw \mbox{\hyperlink{classxlnt_1_1exception}{xlnt::exception}}(                                              \(\backslash\)}
+\DoxyCodeLine{            \textcolor{stringliteral}{"{}assert failed at L:"{}} \mbox{\hyperlink{assertions_8hpp_a1aa39e025655fdfc8f01fcd6daedff7b}{XLNT\_STRINGIFY}}(\_\_LINE\_\_) \textcolor{stringliteral}{"{}\(\backslash\)n"{}} \mbox{\hyperlink{assertions_8hpp_a1aa39e025655fdfc8f01fcd6daedff7b}{XLNT\_STRINGIFY}}(expression)); \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (\textcolor{keyword}{false})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{assertions_8hpp_a53bea0adf95652a03f86f2242f57ea65}\label{assertions_8hpp_a53bea0adf95652a03f86f2242f57ea65}} 
+\index{assertions.hpp@{assertions.hpp}!xlnt\_assert\_delta@{xlnt\_assert\_delta}}
+\index{xlnt\_assert\_delta@{xlnt\_assert\_delta}!assertions.hpp@{assertions.hpp}}
+\doxysubsubsection{\texorpdfstring{xlnt\_assert\_delta}{xlnt\_assert\_delta}}
+{\footnotesize\ttfamily \#define xlnt\+\_\+assert\+\_\+delta(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}},  }\item[{}]{\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}},  }\item[{}]{delta }\end{DoxyParamCaption})~\mbox{\hyperlink{assertions_8hpp_a8a16888c2ad6a9ed395f0178f96d2aaa}{xlnt\+\_\+assert}}(std\+::abs((\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}) -\/ (\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}})) $<$= (delta))}
+
+\mbox{\Hypertarget{assertions_8hpp_ad026cf5049f92f630821e78608fc0ce9}\label{assertions_8hpp_ad026cf5049f92f630821e78608fc0ce9}} 
+\index{assertions.hpp@{assertions.hpp}!xlnt\_assert\_differs@{xlnt\_assert\_differs}}
+\index{xlnt\_assert\_differs@{xlnt\_assert\_differs}!assertions.hpp@{assertions.hpp}}
+\doxysubsubsection{\texorpdfstring{xlnt\_assert\_differs}{xlnt\_assert\_differs}}
+{\footnotesize\ttfamily \#define xlnt\+\_\+assert\+\_\+differs(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}},  }\item[{}]{\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}} }\end{DoxyParamCaption})~\mbox{\hyperlink{assertions_8hpp_a8a16888c2ad6a9ed395f0178f96d2aaa}{xlnt\+\_\+assert}}((\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}) != (\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}}))}
+
+\mbox{\Hypertarget{assertions_8hpp_aa52c020774e7cdb15a789ad2711b1779}\label{assertions_8hpp_aa52c020774e7cdb15a789ad2711b1779}} 
+\index{assertions.hpp@{assertions.hpp}!xlnt\_assert\_equals@{xlnt\_assert\_equals}}
+\index{xlnt\_assert\_equals@{xlnt\_assert\_equals}!assertions.hpp@{assertions.hpp}}
+\doxysubsubsection{\texorpdfstring{xlnt\_assert\_equals}{xlnt\_assert\_equals}}
+{\footnotesize\ttfamily \#define xlnt\+\_\+assert\+\_\+equals(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}},  }\item[{}]{\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}} }\end{DoxyParamCaption})~\mbox{\hyperlink{assertions_8hpp_a8a16888c2ad6a9ed395f0178f96d2aaa}{xlnt\+\_\+assert}}((\mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}) == (\mbox{\hyperlink{alignment_8hpp_a25331d5f9601b8cb1ce57490930d7c01}{right}}))}
+
+\mbox{\Hypertarget{assertions_8hpp_aae9b7a77c74300ef311f9fb705f46ebb}\label{assertions_8hpp_aae9b7a77c74300ef311f9fb705f46ebb}} 
+\index{assertions.hpp@{assertions.hpp}!xlnt\_assert\_throws@{xlnt\_assert\_throws}}
+\index{xlnt\_assert\_throws@{xlnt\_assert\_throws}!assertions.hpp@{assertions.hpp}}
+\doxysubsubsection{\texorpdfstring{xlnt\_assert\_throws}{xlnt\_assert\_throws}}
+{\footnotesize\ttfamily \#define xlnt\+\_\+assert\+\_\+throws(\begin{DoxyParamCaption}\item[{}]{expression,  }\item[{}]{exception\+\_\+type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do}                                                                        \(\backslash\)}
+\DoxyCodeLine{    \{                                                                         \(\backslash\)}
+\DoxyCodeLine{        try                                                                   \(\backslash\)}
+\DoxyCodeLine{        \{                                                                     \(\backslash\)}
+\DoxyCodeLine{            expression;                                                       \(\backslash\)}
+\DoxyCodeLine{        \}                                                                     \(\backslash\)}
+\DoxyCodeLine{        catch (exception\_type)                                                \(\backslash\)}
+\DoxyCodeLine{        \{                                                                     \(\backslash\)}
+\DoxyCodeLine{            break;                                                            \(\backslash\)}
+\DoxyCodeLine{        \}                                                                     \(\backslash\)}
+\DoxyCodeLine{        catch (...)                                                           \(\backslash\)}
+\DoxyCodeLine{        \{                                                                     \(\backslash\)}
+\DoxyCodeLine{        \}                                                                     \(\backslash\)}
+\DoxyCodeLine{        throw \mbox{\hyperlink{classxlnt_1_1exception}{xlnt::exception}}(\textcolor{stringliteral}{"{}assert throws failed at L:"{}} \mbox{\hyperlink{assertions_8hpp_a1aa39e025655fdfc8f01fcd6daedff7b}{XLNT\_STRINGIFY}}(\_\_LINE\_\_) \textcolor{stringliteral}{"{}\(\backslash\)n"{}} \mbox{\hyperlink{assertions_8hpp_a1aa39e025655fdfc8f01fcd6daedff7b}{XLNT\_STRINGIFY}}(expression)); \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (\textcolor{keyword}{false})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{assertions_8hpp_a5d2756df44b343fcb3bdfaf9b0b46440}\label{assertions_8hpp_a5d2756df44b343fcb3bdfaf9b0b46440}} 
+\index{assertions.hpp@{assertions.hpp}!xlnt\_assert\_throws\_nothing@{xlnt\_assert\_throws\_nothing}}
+\index{xlnt\_assert\_throws\_nothing@{xlnt\_assert\_throws\_nothing}!assertions.hpp@{assertions.hpp}}
+\doxysubsubsection{\texorpdfstring{xlnt\_assert\_throws\_nothing}{xlnt\_assert\_throws\_nothing}}
+{\footnotesize\ttfamily \#define xlnt\+\_\+assert\+\_\+throws\+\_\+nothing(\begin{DoxyParamCaption}\item[{}]{expression }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do}                                                                        \(\backslash\)}
+\DoxyCodeLine{    \{                                                                         \(\backslash\)}
+\DoxyCodeLine{        try                                                                   \(\backslash\)}
+\DoxyCodeLine{        \{                                                                     \(\backslash\)}
+\DoxyCodeLine{            expression;                                                       \(\backslash\)}
+\DoxyCodeLine{            break;                                                            \(\backslash\)}
+\DoxyCodeLine{        \}                                                                     \(\backslash\)}
+\DoxyCodeLine{        catch (...)                                                           \(\backslash\)}
+\DoxyCodeLine{        \{                                                                     \(\backslash\)}
+\DoxyCodeLine{        \}                                                                     \(\backslash\)}
+\DoxyCodeLine{        throw \mbox{\hyperlink{classxlnt_1_1exception}{xlnt::exception}}(\textcolor{stringliteral}{"{}assert throws nothing failed at L:"{}} \mbox{\hyperlink{assertions_8hpp_a1aa39e025655fdfc8f01fcd6daedff7b}{XLNT\_STRINGIFY}}(\_\_LINE\_\_) \textcolor{stringliteral}{"{}\(\backslash\)n"{}} \mbox{\hyperlink{assertions_8hpp_a1aa39e025655fdfc8f01fcd6daedff7b}{XLNT\_STRINGIFY}}(expression)); \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (\textcolor{keyword}{false})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{assertions_8hpp_a1aa39e025655fdfc8f01fcd6daedff7b}\label{assertions_8hpp_a1aa39e025655fdfc8f01fcd6daedff7b}} 
+\index{assertions.hpp@{assertions.hpp}!XLNT\_STRINGIFY@{XLNT\_STRINGIFY}}
+\index{XLNT\_STRINGIFY@{XLNT\_STRINGIFY}!assertions.hpp@{assertions.hpp}}
+\doxysubsubsection{\texorpdfstring{XLNT\_STRINGIFY}{XLNT\_STRINGIFY}}
+{\footnotesize\ttfamily \#define XLNT\+\_\+\+STRINGIFY(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{assertions_8hpp_af97df72a40914e7723fca2c793c523b5}{XLNT\+\_\+\+STRINGIFYX}}(x)}
+
+\mbox{\Hypertarget{assertions_8hpp_af97df72a40914e7723fca2c793c523b5}\label{assertions_8hpp_af97df72a40914e7723fca2c793c523b5}} 
+\index{assertions.hpp@{assertions.hpp}!XLNT\_STRINGIFYX@{XLNT\_STRINGIFYX}}
+\index{XLNT\_STRINGIFYX@{XLNT\_STRINGIFYX}!assertions.hpp@{assertions.hpp}}
+\doxysubsubsection{\texorpdfstring{XLNT\_STRINGIFYX}{XLNT\_STRINGIFYX}}
+{\footnotesize\ttfamily \#define XLNT\+\_\+\+STRINGIFYX(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\#x}
+

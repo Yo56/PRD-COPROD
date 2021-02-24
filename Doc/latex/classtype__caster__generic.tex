@@ -1,0 +1,130 @@
+\hypertarget{classtype__caster__generic}{}\doxysection{type\+\_\+caster\+\_\+generic Class Reference}
+\label{classtype__caster__generic}\index{type\_caster\_generic@{type\_caster\_generic}}
+
+
+{\ttfamily \#include $<$cast.\+h$>$}
+
+Inheritance diagram for type\+\_\+caster\+\_\+generic\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.800643cm]{classtype__caster__generic}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{common_8h_a1fb186b7494d5c576d902c0730ecbb71}{PYBIND11\+\_\+\+NOINLINE}} \mbox{\hyperlink{classtype__caster__generic_a596f9ddd637dc921c7e19a1a8438f0a8}{type\+\_\+caster\+\_\+generic}} (const std\+::type\+\_\+info \&\mbox{\hyperlink{structtype__info}{type\+\_\+info}})
+\item 
+bool \mbox{\hyperlink{classtype__caster__generic_aa841c81d370ff23ccafa8507cc01a0b1}{load}} (\mbox{\hyperlink{classhandle}{handle}} src, bool convert)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{common_8h_a1fb186b7494d5c576d902c0730ecbb71}{PYBIND11\+\_\+\+NOINLINE}} \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{classtype__caster__generic_a7256e99988999dc3735dadaf55757b4a}{cast}} (const void $\ast$\+\_\+src, \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}} policy, \mbox{\hyperlink{classhandle}{handle}} parent, const detail\+::type\+\_\+info $\ast$tinfo, void $\ast$($\ast$copy\+\_\+constructor)(const void $\ast$), void $\ast$($\ast$move\+\_\+constructor)(const void $\ast$), const void $\ast$existing\+\_\+holder=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtype__caster__generic_af64eaefb0e45a80b26619bdc67498573}{load\+\_\+value}} (const \mbox{\hyperlink{structvalue__and__holder}{value\+\_\+and\+\_\+holder}} \&v\+\_\+h)
+\item 
+bool \mbox{\hyperlink{classtype__caster__generic_a0a08f0af0579001f749a42d2671fb859}{try\+\_\+implicit\+\_\+casts}} (\mbox{\hyperlink{classhandle}{handle}} src, bool convert)
+\item 
+bool \mbox{\hyperlink{classtype__caster__generic_a1192cfe91ebc0a78fa912b78a810a39a}{try\+\_\+direct\+\_\+conversions}} (\mbox{\hyperlink{classhandle}{handle}} src)
+\item 
+void \mbox{\hyperlink{classtype__caster__generic_ac292948adb39e608d4ad380f3bb24f2c}{check\+\_\+holder\+\_\+compat}} ()
+\item 
+{\footnotesize template$<$typename ThisT $>$ }\\\mbox{\hyperlink{common_8h_a1fb186b7494d5c576d902c0730ecbb71}{PYBIND11\+\_\+\+NOINLINE}} bool \mbox{\hyperlink{classtype__caster__generic_a1f07975f281fa5681f6586a04581edd4}{load\+\_\+impl}} (\mbox{\hyperlink{classhandle}{handle}} src, bool convert)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{common_8h_a1fb186b7494d5c576d902c0730ecbb71}{PYBIND11\+\_\+\+NOINLINE}} std\+::pair$<$ const void $\ast$, const \mbox{\hyperlink{structtype__info}{type\+\_\+info}} $\ast$ $>$ \mbox{\hyperlink{classtype__caster__generic_a2f47b7a5edcbc5d26abfb7807baf5139}{src\+\_\+and\+\_\+type}} (const void $\ast$src, const std\+::type\+\_\+info \&cast\+\_\+type, const std\+::type\+\_\+info $\ast$rtti\+\_\+type=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structtype__info}{type\+\_\+info}} $\ast$ \mbox{\hyperlink{classtype__caster__generic_ae0fcfb286c3f28721b89b077a9e1fe6d}{typeinfo}} = nullptr
+\item 
+void $\ast$ \mbox{\hyperlink{classtype__caster__generic_a077b8d1e4af829443b2e41c3e5786f4d}{value}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtype__caster__generic_a596f9ddd637dc921c7e19a1a8438f0a8}\label{classtype__caster__generic_a596f9ddd637dc921c7e19a1a8438f0a8}} 
+\index{type\_caster\_generic@{type\_caster\_generic}!type\_caster\_generic@{type\_caster\_generic}}
+\index{type\_caster\_generic@{type\_caster\_generic}!type\_caster\_generic@{type\_caster\_generic}}
+\doxysubsubsection{\texorpdfstring{type\_caster\_generic()}{type\_caster\_generic()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a1fb186b7494d5c576d902c0730ecbb71}{PYBIND11\+\_\+\+NOINLINE}} type\+\_\+caster\+\_\+generic\+::type\+\_\+caster\+\_\+generic (\begin{DoxyParamCaption}\item[{const std\+::type\+\_\+info \&}]{type\+\_\+info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtype__caster__generic_a7256e99988999dc3735dadaf55757b4a}\label{classtype__caster__generic_a7256e99988999dc3735dadaf55757b4a}} 
+\index{type\_caster\_generic@{type\_caster\_generic}!cast@{cast}}
+\index{cast@{cast}!type\_caster\_generic@{type\_caster\_generic}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{common_8h_a1fb186b7494d5c576d902c0730ecbb71}{PYBIND11\+\_\+\+NOINLINE}} \mbox{\hyperlink{classhandle}{handle}} type\+\_\+caster\+\_\+generic\+::cast (\begin{DoxyParamCaption}\item[{const void $\ast$}]{\+\_\+src,  }\item[{\mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}}}]{policy,  }\item[{\mbox{\hyperlink{classhandle}{handle}}}]{parent,  }\item[{const detail\+::type\+\_\+info $\ast$}]{tinfo,  }\item[{void $\ast$($\ast$)(const void $\ast$)}]{copy\+\_\+constructor,  }\item[{void $\ast$($\ast$)(const void $\ast$)}]{move\+\_\+constructor,  }\item[{const void $\ast$}]{existing\+\_\+holder = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classtype__caster__generic_ac292948adb39e608d4ad380f3bb24f2c}\label{classtype__caster__generic_ac292948adb39e608d4ad380f3bb24f2c}} 
+\index{type\_caster\_generic@{type\_caster\_generic}!check\_holder\_compat@{check\_holder\_compat}}
+\index{check\_holder\_compat@{check\_holder\_compat}!type\_caster\_generic@{type\_caster\_generic}}
+\doxysubsubsection{\texorpdfstring{check\_holder\_compat()}{check\_holder\_compat()}}
+{\footnotesize\ttfamily void type\+\_\+caster\+\_\+generic\+::check\+\_\+holder\+\_\+compat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtype__caster__generic_aa841c81d370ff23ccafa8507cc01a0b1}\label{classtype__caster__generic_aa841c81d370ff23ccafa8507cc01a0b1}} 
+\index{type\_caster\_generic@{type\_caster\_generic}!load@{load}}
+\index{load@{load}!type\_caster\_generic@{type\_caster\_generic}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily bool type\+\_\+caster\+\_\+generic\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandle}{handle}}}]{src,  }\item[{bool}]{convert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtype__caster__generic_a1f07975f281fa5681f6586a04581edd4}\label{classtype__caster__generic_a1f07975f281fa5681f6586a04581edd4}} 
+\index{type\_caster\_generic@{type\_caster\_generic}!load\_impl@{load\_impl}}
+\index{load\_impl@{load\_impl}!type\_caster\_generic@{type\_caster\_generic}}
+\doxysubsubsection{\texorpdfstring{load\_impl()}{load\_impl()}}
+{\footnotesize\ttfamily template$<$typename ThisT $>$ \\
+\mbox{\hyperlink{common_8h_a1fb186b7494d5c576d902c0730ecbb71}{PYBIND11\+\_\+\+NOINLINE}} bool type\+\_\+caster\+\_\+generic\+::load\+\_\+impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandle}{handle}}}]{src,  }\item[{bool}]{convert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtype__caster__generic_af64eaefb0e45a80b26619bdc67498573}\label{classtype__caster__generic_af64eaefb0e45a80b26619bdc67498573}} 
+\index{type\_caster\_generic@{type\_caster\_generic}!load\_value@{load\_value}}
+\index{load\_value@{load\_value}!type\_caster\_generic@{type\_caster\_generic}}
+\doxysubsubsection{\texorpdfstring{load\_value()}{load\_value()}}
+{\footnotesize\ttfamily void type\+\_\+caster\+\_\+generic\+::load\+\_\+value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structvalue__and__holder}{value\+\_\+and\+\_\+holder}} \&}]{v\+\_\+h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtype__caster__generic_a2f47b7a5edcbc5d26abfb7807baf5139}\label{classtype__caster__generic_a2f47b7a5edcbc5d26abfb7807baf5139}} 
+\index{type\_caster\_generic@{type\_caster\_generic}!src\_and\_type@{src\_and\_type}}
+\index{src\_and\_type@{src\_and\_type}!type\_caster\_generic@{type\_caster\_generic}}
+\doxysubsubsection{\texorpdfstring{src\_and\_type()}{src\_and\_type()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{common_8h_a1fb186b7494d5c576d902c0730ecbb71}{PYBIND11\+\_\+\+NOINLINE}} std\+::pair$<$const void $\ast$, const \mbox{\hyperlink{structtype__info}{type\+\_\+info}} $\ast$$>$ type\+\_\+caster\+\_\+generic\+::src\+\_\+and\+\_\+type (\begin{DoxyParamCaption}\item[{const void $\ast$}]{src,  }\item[{const std\+::type\+\_\+info \&}]{cast\+\_\+type,  }\item[{const std\+::type\+\_\+info $\ast$}]{rtti\+\_\+type = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtype__caster__generic_a1192cfe91ebc0a78fa912b78a810a39a}\label{classtype__caster__generic_a1192cfe91ebc0a78fa912b78a810a39a}} 
+\index{type\_caster\_generic@{type\_caster\_generic}!try\_direct\_conversions@{try\_direct\_conversions}}
+\index{try\_direct\_conversions@{try\_direct\_conversions}!type\_caster\_generic@{type\_caster\_generic}}
+\doxysubsubsection{\texorpdfstring{try\_direct\_conversions()}{try\_direct\_conversions()}}
+{\footnotesize\ttfamily bool type\+\_\+caster\+\_\+generic\+::try\+\_\+direct\+\_\+conversions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandle}{handle}}}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtype__caster__generic_a0a08f0af0579001f749a42d2671fb859}\label{classtype__caster__generic_a0a08f0af0579001f749a42d2671fb859}} 
+\index{type\_caster\_generic@{type\_caster\_generic}!try\_implicit\_casts@{try\_implicit\_casts}}
+\index{try\_implicit\_casts@{try\_implicit\_casts}!type\_caster\_generic@{type\_caster\_generic}}
+\doxysubsubsection{\texorpdfstring{try\_implicit\_casts()}{try\_implicit\_casts()}}
+{\footnotesize\ttfamily bool type\+\_\+caster\+\_\+generic\+::try\+\_\+implicit\+\_\+casts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandle}{handle}}}]{src,  }\item[{bool}]{convert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtype__caster__generic_ae0fcfb286c3f28721b89b077a9e1fe6d}\label{classtype__caster__generic_ae0fcfb286c3f28721b89b077a9e1fe6d}} 
+\index{type\_caster\_generic@{type\_caster\_generic}!typeinfo@{typeinfo}}
+\index{typeinfo@{typeinfo}!type\_caster\_generic@{type\_caster\_generic}}
+\doxysubsubsection{\texorpdfstring{typeinfo}{typeinfo}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structtype__info}{type\+\_\+info}}$\ast$ type\+\_\+caster\+\_\+generic\+::typeinfo = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtype__caster__generic_a077b8d1e4af829443b2e41c3e5786f4d}\label{classtype__caster__generic_a077b8d1e4af829443b2e41c3e5786f4d}} 
+\index{type\_caster\_generic@{type\_caster\_generic}!value@{value}}
+\index{value@{value}!type\_caster\_generic@{type\_caster\_generic}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily void$\ast$ type\+\_\+caster\+\_\+generic\+::value = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{cast_8h}{cast.\+h}}\end{DoxyCompactItemize}

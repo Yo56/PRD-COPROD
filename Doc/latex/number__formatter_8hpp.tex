@@ -1,0 +1,652 @@
+\hypertarget{number__formatter_8hpp}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.5.0/source/detail/number\+\_\+format/number\+\_\+formatter.hpp File Reference}
+\label{number__formatter_8hpp}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/source/detail/number\_format/number\_formatter.hpp@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/source/detail/number\_format/number\_formatter.hpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$xlnt/utils/datetime.\+hpp$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structxlnt_1_1detail_1_1format__condition}{xlnt\+::detail\+::format\+\_\+condition}}
+\item 
+struct \mbox{\hyperlink{structxlnt_1_1detail_1_1format__placeholders}{xlnt\+::detail\+::format\+\_\+placeholders}}
+\item 
+struct \mbox{\hyperlink{structxlnt_1_1detail_1_1number__format__token}{xlnt\+::detail\+::number\+\_\+format\+\_\+token}}
+\item 
+struct \mbox{\hyperlink{structxlnt_1_1detail_1_1template__part}{xlnt\+::detail\+::template\+\_\+part}}
+\item 
+struct \mbox{\hyperlink{structxlnt_1_1detail_1_1format__code}{xlnt\+::detail\+::format\+\_\+code}}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1detail_1_1number__format__parser}{xlnt\+::detail\+::number\+\_\+format\+\_\+parser}}
+\item 
+class \mbox{\hyperlink{classxlnt_1_1detail_1_1number__formatter}{xlnt\+::detail\+::number\+\_\+formatter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacexlnt}{xlnt}}
+\begin{DoxyCompactList}\small\item\em Enumerates the possible types a cell can be determined by it\textquotesingle{}s current value. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacexlnt_1_1detail}{xlnt\+::detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0}{xlnt\+::detail\+::format\+\_\+color}} \{ \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a1ffd9e753c8054cc61456ac7fac1ac89}{xlnt\+::detail\+::black}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a48d6215903dff56238e52e8891380c8f}{xlnt\+::detail\+::blue}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a6411532ba4971f378391776a9db629d3}{xlnt\+::detail\+::cyan}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a9f27410725ab8cc8854a2769c7a516b8}{xlnt\+::detail\+::green}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a4c2a4a7078da0ac6733464eacfd00f86}{xlnt\+::detail\+::magenta}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0abda9643ac6601722a28f238714274da4}{xlnt\+::detail\+::red}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0ad508fe45cecaf653904a0e774084bb5c}{xlnt\+::detail\+::white}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0ad487dd0b55dfcacdd920ccbdaeafa351}{xlnt\+::detail\+::yellow}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0adddce03739867ad935a78cda255ec4dd}{xlnt\+::detail\+::color1}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a2c442e61b76cc00acf08a1118eae7852}{xlnt\+::detail\+::color2}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a79139957320cd67b3fa6be3f429dafc5}{xlnt\+::detail\+::color3}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0aa2fa857196bdc299240294b055f5c9ee}{xlnt\+::detail\+::color4}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0acff11180f3068b0a8d6de6b21b7546bc}{xlnt\+::detail\+::color5}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0ae992a0705279e07b61544ba1c89cb839}{xlnt\+::detail\+::color6}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a7c710b81639af14193cd64760c7bf6c4}{xlnt\+::detail\+::color7}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0aa25cdfd327248b83012ca822a0ea21ca}{xlnt\+::detail\+::color8}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0ad204fe30610289c83d587a9738a35df0}{xlnt\+::detail\+::color9}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a274ebe1eec77beb8e8fc9350407f072a}{xlnt\+::detail\+::color10}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a36f5c936ba7d94d46a674a47ab1bd02b}{xlnt\+::detail\+::color11}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a8aea2a425e5cab2e62560d7e706a8217}{xlnt\+::detail\+::color12}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a44a01a5d98007d697434226a1cc146b9}{xlnt\+::detail\+::color13}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a95a458dbfa0726a0fa0a8a5860aa1cc1}{xlnt\+::detail\+::color14}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0aeb6ad292d6f21a2fb810e6e445e8880f}{xlnt\+::detail\+::color15}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a4d3698037beb8b8c05f364971d8eacc9}{xlnt\+::detail\+::color16}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a72158828a6b9051347605a878f1c94de}{xlnt\+::detail\+::color17}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a3ee1b21850b68c123507ac5cd23203ff}{xlnt\+::detail\+::color18}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0aece4ba176ca811e1c98869dd9c3fa02d}{xlnt\+::detail\+::color19}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a465d7e2e504c5ce33d7325e1c37371e5}{xlnt\+::detail\+::color20}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a4160279557bef87b51c901706ac69242}{xlnt\+::detail\+::color21}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a8713755c95997895a71c0c00381b38d7}{xlnt\+::detail\+::color22}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0abbf615da1e7917e6c6054f7a9e6ec63c}{xlnt\+::detail\+::color23}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a6646d1fb867933cc51eb51736dcfccc6}{xlnt\+::detail\+::color24}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0ab0db92086b11564a3dfbbb0d1f5462cd}{xlnt\+::detail\+::color25}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0af18fd0d1b29e65e84935ef2143993d4d}{xlnt\+::detail\+::color26}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0adb79791d1a3284a5ca39e9a0f2522301}{xlnt\+::detail\+::color27}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a59f458b7c4831d017251d4d239cdc01c}{xlnt\+::detail\+::color28}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a1df8b106086bac14bc1506742e7b129a}{xlnt\+::detail\+::color29}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a49ff79d6d45c0a023f5e293cea39c155}{xlnt\+::detail\+::color30}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0aaa31a05b8baa8f565c14a1f3d233c562}{xlnt\+::detail\+::color31}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a9dfa8038297aa56316990d96e2a26197}{xlnt\+::detail\+::color32}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a0fbf92f72e7362dfaeb432ec307a53f1}{xlnt\+::detail\+::color33}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a98b186f855e36fd0e6872bd3388ee454}{xlnt\+::detail\+::color34}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a60657a996d4680b5f9d7ed3a64e2387b}{xlnt\+::detail\+::color35}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a344521ace3124d2b34e0b6a7940b2c63}{xlnt\+::detail\+::color36}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a47f0f130cfd184e3ff6c105dbe95a9c8}{xlnt\+::detail\+::color37}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0aa5eb49d1fe402a7ca9ea1e0b94487c98}{xlnt\+::detail\+::color38}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a19e7d300191d31996574066666bb2a43}{xlnt\+::detail\+::color39}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0aa62f00dabc05e53bfd0571023574de2f}{xlnt\+::detail\+::color40}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a37d4e6482966bd771532f948df5df2fb}{xlnt\+::detail\+::color41}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a2f8932dd64af2c3b9c7a504e5054cce8}{xlnt\+::detail\+::color42}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0acbaf650845f33adac668146f23979d08}{xlnt\+::detail\+::color43}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a0c68cb150c64b81d32b3a796c1d897eb}{xlnt\+::detail\+::color44}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0ab7778589214a4c490f6822108dd1fb42}{xlnt\+::detail\+::color45}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0af703d5a130a13dc40597768af6ebbaaa}{xlnt\+::detail\+::color46}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0ab5db27040b3d1b5f8604352a7951687e}{xlnt\+::detail\+::color47}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0adf8f6bb38b7e764e2dc6ee08ca28f5cd}{xlnt\+::detail\+::color48}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0adbe6f833eaa12e76918d3b4e0240a664}{xlnt\+::detail\+::color49}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0ad6a5c8ae2c852b50d23cd6200065dc3a}{xlnt\+::detail\+::color50}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a63a7f9777b58d4889b66e9600a9fb140}{xlnt\+::detail\+::color51}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0adc68d208ba9ca766bcc9dfe5178df7ad}{xlnt\+::detail\+::color52}}
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0adfe08847de8e1c5a5f8614fc14a21951}{xlnt\+::detail\+::color53}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a79448f380b794cbaa7f0a1a5eeab9859}{xlnt\+::detail\+::color54}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a1f92cdc4745b4b3c8259cbb5d0a1c876}{xlnt\+::detail\+::color55}}
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a3df1169079dd05b15182cd6479f152d0a7f4b1e96389388733da7c0be31cd7d91}{xlnt\+::detail\+::color56}}
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60d}{xlnt\+::detail\+::format\+\_\+locale}} \{ \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dac56279a35f7cb9a09172148a630f33d6}{xlnt\+::detail\+::arabic}} = 0x1
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da44e61d85167b7bad742dc479f4d85063}{xlnt\+::detail\+::bulgarian}} = 0x2
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dae1a5429e08fff16a4dc91654e4483d50}{xlnt\+::detail\+::catalan}} = 0x3
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3e51212028842b6a7ee12199aef8afae}{xlnt\+::detail\+::chinese\+\_\+simplified}} = 0x4
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da27bd8403783ecc49ab1228f0e9f73068}{xlnt\+::detail\+::chinese\+\_\+simplified\+\_\+legacy}} = 0x4
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da2ce79b16195c1b5e67bf00199117a369}{xlnt\+::detail\+::czech}} = 0x5
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da5b119a961fcb523c81c25e8f79de2380}{xlnt\+::detail\+::danish}} = 0x6
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa6d414ac4f293187dd042025834925f7}{xlnt\+::detail\+::german}} = 0x7
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da709ac5dd9635e01c88c252291f72e382}{xlnt\+::detail\+::greek}} = 0x8
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daba0a6ddd94c73698a3658f92ac222f8a}{xlnt\+::detail\+::english}} = 0x9
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da4757b7df2140d47d35c37e54a70ad41d}{xlnt\+::detail\+::spanish}} = 0xA
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da488f3a4d39c5803e5cc99f1c3d13bf31}{xlnt\+::detail\+::finnish}} = 0xB
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da64e12ab6aa0d4c7473286d43b6a35fc8}{xlnt\+::detail\+::french}} = 0xC
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da09e7306c24228641cccdbbb4dd0fc6d5}{xlnt\+::detail\+::hebrew}} = 0xD
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da06c4c0c4f5c90b0f823b80fa8127948c}{xlnt\+::detail\+::hungarian}} = 0xE
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dac516ce7b249da784df87b57b5f3e4a72}{xlnt\+::detail\+::icelandic}} = 0xF
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da2267860f043bf39437195f97d46520ea}{xlnt\+::detail\+::italian}} = 0x10
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da8175469f5b7510febe85d18daa424a3f}{xlnt\+::detail\+::japanese}} = 0x11
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da9d42bc52034504306fc80b80aaa94a7c}{xlnt\+::detail\+::korean}} = 0x12
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dab4355908e98e83e585d6faae9be33311}{xlnt\+::detail\+::dutch}} = 0x13
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da78cd2853bf7f478226130daf04652021}{xlnt\+::detail\+::norwegian}} = 0x14
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da60ee0bc62638fccf2d37ac27a634a9e9}{xlnt\+::detail\+::polish}} = 0x15
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf380785d1349149d2b49f2038b06f459}{xlnt\+::detail\+::portuguese}} = 0x16
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da30c4b1ea6294b55b9656033e0d09b4ee}{xlnt\+::detail\+::romansh}} = 0x17
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da652577a1593b22d67a4eb24390301627}{xlnt\+::detail\+::romanian}} = 0x18
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da11eb6dd2f9dcf57686be6f609d853f9c}{xlnt\+::detail\+::russian}} = 0x19
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da340f44376902baf838e5fcfa1df4ba48}{xlnt\+::detail\+::croatian}} = 0x1A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3bb43fc00590f2ac779e0e7f651b1ed1}{xlnt\+::detail\+::slovak}} = 0x1B
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da49c84cec1d988a03d3231d778e10b8fa}{xlnt\+::detail\+::albanian}} = 0x1C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dac81a3177cd86c7371f0572a651a4ab70}{xlnt\+::detail\+::swedish}} = 0x1D
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da1aafcfcd9efdd2e7ac43e80ce77bba79}{xlnt\+::detail\+::thai}} = 0x1E
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da7a74a6bc6f9bf978060a2f5301a4822f}{xlnt\+::detail\+::turkish}} = 0x1F
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da5a0f99f464cda5d14aa0b89f465ece8a}{xlnt\+::detail\+::urdu}} = 0x20
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da91551a63737a9e66bac586a8524dfc10}{xlnt\+::detail\+::indonesian}} = 0x21
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf4e2db238c8c37d77a919786be26c688}{xlnt\+::detail\+::ukrainian}} = 0x22
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dac25500c459f865faa0fe762e94530089}{xlnt\+::detail\+::belarusian}} = 0x23
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf1442e963273da669f49eb4d090c46a2}{xlnt\+::detail\+::slovenian}} = 0x24
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dafc5c041357771f0b6a2b1e3fd0685414}{xlnt\+::detail\+::estonian}} = 0x25
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da4194c9e5526e5967ecf6cfea08d1a525}{xlnt\+::detail\+::latvian}} = 0x26
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da65b01cd12dc5cb80b5481e1a123cef23}{xlnt\+::detail\+::lithuanian}} = 0x27
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da777c66fa5ca453221938b9dff6f03158}{xlnt\+::detail\+::tajik}} = 0x28
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da40c47a207709d010ee1541d32f7c0c42}{xlnt\+::detail\+::persian}} = 0x29
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da582b795ac295c6133170cdeb5a0449d3}{xlnt\+::detail\+::vietnamese}} = 0x2A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa291ff7b1634ffc0c986c20613610d31}{xlnt\+::detail\+::armenian}} = 0x2B
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da22c80ef65f6fce67703339ea8da47114}{xlnt\+::detail\+::azerbaijani}} = 0x2C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da148a27539a37b24d8e56279c545a8f8a}{xlnt\+::detail\+::basque}} = 0x2D
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dabfd09c2f9be8a1becd080a893eb1abbb}{xlnt\+::detail\+::upper\+\_\+sorbian}} = 0x2E
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da66a5f38f7a2c39fd3388f1858d08e8b4}{xlnt\+::detail\+::macedonian\+\_\+fyrom}} = 0x2F
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da4954e9c2f36b4a58388bd56e57087b24}{xlnt\+::detail\+::southern\+\_\+sotho}} = 0x30
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da564b48127e7229c379f6798a0a9b2c24}{xlnt\+::detail\+::tsonga}} = 0x31
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da6961b2e95ef0f17e6f8c0ef3c1826c38}{xlnt\+::detail\+::setswana}} = 0x32
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dabdd0236b411808e8758fdc3c6a100aeb}{xlnt\+::detail\+::venda}} = 0x33
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da88009a39bbcdd5f2db6355c6313ddaee}{xlnt\+::detail\+::isixhosa}} = 0x34
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dadbb78a762ab31642bbb31181cc5a7f90}{xlnt\+::detail\+::isizulu}} = 0x35
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da293e4ff44a6de2818e84528f1ca498a2}{xlnt\+::detail\+::afrikaans}} = 0x36
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa89081623d823ead93ea37eb62e25550}{xlnt\+::detail\+::georgian}} = 0x37
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da17149cb9a3c63f235e0034197682783a}{xlnt\+::detail\+::faroese}} = 0x38
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da13a2927187b9700ae7ea82d7841d5b68}{xlnt\+::detail\+::hindi}} = 0x39
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dad392a3f559502acf7b1062bfdf957283}{xlnt\+::detail\+::maltese}} = 0x3A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da143c1c61a81aa19eb01fbbb927550660}{xlnt\+::detail\+::sami\+\_\+northern}} = 0x3B
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da25c01ee98de2048ca62f81da22b928f0}{xlnt\+::detail\+::irish}} = 0x3C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa23649151107c209e260541e6de80d79}{xlnt\+::detail\+::yiddish}} = 0x3D
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da231ce44f07541b685a0d895683abc0db}{xlnt\+::detail\+::malay}} = 0x3E
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa5b484a8f8a56dfb359623ba1fa8ac58}{xlnt\+::detail\+::kazakh}} = 0x3F
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da219d47f97940ab7f4d3bba9b4b031fec}{xlnt\+::detail\+::kyrgyz}} = 0x40
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da20ac8d2b69712e1260a717b86344ba7f}{xlnt\+::detail\+::kiswahili}} = 0x41
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da8d1af3760b559626c79a6ccf2aa89cd8}{xlnt\+::detail\+::turkmen}} = 0x42
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dac543ea8294a3d4d1a5d5aec74202b5d6}{xlnt\+::detail\+::uzbek}} = 0x43
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf6aeb78278e60007a4f729a6c038fea1}{xlnt\+::detail\+::tatar}} = 0x44
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf929941de789acba7369b5a9dd1c79f7}{xlnt\+::detail\+::bangla}} = 0x45
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da2a5493b66672d62306b9cda443ba0633}{xlnt\+::detail\+::punjabi}} = 0x46
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da8005419b2415988b63ecad461a7d4e30}{xlnt\+::detail\+::gujarati}} = 0x47
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da5cd4b5a4f5a50eb08c031b121fbf2066}{xlnt\+::detail\+::odia}} = 0x48
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3601e469065cf2f99691c0cb1aff8dff}{xlnt\+::detail\+::tamil}} = 0x49
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da5234c76ef8affee271257705e8e3fecf}{xlnt\+::detail\+::telugu}} = 0x4A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3fdd64f383dcb2c6ed7a3f00a408236d}{xlnt\+::detail\+::kannada}} = 0x4B
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daeb6d172757e1145c6967cdc6c735c857}{xlnt\+::detail\+::malayalam}} = 0x4C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da4e9c612f638bb88514ef8327b6bc02af}{xlnt\+::detail\+::assamese}} = 0x4D
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dadc6a1f88df833d4660ba2a9454a0d875}{xlnt\+::detail\+::marathi}} = 0x4E
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da46c19e889ed0268a53c8874d8341ea2f}{xlnt\+::detail\+::sanskrit}} = 0x4F
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da2a6f1725b27bd4c2cb3d8b0466b46432}{xlnt\+::detail\+::mongolian}} = 0x50
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da8006a26c4816f4d172e31c2460a0e162}{xlnt\+::detail\+::tibetan}} = 0x51
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da4f699734c629e77cfbe6b2cbb6dd9a4d}{xlnt\+::detail\+::welsh}} = 0x52
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da76a4baa199f7d989b1893c07e777dc4c}{xlnt\+::detail\+::khmer}} = 0x53
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa80d6c8b0672a71f1698fe9fdcf48ce5}{xlnt\+::detail\+::lao}} = 0x54
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da0a99ff30b7231113642976e591de055a}{xlnt\+::detail\+::burmese}} = 0x55
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da5e505252f91263c7dc65e7082a1ea7dd}{xlnt\+::detail\+::galician}} = 0x56
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da6edbcc4aea1f8f3cafecdc6125fb33f0}{xlnt\+::detail\+::konkani}} = 0x57
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dab31a74759f8efd408e402b9d29d6b5f5}{xlnt\+::detail\+::manipuri}} = 0x58
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da8b163182d2d7cfdbd3a05d89f57ce562}{xlnt\+::detail\+::sindhi}} = 0x59
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da87e99bc141317428855f975bad3a8c31}{xlnt\+::detail\+::syriac}} = 0x5A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dabc8673950dae08318b1b5794c2284224}{xlnt\+::detail\+::sinhala}} = 0x5B
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da74f440ad812f0cc2192ab782e27608cc}{xlnt\+::detail\+::cherokee}} = 0x5C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dad9b0a55054cedb0a8403d37deb460b8b}{xlnt\+::detail\+::inuktitut}} = 0x5D
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dab9af8cfe2c63499204cb4a509cfd50d4}{xlnt\+::detail\+::amharic}} = 0x5E
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dad37e9f976cf54ff7197a5ac2ace04c7b}{xlnt\+::detail\+::tamazight}} = 0x5F
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da602191f6ec0add245728f51a0fe5d0da}{xlnt\+::detail\+::kashmiri}} = 0x60
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf38f16e0078fd432812150061aced6b1}{xlnt\+::detail\+::nepali}} = 0x61
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dace3bb2000dcb543e9def5fcf19ebf03d}{xlnt\+::detail\+::frisian}} = 0x62
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dad7dbe1558b3b7079adb3eb28445b0d4d}{xlnt\+::detail\+::pashto}} = 0x63
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa947da04d6c7bc1967cda1dc484aa47f}{xlnt\+::detail\+::filipino}} = 0x64
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dafb619dde990a3acd360b31cd391cb8e9}{xlnt\+::detail\+::divehi}} = 0x65
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dad2d612f72e42577991f4a5936cecbcc0}{xlnt\+::detail\+::edo}} = 0x66
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dacbc26f641a21d7121fb8f185697a31a2}{xlnt\+::detail\+::fulah}} = 0x67
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da6397887a55216b86387a94299937fd00}{xlnt\+::detail\+::hausa}} = 0x68
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da808058579c9355479b9664a765917615}{xlnt\+::detail\+::ibibio}} = 0x69
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da0375923df828f1c51449c6cd9c5667de}{xlnt\+::detail\+::yoruba}} = 0x6A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da211e985c486a1ee5612e365bdb8cdc7f}{xlnt\+::detail\+::quechua}} = 0x6B
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da326f1b47b0fc58fd8c441a9f2349ba42}{xlnt\+::detail\+::sesotho\+\_\+sa\+\_\+leboa}} = 0x6C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da076165e62ecd9826df07c240ff9ffdb6}{xlnt\+::detail\+::bashkir}} = 0x6D
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa49600809df29c442f40f050f83401d3}{xlnt\+::detail\+::luxembourgish}} = 0x6E
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da82b7abc64ba2d36df38fa9bf40af2f7e}{xlnt\+::detail\+::greenlandic}} = 0x6F
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dac047dfab42a61c2d533bf0134d63dd24}{xlnt\+::detail\+::igbo}} = 0x70
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3d4860ea8977a9943e9e114073b94129}{xlnt\+::detail\+::kanuri}} = 0x71
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dacac6a25130ead24110f9e27149ba779e}{xlnt\+::detail\+::oromo}} = 0x72
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da63de01135599348b1775b3d36239c15b}{xlnt\+::detail\+::tigrinya}} = 0x73
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da8cfec5a069b5296541cc03d7eb003a43}{xlnt\+::detail\+::guarani}} = 0x74
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da5efcd206d09ed4beefc691c8c2d40297}{xlnt\+::detail\+::hawaiian}} = 0x75
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf4b418eba9c0b3d4901880b743cbbaff}{xlnt\+::detail\+::latin}} = 0x76
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dac1a1401782c6381bc20b27d374eecf95}{xlnt\+::detail\+::somali}} = 0x77
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da10f9132e586392a6513eeeb303db630c}{xlnt\+::detail\+::yi}} = 0x78
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da821a5a7ae2ccd03aa7a2e191063f6551}{xlnt\+::detail\+::papiamento}} = 0x79
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da952601e9e7e5e2ad0617dfec1482a51c}{xlnt\+::detail\+::mapudungun}} = 0x7A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da9e587f98b064ca13df59b7aa9b1f3eaa}{xlnt\+::detail\+::mohawk}} = 0x7C
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dafdbcdc7f4897ec66d54283c543818aec}{xlnt\+::detail\+::breton}} = 0x7E
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da311190c72212059d9b83ccc649e7f1f7}{xlnt\+::detail\+::invariant\+\_\+language\+\_\+invariant\+\_\+country}} = 0x7F
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da028418efb73005cac115a6809c66dc4f}{xlnt\+::detail\+::uyghur}} = 0x80
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3f9c9d3555eb78a545a5e2979d3d749b}{xlnt\+::detail\+::maori}} = 0x81
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf7a4284a355127b45eb5d30d5a18b32b}{xlnt\+::detail\+::occitan}} = 0x82
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da46758f2eb35b2f79e8db5189360d4ce2}{xlnt\+::detail\+::corsican}} = 0x83
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da8afa17d95d9c6aba404ebe78ed2ba2bf}{xlnt\+::detail\+::alsatian}} = 0x84
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da21eb38a7484cbdc6f38fe5a0baf39f26}{xlnt\+::detail\+::sakha}} = 0x85
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dac1396cd317d583aeb4242c71a16f44ab}{xlnt\+::detail\+::kiche}} = 0x86
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da2e1753df42c0c7fcaf5a5b13d9c79ef9}{xlnt\+::detail\+::kinyarwanda}} = 0x87
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da4f12b2c6f20f44aab962849acecf2f13}{xlnt\+::detail\+::wolof}} = 0x88
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dad05fd15ad711e0816ef1ee978b052f31}{xlnt\+::detail\+::dari}} = 0x8C
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3e49caecf41426a6f4dc60183203221b}{xlnt\+::detail\+::scottish\+\_\+gaelic}} = 0x91
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da5e0a73776febaaf8364066d86d5c2223}{xlnt\+::detail\+::central\+\_\+kurdish}} = 0x92
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daebfe0969f7ec9277b2f6a726e824bcc0}{xlnt\+::detail\+::arabic\+\_\+saudi\+\_\+arabia}} = 0x401
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dab5561bba0650fd417621b9a4d8d47394}{xlnt\+::detail\+::bulgarian\+\_\+bulgaria}} = 0x402
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3c824b80fda9459fd8ab131b8b529de0}{xlnt\+::detail\+::catalan\+\_\+catalan}} = 0x403
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da30bcedc56cd2f726fd441e9feace7b5e}{xlnt\+::detail\+::chinese\+\_\+traditional\+\_\+taiwan}} = 0x404
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da5fcf01c9e4a82c9b25d926f498baf9ae}{xlnt\+::detail\+::czech\+\_\+czech\+\_\+republic}} = 0x405
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dafd35b9cd47b3d9483cc9a0307fe58e13}{xlnt\+::detail\+::danish\+\_\+denmark}} = 0x406
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da689a93972cfd294a6b6f29a8a1ee6f59}{xlnt\+::detail\+::german\+\_\+germany}} = 0x407
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3db7f57ed50c74d047e7bf238f35f5d9}{xlnt\+::detail\+::greek\+\_\+greece}} = 0x408
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da288fb253f2074ef7529fff727630f518}{xlnt\+::detail\+::english\+\_\+united\+\_\+states}} = 0x409
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da0a54adb07764dfe95caf5cd9177fecdd}{xlnt\+::detail\+::finnish\+\_\+finland}} = 0x40B
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da7020a9f2059b683eb63eaee3e80d0985}{xlnt\+::detail\+::french\+\_\+france}} = 0x40C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da285e7d98f248f15e2d554f70bdc51a89}{xlnt\+::detail\+::hebrew\+\_\+israel}} = 0x40D
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf94017a0305fb2a38db7fd58c5b3ee10}{xlnt\+::detail\+::hungarian\+\_\+hungary}} = 0x40E
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da227a10e06065fe8f23c38c0281cd6266}{xlnt\+::detail\+::icelandic\+\_\+iceland}} = 0x40F
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da7bb4b94ccc89ddc71c16ccf63fc03cd6}{xlnt\+::detail\+::italian\+\_\+italy}} = 0x410
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf56f74e3ed5fe14b98237ba719de843d}{xlnt\+::detail\+::japanese\+\_\+japan}} = 0x411
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da45f781cfea746dd7c6f6b6e078194682}{xlnt\+::detail\+::korean\+\_\+korea}} = 0x412
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dae217819847a70ddd6867c506ea779aef}{xlnt\+::detail\+::dutch\+\_\+netherlands}} = 0x413
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3e47aa176d612701c51a1c5293104c5b}{xlnt\+::detail\+::norwegian\+\_\+bokml\+\_\+norway}} = 0x414
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dac87ed98b2b15ae7d04b5b17e304e8c80}{xlnt\+::detail\+::polish\+\_\+poland}} = 0x415
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da05e36e649afe16c4d52a3705fdca45f0}{xlnt\+::detail\+::portuguese\+\_\+brazil}} = 0x416
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da4752b9958423027a662decb2c2ce9e9e}{xlnt\+::detail\+::romansh\+\_\+switzerland}} = 0x417
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da7aeba074b55d05eef912b0d21dbade66}{xlnt\+::detail\+::romanian\+\_\+romania}} = 0x418
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da25f4e9e87b8ffb67dc06ed0b6da9d048}{xlnt\+::detail\+::russian\+\_\+russia}} = 0x419
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da4188f982ff1e11dc74509d333d93955b}{xlnt\+::detail\+::croatian\+\_\+croatia}} = 0x41A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dab04727a285eba74d611dfafd42561b33}{xlnt\+::detail\+::slovak\+\_\+slovakia}} = 0x41B
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da1ab88628a29c9476c97762eb063a5975}{xlnt\+::detail\+::albanian\+\_\+albania}} = 0x41C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da897a4ec8eedde11ff7c1865b62c2beb1}{xlnt\+::detail\+::swedish\+\_\+sweden}} = 0x41D
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da18ca612384839c23b2882c578d715e80}{xlnt\+::detail\+::thai\+\_\+thailand}} = 0x41E
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dac41ccf432bbbed9aeb6325f168a199f7}{xlnt\+::detail\+::turkish\+\_\+turkey}} = 0x41F
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da7f188ac95137cc77dd96b8fedd9e53cf}{xlnt\+::detail\+::urdu\+\_\+islamic\+\_\+republic\+\_\+of\+\_\+pakistan}} = 0x420
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dac8a5e771ef657f6cf03d8eb7d718d2b4}{xlnt\+::detail\+::indonesian\+\_\+indonesia}} = 0x421
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da7800f7a34f2028c6258193f299dfbb4e}{xlnt\+::detail\+::ukrainian\+\_\+ukraine}} = 0x422
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da32212e608012b72c7717d2ff22d5be88}{xlnt\+::detail\+::belarusian\+\_\+belarus}} = 0x423
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da8519ca1809c4412dcffad2ed8c5287aa}{xlnt\+::detail\+::slovenian\+\_\+slovenia}} = 0x424
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da12d0f36eda990a0d24d92227a9da568c}{xlnt\+::detail\+::estonian\+\_\+estonia}} = 0x425
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dae928a74707c71349dc7f605e5eb24e10}{xlnt\+::detail\+::latvian\+\_\+latvia}} = 0x426
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daeaa77585c083be3a522e260b406d316f}{xlnt\+::detail\+::lithuanian\+\_\+lithuania}} = 0x427
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daee4ba00553d369e8b8fd54fa44f71c15}{xlnt\+::detail\+::tajik\+\_\+cyrillic\+\_\+tajikistan}} = 0x428
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daed6dfd8bc3d45847e8235262c54276d9}{xlnt\+::detail\+::persian\+\_\+iran}} = 0x429
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da86641b7e9adfff5e887491e200131498}{xlnt\+::detail\+::vietnamese\+\_\+vietnam}} = 0x42A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da104febb86f0b3babefcee74a625935db}{xlnt\+::detail\+::armenian\+\_\+armenia}} = 0x42B
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dad9e66df696049f987fc64751ec019591}{xlnt\+::detail\+::azerbaijani\+\_\+latin\+\_\+azerbaijan}} = 0x42C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dadfdba10957ae1b128331ef4fae5b2c53}{xlnt\+::detail\+::basque\+\_\+basque}} = 0x42D
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da5334d7981b4b936cb080552235920bbd}{xlnt\+::detail\+::upper\+\_\+sorbian\+\_\+germany}} = 0x42E
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daeb48b7a2416c2162e1bd99645a4bf8d9}{xlnt\+::detail\+::macedonian\+\_\+former\+\_\+yugoslav\+\_\+republic\+\_\+of\+\_\+macedonia}} = 0x42F
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da94bbb1464493520629ba95f8a9b34832}{xlnt\+::detail\+::southern\+\_\+sotho\+\_\+south\+\_\+africa}} = 0x430
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da5768f7fb6fde7620ba063806dc12af59}{xlnt\+::detail\+::tsonga\+\_\+south\+\_\+africa}} = 0x431
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dab693b5dfb00cfe9969643b08f6a728d0}{xlnt\+::detail\+::setswana\+\_\+south\+\_\+africa}} = 0x432
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da84f0ebf8a61d35c4c1ea5edd7a78d4a7}{xlnt\+::detail\+::venda\+\_\+south\+\_\+africa}} = 0x433
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da9330f603a05b88b89d9d2e4d3e31a8c2}{xlnt\+::detail\+::isixhosa\+\_\+south\+\_\+africa}} = 0x434
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da69b778664edc463f7b4440b249731447}{xlnt\+::detail\+::isizulu\+\_\+south\+\_\+africa}} = 0x435
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da285fb39fd85a3491514d608eadd6e80e}{xlnt\+::detail\+::afrikaans\+\_\+south\+\_\+africa}} = 0x436
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3ad0a5cf3d05330d98f4210c90b0d72c}{xlnt\+::detail\+::georgian\+\_\+georgia}} = 0x437
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daff933b4dff127b56df68d96d7810731e}{xlnt\+::detail\+::faroese\+\_\+faroe\+\_\+islands}} = 0x438
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dad7a6039c8e53410c193870d10b2bbc1b}{xlnt\+::detail\+::hindi\+\_\+india}} = 0x439
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da549c254caf4562355966eaaaebc1e5d1}{xlnt\+::detail\+::maltese\+\_\+malta}} = 0x43A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dae9e6dfcd98dbe00144a3ba809c7173b0}{xlnt\+::detail\+::sami\+\_\+northern\+\_\+norway}} = 0x43B
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da65ef935f5864268c351e6b50ee214b4f}{xlnt\+::detail\+::yiddish\+\_\+world}} = 0x43D
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa38f38f24a49f28b6a0d37e8b4dc873f}{xlnt\+::detail\+::malay\+\_\+malaysia}} = 0x43E
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf9849ffb8e3c824a852c182c76c67681}{xlnt\+::detail\+::kazakh\+\_\+kazakhstan}} = 0x43F
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da95ae4cb9ac04bbbac9d76e009be27d59}{xlnt\+::detail\+::kyrgyz\+\_\+kyrgyzstan}} = 0x440
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf3e758b9d65bcf6180b596903e4b91b9}{xlnt\+::detail\+::kiswahili\+\_\+kenya}} = 0x441
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da0de8ea21d03c5df3a2f0725d2d1879af}{xlnt\+::detail\+::turkmen\+\_\+turkmenistan}} = 0x442
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da1e5f328216f1e2abc662347272e5214d}{xlnt\+::detail\+::uzbek\+\_\+latin\+\_\+uzbekistan}} = 0x443
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da78a8aef61877b4c43a376a6141b6490e}{xlnt\+::detail\+::tatar\+\_\+russia}} = 0x444
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa55178e3a16dee5af71d34b55bcbf5c1}{xlnt\+::detail\+::bangla\+\_\+india}} = 0x445
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daafd92e1fdd783ecfb8a38a481c69af76}{xlnt\+::detail\+::punjabi\+\_\+india}} = 0x446
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da9e9799cc6be3b08ce9cec3dac26860ac}{xlnt\+::detail\+::gujarati\+\_\+india}} = 0x447
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da387a01623279d333071ff67f01b0a29e}{xlnt\+::detail\+::odia\+\_\+india}} = 0x448
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da9f8ee6d448cb27f7639a57be28bf39df}{xlnt\+::detail\+::tamil\+\_\+india}} = 0x449
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da866d0970dc174bee034db27c4eb44298}{xlnt\+::detail\+::telugu\+\_\+india}} = 0x44A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dafbaaa58976455225211ab8b70f742f64}{xlnt\+::detail\+::kannada\+\_\+india}} = 0x44B
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf1ea0d446740fa12adfbf8f8a857f726}{xlnt\+::detail\+::malayalam\+\_\+india}} = 0x44C
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da1afff90f6be727a8898e5b3f30569725}{xlnt\+::detail\+::assamese\+\_\+india}} = 0x44D
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daac5b6f112c378ab0fd9e27caac21dee7}{xlnt\+::detail\+::marathi\+\_\+india}} = 0x44E
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da73aaea6454afa64d2db00adab2bf0f43}{xlnt\+::detail\+::sanskrit\+\_\+india}} = 0x44F
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da5b648f88c877e26e34a7c10edfcf10ca}{xlnt\+::detail\+::mongolian\+\_\+cyrillic\+\_\+mongolia}} = 0x450
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da88fcc767edf0dc3eb9913effa4a41b77}{xlnt\+::detail\+::tibetan\+\_\+prc}} = 0x451
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da43723b649370e45927049e40622166ac}{xlnt\+::detail\+::welsh\+\_\+united\+\_\+kingdom}} = 0x452
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da16233edd62116ae0d76d37e6584a41d3}{xlnt\+::detail\+::khmer\+\_\+cambodia}} = 0x453
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da7f120a34176b4397de2e70d850df54b9}{xlnt\+::detail\+::lao\+\_\+lao\+\_\+p\+\_\+d\+\_\+r}} = 0x454
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da2a87b710974cdb0d2d6513e9a1802888}{xlnt\+::detail\+::burmese\+\_\+myanmar}} = 0x455
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daeb025d95d8f9b1b789ec8a3000b29ab2}{xlnt\+::detail\+::galician\+\_\+galician}} = 0x456
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa43606658cb8f1a74e070998ddab18e9}{xlnt\+::detail\+::konkani\+\_\+india}} = 0x457
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da99cedeb582acc17f936a122b789bdd75}{xlnt\+::detail\+::manipuri\+\_\+india}} = 0x458
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daacacf5cd2535700dccab1beb61985260}{xlnt\+::detail\+::sindhi\+\_\+devanagari\+\_\+india}} = 0x459
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dafd2a7dab0d82b895eda6f396fd749d4b}{xlnt\+::detail\+::syriac\+\_\+syria}} = 0x45A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa7f8af05744cd1c1bf60d667af756724}{xlnt\+::detail\+::sinhala\+\_\+sri\+\_\+lanka}} = 0x45B
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da368061d07f135ec065a46b812d4ec18b}{xlnt\+::detail\+::cherokee\+\_\+cherokee}} = 0x45C
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da40338278a0e334f1960110d58d9bef5d}{xlnt\+::detail\+::inuktitut\+\_\+syllabics\+\_\+canada}} = 0x45D
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dae505eb5e74f58d550568850d935d7755}{xlnt\+::detail\+::amharic\+\_\+ethiopia}} = 0x45E
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da9b62b42c7401095b0a2224a5d596e762}{xlnt\+::detail\+::central\+\_\+atlas\+\_\+tamazight\+\_\+arabic\+\_\+morocco}} = 0x45F
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da632ad638969aaab84965721bceb04eac}{xlnt\+::detail\+::kashmiri\+\_\+perso\+\_\+arabic}} = 0x460
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dac27a479947986a84b49be75386a26c84}{xlnt\+::detail\+::nepali\+\_\+nepal}} = 0x461
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da97c2863b028d8269a26efd26b95d1f3e}{xlnt\+::detail\+::frisian\+\_\+netherlands}} = 0x462
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da99f10d4d2ff4d400ddf7eded747d339a}{xlnt\+::detail\+::pashto\+\_\+afghanistan}} = 0x463
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da93063807743d277a04a5b575ba6e50d4}{xlnt\+::detail\+::filipino\+\_\+philippines}} = 0x464
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da17a03a6bc910e4df4f098714abf2bfa3}{xlnt\+::detail\+::divehi\+\_\+maldives}} = 0x465
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da49f4765fd78ee6e2c6a961797fddcf27}{xlnt\+::detail\+::edo\+\_\+nigeria}} = 0x466
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da189596e1a9b4c9137bb60cce91fcf7f4}{xlnt\+::detail\+::fulah\+\_\+nigeria}} = 0x467
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dabed5f3d2a1dc7f8596f7c08980a90d22}{xlnt\+::detail\+::hausa\+\_\+latin\+\_\+nigeria}} = 0x468
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da91592cfc18217a7af91cacb7eb79bd1e}{xlnt\+::detail\+::ibibio\+\_\+nigeria}} = 0x469
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa777e5dcbfd8c8b82fae25c52665cd93}{xlnt\+::detail\+::yoruba\+\_\+nigeria}} = 0x46A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da91e55e4a1b740fd11250e2b664aaea60}{xlnt\+::detail\+::quechua\+\_\+bolivia}} = 0x46B
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daac3e04e5dca7aa1be31d47e2e3c7a1ed}{xlnt\+::detail\+::sesotho\+\_\+sa\+\_\+leboa\+\_\+south\+\_\+africa}} = 0x46C
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa5718e313a9341ff613afbd4869075e4}{xlnt\+::detail\+::bashkir\+\_\+russia}} = 0x46D
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da2941ae53492186680b5fad1342047298}{xlnt\+::detail\+::luxembourgish\+\_\+luxembourg}} = 0x46E
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daef3bd35bad1f68e58947e4b73ffd73c7}{xlnt\+::detail\+::greenlandic\+\_\+greenland}} = 0x46F
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daab3958adff700f52c6b971b024d397db}{xlnt\+::detail\+::igbo\+\_\+nigeria}} = 0x470
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dacc5b066ff1ab346269116522ec04070f}{xlnt\+::detail\+::kanuri\+\_\+nigeria}} = 0x471
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dabcd38c9faa8af0c5cac98d1b49c3131e}{xlnt\+::detail\+::oromo\+\_\+ethiopia}} = 0x472
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da2322b158626f6e6a166310783ff2ddc1}{xlnt\+::detail\+::tigrinya\+\_\+ethiopia}} = 0x473
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da113a8922a129227c5dc5403da8f3071d}{xlnt\+::detail\+::guarani\+\_\+paraguay}} = 0x474
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3f77e315e234953b22b9257efa06bced}{xlnt\+::detail\+::hawaiian\+\_\+united\+\_\+states}} = 0x475
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da2ec07af1cae2c9184cff6eaeb7723f10}{xlnt\+::detail\+::latin\+\_\+world}} = 0x476
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da582827d9ae82bc616edccd5918a7ad17}{xlnt\+::detail\+::somali\+\_\+somalia}} = 0x477
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da4222d76d865d25547df7c0924805f19c}{xlnt\+::detail\+::yi\+\_\+prc}} = 0x478
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da687d3a0ca7315a56333d9166ce4a8815}{xlnt\+::detail\+::papiamento\+\_\+caribbean}} = 0x479
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da2e9d7163d810a8e4887ca1f249fff0b3}{xlnt\+::detail\+::mapudungun\+\_\+chile}} = 0x47A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dabf71deada6c9407948a531b9a207d63d}{xlnt\+::detail\+::mohawk\+\_\+mohawk}} = 0x47C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf6452e41f30bbb099f79bbf556db132d}{xlnt\+::detail\+::breton\+\_\+france}} = 0x47E
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da1d5be127072a5cd2f9a700ad84136aaa}{xlnt\+::detail\+::uyghur\+\_\+prc}} = 0x480
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da5606611f64af8ba17f4caa6c10de93b3}{xlnt\+::detail\+::maori\+\_\+new\+\_\+zealand}} = 0x481
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da74f02c2c461ee4059b10f8f21e2b63e1}{xlnt\+::detail\+::occitan\+\_\+france}} = 0x482
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da8f6182f3441460825c4410fad9b842c1}{xlnt\+::detail\+::corsican\+\_\+france}} = 0x483
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da202d4475eb59efcf458725d4a57a6c50}{xlnt\+::detail\+::alsatian\+\_\+france}} = 0x484
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da163494b7902d18270f3be5733e0dc2de}{xlnt\+::detail\+::sakha\+\_\+russia}} = 0x485
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da7b6a4aef3fb752d72b8f15ae8f67ae3b}{xlnt\+::detail\+::kiche\+\_\+guatemala}} = 0x486
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da581eb901c15d09dfeb8b56b8a66225d5}{xlnt\+::detail\+::kinyarwanda\+\_\+rwanda}} = 0x487
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf9e5015ccaa19d7c3f21dcaa6bdcb0f0}{xlnt\+::detail\+::wolof\+\_\+senegal}} = 0x488
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dabe2446da79ed2b6890ead7f8e60d77c7}{xlnt\+::detail\+::dari\+\_\+afghanistan}} = 0x48C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da4b82ba3130c75aca53732d0a00321716}{xlnt\+::detail\+::scottish\+\_\+gaelic\+\_\+united\+\_\+kingdom}} = 0x491
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da7d744e4f80cafd24f1dda8194a0fd376}{xlnt\+::detail\+::central\+\_\+kurdish\+\_\+iraq}} = 0x492
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da222f9594d817fac15db3849af19f494b}{xlnt\+::detail\+::arabic\+\_\+iraq}} = 0x801
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da025ec370bba50c287c6eac40a8f0f1ef}{xlnt\+::detail\+::valencian\+\_\+spain}} = 0x803
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da311c465461a3666e16a349a3ec6bb63b}{xlnt\+::detail\+::chinese\+\_\+simplified\+\_\+prc}} = 0x804
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da46e66a167f40c6c21fa16c1c0acfc18c}{xlnt\+::detail\+::german\+\_\+switzerland}} = 0x807
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da74fe0bec85837a8f33c1c9c523a00e91}{xlnt\+::detail\+::english\+\_\+united\+\_\+kingdom}} = 0x809
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da2effa3d951c59749f60152409181eb0c}{xlnt\+::detail\+::spanish\+\_\+mexico}} = 0x80A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dacc6962ac5850bddfce2b27b0023bcc47}{xlnt\+::detail\+::french\+\_\+belgium}} = 0x80C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf3da6afc6fd71a24d221c6df44b76df9}{xlnt\+::detail\+::italian\+\_\+switzerland}} = 0x810
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da574a44cfe3d7b410f8b86b7ecc12f397}{xlnt\+::detail\+::dutch\+\_\+belgium}} = 0x813
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da83838255e21af84e8de11e87dbb7eda2}{xlnt\+::detail\+::norwegian\+\_\+nynorsk\+\_\+norway}} = 0x814
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daea8a67b7e37b9959df9fb3a7bb5749e9}{xlnt\+::detail\+::portuguese\+\_\+portugal}} = 0x816
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da727222ac7b87b7648807659c28cfc81d}{xlnt\+::detail\+::romanian\+\_\+moldova}} = 0x818
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da2ed77a8684309d49ee82e58cf41690a7}{xlnt\+::detail\+::russian\+\_\+moldova}} = 0x819
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daea0e600fb29b8d240bf62e1ed4484365}{xlnt\+::detail\+::swedish\+\_\+finland}} = 0x81D
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da395d098e96a3450d3e8181c7c9b290e9}{xlnt\+::detail\+::urdu\+\_\+india}} = 0x820
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da43f4c16ef3ff55ff27a9a3f2efc9229d}{xlnt\+::detail\+::azerbaijani\+\_\+cyrillic\+\_\+azerbaijan}} = 0x82C
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da6d0af58d3f941cd0492615ce54502af1}{xlnt\+::detail\+::lower\+\_\+sorbian\+\_\+germany}} = 0x82E
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da158d0c108313cc1385e9287eab3f6748}{xlnt\+::detail\+::setswana\+\_\+botswana}} = 0x832
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dab7a84a6576e25667d71ff0eb4ba3fd99}{xlnt\+::detail\+::sami\+\_\+northern\+\_\+sweden}} = 0x83B
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da61f774298409fcb2499bd14d1f927ea0}{xlnt\+::detail\+::irish\+\_\+ireland}} = 0x83C
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da799752a0ab5644d62e727a93bcb310b7}{xlnt\+::detail\+::malay\+\_\+brunei\+\_\+darussalam}} = 0x83E
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da958a2f1fe21b845596269befec85c670}{xlnt\+::detail\+::uzbek\+\_\+cyrillic\+\_\+uzbekistan}} = 0x843
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da40113b311af82d51d5b6c4fe2aafd21c}{xlnt\+::detail\+::bangla\+\_\+bangladesh}} = 0x845
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dafddd3914578a46ee57853f9d1dea757a}{xlnt\+::detail\+::punjabi\+\_\+islamic\+\_\+republic\+\_\+of\+\_\+pakistan}} = 0x846
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da961fd702cc2775e5dfd12743b914f8ad}{xlnt\+::detail\+::tamil\+\_\+sri\+\_\+lanka}} = 0x849
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da5f291de253ec16d5f912957b9100bab5}{xlnt\+::detail\+::mongolian\+\_\+traditional\+\_\+mongolian\+\_\+prc}} = 0x850
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daeaa03c424d52d90f462073343028cec2}{xlnt\+::detail\+::sindhi\+\_\+islamic\+\_\+republic\+\_\+of\+\_\+pakistan}} = 0x859
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dad177229a0bbaae35044f7378ba891a41}{xlnt\+::detail\+::inuktitut\+\_\+latin\+\_\+canada}} = 0x85D
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da50dc4abd091b9bf316a0ba2398738a0b}{xlnt\+::detail\+::tamazight\+\_\+latin\+\_\+algeria}} = 0x85F
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dae5f3552b310d71024acc70cb17ffb8ed}{xlnt\+::detail\+::kashmiri\+\_\+devanagari\+\_\+india}} = 0x860
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da1e9ce6d9fef1b8f559755112176e505c}{xlnt\+::detail\+::nepali\+\_\+india}} = 0x861
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dad4394defd1921c2934586cee5d071046}{xlnt\+::detail\+::fulah\+\_\+latin\+\_\+senegal}} = 0x867
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3eb7a5cb47dfa228fa248fba1d7e09f8}{xlnt\+::detail\+::quechua\+\_\+ecuador}} = 0x86B
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da611ae1bf9c7195625b076649527d7e1f}{xlnt\+::detail\+::tigrinya\+\_\+eritrea}} = 0x873
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dab9b774add084dad76d09f3afe74952f9}{xlnt\+::detail\+::arabic\+\_\+egypt}} = 0x\+C01
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da164e84b4f1a042e565565eea6375cff2}{xlnt\+::detail\+::chinese\+\_\+traditional\+\_\+hong\+\_\+kong\+\_\+s\+\_\+a\+\_\+r}} = 0x\+C04
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dafbf4e44b7d3135fc0b659e6a5655fa3b}{xlnt\+::detail\+::german\+\_\+austria}} = 0x\+C07
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dab3fa368adcbff54b747f74d8fe7ea506}{xlnt\+::detail\+::english\+\_\+australia}} = 0x\+C09
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dabc27872f177794b96f4e116f389e400c}{xlnt\+::detail\+::spanish\+\_\+spain}} = 0x\+C0A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dad1d271752efadbeda60a1ce7ac39c137}{xlnt\+::detail\+::french\+\_\+canada}} = 0x\+C0C
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da8215c64d40ad07d12403961d88f166dc}{xlnt\+::detail\+::sami\+\_\+northern\+\_\+finland}} = 0x\+C3B
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dad7101297efda483187238f16c5021ae1}{xlnt\+::detail\+::mongolian\+\_\+traditional\+\_\+mongolian\+\_\+mongolia}} = 0x\+C50
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da5160f2fa4fae1e0026ad43fe8fa19a43}{xlnt\+::detail\+::dzongkha\+\_\+bhutan}} = 0x\+C51
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa3f2d61cafd60e61938d26900def213f}{xlnt\+::detail\+::quechua\+\_\+peru}} = 0x\+C6B
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daeab7cf8ea916f394d51f6312e0907ad9}{xlnt\+::detail\+::arabic\+\_\+libya}} = 0x1001
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf3acedc61b3b1758a4c10b6da8c9cb14}{xlnt\+::detail\+::chinese\+\_\+simplified\+\_\+singapore}} = 0x1004
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da6cc32864ab0ac22ddae6ac5d3691436d}{xlnt\+::detail\+::german\+\_\+luxembourg}} = 0x1007
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dad60a5ce37df55d8fb0e7b30a16849ab5}{xlnt\+::detail\+::english\+\_\+canada}} = 0x1009
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3b2fe3d066592a4e2ad3511a815e8748}{xlnt\+::detail\+::spanish\+\_\+guatemala}} = 0x100A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da4dcc545c1f871a3649fd96e7c2bf0119}{xlnt\+::detail\+::french\+\_\+switzerland}} = 0x100C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da059ac587651373dbfb36140ccb638e62}{xlnt\+::detail\+::croatian\+\_\+latin\+\_\+bosnia\+\_\+and\+\_\+herzegovina}} = 0x101A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da44235c55c59a8a701f714ff4af3e9cb9}{xlnt\+::detail\+::sami\+\_\+lule\+\_\+norway}} = 0x103B
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da914824d9586f67b1487724a6e2903341}{xlnt\+::detail\+::central\+\_\+atlas\+\_\+tamazight\+\_\+tifinagh\+\_\+morocco}} = 0x105F
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daeb51ad39590ad377942de4490af8a897}{xlnt\+::detail\+::arabic\+\_\+algeria}} = 0x1401
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dab3e4415a7fcc8ee4bc2c59b38238e2f8}{xlnt\+::detail\+::chinese\+\_\+traditional\+\_\+macao\+\_\+s\+\_\+a\+\_\+r}} = 0x1404
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dad43cb941440e07d69fa76b3f26c9a722}{xlnt\+::detail\+::german\+\_\+liechtenstein}} = 0x1407
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dab6dbd97e4cd3772dbb24159867e5d480}{xlnt\+::detail\+::english\+\_\+new\+\_\+zealand}} = 0x1409
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dafb2bdfb18d6a98380883c79573629003}{xlnt\+::detail\+::spanish\+\_\+costa\+\_\+rica}} = 0x140A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dac7b8f8e1faf3903bc8215e96554d4e4a}{xlnt\+::detail\+::french\+\_\+luxembourg}} = 0x140C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da6ede8f6d0b567702afe88ff0810b12d5}{xlnt\+::detail\+::bosnian\+\_\+latin\+\_\+bosnia\+\_\+and\+\_\+herzegovina}} = 0x141A
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf41c14da85e44f3e4659ff68685a17a4}{xlnt\+::detail\+::sami\+\_\+lule\+\_\+sweden}} = 0x143B
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da1be60ab261bca0a2f1c464539af105c8}{xlnt\+::detail\+::arabic\+\_\+morocco}} = 0x1801
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da1d37b800d4d1d5a931a9030b314e534f}{xlnt\+::detail\+::english\+\_\+ireland}} = 0x1809
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da5926fdd75bd25feb6765b7308107f55e}{xlnt\+::detail\+::spanish\+\_\+panama}} = 0x180A
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dac9e3d8e4a25188bb73a73f0d098c5545}{xlnt\+::detail\+::french\+\_\+monaco}} = 0x180C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dab2119e736eaadabe5ab9022688e18743}{xlnt\+::detail\+::serbian\+\_\+latin\+\_\+bosnia\+\_\+and\+\_\+herzegovina}} = 0x181A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da988e79e138047b4f9f683161b59e134a}{xlnt\+::detail\+::sami\+\_\+southern\+\_\+norway}} = 0x183B
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da9e45990ed934fc47b413ca39d253e6bf}{xlnt\+::detail\+::arabic\+\_\+tunisia}} = 0x1\+C01
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da2cd1558a346a03c7012f4993e668c623}{xlnt\+::detail\+::english\+\_\+south\+\_\+africa}} = 0x1\+C09
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da9729d22eea5f05bb6516e20cb24f3ae0}{xlnt\+::detail\+::spanish\+\_\+dominican\+\_\+republic}} = 0x1\+C0A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da2b737a7610dc177cbf4d75640e566381}{xlnt\+::detail\+::french\+\_\+caribbean}} = 0x1\+C0C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dab3ceebd36082a8c7958fc8b67bf91840}{xlnt\+::detail\+::serbian\+\_\+cyrillic\+\_\+bosnia\+\_\+and\+\_\+herzegovina}} = 0x1\+C1A
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da9908187b03d1dcbd089022b2e85a96d8}{xlnt\+::detail\+::sami\+\_\+southern\+\_\+sweden}} = 0x1\+C3B
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf5aa69af7fcf65f86b4978f8c93db0ad}{xlnt\+::detail\+::arabic\+\_\+oman}} = 0x2001
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da1cd908ecd31292d3e868beb15319321b}{xlnt\+::detail\+::english\+\_\+jamaica}} = 0x2009
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da74ef7479959bd73197adc84856b48d3c}{xlnt\+::detail\+::spanish\+\_\+venezuela}} = 0x200A
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da8d607884cafe0f098671659148f149e1}{xlnt\+::detail\+::french\+\_\+reunion}} = 0x200C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dabb7724afffc14dc5cd0e527ee706e94f}{xlnt\+::detail\+::bosnian\+\_\+cyrillic\+\_\+bosnia\+\_\+and\+\_\+herzegovina}} = 0x201A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf7a83afe3f4a95ef942252afffbfc8aa}{xlnt\+::detail\+::sami\+\_\+skolt\+\_\+finland}} = 0x203B
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da9c4b4732da667f2036693c7f307ad44a}{xlnt\+::detail\+::arabic\+\_\+yemen}} = 0x2401
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da67a6fd9bd10e31691b1eb853c4944874}{xlnt\+::detail\+::english\+\_\+caribbean}} = 0x2409
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da877923902783a927a81cb76ea7d50841}{xlnt\+::detail\+::spanish\+\_\+colombia}} = 0x240A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da7269e254e44f852f66fcbdb2db0548a2}{xlnt\+::detail\+::french\+\_\+congo\+\_\+drc}} = 0x240C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daf0df9e22bd4107c3edcd9c90416ace3d}{xlnt\+::detail\+::serbian\+\_\+latin\+\_\+serbia}} = 0x241A
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da635dfdd3322d54c1b9b50d91bdfcc329}{xlnt\+::detail\+::sami\+\_\+inari\+\_\+finland}} = 0x243B
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da309621e8264cc275650e0f4a95dd0abd}{xlnt\+::detail\+::arabic\+\_\+syria}} = 0x2801
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da926c4695262ad32a505af7ced2553c54}{xlnt\+::detail\+::english\+\_\+belize}} = 0x2809
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da9f025e36294dab694ceaeaed4f63f532}{xlnt\+::detail\+::spanish\+\_\+peru}} = 0x280A
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daee815a3a482555c044f1d1fe0e7e1a2f}{xlnt\+::detail\+::french\+\_\+senegal}} = 0x280C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da66c9b0ce692d5c7aa7931fb76d78711a}{xlnt\+::detail\+::serbian\+\_\+cyrillic\+\_\+serbia}} = 0x281A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dae953ceac7ec0e6ee7a9d5f0ba05472e6}{xlnt\+::detail\+::arabic\+\_\+jordan}} = 0x2\+C01
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da85cf3b316f2db940fbd3177bb0dd9671}{xlnt\+::detail\+::english\+\_\+trinidad\+\_\+and\+\_\+tobago}} = 0x2\+C09
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da5bdf1c659dd6a6370968fbb146d1e4e1}{xlnt\+::detail\+::spanish\+\_\+argentina}} = 0x2\+C0A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da55fb99d47e126a1772df540eb0e4f83a}{xlnt\+::detail\+::french\+\_\+cameroon}} = 0x2\+C0C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da9313f84355af0eadd6ef0d854dd6a2bc}{xlnt\+::detail\+::serbian\+\_\+latin\+\_\+montenegro}} = 0x2\+C1A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dabf15b9a52a7c1105c6329ad09dfd1a58}{xlnt\+::detail\+::arabic\+\_\+lebanon}} = 0x3001
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da173debd2212d937508bf7e87e78e1da1}{xlnt\+::detail\+::english\+\_\+zimbabwe}} = 0x3009
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dab84d0442bdd8dd8f4387014d57ae4080}{xlnt\+::detail\+::spanish\+\_\+ecuador}} = 0x300A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dabc0b35ea61212d93c471f5ea2112dfeb}{xlnt\+::detail\+::french\+\_\+cote\+\_\+divoire}} = 0x300C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da408f666a2ec336fe02f2c5eda5a125eb}{xlnt\+::detail\+::serbian\+\_\+cyrillic\+\_\+montenegro}} = 0x301A
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dacb3c041472a89f8a837bcf4fb06a7215}{xlnt\+::detail\+::arabic\+\_\+kuwait}} = 0x3401
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da953776f5e43255e6dff4f69f504d0b86}{xlnt\+::detail\+::english\+\_\+philippines}} = 0x3409
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da723355dd6f450605a9840901118b6d41}{xlnt\+::detail\+::spanish\+\_\+chile}} = 0x340A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daec41cedfdaffb52c8dfc3be7464b8755}{xlnt\+::detail\+::french\+\_\+mali}} = 0x340C
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3e7acf4cc76b0a15a8bce563875f6910}{xlnt\+::detail\+::arabic\+\_\+u\+\_\+a\+\_\+e}} = 0x3801
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dad3b87c91f6c901161973007e01bf9758}{xlnt\+::detail\+::english\+\_\+indonesia}} = 0x3809
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da8c6357cc7565168a8c90db39b10ecce3}{xlnt\+::detail\+::spanish\+\_\+uruguay}} = 0x380A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da178acc76e9a83357cc8b94fb22dbebcd}{xlnt\+::detail\+::french\+\_\+morocco}} = 0x380C
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dae33dbf27cb1c275d2eceb47b7194c7b2}{xlnt\+::detail\+::arabic\+\_\+bahrain}} = 0x3\+C01
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da08666600cd49b0a20fc7ea845d228828}{xlnt\+::detail\+::english\+\_\+hong\+\_\+kong\+\_\+sar}} = 0x3\+C09
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da50930002f9ad56ee86e50f4e4e08b106}{xlnt\+::detail\+::spanish\+\_\+paraguay}} = 0x3\+C0A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3205d5aaa48d79d9154a60629b59ae0f}{xlnt\+::detail\+::french\+\_\+haiti}} = 0x3\+C0C
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3707574c73427416eb078145f00c70e5}{xlnt\+::detail\+::arabic\+\_\+qatar}} = 0x4001
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da37d225feef038f50c954ac996072b304}{xlnt\+::detail\+::english\+\_\+india}} = 0x4009
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da995e1424e618294b395a50edd51c0d55}{xlnt\+::detail\+::spanish\+\_\+bolivia}} = 0x400A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daaf30c840118d239a1b327f39beb296f3}{xlnt\+::detail\+::english\+\_\+malaysia}} = 0x4409
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da2fb8b2a2fa3acf2683c95e355032b912}{xlnt\+::detail\+::spanish\+\_\+el\+\_\+salvador}} = 0x440A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dadd5044d3c446c77795450b6c5ad3dce0}{xlnt\+::detail\+::english\+\_\+singapore}} = 0x4809
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da456e60f5d355311739a888cbe892c578}{xlnt\+::detail\+::spanish\+\_\+honduras}} = 0x480A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da604f745e7f70a8751d51674d18bda682}{xlnt\+::detail\+::spanish\+\_\+nicaragua}} = 0x4\+C0A
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da64927dfd1751976ec92085bcaa1bcb9d}{xlnt\+::detail\+::spanish\+\_\+puerto\+\_\+rico}} = 0x500A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da02acde48741a8ce07a002360a7097f7e}{xlnt\+::detail\+::spanish\+\_\+united\+\_\+states}} = 0x540A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dace2b884a4cf0baa57868253a9de55ef3}{xlnt\+::detail\+::spanish\+\_\+latin\+\_\+america}} = 0x580A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daff86a9187631d1621ade11f481df8c8b}{xlnt\+::detail\+::spanish\+\_\+cuba}} = 0x5\+C0A
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da86671ed668638a4f5e090263519df076}{xlnt\+::detail\+::bosnian\+\_\+cyrillic}} = 0x641A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dac0277d3e488153702f1ba3a62d46e59e}{xlnt\+::detail\+::bosnian\+\_\+latin}} = 0x681A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da87a19399f31a8c4e27d660594e8172e3}{xlnt\+::detail\+::serbian\+\_\+cyrillic}} = 0x6\+C1A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa1bed8b8f20896dfb1abe45401911900}{xlnt\+::detail\+::serbian\+\_\+latin}} = 0x701A
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da56b13d7a6cdbba1603450bcecc138e06}{xlnt\+::detail\+::sami\+\_\+inari}} = 0x703B
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dae9dc9c3af9a5f1ea5d1c213047c91e36}{xlnt\+::detail\+::azerbaijani\+\_\+cyrillic}} = 0x742C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dabbb19052003c0556f7659d6ad1970175}{xlnt\+::detail\+::sami\+\_\+skolt}} = 0x743B
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dababd2925f9a5fe57586bd10374bdecc6}{xlnt\+::detail\+::chinese}} = 0x7804
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa90b2a308bddad2a83523dd49b9a7ae5}{xlnt\+::detail\+::norwegian\+\_\+nynorsk}} = 0x7814
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da48b4af273659d0f5a8df4cb01cdc6440}{xlnt\+::detail\+::bosnian}} = 0x781A
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daeb3af5c9574f32165fe64b8fea893997}{xlnt\+::detail\+::azerbaijani\+\_\+latin}} = 0x782C
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da50de47cf2a1ce66688bf2944bcb6923c}{xlnt\+::detail\+::sami\+\_\+southern}} = 0x783B
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da3731c89facb813de9fc22cf88d98351d}{xlnt\+::detail\+::uzbek\+\_\+cyrillic}} = 0x7843
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa3092752e966173fdc8c196fb4a45660}{xlnt\+::detail\+::mongolian\+\_\+cyrillic}} = 0x7850
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dad46c6c052d501873a1b6f2d7874a733c}{xlnt\+::detail\+::inuktitut\+\_\+syllabics}} = 0x785D
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da56a008c6d409df07516fd9a4e8a6cee8}{xlnt\+::detail\+::tamazight\+\_\+tifinagh}} = 0x785F
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da37362f58ab309825135eef8f3f3170a3}{xlnt\+::detail\+::chinese\+\_\+traditional}} = 0x7\+C04
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da2f78e8764ac5b47ef75b6e5a267258a7}{xlnt\+::detail\+::chinese\+\_\+traditional\+\_\+legacy}} = 0x7\+C04
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da4886c8fdbdffbc21a5a930e08a7e2ea0}{xlnt\+::detail\+::norwegian\+\_\+bokml}} = 0x7\+C14
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dab3088424e2b1a9ff14b61efa97a1a0da}{xlnt\+::detail\+::serbian}} = 0x7\+C1A
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da35b2b3d0584d6018e6e253d570a27b73}{xlnt\+::detail\+::tajik\+\_\+cyrillic}} = 0x7\+C28
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da961340e85b8a8b80ca3993ebe3652371}{xlnt\+::detail\+::lower\+\_\+sorbian}} = 0x7\+C2E
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da91fec3113732895858241c62ef2833d2}{xlnt\+::detail\+::sami\+\_\+lule}} = 0x7\+C3B
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da0d898594e5848022d867c5ae60132198}{xlnt\+::detail\+::uzbek\+\_\+latin}} = 0x7\+C43
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da90af77ba962965a2186f01cadf678bc5}{xlnt\+::detail\+::punjabi\+\_\+arabic}} = 0x7\+C46
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da447d81c739c1e2aa9e3d1a0357d317f1}{xlnt\+::detail\+::mongolian\+\_\+traditional\+\_\+mongolian}} = 0x7\+C50
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da8f58e9ec3c4af5c7df3c56bf7cd288aa}{xlnt\+::detail\+::sindhi\+\_\+arabic}} = 0x7\+C59
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60daa822a4753a481b5fc11749fc9efac19f}{xlnt\+::detail\+::inuktitut\+\_\+latin}} = 0x7\+C5D
+, \newline
+\mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da80e92e79faa59e863b095332fcce9b95}{xlnt\+::detail\+::tamazight\+\_\+latin}} = 0x7\+C5F
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dad8f32f851be264aab76bd438da91949f}{xlnt\+::detail\+::fulah\+\_\+latin}} = 0x7\+C67
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60dab033145c14688a4f7af9873bda39aff6}{xlnt\+::detail\+::hausa\+\_\+latin}} = 0x7\+C68
+, \mbox{\hyperlink{namespacexlnt_1_1detail_a07ea1ccd2025f3bc00cefe6e0d32f60da9f6f1162bc9fe4c0499a3b492803e5f4}{xlnt\+::detail\+::central\+\_\+kurdish\+\_\+arabic}} = 0x7\+C92
+ \}
+\end{DoxyCompactItemize}

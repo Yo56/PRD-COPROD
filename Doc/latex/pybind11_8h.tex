@@ -1,0 +1,316 @@
+\hypertarget{pybind11_8h}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.5.0/third-\/party/pybind11/include/pybind11/pybind11.h File Reference}
+\label{pybind11_8h}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/pybind11/include/pybind11/pybind11.h@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/pybind11/include/pybind11/pybind11.h}}
+{\ttfamily \#include \char`\"{}attr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}options.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}class\+\_\+support.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcpp__function}{cpp\+\_\+function}}
+\begin{DoxyCompactList}\small\item\em Wraps an arbitrary C++ function/method/lambda function/.. into a callable Python object. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodule}{module}}
+\begin{DoxyCompactList}\small\item\em Wrapper for Python extension modules. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classgeneric__type}{generic\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Generic support for creating new Python heap types. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classclass__}{class\+\_\+$<$ type\+\_\+, options $>$}}
+\item 
+class \mbox{\hyperlink{classenum__}{enum\+\_\+$<$ Type $>$}}
+\begin{DoxyCompactList}\small\item\em Binds C++ enumerations and enumeration classes to Python. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structinit}{init$<$ Args $>$}}
+\item 
+struct \mbox{\hyperlink{structinit__alias}{init\+\_\+alias$<$ Args $>$}}
+\item 
+struct \mbox{\hyperlink{structiterator__state}{iterator\+\_\+state$<$ Iterator, Sentinel, Key\+Iterator, Policy $>$}}
+\item 
+class \mbox{\hyperlink{classexception}{exception$<$ type $>$}}
+\item 
+class \mbox{\hyperlink{classgil__scoped__acquire}{gil\+\_\+scoped\+\_\+acquire}}
+\item 
+class \mbox{\hyperlink{classgil__scoped__release}{gil\+\_\+scoped\+\_\+release}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{pybind11_8h_ad225e789a43a99757532d624f794b377}{PYBIND11\+\_\+\+OVERLOAD\+\_\+\+INT}}(ret\+\_\+type,  cname,  \mbox{\hyperlink{structname}{name}}, ...)
+\item 
+\#define \mbox{\hyperlink{pybind11_8h_a6a5ebc119f4e7ca7ccb05d9d1f64d547}{PYBIND11\+\_\+\+OVERLOAD\+\_\+\+NAME}}(ret\+\_\+type,  cname,  \mbox{\hyperlink{structname}{name}},  fn, ...)
+\item 
+\#define \mbox{\hyperlink{pybind11_8h_a52b952e976930f2149eec9d0eb450100}{PYBIND11\+\_\+\+OVERLOAD\+\_\+\+PURE\+\_\+\+NAME}}(ret\+\_\+type,  cname,  \mbox{\hyperlink{structname}{name}},  fn, ...)
+\item 
+\#define \mbox{\hyperlink{pybind11_8h_a554e6c4e025a0a1a1d8b30998144e386}{PYBIND11\+\_\+\+OVERLOAD}}(ret\+\_\+type,  cname,  fn, ...)~    \mbox{\hyperlink{pybind11_8h_a6a5ebc119f4e7ca7ccb05d9d1f64d547}{PYBIND11\+\_\+\+OVERLOAD\+\_\+\+NAME}}(ret\+\_\+type, cname, \#fn, fn, \+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{pybind11_8h_acf72084f40e31c334fd2d2b0161e959b}{PYBIND11\+\_\+\+OVERLOAD\+\_\+\+PURE}}(ret\+\_\+type,  cname,  fn, ...)~    \mbox{\hyperlink{pybind11_8h_a52b952e976930f2149eec9d0eb450100}{PYBIND11\+\_\+\+OVERLOAD\+\_\+\+PURE\+\_\+\+NAME}}(ret\+\_\+type, cname, \#fn, fn, \+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdict}{dict}} \mbox{\hyperlink{group__python__builtins_ga0be04c9e8c8a6833cabae628e2243b6c}{globals}} ()
+\item 
+{\footnotesize template$<$typename T , typename  = void\+\_\+t$<$decltype(static\+\_\+cast$<$void $\ast$($\ast$)(size\+\_\+t)$>$(\+T\+::operator new))$>$$>$ }\\void \mbox{\hyperlink{pybind11_8h_ae55b858834fdd3c6adb5e8b9615b49b6}{set\+\_\+operator\+\_\+new}} (\mbox{\hyperlink{structtype__record}{type\+\_\+record}} $\ast$r)
+\begin{DoxyCompactList}\small\item\em Set the pointer to operator new if it exists. The cast is needed because it can be overloaded. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename $>$ }\\void \mbox{\hyperlink{pybind11_8h_a32d62802b102a8ac8362eeef769aaad4}{set\+\_\+operator\+\_\+new}} (...)
+\item 
+{\footnotesize template$<$typename T , typename  = void\+\_\+t$<$decltype(static\+\_\+cast$<$void ($\ast$)(void $\ast$)$>$(\+T\+::operator delete))$>$$>$ }\\void \mbox{\hyperlink{pybind11_8h_a8fcc4a926ae04dd6d1847f54ac458619}{call\+\_\+operator\+\_\+delete}} (T $\ast$p)
+\begin{DoxyCompactList}\small\item\em Call class-\/specific delete if it exists or global otherwise. Can also be an overload set. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pybind11_8h_adc95698c0bbd00b012f05c50eddb63de}{call\+\_\+operator\+\_\+delete}} (void $\ast$p)
+\item 
+{\footnotesize template$<$typename , typename F $>$ }\\auto \mbox{\hyperlink{pybind11_8h_a133120592be1caf7036580978b5bd6dd}{method\+\_\+adaptor}} (F \&\&f) -\/$>$ decltype(std\+::forward$<$ F $>$(f))
+\item 
+{\footnotesize template$<$typename Derived , typename Return , typename Class , typename... Args$>$ }\\auto \mbox{\hyperlink{pybind11_8h_adb45bb8178cd55c41b0f0d84bde00cfe}{method\+\_\+adaptor}} (Return(Class\+::$\ast$pmf)(Args...)) -\/$>$ Return(Derived\+::$\ast$)(Args...)
+\item 
+void \mbox{\hyperlink{pybind11_8h_a8930f52c7348c6cf3c2c9195abbb3964}{keep\+\_\+alive\+\_\+impl}} (\mbox{\hyperlink{classhandle}{handle}} nurse, \mbox{\hyperlink{classhandle}{handle}} patient)
+\item 
+\mbox{\hyperlink{common_8h_a1fb186b7494d5c576d902c0730ecbb71}{PYBIND11\+\_\+\+NOINLINE}} void \mbox{\hyperlink{pybind11_8h_aa1bda75120c8e859c75dfd2f5a266c7b}{keep\+\_\+alive\+\_\+impl}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} Nurse, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} Patient, \mbox{\hyperlink{structfunction__call}{function\+\_\+call}} \&call, \mbox{\hyperlink{classhandle}{handle}} ret)
+\item 
+std\+::pair$<$ decltype(\mbox{\hyperlink{structinternals_a6148bb4956e17d8a61f410cac7227d04}{internals\+::registered\+\_\+types\+\_\+py}})\+::\mbox{\hyperlink{classiterator}{iterator}}, bool $>$ \mbox{\hyperlink{pybind11_8h_aa29009830196890060d446644b1f7cec}{all\+\_\+type\+\_\+info\+\_\+get\+\_\+cache}} (Py\+Type\+Object $\ast$type)
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\detail\+::init$<$ Args... $>$ \mbox{\hyperlink{pybind11_8h_a73e0f81b0944ea98afee999f7db95ab5}{init}} ()
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\detail\+::init\+\_\+alias$<$ Args... $>$ \mbox{\hyperlink{pybind11_8h_a67a00d7b433527cbf6591341d099d39b}{init\+\_\+alias}} ()
+\item 
+{\footnotesize template$<$return\+\_\+value\+\_\+policy Policy = return\+\_\+value\+\_\+policy\+::reference\+\_\+internal, typename Iterator , typename Sentinel , typename Value\+Type  = decltype($\ast$std\+::declval$<$\+Iterator$>$()), typename... Extra$>$ }\\\mbox{\hyperlink{classiterator}{iterator}} \mbox{\hyperlink{pybind11_8h_aaa00ecd4f616ff84b63e81c8e17e457d}{make\+\_\+iterator}} (Iterator \mbox{\hyperlink{common_8h_a4cf51fa5731f737b40acc39bae3ed154}{first}}, Sentinel \mbox{\hyperlink{common_8h_a98cc70241f124ef088fa2d7d716166fd}{last}}, Extra \&\&... extra)
+\begin{DoxyCompactList}\small\item\em Makes a python iterator from a first and past-\/the-\/end C++ Input\+Iterator. \end{DoxyCompactList}\item 
+{\footnotesize template$<$return\+\_\+value\+\_\+policy Policy = return\+\_\+value\+\_\+policy\+::reference\+\_\+internal, typename Iterator , typename Sentinel , typename Key\+Type  = decltype(($\ast$std\+::declval$<$\+Iterator$>$()).\+first), typename... Extra$>$ }\\\mbox{\hyperlink{classiterator}{iterator}} \mbox{\hyperlink{pybind11_8h_a53d442f04a8921c7dcc4407b05420752}{make\+\_\+key\+\_\+iterator}} (Iterator \mbox{\hyperlink{common_8h_a4cf51fa5731f737b40acc39bae3ed154}{first}}, Sentinel \mbox{\hyperlink{common_8h_a98cc70241f124ef088fa2d7d716166fd}{last}}, Extra \&\&... extra)
+\item 
+{\footnotesize template$<$return\+\_\+value\+\_\+policy Policy = return\+\_\+value\+\_\+policy\+::reference\+\_\+internal, typename Type , typename... Extra$>$ }\\\mbox{\hyperlink{classiterator}{iterator}} \mbox{\hyperlink{pybind11_8h_af2f2f5b99f97863427786e74223e4b0a}{make\+\_\+iterator}} (Type \&value, Extra \&\&... extra)
+\item 
+{\footnotesize template$<$return\+\_\+value\+\_\+policy Policy = return\+\_\+value\+\_\+policy\+::reference\+\_\+internal, typename Type , typename... Extra$>$ }\\\mbox{\hyperlink{classiterator}{iterator}} \mbox{\hyperlink{pybind11_8h_ae01589476d0346c3e936852e4c27a62b}{make\+\_\+key\+\_\+iterator}} (Type \&value, Extra \&\&... extra)
+\item 
+{\footnotesize template$<$typename Input\+Type , typename Output\+Type $>$ }\\void \mbox{\hyperlink{pybind11_8h_a271a0a8cc9839658c668492cbaa1035a}{implicitly\+\_\+convertible}} ()
+\item 
+{\footnotesize template$<$typename Exception\+Translator $>$ }\\void \mbox{\hyperlink{pybind11_8h_a0a77063d21919c13ddfeb8caf29eef59}{register\+\_\+exception\+\_\+translator}} (Exception\+Translator \&\&translator)
+\item 
+{\footnotesize template$<$typename Cpp\+Exception $>$ }\\\mbox{\hyperlink{classexception}{exception}}$<$ Cpp\+Exception $>$ \& \mbox{\hyperlink{pybind11_8h_abcf9f192bba0d5dc269bc33b9b6e7352}{register\+\_\+exception}} (\mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{structscope}{scope}}, const char $\ast$\mbox{\hyperlink{structname}{name}}, Py\+Object $\ast$\mbox{\hyperlink{structbase}{base}}=Py\+Exc\+\_\+\+Exception)
+\item 
+\mbox{\hyperlink{common_8h_a1fb186b7494d5c576d902c0730ecbb71}{PYBIND11\+\_\+\+NOINLINE}} void \mbox{\hyperlink{pybind11_8h_a62bcafa97abdcadb6520a62e52331b89}{print}} (\mbox{\hyperlink{classtuple}{tuple}} \mbox{\hyperlink{classargs}{args}}, \mbox{\hyperlink{classdict}{dict}} \mbox{\hyperlink{classkwargs}{kwargs}})
+\item 
+{\footnotesize template$<$return\+\_\+value\+\_\+policy policy = return\+\_\+value\+\_\+policy\+::automatic\+\_\+reference, typename... Args$>$ }\\void \mbox{\hyperlink{pybind11_8h_a09d68b02745a7821c256c0642fb096c9}{print}} (Args \&\&...\mbox{\hyperlink{classargs}{args}})
+\item 
+\mbox{\hyperlink{classfunction}{function}} \mbox{\hyperlink{pybind11_8h_a9e918cccfeeabbbe9b1a42bba6b30a42}{get\+\_\+type\+\_\+overload}} (const void $\ast$this\+\_\+ptr, const detail\+::type\+\_\+info $\ast$this\+\_\+type, const char $\ast$\mbox{\hyperlink{structname}{name}})
+\item 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{classfunction}{function}} \mbox{\hyperlink{pybind11_8h_a6e5733211206597cdff171d9d43d8332}{get\+\_\+overload}} (const T $\ast$this\+\_\+ptr, const char $\ast$\mbox{\hyperlink{structname}{name}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{pybind11_8h_a554e6c4e025a0a1a1d8b30998144e386}\label{pybind11_8h_a554e6c4e025a0a1a1d8b30998144e386}} 
+\index{pybind11.h@{pybind11.h}!PYBIND11\_OVERLOAD@{PYBIND11\_OVERLOAD}}
+\index{PYBIND11\_OVERLOAD@{PYBIND11\_OVERLOAD}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{PYBIND11\_OVERLOAD}{PYBIND11\_OVERLOAD}}
+{\footnotesize\ttfamily \#define PYBIND11\+\_\+\+OVERLOAD(\begin{DoxyParamCaption}\item[{}]{ret\+\_\+type,  }\item[{}]{cname,  }\item[{}]{fn,  }\item[{}]{... }\end{DoxyParamCaption})~    \mbox{\hyperlink{pybind11_8h_a6a5ebc119f4e7ca7ccb05d9d1f64d547}{PYBIND11\+\_\+\+OVERLOAD\+\_\+\+NAME}}(ret\+\_\+type, cname, \#fn, fn, \+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)}
+
+\mbox{\Hypertarget{pybind11_8h_ad225e789a43a99757532d624f794b377}\label{pybind11_8h_ad225e789a43a99757532d624f794b377}} 
+\index{pybind11.h@{pybind11.h}!PYBIND11\_OVERLOAD\_INT@{PYBIND11\_OVERLOAD\_INT}}
+\index{PYBIND11\_OVERLOAD\_INT@{PYBIND11\_OVERLOAD\_INT}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{PYBIND11\_OVERLOAD\_INT}{PYBIND11\_OVERLOAD\_INT}}
+{\footnotesize\ttfamily \#define PYBIND11\+\_\+\+OVERLOAD\+\_\+\+INT(\begin{DoxyParamCaption}\item[{}]{ret\+\_\+type,  }\item[{}]{cname,  }\item[{}]{\mbox{\hyperlink{structname}{name}},  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        \{ \(\backslash\)}
+\DoxyCodeLine{        pybind11::gil\_scoped\_acquire gil; \(\backslash\)}
+\DoxyCodeLine{        pybind11::function overload = \mbox{\hyperlink{pybind11_8h_a6e5733211206597cdff171d9d43d8332}{pybind11::get\_overload}}(\textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }cname *\textcolor{keyword}{>}(\textcolor{keyword}{this}), \mbox{\hyperlink{structname}{name}}); \(\backslash\)}
+\DoxyCodeLine{        if (overload) \{ \(\backslash\)}
+\DoxyCodeLine{            auto o = overload(\_\_VA\_ARGS\_\_); \(\backslash\)}
+\DoxyCodeLine{            if (pybind11::detail::cast\_is\_temporary\_value\_reference<ret\_type>::value) \{ \(\backslash\)}
+\DoxyCodeLine{                static pybind11::detail::overload\_caster\_t<ret\_type> caster; \(\backslash\)}
+\DoxyCodeLine{                return pybind11::detail::cast\_ref<ret\_type>(std::move(o), caster); \(\backslash\)}
+\DoxyCodeLine{            \} \(\backslash\)}
+\DoxyCodeLine{            else \textcolor{keywordflow}{return} pybind11::detail::cast\_safe<ret\_type>(std::move(o)); \(\backslash\)}
+\DoxyCodeLine{        \} \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{pybind11_8h_a6a5ebc119f4e7ca7ccb05d9d1f64d547}\label{pybind11_8h_a6a5ebc119f4e7ca7ccb05d9d1f64d547}} 
+\index{pybind11.h@{pybind11.h}!PYBIND11\_OVERLOAD\_NAME@{PYBIND11\_OVERLOAD\_NAME}}
+\index{PYBIND11\_OVERLOAD\_NAME@{PYBIND11\_OVERLOAD\_NAME}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{PYBIND11\_OVERLOAD\_NAME}{PYBIND11\_OVERLOAD\_NAME}}
+{\footnotesize\ttfamily \#define PYBIND11\+\_\+\+OVERLOAD\+\_\+\+NAME(\begin{DoxyParamCaption}\item[{}]{ret\+\_\+type,  }\item[{}]{cname,  }\item[{}]{\mbox{\hyperlink{structname}{name}},  }\item[{}]{fn,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \mbox{\hyperlink{pybind11_8h_ad225e789a43a99757532d624f794b377}{PYBIND11\_OVERLOAD\_INT}}(ret\_type, cname, \mbox{\hyperlink{structname}{name}}, \_\_VA\_ARGS\_\_) \(\backslash\)}
+\DoxyCodeLine{    return cname::fn(\_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{pybind11_8h_acf72084f40e31c334fd2d2b0161e959b}\label{pybind11_8h_acf72084f40e31c334fd2d2b0161e959b}} 
+\index{pybind11.h@{pybind11.h}!PYBIND11\_OVERLOAD\_PURE@{PYBIND11\_OVERLOAD\_PURE}}
+\index{PYBIND11\_OVERLOAD\_PURE@{PYBIND11\_OVERLOAD\_PURE}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{PYBIND11\_OVERLOAD\_PURE}{PYBIND11\_OVERLOAD\_PURE}}
+{\footnotesize\ttfamily \#define PYBIND11\+\_\+\+OVERLOAD\+\_\+\+PURE(\begin{DoxyParamCaption}\item[{}]{ret\+\_\+type,  }\item[{}]{cname,  }\item[{}]{fn,  }\item[{}]{... }\end{DoxyParamCaption})~    \mbox{\hyperlink{pybind11_8h_a52b952e976930f2149eec9d0eb450100}{PYBIND11\+\_\+\+OVERLOAD\+\_\+\+PURE\+\_\+\+NAME}}(ret\+\_\+type, cname, \#fn, fn, \+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)}
+
+\mbox{\Hypertarget{pybind11_8h_a52b952e976930f2149eec9d0eb450100}\label{pybind11_8h_a52b952e976930f2149eec9d0eb450100}} 
+\index{pybind11.h@{pybind11.h}!PYBIND11\_OVERLOAD\_PURE\_NAME@{PYBIND11\_OVERLOAD\_PURE\_NAME}}
+\index{PYBIND11\_OVERLOAD\_PURE\_NAME@{PYBIND11\_OVERLOAD\_PURE\_NAME}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{PYBIND11\_OVERLOAD\_PURE\_NAME}{PYBIND11\_OVERLOAD\_PURE\_NAME}}
+{\footnotesize\ttfamily \#define PYBIND11\+\_\+\+OVERLOAD\+\_\+\+PURE\+\_\+\+NAME(\begin{DoxyParamCaption}\item[{}]{ret\+\_\+type,  }\item[{}]{cname,  }\item[{}]{\mbox{\hyperlink{structname}{name}},  }\item[{}]{fn,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \mbox{\hyperlink{pybind11_8h_ad225e789a43a99757532d624f794b377}{PYBIND11\_OVERLOAD\_INT}}(ret\_type, cname, \mbox{\hyperlink{structname}{name}}, \_\_VA\_ARGS\_\_) \mbox{\hyperlink{common_8h_aeea9746c2787bab3a5a0c983ef965520}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{common_8h_aeea9746c2787bab3a5a0c983ef965520}{    pybind11::pybind11\_fail}}(\textcolor{stringliteral}{"{}Tried to call pure virtual function \(\backslash\)"{}"{}} \#cname \textcolor{stringliteral}{"{}::"{}} \mbox{\hyperlink{structname}{name}} \textcolor{stringliteral}{"{}\(\backslash\)"{}"{}});}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pybind11_8h_aa29009830196890060d446644b1f7cec}\label{pybind11_8h_aa29009830196890060d446644b1f7cec}} 
+\index{pybind11.h@{pybind11.h}!all\_type\_info\_get\_cache@{all\_type\_info\_get\_cache}}
+\index{all\_type\_info\_get\_cache@{all\_type\_info\_get\_cache}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{all\_type\_info\_get\_cache()}{all\_type\_info\_get\_cache()}}
+{\footnotesize\ttfamily std\+::pair$<$decltype(\mbox{\hyperlink{structinternals_a6148bb4956e17d8a61f410cac7227d04}{internals\+::registered\+\_\+types\+\_\+py}})\+::\mbox{\hyperlink{classiterator}{iterator}}, bool$>$ all\+\_\+type\+\_\+info\+\_\+get\+\_\+cache (\begin{DoxyParamCaption}\item[{Py\+Type\+Object $\ast$}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{pybind11_8h_a8fcc4a926ae04dd6d1847f54ac458619}\label{pybind11_8h_a8fcc4a926ae04dd6d1847f54ac458619}} 
+\index{pybind11.h@{pybind11.h}!call\_operator\_delete@{call\_operator\_delete}}
+\index{call\_operator\_delete@{call\_operator\_delete}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{call\_operator\_delete()}{call\_operator\_delete()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename  = void\+\_\+t$<$decltype(static\+\_\+cast$<$void ($\ast$)(void $\ast$)$>$(\+T\+::operator delete))$>$$>$ \\
+void call\+\_\+operator\+\_\+delete (\begin{DoxyParamCaption}\item[{T $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Call class-\/specific delete if it exists or global otherwise. Can also be an overload set. 
+
+\mbox{\Hypertarget{pybind11_8h_adc95698c0bbd00b012f05c50eddb63de}\label{pybind11_8h_adc95698c0bbd00b012f05c50eddb63de}} 
+\index{pybind11.h@{pybind11.h}!call\_operator\_delete@{call\_operator\_delete}}
+\index{call\_operator\_delete@{call\_operator\_delete}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{call\_operator\_delete()}{call\_operator\_delete()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void call\+\_\+operator\+\_\+delete (\begin{DoxyParamCaption}\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{pybind11_8h_a6e5733211206597cdff171d9d43d8332}\label{pybind11_8h_a6e5733211206597cdff171d9d43d8332}} 
+\index{pybind11.h@{pybind11.h}!get\_overload@{get\_overload}}
+\index{get\_overload@{get\_overload}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{get\_overload()}{get\_overload()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classfunction}{function}} get\+\_\+overload (\begin{DoxyParamCaption}\item[{const T $\ast$}]{this\+\_\+ptr,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pybind11_8h_a9e918cccfeeabbbe9b1a42bba6b30a42}\label{pybind11_8h_a9e918cccfeeabbbe9b1a42bba6b30a42}} 
+\index{pybind11.h@{pybind11.h}!get\_type\_overload@{get\_type\_overload}}
+\index{get\_type\_overload@{get\_type\_overload}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{get\_type\_overload()}{get\_type\_overload()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfunction}{function}} get\+\_\+type\+\_\+overload (\begin{DoxyParamCaption}\item[{const void $\ast$}]{this\+\_\+ptr,  }\item[{const detail\+::type\+\_\+info $\ast$}]{this\+\_\+type,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{pybind11_8h_a271a0a8cc9839658c668492cbaa1035a}\label{pybind11_8h_a271a0a8cc9839658c668492cbaa1035a}} 
+\index{pybind11.h@{pybind11.h}!implicitly\_convertible@{implicitly\_convertible}}
+\index{implicitly\_convertible@{implicitly\_convertible}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{implicitly\_convertible()}{implicitly\_convertible()}}
+{\footnotesize\ttfamily template$<$typename Input\+Type , typename Output\+Type $>$ \\
+void implicitly\+\_\+convertible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pybind11_8h_a73e0f81b0944ea98afee999f7db95ab5}\label{pybind11_8h_a73e0f81b0944ea98afee999f7db95ab5}} 
+\index{pybind11.h@{pybind11.h}!init@{init}}
+\index{init@{init}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+detail\+::init$<$Args...$>$ \mbox{\hyperlink{structinit}{init}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pybind11_8h_a67a00d7b433527cbf6591341d099d39b}\label{pybind11_8h_a67a00d7b433527cbf6591341d099d39b}} 
+\index{pybind11.h@{pybind11.h}!init\_alias@{init\_alias}}
+\index{init\_alias@{init\_alias}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{init\_alias()}{init\_alias()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+detail\+::init\+\_\+alias$<$Args...$>$ \mbox{\hyperlink{structinit__alias}{init\+\_\+alias}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pybind11_8h_a8930f52c7348c6cf3c2c9195abbb3964}\label{pybind11_8h_a8930f52c7348c6cf3c2c9195abbb3964}} 
+\index{pybind11.h@{pybind11.h}!keep\_alive\_impl@{keep\_alive\_impl}}
+\index{keep\_alive\_impl@{keep\_alive\_impl}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{keep\_alive\_impl()}{keep\_alive\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void keep\+\_\+alive\+\_\+impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandle}{handle}}}]{nurse,  }\item[{\mbox{\hyperlink{classhandle}{handle}}}]{patient }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{pybind11_8h_aa1bda75120c8e859c75dfd2f5a266c7b}\label{pybind11_8h_aa1bda75120c8e859c75dfd2f5a266c7b}} 
+\index{pybind11.h@{pybind11.h}!keep\_alive\_impl@{keep\_alive\_impl}}
+\index{keep\_alive\_impl@{keep\_alive\_impl}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{keep\_alive\_impl()}{keep\_alive\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a1fb186b7494d5c576d902c0730ecbb71}{PYBIND11\+\_\+\+NOINLINE}} void keep\+\_\+alive\+\_\+impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}}}]{Nurse,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}}}]{Patient,  }\item[{\mbox{\hyperlink{structfunction__call}{function\+\_\+call}} \&}]{call,  }\item[{\mbox{\hyperlink{classhandle}{handle}}}]{ret }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{pybind11_8h_aaa00ecd4f616ff84b63e81c8e17e457d}\label{pybind11_8h_aaa00ecd4f616ff84b63e81c8e17e457d}} 
+\index{pybind11.h@{pybind11.h}!make\_iterator@{make\_iterator}}
+\index{make\_iterator@{make\_iterator}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{make\_iterator()}{make\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$return\+\_\+value\+\_\+policy Policy = return\+\_\+value\+\_\+policy\+::reference\+\_\+internal, typename Iterator , typename Sentinel , typename Value\+Type  = decltype($\ast$std\+::declval$<$\+Iterator$>$()), typename... Extra$>$ \\
+\mbox{\hyperlink{classiterator}{iterator}} make\+\_\+iterator (\begin{DoxyParamCaption}\item[{Iterator}]{first,  }\item[{Sentinel}]{last,  }\item[{Extra \&\&...}]{extra }\end{DoxyParamCaption})}
+
+
+
+Makes a python iterator from a first and past-\/the-\/end C++ Input\+Iterator. 
+
+\mbox{\Hypertarget{pybind11_8h_af2f2f5b99f97863427786e74223e4b0a}\label{pybind11_8h_af2f2f5b99f97863427786e74223e4b0a}} 
+\index{pybind11.h@{pybind11.h}!make\_iterator@{make\_iterator}}
+\index{make\_iterator@{make\_iterator}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{make\_iterator()}{make\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$return\+\_\+value\+\_\+policy Policy = return\+\_\+value\+\_\+policy\+::reference\+\_\+internal, typename Type , typename... Extra$>$ \\
+\mbox{\hyperlink{classiterator}{iterator}} make\+\_\+iterator (\begin{DoxyParamCaption}\item[{Type \&}]{value,  }\item[{Extra \&\&...}]{extra }\end{DoxyParamCaption})}
+
+Makes an iterator over values of an stl container or other container supporting {\ttfamily std\+::begin()}/{\ttfamily std\+::end()} \mbox{\Hypertarget{pybind11_8h_a53d442f04a8921c7dcc4407b05420752}\label{pybind11_8h_a53d442f04a8921c7dcc4407b05420752}} 
+\index{pybind11.h@{pybind11.h}!make\_key\_iterator@{make\_key\_iterator}}
+\index{make\_key\_iterator@{make\_key\_iterator}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{make\_key\_iterator()}{make\_key\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$return\+\_\+value\+\_\+policy Policy = return\+\_\+value\+\_\+policy\+::reference\+\_\+internal, typename Iterator , typename Sentinel , typename Key\+Type  = decltype(($\ast$std\+::declval$<$\+Iterator$>$()).\+first), typename... Extra$>$ \\
+\mbox{\hyperlink{classiterator}{iterator}} make\+\_\+key\+\_\+iterator (\begin{DoxyParamCaption}\item[{Iterator}]{first,  }\item[{Sentinel}]{last,  }\item[{Extra \&\&...}]{extra }\end{DoxyParamCaption})}
+
+Makes an python iterator over the keys ({\ttfamily .first}) of a iterator over pairs from a first and past-\/the-\/end Input\+Iterator. \mbox{\Hypertarget{pybind11_8h_ae01589476d0346c3e936852e4c27a62b}\label{pybind11_8h_ae01589476d0346c3e936852e4c27a62b}} 
+\index{pybind11.h@{pybind11.h}!make\_key\_iterator@{make\_key\_iterator}}
+\index{make\_key\_iterator@{make\_key\_iterator}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{make\_key\_iterator()}{make\_key\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$return\+\_\+value\+\_\+policy Policy = return\+\_\+value\+\_\+policy\+::reference\+\_\+internal, typename Type , typename... Extra$>$ \\
+\mbox{\hyperlink{classiterator}{iterator}} make\+\_\+key\+\_\+iterator (\begin{DoxyParamCaption}\item[{Type \&}]{value,  }\item[{Extra \&\&...}]{extra }\end{DoxyParamCaption})}
+
+Makes an iterator over the keys ({\ttfamily .first}) of a stl map-\/like container supporting {\ttfamily std\+::begin()}/{\ttfamily std\+::end()} \mbox{\Hypertarget{pybind11_8h_a133120592be1caf7036580978b5bd6dd}\label{pybind11_8h_a133120592be1caf7036580978b5bd6dd}} 
+\index{pybind11.h@{pybind11.h}!method\_adaptor@{method\_adaptor}}
+\index{method\_adaptor@{method\_adaptor}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{method\_adaptor()}{method\_adaptor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename , typename F $>$ \\
+auto method\+\_\+adaptor (\begin{DoxyParamCaption}\item[{F \&\&}]{f }\end{DoxyParamCaption}) -\/$>$ decltype(std\+::forward$<$F$>$(f)) }
+
+Given a pointer to a member function, cast it to its {\ttfamily Derived} version. Forward everything else unchanged. \mbox{\Hypertarget{pybind11_8h_adb45bb8178cd55c41b0f0d84bde00cfe}\label{pybind11_8h_adb45bb8178cd55c41b0f0d84bde00cfe}} 
+\index{pybind11.h@{pybind11.h}!method\_adaptor@{method\_adaptor}}
+\index{method\_adaptor@{method\_adaptor}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{method\_adaptor()}{method\_adaptor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Derived , typename Return , typename Class , typename... Args$>$ \\
+auto method\+\_\+adaptor (\begin{DoxyParamCaption}\item[{Return(Class\+::$\ast$)(Args...)}]{pmf }\end{DoxyParamCaption}) -\/$>$ Return (Derived\+::$\ast$)(Args...) }
+
+\mbox{\Hypertarget{pybind11_8h_a09d68b02745a7821c256c0642fb096c9}\label{pybind11_8h_a09d68b02745a7821c256c0642fb096c9}} 
+\index{pybind11.h@{pybind11.h}!print@{print}}
+\index{print@{print}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$return\+\_\+value\+\_\+policy policy = return\+\_\+value\+\_\+policy\+::automatic\+\_\+reference, typename... Args$>$ \\
+void print (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pybind11_8h_a62bcafa97abdcadb6520a62e52331b89}\label{pybind11_8h_a62bcafa97abdcadb6520a62e52331b89}} 
+\index{pybind11.h@{pybind11.h}!print@{print}}
+\index{print@{print}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a1fb186b7494d5c576d902c0730ecbb71}{PYBIND11\+\_\+\+NOINLINE}} void print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtuple}{tuple}}}]{args,  }\item[{\mbox{\hyperlink{classdict}{dict}}}]{kwargs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{pybind11_8h_abcf9f192bba0d5dc269bc33b9b6e7352}\label{pybind11_8h_abcf9f192bba0d5dc269bc33b9b6e7352}} 
+\index{pybind11.h@{pybind11.h}!register\_exception@{register\_exception}}
+\index{register\_exception@{register\_exception}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{register\_exception()}{register\_exception()}}
+{\footnotesize\ttfamily template$<$typename Cpp\+Exception $>$ \\
+\mbox{\hyperlink{classexception}{exception}}$<$Cpp\+Exception$>$\& register\+\_\+exception (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandle}{handle}}}]{scope,  }\item[{const char $\ast$}]{name,  }\item[{Py\+Object $\ast$}]{base = {\ttfamily PyExc\+\_\+Exception} }\end{DoxyParamCaption})}
+
+Registers a Python exception in {\ttfamily m} of the given {\ttfamily name} and installs an exception translator to translate the C++ exception to the created Python exception using the exceptions what() method. This is intended for simple exception translations; for more complex translation, register the exception object and translator directly. \mbox{\Hypertarget{pybind11_8h_a0a77063d21919c13ddfeb8caf29eef59}\label{pybind11_8h_a0a77063d21919c13ddfeb8caf29eef59}} 
+\index{pybind11.h@{pybind11.h}!register\_exception\_translator@{register\_exception\_translator}}
+\index{register\_exception\_translator@{register\_exception\_translator}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{register\_exception\_translator()}{register\_exception\_translator()}}
+{\footnotesize\ttfamily template$<$typename Exception\+Translator $>$ \\
+void register\+\_\+exception\+\_\+translator (\begin{DoxyParamCaption}\item[{Exception\+Translator \&\&}]{translator }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pybind11_8h_a32d62802b102a8ac8362eeef769aaad4}\label{pybind11_8h_a32d62802b102a8ac8362eeef769aaad4}} 
+\index{pybind11.h@{pybind11.h}!set\_operator\_new@{set\_operator\_new}}
+\index{set\_operator\_new@{set\_operator\_new}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{set\_operator\_new()}{set\_operator\_new()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename $>$ \\
+void set\+\_\+operator\+\_\+new (\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pybind11_8h_ae55b858834fdd3c6adb5e8b9615b49b6}\label{pybind11_8h_ae55b858834fdd3c6adb5e8b9615b49b6}} 
+\index{pybind11.h@{pybind11.h}!set\_operator\_new@{set\_operator\_new}}
+\index{set\_operator\_new@{set\_operator\_new}!pybind11.h@{pybind11.h}}
+\doxysubsubsection{\texorpdfstring{set\_operator\_new()}{set\_operator\_new()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename  = void\+\_\+t$<$decltype(static\+\_\+cast$<$void $\ast$($\ast$)(size\+\_\+t)$>$(\+T\+::operator new))$>$$>$ \\
+void set\+\_\+operator\+\_\+new (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtype__record}{type\+\_\+record}} $\ast$}]{r }\end{DoxyParamCaption})}
+
+
+
+Set the pointer to operator new if it exists. The cast is needed because it can be overloaded. 
+

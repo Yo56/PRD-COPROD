@@ -1,0 +1,33 @@
+\hypertarget{structvisit__helper}{}\doxysection{visit\+\_\+helper$<$ Variant $>$ Struct Template Reference}
+\label{structvisit__helper}\index{visit\_helper$<$ Variant $>$@{visit\_helper$<$ Variant $>$}}
+
+
+{\ttfamily \#include $<$stl.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\static auto \mbox{\hyperlink{structvisit__helper_a473267b48de4dd59210914d9d70ea577}{call}} (Args \&\&...\mbox{\hyperlink{classargs}{args}}) -\/$>$ decltype(visit(std\+::forward$<$ Args $>$(\mbox{\hyperlink{classargs}{args}})...))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$template$<$ typename... $>$ class Variant$>$\newline
+struct visit\+\_\+helper$<$ Variant $>$}
+
+Helper class which abstracts away variant\textquotesingle{}s {\ttfamily visit} function. {\ttfamily std\+::variant} and similar {\ttfamily namespace\+::variant} types which provide a {\ttfamily namespace\+::visit()} function are handled here automatically using argument-\/dependent lookup. Users can provide specializations for other variant-\/like classes, e.\+g. {\ttfamily boost\+::variant} and {\ttfamily boost\+::apply\+\_\+visitor}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structvisit__helper_a473267b48de4dd59210914d9d70ea577}\label{structvisit__helper_a473267b48de4dd59210914d9d70ea577}} 
+\index{visit\_helper$<$ Variant $>$@{visit\_helper$<$ Variant $>$}!call@{call}}
+\index{call@{call}!visit\_helper$<$ Variant $>$@{visit\_helper$<$ Variant $>$}}
+\doxysubsubsection{\texorpdfstring{call()}{call()}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Variant$>$ \\
+template$<$typename... Args$>$ \\
+static auto \mbox{\hyperlink{structvisit__helper}{visit\+\_\+helper}}$<$ Variant $>$\+::call (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption}) -\/$>$ decltype(visit(std\+::forward$<$Args$>$(\mbox{\hyperlink{classargs}{args}})...)) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{stl_8h}{stl.\+h}}\end{DoxyCompactItemize}

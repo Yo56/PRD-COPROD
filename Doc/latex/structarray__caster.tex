@@ -1,0 +1,63 @@
+\hypertarget{structarray__caster}{}\doxysection{array\+\_\+caster$<$ Array\+Type, Value, Resizable, Size $>$ Struct Template Reference}
+\label{structarray__caster}\index{array\_caster$<$ ArrayType, Value, Resizable, Size $>$@{array\_caster$<$ ArrayType, Value, Resizable, Size $>$}}
+
+
+{\ttfamily \#include $<$stl.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structarray__caster_a9614e5ea042dadbc2f12c067d6bd27f2}{value\+\_\+conv}} = \mbox{\hyperlink{cast_8h_ab32b52411a6b07420516d79074815713}{make\+\_\+caster}}$<$ Value $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structarray__caster_ad0d8f8e2a90d20917e3496f8aeea6d8b}{load}} (\mbox{\hyperlink{classhandle}{handle}} src, bool convert)
+\item 
+\mbox{\hyperlink{structarray__caster_a05de95936b5e956e44dc66518a2eae58}{PYBIND11\+\_\+\+TYPE\+\_\+\+CASTER}} (Array\+Type, \mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\char`\"{}List\mbox{[}\char`\"{})+value\+\_\+conv\+::name()+\mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}$<$ Resizable $>$(\mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\char`\"{}\char`\"{}), \mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\char`\"{}\mbox{[}\char`\"{})+\mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}$<$ Size $>$()+\mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\char`\"{}\mbox{]}\char`\"{}))+\mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\char`\"{}\mbox{]}\char`\"{}))
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{structarray__caster_a5eac243c7f9bca8dbe58fc914e93a2a0}{cast}} (T \&\&src, \mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}} policy, \mbox{\hyperlink{classhandle}{handle}} parent)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structarray__caster_a9614e5ea042dadbc2f12c067d6bd27f2}\label{structarray__caster_a9614e5ea042dadbc2f12c067d6bd27f2}} 
+\index{array\_caster$<$ ArrayType, Value, Resizable, Size $>$@{array\_caster$<$ ArrayType, Value, Resizable, Size $>$}!value\_conv@{value\_conv}}
+\index{value\_conv@{value\_conv}!array\_caster$<$ ArrayType, Value, Resizable, Size $>$@{array\_caster$<$ ArrayType, Value, Resizable, Size $>$}}
+\doxysubsubsection{\texorpdfstring{value\_conv}{value\_conv}}
+{\footnotesize\ttfamily template$<$typename Array\+Type , typename Value , bool Resizable, size\+\_\+t Size = 0$>$ \\
+using \mbox{\hyperlink{structarray__caster}{array\+\_\+caster}}$<$ Array\+Type, Value, Resizable, Size $>$\+::\mbox{\hyperlink{structarray__caster_a9614e5ea042dadbc2f12c067d6bd27f2}{value\+\_\+conv}} =  \mbox{\hyperlink{cast_8h_ab32b52411a6b07420516d79074815713}{make\+\_\+caster}}$<$Value$>$}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structarray__caster_a5eac243c7f9bca8dbe58fc914e93a2a0}\label{structarray__caster_a5eac243c7f9bca8dbe58fc914e93a2a0}} 
+\index{array\_caster$<$ ArrayType, Value, Resizable, Size $>$@{array\_caster$<$ ArrayType, Value, Resizable, Size $>$}!cast@{cast}}
+\index{cast@{cast}!array\_caster$<$ ArrayType, Value, Resizable, Size $>$@{array\_caster$<$ ArrayType, Value, Resizable, Size $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}}
+{\footnotesize\ttfamily template$<$typename Array\+Type , typename Value , bool Resizable, size\+\_\+t Size = 0$>$ \\
+template$<$typename T $>$ \\
+static \mbox{\hyperlink{classhandle}{handle}} \mbox{\hyperlink{structarray__caster}{array\+\_\+caster}}$<$ Array\+Type, Value, Resizable, Size $>$\+::cast (\begin{DoxyParamCaption}\item[{T \&\&}]{src,  }\item[{\mbox{\hyperlink{common_8h_adde72ab1fb0dd4b48a5232c349a53841}{return\+\_\+value\+\_\+policy}}}]{policy,  }\item[{\mbox{\hyperlink{classhandle}{handle}}}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structarray__caster_ad0d8f8e2a90d20917e3496f8aeea6d8b}\label{structarray__caster_ad0d8f8e2a90d20917e3496f8aeea6d8b}} 
+\index{array\_caster$<$ ArrayType, Value, Resizable, Size $>$@{array\_caster$<$ ArrayType, Value, Resizable, Size $>$}!load@{load}}
+\index{load@{load}!array\_caster$<$ ArrayType, Value, Resizable, Size $>$@{array\_caster$<$ ArrayType, Value, Resizable, Size $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$typename Array\+Type , typename Value , bool Resizable, size\+\_\+t Size = 0$>$ \\
+bool \mbox{\hyperlink{structarray__caster}{array\+\_\+caster}}$<$ Array\+Type, Value, Resizable, Size $>$\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandle}{handle}}}]{src,  }\item[{bool}]{convert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structarray__caster_a05de95936b5e956e44dc66518a2eae58}\label{structarray__caster_a05de95936b5e956e44dc66518a2eae58}} 
+\index{array\_caster$<$ ArrayType, Value, Resizable, Size $>$@{array\_caster$<$ ArrayType, Value, Resizable, Size $>$}!PYBIND11\_TYPE\_CASTER@{PYBIND11\_TYPE\_CASTER}}
+\index{PYBIND11\_TYPE\_CASTER@{PYBIND11\_TYPE\_CASTER}!array\_caster$<$ ArrayType, Value, Resizable, Size $>$@{array\_caster$<$ ArrayType, Value, Resizable, Size $>$}}
+\doxysubsubsection{\texorpdfstring{PYBIND11\_TYPE\_CASTER()}{PYBIND11\_TYPE\_CASTER()}}
+{\footnotesize\ttfamily template$<$typename Array\+Type , typename Value , bool Resizable, size\+\_\+t Size = 0$>$ \\
+\mbox{\hyperlink{structarray__caster}{array\+\_\+caster}}$<$ Array\+Type, Value, Resizable, Size $>$\+::PYBIND11\+\_\+\+TYPE\+\_\+\+CASTER (\begin{DoxyParamCaption}\item[{Array\+Type}]{,  }\item[{\mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\char`\"{}List\mbox{[}\char`\"{})+value\+\_\+conv\+::name()+\mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}$<$ Resizable $>$(\mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\char`\"{}\char`\"{}), \mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\char`\"{}\mbox{[}\char`\"{})+\mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}$<$ Size $>$()+\mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\char`\"{}\mbox{]}\char`\"{}))+\mbox{\hyperlink{descr_8h_a1bbce26cf7c9072763f99e8b4150dad3}{\+\_\+}}(\char`\"{}\mbox{]}\char`\"{})}]{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{stl_8h}{stl.\+h}}\end{DoxyCompactItemize}

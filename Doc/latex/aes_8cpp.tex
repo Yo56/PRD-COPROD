@@ -1,0 +1,148 @@
+\hypertarget{aes_8cpp}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.5.0/source/detail/cryptography/aes.cpp File Reference}
+\label{aes_8cpp}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/source/detail/cryptography/aes.cpp@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/source/detail/cryptography/aes.cpp}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$xlnt/utils/exceptions.\+hpp$>$}\newline
+{\ttfamily \#include $<$detail/cryptography/aes.\+hpp$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacexlnt}{xlnt}}
+\begin{DoxyCompactList}\small\item\em Enumerates the possible types a cell can be determined by it\textquotesingle{}s current value. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacexlnt_1_1detail}{xlnt\+::detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{aes_8cpp_a76134035baa59a42ca0b5b8fb99d9d53}{byte}}(x,  n)~(((x) $>$$>$ (8 $\ast$ (n))) \& 255)
+\item 
+\#define \mbox{\hyperlink{aes_8cpp_adfc63f1dc9ae6bed655becd332d7047f}{LOAD32H}}(x,  y)
+\item 
+\#define \mbox{\hyperlink{aes_8cpp_adb04fb3f7c1736d29125ad0f179b1068}{RORc}}(x,  y)~((((static\+\_\+cast$<$std\+::uint32\+\_\+t$>$(x) \& 0x\+FFFFFFFFUL) $>$$>$ static\+\_\+cast$<$std\+::uint32\+\_\+t$>$((y)\&31)) $\vert$ (static\+\_\+cast$<$std\+::uint32\+\_\+t$>$(x) $<$$<$ static\+\_\+cast$<$std\+::uint32\+\_\+t$>$((32 -\/ ((y)\&31)) \& 31))) \& 0x\+FFFFFFFFUL)
+\item 
+\#define \mbox{\hyperlink{aes_8cpp_a07eabac0fbcd110e8a4a40bbc96ab283}{STORE32H}}(x,  y)
+\item 
+\#define \mbox{\hyperlink{aes_8cpp_a994a964ae09be71938916b149f68d230}{Te0}}(x)~TE0\mbox{[}x\mbox{]}
+\item 
+\#define \mbox{\hyperlink{aes_8cpp_af17ef7bebb88b2fceae3915644e32062}{Te1}}(x)~TE1\mbox{[}x\mbox{]}
+\item 
+\#define \mbox{\hyperlink{aes_8cpp_a5486b720dae631087f0a4aee23b66064}{Te2}}(x)~TE2\mbox{[}x\mbox{]}
+\item 
+\#define \mbox{\hyperlink{aes_8cpp_ade252ba00f249ffabd7a1c4024a26907}{Te3}}(x)~TE3\mbox{[}x\mbox{]}
+\item 
+\#define \mbox{\hyperlink{aes_8cpp_af93fde30482fcdbae7ca6e2c25e4d099}{Td0}}(x)~TD0\mbox{[}x\mbox{]}
+\item 
+\#define \mbox{\hyperlink{aes_8cpp_a4731e2eaaabfdfda8f6a0d7371fbeaac}{Td1}}(x)~TD1\mbox{[}x\mbox{]}
+\item 
+\#define \mbox{\hyperlink{aes_8cpp_a4736b540f1562bbc49aa58b3b9eb7e5d}{Td2}}(x)~TD2\mbox{[}x\mbox{]}
+\item 
+\#define \mbox{\hyperlink{aes_8cpp_a5bb054f0a6fc30d14e60515390a909ac}{Td3}}(x)~TD3\mbox{[}x\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacexlnt_1_1detail_a9b33025ed3a69c3c6c6334f6345d9e73}{xlnt\+::detail\+::aes\+\_\+ecb\+\_\+encrypt}} (const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&plaintext, const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&key, const \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} offset)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacexlnt_1_1detail_aed5ebbe6243d7e4742c1ae706362ccd5}{xlnt\+::detail\+::aes\+\_\+ecb\+\_\+decrypt}} (const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&ciphertext, const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&key, const \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} offset)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacexlnt_1_1detail_a82d3b99203f790774079836634fbe90c}{xlnt\+::detail\+::aes\+\_\+cbc\+\_\+encrypt}} (const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&plaintext, const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&key, const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&original\+\_\+iv, const \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} offset)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacexlnt_1_1detail_a54c4b2d46a062cc85a33304c18912f4a}{xlnt\+::detail\+::aes\+\_\+cbc\+\_\+decrypt}} (const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&ciphertext, const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&key, const std\+::vector$<$ std\+::uint8\+\_\+t $>$ \&original\+\_\+iv, const \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} offset)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{aes_8cpp_a76134035baa59a42ca0b5b8fb99d9d53}\label{aes_8cpp_a76134035baa59a42ca0b5b8fb99d9d53}} 
+\index{aes.cpp@{aes.cpp}!byte@{byte}}
+\index{byte@{byte}!aes.cpp@{aes.cpp}}
+\doxysubsubsection{\texorpdfstring{byte}{byte}}
+{\footnotesize\ttfamily \#define byte(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{n }\end{DoxyParamCaption})~(((x) $>$$>$ (8 $\ast$ (n))) \& 255)}
+
+\mbox{\Hypertarget{aes_8cpp_adfc63f1dc9ae6bed655becd332d7047f}\label{aes_8cpp_adfc63f1dc9ae6bed655becd332d7047f}} 
+\index{aes.cpp@{aes.cpp}!LOAD32H@{LOAD32H}}
+\index{LOAD32H@{LOAD32H}!aes.cpp@{aes.cpp}}
+\doxysubsubsection{\texorpdfstring{LOAD32H}{LOAD32H}}
+{\footnotesize\ttfamily \#define LOAD32H(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do}                                                                                                                                                                                                          \(\backslash\)}
+\DoxyCodeLine{    \{                                                                                                                                                                                                           \(\backslash\)}
+\DoxyCodeLine{        x = (\textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{std::uint32\_t}}\textcolor{keyword}{>}((y)[0] \& 255) << 24) | (\textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{std::uint32\_t}}\textcolor{keyword}{>}((y)[1] \& 255) << 16) | (\textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{std::uint32\_t}}\textcolor{keyword}{>}((y)[2] \& 255) << 8) | (\textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespaceutf8_a846259d2f173d524282583fc9d825b00}{std::uint32\_t}}\textcolor{keyword}{>}((y)[3] \& 255)); \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{aes_8cpp_adb04fb3f7c1736d29125ad0f179b1068}\label{aes_8cpp_adb04fb3f7c1736d29125ad0f179b1068}} 
+\index{aes.cpp@{aes.cpp}!RORc@{RORc}}
+\index{RORc@{RORc}!aes.cpp@{aes.cpp}}
+\doxysubsubsection{\texorpdfstring{RORc}{RORc}}
+{\footnotesize\ttfamily \#define RORc(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~((((static\+\_\+cast$<$std\+::uint32\+\_\+t$>$(x) \& 0x\+FFFFFFFFUL) $>$$>$ static\+\_\+cast$<$std\+::uint32\+\_\+t$>$((y)\&31)) $\vert$ (static\+\_\+cast$<$std\+::uint32\+\_\+t$>$(x) $<$$<$ static\+\_\+cast$<$std\+::uint32\+\_\+t$>$((32 -\/ ((y)\&31)) \& 31))) \& 0x\+FFFFFFFFUL)}
+
+\mbox{\Hypertarget{aes_8cpp_a07eabac0fbcd110e8a4a40bbc96ab283}\label{aes_8cpp_a07eabac0fbcd110e8a4a40bbc96ab283}} 
+\index{aes.cpp@{aes.cpp}!STORE32H@{STORE32H}}
+\index{STORE32H@{STORE32H}!aes.cpp@{aes.cpp}}
+\doxysubsubsection{\texorpdfstring{STORE32H}{STORE32H}}
+{\footnotesize\ttfamily \#define STORE32H(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do}                                                         \(\backslash\)}
+\DoxyCodeLine{    \{                                                          \(\backslash\)}
+\DoxyCodeLine{        (y)[0] = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespaceutf8_abe793b552fabe390d134b97ab81d2c7f}{std::uint8\_t}}\textcolor{keyword}{>}(((x) >> 24) \& 255); \(\backslash\)}
+\DoxyCodeLine{        (y)[1] = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespaceutf8_abe793b552fabe390d134b97ab81d2c7f}{std::uint8\_t}}\textcolor{keyword}{>}(((x) >> 16) \& 255); \(\backslash\)}
+\DoxyCodeLine{        (y)[2] = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespaceutf8_abe793b552fabe390d134b97ab81d2c7f}{std::uint8\_t}}\textcolor{keyword}{>}(((x) >> 8) \& 255);  \(\backslash\)}
+\DoxyCodeLine{        (y)[3] = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespaceutf8_abe793b552fabe390d134b97ab81d2c7f}{std::uint8\_t}}\textcolor{keyword}{>}((x)\&255);           \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{aes_8cpp_af93fde30482fcdbae7ca6e2c25e4d099}\label{aes_8cpp_af93fde30482fcdbae7ca6e2c25e4d099}} 
+\index{aes.cpp@{aes.cpp}!Td0@{Td0}}
+\index{Td0@{Td0}!aes.cpp@{aes.cpp}}
+\doxysubsubsection{\texorpdfstring{Td0}{Td0}}
+{\footnotesize\ttfamily \#define Td0(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~TD0\mbox{[}x\mbox{]}}
+
+\mbox{\Hypertarget{aes_8cpp_a4731e2eaaabfdfda8f6a0d7371fbeaac}\label{aes_8cpp_a4731e2eaaabfdfda8f6a0d7371fbeaac}} 
+\index{aes.cpp@{aes.cpp}!Td1@{Td1}}
+\index{Td1@{Td1}!aes.cpp@{aes.cpp}}
+\doxysubsubsection{\texorpdfstring{Td1}{Td1}}
+{\footnotesize\ttfamily \#define Td1(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~TD1\mbox{[}x\mbox{]}}
+
+\mbox{\Hypertarget{aes_8cpp_a4736b540f1562bbc49aa58b3b9eb7e5d}\label{aes_8cpp_a4736b540f1562bbc49aa58b3b9eb7e5d}} 
+\index{aes.cpp@{aes.cpp}!Td2@{Td2}}
+\index{Td2@{Td2}!aes.cpp@{aes.cpp}}
+\doxysubsubsection{\texorpdfstring{Td2}{Td2}}
+{\footnotesize\ttfamily \#define Td2(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~TD2\mbox{[}x\mbox{]}}
+
+\mbox{\Hypertarget{aes_8cpp_a5bb054f0a6fc30d14e60515390a909ac}\label{aes_8cpp_a5bb054f0a6fc30d14e60515390a909ac}} 
+\index{aes.cpp@{aes.cpp}!Td3@{Td3}}
+\index{Td3@{Td3}!aes.cpp@{aes.cpp}}
+\doxysubsubsection{\texorpdfstring{Td3}{Td3}}
+{\footnotesize\ttfamily \#define Td3(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~TD3\mbox{[}x\mbox{]}}
+
+\mbox{\Hypertarget{aes_8cpp_a994a964ae09be71938916b149f68d230}\label{aes_8cpp_a994a964ae09be71938916b149f68d230}} 
+\index{aes.cpp@{aes.cpp}!Te0@{Te0}}
+\index{Te0@{Te0}!aes.cpp@{aes.cpp}}
+\doxysubsubsection{\texorpdfstring{Te0}{Te0}}
+{\footnotesize\ttfamily \#define Te0(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~TE0\mbox{[}x\mbox{]}}
+
+\mbox{\Hypertarget{aes_8cpp_af17ef7bebb88b2fceae3915644e32062}\label{aes_8cpp_af17ef7bebb88b2fceae3915644e32062}} 
+\index{aes.cpp@{aes.cpp}!Te1@{Te1}}
+\index{Te1@{Te1}!aes.cpp@{aes.cpp}}
+\doxysubsubsection{\texorpdfstring{Te1}{Te1}}
+{\footnotesize\ttfamily \#define Te1(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~TE1\mbox{[}x\mbox{]}}
+
+\mbox{\Hypertarget{aes_8cpp_a5486b720dae631087f0a4aee23b66064}\label{aes_8cpp_a5486b720dae631087f0a4aee23b66064}} 
+\index{aes.cpp@{aes.cpp}!Te2@{Te2}}
+\index{Te2@{Te2}!aes.cpp@{aes.cpp}}
+\doxysubsubsection{\texorpdfstring{Te2}{Te2}}
+{\footnotesize\ttfamily \#define Te2(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~TE2\mbox{[}x\mbox{]}}
+
+\mbox{\Hypertarget{aes_8cpp_ade252ba00f249ffabd7a1c4024a26907}\label{aes_8cpp_ade252ba00f249ffabd7a1c4024a26907}} 
+\index{aes.cpp@{aes.cpp}!Te3@{Te3}}
+\index{Te3@{Te3}!aes.cpp@{aes.cpp}}
+\doxysubsubsection{\texorpdfstring{Te3}{Te3}}
+{\footnotesize\ttfamily \#define Te3(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~TE3\mbox{[}x\mbox{]}}
+

@@ -1,0 +1,370 @@
+\hypertarget{classxlnt_1_1color}{}\doxysection{xlnt\+::color Class Reference}
+\label{classxlnt_1_1color}\index{xlnt::color@{xlnt::color}}
+
+
+Colors can be applied to many parts of a cell\textquotesingle{}s style.  
+
+
+
+
+{\ttfamily \#include $<$color.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1color_a3d72edd877b4de50e84a6aa09cf63a6b}{color}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a default color \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1color_abd3b4e35659f79944ecc30d8393c1239}{color}} (const \mbox{\hyperlink{classxlnt_1_1rgb__color}{rgb\+\_\+color}} \&\mbox{\hyperlink{classxlnt_1_1color_a5c3740c4627f1d08f6326e5fc6472c10}{rgb}})
+\begin{DoxyCompactList}\small\item\em Constructs a color from a given RGB color \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1color_a20f9e73a2ed9029ef7518e2bcc8804b0}{color}} (const \mbox{\hyperlink{classxlnt_1_1indexed__color}{indexed\+\_\+color}} \&\mbox{\hyperlink{classxlnt_1_1color_a8902a8d43844f58ec4a6cbcc267967ff}{indexed}})
+\begin{DoxyCompactList}\small\item\em Constructs a color from a given indexed color \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1color_a84f618cbe85c34fa31ce4ee45ac20baf}{color}} (const \mbox{\hyperlink{classxlnt_1_1theme__color}{theme\+\_\+color}} \&\mbox{\hyperlink{classxlnt_1_1theme}{theme}})
+\begin{DoxyCompactList}\small\item\em Constructs a color from a given theme color \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacexlnt_a48b08fbcfa6c350d50d193b4f3feb0a1}{color\+\_\+type}} \mbox{\hyperlink{classxlnt_1_1color_a949f9be4cf1afe147a443832773b3912}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the type of this color \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1color_a5b6b77592291d5197ad189e7a3ebadb0}{auto\+\_\+}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this color has been set to auto \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1color_adec6c603b0bde9ee87a163d95fac4afb}{auto\+\_\+}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the auto property of this color to value \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1rgb__color}{rgb\+\_\+color}} \& \mbox{\hyperlink{classxlnt_1_1color_a5c3740c4627f1d08f6326e5fc6472c10}{rgb}} () const
+\begin{DoxyCompactList}\small\item\em Returns the internal indexed color representing this color. If this is not an RGB color, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception will be thrown. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1rgb__color}{rgb\+\_\+color}} \& \mbox{\hyperlink{classxlnt_1_1color_a9c3fcc4d1afc3ad9698bd0e771b4b6c5}{rgb}} ()
+\begin{DoxyCompactList}\small\item\em Returns the internal indexed color representing this color. If this is not an RGB color, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception will be thrown. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1indexed__color}{indexed\+\_\+color}} \& \mbox{\hyperlink{classxlnt_1_1color_a8902a8d43844f58ec4a6cbcc267967ff}{indexed}} () const
+\begin{DoxyCompactList}\small\item\em Returns the internal indexed color representing this color. If this is not an indexed color, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception will be thrown. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1indexed__color}{indexed\+\_\+color}} \& \mbox{\hyperlink{classxlnt_1_1color_ac784157db18a47dc601930fb4afe7cab}{indexed}} ()
+\begin{DoxyCompactList}\small\item\em Returns the internal indexed color representing this color. If this is not an indexed color, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception will be thrown. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1theme__color}{theme\+\_\+color}} \& \mbox{\hyperlink{classxlnt_1_1color_a6cf90438083808e4146fde78c0755da4}{theme}} () const
+\begin{DoxyCompactList}\small\item\em Returns the internal indexed color representing this color. If this is not a theme color, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception will be thrown. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1theme__color}{theme\+\_\+color}} \& \mbox{\hyperlink{classxlnt_1_1color_a6be909d2418fe456bb66991037f2563c}{theme}} ()
+\begin{DoxyCompactList}\small\item\em Returns the internal indexed color representing this color. If this is not a theme color, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception will be thrown. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1color_a69514d21e25c23f2f9ef545e03a50a33}{has\+\_\+tint}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if tint is set \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classxlnt_1_1color_ac20c39ff8955ea5b04d2a19ffd301f3a}{tint}} () const
+\begin{DoxyCompactList}\small\item\em Returns the tint of this color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1color_a16de922ac187f04d9934ab2db6f6c9ca}{tint}} (double tint)
+\begin{DoxyCompactList}\small\item\em Sets the tint of this color to tint. Tints lighten or darken an existing color by multiplying the color with the tint. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1color_ac658db87f407790d2e5205e0b748ad89}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1color}{color}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this color is equivalent to other \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1color_a338f6fbaf37547a9d8119781299c46b0}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1color}{color}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this color is not equivalent to other \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{classxlnt_1_1color}{color}} \mbox{\hyperlink{classxlnt_1_1color_a93fdb682d39e017d2a3ea5617853e742}{black}} ()
+\begin{DoxyCompactList}\small\item\em Returns the color \#000000 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1color}{color}} \mbox{\hyperlink{classxlnt_1_1color_a2808376bd1eb70340b97142cdc5ff8c3}{white}} ()
+\begin{DoxyCompactList}\small\item\em Returns the color \#ffffff \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1color}{color}} \mbox{\hyperlink{classxlnt_1_1color_a119bbab92440f4f4512423a8d1094e34}{red}} ()
+\begin{DoxyCompactList}\small\item\em Returns the color \#ff0000 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1color}{color}} \mbox{\hyperlink{classxlnt_1_1color_a7febcd18b4058141be63aa94019b0a5d}{darkred}} ()
+\begin{DoxyCompactList}\small\item\em Returns the color \#8b0000 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1color}{color}} \mbox{\hyperlink{classxlnt_1_1color_a658c65ae7feb934798ad75da2c543578}{blue}} ()
+\begin{DoxyCompactList}\small\item\em Returns the color \#00ff00 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1color}{color}} \mbox{\hyperlink{classxlnt_1_1color_a90e33cc4b7304241f175c691ce819e77}{darkblue}} ()
+\begin{DoxyCompactList}\small\item\em Returns the color \#008b00 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1color}{color}} \mbox{\hyperlink{classxlnt_1_1color_a58915420fadbe053ff648d10a49ea9ce}{green}} ()
+\begin{DoxyCompactList}\small\item\em Returns the color \#0000ff \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1color}{color}} \mbox{\hyperlink{classxlnt_1_1color_a733a7baabf11e6829276ff69ab2ddaf5}{darkgreen}} ()
+\begin{DoxyCompactList}\small\item\em Returns the color \#00008b \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1color}{color}} \mbox{\hyperlink{classxlnt_1_1color_adac1368210c149dd0cb01771bc5a5e05}{yellow}} ()
+\begin{DoxyCompactList}\small\item\em Returns the color \#ffff00 \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{classxlnt_1_1color}{color}} \mbox{\hyperlink{classxlnt_1_1color_a0affcf6fd7b79f6644e7eb02d16403f9}{darkyellow}} ()
+\begin{DoxyCompactList}\small\item\em Returns the color \#cccc00 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Colors can be applied to many parts of a cell\textquotesingle{}s style. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1color_a3d72edd877b4de50e84a6aa09cf63a6b}\label{classxlnt_1_1color_a3d72edd877b4de50e84a6aa09cf63a6b}} 
+\index{xlnt::color@{xlnt::color}!color@{color}}
+\index{color@{color}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{color()}{color()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily xlnt\+::color\+::color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a default color 
+
+\mbox{\Hypertarget{classxlnt_1_1color_abd3b4e35659f79944ecc30d8393c1239}\label{classxlnt_1_1color_abd3b4e35659f79944ecc30d8393c1239}} 
+\index{xlnt::color@{xlnt::color}!color@{color}}
+\index{color@{color}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{color()}{color()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily xlnt\+::color\+::color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1rgb__color}{rgb\+\_\+color}} \&}]{rgb }\end{DoxyParamCaption})}
+
+
+
+Constructs a color from a given RGB color 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a20f9e73a2ed9029ef7518e2bcc8804b0}\label{classxlnt_1_1color_a20f9e73a2ed9029ef7518e2bcc8804b0}} 
+\index{xlnt::color@{xlnt::color}!color@{color}}
+\index{color@{color}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{color()}{color()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily xlnt\+::color\+::color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1indexed__color}{indexed\+\_\+color}} \&}]{indexed }\end{DoxyParamCaption})}
+
+
+
+Constructs a color from a given indexed color 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a84f618cbe85c34fa31ce4ee45ac20baf}\label{classxlnt_1_1color_a84f618cbe85c34fa31ce4ee45ac20baf}} 
+\index{xlnt::color@{xlnt::color}!color@{color}}
+\index{color@{color}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{color()}{color()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily xlnt\+::color\+::color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1theme__color}{theme\+\_\+color}} \&}]{theme }\end{DoxyParamCaption})}
+
+
+
+Constructs a color from a given theme color 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1color_a5b6b77592291d5197ad189e7a3ebadb0}\label{classxlnt_1_1color_a5b6b77592291d5197ad189e7a3ebadb0}} 
+\index{xlnt::color@{xlnt::color}!auto\_@{auto\_}}
+\index{auto\_@{auto\_}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{auto\_()}{auto\_()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::color\+::auto\+\_\+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this color has been set to auto 
+
+\mbox{\Hypertarget{classxlnt_1_1color_adec6c603b0bde9ee87a163d95fac4afb}\label{classxlnt_1_1color_adec6c603b0bde9ee87a163d95fac4afb}} 
+\index{xlnt::color@{xlnt::color}!auto\_@{auto\_}}
+\index{auto\_@{auto\_}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{auto\_()}{auto\_()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::color\+::auto\+\_\+ (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the auto property of this color to value 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a93fdb682d39e017d2a3ea5617853e742}\label{classxlnt_1_1color_a93fdb682d39e017d2a3ea5617853e742}} 
+\index{xlnt::color@{xlnt::color}!black@{black}}
+\index{black@{black}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{black()}{black()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1color}{color}} xlnt\+::color\+::black (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the color \#000000 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a658c65ae7feb934798ad75da2c543578}\label{classxlnt_1_1color_a658c65ae7feb934798ad75da2c543578}} 
+\index{xlnt::color@{xlnt::color}!blue@{blue}}
+\index{blue@{blue}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{blue()}{blue()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1color}{color}} xlnt\+::color\+::blue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the color \#00ff00 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a90e33cc4b7304241f175c691ce819e77}\label{classxlnt_1_1color_a90e33cc4b7304241f175c691ce819e77}} 
+\index{xlnt::color@{xlnt::color}!darkblue@{darkblue}}
+\index{darkblue@{darkblue}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{darkblue()}{darkblue()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1color}{color}} xlnt\+::color\+::darkblue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the color \#008b00 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a733a7baabf11e6829276ff69ab2ddaf5}\label{classxlnt_1_1color_a733a7baabf11e6829276ff69ab2ddaf5}} 
+\index{xlnt::color@{xlnt::color}!darkgreen@{darkgreen}}
+\index{darkgreen@{darkgreen}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{darkgreen()}{darkgreen()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1color}{color}} xlnt\+::color\+::darkgreen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the color \#00008b 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a7febcd18b4058141be63aa94019b0a5d}\label{classxlnt_1_1color_a7febcd18b4058141be63aa94019b0a5d}} 
+\index{xlnt::color@{xlnt::color}!darkred@{darkred}}
+\index{darkred@{darkred}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{darkred()}{darkred()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1color}{color}} xlnt\+::color\+::darkred (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the color \#8b0000 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a0affcf6fd7b79f6644e7eb02d16403f9}\label{classxlnt_1_1color_a0affcf6fd7b79f6644e7eb02d16403f9}} 
+\index{xlnt::color@{xlnt::color}!darkyellow@{darkyellow}}
+\index{darkyellow@{darkyellow}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{darkyellow()}{darkyellow()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1color}{color}} xlnt\+::color\+::darkyellow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the color \#cccc00 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a58915420fadbe053ff648d10a49ea9ce}\label{classxlnt_1_1color_a58915420fadbe053ff648d10a49ea9ce}} 
+\index{xlnt::color@{xlnt::color}!green@{green}}
+\index{green@{green}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{green()}{green()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1color}{color}} xlnt\+::color\+::green (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the color \#0000ff 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a69514d21e25c23f2f9ef545e03a50a33}\label{classxlnt_1_1color_a69514d21e25c23f2f9ef545e03a50a33}} 
+\index{xlnt::color@{xlnt::color}!has\_tint@{has\_tint}}
+\index{has\_tint@{has\_tint}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{has\_tint()}{has\_tint()}}
+{\footnotesize\ttfamily bool xlnt\+::color\+::has\+\_\+tint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if tint is set 
+
+\mbox{\Hypertarget{classxlnt_1_1color_ac784157db18a47dc601930fb4afe7cab}\label{classxlnt_1_1color_ac784157db18a47dc601930fb4afe7cab}} 
+\index{xlnt::color@{xlnt::color}!indexed@{indexed}}
+\index{indexed@{indexed}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{indexed()}{indexed()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1indexed__color}{indexed\+\_\+color}} \& xlnt\+::color\+::indexed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the internal indexed color representing this color. If this is not an indexed color, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception will be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a8902a8d43844f58ec4a6cbcc267967ff}\label{classxlnt_1_1color_a8902a8d43844f58ec4a6cbcc267967ff}} 
+\index{xlnt::color@{xlnt::color}!indexed@{indexed}}
+\index{indexed@{indexed}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{indexed()}{indexed()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1indexed__color}{indexed\+\_\+color}} \& xlnt\+::color\+::indexed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the internal indexed color representing this color. If this is not an indexed color, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception will be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a338f6fbaf37547a9d8119781299c46b0}\label{classxlnt_1_1color_a338f6fbaf37547a9d8119781299c46b0}} 
+\index{xlnt::color@{xlnt::color}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool xlnt\+::color\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1color}{color}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this color is not equivalent to other 
+
+\mbox{\Hypertarget{classxlnt_1_1color_ac658db87f407790d2e5205e0b748ad89}\label{classxlnt_1_1color_ac658db87f407790d2e5205e0b748ad89}} 
+\index{xlnt::color@{xlnt::color}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::color\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1color}{color}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this color is equivalent to other 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a119bbab92440f4f4512423a8d1094e34}\label{classxlnt_1_1color_a119bbab92440f4f4512423a8d1094e34}} 
+\index{xlnt::color@{xlnt::color}!red@{red}}
+\index{red@{red}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{red()}{red()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1color}{color}} xlnt\+::color\+::red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the color \#ff0000 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a9c3fcc4d1afc3ad9698bd0e771b4b6c5}\label{classxlnt_1_1color_a9c3fcc4d1afc3ad9698bd0e771b4b6c5}} 
+\index{xlnt::color@{xlnt::color}!rgb@{rgb}}
+\index{rgb@{rgb}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{rgb()}{rgb()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1rgb__color}{rgb\+\_\+color}} \& xlnt\+::color\+::rgb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the internal indexed color representing this color. If this is not an RGB color, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception will be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a5c3740c4627f1d08f6326e5fc6472c10}\label{classxlnt_1_1color_a5c3740c4627f1d08f6326e5fc6472c10}} 
+\index{xlnt::color@{xlnt::color}!rgb@{rgb}}
+\index{rgb@{rgb}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{rgb()}{rgb()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1rgb__color}{rgb\+\_\+color}} \& xlnt\+::color\+::rgb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the internal indexed color representing this color. If this is not an RGB color, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception will be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a6be909d2418fe456bb66991037f2563c}\label{classxlnt_1_1color_a6be909d2418fe456bb66991037f2563c}} 
+\index{xlnt::color@{xlnt::color}!theme@{theme}}
+\index{theme@{theme}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{theme()}{theme()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1theme__color}{theme\+\_\+color}} \& xlnt\+::color\+::theme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the internal indexed color representing this color. If this is not a theme color, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception will be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a6cf90438083808e4146fde78c0755da4}\label{classxlnt_1_1color_a6cf90438083808e4146fde78c0755da4}} 
+\index{xlnt::color@{xlnt::color}!theme@{theme}}
+\index{theme@{theme}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{theme()}{theme()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1theme__color}{theme\+\_\+color}} \& xlnt\+::color\+::theme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the internal indexed color representing this color. If this is not a theme color, an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception will be thrown. 
+
+\mbox{\Hypertarget{classxlnt_1_1color_ac20c39ff8955ea5b04d2a19ffd301f3a}\label{classxlnt_1_1color_ac20c39ff8955ea5b04d2a19ffd301f3a}} 
+\index{xlnt::color@{xlnt::color}!tint@{tint}}
+\index{tint@{tint}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{tint()}{tint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double xlnt\+::color\+::tint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the tint of this color. 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a16de922ac187f04d9934ab2db6f6c9ca}\label{classxlnt_1_1color_a16de922ac187f04d9934ab2db6f6c9ca}} 
+\index{xlnt::color@{xlnt::color}!tint@{tint}}
+\index{tint@{tint}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{tint()}{tint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::color\+::tint (\begin{DoxyParamCaption}\item[{double}]{tint }\end{DoxyParamCaption})}
+
+
+
+Sets the tint of this color to tint. Tints lighten or darken an existing color by multiplying the color with the tint. 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a949f9be4cf1afe147a443832773b3912}\label{classxlnt_1_1color_a949f9be4cf1afe147a443832773b3912}} 
+\index{xlnt::color@{xlnt::color}!type@{type}}
+\index{type@{type}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacexlnt_a48b08fbcfa6c350d50d193b4f3feb0a1}{color\+\_\+type}} xlnt\+::color\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the type of this color 
+
+\mbox{\Hypertarget{classxlnt_1_1color_a2808376bd1eb70340b97142cdc5ff8c3}\label{classxlnt_1_1color_a2808376bd1eb70340b97142cdc5ff8c3}} 
+\index{xlnt::color@{xlnt::color}!white@{white}}
+\index{white@{white}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{white()}{white()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1color}{color}} xlnt\+::color\+::white (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the color \#ffffff 
+
+\mbox{\Hypertarget{classxlnt_1_1color_adac1368210c149dd0cb01771bc5a5e05}\label{classxlnt_1_1color_adac1368210c149dd0cb01771bc5a5e05}} 
+\index{xlnt::color@{xlnt::color}!yellow@{yellow}}
+\index{yellow@{yellow}!xlnt::color@{xlnt::color}}
+\doxysubsubsection{\texorpdfstring{yellow()}{yellow()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1color}{color}} xlnt\+::color\+::yellow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the color \#ffff00 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/styles/\mbox{\hyperlink{color_8hpp}{color.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/styles/\mbox{\hyperlink{color_8cpp}{color.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,139 @@
+\hypertarget{classxlnt_1_1relationship}{}\doxysection{xlnt\+::relationship Class Reference}
+\label{classxlnt_1_1relationship}\index{xlnt::relationship@{xlnt::relationship}}
+
+
+Represents an association between a source Package or part, and a target object which can be a part or external resource.  
+
+
+
+
+{\ttfamily \#include $<$relationship.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1relationship_aad72561a9c8a78267764309f21f692a2}{relationship}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new empty relationship. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1relationship_a851b490952b5303a764f4c0743e186b4}{relationship}} (const std\+::string \&\mbox{\hyperlink{classxlnt_1_1relationship_ade027ea216f6491b222afa34d28d7479}{id}}, relationship\+\_\+type t, const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&\mbox{\hyperlink{classxlnt_1_1relationship_a3bea9545ba23b575ad0db4eebc06a8fc}{source}}, const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&\mbox{\hyperlink{classxlnt_1_1relationship_abb8b5ef9025e71a30358b7fe78197f09}{target}}, xlnt\+::target\+\_\+mode mode)
+\begin{DoxyCompactList}\small\item\em Constructs a new relationship by specifying all of its properties. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classxlnt_1_1relationship_ade027ea216f6491b222afa34d28d7479}{id}} () const
+\begin{DoxyCompactList}\small\item\em Returns a string of the form r\+Id\# that identifies the relationship. \end{DoxyCompactList}\item 
+relationship\+\_\+type \mbox{\hyperlink{classxlnt_1_1relationship_a7bcd38bb18620f49d161229455f99d31}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the type of this relationship. \end{DoxyCompactList}\item 
+xlnt\+::target\+\_\+mode \mbox{\hyperlink{classxlnt_1_1relationship_ab4e4b09b2dbdff84ff4a9817b296fb8c}{target\+\_\+mode}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the target of the relationship is internal or external to the package. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \& \mbox{\hyperlink{classxlnt_1_1relationship_a3bea9545ba23b575ad0db4eebc06a8fc}{source}} () const
+\begin{DoxyCompactList}\small\item\em Returns the URI of the package part this relationship points to. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \& \mbox{\hyperlink{classxlnt_1_1relationship_abb8b5ef9025e71a30358b7fe78197f09}{target}} () const
+\begin{DoxyCompactList}\small\item\em Returns the URI of the package part this relationship points to. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1relationship_af7a93e14e297d92a58b46f32ee255083}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1relationship}{relationship}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Returns true if and only if rhs is equal to this relationship. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1relationship_a23d80a1e2eec3bfbff69a932f0130484}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1relationship}{relationship}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Returns true if and only if rhs is not equal to this relationship. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an association between a source Package or part, and a target object which can be a part or external resource. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1relationship_aad72561a9c8a78267764309f21f692a2}\label{classxlnt_1_1relationship_aad72561a9c8a78267764309f21f692a2}} 
+\index{xlnt::relationship@{xlnt::relationship}!relationship@{relationship}}
+\index{relationship@{relationship}!xlnt::relationship@{xlnt::relationship}}
+\doxysubsubsection{\texorpdfstring{relationship()}{relationship()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily xlnt\+::relationship\+::relationship (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new empty relationship. 
+
+\mbox{\Hypertarget{classxlnt_1_1relationship_a851b490952b5303a764f4c0743e186b4}\label{classxlnt_1_1relationship_a851b490952b5303a764f4c0743e186b4}} 
+\index{xlnt::relationship@{xlnt::relationship}!relationship@{relationship}}
+\index{relationship@{relationship}!xlnt::relationship@{xlnt::relationship}}
+\doxysubsubsection{\texorpdfstring{relationship()}{relationship()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily xlnt\+::relationship\+::relationship (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id,  }\item[{relationship\+\_\+type}]{t,  }\item[{const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&}]{source,  }\item[{const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&}]{target,  }\item[{xlnt\+::target\+\_\+mode}]{mode }\end{DoxyParamCaption})}
+
+
+
+Constructs a new relationship by specifying all of its properties. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1relationship_ade027ea216f6491b222afa34d28d7479}\label{classxlnt_1_1relationship_ade027ea216f6491b222afa34d28d7479}} 
+\index{xlnt::relationship@{xlnt::relationship}!id@{id}}
+\index{id@{id}!xlnt::relationship@{xlnt::relationship}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily const std\+::string \& xlnt\+::relationship\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a string of the form r\+Id\# that identifies the relationship. 
+
+\mbox{\Hypertarget{classxlnt_1_1relationship_a23d80a1e2eec3bfbff69a932f0130484}\label{classxlnt_1_1relationship_a23d80a1e2eec3bfbff69a932f0130484}} 
+\index{xlnt::relationship@{xlnt::relationship}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::relationship@{xlnt::relationship}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool xlnt\+::relationship\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1relationship}{relationship}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if and only if rhs is not equal to this relationship. 
+
+\mbox{\Hypertarget{classxlnt_1_1relationship_af7a93e14e297d92a58b46f32ee255083}\label{classxlnt_1_1relationship_af7a93e14e297d92a58b46f32ee255083}} 
+\index{xlnt::relationship@{xlnt::relationship}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::relationship@{xlnt::relationship}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::relationship\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1relationship}{relationship}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if and only if rhs is equal to this relationship. 
+
+\mbox{\Hypertarget{classxlnt_1_1relationship_a3bea9545ba23b575ad0db4eebc06a8fc}\label{classxlnt_1_1relationship_a3bea9545ba23b575ad0db4eebc06a8fc}} 
+\index{xlnt::relationship@{xlnt::relationship}!source@{source}}
+\index{source@{source}!xlnt::relationship@{xlnt::relationship}}
+\doxysubsubsection{\texorpdfstring{source()}{source()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \& xlnt\+::relationship\+::source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the URI of the package part this relationship points to. 
+
+\mbox{\Hypertarget{classxlnt_1_1relationship_abb8b5ef9025e71a30358b7fe78197f09}\label{classxlnt_1_1relationship_abb8b5ef9025e71a30358b7fe78197f09}} 
+\index{xlnt::relationship@{xlnt::relationship}!target@{target}}
+\index{target@{target}!xlnt::relationship@{xlnt::relationship}}
+\doxysubsubsection{\texorpdfstring{target()}{target()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \& xlnt\+::relationship\+::target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the URI of the package part this relationship points to. 
+
+\mbox{\Hypertarget{classxlnt_1_1relationship_ab4e4b09b2dbdff84ff4a9817b296fb8c}\label{classxlnt_1_1relationship_ab4e4b09b2dbdff84ff4a9817b296fb8c}} 
+\index{xlnt::relationship@{xlnt::relationship}!target\_mode@{target\_mode}}
+\index{target\_mode@{target\_mode}!xlnt::relationship@{xlnt::relationship}}
+\doxysubsubsection{\texorpdfstring{target\_mode()}{target\_mode()}}
+{\footnotesize\ttfamily target\+\_\+mode xlnt\+::relationship\+::target\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the target of the relationship is internal or external to the package. 
+
+\mbox{\Hypertarget{classxlnt_1_1relationship_a7bcd38bb18620f49d161229455f99d31}\label{classxlnt_1_1relationship_a7bcd38bb18620f49d161229455f99d31}} 
+\index{xlnt::relationship@{xlnt::relationship}!type@{type}}
+\index{type@{type}!xlnt::relationship@{xlnt::relationship}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily relationship\+\_\+type xlnt\+::relationship\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the type of this relationship. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/packaging/\mbox{\hyperlink{relationship_8hpp}{relationship.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/packaging/\mbox{\hyperlink{relationship_8cpp}{relationship.\+cpp}}\end{DoxyCompactItemize}

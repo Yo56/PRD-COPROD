@@ -1,0 +1,1317 @@
+\hypertarget{expat_8h}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/expat.h File Reference}
+\label{expat_8h}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/expat.h@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/libstudxml/libstudxml/details/expat/expat.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$libstudxml/details/expat/expat\+\_\+external.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_x_m_l__cp}{XML\+\_\+cp}}
+\item 
+struct \mbox{\hyperlink{struct_x_m_l___memory___handling___suite}{XML\+\_\+\+Memory\+\_\+\+Handling\+\_\+\+Suite}}
+\item 
+struct \mbox{\hyperlink{struct_x_m_l___encoding}{XML\+\_\+\+Encoding}}
+\item 
+struct \mbox{\hyperlink{struct_x_m_l___parsing_status}{XML\+\_\+\+Parsing\+Status}}
+\item 
+struct \mbox{\hyperlink{struct_x_m_l___expat___version}{XML\+\_\+\+Expat\+\_\+\+Version}}
+\item 
+struct \mbox{\hyperlink{struct_x_m_l___feature}{XML\+\_\+\+Feature}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{expat_8h_aece5d476114d1bcc830391af0d1160fd}{XML\+\_\+\+TRUE}}~((\mbox{\hyperlink{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}{XML\+\_\+\+Bool}}) 1)
+\item 
+\#define \mbox{\hyperlink{expat_8h_a10f4e50c3f8ef8a50f00110b0319b12a}{XML\+\_\+\+FALSE}}~((\mbox{\hyperlink{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}{XML\+\_\+\+Bool}}) 0)
+\item 
+\#define \mbox{\hyperlink{expat_8h_a23470b6fbc11734113a97bb16784f425}{XML\+\_\+\+STATUS\+\_\+\+ERROR}}~XML\+\_\+\+STATUS\+\_\+\+ERROR
+\item 
+\#define \mbox{\hyperlink{expat_8h_ab38219dfecd7be55a897cbc8a71512f8}{XML\+\_\+\+STATUS\+\_\+\+OK}}~XML\+\_\+\+STATUS\+\_\+\+OK
+\item 
+\#define \mbox{\hyperlink{expat_8h_a762722e1945b30f728ccbfe2ffc863f2}{XML\+\_\+\+STATUS\+\_\+\+SUSPENDED}}~XML\+\_\+\+STATUS\+\_\+\+SUSPENDED
+\item 
+\#define \mbox{\hyperlink{expat_8h_a90154f812f977b217bbac5b4bb133065}{XML\+\_\+\+Get\+User\+Data}}(parser)~($\ast$(void $\ast$$\ast$)(parser))
+\item 
+\#define \mbox{\hyperlink{expat_8h_af9a2f5af4c77c93f28476a8e35885e93}{XML\+\_\+\+Get\+Error\+Line\+Number}}~\mbox{\hyperlink{xmlparse_8c_a5f0c9f83229fdaa9dcb48a8447045243}{XML\+\_\+\+Get\+Current\+Line\+Number}}
+\item 
+\#define \mbox{\hyperlink{expat_8h_adc61c007a99464ed452068125921c8e9}{XML\+\_\+\+Get\+Error\+Column\+Number}}~\mbox{\hyperlink{xmlparse_8c_a45f92a94ac5382b44a9c3fed893f8921}{XML\+\_\+\+Get\+Current\+Column\+Number}}
+\item 
+\#define \mbox{\hyperlink{expat_8h_a79598e9e91bba3a0407b3ea363b6a83b}{XML\+\_\+\+Get\+Error\+Byte\+Index}}~\mbox{\hyperlink{xmlparse_8c_a643677b451f2ee9103f396de161aab52}{XML\+\_\+\+Get\+Current\+Byte\+Index}}
+\item 
+\#define \mbox{\hyperlink{expat_8h_a4945478464354832f015ccd712c68040}{XML\+\_\+\+MAJOR\+\_\+\+VERSION}}~2
+\item 
+\#define \mbox{\hyperlink{expat_8h_a56dc70319455d3f56903ed7034fc836f}{XML\+\_\+\+MINOR\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{expat_8h_a9608842863effc648f8d38857cd8ffab}{XML\+\_\+\+MICRO\+\_\+\+VERSION}}~0
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_x_m_l___parser_struct}{XML\+\_\+\+Parser\+Struct}} $\ast$ \mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}
+\item 
+typedef unsigned char \mbox{\hyperlink{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}{XML\+\_\+\+Bool}}
+\item 
+typedef struct \mbox{\hyperlink{struct_x_m_l__cp}{XML\+\_\+cp}} \mbox{\hyperlink{expat_8h_a791d9e7de669ec5395df17978e1c507e}{XML\+\_\+\+Content}}
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_affe4163d2280b13afb316b81f5650421}{XML\+\_\+\+Element\+Decl\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structname}{name}}, \mbox{\hyperlink{expat_8h_a791d9e7de669ec5395df17978e1c507e}{XML\+\_\+\+Content}} $\ast$model)
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_a89899063dae04c58a3f2ef13e22bedbc}{XML\+\_\+\+Attlist\+Decl\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$elname, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$attname, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$att\+\_\+type, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$dflt, int isrequired)
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_a636e4276dad64e4f67c7ebb678fcdab4}{XML\+\_\+\+Xml\+Decl\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$version, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structencoding}{encoding}}, int standalone)
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_a504bca048496cfbacf106a5e28564fcd}{XML\+\_\+\+Start\+Element\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structname}{name}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$$\ast$\mbox{\hyperlink{xmlparse_8c_a5bbadff5cdbbd3feb492c555b546a292}{atts}})
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_a12978ae068c1222afbb5a400b5c692b9}{XML\+\_\+\+End\+Element\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structname}{name}})
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_aef3b6006dc0f845ddb482c2b37a44ba1}{XML\+\_\+\+Character\+Data\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$s, int \mbox{\hyperlink{group__python__builtins_gaeff368081ac50b8fe2cc0230d96e3acb}{len}})
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_a550004b1beb44144bd78b9320e211f6c}{XML\+\_\+\+Processing\+Instruction\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$target, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$data)
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_a0aefc69cadea618f7fc17607c7c3c8ee}{XML\+\_\+\+Comment\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$data)
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_a661776930dd0ace06a3e9acc9bba4b82}{XML\+\_\+\+Start\+Cdata\+Section\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}})
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_a3165868193185fbd43232e41dd211d4f}{XML\+\_\+\+End\+Cdata\+Section\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}})
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_afa6c6c71f2c70cfe57c3506534cb70d7}{XML\+\_\+\+Default\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$s, int \mbox{\hyperlink{group__python__builtins_gaeff368081ac50b8fe2cc0230d96e3acb}{len}})
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_ab748cf612072905843f3488414c19f3b}{XML\+\_\+\+Start\+Doctype\+Decl\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{xmlparse_8c_a2c9f84bb2d7b6ef6a6a06721629b5309}{doctype\+Name}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$sysid, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$pubid, int has\+\_\+internal\+\_\+subset)
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_a43568a006caf34bcf94e4346031b85a0}{XML\+\_\+\+End\+Doctype\+Decl\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}})
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_af2f060ea47a43f92b5d23313ceba982a}{XML\+\_\+\+Entity\+Decl\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$entity\+Name, int is\+\_\+parameter\+\_\+entity, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$value, int value\+\_\+length, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structbase}{base}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$system\+Id, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$public\+Id, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$notation\+Name)
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_a67d7a2966d8416e1d8cef6a33ae86453}{XML\+\_\+\+Unparsed\+Entity\+Decl\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$entity\+Name, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structbase}{base}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$system\+Id, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$public\+Id, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$notation\+Name)
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_af51763d2819de05e8569320f9ab571c4}{XML\+\_\+\+Notation\+Decl\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$notation\+Name, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structbase}{base}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$system\+Id, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$public\+Id)
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_a58ad7c192f040f8196708f042c8bdc14}{XML\+\_\+\+Start\+Namespace\+Decl\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structprefix}{prefix}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$uri)
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_a1414891bd078b546986d463e746ad49c}{XML\+\_\+\+End\+Namespace\+Decl\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structprefix}{prefix}})
+\item 
+typedef int(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_a8fc3c5ba2270c72ff0a8f9daccd77dd5}{XML\+\_\+\+Not\+Standalone\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}})
+\item 
+typedef int(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_a2d955f5ce3c5401dbe14ba19e8067c01}{XML\+\_\+\+External\+Entity\+Ref\+Handler}}) (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$context, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structbase}{base}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$system\+Id, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$public\+Id)
+\item 
+typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_a29e3734cfec01df38715716d53093d5c}{XML\+\_\+\+Skipped\+Entity\+Handler}}) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$entity\+Name, int is\+\_\+parameter\+\_\+entity)
+\item 
+typedef int(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ \mbox{\hyperlink{expat_8h_a348625fd90dcc5d880efec9e533fc502}{XML\+\_\+\+Unknown\+Encoding\+Handler}}) (void $\ast$encoding\+Handler\+Data, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structname}{name}}, \mbox{\hyperlink{struct_x_m_l___encoding}{XML\+\_\+\+Encoding}} $\ast$info)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bb}{XML\+\_\+\+Status}} \{ \newline
+\mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bbaa24b654694daef98d474312bf84b1a52}{XML\+\_\+\+STATUS\+\_\+\+ERROR}} = 0
+, \mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bbaa24b654694daef98d474312bf84b1a52}{XML\+\_\+\+STATUS\+\_\+\+ERROR}} = 0
+, \mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bba0b75c0375756392bab1cbb6c30b385f3}{XML\+\_\+\+STATUS\+\_\+\+OK}} = 1
+, \mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bba0b75c0375756392bab1cbb6c30b385f3}{XML\+\_\+\+STATUS\+\_\+\+OK}} = 1
+, \newline
+\mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bba75cf5e7dbc26a9437b9725d99a050d6b}{XML\+\_\+\+STATUS\+\_\+\+SUSPENDED}}
+ \}
+\item 
+enum \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118}{XML\+\_\+\+Error}} \{ \newline
+\mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a94d7f2071bd24ca8a0b718b21301dbae}{XML\+\_\+\+ERROR\+\_\+\+NONE}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a7f073b3492312b2b2744266fbd8d99cd}{XML\+\_\+\+ERROR\+\_\+\+NO\+\_\+\+MEMORY}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118afdff9df9f5a13e4956307fdfd8831133}{XML\+\_\+\+ERROR\+\_\+\+SYNTAX}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a30806cc55ad9a3d0a5d3b210a59ba9f3}{XML\+\_\+\+ERROR\+\_\+\+NO\+\_\+\+ELEMENTS}}
+, \newline
+\mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118ae0955060e14faab05faa346c9be641de}{XML\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+TOKEN}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a014760abb9dc590d653a8dbc1c67dc1f}{XML\+\_\+\+ERROR\+\_\+\+UNCLOSED\+\_\+\+TOKEN}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a524cee9bec6321c9ae86ff948ae6b58b}{XML\+\_\+\+ERROR\+\_\+\+PARTIAL\+\_\+\+CHAR}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118aa899d9719d3a91d2611402eb65c6aacb}{XML\+\_\+\+ERROR\+\_\+\+TAG\+\_\+\+MISMATCH}}
+, \newline
+\mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a5d968af631073c5ea62b83119d418cb8}{XML\+\_\+\+ERROR\+\_\+\+DUPLICATE\+\_\+\+ATTRIBUTE}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118aa97bf530524671001c50569ffae7d26a}{XML\+\_\+\+ERROR\+\_\+\+JUNK\+\_\+\+AFTER\+\_\+\+DOC\+\_\+\+ELEMENT}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a9700d1b17a181c3ebdc282bb285f8559}{XML\+\_\+\+ERROR\+\_\+\+PARAM\+\_\+\+ENTITY\+\_\+\+REF}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118ad48a9855f09eb3e586f737882653b49a}{XML\+\_\+\+ERROR\+\_\+\+UNDEFINED\+\_\+\+ENTITY}}
+, \newline
+\mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a4ee7d262582821311683fa9e2036462d}{XML\+\_\+\+ERROR\+\_\+\+RECURSIVE\+\_\+\+ENTITY\+\_\+\+REF}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a0cc463ba999dce675efada76ab7a7ae1}{XML\+\_\+\+ERROR\+\_\+\+ASYNC\+\_\+\+ENTITY}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118ad02a255f05184fe6f59dd5ebbc9654c3}{XML\+\_\+\+ERROR\+\_\+\+BAD\+\_\+\+CHAR\+\_\+\+REF}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118ae3e63f65884b55e5444fad83163d1777}{XML\+\_\+\+ERROR\+\_\+\+BINARY\+\_\+\+ENTITY\+\_\+\+REF}}
+, \newline
+\mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a14f9d5721c3a94bebdb1d12325e34961}{XML\+\_\+\+ERROR\+\_\+\+ATTRIBUTE\+\_\+\+EXTERNAL\+\_\+\+ENTITY\+\_\+\+REF}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a878586f07e83b5215b7e43fa6957aee4}{XML\+\_\+\+ERROR\+\_\+\+MISPLACED\+\_\+\+XML\+\_\+\+PI}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118ae3fd18418e1ef36726486d175e43404f}{XML\+\_\+\+ERROR\+\_\+\+UNKNOWN\+\_\+\+ENCODING}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a7dd87295923a83486c1ee32dcc72b276}{XML\+\_\+\+ERROR\+\_\+\+INCORRECT\+\_\+\+ENCODING}}
+, \newline
+\mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118ab8b5142f4c88b80b0fd94b8fcb78f101}{XML\+\_\+\+ERROR\+\_\+\+UNCLOSED\+\_\+\+CDATA\+\_\+\+SECTION}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a7485dfe2229b74b0ac5abbbe5e69e528}{XML\+\_\+\+ERROR\+\_\+\+EXTERNAL\+\_\+\+ENTITY\+\_\+\+HANDLING}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a35d00aec5104d0d95c4684e339609e31}{XML\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+STANDALONE}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118aa7e8eabb57de34509adf8ed0c22a19de}{XML\+\_\+\+ERROR\+\_\+\+UNEXPECTED\+\_\+\+STATE}}
+, \newline
+\mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a5d0c800771b3bed49aba971818f467df}{XML\+\_\+\+ERROR\+\_\+\+ENTITY\+\_\+\+DECLARED\+\_\+\+IN\+\_\+\+PE}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a9c56b241750a66ad045af7f701e3a3a8}{XML\+\_\+\+ERROR\+\_\+\+FEATURE\+\_\+\+REQUIRES\+\_\+\+XML\+\_\+\+DTD}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a59a16308b56e00dca247ac63f87b165c}{XML\+\_\+\+ERROR\+\_\+\+CANT\+\_\+\+CHANGE\+\_\+\+FEATURE\+\_\+\+ONCE\+\_\+\+PARSING}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118ad5c3e9e15d85440a3d8d8215cd4c4771}{XML\+\_\+\+ERROR\+\_\+\+UNBOUND\+\_\+\+PREFIX}}
+, \newline
+\mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118add61ca21b27c0251daf4ed882e2c1b1f}{XML\+\_\+\+ERROR\+\_\+\+UNDECLARING\+\_\+\+PREFIX}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a36ff78124834ad24d4105e8ec127f57b}{XML\+\_\+\+ERROR\+\_\+\+INCOMPLETE\+\_\+\+PE}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a2fb52fa51b56fb76b7bc717ec6116c28}{XML\+\_\+\+ERROR\+\_\+\+XML\+\_\+\+DECL}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a49839fc9c3d673e9ec62d88cb5c5d017}{XML\+\_\+\+ERROR\+\_\+\+TEXT\+\_\+\+DECL}}
+, \newline
+\mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118ad7bbf806dd63715a925b422b703068dc}{XML\+\_\+\+ERROR\+\_\+\+PUBLICID}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a549c0b9238aa4781007f91af376cedb5}{XML\+\_\+\+ERROR\+\_\+\+SUSPENDED}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118aafc6bc70586542c3a9514fc9cabcd678}{XML\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUSPENDED}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118a285887f8112dc911f19e3791a49bd3ca}{XML\+\_\+\+ERROR\+\_\+\+ABORTED}}
+, \newline
+\mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118aa92e9288dc9de92d90de882bd28caf08}{XML\+\_\+\+ERROR\+\_\+\+FINISHED}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118ae5a36b9bc5d50dd263b59de2b249c0d0}{XML\+\_\+\+ERROR\+\_\+\+SUSPEND\+\_\+\+PE}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118aa6e7c0867b74df3dfa81aa0885d8aad8}{XML\+\_\+\+ERROR\+\_\+\+RESERVED\+\_\+\+PREFIX\+\_\+\+XML}}
+, \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118aff2303e00312b7f380507f7f7f12eb49}{XML\+\_\+\+ERROR\+\_\+\+RESERVED\+\_\+\+PREFIX\+\_\+\+XMLNS}}
+, \newline
+\mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118acab12aab558fd805a0b76ac4bee3dea5}{XML\+\_\+\+ERROR\+\_\+\+RESERVED\+\_\+\+NAMESPACE\+\_\+\+URI}}
+ \}
+\item 
+enum \mbox{\hyperlink{expat_8h_abb42ccef87efb634487d28753d14b473}{XML\+\_\+\+Content\+\_\+\+Type}} \{ \newline
+\mbox{\hyperlink{expat_8h_abb42ccef87efb634487d28753d14b473aee728cebe0c9f9e10da86b1314f261c2}{XML\+\_\+\+CTYPE\+\_\+\+EMPTY}} = 1
+, \mbox{\hyperlink{expat_8h_abb42ccef87efb634487d28753d14b473a3a4ee8c34fe7c515c0afbb37ccb273b7}{XML\+\_\+\+CTYPE\+\_\+\+ANY}}
+, \mbox{\hyperlink{expat_8h_abb42ccef87efb634487d28753d14b473a666bf89162b31c5ee5b7d4317f320da5}{XML\+\_\+\+CTYPE\+\_\+\+MIXED}}
+, \mbox{\hyperlink{expat_8h_abb42ccef87efb634487d28753d14b473afe24cd69df548d996ebf15d2945648ce}{XML\+\_\+\+CTYPE\+\_\+\+NAME}}
+, \newline
+\mbox{\hyperlink{expat_8h_abb42ccef87efb634487d28753d14b473ab72a7b0dcd0ff685af8a9de498890452}{XML\+\_\+\+CTYPE\+\_\+\+CHOICE}}
+, \mbox{\hyperlink{expat_8h_abb42ccef87efb634487d28753d14b473a4bb069ce88a7581e220e5ca37bcb691a}{XML\+\_\+\+CTYPE\+\_\+\+SEQ}}
+ \}
+\item 
+enum \mbox{\hyperlink{expat_8h_a63f73d88e3afb7c5fe7d33bbb193b024}{XML\+\_\+\+Content\+\_\+\+Quant}} \{ \mbox{\hyperlink{expat_8h_a63f73d88e3afb7c5fe7d33bbb193b024a3782b2d80b73f569e25e2bec9c9dd384}{XML\+\_\+\+CQUANT\+\_\+\+NONE}}
+, \mbox{\hyperlink{expat_8h_a63f73d88e3afb7c5fe7d33bbb193b024a2cd7411de474b3bc2d6eea49c2283e99}{XML\+\_\+\+CQUANT\+\_\+\+OPT}}
+, \mbox{\hyperlink{expat_8h_a63f73d88e3afb7c5fe7d33bbb193b024a8df8b6346cafc2fa20f35ac4fdbdf615}{XML\+\_\+\+CQUANT\+\_\+\+REP}}
+, \mbox{\hyperlink{expat_8h_a63f73d88e3afb7c5fe7d33bbb193b024a17956d9213f9385fe14f2ea779ea35ad}{XML\+\_\+\+CQUANT\+\_\+\+PLUS}}
+ \}
+\item 
+enum \mbox{\hyperlink{expat_8h_a1e8b2aa21ec26bcf0eb696197b53aab6}{XML\+\_\+\+Parsing}} \{ \mbox{\hyperlink{expat_8h_a1e8b2aa21ec26bcf0eb696197b53aab6afbbdcc361a41cc96cad54045449bc276}{XML\+\_\+\+INITIALIZED}}
+, \mbox{\hyperlink{expat_8h_a1e8b2aa21ec26bcf0eb696197b53aab6a04ce97557ea4c03d32e92c62fb7c65e1}{XML\+\_\+\+PARSING}}
+, \mbox{\hyperlink{expat_8h_a1e8b2aa21ec26bcf0eb696197b53aab6ab398d4cb838da79432e317837b07ea42}{XML\+\_\+\+FINISHED}}
+, \mbox{\hyperlink{expat_8h_a1e8b2aa21ec26bcf0eb696197b53aab6a15979fdec1239f8443cfbbf20b6917a5}{XML\+\_\+\+SUSPENDED}}
+ \}
+\item 
+enum \mbox{\hyperlink{expat_8h_a83ffd61320d59d0c6c33dfcf1a0c098f}{XML\+\_\+\+Param\+Entity\+Parsing}} \{ \mbox{\hyperlink{expat_8h_a83ffd61320d59d0c6c33dfcf1a0c098fad8126c34122c4e63a9c2feee23f42566}{XML\+\_\+\+PARAM\+\_\+\+ENTITY\+\_\+\+PARSING\+\_\+\+NEVER}}
+, \mbox{\hyperlink{expat_8h_a83ffd61320d59d0c6c33dfcf1a0c098fa71233f0d7358f5620b5694c43bcb35e8}{XML\+\_\+\+PARAM\+\_\+\+ENTITY\+\_\+\+PARSING\+\_\+\+UNLESS\+\_\+\+STANDALONE}}
+, \mbox{\hyperlink{expat_8h_a83ffd61320d59d0c6c33dfcf1a0c098fa8cee6618dd630799836822449aa2fdf9}{XML\+\_\+\+PARAM\+\_\+\+ENTITY\+\_\+\+PARSING\+\_\+\+ALWAYS}}
+ \}
+\item 
+enum \mbox{\hyperlink{expat_8h_a3003d8415d1239ab78a8adfce6a34a8e}{XML\+\_\+\+Feature\+Enum}} \{ \newline
+\mbox{\hyperlink{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea8745903bc09073b2abe0ebef13816cfe}{XML\+\_\+\+FEATURE\+\_\+\+END}} = 0
+, \mbox{\hyperlink{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea2ba23d9f0f47866bc35a968eaeeddb16}{XML\+\_\+\+FEATURE\+\_\+\+UNICODE}}
+, \mbox{\hyperlink{expat_8h_a3003d8415d1239ab78a8adfce6a34a8eaab838e6ac060c50f2eda9d065133bb6a}{XML\+\_\+\+FEATURE\+\_\+\+UNICODE\+\_\+\+WCHAR\+\_\+T}}
+, \mbox{\hyperlink{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea09d653173612d6a423520078ff8b7019}{XML\+\_\+\+FEATURE\+\_\+\+DTD}}
+, \newline
+\mbox{\hyperlink{expat_8h_a3003d8415d1239ab78a8adfce6a34a8eabb78df14b1efdff2d11d4d335a089d2e}{XML\+\_\+\+FEATURE\+\_\+\+CONTEXT\+\_\+\+BYTES}}
+, \mbox{\hyperlink{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea681374d691371442bc3d9f88bacafb3a}{XML\+\_\+\+FEATURE\+\_\+\+MIN\+\_\+\+SIZE}}
+, \mbox{\hyperlink{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea549e5efbee635add738a9cc9b531a501}{XML\+\_\+\+FEATURE\+\_\+\+SIZEOF\+\_\+\+XML\+\_\+\+CHAR}}
+, \mbox{\hyperlink{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea0cb25cc352faa48daaecf78ee2cfb4d8}{XML\+\_\+\+FEATURE\+\_\+\+SIZEOF\+\_\+\+XML\+\_\+\+LCHAR}}
+, \newline
+\mbox{\hyperlink{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea1c4fd57d24d089f3f7a57ea2208f9739}{XML\+\_\+\+FEATURE\+\_\+\+NS}}
+, \mbox{\hyperlink{expat_8h_a3003d8415d1239ab78a8adfce6a34a8eacf746d441547f7e849501ab92a9ba2eb}{XML\+\_\+\+FEATURE\+\_\+\+LARGE\+\_\+\+SIZE}}
+, \mbox{\hyperlink{expat_8h_a3003d8415d1239ab78a8adfce6a34a8eae923bd26ea33674bc9de57a38cae87d0}{XML\+\_\+\+FEATURE\+\_\+\+ATTR\+\_\+\+INFO}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{expat_8h_acea003c7329cc1605ad6075551670d69}{XML\+\_\+\+Set\+Element\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_affe4163d2280b13afb316b81f5650421}{XML\+\_\+\+Element\+Decl\+Handler}} eldecl)
+\item 
+\mbox{\hyperlink{expat_8h_ab9defc95aa4e928c4d33fa0aae16e614}{XML\+\_\+\+Set\+Attlist\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a89899063dae04c58a3f2ef13e22bedbc}{XML\+\_\+\+Attlist\+Decl\+Handler}} attdecl)
+\item 
+\mbox{\hyperlink{expat_8h_a561111336f3db075409fa6f9c0a55015}{XML\+\_\+\+Set\+Xml\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a636e4276dad64e4f67c7ebb678fcdab4}{XML\+\_\+\+Xml\+Decl\+Handler}} xmldecl)
+\item 
+\mbox{\hyperlink{expat_8h_a170e5a6b1a8ae0534d3d69f93aa15b0c}{XML\+\_\+\+Parser\+Create}} (const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structencoding}{encoding}})
+\item 
+\mbox{\hyperlink{expat_8h_a9a4e2bf0ff9a36aaff159f370eae6126}{XML\+\_\+\+Parser\+Create\+NS}} (const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structencoding}{encoding}}, \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} \mbox{\hyperlink{xmlparse_8c_a736bbc99314e2a5bf4f783a70cb88b2f}{namespace\+Separator}})
+\item 
+\mbox{\hyperlink{expat_8h_a23732fee31870eb85d9981daabf1cf5e}{XML\+\_\+\+Parser\+Create\+\_\+\+MM}} (const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structencoding}{encoding}}, const \mbox{\hyperlink{struct_x_m_l___memory___handling___suite}{XML\+\_\+\+Memory\+\_\+\+Handling\+\_\+\+Suite}} $\ast$memsuite, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{xmlparse_8c_a736bbc99314e2a5bf4f783a70cb88b2f}{namespace\+Separator}})
+\item 
+\mbox{\hyperlink{expat_8h_ac6aba21e5cd7431eeca4be6312f9c523}{XML\+\_\+\+Parser\+Reset}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structencoding}{encoding}})
+\item 
+\mbox{\hyperlink{expat_8h_a8072d21c310e6a08187b403fd7dad7e9}{XML\+\_\+\+Set\+Entity\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_af2f060ea47a43f92b5d23313ceba982a}{XML\+\_\+\+Entity\+Decl\+Handler}} handler)
+\item 
+\mbox{\hyperlink{expat_8h_a69921a6d7f1be3d717332cea5e7ceca8}{XML\+\_\+\+Set\+Element\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a504bca048496cfbacf106a5e28564fcd}{XML\+\_\+\+Start\+Element\+Handler}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}}, \mbox{\hyperlink{expat_8h_a12978ae068c1222afbb5a400b5c692b9}{XML\+\_\+\+End\+Element\+Handler}} \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}})
+\item 
+\mbox{\hyperlink{expat_8h_a2272a36ebb32322500ab05058754fa09}{XML\+\_\+\+Set\+Start\+Element\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a504bca048496cfbacf106a5e28564fcd}{XML\+\_\+\+Start\+Element\+Handler}} handler)
+\item 
+\mbox{\hyperlink{expat_8h_a2a208ddaf0435da3c83299c90ccbb1c7}{XML\+\_\+\+Set\+End\+Element\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a12978ae068c1222afbb5a400b5c692b9}{XML\+\_\+\+End\+Element\+Handler}} handler)
+\item 
+\mbox{\hyperlink{expat_8h_affa8d2057a1e75fe4e1c7de26c70cd24}{XML\+\_\+\+Set\+Character\+Data\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_aef3b6006dc0f845ddb482c2b37a44ba1}{XML\+\_\+\+Character\+Data\+Handler}} handler)
+\item 
+\mbox{\hyperlink{expat_8h_a26dbed024734a41ac175fef4d91e37b7}{XML\+\_\+\+Set\+Processing\+Instruction\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a550004b1beb44144bd78b9320e211f6c}{XML\+\_\+\+Processing\+Instruction\+Handler}} handler)
+\item 
+\mbox{\hyperlink{expat_8h_a16310f1819cb65f8d989ade5e4665ce0}{XML\+\_\+\+Set\+Comment\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a0aefc69cadea618f7fc17607c7c3c8ee}{XML\+\_\+\+Comment\+Handler}} handler)
+\item 
+\mbox{\hyperlink{expat_8h_a600a35c5cea081c0dddabff148d692d7}{XML\+\_\+\+Set\+Cdata\+Section\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a661776930dd0ace06a3e9acc9bba4b82}{XML\+\_\+\+Start\+Cdata\+Section\+Handler}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}}, \mbox{\hyperlink{expat_8h_a3165868193185fbd43232e41dd211d4f}{XML\+\_\+\+End\+Cdata\+Section\+Handler}} \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}})
+\item 
+\mbox{\hyperlink{expat_8h_ada1df723a09bf5090e11f6a665e32389}{XML\+\_\+\+Set\+Start\+Cdata\+Section\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a661776930dd0ace06a3e9acc9bba4b82}{XML\+\_\+\+Start\+Cdata\+Section\+Handler}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}})
+\item 
+\mbox{\hyperlink{expat_8h_a0c5742fc6a00b5b4eb627c5188c36c3e}{XML\+\_\+\+Set\+End\+Cdata\+Section\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a3165868193185fbd43232e41dd211d4f}{XML\+\_\+\+End\+Cdata\+Section\+Handler}} \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}})
+\item 
+\mbox{\hyperlink{expat_8h_af05132d710426f9e5290de30abdca344}{XML\+\_\+\+Set\+Default\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_afa6c6c71f2c70cfe57c3506534cb70d7}{XML\+\_\+\+Default\+Handler}} handler)
+\item 
+\mbox{\hyperlink{expat_8h_a636e1cfc284897fa9bbfd06ebb102b7b}{XML\+\_\+\+Set\+Default\+Handler\+Expand}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_afa6c6c71f2c70cfe57c3506534cb70d7}{XML\+\_\+\+Default\+Handler}} handler)
+\item 
+\mbox{\hyperlink{expat_8h_a1a44eac18dc373ae7d1d777224b628e6}{XML\+\_\+\+Set\+Doctype\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_ab748cf612072905843f3488414c19f3b}{XML\+\_\+\+Start\+Doctype\+Decl\+Handler}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}}, \mbox{\hyperlink{expat_8h_a43568a006caf34bcf94e4346031b85a0}{XML\+\_\+\+End\+Doctype\+Decl\+Handler}} \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}})
+\item 
+\mbox{\hyperlink{expat_8h_a36ac7acf7cebd775a7e55e418c58cadd}{XML\+\_\+\+Set\+Start\+Doctype\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_ab748cf612072905843f3488414c19f3b}{XML\+\_\+\+Start\+Doctype\+Decl\+Handler}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}})
+\item 
+\mbox{\hyperlink{expat_8h_a12657f3ae3075d9d91d394b8e52cbdb3}{XML\+\_\+\+Set\+End\+Doctype\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a43568a006caf34bcf94e4346031b85a0}{XML\+\_\+\+End\+Doctype\+Decl\+Handler}} \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}})
+\item 
+\mbox{\hyperlink{expat_8h_a4a339c880076d284d206afd4c756ce19}{XML\+\_\+\+Set\+Unparsed\+Entity\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a67d7a2966d8416e1d8cef6a33ae86453}{XML\+\_\+\+Unparsed\+Entity\+Decl\+Handler}} handler)
+\item 
+\mbox{\hyperlink{expat_8h_adcdc4c0fce8d0fa3e0e4d9f7beac5fec}{XML\+\_\+\+Set\+Notation\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_af51763d2819de05e8569320f9ab571c4}{XML\+\_\+\+Notation\+Decl\+Handler}} handler)
+\item 
+\mbox{\hyperlink{expat_8h_a320bb302d14d8d7cba2991cbdb7553a3}{XML\+\_\+\+Set\+Namespace\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a58ad7c192f040f8196708f042c8bdc14}{XML\+\_\+\+Start\+Namespace\+Decl\+Handler}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}}, \mbox{\hyperlink{expat_8h_a1414891bd078b546986d463e746ad49c}{XML\+\_\+\+End\+Namespace\+Decl\+Handler}} \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}})
+\item 
+\mbox{\hyperlink{expat_8h_a3a97654197f3451b5df3755daaef8c4b}{XML\+\_\+\+Set\+Start\+Namespace\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a58ad7c192f040f8196708f042c8bdc14}{XML\+\_\+\+Start\+Namespace\+Decl\+Handler}} \mbox{\hyperlink{border_8hpp_a550769bbd4e7537ff90a656f5b0c23b2}{start}})
+\item 
+\mbox{\hyperlink{expat_8h_a936c72c7eacc7e69620d7014e33d7862}{XML\+\_\+\+Set\+End\+Namespace\+Decl\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a1414891bd078b546986d463e746ad49c}{XML\+\_\+\+End\+Namespace\+Decl\+Handler}} \mbox{\hyperlink{border_8hpp_afb358f48b1646c750fb9da6c6585be2b}{end}})
+\item 
+\mbox{\hyperlink{expat_8h_a02cd29bfe12ad0a2d17b3a572a040f42}{XML\+\_\+\+Set\+Not\+Standalone\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a8fc3c5ba2270c72ff0a8f9daccd77dd5}{XML\+\_\+\+Not\+Standalone\+Handler}} handler)
+\item 
+\mbox{\hyperlink{expat_8h_a133bded8cfbd6bb1fbcfad40b986f814}{XML\+\_\+\+Set\+External\+Entity\+Ref\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a2d955f5ce3c5401dbe14ba19e8067c01}{XML\+\_\+\+External\+Entity\+Ref\+Handler}} handler)
+\item 
+\mbox{\hyperlink{expat_8h_a41e5324c09b2fd7e783b8766324ab7a0}{XML\+\_\+\+Set\+External\+Entity\+Ref\+Handler\+Arg}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, void $\ast$\mbox{\hyperlink{structarg}{arg}})
+\item 
+\mbox{\hyperlink{expat_8h_a299534d405738de35f283306f99f0f0a}{XML\+\_\+\+Set\+Skipped\+Entity\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a29e3734cfec01df38715716d53093d5c}{XML\+\_\+\+Skipped\+Entity\+Handler}} handler)
+\item 
+\mbox{\hyperlink{expat_8h_a726ba0601211ec3a969651fb82b5d488}{XML\+\_\+\+Set\+Unknown\+Encoding\+Handler}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a348625fd90dcc5d880efec9e533fc502}{XML\+\_\+\+Unknown\+Encoding\+Handler}} handler, void $\ast$encoding\+Handler\+Data)
+\item 
+\mbox{\hyperlink{expat_8h_a656640fa46f78f5fa297dea4ae1722ec}{XML\+\_\+\+Default\+Current}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+\mbox{\hyperlink{expat_8h_a76fcdf6315a13945f02323c6885f0313}{XML\+\_\+\+Set\+Return\+NSTriplet}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, int do\+\_\+nst)
+\item 
+\mbox{\hyperlink{expat_8h_a468e51741c78867604101f505767de67}{XML\+\_\+\+Set\+User\+Data}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}})
+\item 
+\mbox{\hyperlink{expat_8h_a52b6c9717933df0e16f03044b7c0ff0b}{XML\+\_\+\+Set\+Encoding}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structencoding}{encoding}})
+\item 
+\mbox{\hyperlink{expat_8h_a940cf0f11f4372ee7cb7997fbc411265}{XML\+\_\+\+Use\+Parser\+As\+Handler\+Arg}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+\mbox{\hyperlink{expat_8h_aa22249af467c9d1911e8e4ce23fe7aae}{XML\+\_\+\+Use\+Foreign\+DTD}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}{XML\+\_\+\+Bool}} use\+DTD)
+\item 
+\mbox{\hyperlink{expat_8h_a92301b7dc0e4653219bb70830e94fb10}{XML\+\_\+\+Set\+Base}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structbase}{base}})
+\item 
+\mbox{\hyperlink{expat_8h_a11f47e2c3c4eabe81359a90bbeab9796}{XML\+\_\+\+Get\+Base}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+\mbox{\hyperlink{expat_8h_a5871673801b34ac556398ebaf8c46753}{XML\+\_\+\+Get\+Specified\+Attribute\+Count}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+\mbox{\hyperlink{expat_8h_aa196256e8aeed81148d0066f2cdb0778}{XML\+\_\+\+Get\+Id\+Attribute\+Index}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+\mbox{\hyperlink{expat_8h_a74b71c0c1edba09393f8450a5cff20f7}{XML\+\_\+\+Parse}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, const char $\ast$s, int \mbox{\hyperlink{group__python__builtins_gaeff368081ac50b8fe2cc0230d96e3acb}{len}}, int is\+Final)
+\item 
+\mbox{\hyperlink{expat_8h_a2ba88067eec56ba4c937b99aa8f7e9fa}{XML\+\_\+\+Get\+Buffer}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, int \mbox{\hyperlink{group__python__builtins_gaeff368081ac50b8fe2cc0230d96e3acb}{len}})
+\item 
+\mbox{\hyperlink{expat_8h_a266deaa2cc7dff28d352e548e9938b15}{XML\+\_\+\+Parse\+Buffer}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, int \mbox{\hyperlink{group__python__builtins_gaeff368081ac50b8fe2cc0230d96e3acb}{len}}, int is\+Final)
+\item 
+\mbox{\hyperlink{expat_8h_a2ed188bab24ab1b97c8bc812d0e1de01}{XML\+\_\+\+Stop\+Parser}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}{XML\+\_\+\+Bool}} resumable)
+\item 
+\mbox{\hyperlink{expat_8h_a36bc47ccd8bf45dd483d7a21746a01fc}{XML\+\_\+\+Resume\+Parser}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+\mbox{\hyperlink{expat_8h_af4ed8f0f62c35fa4a34bdad0ffe7aab7}{XML\+\_\+\+Get\+Parsing\+Status}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{struct_x_m_l___parsing_status}{XML\+\_\+\+Parsing\+Status}} $\ast$status)
+\item 
+\mbox{\hyperlink{expat_8h_a97ce0f371ec32a0ee199d0ee03e557be}{XML\+\_\+\+External\+Entity\+Parser\+Create}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$context, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structencoding}{encoding}})
+\item 
+\mbox{\hyperlink{expat_8h_ad09c926ea3d49d087a16e6224a5a9304}{XML\+\_\+\+Set\+Param\+Entity\+Parsing}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, enum \mbox{\hyperlink{expat_8h_a83ffd61320d59d0c6c33dfcf1a0c098f}{XML\+\_\+\+Param\+Entity\+Parsing}} parsing)
+\item 
+\mbox{\hyperlink{expat_8h_a7c6d3d2f410c2bd24228c46706e86053}{XML\+\_\+\+Set\+Hash\+Salt}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, unsigned long hash\+\_\+salt)
+\item 
+\mbox{\hyperlink{expat_8h_a2c9bf949546187a0b6090ecb008a3ea2}{XML\+\_\+\+Get\+Error\+Code}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+\mbox{\hyperlink{expat_8h_addcfe55d8f0e2b155e881f66f9dbc80b}{XMLPARSEAPI}} (\mbox{\hyperlink{expat__external_8h_ad22a225e6e62127360b44b2f7559f789}{XML\+\_\+\+Size}}) \mbox{\hyperlink{xmlparse_8c_a5f0c9f83229fdaa9dcb48a8447045243}{XML\+\_\+\+Get\+Current\+Line\+Number}}(\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+\mbox{\hyperlink{expat_8h_ae1a2ba64a8972360e74a096014116326}{XMLPARSEAPI}} (\mbox{\hyperlink{expat__external_8h_ae2a9a55c7071b0c6da19fea14ce8f504}{XML\+\_\+\+Index}}) \mbox{\hyperlink{xmlparse_8c_a643677b451f2ee9103f396de161aab52}{XML\+\_\+\+Get\+Current\+Byte\+Index}}(\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+\mbox{\hyperlink{expat_8h_a9f79dd11b63d0cb0a7ef05c471500fd9}{XML\+\_\+\+Get\+Current\+Byte\+Count}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+\mbox{\hyperlink{expat_8h_a13b1eb36d3245596ee0afabd9183b897}{XML\+\_\+\+Get\+Input\+Context}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, int $\ast$offset, int $\ast$size)
+\item 
+\mbox{\hyperlink{expat_8h_a7af523f8175790f31b5dc844aaf489b3}{XML\+\_\+\+Free\+Content\+Model}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{expat_8h_a791d9e7de669ec5395df17978e1c507e}{XML\+\_\+\+Content}} $\ast$model)
+\item 
+\mbox{\hyperlink{expat_8h_afbc60c7b2f025ed6a6471e566ba096ee}{XML\+\_\+\+Mem\+Malloc}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} size)
+\item 
+\mbox{\hyperlink{expat_8h_a160cbcbce19813e20caa562f4c6b4618}{XML\+\_\+\+Mem\+Realloc}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, void $\ast$ptr, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} size)
+\item 
+\mbox{\hyperlink{expat_8h_a5bc14956f967dc816dc242a6a2559e1a}{XML\+\_\+\+Mem\+Free}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, void $\ast$ptr)
+\item 
+\mbox{\hyperlink{expat_8h_a6911b3212a330e3d23bdd8e1b433d59e}{XML\+\_\+\+Parser\+Free}} (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser)
+\item 
+\mbox{\hyperlink{expat_8h_a8251288f9a95e1da7eb24bdb29ee586b}{XML\+\_\+\+Error\+String}} (enum \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118}{XML\+\_\+\+Error}} code)
+\item 
+\mbox{\hyperlink{expat_8h_abb55b97e846e0186244a72414f035e98}{XML\+\_\+\+Expat\+Version}} (void)
+\item 
+\mbox{\hyperlink{expat_8h_a697dd3e01bb959d89e28622faff96479}{XML\+\_\+\+Expat\+Version\+Info}} (void)
+\item 
+\mbox{\hyperlink{expat_8h_a5461b9ee2320302609ae9ece4a7f0363}{XML\+\_\+\+Get\+Feature\+List}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{expat_8h_a10f4e50c3f8ef8a50f00110b0319b12a}\label{expat_8h_a10f4e50c3f8ef8a50f00110b0319b12a}} 
+\index{expat.h@{expat.h}!XML\_FALSE@{XML\_FALSE}}
+\index{XML\_FALSE@{XML\_FALSE}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_FALSE}{XML\_FALSE}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+FALSE~((\mbox{\hyperlink{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}{XML\+\_\+\+Bool}}) 0)}
+
+\mbox{\Hypertarget{expat_8h_a79598e9e91bba3a0407b3ea363b6a83b}\label{expat_8h_a79598e9e91bba3a0407b3ea363b6a83b}} 
+\index{expat.h@{expat.h}!XML\_GetErrorByteIndex@{XML\_GetErrorByteIndex}}
+\index{XML\_GetErrorByteIndex@{XML\_GetErrorByteIndex}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_GetErrorByteIndex}{XML\_GetErrorByteIndex}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+Get\+Error\+Byte\+Index~\mbox{\hyperlink{xmlparse_8c_a643677b451f2ee9103f396de161aab52}{XML\+\_\+\+Get\+Current\+Byte\+Index}}}
+
+\mbox{\Hypertarget{expat_8h_adc61c007a99464ed452068125921c8e9}\label{expat_8h_adc61c007a99464ed452068125921c8e9}} 
+\index{expat.h@{expat.h}!XML\_GetErrorColumnNumber@{XML\_GetErrorColumnNumber}}
+\index{XML\_GetErrorColumnNumber@{XML\_GetErrorColumnNumber}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_GetErrorColumnNumber}{XML\_GetErrorColumnNumber}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+Get\+Error\+Column\+Number~\mbox{\hyperlink{xmlparse_8c_a45f92a94ac5382b44a9c3fed893f8921}{XML\+\_\+\+Get\+Current\+Column\+Number}}}
+
+\mbox{\Hypertarget{expat_8h_af9a2f5af4c77c93f28476a8e35885e93}\label{expat_8h_af9a2f5af4c77c93f28476a8e35885e93}} 
+\index{expat.h@{expat.h}!XML\_GetErrorLineNumber@{XML\_GetErrorLineNumber}}
+\index{XML\_GetErrorLineNumber@{XML\_GetErrorLineNumber}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_GetErrorLineNumber}{XML\_GetErrorLineNumber}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+Get\+Error\+Line\+Number~\mbox{\hyperlink{xmlparse_8c_a5f0c9f83229fdaa9dcb48a8447045243}{XML\+\_\+\+Get\+Current\+Line\+Number}}}
+
+\mbox{\Hypertarget{expat_8h_a90154f812f977b217bbac5b4bb133065}\label{expat_8h_a90154f812f977b217bbac5b4bb133065}} 
+\index{expat.h@{expat.h}!XML\_GetUserData@{XML\_GetUserData}}
+\index{XML\_GetUserData@{XML\_GetUserData}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_GetUserData}{XML\_GetUserData}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+Get\+User\+Data(\begin{DoxyParamCaption}\item[{}]{parser }\end{DoxyParamCaption})~($\ast$(void $\ast$$\ast$)(parser))}
+
+\mbox{\Hypertarget{expat_8h_a4945478464354832f015ccd712c68040}\label{expat_8h_a4945478464354832f015ccd712c68040}} 
+\index{expat.h@{expat.h}!XML\_MAJOR\_VERSION@{XML\_MAJOR\_VERSION}}
+\index{XML\_MAJOR\_VERSION@{XML\_MAJOR\_VERSION}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_MAJOR\_VERSION}{XML\_MAJOR\_VERSION}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+MAJOR\+\_\+\+VERSION~2}
+
+\mbox{\Hypertarget{expat_8h_a9608842863effc648f8d38857cd8ffab}\label{expat_8h_a9608842863effc648f8d38857cd8ffab}} 
+\index{expat.h@{expat.h}!XML\_MICRO\_VERSION@{XML\_MICRO\_VERSION}}
+\index{XML\_MICRO\_VERSION@{XML\_MICRO\_VERSION}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_MICRO\_VERSION}{XML\_MICRO\_VERSION}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+MICRO\+\_\+\+VERSION~0}
+
+\mbox{\Hypertarget{expat_8h_a56dc70319455d3f56903ed7034fc836f}\label{expat_8h_a56dc70319455d3f56903ed7034fc836f}} 
+\index{expat.h@{expat.h}!XML\_MINOR\_VERSION@{XML\_MINOR\_VERSION}}
+\index{XML\_MINOR\_VERSION@{XML\_MINOR\_VERSION}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_MINOR\_VERSION}{XML\_MINOR\_VERSION}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+MINOR\+\_\+\+VERSION~1}
+
+\mbox{\Hypertarget{expat_8h_a23470b6fbc11734113a97bb16784f425}\label{expat_8h_a23470b6fbc11734113a97bb16784f425}} 
+\index{expat.h@{expat.h}!XML\_STATUS\_ERROR@{XML\_STATUS\_ERROR}}
+\index{XML\_STATUS\_ERROR@{XML\_STATUS\_ERROR}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_STATUS\_ERROR}{XML\_STATUS\_ERROR}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+STATUS\+\_\+\+ERROR~XML\+\_\+\+STATUS\+\_\+\+ERROR}
+
+\mbox{\Hypertarget{expat_8h_ab38219dfecd7be55a897cbc8a71512f8}\label{expat_8h_ab38219dfecd7be55a897cbc8a71512f8}} 
+\index{expat.h@{expat.h}!XML\_STATUS\_OK@{XML\_STATUS\_OK}}
+\index{XML\_STATUS\_OK@{XML\_STATUS\_OK}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_STATUS\_OK}{XML\_STATUS\_OK}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+STATUS\+\_\+\+OK~XML\+\_\+\+STATUS\+\_\+\+OK}
+
+\mbox{\Hypertarget{expat_8h_a762722e1945b30f728ccbfe2ffc863f2}\label{expat_8h_a762722e1945b30f728ccbfe2ffc863f2}} 
+\index{expat.h@{expat.h}!XML\_STATUS\_SUSPENDED@{XML\_STATUS\_SUSPENDED}}
+\index{XML\_STATUS\_SUSPENDED@{XML\_STATUS\_SUSPENDED}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_STATUS\_SUSPENDED}{XML\_STATUS\_SUSPENDED}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+STATUS\+\_\+\+SUSPENDED~XML\+\_\+\+STATUS\+\_\+\+SUSPENDED}
+
+\mbox{\Hypertarget{expat_8h_aece5d476114d1bcc830391af0d1160fd}\label{expat_8h_aece5d476114d1bcc830391af0d1160fd}} 
+\index{expat.h@{expat.h}!XML\_TRUE@{XML\_TRUE}}
+\index{XML\_TRUE@{XML\_TRUE}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_TRUE}{XML\_TRUE}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+TRUE~((\mbox{\hyperlink{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}{XML\+\_\+\+Bool}}) 1)}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{expat_8h_a89899063dae04c58a3f2ef13e22bedbc}\label{expat_8h_a89899063dae04c58a3f2ef13e22bedbc}} 
+\index{expat.h@{expat.h}!XML\_AttlistDeclHandler@{XML\_AttlistDeclHandler}}
+\index{XML\_AttlistDeclHandler@{XML\_AttlistDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_AttlistDeclHandler}{XML\_AttlistDeclHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+Attlist\+Decl\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$elname, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$attname, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$att\+\_\+type, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$dflt, int isrequired)}
+
+\mbox{\Hypertarget{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}\label{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}} 
+\index{expat.h@{expat.h}!XML\_Bool@{XML\_Bool}}
+\index{XML\_Bool@{XML\_Bool}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_Bool}{XML\_Bool}}
+{\footnotesize\ttfamily typedef unsigned char \mbox{\hyperlink{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}{XML\+\_\+\+Bool}}}
+
+\mbox{\Hypertarget{expat_8h_aef3b6006dc0f845ddb482c2b37a44ba1}\label{expat_8h_aef3b6006dc0f845ddb482c2b37a44ba1}} 
+\index{expat.h@{expat.h}!XML\_CharacterDataHandler@{XML\_CharacterDataHandler}}
+\index{XML\_CharacterDataHandler@{XML\_CharacterDataHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_CharacterDataHandler}{XML\_CharacterDataHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+Character\+Data\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$s, int \mbox{\hyperlink{group__python__builtins_gaeff368081ac50b8fe2cc0230d96e3acb}{len}})}
+
+\mbox{\Hypertarget{expat_8h_a0aefc69cadea618f7fc17607c7c3c8ee}\label{expat_8h_a0aefc69cadea618f7fc17607c7c3c8ee}} 
+\index{expat.h@{expat.h}!XML\_CommentHandler@{XML\_CommentHandler}}
+\index{XML\_CommentHandler@{XML\_CommentHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_CommentHandler}{XML\_CommentHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+Comment\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$data)}
+
+\mbox{\Hypertarget{expat_8h_a791d9e7de669ec5395df17978e1c507e}\label{expat_8h_a791d9e7de669ec5395df17978e1c507e}} 
+\index{expat.h@{expat.h}!XML\_Content@{XML\_Content}}
+\index{XML\_Content@{XML\_Content}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_Content}{XML\_Content}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_x_m_l__cp}{XML\+\_\+cp}} \mbox{\hyperlink{expat_8h_a791d9e7de669ec5395df17978e1c507e}{XML\+\_\+\+Content}}}
+
+\mbox{\Hypertarget{expat_8h_afa6c6c71f2c70cfe57c3506534cb70d7}\label{expat_8h_afa6c6c71f2c70cfe57c3506534cb70d7}} 
+\index{expat.h@{expat.h}!XML\_DefaultHandler@{XML\_DefaultHandler}}
+\index{XML\_DefaultHandler@{XML\_DefaultHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_DefaultHandler}{XML\_DefaultHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+Default\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$s, int \mbox{\hyperlink{group__python__builtins_gaeff368081ac50b8fe2cc0230d96e3acb}{len}})}
+
+\mbox{\Hypertarget{expat_8h_affe4163d2280b13afb316b81f5650421}\label{expat_8h_affe4163d2280b13afb316b81f5650421}} 
+\index{expat.h@{expat.h}!XML\_ElementDeclHandler@{XML\_ElementDeclHandler}}
+\index{XML\_ElementDeclHandler@{XML\_ElementDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_ElementDeclHandler}{XML\_ElementDeclHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+Element\+Decl\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structname}{name}}, \mbox{\hyperlink{expat_8h_a791d9e7de669ec5395df17978e1c507e}{XML\+\_\+\+Content}} $\ast$model)}
+
+\mbox{\Hypertarget{expat_8h_a3165868193185fbd43232e41dd211d4f}\label{expat_8h_a3165868193185fbd43232e41dd211d4f}} 
+\index{expat.h@{expat.h}!XML\_EndCdataSectionHandler@{XML\_EndCdataSectionHandler}}
+\index{XML\_EndCdataSectionHandler@{XML\_EndCdataSectionHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_EndCdataSectionHandler}{XML\_EndCdataSectionHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+End\+Cdata\+Section\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}})}
+
+\mbox{\Hypertarget{expat_8h_a43568a006caf34bcf94e4346031b85a0}\label{expat_8h_a43568a006caf34bcf94e4346031b85a0}} 
+\index{expat.h@{expat.h}!XML\_EndDoctypeDeclHandler@{XML\_EndDoctypeDeclHandler}}
+\index{XML\_EndDoctypeDeclHandler@{XML\_EndDoctypeDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_EndDoctypeDeclHandler}{XML\_EndDoctypeDeclHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+End\+Doctype\+Decl\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}})}
+
+\mbox{\Hypertarget{expat_8h_a12978ae068c1222afbb5a400b5c692b9}\label{expat_8h_a12978ae068c1222afbb5a400b5c692b9}} 
+\index{expat.h@{expat.h}!XML\_EndElementHandler@{XML\_EndElementHandler}}
+\index{XML\_EndElementHandler@{XML\_EndElementHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_EndElementHandler}{XML\_EndElementHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+End\+Element\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structname}{name}})}
+
+\mbox{\Hypertarget{expat_8h_a1414891bd078b546986d463e746ad49c}\label{expat_8h_a1414891bd078b546986d463e746ad49c}} 
+\index{expat.h@{expat.h}!XML\_EndNamespaceDeclHandler@{XML\_EndNamespaceDeclHandler}}
+\index{XML\_EndNamespaceDeclHandler@{XML\_EndNamespaceDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_EndNamespaceDeclHandler}{XML\_EndNamespaceDeclHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+End\+Namespace\+Decl\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structprefix}{prefix}})}
+
+\mbox{\Hypertarget{expat_8h_af2f060ea47a43f92b5d23313ceba982a}\label{expat_8h_af2f060ea47a43f92b5d23313ceba982a}} 
+\index{expat.h@{expat.h}!XML\_EntityDeclHandler@{XML\_EntityDeclHandler}}
+\index{XML\_EntityDeclHandler@{XML\_EntityDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_EntityDeclHandler}{XML\_EntityDeclHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+Entity\+Decl\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$entity\+Name, int is\+\_\+parameter\+\_\+entity, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$value, int value\+\_\+length, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structbase}{base}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$system\+Id, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$public\+Id, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$notation\+Name)}
+
+\mbox{\Hypertarget{expat_8h_a2d955f5ce3c5401dbe14ba19e8067c01}\label{expat_8h_a2d955f5ce3c5401dbe14ba19e8067c01}} 
+\index{expat.h@{expat.h}!XML\_ExternalEntityRefHandler@{XML\_ExternalEntityRefHandler}}
+\index{XML\_ExternalEntityRefHandler@{XML\_ExternalEntityRefHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_ExternalEntityRefHandler}{XML\_ExternalEntityRefHandler}}
+{\footnotesize\ttfamily typedef int(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+External\+Entity\+Ref\+Handler) (\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}} parser, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$context, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structbase}{base}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$system\+Id, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$public\+Id)}
+
+\mbox{\Hypertarget{expat_8h_af51763d2819de05e8569320f9ab571c4}\label{expat_8h_af51763d2819de05e8569320f9ab571c4}} 
+\index{expat.h@{expat.h}!XML\_NotationDeclHandler@{XML\_NotationDeclHandler}}
+\index{XML\_NotationDeclHandler@{XML\_NotationDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_NotationDeclHandler}{XML\_NotationDeclHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+Notation\+Decl\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$notation\+Name, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structbase}{base}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$system\+Id, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$public\+Id)}
+
+\mbox{\Hypertarget{expat_8h_a8fc3c5ba2270c72ff0a8f9daccd77dd5}\label{expat_8h_a8fc3c5ba2270c72ff0a8f9daccd77dd5}} 
+\index{expat.h@{expat.h}!XML\_NotStandaloneHandler@{XML\_NotStandaloneHandler}}
+\index{XML\_NotStandaloneHandler@{XML\_NotStandaloneHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_NotStandaloneHandler}{XML\_NotStandaloneHandler}}
+{\footnotesize\ttfamily typedef int(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+Not\+Standalone\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}})}
+
+\mbox{\Hypertarget{expat_8h_a9dc0003156857c67b3a60b3993846013}\label{expat_8h_a9dc0003156857c67b3a60b3993846013}} 
+\index{expat.h@{expat.h}!XML\_Parser@{XML\_Parser}}
+\index{XML\_Parser@{XML\_Parser}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_Parser}{XML\_Parser}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_x_m_l___parser_struct}{XML\+\_\+\+Parser\+Struct}}$\ast$ \mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}
+
+\mbox{\Hypertarget{expat_8h_a550004b1beb44144bd78b9320e211f6c}\label{expat_8h_a550004b1beb44144bd78b9320e211f6c}} 
+\index{expat.h@{expat.h}!XML\_ProcessingInstructionHandler@{XML\_ProcessingInstructionHandler}}
+\index{XML\_ProcessingInstructionHandler@{XML\_ProcessingInstructionHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_ProcessingInstructionHandler}{XML\_ProcessingInstructionHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+Processing\+Instruction\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$target, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$data)}
+
+\mbox{\Hypertarget{expat_8h_a29e3734cfec01df38715716d53093d5c}\label{expat_8h_a29e3734cfec01df38715716d53093d5c}} 
+\index{expat.h@{expat.h}!XML\_SkippedEntityHandler@{XML\_SkippedEntityHandler}}
+\index{XML\_SkippedEntityHandler@{XML\_SkippedEntityHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SkippedEntityHandler}{XML\_SkippedEntityHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+Skipped\+Entity\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$entity\+Name, int is\+\_\+parameter\+\_\+entity)}
+
+\mbox{\Hypertarget{expat_8h_a661776930dd0ace06a3e9acc9bba4b82}\label{expat_8h_a661776930dd0ace06a3e9acc9bba4b82}} 
+\index{expat.h@{expat.h}!XML\_StartCdataSectionHandler@{XML\_StartCdataSectionHandler}}
+\index{XML\_StartCdataSectionHandler@{XML\_StartCdataSectionHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_StartCdataSectionHandler}{XML\_StartCdataSectionHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+Start\+Cdata\+Section\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}})}
+
+\mbox{\Hypertarget{expat_8h_ab748cf612072905843f3488414c19f3b}\label{expat_8h_ab748cf612072905843f3488414c19f3b}} 
+\index{expat.h@{expat.h}!XML\_StartDoctypeDeclHandler@{XML\_StartDoctypeDeclHandler}}
+\index{XML\_StartDoctypeDeclHandler@{XML\_StartDoctypeDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_StartDoctypeDeclHandler}{XML\_StartDoctypeDeclHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+Start\+Doctype\+Decl\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{xmlparse_8c_a2c9f84bb2d7b6ef6a6a06721629b5309}{doctype\+Name}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$sysid, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$pubid, int has\+\_\+internal\+\_\+subset)}
+
+\mbox{\Hypertarget{expat_8h_a504bca048496cfbacf106a5e28564fcd}\label{expat_8h_a504bca048496cfbacf106a5e28564fcd}} 
+\index{expat.h@{expat.h}!XML\_StartElementHandler@{XML\_StartElementHandler}}
+\index{XML\_StartElementHandler@{XML\_StartElementHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_StartElementHandler}{XML\_StartElementHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+Start\+Element\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structname}{name}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$$\ast$\mbox{\hyperlink{xmlparse_8c_a5bbadff5cdbbd3feb492c555b546a292}{atts}})}
+
+\mbox{\Hypertarget{expat_8h_a58ad7c192f040f8196708f042c8bdc14}\label{expat_8h_a58ad7c192f040f8196708f042c8bdc14}} 
+\index{expat.h@{expat.h}!XML\_StartNamespaceDeclHandler@{XML\_StartNamespaceDeclHandler}}
+\index{XML\_StartNamespaceDeclHandler@{XML\_StartNamespaceDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_StartNamespaceDeclHandler}{XML\_StartNamespaceDeclHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+Start\+Namespace\+Decl\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structprefix}{prefix}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$uri)}
+
+\mbox{\Hypertarget{expat_8h_a348625fd90dcc5d880efec9e533fc502}\label{expat_8h_a348625fd90dcc5d880efec9e533fc502}} 
+\index{expat.h@{expat.h}!XML\_UnknownEncodingHandler@{XML\_UnknownEncodingHandler}}
+\index{XML\_UnknownEncodingHandler@{XML\_UnknownEncodingHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_UnknownEncodingHandler}{XML\_UnknownEncodingHandler}}
+{\footnotesize\ttfamily typedef int(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+Unknown\+Encoding\+Handler) (void $\ast$encoding\+Handler\+Data, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structname}{name}}, \mbox{\hyperlink{struct_x_m_l___encoding}{XML\+\_\+\+Encoding}} $\ast$info)}
+
+\mbox{\Hypertarget{expat_8h_a67d7a2966d8416e1d8cef6a33ae86453}\label{expat_8h_a67d7a2966d8416e1d8cef6a33ae86453}} 
+\index{expat.h@{expat.h}!XML\_UnparsedEntityDeclHandler@{XML\_UnparsedEntityDeclHandler}}
+\index{XML\_UnparsedEntityDeclHandler@{XML\_UnparsedEntityDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_UnparsedEntityDeclHandler}{XML\_UnparsedEntityDeclHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+Unparsed\+Entity\+Decl\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$entity\+Name, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structbase}{base}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$system\+Id, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$public\+Id, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$notation\+Name)}
+
+\mbox{\Hypertarget{expat_8h_a636e4276dad64e4f67c7ebb678fcdab4}\label{expat_8h_a636e4276dad64e4f67c7ebb678fcdab4}} 
+\index{expat.h@{expat.h}!XML\_XmlDeclHandler@{XML\_XmlDeclHandler}}
+\index{XML\_XmlDeclHandler@{XML\_XmlDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_XmlDeclHandler}{XML\_XmlDeclHandler}}
+{\footnotesize\ttfamily typedef void(\mbox{\hyperlink{expat__external_8h_aad85d290912c3ffed7a2ec0b6173dad3}{XMLCALL}} $\ast$ XML\+\_\+\+Xml\+Decl\+Handler) (void $\ast$\mbox{\hyperlink{xmlparse_8c_a4b666535c828e23ccd16510a0a1a1943}{user\+Data}}, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$version, const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$\mbox{\hyperlink{structencoding}{encoding}}, int standalone)}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{expat_8h_a63f73d88e3afb7c5fe7d33bbb193b024}\label{expat_8h_a63f73d88e3afb7c5fe7d33bbb193b024}} 
+\index{expat.h@{expat.h}!XML\_Content\_Quant@{XML\_Content\_Quant}}
+\index{XML\_Content\_Quant@{XML\_Content\_Quant}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_Content\_Quant}{XML\_Content\_Quant}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{expat_8h_a63f73d88e3afb7c5fe7d33bbb193b024}{XML\+\_\+\+Content\+\_\+\+Quant}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_CQUANT\_NONE@{XML\_CQUANT\_NONE}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_CQUANT\_NONE@{XML\_CQUANT\_NONE}}}\mbox{\Hypertarget{expat_8h_a63f73d88e3afb7c5fe7d33bbb193b024a3782b2d80b73f569e25e2bec9c9dd384}\label{expat_8h_a63f73d88e3afb7c5fe7d33bbb193b024a3782b2d80b73f569e25e2bec9c9dd384}} 
+XML\+\_\+\+CQUANT\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_CQUANT\_OPT@{XML\_CQUANT\_OPT}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_CQUANT\_OPT@{XML\_CQUANT\_OPT}}}\mbox{\Hypertarget{expat_8h_a63f73d88e3afb7c5fe7d33bbb193b024a2cd7411de474b3bc2d6eea49c2283e99}\label{expat_8h_a63f73d88e3afb7c5fe7d33bbb193b024a2cd7411de474b3bc2d6eea49c2283e99}} 
+XML\+\_\+\+CQUANT\+\_\+\+OPT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_CQUANT\_REP@{XML\_CQUANT\_REP}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_CQUANT\_REP@{XML\_CQUANT\_REP}}}\mbox{\Hypertarget{expat_8h_a63f73d88e3afb7c5fe7d33bbb193b024a8df8b6346cafc2fa20f35ac4fdbdf615}\label{expat_8h_a63f73d88e3afb7c5fe7d33bbb193b024a8df8b6346cafc2fa20f35ac4fdbdf615}} 
+XML\+\_\+\+CQUANT\+\_\+\+REP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_CQUANT\_PLUS@{XML\_CQUANT\_PLUS}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_CQUANT\_PLUS@{XML\_CQUANT\_PLUS}}}\mbox{\Hypertarget{expat_8h_a63f73d88e3afb7c5fe7d33bbb193b024a17956d9213f9385fe14f2ea779ea35ad}\label{expat_8h_a63f73d88e3afb7c5fe7d33bbb193b024a17956d9213f9385fe14f2ea779ea35ad}} 
+XML\+\_\+\+CQUANT\+\_\+\+PLUS&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{expat_8h_abb42ccef87efb634487d28753d14b473}\label{expat_8h_abb42ccef87efb634487d28753d14b473}} 
+\index{expat.h@{expat.h}!XML\_Content\_Type@{XML\_Content\_Type}}
+\index{XML\_Content\_Type@{XML\_Content\_Type}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_Content\_Type}{XML\_Content\_Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{expat_8h_abb42ccef87efb634487d28753d14b473}{XML\+\_\+\+Content\+\_\+\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_CTYPE\_EMPTY@{XML\_CTYPE\_EMPTY}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_CTYPE\_EMPTY@{XML\_CTYPE\_EMPTY}}}\mbox{\Hypertarget{expat_8h_abb42ccef87efb634487d28753d14b473aee728cebe0c9f9e10da86b1314f261c2}\label{expat_8h_abb42ccef87efb634487d28753d14b473aee728cebe0c9f9e10da86b1314f261c2}} 
+XML\+\_\+\+CTYPE\+\_\+\+EMPTY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_CTYPE\_ANY@{XML\_CTYPE\_ANY}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_CTYPE\_ANY@{XML\_CTYPE\_ANY}}}\mbox{\Hypertarget{expat_8h_abb42ccef87efb634487d28753d14b473a3a4ee8c34fe7c515c0afbb37ccb273b7}\label{expat_8h_abb42ccef87efb634487d28753d14b473a3a4ee8c34fe7c515c0afbb37ccb273b7}} 
+XML\+\_\+\+CTYPE\+\_\+\+ANY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_CTYPE\_MIXED@{XML\_CTYPE\_MIXED}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_CTYPE\_MIXED@{XML\_CTYPE\_MIXED}}}\mbox{\Hypertarget{expat_8h_abb42ccef87efb634487d28753d14b473a666bf89162b31c5ee5b7d4317f320da5}\label{expat_8h_abb42ccef87efb634487d28753d14b473a666bf89162b31c5ee5b7d4317f320da5}} 
+XML\+\_\+\+CTYPE\+\_\+\+MIXED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_CTYPE\_NAME@{XML\_CTYPE\_NAME}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_CTYPE\_NAME@{XML\_CTYPE\_NAME}}}\mbox{\Hypertarget{expat_8h_abb42ccef87efb634487d28753d14b473afe24cd69df548d996ebf15d2945648ce}\label{expat_8h_abb42ccef87efb634487d28753d14b473afe24cd69df548d996ebf15d2945648ce}} 
+XML\+\_\+\+CTYPE\+\_\+\+NAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_CTYPE\_CHOICE@{XML\_CTYPE\_CHOICE}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_CTYPE\_CHOICE@{XML\_CTYPE\_CHOICE}}}\mbox{\Hypertarget{expat_8h_abb42ccef87efb634487d28753d14b473ab72a7b0dcd0ff685af8a9de498890452}\label{expat_8h_abb42ccef87efb634487d28753d14b473ab72a7b0dcd0ff685af8a9de498890452}} 
+XML\+\_\+\+CTYPE\+\_\+\+CHOICE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_CTYPE\_SEQ@{XML\_CTYPE\_SEQ}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_CTYPE\_SEQ@{XML\_CTYPE\_SEQ}}}\mbox{\Hypertarget{expat_8h_abb42ccef87efb634487d28753d14b473a4bb069ce88a7581e220e5ca37bcb691a}\label{expat_8h_abb42ccef87efb634487d28753d14b473a4bb069ce88a7581e220e5ca37bcb691a}} 
+XML\+\_\+\+CTYPE\+\_\+\+SEQ&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118}} 
+\index{expat.h@{expat.h}!XML\_Error@{XML\_Error}}
+\index{XML\_Error@{XML\_Error}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_Error}{XML\_Error}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118}{XML\+\_\+\+Error}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_NONE@{XML\_ERROR\_NONE}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_NONE@{XML\_ERROR\_NONE}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a94d7f2071bd24ca8a0b718b21301dbae}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a94d7f2071bd24ca8a0b718b21301dbae}} 
+XML\+\_\+\+ERROR\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_NO\_MEMORY@{XML\_ERROR\_NO\_MEMORY}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_NO\_MEMORY@{XML\_ERROR\_NO\_MEMORY}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a7f073b3492312b2b2744266fbd8d99cd}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a7f073b3492312b2b2744266fbd8d99cd}} 
+XML\+\_\+\+ERROR\+\_\+\+NO\+\_\+\+MEMORY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_SYNTAX@{XML\_ERROR\_SYNTAX}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_SYNTAX@{XML\_ERROR\_SYNTAX}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118afdff9df9f5a13e4956307fdfd8831133}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118afdff9df9f5a13e4956307fdfd8831133}} 
+XML\+\_\+\+ERROR\+\_\+\+SYNTAX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_NO\_ELEMENTS@{XML\_ERROR\_NO\_ELEMENTS}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_NO\_ELEMENTS@{XML\_ERROR\_NO\_ELEMENTS}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a30806cc55ad9a3d0a5d3b210a59ba9f3}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a30806cc55ad9a3d0a5d3b210a59ba9f3}} 
+XML\+\_\+\+ERROR\+\_\+\+NO\+\_\+\+ELEMENTS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_INVALID\_TOKEN@{XML\_ERROR\_INVALID\_TOKEN}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_INVALID\_TOKEN@{XML\_ERROR\_INVALID\_TOKEN}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118ae0955060e14faab05faa346c9be641de}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118ae0955060e14faab05faa346c9be641de}} 
+XML\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+TOKEN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_UNCLOSED\_TOKEN@{XML\_ERROR\_UNCLOSED\_TOKEN}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_UNCLOSED\_TOKEN@{XML\_ERROR\_UNCLOSED\_TOKEN}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a014760abb9dc590d653a8dbc1c67dc1f}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a014760abb9dc590d653a8dbc1c67dc1f}} 
+XML\+\_\+\+ERROR\+\_\+\+UNCLOSED\+\_\+\+TOKEN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_PARTIAL\_CHAR@{XML\_ERROR\_PARTIAL\_CHAR}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_PARTIAL\_CHAR@{XML\_ERROR\_PARTIAL\_CHAR}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a524cee9bec6321c9ae86ff948ae6b58b}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a524cee9bec6321c9ae86ff948ae6b58b}} 
+XML\+\_\+\+ERROR\+\_\+\+PARTIAL\+\_\+\+CHAR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_TAG\_MISMATCH@{XML\_ERROR\_TAG\_MISMATCH}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_TAG\_MISMATCH@{XML\_ERROR\_TAG\_MISMATCH}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118aa899d9719d3a91d2611402eb65c6aacb}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118aa899d9719d3a91d2611402eb65c6aacb}} 
+XML\+\_\+\+ERROR\+\_\+\+TAG\+\_\+\+MISMATCH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_DUPLICATE\_ATTRIBUTE@{XML\_ERROR\_DUPLICATE\_ATTRIBUTE}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_DUPLICATE\_ATTRIBUTE@{XML\_ERROR\_DUPLICATE\_ATTRIBUTE}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a5d968af631073c5ea62b83119d418cb8}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a5d968af631073c5ea62b83119d418cb8}} 
+XML\+\_\+\+ERROR\+\_\+\+DUPLICATE\+\_\+\+ATTRIBUTE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_JUNK\_AFTER\_DOC\_ELEMENT@{XML\_ERROR\_JUNK\_AFTER\_DOC\_ELEMENT}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_JUNK\_AFTER\_DOC\_ELEMENT@{XML\_ERROR\_JUNK\_AFTER\_DOC\_ELEMENT}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118aa97bf530524671001c50569ffae7d26a}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118aa97bf530524671001c50569ffae7d26a}} 
+XML\+\_\+\+ERROR\+\_\+\+JUNK\+\_\+\+AFTER\+\_\+\+DOC\+\_\+\+ELEMENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_PARAM\_ENTITY\_REF@{XML\_ERROR\_PARAM\_ENTITY\_REF}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_PARAM\_ENTITY\_REF@{XML\_ERROR\_PARAM\_ENTITY\_REF}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a9700d1b17a181c3ebdc282bb285f8559}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a9700d1b17a181c3ebdc282bb285f8559}} 
+XML\+\_\+\+ERROR\+\_\+\+PARAM\+\_\+\+ENTITY\+\_\+\+REF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_UNDEFINED\_ENTITY@{XML\_ERROR\_UNDEFINED\_ENTITY}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_UNDEFINED\_ENTITY@{XML\_ERROR\_UNDEFINED\_ENTITY}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118ad48a9855f09eb3e586f737882653b49a}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118ad48a9855f09eb3e586f737882653b49a}} 
+XML\+\_\+\+ERROR\+\_\+\+UNDEFINED\+\_\+\+ENTITY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_RECURSIVE\_ENTITY\_REF@{XML\_ERROR\_RECURSIVE\_ENTITY\_REF}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_RECURSIVE\_ENTITY\_REF@{XML\_ERROR\_RECURSIVE\_ENTITY\_REF}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a4ee7d262582821311683fa9e2036462d}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a4ee7d262582821311683fa9e2036462d}} 
+XML\+\_\+\+ERROR\+\_\+\+RECURSIVE\+\_\+\+ENTITY\+\_\+\+REF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_ASYNC\_ENTITY@{XML\_ERROR\_ASYNC\_ENTITY}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_ASYNC\_ENTITY@{XML\_ERROR\_ASYNC\_ENTITY}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a0cc463ba999dce675efada76ab7a7ae1}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a0cc463ba999dce675efada76ab7a7ae1}} 
+XML\+\_\+\+ERROR\+\_\+\+ASYNC\+\_\+\+ENTITY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_BAD\_CHAR\_REF@{XML\_ERROR\_BAD\_CHAR\_REF}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_BAD\_CHAR\_REF@{XML\_ERROR\_BAD\_CHAR\_REF}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118ad02a255f05184fe6f59dd5ebbc9654c3}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118ad02a255f05184fe6f59dd5ebbc9654c3}} 
+XML\+\_\+\+ERROR\+\_\+\+BAD\+\_\+\+CHAR\+\_\+\+REF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_BINARY\_ENTITY\_REF@{XML\_ERROR\_BINARY\_ENTITY\_REF}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_BINARY\_ENTITY\_REF@{XML\_ERROR\_BINARY\_ENTITY\_REF}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118ae3e63f65884b55e5444fad83163d1777}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118ae3e63f65884b55e5444fad83163d1777}} 
+XML\+\_\+\+ERROR\+\_\+\+BINARY\+\_\+\+ENTITY\+\_\+\+REF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_ATTRIBUTE\_EXTERNAL\_ENTITY\_REF@{XML\_ERROR\_ATTRIBUTE\_EXTERNAL\_ENTITY\_REF}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_ATTRIBUTE\_EXTERNAL\_ENTITY\_REF@{XML\_ERROR\_ATTRIBUTE\_EXTERNAL\_ENTITY\_REF}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a14f9d5721c3a94bebdb1d12325e34961}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a14f9d5721c3a94bebdb1d12325e34961}} 
+XML\+\_\+\+ERROR\+\_\+\+ATTRIBUTE\+\_\+\+EXTERNAL\+\_\+\+ENTITY\+\_\+\+REF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_MISPLACED\_XML\_PI@{XML\_ERROR\_MISPLACED\_XML\_PI}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_MISPLACED\_XML\_PI@{XML\_ERROR\_MISPLACED\_XML\_PI}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a878586f07e83b5215b7e43fa6957aee4}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a878586f07e83b5215b7e43fa6957aee4}} 
+XML\+\_\+\+ERROR\+\_\+\+MISPLACED\+\_\+\+XML\+\_\+\+PI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_UNKNOWN\_ENCODING@{XML\_ERROR\_UNKNOWN\_ENCODING}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_UNKNOWN\_ENCODING@{XML\_ERROR\_UNKNOWN\_ENCODING}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118ae3fd18418e1ef36726486d175e43404f}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118ae3fd18418e1ef36726486d175e43404f}} 
+XML\+\_\+\+ERROR\+\_\+\+UNKNOWN\+\_\+\+ENCODING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_INCORRECT\_ENCODING@{XML\_ERROR\_INCORRECT\_ENCODING}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_INCORRECT\_ENCODING@{XML\_ERROR\_INCORRECT\_ENCODING}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a7dd87295923a83486c1ee32dcc72b276}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a7dd87295923a83486c1ee32dcc72b276}} 
+XML\+\_\+\+ERROR\+\_\+\+INCORRECT\+\_\+\+ENCODING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_UNCLOSED\_CDATA\_SECTION@{XML\_ERROR\_UNCLOSED\_CDATA\_SECTION}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_UNCLOSED\_CDATA\_SECTION@{XML\_ERROR\_UNCLOSED\_CDATA\_SECTION}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118ab8b5142f4c88b80b0fd94b8fcb78f101}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118ab8b5142f4c88b80b0fd94b8fcb78f101}} 
+XML\+\_\+\+ERROR\+\_\+\+UNCLOSED\+\_\+\+CDATA\+\_\+\+SECTION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_EXTERNAL\_ENTITY\_HANDLING@{XML\_ERROR\_EXTERNAL\_ENTITY\_HANDLING}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_EXTERNAL\_ENTITY\_HANDLING@{XML\_ERROR\_EXTERNAL\_ENTITY\_HANDLING}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a7485dfe2229b74b0ac5abbbe5e69e528}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a7485dfe2229b74b0ac5abbbe5e69e528}} 
+XML\+\_\+\+ERROR\+\_\+\+EXTERNAL\+\_\+\+ENTITY\+\_\+\+HANDLING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_NOT\_STANDALONE@{XML\_ERROR\_NOT\_STANDALONE}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_NOT\_STANDALONE@{XML\_ERROR\_NOT\_STANDALONE}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a35d00aec5104d0d95c4684e339609e31}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a35d00aec5104d0d95c4684e339609e31}} 
+XML\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+STANDALONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_UNEXPECTED\_STATE@{XML\_ERROR\_UNEXPECTED\_STATE}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_UNEXPECTED\_STATE@{XML\_ERROR\_UNEXPECTED\_STATE}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118aa7e8eabb57de34509adf8ed0c22a19de}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118aa7e8eabb57de34509adf8ed0c22a19de}} 
+XML\+\_\+\+ERROR\+\_\+\+UNEXPECTED\+\_\+\+STATE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_ENTITY\_DECLARED\_IN\_PE@{XML\_ERROR\_ENTITY\_DECLARED\_IN\_PE}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_ENTITY\_DECLARED\_IN\_PE@{XML\_ERROR\_ENTITY\_DECLARED\_IN\_PE}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a5d0c800771b3bed49aba971818f467df}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a5d0c800771b3bed49aba971818f467df}} 
+XML\+\_\+\+ERROR\+\_\+\+ENTITY\+\_\+\+DECLARED\+\_\+\+IN\+\_\+\+PE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_FEATURE\_REQUIRES\_XML\_DTD@{XML\_ERROR\_FEATURE\_REQUIRES\_XML\_DTD}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_FEATURE\_REQUIRES\_XML\_DTD@{XML\_ERROR\_FEATURE\_REQUIRES\_XML\_DTD}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a9c56b241750a66ad045af7f701e3a3a8}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a9c56b241750a66ad045af7f701e3a3a8}} 
+XML\+\_\+\+ERROR\+\_\+\+FEATURE\+\_\+\+REQUIRES\+\_\+\+XML\+\_\+\+DTD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_CANT\_CHANGE\_FEATURE\_ONCE\_PARSING@{XML\_ERROR\_CANT\_CHANGE\_FEATURE\_ONCE\_PARSING}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_CANT\_CHANGE\_FEATURE\_ONCE\_PARSING@{XML\_ERROR\_CANT\_CHANGE\_FEATURE\_ONCE\_PARSING}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a59a16308b56e00dca247ac63f87b165c}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a59a16308b56e00dca247ac63f87b165c}} 
+XML\+\_\+\+ERROR\+\_\+\+CANT\+\_\+\+CHANGE\+\_\+\+FEATURE\+\_\+\+ONCE\+\_\+\+PARSING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_UNBOUND\_PREFIX@{XML\_ERROR\_UNBOUND\_PREFIX}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_UNBOUND\_PREFIX@{XML\_ERROR\_UNBOUND\_PREFIX}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118ad5c3e9e15d85440a3d8d8215cd4c4771}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118ad5c3e9e15d85440a3d8d8215cd4c4771}} 
+XML\+\_\+\+ERROR\+\_\+\+UNBOUND\+\_\+\+PREFIX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_UNDECLARING\_PREFIX@{XML\_ERROR\_UNDECLARING\_PREFIX}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_UNDECLARING\_PREFIX@{XML\_ERROR\_UNDECLARING\_PREFIX}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118add61ca21b27c0251daf4ed882e2c1b1f}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118add61ca21b27c0251daf4ed882e2c1b1f}} 
+XML\+\_\+\+ERROR\+\_\+\+UNDECLARING\+\_\+\+PREFIX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_INCOMPLETE\_PE@{XML\_ERROR\_INCOMPLETE\_PE}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_INCOMPLETE\_PE@{XML\_ERROR\_INCOMPLETE\_PE}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a36ff78124834ad24d4105e8ec127f57b}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a36ff78124834ad24d4105e8ec127f57b}} 
+XML\+\_\+\+ERROR\+\_\+\+INCOMPLETE\+\_\+\+PE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_XML\_DECL@{XML\_ERROR\_XML\_DECL}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_XML\_DECL@{XML\_ERROR\_XML\_DECL}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a2fb52fa51b56fb76b7bc717ec6116c28}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a2fb52fa51b56fb76b7bc717ec6116c28}} 
+XML\+\_\+\+ERROR\+\_\+\+XML\+\_\+\+DECL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_TEXT\_DECL@{XML\_ERROR\_TEXT\_DECL}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_TEXT\_DECL@{XML\_ERROR\_TEXT\_DECL}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a49839fc9c3d673e9ec62d88cb5c5d017}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a49839fc9c3d673e9ec62d88cb5c5d017}} 
+XML\+\_\+\+ERROR\+\_\+\+TEXT\+\_\+\+DECL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_PUBLICID@{XML\_ERROR\_PUBLICID}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_PUBLICID@{XML\_ERROR\_PUBLICID}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118ad7bbf806dd63715a925b422b703068dc}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118ad7bbf806dd63715a925b422b703068dc}} 
+XML\+\_\+\+ERROR\+\_\+\+PUBLICID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_SUSPENDED@{XML\_ERROR\_SUSPENDED}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_SUSPENDED@{XML\_ERROR\_SUSPENDED}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a549c0b9238aa4781007f91af376cedb5}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a549c0b9238aa4781007f91af376cedb5}} 
+XML\+\_\+\+ERROR\+\_\+\+SUSPENDED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_NOT\_SUSPENDED@{XML\_ERROR\_NOT\_SUSPENDED}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_NOT\_SUSPENDED@{XML\_ERROR\_NOT\_SUSPENDED}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118aafc6bc70586542c3a9514fc9cabcd678}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118aafc6bc70586542c3a9514fc9cabcd678}} 
+XML\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUSPENDED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_ABORTED@{XML\_ERROR\_ABORTED}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_ABORTED@{XML\_ERROR\_ABORTED}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118a285887f8112dc911f19e3791a49bd3ca}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118a285887f8112dc911f19e3791a49bd3ca}} 
+XML\+\_\+\+ERROR\+\_\+\+ABORTED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_FINISHED@{XML\_ERROR\_FINISHED}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_FINISHED@{XML\_ERROR\_FINISHED}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118aa92e9288dc9de92d90de882bd28caf08}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118aa92e9288dc9de92d90de882bd28caf08}} 
+XML\+\_\+\+ERROR\+\_\+\+FINISHED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_SUSPEND\_PE@{XML\_ERROR\_SUSPEND\_PE}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_SUSPEND\_PE@{XML\_ERROR\_SUSPEND\_PE}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118ae5a36b9bc5d50dd263b59de2b249c0d0}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118ae5a36b9bc5d50dd263b59de2b249c0d0}} 
+XML\+\_\+\+ERROR\+\_\+\+SUSPEND\+\_\+\+PE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_RESERVED\_PREFIX\_XML@{XML\_ERROR\_RESERVED\_PREFIX\_XML}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_RESERVED\_PREFIX\_XML@{XML\_ERROR\_RESERVED\_PREFIX\_XML}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118aa6e7c0867b74df3dfa81aa0885d8aad8}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118aa6e7c0867b74df3dfa81aa0885d8aad8}} 
+XML\+\_\+\+ERROR\+\_\+\+RESERVED\+\_\+\+PREFIX\+\_\+\+XML&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_RESERVED\_PREFIX\_XMLNS@{XML\_ERROR\_RESERVED\_PREFIX\_XMLNS}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_RESERVED\_PREFIX\_XMLNS@{XML\_ERROR\_RESERVED\_PREFIX\_XMLNS}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118aff2303e00312b7f380507f7f7f12eb49}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118aff2303e00312b7f380507f7f7f12eb49}} 
+XML\+\_\+\+ERROR\+\_\+\+RESERVED\+\_\+\+PREFIX\+\_\+\+XMLNS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_ERROR\_RESERVED\_NAMESPACE\_URI@{XML\_ERROR\_RESERVED\_NAMESPACE\_URI}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_ERROR\_RESERVED\_NAMESPACE\_URI@{XML\_ERROR\_RESERVED\_NAMESPACE\_URI}}}\mbox{\Hypertarget{expat_8h_a6a06dad2fbbc37dd288c51e577494118acab12aab558fd805a0b76ac4bee3dea5}\label{expat_8h_a6a06dad2fbbc37dd288c51e577494118acab12aab558fd805a0b76ac4bee3dea5}} 
+XML\+\_\+\+ERROR\+\_\+\+RESERVED\+\_\+\+NAMESPACE\+\_\+\+URI&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{expat_8h_a3003d8415d1239ab78a8adfce6a34a8e}\label{expat_8h_a3003d8415d1239ab78a8adfce6a34a8e}} 
+\index{expat.h@{expat.h}!XML\_FeatureEnum@{XML\_FeatureEnum}}
+\index{XML\_FeatureEnum@{XML\_FeatureEnum}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_FeatureEnum}{XML\_FeatureEnum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{expat_8h_a3003d8415d1239ab78a8adfce6a34a8e}{XML\+\_\+\+Feature\+Enum}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_FEATURE\_END@{XML\_FEATURE\_END}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_FEATURE\_END@{XML\_FEATURE\_END}}}\mbox{\Hypertarget{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea8745903bc09073b2abe0ebef13816cfe}\label{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea8745903bc09073b2abe0ebef13816cfe}} 
+XML\+\_\+\+FEATURE\+\_\+\+END&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_FEATURE\_UNICODE@{XML\_FEATURE\_UNICODE}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_FEATURE\_UNICODE@{XML\_FEATURE\_UNICODE}}}\mbox{\Hypertarget{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea2ba23d9f0f47866bc35a968eaeeddb16}\label{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea2ba23d9f0f47866bc35a968eaeeddb16}} 
+XML\+\_\+\+FEATURE\+\_\+\+UNICODE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_FEATURE\_UNICODE\_WCHAR\_T@{XML\_FEATURE\_UNICODE\_WCHAR\_T}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_FEATURE\_UNICODE\_WCHAR\_T@{XML\_FEATURE\_UNICODE\_WCHAR\_T}}}\mbox{\Hypertarget{expat_8h_a3003d8415d1239ab78a8adfce6a34a8eaab838e6ac060c50f2eda9d065133bb6a}\label{expat_8h_a3003d8415d1239ab78a8adfce6a34a8eaab838e6ac060c50f2eda9d065133bb6a}} 
+XML\+\_\+\+FEATURE\+\_\+\+UNICODE\+\_\+\+WCHAR\+\_\+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_FEATURE\_DTD@{XML\_FEATURE\_DTD}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_FEATURE\_DTD@{XML\_FEATURE\_DTD}}}\mbox{\Hypertarget{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea09d653173612d6a423520078ff8b7019}\label{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea09d653173612d6a423520078ff8b7019}} 
+XML\+\_\+\+FEATURE\+\_\+\+DTD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_FEATURE\_CONTEXT\_BYTES@{XML\_FEATURE\_CONTEXT\_BYTES}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_FEATURE\_CONTEXT\_BYTES@{XML\_FEATURE\_CONTEXT\_BYTES}}}\mbox{\Hypertarget{expat_8h_a3003d8415d1239ab78a8adfce6a34a8eabb78df14b1efdff2d11d4d335a089d2e}\label{expat_8h_a3003d8415d1239ab78a8adfce6a34a8eabb78df14b1efdff2d11d4d335a089d2e}} 
+XML\+\_\+\+FEATURE\+\_\+\+CONTEXT\+\_\+\+BYTES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_FEATURE\_MIN\_SIZE@{XML\_FEATURE\_MIN\_SIZE}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_FEATURE\_MIN\_SIZE@{XML\_FEATURE\_MIN\_SIZE}}}\mbox{\Hypertarget{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea681374d691371442bc3d9f88bacafb3a}\label{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea681374d691371442bc3d9f88bacafb3a}} 
+XML\+\_\+\+FEATURE\+\_\+\+MIN\+\_\+\+SIZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_FEATURE\_SIZEOF\_XML\_CHAR@{XML\_FEATURE\_SIZEOF\_XML\_CHAR}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_FEATURE\_SIZEOF\_XML\_CHAR@{XML\_FEATURE\_SIZEOF\_XML\_CHAR}}}\mbox{\Hypertarget{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea549e5efbee635add738a9cc9b531a501}\label{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea549e5efbee635add738a9cc9b531a501}} 
+XML\+\_\+\+FEATURE\+\_\+\+SIZEOF\+\_\+\+XML\+\_\+\+CHAR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_FEATURE\_SIZEOF\_XML\_LCHAR@{XML\_FEATURE\_SIZEOF\_XML\_LCHAR}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_FEATURE\_SIZEOF\_XML\_LCHAR@{XML\_FEATURE\_SIZEOF\_XML\_LCHAR}}}\mbox{\Hypertarget{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea0cb25cc352faa48daaecf78ee2cfb4d8}\label{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea0cb25cc352faa48daaecf78ee2cfb4d8}} 
+XML\+\_\+\+FEATURE\+\_\+\+SIZEOF\+\_\+\+XML\+\_\+\+LCHAR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_FEATURE\_NS@{XML\_FEATURE\_NS}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_FEATURE\_NS@{XML\_FEATURE\_NS}}}\mbox{\Hypertarget{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea1c4fd57d24d089f3f7a57ea2208f9739}\label{expat_8h_a3003d8415d1239ab78a8adfce6a34a8ea1c4fd57d24d089f3f7a57ea2208f9739}} 
+XML\+\_\+\+FEATURE\+\_\+\+NS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_FEATURE\_LARGE\_SIZE@{XML\_FEATURE\_LARGE\_SIZE}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_FEATURE\_LARGE\_SIZE@{XML\_FEATURE\_LARGE\_SIZE}}}\mbox{\Hypertarget{expat_8h_a3003d8415d1239ab78a8adfce6a34a8eacf746d441547f7e849501ab92a9ba2eb}\label{expat_8h_a3003d8415d1239ab78a8adfce6a34a8eacf746d441547f7e849501ab92a9ba2eb}} 
+XML\+\_\+\+FEATURE\+\_\+\+LARGE\+\_\+\+SIZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_FEATURE\_ATTR\_INFO@{XML\_FEATURE\_ATTR\_INFO}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_FEATURE\_ATTR\_INFO@{XML\_FEATURE\_ATTR\_INFO}}}\mbox{\Hypertarget{expat_8h_a3003d8415d1239ab78a8adfce6a34a8eae923bd26ea33674bc9de57a38cae87d0}\label{expat_8h_a3003d8415d1239ab78a8adfce6a34a8eae923bd26ea33674bc9de57a38cae87d0}} 
+XML\+\_\+\+FEATURE\+\_\+\+ATTR\+\_\+\+INFO&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{expat_8h_a83ffd61320d59d0c6c33dfcf1a0c098f}\label{expat_8h_a83ffd61320d59d0c6c33dfcf1a0c098f}} 
+\index{expat.h@{expat.h}!XML\_ParamEntityParsing@{XML\_ParamEntityParsing}}
+\index{XML\_ParamEntityParsing@{XML\_ParamEntityParsing}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_ParamEntityParsing}{XML\_ParamEntityParsing}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{expat_8h_a83ffd61320d59d0c6c33dfcf1a0c098f}{XML\+\_\+\+Param\+Entity\+Parsing}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_PARAM\_ENTITY\_PARSING\_NEVER@{XML\_PARAM\_ENTITY\_PARSING\_NEVER}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_PARAM\_ENTITY\_PARSING\_NEVER@{XML\_PARAM\_ENTITY\_PARSING\_NEVER}}}\mbox{\Hypertarget{expat_8h_a83ffd61320d59d0c6c33dfcf1a0c098fad8126c34122c4e63a9c2feee23f42566}\label{expat_8h_a83ffd61320d59d0c6c33dfcf1a0c098fad8126c34122c4e63a9c2feee23f42566}} 
+XML\+\_\+\+PARAM\+\_\+\+ENTITY\+\_\+\+PARSING\+\_\+\+NEVER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_PARAM\_ENTITY\_PARSING\_UNLESS\_STANDALONE@{XML\_PARAM\_ENTITY\_PARSING\_UNLESS\_STANDALONE}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_PARAM\_ENTITY\_PARSING\_UNLESS\_STANDALONE@{XML\_PARAM\_ENTITY\_PARSING\_UNLESS\_STANDALONE}}}\mbox{\Hypertarget{expat_8h_a83ffd61320d59d0c6c33dfcf1a0c098fa71233f0d7358f5620b5694c43bcb35e8}\label{expat_8h_a83ffd61320d59d0c6c33dfcf1a0c098fa71233f0d7358f5620b5694c43bcb35e8}} 
+XML\+\_\+\+PARAM\+\_\+\+ENTITY\+\_\+\+PARSING\+\_\+\+UNLESS\+\_\+\+STANDALONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_PARAM\_ENTITY\_PARSING\_ALWAYS@{XML\_PARAM\_ENTITY\_PARSING\_ALWAYS}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_PARAM\_ENTITY\_PARSING\_ALWAYS@{XML\_PARAM\_ENTITY\_PARSING\_ALWAYS}}}\mbox{\Hypertarget{expat_8h_a83ffd61320d59d0c6c33dfcf1a0c098fa8cee6618dd630799836822449aa2fdf9}\label{expat_8h_a83ffd61320d59d0c6c33dfcf1a0c098fa8cee6618dd630799836822449aa2fdf9}} 
+XML\+\_\+\+PARAM\+\_\+\+ENTITY\+\_\+\+PARSING\+\_\+\+ALWAYS&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{expat_8h_a1e8b2aa21ec26bcf0eb696197b53aab6}\label{expat_8h_a1e8b2aa21ec26bcf0eb696197b53aab6}} 
+\index{expat.h@{expat.h}!XML\_Parsing@{XML\_Parsing}}
+\index{XML\_Parsing@{XML\_Parsing}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_Parsing}{XML\_Parsing}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{expat_8h_a1e8b2aa21ec26bcf0eb696197b53aab6}{XML\+\_\+\+Parsing}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_INITIALIZED@{XML\_INITIALIZED}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_INITIALIZED@{XML\_INITIALIZED}}}\mbox{\Hypertarget{expat_8h_a1e8b2aa21ec26bcf0eb696197b53aab6afbbdcc361a41cc96cad54045449bc276}\label{expat_8h_a1e8b2aa21ec26bcf0eb696197b53aab6afbbdcc361a41cc96cad54045449bc276}} 
+XML\+\_\+\+INITIALIZED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_PARSING@{XML\_PARSING}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_PARSING@{XML\_PARSING}}}\mbox{\Hypertarget{expat_8h_a1e8b2aa21ec26bcf0eb696197b53aab6a04ce97557ea4c03d32e92c62fb7c65e1}\label{expat_8h_a1e8b2aa21ec26bcf0eb696197b53aab6a04ce97557ea4c03d32e92c62fb7c65e1}} 
+XML\+\_\+\+PARSING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_FINISHED@{XML\_FINISHED}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_FINISHED@{XML\_FINISHED}}}\mbox{\Hypertarget{expat_8h_a1e8b2aa21ec26bcf0eb696197b53aab6ab398d4cb838da79432e317837b07ea42}\label{expat_8h_a1e8b2aa21ec26bcf0eb696197b53aab6ab398d4cb838da79432e317837b07ea42}} 
+XML\+\_\+\+FINISHED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_SUSPENDED@{XML\_SUSPENDED}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_SUSPENDED@{XML\_SUSPENDED}}}\mbox{\Hypertarget{expat_8h_a1e8b2aa21ec26bcf0eb696197b53aab6a15979fdec1239f8443cfbbf20b6917a5}\label{expat_8h_a1e8b2aa21ec26bcf0eb696197b53aab6a15979fdec1239f8443cfbbf20b6917a5}} 
+XML\+\_\+\+SUSPENDED&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{expat_8h_aef71ca3ac8198499d56aaa7b474303bb}\label{expat_8h_aef71ca3ac8198499d56aaa7b474303bb}} 
+\index{expat.h@{expat.h}!XML\_Status@{XML\_Status}}
+\index{XML\_Status@{XML\_Status}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_Status}{XML\_Status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{expat_8h_aef71ca3ac8198499d56aaa7b474303bb}{XML\+\_\+\+Status}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_STATUS\_ERROR@{XML\_STATUS\_ERROR}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_STATUS\_ERROR@{XML\_STATUS\_ERROR}}}\mbox{\Hypertarget{expat_8h_aef71ca3ac8198499d56aaa7b474303bbaa24b654694daef98d474312bf84b1a52}\label{expat_8h_aef71ca3ac8198499d56aaa7b474303bbaa24b654694daef98d474312bf84b1a52}} 
+XML\+\_\+\+STATUS\+\_\+\+ERROR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_STATUS\_ERROR@{XML\_STATUS\_ERROR}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_STATUS\_ERROR@{XML\_STATUS\_ERROR}}}\mbox{\Hypertarget{expat_8h_aef71ca3ac8198499d56aaa7b474303bbaa24b654694daef98d474312bf84b1a52}\label{expat_8h_aef71ca3ac8198499d56aaa7b474303bbaa24b654694daef98d474312bf84b1a52}} 
+XML\+\_\+\+STATUS\+\_\+\+ERROR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_STATUS\_OK@{XML\_STATUS\_OK}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_STATUS\_OK@{XML\_STATUS\_OK}}}\mbox{\Hypertarget{expat_8h_aef71ca3ac8198499d56aaa7b474303bba0b75c0375756392bab1cbb6c30b385f3}\label{expat_8h_aef71ca3ac8198499d56aaa7b474303bba0b75c0375756392bab1cbb6c30b385f3}} 
+XML\+\_\+\+STATUS\+\_\+\+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_STATUS\_OK@{XML\_STATUS\_OK}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_STATUS\_OK@{XML\_STATUS\_OK}}}\mbox{\Hypertarget{expat_8h_aef71ca3ac8198499d56aaa7b474303bba0b75c0375756392bab1cbb6c30b385f3}\label{expat_8h_aef71ca3ac8198499d56aaa7b474303bba0b75c0375756392bab1cbb6c30b385f3}} 
+XML\+\_\+\+STATUS\+\_\+\+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XML\_STATUS\_SUSPENDED@{XML\_STATUS\_SUSPENDED}!expat.h@{expat.h}}\index{expat.h@{expat.h}!XML\_STATUS\_SUSPENDED@{XML\_STATUS\_SUSPENDED}}}\mbox{\Hypertarget{expat_8h_aef71ca3ac8198499d56aaa7b474303bba75cf5e7dbc26a9437b9725d99a050d6b}\label{expat_8h_aef71ca3ac8198499d56aaa7b474303bba75cf5e7dbc26a9437b9725d99a050d6b}} 
+XML\+\_\+\+STATUS\+\_\+\+SUSPENDED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{expat_8h_a656640fa46f78f5fa297dea4ae1722ec}\label{expat_8h_a656640fa46f78f5fa297dea4ae1722ec}} 
+\index{expat.h@{expat.h}!XML\_DefaultCurrent@{XML\_DefaultCurrent}}
+\index{XML\_DefaultCurrent@{XML\_DefaultCurrent}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_DefaultCurrent()}{XML\_DefaultCurrent()}}
+{\footnotesize\ttfamily XML\+\_\+\+Default\+Current (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a8251288f9a95e1da7eb24bdb29ee586b}\label{expat_8h_a8251288f9a95e1da7eb24bdb29ee586b}} 
+\index{expat.h@{expat.h}!XML\_ErrorString@{XML\_ErrorString}}
+\index{XML\_ErrorString@{XML\_ErrorString}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_ErrorString()}{XML\_ErrorString()}}
+{\footnotesize\ttfamily XML\+\_\+\+Error\+String (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{expat_8h_a6a06dad2fbbc37dd288c51e577494118}{XML\+\_\+\+Error}}}]{code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_abb55b97e846e0186244a72414f035e98}\label{expat_8h_abb55b97e846e0186244a72414f035e98}} 
+\index{expat.h@{expat.h}!XML\_ExpatVersion@{XML\_ExpatVersion}}
+\index{XML\_ExpatVersion@{XML\_ExpatVersion}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_ExpatVersion()}{XML\_ExpatVersion()}}
+{\footnotesize\ttfamily XML\+\_\+\+Expat\+Version (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a697dd3e01bb959d89e28622faff96479}\label{expat_8h_a697dd3e01bb959d89e28622faff96479}} 
+\index{expat.h@{expat.h}!XML\_ExpatVersionInfo@{XML\_ExpatVersionInfo}}
+\index{XML\_ExpatVersionInfo@{XML\_ExpatVersionInfo}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_ExpatVersionInfo()}{XML\_ExpatVersionInfo()}}
+{\footnotesize\ttfamily XML\+\_\+\+Expat\+Version\+Info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a97ce0f371ec32a0ee199d0ee03e557be}\label{expat_8h_a97ce0f371ec32a0ee199d0ee03e557be}} 
+\index{expat.h@{expat.h}!XML\_ExternalEntityParserCreate@{XML\_ExternalEntityParserCreate}}
+\index{XML\_ExternalEntityParserCreate@{XML\_ExternalEntityParserCreate}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_ExternalEntityParserCreate()}{XML\_ExternalEntityParserCreate()}}
+{\footnotesize\ttfamily XML\+\_\+\+External\+Entity\+Parser\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{context,  }\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{encoding }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a7af523f8175790f31b5dc844aaf489b3}\label{expat_8h_a7af523f8175790f31b5dc844aaf489b3}} 
+\index{expat.h@{expat.h}!XML\_FreeContentModel@{XML\_FreeContentModel}}
+\index{XML\_FreeContentModel@{XML\_FreeContentModel}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_FreeContentModel()}{XML\_FreeContentModel()}}
+{\footnotesize\ttfamily XML\+\_\+\+Free\+Content\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a791d9e7de669ec5395df17978e1c507e}{XML\+\_\+\+Content}} $\ast$}]{model }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a11f47e2c3c4eabe81359a90bbeab9796}\label{expat_8h_a11f47e2c3c4eabe81359a90bbeab9796}} 
+\index{expat.h@{expat.h}!XML\_GetBase@{XML\_GetBase}}
+\index{XML\_GetBase@{XML\_GetBase}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_GetBase()}{XML\_GetBase()}}
+{\footnotesize\ttfamily XML\+\_\+\+Get\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a2ba88067eec56ba4c937b99aa8f7e9fa}\label{expat_8h_a2ba88067eec56ba4c937b99aa8f7e9fa}} 
+\index{expat.h@{expat.h}!XML\_GetBuffer@{XML\_GetBuffer}}
+\index{XML\_GetBuffer@{XML\_GetBuffer}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_GetBuffer()}{XML\_GetBuffer()}}
+{\footnotesize\ttfamily XML\+\_\+\+Get\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a9f79dd11b63d0cb0a7ef05c471500fd9}\label{expat_8h_a9f79dd11b63d0cb0a7ef05c471500fd9}} 
+\index{expat.h@{expat.h}!XML\_GetCurrentByteCount@{XML\_GetCurrentByteCount}}
+\index{XML\_GetCurrentByteCount@{XML\_GetCurrentByteCount}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_GetCurrentByteCount()}{XML\_GetCurrentByteCount()}}
+{\footnotesize\ttfamily XML\+\_\+\+Get\+Current\+Byte\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a2c9bf949546187a0b6090ecb008a3ea2}\label{expat_8h_a2c9bf949546187a0b6090ecb008a3ea2}} 
+\index{expat.h@{expat.h}!XML\_GetErrorCode@{XML\_GetErrorCode}}
+\index{XML\_GetErrorCode@{XML\_GetErrorCode}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_GetErrorCode()}{XML\_GetErrorCode()}}
+{\footnotesize\ttfamily XML\+\_\+\+Get\+Error\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a5461b9ee2320302609ae9ece4a7f0363}\label{expat_8h_a5461b9ee2320302609ae9ece4a7f0363}} 
+\index{expat.h@{expat.h}!XML\_GetFeatureList@{XML\_GetFeatureList}}
+\index{XML\_GetFeatureList@{XML\_GetFeatureList}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_GetFeatureList()}{XML\_GetFeatureList()}}
+{\footnotesize\ttfamily XML\+\_\+\+Get\+Feature\+List (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_aa196256e8aeed81148d0066f2cdb0778}\label{expat_8h_aa196256e8aeed81148d0066f2cdb0778}} 
+\index{expat.h@{expat.h}!XML\_GetIdAttributeIndex@{XML\_GetIdAttributeIndex}}
+\index{XML\_GetIdAttributeIndex@{XML\_GetIdAttributeIndex}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_GetIdAttributeIndex()}{XML\_GetIdAttributeIndex()}}
+{\footnotesize\ttfamily XML\+\_\+\+Get\+Id\+Attribute\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a13b1eb36d3245596ee0afabd9183b897}\label{expat_8h_a13b1eb36d3245596ee0afabd9183b897}} 
+\index{expat.h@{expat.h}!XML\_GetInputContext@{XML\_GetInputContext}}
+\index{XML\_GetInputContext@{XML\_GetInputContext}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_GetInputContext()}{XML\_GetInputContext()}}
+{\footnotesize\ttfamily XML\+\_\+\+Get\+Input\+Context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{int $\ast$}]{offset,  }\item[{int $\ast$}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_af4ed8f0f62c35fa4a34bdad0ffe7aab7}\label{expat_8h_af4ed8f0f62c35fa4a34bdad0ffe7aab7}} 
+\index{expat.h@{expat.h}!XML\_GetParsingStatus@{XML\_GetParsingStatus}}
+\index{XML\_GetParsingStatus@{XML\_GetParsingStatus}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_GetParsingStatus()}{XML\_GetParsingStatus()}}
+{\footnotesize\ttfamily XML\+\_\+\+Get\+Parsing\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{struct_x_m_l___parsing_status}{XML\+\_\+\+Parsing\+Status}} $\ast$}]{status }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a5871673801b34ac556398ebaf8c46753}\label{expat_8h_a5871673801b34ac556398ebaf8c46753}} 
+\index{expat.h@{expat.h}!XML\_GetSpecifiedAttributeCount@{XML\_GetSpecifiedAttributeCount}}
+\index{XML\_GetSpecifiedAttributeCount@{XML\_GetSpecifiedAttributeCount}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_GetSpecifiedAttributeCount()}{XML\_GetSpecifiedAttributeCount()}}
+{\footnotesize\ttfamily XML\+\_\+\+Get\+Specified\+Attribute\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a5bc14956f967dc816dc242a6a2559e1a}\label{expat_8h_a5bc14956f967dc816dc242a6a2559e1a}} 
+\index{expat.h@{expat.h}!XML\_MemFree@{XML\_MemFree}}
+\index{XML\_MemFree@{XML\_MemFree}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_MemFree()}{XML\_MemFree()}}
+{\footnotesize\ttfamily XML\+\_\+\+Mem\+Free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_afbc60c7b2f025ed6a6471e566ba096ee}\label{expat_8h_afbc60c7b2f025ed6a6471e566ba096ee}} 
+\index{expat.h@{expat.h}!XML\_MemMalloc@{XML\_MemMalloc}}
+\index{XML\_MemMalloc@{XML\_MemMalloc}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_MemMalloc()}{XML\_MemMalloc()}}
+{\footnotesize\ttfamily XML\+\_\+\+Mem\+Malloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a160cbcbce19813e20caa562f4c6b4618}\label{expat_8h_a160cbcbce19813e20caa562f4c6b4618}} 
+\index{expat.h@{expat.h}!XML\_MemRealloc@{XML\_MemRealloc}}
+\index{XML\_MemRealloc@{XML\_MemRealloc}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_MemRealloc()}{XML\_MemRealloc()}}
+{\footnotesize\ttfamily XML\+\_\+\+Mem\+Realloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{void $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a74b71c0c1edba09393f8450a5cff20f7}\label{expat_8h_a74b71c0c1edba09393f8450a5cff20f7}} 
+\index{expat.h@{expat.h}!XML\_Parse@{XML\_Parse}}
+\index{XML\_Parse@{XML\_Parse}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_Parse()}{XML\_Parse()}}
+{\footnotesize\ttfamily XML\+\_\+\+Parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{const char $\ast$}]{s,  }\item[{int}]{len,  }\item[{int}]{is\+Final }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a266deaa2cc7dff28d352e548e9938b15}\label{expat_8h_a266deaa2cc7dff28d352e548e9938b15}} 
+\index{expat.h@{expat.h}!XML\_ParseBuffer@{XML\_ParseBuffer}}
+\index{XML\_ParseBuffer@{XML\_ParseBuffer}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_ParseBuffer()}{XML\_ParseBuffer()}}
+{\footnotesize\ttfamily XML\+\_\+\+Parse\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{int}]{len,  }\item[{int}]{is\+Final }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a170e5a6b1a8ae0534d3d69f93aa15b0c}\label{expat_8h_a170e5a6b1a8ae0534d3d69f93aa15b0c}} 
+\index{expat.h@{expat.h}!XML\_ParserCreate@{XML\_ParserCreate}}
+\index{XML\_ParserCreate@{XML\_ParserCreate}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_ParserCreate()}{XML\_ParserCreate()}}
+{\footnotesize\ttfamily XML\+\_\+\+Parser\+Create (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{encoding }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a23732fee31870eb85d9981daabf1cf5e}\label{expat_8h_a23732fee31870eb85d9981daabf1cf5e}} 
+\index{expat.h@{expat.h}!XML\_ParserCreate\_MM@{XML\_ParserCreate\_MM}}
+\index{XML\_ParserCreate\_MM@{XML\_ParserCreate\_MM}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_ParserCreate\_MM()}{XML\_ParserCreate\_MM()}}
+{\footnotesize\ttfamily XML\+\_\+\+Parser\+Create\+\_\+\+MM (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{encoding,  }\item[{const \mbox{\hyperlink{struct_x_m_l___memory___handling___suite}{XML\+\_\+\+Memory\+\_\+\+Handling\+\_\+\+Suite}} $\ast$}]{memsuite,  }\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{namespace\+Separator }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a9a4e2bf0ff9a36aaff159f370eae6126}\label{expat_8h_a9a4e2bf0ff9a36aaff159f370eae6126}} 
+\index{expat.h@{expat.h}!XML\_ParserCreateNS@{XML\_ParserCreateNS}}
+\index{XML\_ParserCreateNS@{XML\_ParserCreateNS}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_ParserCreateNS()}{XML\_ParserCreateNS()}}
+{\footnotesize\ttfamily XML\+\_\+\+Parser\+Create\+NS (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{encoding,  }\item[{\mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}}}]{namespace\+Separator }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a6911b3212a330e3d23bdd8e1b433d59e}\label{expat_8h_a6911b3212a330e3d23bdd8e1b433d59e}} 
+\index{expat.h@{expat.h}!XML\_ParserFree@{XML\_ParserFree}}
+\index{XML\_ParserFree@{XML\_ParserFree}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_ParserFree()}{XML\_ParserFree()}}
+{\footnotesize\ttfamily XML\+\_\+\+Parser\+Free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_ac6aba21e5cd7431eeca4be6312f9c523}\label{expat_8h_ac6aba21e5cd7431eeca4be6312f9c523}} 
+\index{expat.h@{expat.h}!XML\_ParserReset@{XML\_ParserReset}}
+\index{XML\_ParserReset@{XML\_ParserReset}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_ParserReset()}{XML\_ParserReset()}}
+{\footnotesize\ttfamily XML\+\_\+\+Parser\+Reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{encoding }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a36bc47ccd8bf45dd483d7a21746a01fc}\label{expat_8h_a36bc47ccd8bf45dd483d7a21746a01fc}} 
+\index{expat.h@{expat.h}!XML\_ResumeParser@{XML\_ResumeParser}}
+\index{XML\_ResumeParser@{XML\_ResumeParser}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_ResumeParser()}{XML\_ResumeParser()}}
+{\footnotesize\ttfamily XML\+\_\+\+Resume\+Parser (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_ab9defc95aa4e928c4d33fa0aae16e614}\label{expat_8h_ab9defc95aa4e928c4d33fa0aae16e614}} 
+\index{expat.h@{expat.h}!XML\_SetAttlistDeclHandler@{XML\_SetAttlistDeclHandler}}
+\index{XML\_SetAttlistDeclHandler@{XML\_SetAttlistDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetAttlistDeclHandler()}{XML\_SetAttlistDeclHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Attlist\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a89899063dae04c58a3f2ef13e22bedbc}{XML\+\_\+\+Attlist\+Decl\+Handler}}}]{attdecl }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a92301b7dc0e4653219bb70830e94fb10}\label{expat_8h_a92301b7dc0e4653219bb70830e94fb10}} 
+\index{expat.h@{expat.h}!XML\_SetBase@{XML\_SetBase}}
+\index{XML\_SetBase@{XML\_SetBase}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetBase()}{XML\_SetBase()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{base }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a600a35c5cea081c0dddabff148d692d7}\label{expat_8h_a600a35c5cea081c0dddabff148d692d7}} 
+\index{expat.h@{expat.h}!XML\_SetCdataSectionHandler@{XML\_SetCdataSectionHandler}}
+\index{XML\_SetCdataSectionHandler@{XML\_SetCdataSectionHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetCdataSectionHandler()}{XML\_SetCdataSectionHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Cdata\+Section\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a661776930dd0ace06a3e9acc9bba4b82}{XML\+\_\+\+Start\+Cdata\+Section\+Handler}}}]{start,  }\item[{\mbox{\hyperlink{expat_8h_a3165868193185fbd43232e41dd211d4f}{XML\+\_\+\+End\+Cdata\+Section\+Handler}}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_affa8d2057a1e75fe4e1c7de26c70cd24}\label{expat_8h_affa8d2057a1e75fe4e1c7de26c70cd24}} 
+\index{expat.h@{expat.h}!XML\_SetCharacterDataHandler@{XML\_SetCharacterDataHandler}}
+\index{XML\_SetCharacterDataHandler@{XML\_SetCharacterDataHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetCharacterDataHandler()}{XML\_SetCharacterDataHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Character\+Data\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_aef3b6006dc0f845ddb482c2b37a44ba1}{XML\+\_\+\+Character\+Data\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a16310f1819cb65f8d989ade5e4665ce0}\label{expat_8h_a16310f1819cb65f8d989ade5e4665ce0}} 
+\index{expat.h@{expat.h}!XML\_SetCommentHandler@{XML\_SetCommentHandler}}
+\index{XML\_SetCommentHandler@{XML\_SetCommentHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetCommentHandler()}{XML\_SetCommentHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Comment\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a0aefc69cadea618f7fc17607c7c3c8ee}{XML\+\_\+\+Comment\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_af05132d710426f9e5290de30abdca344}\label{expat_8h_af05132d710426f9e5290de30abdca344}} 
+\index{expat.h@{expat.h}!XML\_SetDefaultHandler@{XML\_SetDefaultHandler}}
+\index{XML\_SetDefaultHandler@{XML\_SetDefaultHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetDefaultHandler()}{XML\_SetDefaultHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Default\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_afa6c6c71f2c70cfe57c3506534cb70d7}{XML\+\_\+\+Default\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a636e1cfc284897fa9bbfd06ebb102b7b}\label{expat_8h_a636e1cfc284897fa9bbfd06ebb102b7b}} 
+\index{expat.h@{expat.h}!XML\_SetDefaultHandlerExpand@{XML\_SetDefaultHandlerExpand}}
+\index{XML\_SetDefaultHandlerExpand@{XML\_SetDefaultHandlerExpand}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetDefaultHandlerExpand()}{XML\_SetDefaultHandlerExpand()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Default\+Handler\+Expand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_afa6c6c71f2c70cfe57c3506534cb70d7}{XML\+\_\+\+Default\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a1a44eac18dc373ae7d1d777224b628e6}\label{expat_8h_a1a44eac18dc373ae7d1d777224b628e6}} 
+\index{expat.h@{expat.h}!XML\_SetDoctypeDeclHandler@{XML\_SetDoctypeDeclHandler}}
+\index{XML\_SetDoctypeDeclHandler@{XML\_SetDoctypeDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetDoctypeDeclHandler()}{XML\_SetDoctypeDeclHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Doctype\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_ab748cf612072905843f3488414c19f3b}{XML\+\_\+\+Start\+Doctype\+Decl\+Handler}}}]{start,  }\item[{\mbox{\hyperlink{expat_8h_a43568a006caf34bcf94e4346031b85a0}{XML\+\_\+\+End\+Doctype\+Decl\+Handler}}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_acea003c7329cc1605ad6075551670d69}\label{expat_8h_acea003c7329cc1605ad6075551670d69}} 
+\index{expat.h@{expat.h}!XML\_SetElementDeclHandler@{XML\_SetElementDeclHandler}}
+\index{XML\_SetElementDeclHandler@{XML\_SetElementDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetElementDeclHandler()}{XML\_SetElementDeclHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Element\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_affe4163d2280b13afb316b81f5650421}{XML\+\_\+\+Element\+Decl\+Handler}}}]{eldecl }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a69921a6d7f1be3d717332cea5e7ceca8}\label{expat_8h_a69921a6d7f1be3d717332cea5e7ceca8}} 
+\index{expat.h@{expat.h}!XML\_SetElementHandler@{XML\_SetElementHandler}}
+\index{XML\_SetElementHandler@{XML\_SetElementHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetElementHandler()}{XML\_SetElementHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Element\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a504bca048496cfbacf106a5e28564fcd}{XML\+\_\+\+Start\+Element\+Handler}}}]{start,  }\item[{\mbox{\hyperlink{expat_8h_a12978ae068c1222afbb5a400b5c692b9}{XML\+\_\+\+End\+Element\+Handler}}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a52b6c9717933df0e16f03044b7c0ff0b}\label{expat_8h_a52b6c9717933df0e16f03044b7c0ff0b}} 
+\index{expat.h@{expat.h}!XML\_SetEncoding@{XML\_SetEncoding}}
+\index{XML\_SetEncoding@{XML\_SetEncoding}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetEncoding()}{XML\_SetEncoding()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Encoding (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{const \mbox{\hyperlink{expat__external_8h_a63da96463e775e1ec3a7d1f076208127}{XML\+\_\+\+Char}} $\ast$}]{encoding }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a0c5742fc6a00b5b4eb627c5188c36c3e}\label{expat_8h_a0c5742fc6a00b5b4eb627c5188c36c3e}} 
+\index{expat.h@{expat.h}!XML\_SetEndCdataSectionHandler@{XML\_SetEndCdataSectionHandler}}
+\index{XML\_SetEndCdataSectionHandler@{XML\_SetEndCdataSectionHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetEndCdataSectionHandler()}{XML\_SetEndCdataSectionHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+End\+Cdata\+Section\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a3165868193185fbd43232e41dd211d4f}{XML\+\_\+\+End\+Cdata\+Section\+Handler}}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a12657f3ae3075d9d91d394b8e52cbdb3}\label{expat_8h_a12657f3ae3075d9d91d394b8e52cbdb3}} 
+\index{expat.h@{expat.h}!XML\_SetEndDoctypeDeclHandler@{XML\_SetEndDoctypeDeclHandler}}
+\index{XML\_SetEndDoctypeDeclHandler@{XML\_SetEndDoctypeDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetEndDoctypeDeclHandler()}{XML\_SetEndDoctypeDeclHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+End\+Doctype\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a43568a006caf34bcf94e4346031b85a0}{XML\+\_\+\+End\+Doctype\+Decl\+Handler}}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a2a208ddaf0435da3c83299c90ccbb1c7}\label{expat_8h_a2a208ddaf0435da3c83299c90ccbb1c7}} 
+\index{expat.h@{expat.h}!XML\_SetEndElementHandler@{XML\_SetEndElementHandler}}
+\index{XML\_SetEndElementHandler@{XML\_SetEndElementHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetEndElementHandler()}{XML\_SetEndElementHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+End\+Element\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a12978ae068c1222afbb5a400b5c692b9}{XML\+\_\+\+End\+Element\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a936c72c7eacc7e69620d7014e33d7862}\label{expat_8h_a936c72c7eacc7e69620d7014e33d7862}} 
+\index{expat.h@{expat.h}!XML\_SetEndNamespaceDeclHandler@{XML\_SetEndNamespaceDeclHandler}}
+\index{XML\_SetEndNamespaceDeclHandler@{XML\_SetEndNamespaceDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetEndNamespaceDeclHandler()}{XML\_SetEndNamespaceDeclHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+End\+Namespace\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a1414891bd078b546986d463e746ad49c}{XML\+\_\+\+End\+Namespace\+Decl\+Handler}}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a8072d21c310e6a08187b403fd7dad7e9}\label{expat_8h_a8072d21c310e6a08187b403fd7dad7e9}} 
+\index{expat.h@{expat.h}!XML\_SetEntityDeclHandler@{XML\_SetEntityDeclHandler}}
+\index{XML\_SetEntityDeclHandler@{XML\_SetEntityDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetEntityDeclHandler()}{XML\_SetEntityDeclHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Entity\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_af2f060ea47a43f92b5d23313ceba982a}{XML\+\_\+\+Entity\+Decl\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a133bded8cfbd6bb1fbcfad40b986f814}\label{expat_8h_a133bded8cfbd6bb1fbcfad40b986f814}} 
+\index{expat.h@{expat.h}!XML\_SetExternalEntityRefHandler@{XML\_SetExternalEntityRefHandler}}
+\index{XML\_SetExternalEntityRefHandler@{XML\_SetExternalEntityRefHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetExternalEntityRefHandler()}{XML\_SetExternalEntityRefHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+External\+Entity\+Ref\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a2d955f5ce3c5401dbe14ba19e8067c01}{XML\+\_\+\+External\+Entity\+Ref\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a41e5324c09b2fd7e783b8766324ab7a0}\label{expat_8h_a41e5324c09b2fd7e783b8766324ab7a0}} 
+\index{expat.h@{expat.h}!XML\_SetExternalEntityRefHandlerArg@{XML\_SetExternalEntityRefHandlerArg}}
+\index{XML\_SetExternalEntityRefHandlerArg@{XML\_SetExternalEntityRefHandlerArg}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetExternalEntityRefHandlerArg()}{XML\_SetExternalEntityRefHandlerArg()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+External\+Entity\+Ref\+Handler\+Arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a7c6d3d2f410c2bd24228c46706e86053}\label{expat_8h_a7c6d3d2f410c2bd24228c46706e86053}} 
+\index{expat.h@{expat.h}!XML\_SetHashSalt@{XML\_SetHashSalt}}
+\index{XML\_SetHashSalt@{XML\_SetHashSalt}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetHashSalt()}{XML\_SetHashSalt()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Hash\+Salt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{unsigned long}]{hash\+\_\+salt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a320bb302d14d8d7cba2991cbdb7553a3}\label{expat_8h_a320bb302d14d8d7cba2991cbdb7553a3}} 
+\index{expat.h@{expat.h}!XML\_SetNamespaceDeclHandler@{XML\_SetNamespaceDeclHandler}}
+\index{XML\_SetNamespaceDeclHandler@{XML\_SetNamespaceDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetNamespaceDeclHandler()}{XML\_SetNamespaceDeclHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Namespace\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a58ad7c192f040f8196708f042c8bdc14}{XML\+\_\+\+Start\+Namespace\+Decl\+Handler}}}]{start,  }\item[{\mbox{\hyperlink{expat_8h_a1414891bd078b546986d463e746ad49c}{XML\+\_\+\+End\+Namespace\+Decl\+Handler}}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_adcdc4c0fce8d0fa3e0e4d9f7beac5fec}\label{expat_8h_adcdc4c0fce8d0fa3e0e4d9f7beac5fec}} 
+\index{expat.h@{expat.h}!XML\_SetNotationDeclHandler@{XML\_SetNotationDeclHandler}}
+\index{XML\_SetNotationDeclHandler@{XML\_SetNotationDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetNotationDeclHandler()}{XML\_SetNotationDeclHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Notation\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_af51763d2819de05e8569320f9ab571c4}{XML\+\_\+\+Notation\+Decl\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a02cd29bfe12ad0a2d17b3a572a040f42}\label{expat_8h_a02cd29bfe12ad0a2d17b3a572a040f42}} 
+\index{expat.h@{expat.h}!XML\_SetNotStandaloneHandler@{XML\_SetNotStandaloneHandler}}
+\index{XML\_SetNotStandaloneHandler@{XML\_SetNotStandaloneHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetNotStandaloneHandler()}{XML\_SetNotStandaloneHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Not\+Standalone\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a8fc3c5ba2270c72ff0a8f9daccd77dd5}{XML\+\_\+\+Not\+Standalone\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_ad09c926ea3d49d087a16e6224a5a9304}\label{expat_8h_ad09c926ea3d49d087a16e6224a5a9304}} 
+\index{expat.h@{expat.h}!XML\_SetParamEntityParsing@{XML\_SetParamEntityParsing}}
+\index{XML\_SetParamEntityParsing@{XML\_SetParamEntityParsing}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetParamEntityParsing()}{XML\_SetParamEntityParsing()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Param\+Entity\+Parsing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{enum \mbox{\hyperlink{expat_8h_a83ffd61320d59d0c6c33dfcf1a0c098f}{XML\+\_\+\+Param\+Entity\+Parsing}}}]{parsing }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a26dbed024734a41ac175fef4d91e37b7}\label{expat_8h_a26dbed024734a41ac175fef4d91e37b7}} 
+\index{expat.h@{expat.h}!XML\_SetProcessingInstructionHandler@{XML\_SetProcessingInstructionHandler}}
+\index{XML\_SetProcessingInstructionHandler@{XML\_SetProcessingInstructionHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetProcessingInstructionHandler()}{XML\_SetProcessingInstructionHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Processing\+Instruction\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a550004b1beb44144bd78b9320e211f6c}{XML\+\_\+\+Processing\+Instruction\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a76fcdf6315a13945f02323c6885f0313}\label{expat_8h_a76fcdf6315a13945f02323c6885f0313}} 
+\index{expat.h@{expat.h}!XML\_SetReturnNSTriplet@{XML\_SetReturnNSTriplet}}
+\index{XML\_SetReturnNSTriplet@{XML\_SetReturnNSTriplet}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetReturnNSTriplet()}{XML\_SetReturnNSTriplet()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Return\+NSTriplet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{int}]{do\+\_\+nst }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a299534d405738de35f283306f99f0f0a}\label{expat_8h_a299534d405738de35f283306f99f0f0a}} 
+\index{expat.h@{expat.h}!XML\_SetSkippedEntityHandler@{XML\_SetSkippedEntityHandler}}
+\index{XML\_SetSkippedEntityHandler@{XML\_SetSkippedEntityHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetSkippedEntityHandler()}{XML\_SetSkippedEntityHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Skipped\+Entity\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a29e3734cfec01df38715716d53093d5c}{XML\+\_\+\+Skipped\+Entity\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_ada1df723a09bf5090e11f6a665e32389}\label{expat_8h_ada1df723a09bf5090e11f6a665e32389}} 
+\index{expat.h@{expat.h}!XML\_SetStartCdataSectionHandler@{XML\_SetStartCdataSectionHandler}}
+\index{XML\_SetStartCdataSectionHandler@{XML\_SetStartCdataSectionHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetStartCdataSectionHandler()}{XML\_SetStartCdataSectionHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Start\+Cdata\+Section\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a661776930dd0ace06a3e9acc9bba4b82}{XML\+\_\+\+Start\+Cdata\+Section\+Handler}}}]{start }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a36ac7acf7cebd775a7e55e418c58cadd}\label{expat_8h_a36ac7acf7cebd775a7e55e418c58cadd}} 
+\index{expat.h@{expat.h}!XML\_SetStartDoctypeDeclHandler@{XML\_SetStartDoctypeDeclHandler}}
+\index{XML\_SetStartDoctypeDeclHandler@{XML\_SetStartDoctypeDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetStartDoctypeDeclHandler()}{XML\_SetStartDoctypeDeclHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Start\+Doctype\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_ab748cf612072905843f3488414c19f3b}{XML\+\_\+\+Start\+Doctype\+Decl\+Handler}}}]{start }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a2272a36ebb32322500ab05058754fa09}\label{expat_8h_a2272a36ebb32322500ab05058754fa09}} 
+\index{expat.h@{expat.h}!XML\_SetStartElementHandler@{XML\_SetStartElementHandler}}
+\index{XML\_SetStartElementHandler@{XML\_SetStartElementHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetStartElementHandler()}{XML\_SetStartElementHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Start\+Element\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a504bca048496cfbacf106a5e28564fcd}{XML\+\_\+\+Start\+Element\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a3a97654197f3451b5df3755daaef8c4b}\label{expat_8h_a3a97654197f3451b5df3755daaef8c4b}} 
+\index{expat.h@{expat.h}!XML\_SetStartNamespaceDeclHandler@{XML\_SetStartNamespaceDeclHandler}}
+\index{XML\_SetStartNamespaceDeclHandler@{XML\_SetStartNamespaceDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetStartNamespaceDeclHandler()}{XML\_SetStartNamespaceDeclHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Start\+Namespace\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a58ad7c192f040f8196708f042c8bdc14}{XML\+\_\+\+Start\+Namespace\+Decl\+Handler}}}]{start }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a726ba0601211ec3a969651fb82b5d488}\label{expat_8h_a726ba0601211ec3a969651fb82b5d488}} 
+\index{expat.h@{expat.h}!XML\_SetUnknownEncodingHandler@{XML\_SetUnknownEncodingHandler}}
+\index{XML\_SetUnknownEncodingHandler@{XML\_SetUnknownEncodingHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetUnknownEncodingHandler()}{XML\_SetUnknownEncodingHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Unknown\+Encoding\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a348625fd90dcc5d880efec9e533fc502}{XML\+\_\+\+Unknown\+Encoding\+Handler}}}]{handler,  }\item[{void $\ast$}]{encoding\+Handler\+Data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a4a339c880076d284d206afd4c756ce19}\label{expat_8h_a4a339c880076d284d206afd4c756ce19}} 
+\index{expat.h@{expat.h}!XML\_SetUnparsedEntityDeclHandler@{XML\_SetUnparsedEntityDeclHandler}}
+\index{XML\_SetUnparsedEntityDeclHandler@{XML\_SetUnparsedEntityDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetUnparsedEntityDeclHandler()}{XML\_SetUnparsedEntityDeclHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Unparsed\+Entity\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a67d7a2966d8416e1d8cef6a33ae86453}{XML\+\_\+\+Unparsed\+Entity\+Decl\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a468e51741c78867604101f505767de67}\label{expat_8h_a468e51741c78867604101f505767de67}} 
+\index{expat.h@{expat.h}!XML\_SetUserData@{XML\_SetUserData}}
+\index{XML\_SetUserData@{XML\_SetUserData}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetUserData()}{XML\_SetUserData()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+User\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{void $\ast$}]{user\+Data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a561111336f3db075409fa6f9c0a55015}\label{expat_8h_a561111336f3db075409fa6f9c0a55015}} 
+\index{expat.h@{expat.h}!XML\_SetXmlDeclHandler@{XML\_SetXmlDeclHandler}}
+\index{XML\_SetXmlDeclHandler@{XML\_SetXmlDeclHandler}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_SetXmlDeclHandler()}{XML\_SetXmlDeclHandler()}}
+{\footnotesize\ttfamily XML\+\_\+\+Set\+Xml\+Decl\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a636e4276dad64e4f67c7ebb678fcdab4}{XML\+\_\+\+Xml\+Decl\+Handler}}}]{xmldecl }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a2ed188bab24ab1b97c8bc812d0e1de01}\label{expat_8h_a2ed188bab24ab1b97c8bc812d0e1de01}} 
+\index{expat.h@{expat.h}!XML\_StopParser@{XML\_StopParser}}
+\index{XML\_StopParser@{XML\_StopParser}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_StopParser()}{XML\_StopParser()}}
+{\footnotesize\ttfamily XML\+\_\+\+Stop\+Parser (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}{XML\+\_\+\+Bool}}}]{resumable }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_aa22249af467c9d1911e8e4ce23fe7aae}\label{expat_8h_aa22249af467c9d1911e8e4ce23fe7aae}} 
+\index{expat.h@{expat.h}!XML\_UseForeignDTD@{XML\_UseForeignDTD}}
+\index{XML\_UseForeignDTD@{XML\_UseForeignDTD}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_UseForeignDTD()}{XML\_UseForeignDTD()}}
+{\footnotesize\ttfamily XML\+\_\+\+Use\+Foreign\+DTD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser,  }\item[{\mbox{\hyperlink{expat_8h_a5fe41bca8b7a23b2405f1b967e70f33a}{XML\+\_\+\+Bool}}}]{use\+DTD }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_a940cf0f11f4372ee7cb7997fbc411265}\label{expat_8h_a940cf0f11f4372ee7cb7997fbc411265}} 
+\index{expat.h@{expat.h}!XML\_UseParserAsHandlerArg@{XML\_UseParserAsHandlerArg}}
+\index{XML\_UseParserAsHandlerArg@{XML\_UseParserAsHandlerArg}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XML\_UseParserAsHandlerArg()}{XML\_UseParserAsHandlerArg()}}
+{\footnotesize\ttfamily XML\+\_\+\+Use\+Parser\+As\+Handler\+Arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat_8h_a9dc0003156857c67b3a60b3993846013}{XML\+\_\+\+Parser}}}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_ae1a2ba64a8972360e74a096014116326}\label{expat_8h_ae1a2ba64a8972360e74a096014116326}} 
+\index{expat.h@{expat.h}!XMLPARSEAPI@{XMLPARSEAPI}}
+\index{XMLPARSEAPI@{XMLPARSEAPI}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XMLPARSEAPI()}{XMLPARSEAPI()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily XMLPARSEAPI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat__external_8h_ae2a9a55c7071b0c6da19fea14ce8f504}{XML\+\_\+\+Index}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expat_8h_addcfe55d8f0e2b155e881f66f9dbc80b}\label{expat_8h_addcfe55d8f0e2b155e881f66f9dbc80b}} 
+\index{expat.h@{expat.h}!XMLPARSEAPI@{XMLPARSEAPI}}
+\index{XMLPARSEAPI@{XMLPARSEAPI}!expat.h@{expat.h}}
+\doxysubsubsection{\texorpdfstring{XMLPARSEAPI()}{XMLPARSEAPI()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily XMLPARSEAPI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expat__external_8h_ad22a225e6e62127360b44b2f7559f789}{XML\+\_\+\+Size}}}]{ }\end{DoxyParamCaption})}
+

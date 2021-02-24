@@ -5,8 +5,8 @@
 
 #include "Tuto.h"
 #include "PLNE.h"
-#include "Chantier.h"
-#include "Acquisition.h"
+#include "CChantier.h"
+#include "CAcquisition.h"
 #include <vector>
 
 //ILOSTBEGIN
@@ -24,7 +24,7 @@ int main()
 
 	cout << "====================== Acquisition ===================" << endl << endl;
 
-	vector<Chantier> chantiers = Acquisition::chantiers("data/Chantier.csv");
+	vector<CChantier> chantiers = CAcquisition::chantiers("data/Chantier.csv");
 	for (auto ch = chantiers.begin(); ch != chantiers.end(); ++ch) {
 	cout << *ch << endl;
 	}

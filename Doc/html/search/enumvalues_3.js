@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['danish_9889',['danish',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60da5b119a961fcb523c81c25e8f79de2380',1,'xlnt::detail']]],
+  ['danish_5fdenmark_9890',['danish_denmark',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60dafd35b9cd47b3d9483cc9a0307fe58e13',1,'xlnt::detail']]],
+  ['dari_9891',['dari',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60dad05fd15ad711e0816ef1ee978b052f31',1,'xlnt::detail']]],
+  ['dari_5fafghanistan_9892',['dari_afghanistan',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60dabe2446da79ed2b6890ead7f8e60d77c7',1,'xlnt::detail']]],
+  ['date_9893',['date',['../classxlnt_1_1variant.html#a7256ff9116aab1d86fe6ddc428746fa3a5fc732311905cb27e82d67f4f6511f7f',1,'xlnt::variant']]],
+  ['datetime_9894',['datetime',['../structxlnt_1_1detail_1_1number__format__token.html#ae5a3415b43061d10acba7cf901047124adfeaaeb4316477bd556ea5e8c3295887',1,'xlnt::detail::number_format_token']]],
+  ['day_5fabbreviation_9895',['day_abbreviation',['../structxlnt_1_1detail_1_1template__part.html#a11063cddb8ca24ae4171966be79790b8a14028bdfbd31b3e3616e45364ca8e103',1,'xlnt::detail::template_part']]],
+  ['day_5fname_9896',['day_name',['../structxlnt_1_1detail_1_1template__part.html#a11063cddb8ca24ae4171966be79790b8afc0aa31e96cacac1d5feff252ddf9c89',1,'xlnt::detail::template_part']]],
+  ['day_5fnumber_9897',['day_number',['../structxlnt_1_1detail_1_1template__part.html#a11063cddb8ca24ae4171966be79790b8a6b68cf91c553ed90a12511cf85af434b',1,'xlnt::detail::template_part']]],
+  ['day_5fnumber_5fleading_5fzero_9898',['day_number_leading_zero',['../structxlnt_1_1detail_1_1template__part.html#a11063cddb8ca24ae4171966be79790b8a3bdc1c306db528e48bb3dcc46d7dc0d8',1,'xlnt::detail::template_part']]],
+  ['decryption_9899',['decryption',['../namespacexlnt_1_1detail.html#a89e4d9906f70a6f4935fe6d912e59ef0a9aefc511bf3c972d673dd84b391cec88',1,'xlnt::detail']]],
+  ['des_9900',['des',['../namespacexlnt_1_1detail.html#a7d1d7b0f144d404b47b81b52b4d423fca0ecee728bf87a4c1a02883004044dcd5',1,'xlnt::detail']]],
+  ['description_9901',['description',['../namespacexlnt.html#a71da3b08e3863a52b72b08a571ec029da67daf92c833c41c95db874e18fcb2786',1,'xlnt']]],
+  ['desx_9902',['desx',['../namespacexlnt_1_1detail.html#a7d1d7b0f144d404b47b81b52b4d423fcaac787264e5de7682b262e80edb19d803',1,'xlnt::detail']]],
+  ['dig_5fsig_9903',['dig_sig',['../namespacexlnt.html#af19e407c73cf8ee3bd956e4f6ea490f5ab4ebbdcbd4e3f3ee3496c0a6297aa034',1,'xlnt']]],
+  ['distributed_9904',['distributed',['../classxlnt_1_1phonetic__pr.html#a1027559c1237d65a422afbf6fec9dd09a8201b6e3d88dd2de76c3ccec9fcc3f8a',1,'xlnt::phonetic_pr']]],
+  ['divehi_9905',['divehi',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60dafb619dde990a3acd360b31cd391cb8e9',1,'xlnt::detail']]],
+  ['divehi_5fmaldives_9906',['divehi_maldives',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60da17a03a6bc910e4df4f098714abf2bfa3',1,'xlnt::detail']]],
+  ['doc_5fsecurity_9907',['doc_security',['../namespacexlnt.html#af19e407c73cf8ee3bd956e4f6ea490f5afcd4b06a11e1941cf0590ab7208c8293',1,'xlnt']]],
+  ['double_5f_9908',['double_',['../classxlnt_1_1font.html#ac352c9901c9872fb6d85ba5a548af360a9ff848d203d671e297c98886f9fc0bd9',1,'xlnt::font']]],
+  ['double_5faccounting_9909',['double_accounting',['../classxlnt_1_1font.html#ac352c9901c9872fb6d85ba5a548af360a202f34bb506fcba41c6fb617cedf9d38',1,'xlnt::font']]],
+  ['dutch_9910',['dutch',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60dab4355908e98e83e585d6faae9be33311',1,'xlnt::detail']]],
+  ['dutch_5fbelgium_9911',['dutch_belgium',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60da574a44cfe3d7b410f8b86b7ecc12f397',1,'xlnt::detail']]],
+  ['dutch_5fnetherlands_9912',['dutch_netherlands',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60dae217819847a70ddd6867c506ea779aef',1,'xlnt::detail']]],
+  ['dzongkha_5fbhutan_9913',['dzongkha_bhutan',['../namespacexlnt_1_1detail.html#a07ea1ccd2025f3bc00cefe6e0d32f60da5160f2fa4fae1e0026ad43fe8fa19a43',1,'xlnt::detail']]]
+];

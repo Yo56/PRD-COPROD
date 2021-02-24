@@ -1,0 +1,196 @@
+\hypertarget{classxlnt_1_1alignment}{}\doxysection{xlnt\+::alignment Class Reference}
+\label{classxlnt_1_1alignment}\index{xlnt::alignment@{xlnt::alignment}}
+
+
+Alignment options that determine how text should be displayed within a cell.  
+
+
+
+
+{\ttfamily \#include $<$alignment.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classxlnt_1_1alignment_ae01d66cc6ba111a66130dfcf2b47dd07}{shrink}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if shrink-\/to-\/fit has been enabled. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \& \mbox{\hyperlink{classxlnt_1_1alignment_a74cc08c5cfff0d12839660ab8216e3df}{shrink}} (bool shrink\+\_\+to\+\_\+fit)
+\begin{DoxyCompactList}\small\item\em Sets whether the font size should be reduced until all of the text fits in a cell without wrapping. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1alignment_aa4aa469b689cb63c2814db180d90ca5b}{wrap}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if text-\/wrapping has been enabled. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \& \mbox{\hyperlink{classxlnt_1_1alignment_a233d856dbf9a55b89082d8e20b57a014}{wrap}} (bool wrap\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Sets whether text in a cell should continue to multiple lines if it doesn\textquotesingle{}t fit in one line. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ int $>$ \mbox{\hyperlink{classxlnt_1_1alignment_a5323e1f88d22ef03e29e779a3bc3deb8}{indent}} () const
+\begin{DoxyCompactList}\small\item\em Returns the optional value of indentation width in number of spaces. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \& \mbox{\hyperlink{classxlnt_1_1alignment_afbbcb3d37cb6aefd0247a8be3a00629d}{indent}} (int indent\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Sets the indent size in number of spaces from the side of the cell. This will only take effect when left or right horizontal alignment has also been set. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ int $>$ \mbox{\hyperlink{classxlnt_1_1alignment_ac06b3f45edfa3df4987bc0beea825ff6}{rotation}} () const
+\begin{DoxyCompactList}\small\item\em Returns the optional value of rotation for text in the cell in degrees. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \& \mbox{\hyperlink{classxlnt_1_1alignment_afac9294836d07a7053eba56f996c35b6}{rotation}} (int text\+\_\+rotation)
+\begin{DoxyCompactList}\small\item\em Sets the rotation for text in the cell in degrees. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ horizontal\+\_\+alignment $>$ \mbox{\hyperlink{classxlnt_1_1alignment_acf398a33e4a57bc4a93ca4a99985624f}{horizontal}} () const
+\begin{DoxyCompactList}\small\item\em Returns the optional horizontal alignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \& \mbox{\hyperlink{classxlnt_1_1alignment_a8a16f376fd14fd6a1f4f54fb86b78a0b}{horizontal}} (horizontal\+\_\+alignment horizontal)
+\begin{DoxyCompactList}\small\item\em Sets the horizontal alignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ vertical\+\_\+alignment $>$ \mbox{\hyperlink{classxlnt_1_1alignment_aa3d3fabbe73a1e293e49c342afd3fdec}{vertical}} () const
+\begin{DoxyCompactList}\small\item\em Returns the optional vertical alignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \& \mbox{\hyperlink{classxlnt_1_1alignment_aee7c07b807365c1f9b3a3e87e0d0f792}{vertical}} (vertical\+\_\+alignment vertical)
+\begin{DoxyCompactList}\small\item\em Sets the vertical alignment. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1alignment_a68dddca969f42fbbfdad8830f25a3551}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this alignment is equivalent to other. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1alignment_a5d4d94a1913966a980a34ceaafc1577f}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this alignment is not equivalent to other. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Alignment options that determine how text should be displayed within a cell. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1alignment_acf398a33e4a57bc4a93ca4a99985624f}\label{classxlnt_1_1alignment_acf398a33e4a57bc4a93ca4a99985624f}} 
+\index{xlnt::alignment@{xlnt::alignment}!horizontal@{horizontal}}
+\index{horizontal@{horizontal}!xlnt::alignment@{xlnt::alignment}}
+\doxysubsubsection{\texorpdfstring{horizontal()}{horizontal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ horizontal\+\_\+alignment $>$ xlnt\+::alignment\+::horizontal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the optional horizontal alignment. 
+
+\mbox{\Hypertarget{classxlnt_1_1alignment_a8a16f376fd14fd6a1f4f54fb86b78a0b}\label{classxlnt_1_1alignment_a8a16f376fd14fd6a1f4f54fb86b78a0b}} 
+\index{xlnt::alignment@{xlnt::alignment}!horizontal@{horizontal}}
+\index{horizontal@{horizontal}!xlnt::alignment@{xlnt::alignment}}
+\doxysubsubsection{\texorpdfstring{horizontal()}{horizontal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \& xlnt\+::alignment\+::horizontal (\begin{DoxyParamCaption}\item[{horizontal\+\_\+alignment}]{horizontal }\end{DoxyParamCaption})}
+
+
+
+Sets the horizontal alignment. 
+
+\mbox{\Hypertarget{classxlnt_1_1alignment_a5323e1f88d22ef03e29e779a3bc3deb8}\label{classxlnt_1_1alignment_a5323e1f88d22ef03e29e779a3bc3deb8}} 
+\index{xlnt::alignment@{xlnt::alignment}!indent@{indent}}
+\index{indent@{indent}!xlnt::alignment@{xlnt::alignment}}
+\doxysubsubsection{\texorpdfstring{indent()}{indent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ int $>$ xlnt\+::alignment\+::indent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the optional value of indentation width in number of spaces. 
+
+\mbox{\Hypertarget{classxlnt_1_1alignment_afbbcb3d37cb6aefd0247a8be3a00629d}\label{classxlnt_1_1alignment_afbbcb3d37cb6aefd0247a8be3a00629d}} 
+\index{xlnt::alignment@{xlnt::alignment}!indent@{indent}}
+\index{indent@{indent}!xlnt::alignment@{xlnt::alignment}}
+\doxysubsubsection{\texorpdfstring{indent()}{indent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \& xlnt\+::alignment\+::indent (\begin{DoxyParamCaption}\item[{int}]{indent\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Sets the indent size in number of spaces from the side of the cell. This will only take effect when left or right horizontal alignment has also been set. 
+
+\mbox{\Hypertarget{classxlnt_1_1alignment_a5d4d94a1913966a980a34ceaafc1577f}\label{classxlnt_1_1alignment_a5d4d94a1913966a980a34ceaafc1577f}} 
+\index{xlnt::alignment@{xlnt::alignment}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::alignment@{xlnt::alignment}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool xlnt\+::alignment\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this alignment is not equivalent to other. 
+
+\mbox{\Hypertarget{classxlnt_1_1alignment_a68dddca969f42fbbfdad8830f25a3551}\label{classxlnt_1_1alignment_a68dddca969f42fbbfdad8830f25a3551}} 
+\index{xlnt::alignment@{xlnt::alignment}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::alignment@{xlnt::alignment}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::alignment\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this alignment is equivalent to other. 
+
+\mbox{\Hypertarget{classxlnt_1_1alignment_ac06b3f45edfa3df4987bc0beea825ff6}\label{classxlnt_1_1alignment_ac06b3f45edfa3df4987bc0beea825ff6}} 
+\index{xlnt::alignment@{xlnt::alignment}!rotation@{rotation}}
+\index{rotation@{rotation}!xlnt::alignment@{xlnt::alignment}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ int $>$ xlnt\+::alignment\+::rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the optional value of rotation for text in the cell in degrees. 
+
+\mbox{\Hypertarget{classxlnt_1_1alignment_afac9294836d07a7053eba56f996c35b6}\label{classxlnt_1_1alignment_afac9294836d07a7053eba56f996c35b6}} 
+\index{xlnt::alignment@{xlnt::alignment}!rotation@{rotation}}
+\index{rotation@{rotation}!xlnt::alignment@{xlnt::alignment}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \& xlnt\+::alignment\+::rotation (\begin{DoxyParamCaption}\item[{int}]{text\+\_\+rotation }\end{DoxyParamCaption})}
+
+
+
+Sets the rotation for text in the cell in degrees. 
+
+\mbox{\Hypertarget{classxlnt_1_1alignment_ae01d66cc6ba111a66130dfcf2b47dd07}\label{classxlnt_1_1alignment_ae01d66cc6ba111a66130dfcf2b47dd07}} 
+\index{xlnt::alignment@{xlnt::alignment}!shrink@{shrink}}
+\index{shrink@{shrink}!xlnt::alignment@{xlnt::alignment}}
+\doxysubsubsection{\texorpdfstring{shrink()}{shrink()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::alignment\+::shrink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if shrink-\/to-\/fit has been enabled. 
+
+\mbox{\Hypertarget{classxlnt_1_1alignment_a74cc08c5cfff0d12839660ab8216e3df}\label{classxlnt_1_1alignment_a74cc08c5cfff0d12839660ab8216e3df}} 
+\index{xlnt::alignment@{xlnt::alignment}!shrink@{shrink}}
+\index{shrink@{shrink}!xlnt::alignment@{xlnt::alignment}}
+\doxysubsubsection{\texorpdfstring{shrink()}{shrink()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \& xlnt\+::alignment\+::shrink (\begin{DoxyParamCaption}\item[{bool}]{shrink\+\_\+to\+\_\+fit }\end{DoxyParamCaption})}
+
+
+
+Sets whether the font size should be reduced until all of the text fits in a cell without wrapping. 
+
+\mbox{\Hypertarget{classxlnt_1_1alignment_aa3d3fabbe73a1e293e49c342afd3fdec}\label{classxlnt_1_1alignment_aa3d3fabbe73a1e293e49c342afd3fdec}} 
+\index{xlnt::alignment@{xlnt::alignment}!vertical@{vertical}}
+\index{vertical@{vertical}!xlnt::alignment@{xlnt::alignment}}
+\doxysubsubsection{\texorpdfstring{vertical()}{vertical()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1optional}{optional}}$<$ vertical\+\_\+alignment $>$ xlnt\+::alignment\+::vertical (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the optional vertical alignment. 
+
+\mbox{\Hypertarget{classxlnt_1_1alignment_aee7c07b807365c1f9b3a3e87e0d0f792}\label{classxlnt_1_1alignment_aee7c07b807365c1f9b3a3e87e0d0f792}} 
+\index{xlnt::alignment@{xlnt::alignment}!vertical@{vertical}}
+\index{vertical@{vertical}!xlnt::alignment@{xlnt::alignment}}
+\doxysubsubsection{\texorpdfstring{vertical()}{vertical()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \& xlnt\+::alignment\+::vertical (\begin{DoxyParamCaption}\item[{vertical\+\_\+alignment}]{vertical }\end{DoxyParamCaption})}
+
+
+
+Sets the vertical alignment. 
+
+\mbox{\Hypertarget{classxlnt_1_1alignment_aa4aa469b689cb63c2814db180d90ca5b}\label{classxlnt_1_1alignment_aa4aa469b689cb63c2814db180d90ca5b}} 
+\index{xlnt::alignment@{xlnt::alignment}!wrap@{wrap}}
+\index{wrap@{wrap}!xlnt::alignment@{xlnt::alignment}}
+\doxysubsubsection{\texorpdfstring{wrap()}{wrap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::alignment\+::wrap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if text-\/wrapping has been enabled. 
+
+\mbox{\Hypertarget{classxlnt_1_1alignment_a233d856dbf9a55b89082d8e20b57a014}\label{classxlnt_1_1alignment_a233d856dbf9a55b89082d8e20b57a014}} 
+\index{xlnt::alignment@{xlnt::alignment}!wrap@{wrap}}
+\index{wrap@{wrap}!xlnt::alignment@{xlnt::alignment}}
+\doxysubsubsection{\texorpdfstring{wrap()}{wrap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1alignment}{alignment}} \& xlnt\+::alignment\+::wrap (\begin{DoxyParamCaption}\item[{bool}]{wrap\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+Sets whether text in a cell should continue to multiple lines if it doesn\textquotesingle{}t fit in one line. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/styles/\mbox{\hyperlink{alignment_8hpp}{alignment.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/styles/\mbox{\hyperlink{alignment_8cpp}{alignment.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,380 @@
+\hypertarget{classxml_1_1serializer}{}\doxysection{xml\+::serializer Class Reference}
+\label{classxml_1_1serializer}\index{xml::serializer@{xml::serializer}}
+
+
+{\ttfamily \#include $<$serializer.\+hxx$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classxml_1_1qname}{xml\+::qname}} \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{qname\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxml_1_1serializer_a40288aaeb1a34c9394842b64b89c86b4}{serializer}} (std\+::ostream \&, const std\+::string \&\mbox{\hyperlink{classxml_1_1serializer_aeb4fabd42b753fea0fcafc7b05efd60f}{output\+\_\+name}}, unsigned short indentation=2)
+\item 
+const std\+::string \& \mbox{\hyperlink{classxml_1_1serializer_aeb4fabd42b753fea0fcafc7b05efd60f}{output\+\_\+name}} () const
+\item 
+\mbox{\hyperlink{classxml_1_1serializer_a80cb4f01f4763f3d63a016dc259c09f3}{$\sim$serializer}} ()
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_aec191469fa6bdd96101673713a1fd930}{start\+\_\+element}} (const \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}})
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_ad5dd39b65aac86775f3f3102194c6d37}{start\+\_\+element}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a167a7e8ed7932912d0ab2c87a1dea336}{start\+\_\+element}} (const std\+::string \&\mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}}, const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a91a20c0c510e96b16269f6e1a3cf3728}{end\+\_\+element}} ()
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_adac5b9ea8be82eba95ed5fdd88eda059}{end\+\_\+element}} (const \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}})
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_ad3628b0c7c9a45a745b8a62529aecacb}{end\+\_\+element}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_ad794f3a136ba488f142d499a5bdb2bef}{end\+\_\+element}} (const std\+::string \&\mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}}, const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a436246dbce299ec42d1d0ba245daf73a}{element}} (const std\+::string \&value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classxml_1_1serializer_a81d0055bcae1d90d4242d07b9501274d}{element}} (const T \&value)
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a0828c114a29d8d0c6693fe4531dd4366}{element}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, const std\+::string \&value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classxml_1_1serializer_a64278c3cc07e73c0c854c6613f948b91}{element}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, const T \&value)
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a77e19b008dc75494f7e3c5c6d7e12c87}{element}} (const \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}, const std\+::string \&value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classxml_1_1serializer_a2c21a94cfb8a40d26fe13b8c319efaaf}{element}} (const \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}, const T \&value)
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_aab20289667a63ad47deae5fb44d0bb3a}{element}} (const std\+::string \&namespace\+\_\+, const std\+::string \&\mbox{\hyperlink{structname}{name}}, const std\+::string \&value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classxml_1_1serializer_a03f709d58570a575f01789c0dd643a0f}{element}} (const std\+::string \&namespace\+\_\+, const std\+::string \&\mbox{\hyperlink{structname}{name}}, const T \&value)
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_aa5799c915765a972104ef9d16b6554a8}{start\+\_\+attribute}} (const \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}})
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a4df449eb407cb730beb8429a4edc091c}{start\+\_\+attribute}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_aa4837b27f0fc9470c095c689dd6e5510}{start\+\_\+attribute}} (const std\+::string \&\mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}}, const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a7501b50833d59878ed830144ee7d8bf2}{end\+\_\+attribute}} ()
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a34fc2905c7b36a2266d8e0cc9834c336}{end\+\_\+attribute}} (const \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}})
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a636c997ca5333af571f4be5ff1cd76cb}{end\+\_\+attribute}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a5ad1563bb61c2c120384156f3ea1fd05}{end\+\_\+attribute}} (const std\+::string \&\mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}}, const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a960eec758c820de3093ebc862cf06de5}{attribute}} (const \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}, const std\+::string \&value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classxml_1_1serializer_a3d1bc42ab97fd37482b3c240c7874ee5}{attribute}} (const \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}, const T \&value)
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a7e850671a4b7aa34083018086c838d7a}{attribute}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, const std\+::string \&value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classxml_1_1serializer_a06c5f63b71385da7a0f9cc6dea5bffe5}{attribute}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, const T \&value)
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a22251aab781a6755a3e3d06cdc7f170b}{attribute}} (const std\+::string \&\mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}}, const std\+::string \&\mbox{\hyperlink{structname}{name}}, const std\+::string \&value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classxml_1_1serializer_aeb3aa81366a82e275de1581221379c50}{attribute}} (const std\+::string \&\mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}}, const std\+::string \&\mbox{\hyperlink{structname}{name}}, const T \&value)
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a6abee967eed11ba99c809b9ea9d035a8}{characters}} (const std\+::string \&value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classxml_1_1serializer_aac0edded1c176a36d4a038efbacce52f}{characters}} (const T \&value)
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a89a578f4bc23cb9169eb1b1a7e3974a6}{namespace\+\_\+decl}} (const std\+::string \&\mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}}, const std\+::string \&\mbox{\hyperlink{structprefix}{prefix}})
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a7a46f0ff78fe5ba8cd2b5d62d1233bd9}{xml\+\_\+decl}} (const std\+::string \&version=\char`\"{}1.\+0\char`\"{}, const std\+::string \&\mbox{\hyperlink{structencoding}{encoding}}=\char`\"{}UTF-\/8\char`\"{}, const std\+::string \&standalone=\char`\"{}\char`\"{})
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a8b116f818aa2fb17d6f6af7280fd5263}{doctype\+\_\+decl}} (const std\+::string \&root\+\_\+element, const std\+::string \&public\+\_\+id=\char`\"{}\char`\"{}, const std\+::string \&system\+\_\+id=\char`\"{}\char`\"{}, const std\+::string \&internal\+\_\+subset=\char`\"{}\char`\"{})
+\item 
+bool \mbox{\hyperlink{classxml_1_1serializer_a95acae40957a1817497c708b4b38c273}{lookup\+\_\+namespace\+\_\+prefix}} (const std\+::string \&\mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}}, std\+::string \&\mbox{\hyperlink{structprefix}{prefix}}) const
+\item 
+\mbox{\hyperlink{classxml_1_1qname}{qname}} \mbox{\hyperlink{classxml_1_1serializer_af57d9c50094f2f63361b20a68cedf8f7}{current\+\_\+element}} () const
+\item 
+\mbox{\hyperlink{classxml_1_1qname}{qname}} \mbox{\hyperlink{classxml_1_1serializer_a81e9607d40e759ecaa635b5b61b1fec6}{current\+\_\+attribute}} () const
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_a79ea0bd51280c8dad2567fbbda65dc51}{suspend\+\_\+indentation}} ()
+\item 
+void \mbox{\hyperlink{classxml_1_1serializer_adf526a4a5043c0fd191d25bd573c12e5}{resume\+\_\+indentation}} ()
+\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxml_1_1serializer_a78bd8a4536d9f29327146cf3b335f69a}{indentation\+\_\+suspended}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}\label{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}} 
+\index{xml::serializer@{xml::serializer}!qname\_type@{qname\_type}}
+\index{qname\_type@{qname\_type}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{qname\_type}{qname\_type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classxml_1_1qname}{xml\+::qname}} \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{xml\+::serializer\+::qname\+\_\+type}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxml_1_1serializer_a40288aaeb1a34c9394842b64b89c86b4}\label{classxml_1_1serializer_a40288aaeb1a34c9394842b64b89c86b4}} 
+\index{xml::serializer@{xml::serializer}!serializer@{serializer}}
+\index{serializer@{serializer}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{serializer()}{serializer()}}
+{\footnotesize\ttfamily xml\+::serializer\+::serializer (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{,  }\item[{const std\+::string \&}]{output\+\_\+name,  }\item[{unsigned short}]{indentation = {\ttfamily 2} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a80cb4f01f4763f3d63a016dc259c09f3}\label{classxml_1_1serializer_a80cb4f01f4763f3d63a016dc259c09f3}} 
+\index{xml::serializer@{xml::serializer}!````~serializer@{$\sim$serializer}}
+\index{````~serializer@{$\sim$serializer}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{$\sim$serializer()}{~serializer()}}
+{\footnotesize\ttfamily xml\+::serializer\+::$\sim$serializer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxml_1_1serializer_a960eec758c820de3093ebc862cf06de5}\label{classxml_1_1serializer_a960eec758c820de3093ebc862cf06de5}} 
+\index{xml::serializer@{xml::serializer}!attribute@{attribute}}
+\index{attribute@{attribute}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{attribute()}{attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::attribute (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{qname\+\_\+type}} \&}]{qname,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a3d1bc42ab97fd37482b3c240c7874ee5}\label{classxml_1_1serializer_a3d1bc42ab97fd37482b3c240c7874ee5}} 
+\index{xml::serializer@{xml::serializer}!attribute@{attribute}}
+\index{attribute@{attribute}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{attribute()}{attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void xml\+::serializer\+::attribute (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{qname\+\_\+type}} \&}]{qname,  }\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a7e850671a4b7aa34083018086c838d7a}\label{classxml_1_1serializer_a7e850671a4b7aa34083018086c838d7a}} 
+\index{xml::serializer@{xml::serializer}!attribute@{attribute}}
+\index{attribute@{attribute}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{attribute()}{attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::attribute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a06c5f63b71385da7a0f9cc6dea5bffe5}\label{classxml_1_1serializer_a06c5f63b71385da7a0f9cc6dea5bffe5}} 
+\index{xml::serializer@{xml::serializer}!attribute@{attribute}}
+\index{attribute@{attribute}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{attribute()}{attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void xml\+::serializer\+::attribute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a22251aab781a6755a3e3d06cdc7f170b}\label{classxml_1_1serializer_a22251aab781a6755a3e3d06cdc7f170b}} 
+\index{xml::serializer@{xml::serializer}!attribute@{attribute}}
+\index{attribute@{attribute}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{attribute()}{attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::attribute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ns,  }\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1serializer_aeb3aa81366a82e275de1581221379c50}\label{classxml_1_1serializer_aeb3aa81366a82e275de1581221379c50}} 
+\index{xml::serializer@{xml::serializer}!attribute@{attribute}}
+\index{attribute@{attribute}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{attribute()}{attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void xml\+::serializer\+::attribute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ns,  }\item[{const std\+::string \&}]{name,  }\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a6abee967eed11ba99c809b9ea9d035a8}\label{classxml_1_1serializer_a6abee967eed11ba99c809b9ea9d035a8}} 
+\index{xml::serializer@{xml::serializer}!characters@{characters}}
+\index{characters@{characters}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{characters()}{characters()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::characters (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1serializer_aac0edded1c176a36d4a038efbacce52f}\label{classxml_1_1serializer_aac0edded1c176a36d4a038efbacce52f}} 
+\index{xml::serializer@{xml::serializer}!characters@{characters}}
+\index{characters@{characters}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{characters()}{characters()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void xml\+::serializer\+::characters (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a81e9607d40e759ecaa635b5b61b1fec6}\label{classxml_1_1serializer_a81e9607d40e759ecaa635b5b61b1fec6}} 
+\index{xml::serializer@{xml::serializer}!current\_attribute@{current\_attribute}}
+\index{current\_attribute@{current\_attribute}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{current\_attribute()}{current\_attribute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxml_1_1qname}{qname}} xml\+::serializer\+::current\+\_\+attribute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxml_1_1serializer_af57d9c50094f2f63361b20a68cedf8f7}\label{classxml_1_1serializer_af57d9c50094f2f63361b20a68cedf8f7}} 
+\index{xml::serializer@{xml::serializer}!current\_element@{current\_element}}
+\index{current\_element@{current\_element}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{current\_element()}{current\_element()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxml_1_1qname}{qname}} xml\+::serializer\+::current\+\_\+element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a8b116f818aa2fb17d6f6af7280fd5263}\label{classxml_1_1serializer_a8b116f818aa2fb17d6f6af7280fd5263}} 
+\index{xml::serializer@{xml::serializer}!doctype\_decl@{doctype\_decl}}
+\index{doctype\_decl@{doctype\_decl}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{doctype\_decl()}{doctype\_decl()}}
+{\footnotesize\ttfamily void xml\+::serializer\+::doctype\+\_\+decl (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{root\+\_\+element,  }\item[{const std\+::string \&}]{public\+\_\+id = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const std\+::string \&}]{system\+\_\+id = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const std\+::string \&}]{internal\+\_\+subset = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a77e19b008dc75494f7e3c5c6d7e12c87}\label{classxml_1_1serializer_a77e19b008dc75494f7e3c5c6d7e12c87}} 
+\index{xml::serializer@{xml::serializer}!element@{element}}
+\index{element@{element}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::element (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{qname\+\_\+type}} \&}]{qname,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a2c21a94cfb8a40d26fe13b8c319efaaf}\label{classxml_1_1serializer_a2c21a94cfb8a40d26fe13b8c319efaaf}} 
+\index{xml::serializer@{xml::serializer}!element@{element}}
+\index{element@{element}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void xml\+::serializer\+::element (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{qname\+\_\+type}} \&}]{qname,  }\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a0828c114a29d8d0c6693fe4531dd4366}\label{classxml_1_1serializer_a0828c114a29d8d0c6693fe4531dd4366}} 
+\index{xml::serializer@{xml::serializer}!element@{element}}
+\index{element@{element}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::element (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a64278c3cc07e73c0c854c6613f948b91}\label{classxml_1_1serializer_a64278c3cc07e73c0c854c6613f948b91}} 
+\index{xml::serializer@{xml::serializer}!element@{element}}
+\index{element@{element}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void xml\+::serializer\+::element (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_aab20289667a63ad47deae5fb44d0bb3a}\label{classxml_1_1serializer_aab20289667a63ad47deae5fb44d0bb3a}} 
+\index{xml::serializer@{xml::serializer}!element@{element}}
+\index{element@{element}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::element (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{namespace\+\_\+,  }\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a03f709d58570a575f01789c0dd643a0f}\label{classxml_1_1serializer_a03f709d58570a575f01789c0dd643a0f}} 
+\index{xml::serializer@{xml::serializer}!element@{element}}
+\index{element@{element}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void xml\+::serializer\+::element (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{namespace\+\_\+,  }\item[{const std\+::string \&}]{name,  }\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a436246dbce299ec42d1d0ba245daf73a}\label{classxml_1_1serializer_a436246dbce299ec42d1d0ba245daf73a}} 
+\index{xml::serializer@{xml::serializer}!element@{element}}
+\index{element@{element}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::element (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a81d0055bcae1d90d4242d07b9501274d}\label{classxml_1_1serializer_a81d0055bcae1d90d4242d07b9501274d}} 
+\index{xml::serializer@{xml::serializer}!element@{element}}
+\index{element@{element}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void xml\+::serializer\+::element (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a7501b50833d59878ed830144ee7d8bf2}\label{classxml_1_1serializer_a7501b50833d59878ed830144ee7d8bf2}} 
+\index{xml::serializer@{xml::serializer}!end\_attribute@{end\_attribute}}
+\index{end\_attribute@{end\_attribute}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{end\_attribute()}{end\_attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::end\+\_\+attribute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a34fc2905c7b36a2266d8e0cc9834c336}\label{classxml_1_1serializer_a34fc2905c7b36a2266d8e0cc9834c336}} 
+\index{xml::serializer@{xml::serializer}!end\_attribute@{end\_attribute}}
+\index{end\_attribute@{end\_attribute}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{end\_attribute()}{end\_attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::end\+\_\+attribute (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{qname\+\_\+type}} \&}]{qname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a636c997ca5333af571f4be5ff1cd76cb}\label{classxml_1_1serializer_a636c997ca5333af571f4be5ff1cd76cb}} 
+\index{xml::serializer@{xml::serializer}!end\_attribute@{end\_attribute}}
+\index{end\_attribute@{end\_attribute}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{end\_attribute()}{end\_attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::end\+\_\+attribute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a5ad1563bb61c2c120384156f3ea1fd05}\label{classxml_1_1serializer_a5ad1563bb61c2c120384156f3ea1fd05}} 
+\index{xml::serializer@{xml::serializer}!end\_attribute@{end\_attribute}}
+\index{end\_attribute@{end\_attribute}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{end\_attribute()}{end\_attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::end\+\_\+attribute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ns,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a91a20c0c510e96b16269f6e1a3cf3728}\label{classxml_1_1serializer_a91a20c0c510e96b16269f6e1a3cf3728}} 
+\index{xml::serializer@{xml::serializer}!end\_element@{end\_element}}
+\index{end\_element@{end\_element}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{end\_element()}{end\_element()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::end\+\_\+element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1serializer_adac5b9ea8be82eba95ed5fdd88eda059}\label{classxml_1_1serializer_adac5b9ea8be82eba95ed5fdd88eda059}} 
+\index{xml::serializer@{xml::serializer}!end\_element@{end\_element}}
+\index{end\_element@{end\_element}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{end\_element()}{end\_element()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::end\+\_\+element (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{qname\+\_\+type}} \&}]{qname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_ad3628b0c7c9a45a745b8a62529aecacb}\label{classxml_1_1serializer_ad3628b0c7c9a45a745b8a62529aecacb}} 
+\index{xml::serializer@{xml::serializer}!end\_element@{end\_element}}
+\index{end\_element@{end\_element}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{end\_element()}{end\_element()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::end\+\_\+element (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_ad794f3a136ba488f142d499a5bdb2bef}\label{classxml_1_1serializer_ad794f3a136ba488f142d499a5bdb2bef}} 
+\index{xml::serializer@{xml::serializer}!end\_element@{end\_element}}
+\index{end\_element@{end\_element}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{end\_element()}{end\_element()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::end\+\_\+element (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ns,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a78bd8a4536d9f29327146cf3b335f69a}\label{classxml_1_1serializer_a78bd8a4536d9f29327146cf3b335f69a}} 
+\index{xml::serializer@{xml::serializer}!indentation\_suspended@{indentation\_suspended}}
+\index{indentation\_suspended@{indentation\_suspended}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{indentation\_suspended()}{indentation\_suspended()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} xml\+::serializer\+::indentation\+\_\+suspended (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a95acae40957a1817497c708b4b38c273}\label{classxml_1_1serializer_a95acae40957a1817497c708b4b38c273}} 
+\index{xml::serializer@{xml::serializer}!lookup\_namespace\_prefix@{lookup\_namespace\_prefix}}
+\index{lookup\_namespace\_prefix@{lookup\_namespace\_prefix}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{lookup\_namespace\_prefix()}{lookup\_namespace\_prefix()}}
+{\footnotesize\ttfamily bool xml\+::serializer\+::lookup\+\_\+namespace\+\_\+prefix (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ns,  }\item[{std\+::string \&}]{prefix }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a89a578f4bc23cb9169eb1b1a7e3974a6}\label{classxml_1_1serializer_a89a578f4bc23cb9169eb1b1a7e3974a6}} 
+\index{xml::serializer@{xml::serializer}!namespace\_decl@{namespace\_decl}}
+\index{namespace\_decl@{namespace\_decl}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{namespace\_decl()}{namespace\_decl()}}
+{\footnotesize\ttfamily void xml\+::serializer\+::namespace\+\_\+decl (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ns,  }\item[{const std\+::string \&}]{prefix }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1serializer_aeb4fabd42b753fea0fcafc7b05efd60f}\label{classxml_1_1serializer_aeb4fabd42b753fea0fcafc7b05efd60f}} 
+\index{xml::serializer@{xml::serializer}!output\_name@{output\_name}}
+\index{output\_name@{output\_name}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{output\_name()}{output\_name()}}
+{\footnotesize\ttfamily const std\+::string\& xml\+::serializer\+::output\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_adf526a4a5043c0fd191d25bd573c12e5}\label{classxml_1_1serializer_adf526a4a5043c0fd191d25bd573c12e5}} 
+\index{xml::serializer@{xml::serializer}!resume\_indentation@{resume\_indentation}}
+\index{resume\_indentation@{resume\_indentation}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{resume\_indentation()}{resume\_indentation()}}
+{\footnotesize\ttfamily void xml\+::serializer\+::resume\+\_\+indentation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1serializer_aa5799c915765a972104ef9d16b6554a8}\label{classxml_1_1serializer_aa5799c915765a972104ef9d16b6554a8}} 
+\index{xml::serializer@{xml::serializer}!start\_attribute@{start\_attribute}}
+\index{start\_attribute@{start\_attribute}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{start\_attribute()}{start\_attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::start\+\_\+attribute (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{qname\+\_\+type}} \&}]{qname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a4df449eb407cb730beb8429a4edc091c}\label{classxml_1_1serializer_a4df449eb407cb730beb8429a4edc091c}} 
+\index{xml::serializer@{xml::serializer}!start\_attribute@{start\_attribute}}
+\index{start\_attribute@{start\_attribute}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{start\_attribute()}{start\_attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::start\+\_\+attribute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_aa4837b27f0fc9470c095c689dd6e5510}\label{classxml_1_1serializer_aa4837b27f0fc9470c095c689dd6e5510}} 
+\index{xml::serializer@{xml::serializer}!start\_attribute@{start\_attribute}}
+\index{start\_attribute@{start\_attribute}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{start\_attribute()}{start\_attribute()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::start\+\_\+attribute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ns,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1serializer_aec191469fa6bdd96101673713a1fd930}\label{classxml_1_1serializer_aec191469fa6bdd96101673713a1fd930}} 
+\index{xml::serializer@{xml::serializer}!start\_element@{start\_element}}
+\index{start\_element@{start\_element}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{start\_element()}{start\_element()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::start\+\_\+element (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxml_1_1serializer_a9ce29370c4e65e1652cb0c2297d017b8}{qname\+\_\+type}} \&}]{qname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_ad5dd39b65aac86775f3f3102194c6d37}\label{classxml_1_1serializer_ad5dd39b65aac86775f3f3102194c6d37}} 
+\index{xml::serializer@{xml::serializer}!start\_element@{start\_element}}
+\index{start\_element@{start\_element}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{start\_element()}{start\_element()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::start\+\_\+element (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a167a7e8ed7932912d0ab2c87a1dea336}\label{classxml_1_1serializer_a167a7e8ed7932912d0ab2c87a1dea336}} 
+\index{xml::serializer@{xml::serializer}!start\_element@{start\_element}}
+\index{start\_element@{start\_element}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{start\_element()}{start\_element()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void xml\+::serializer\+::start\+\_\+element (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ns,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a79ea0bd51280c8dad2567fbbda65dc51}\label{classxml_1_1serializer_a79ea0bd51280c8dad2567fbbda65dc51}} 
+\index{xml::serializer@{xml::serializer}!suspend\_indentation@{suspend\_indentation}}
+\index{suspend\_indentation@{suspend\_indentation}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{suspend\_indentation()}{suspend\_indentation()}}
+{\footnotesize\ttfamily void xml\+::serializer\+::suspend\+\_\+indentation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classxml_1_1serializer_a7a46f0ff78fe5ba8cd2b5d62d1233bd9}\label{classxml_1_1serializer_a7a46f0ff78fe5ba8cd2b5d62d1233bd9}} 
+\index{xml::serializer@{xml::serializer}!xml\_decl@{xml\_decl}}
+\index{xml\_decl@{xml\_decl}!xml::serializer@{xml::serializer}}
+\doxysubsubsection{\texorpdfstring{xml\_decl()}{xml\_decl()}}
+{\footnotesize\ttfamily void xml\+::serializer\+::xml\+\_\+decl (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{version = {\ttfamily \char`\"{}1.0\char`\"{}},  }\item[{const std\+::string \&}]{encoding = {\ttfamily \char`\"{}UTF-\/8\char`\"{}},  }\item[{const std\+::string \&}]{standalone = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/libstudxml/libstudxml/\mbox{\hyperlink{serializer_8hxx}{serializer.\+hxx}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/libstudxml/libstudxml/\mbox{\hyperlink{serializer_8cxx}{serializer.\+cxx}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/libstudxml/libstudxml/\mbox{\hyperlink{serializer_8ixx}{serializer.\+ixx}}\end{DoxyCompactItemize}

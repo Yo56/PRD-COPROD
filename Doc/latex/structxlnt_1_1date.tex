@@ -1,0 +1,160 @@
+\hypertarget{structxlnt_1_1date}{}\doxysection{xlnt\+::date Struct Reference}
+\label{structxlnt_1_1date}\index{xlnt::date@{xlnt::date}}
+
+
+A date is a specific day specified in terms of a year, month, and day. It can also be initialized as a number of days since a base date using \mbox{\hyperlink{structxlnt_1_1date_a687843bb38ce593c75593e5d90ebd23e}{date\+::from\+\_\+number}}.  
+
+
+
+
+{\ttfamily \#include $<$date.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structxlnt_1_1date_a8d476baff7ac759d8c2f05977fa79788}{date}} (int year\+\_\+, int month\+\_\+, int day\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructs a data from a given year, month, and day. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structxlnt_1_1date_a572c40ae39283f2dda7d52d7a897b727}{to\+\_\+number}} (calendar base\+\_\+date) const
+\begin{DoxyCompactList}\small\item\em Return the number of days between this date and base\+\_\+date. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structxlnt_1_1date_ab9756120b711701072d93670fd2c0edd}{weekday}} () const
+\begin{DoxyCompactList}\small\item\em Calculates and returns the day of the week that this date represents in the range 0 to 6 where 0 represents Sunday. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structxlnt_1_1date_af9ded4a4a7ecc2c593219a16d785e9cc}{operator==}} (const \mbox{\hyperlink{structxlnt_1_1date}{date}} \&comparand) const
+\begin{DoxyCompactList}\small\item\em Return true if this date is equal to comparand. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structxlnt_1_1date_a2b5067842a63174cfefe75736ac95fc1}{operator!=}} (const \mbox{\hyperlink{structxlnt_1_1date}{date}} \&comparand) const
+\begin{DoxyCompactList}\small\item\em Return true if this date is equal to comparand. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structxlnt_1_1date}{date}} \mbox{\hyperlink{structxlnt_1_1date_aea8ef8f66654b67ca40386c7c76a4d3c}{today}} ()
+\begin{DoxyCompactList}\small\item\em Return the current date according to the system time. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structxlnt_1_1date}{date}} \mbox{\hyperlink{structxlnt_1_1date_a687843bb38ce593c75593e5d90ebd23e}{from\+\_\+number}} (int days\+\_\+since\+\_\+base\+\_\+year, calendar base\+\_\+date)
+\begin{DoxyCompactList}\small\item\em Return a date by adding days\+\_\+since\+\_\+base\+\_\+year to base\+\_\+date. This includes leap years. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structxlnt_1_1date_a662ca495d6a7abffcf271b13f7ac8714}{year}}
+\begin{DoxyCompactList}\small\item\em The year \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structxlnt_1_1date_a1c0f92250ac76a5fa5425a629b0a19ce}{month}}
+\begin{DoxyCompactList}\small\item\em The month \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structxlnt_1_1date_a1ec8b82ef9c82626527a6d890bee24ce}{day}}
+\begin{DoxyCompactList}\small\item\em The day \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A date is a specific day specified in terms of a year, month, and day. It can also be initialized as a number of days since a base date using \mbox{\hyperlink{structxlnt_1_1date_a687843bb38ce593c75593e5d90ebd23e}{date\+::from\+\_\+number}}. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structxlnt_1_1date_a8d476baff7ac759d8c2f05977fa79788}\label{structxlnt_1_1date_a8d476baff7ac759d8c2f05977fa79788}} 
+\index{xlnt::date@{xlnt::date}!date@{date}}
+\index{date@{date}!xlnt::date@{xlnt::date}}
+\doxysubsubsection{\texorpdfstring{date()}{date()}}
+{\footnotesize\ttfamily xlnt\+::date\+::date (\begin{DoxyParamCaption}\item[{int}]{year\+\_\+,  }\item[{int}]{month\+\_\+,  }\item[{int}]{day\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Constructs a data from a given year, month, and day. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structxlnt_1_1date_a687843bb38ce593c75593e5d90ebd23e}\label{structxlnt_1_1date_a687843bb38ce593c75593e5d90ebd23e}} 
+\index{xlnt::date@{xlnt::date}!from\_number@{from\_number}}
+\index{from\_number@{from\_number}!xlnt::date@{xlnt::date}}
+\doxysubsubsection{\texorpdfstring{from\_number()}{from\_number()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structxlnt_1_1date}{date}} xlnt\+::date\+::from\+\_\+number (\begin{DoxyParamCaption}\item[{int}]{days\+\_\+since\+\_\+base\+\_\+year,  }\item[{calendar}]{base\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return a date by adding days\+\_\+since\+\_\+base\+\_\+year to base\+\_\+date. This includes leap years. 
+
+\mbox{\Hypertarget{structxlnt_1_1date_a2b5067842a63174cfefe75736ac95fc1}\label{structxlnt_1_1date_a2b5067842a63174cfefe75736ac95fc1}} 
+\index{xlnt::date@{xlnt::date}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::date@{xlnt::date}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool xlnt\+::date\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1date}{date}} \&}]{comparand }\end{DoxyParamCaption}) const}
+
+
+
+Return true if this date is equal to comparand. 
+
+\mbox{\Hypertarget{structxlnt_1_1date_af9ded4a4a7ecc2c593219a16d785e9cc}\label{structxlnt_1_1date_af9ded4a4a7ecc2c593219a16d785e9cc}} 
+\index{xlnt::date@{xlnt::date}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::date@{xlnt::date}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool xlnt\+::date\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1date}{date}} \&}]{comparand }\end{DoxyParamCaption}) const}
+
+
+
+Return true if this date is equal to comparand. 
+
+\mbox{\Hypertarget{structxlnt_1_1date_a572c40ae39283f2dda7d52d7a897b727}\label{structxlnt_1_1date_a572c40ae39283f2dda7d52d7a897b727}} 
+\index{xlnt::date@{xlnt::date}!to\_number@{to\_number}}
+\index{to\_number@{to\_number}!xlnt::date@{xlnt::date}}
+\doxysubsubsection{\texorpdfstring{to\_number()}{to\_number()}}
+{\footnotesize\ttfamily int xlnt\+::date\+::to\+\_\+number (\begin{DoxyParamCaption}\item[{calendar}]{base\+\_\+date }\end{DoxyParamCaption}) const}
+
+
+
+Return the number of days between this date and base\+\_\+date. 
+
+\mbox{\Hypertarget{structxlnt_1_1date_aea8ef8f66654b67ca40386c7c76a4d3c}\label{structxlnt_1_1date_aea8ef8f66654b67ca40386c7c76a4d3c}} 
+\index{xlnt::date@{xlnt::date}!today@{today}}
+\index{today@{today}!xlnt::date@{xlnt::date}}
+\doxysubsubsection{\texorpdfstring{today()}{today()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structxlnt_1_1date}{date}} xlnt\+::date\+::today (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the current date according to the system time. 
+
+\mbox{\Hypertarget{structxlnt_1_1date_ab9756120b711701072d93670fd2c0edd}\label{structxlnt_1_1date_ab9756120b711701072d93670fd2c0edd}} 
+\index{xlnt::date@{xlnt::date}!weekday@{weekday}}
+\index{weekday@{weekday}!xlnt::date@{xlnt::date}}
+\doxysubsubsection{\texorpdfstring{weekday()}{weekday()}}
+{\footnotesize\ttfamily int xlnt\+::date\+::weekday (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Calculates and returns the day of the week that this date represents in the range 0 to 6 where 0 represents Sunday. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structxlnt_1_1date_a1ec8b82ef9c82626527a6d890bee24ce}\label{structxlnt_1_1date_a1ec8b82ef9c82626527a6d890bee24ce}} 
+\index{xlnt::date@{xlnt::date}!day@{day}}
+\index{day@{day}!xlnt::date@{xlnt::date}}
+\doxysubsubsection{\texorpdfstring{day}{day}}
+{\footnotesize\ttfamily int xlnt\+::date\+::day}
+
+
+
+The day 
+
+\mbox{\Hypertarget{structxlnt_1_1date_a1c0f92250ac76a5fa5425a629b0a19ce}\label{structxlnt_1_1date_a1c0f92250ac76a5fa5425a629b0a19ce}} 
+\index{xlnt::date@{xlnt::date}!month@{month}}
+\index{month@{month}!xlnt::date@{xlnt::date}}
+\doxysubsubsection{\texorpdfstring{month}{month}}
+{\footnotesize\ttfamily int xlnt\+::date\+::month}
+
+
+
+The month 
+
+\mbox{\Hypertarget{structxlnt_1_1date_a662ca495d6a7abffcf271b13f7ac8714}\label{structxlnt_1_1date_a662ca495d6a7abffcf271b13f7ac8714}} 
+\index{xlnt::date@{xlnt::date}!year@{year}}
+\index{year@{year}!xlnt::date@{xlnt::date}}
+\doxysubsubsection{\texorpdfstring{year}{year}}
+{\footnotesize\ttfamily int xlnt\+::date\+::year}
+
+
+
+The year 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/utils/\mbox{\hyperlink{date_8hpp}{date.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/utils/\mbox{\hyperlink{date_8cpp}{date.\+cpp}}\end{DoxyCompactItemize}

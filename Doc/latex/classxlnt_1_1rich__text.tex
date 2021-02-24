@@ -1,0 +1,295 @@
+\hypertarget{classxlnt_1_1rich__text}{}\doxysection{xlnt\+::rich\+\_\+text Class Reference}
+\label{classxlnt_1_1rich__text}\index{xlnt::rich\_text@{xlnt::rich\_text}}
+
+
+Encapsulates zero or more formatted text runs where a text run is a string of text with the same defined formatting.  
+
+
+
+
+{\ttfamily \#include $<$rich\+\_\+text.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxlnt_1_1rich__text_a343e2254143af5e6037ab10d7b527997}{rich\+\_\+text}} ()=default
+\begin{DoxyCompactList}\small\item\em Constructs an empty rich text object with no font and empty text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1rich__text_a2a1c063651e96b4947ddd5f485e4b282}{rich\+\_\+text}} (const std\+::string \&\mbox{\hyperlink{classxlnt_1_1rich__text_a642d23380a2e33bcce2dc67a49c36313}{plain\+\_\+text}})
+\begin{DoxyCompactList}\small\item\em Constructs a rich text object with the given text and no font. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1rich__text_ade6628efcf3dbbd494423b444520d37e}{rich\+\_\+text}} (const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&other)
+\begin{DoxyCompactList}\small\item\em Constructs a rich text object from other \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1rich__text_a919222e6abe1d04f068e1f3966889667}{rich\+\_\+text}} (const std\+::string \&\mbox{\hyperlink{classxlnt_1_1rich__text_a642d23380a2e33bcce2dc67a49c36313}{plain\+\_\+text}}, const class \mbox{\hyperlink{classxlnt_1_1font}{font}} \&text\+\_\+font)
+\begin{DoxyCompactList}\small\item\em Constructs a rich text object with the given text and font. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1rich__text_affff267c6f32c829b34c677b29131665}{rich\+\_\+text}} (const \mbox{\hyperlink{structxlnt_1_1rich__text__run}{rich\+\_\+text\+\_\+run}} \&single\+\_\+run)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1rich__text_aeae6b654405636c483dfbb1c31860db1}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Removes all text runs from this text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1rich__text_a642d23380a2e33bcce2dc67a49c36313}{plain\+\_\+text}} (const std\+::string \&s, bool preserve\+\_\+space)
+\begin{DoxyCompactList}\small\item\em Clears any runs in this text and adds a single run with default formatting and the given string as its textual content. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classxlnt_1_1rich__text_a90e4cbb43ea6b422d475aa2b29c0d976}{plain\+\_\+text}} () const
+\begin{DoxyCompactList}\small\item\em Combines the textual content of each text run in order and returns the result. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structxlnt_1_1rich__text__run}{rich\+\_\+text\+\_\+run}} $>$ \mbox{\hyperlink{classxlnt_1_1rich__text_ac1c5a4f0b4ee2fbb19569ca5e53e7a36}{runs}} () const
+\begin{DoxyCompactList}\small\item\em Returns a copy of the individual runs that comprise this text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1rich__text_a2b1dc91f5eb4ab1df57fe5c590a4df75}{runs}} (const std\+::vector$<$ \mbox{\hyperlink{structxlnt_1_1rich__text__run}{rich\+\_\+text\+\_\+run}} $>$ \&new\+\_\+runs)
+\begin{DoxyCompactList}\small\item\em Sets the runs of this text all at once. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1rich__text_a3eba7c736ea13e227c5984dca0315637}{add\+\_\+run}} (const \mbox{\hyperlink{structxlnt_1_1rich__text__run}{rich\+\_\+text\+\_\+run}} \&t)
+\begin{DoxyCompactList}\small\item\em Adds a new run to the end of the set of runs. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structxlnt_1_1phonetic__run}{phonetic\+\_\+run}} $>$ \mbox{\hyperlink{classxlnt_1_1rich__text_af9bca6bb270d5cd4c6cb3857c44e036d}{phonetic\+\_\+runs}} () const
+\begin{DoxyCompactList}\small\item\em Returns a copy of the individual runs that comprise this text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1rich__text_a1fb8b38e6ada8a05120935a18432e5e5}{phonetic\+\_\+runs}} (const std\+::vector$<$ \mbox{\hyperlink{structxlnt_1_1phonetic__run}{phonetic\+\_\+run}} $>$ \&new\+\_\+phonetic\+\_\+runs)
+\begin{DoxyCompactList}\small\item\em Sets the runs of this text all at once. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1rich__text_ad5a57ea473e765b7c2b9ae594958dbaa}{add\+\_\+phonetic\+\_\+run}} (const \mbox{\hyperlink{structxlnt_1_1phonetic__run}{phonetic\+\_\+run}} \&t)
+\begin{DoxyCompactList}\small\item\em Adds a new run to the end of the set of runs. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1rich__text_a8bcb341d09fc78e5f3275482a64a4f75}{has\+\_\+phonetic\+\_\+properties}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this text has phonetic properties \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classxlnt_1_1phonetic__pr}{phonetic\+\_\+pr}} \& \mbox{\hyperlink{classxlnt_1_1rich__text_a124a7b501611ca07de127537e06298d0}{phonetic\+\_\+properties}} () const
+\begin{DoxyCompactList}\small\item\em Returns the phonetic properties of this text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classxlnt_1_1rich__text_afbd3fc18f001773e1c403d7c0f7a414d}{phonetic\+\_\+properties}} (const \mbox{\hyperlink{classxlnt_1_1phonetic__pr}{phonetic\+\_\+pr}} \&phonetic\+\_\+props)
+\begin{DoxyCompactList}\small\item\em Sets the phonetic properties of this text to phonetic\+\_\+props \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \& \mbox{\hyperlink{classxlnt_1_1rich__text_a80a93158d58806f01225f95b39ab29f9}{operator=}} (const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Copies rich text object from other \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1rich__text_a0b0f5c886f984040032349c3271c5389}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Returns true if the runs that make up this text are identical to those in rhs. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1rich__text_adc3f89932b921f7945ae4a1efb612164}{operator!=}} (const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Returns true if the runs that make up this text are identical to those in rhs. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1rich__text_a26a030112ee2aac545687b5c6033d43e}{operator==}} (const std\+::string \&rhs) const
+\begin{DoxyCompactList}\small\item\em Returns true if this text has a single unformatted run with text equal to rhs. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classxlnt_1_1rich__text_ad74f5fff22ca105320b026756356ac61}{operator!=}} (const std\+::string \&rhs) const
+\begin{DoxyCompactList}\small\item\em Returns true if this text has a single unformatted run with text equal to rhs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encapsulates zero or more formatted text runs where a text run is a string of text with the same defined formatting. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxlnt_1_1rich__text_a343e2254143af5e6037ab10d7b527997}\label{classxlnt_1_1rich__text_a343e2254143af5e6037ab10d7b527997}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!rich\_text@{rich\_text}}
+\index{rich\_text@{rich\_text}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{rich\_text()}{rich\_text()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily xlnt\+::rich\+\_\+text\+::rich\+\_\+text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Constructs an empty rich text object with no font and empty text. 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_a2a1c063651e96b4947ddd5f485e4b282}\label{classxlnt_1_1rich__text_a2a1c063651e96b4947ddd5f485e4b282}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!rich\_text@{rich\_text}}
+\index{rich\_text@{rich\_text}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{rich\_text()}{rich\_text()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily xlnt\+::rich\+\_\+text\+::rich\+\_\+text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{plain\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+Constructs a rich text object with the given text and no font. 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_ade6628efcf3dbbd494423b444520d37e}\label{classxlnt_1_1rich__text_ade6628efcf3dbbd494423b444520d37e}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!rich\_text@{rich\_text}}
+\index{rich\_text@{rich\_text}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{rich\_text()}{rich\_text()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily xlnt\+::rich\+\_\+text\+::rich\+\_\+text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Constructs a rich text object from other 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_a919222e6abe1d04f068e1f3966889667}\label{classxlnt_1_1rich__text_a919222e6abe1d04f068e1f3966889667}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!rich\_text@{rich\_text}}
+\index{rich\_text@{rich\_text}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{rich\_text()}{rich\_text()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily xlnt\+::rich\+\_\+text\+::rich\+\_\+text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{plain\+\_\+text,  }\item[{const class \mbox{\hyperlink{classxlnt_1_1font}{font}} \&}]{text\+\_\+font }\end{DoxyParamCaption})}
+
+
+
+Constructs a rich text object with the given text and font. 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_affff267c6f32c829b34c677b29131665}\label{classxlnt_1_1rich__text_affff267c6f32c829b34c677b29131665}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!rich\_text@{rich\_text}}
+\index{rich\_text@{rich\_text}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{rich\_text()}{rich\_text()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily xlnt\+::rich\+\_\+text\+::rich\+\_\+text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1rich__text__run}{rich\+\_\+text\+\_\+run}} \&}]{single\+\_\+run }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxlnt_1_1rich__text_ad5a57ea473e765b7c2b9ae594958dbaa}\label{classxlnt_1_1rich__text_ad5a57ea473e765b7c2b9ae594958dbaa}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!add\_phonetic\_run@{add\_phonetic\_run}}
+\index{add\_phonetic\_run@{add\_phonetic\_run}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{add\_phonetic\_run()}{add\_phonetic\_run()}}
+{\footnotesize\ttfamily void xlnt\+::rich\+\_\+text\+::add\+\_\+phonetic\+\_\+run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1phonetic__run}{phonetic\+\_\+run}} \&}]{t }\end{DoxyParamCaption})}
+
+
+
+Adds a new run to the end of the set of runs. 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_a3eba7c736ea13e227c5984dca0315637}\label{classxlnt_1_1rich__text_a3eba7c736ea13e227c5984dca0315637}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!add\_run@{add\_run}}
+\index{add\_run@{add\_run}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{add\_run()}{add\_run()}}
+{\footnotesize\ttfamily void xlnt\+::rich\+\_\+text\+::add\+\_\+run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structxlnt_1_1rich__text__run}{rich\+\_\+text\+\_\+run}} \&}]{t }\end{DoxyParamCaption})}
+
+
+
+Adds a new run to the end of the set of runs. 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_aeae6b654405636c483dfbb1c31860db1}\label{classxlnt_1_1rich__text_aeae6b654405636c483dfbb1c31860db1}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!clear@{clear}}
+\index{clear@{clear}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void xlnt\+::rich\+\_\+text\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes all text runs from this text. 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_a8bcb341d09fc78e5f3275482a64a4f75}\label{classxlnt_1_1rich__text_a8bcb341d09fc78e5f3275482a64a4f75}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!has\_phonetic\_properties@{has\_phonetic\_properties}}
+\index{has\_phonetic\_properties@{has\_phonetic\_properties}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{has\_phonetic\_properties()}{has\_phonetic\_properties()}}
+{\footnotesize\ttfamily bool xlnt\+::rich\+\_\+text\+::has\+\_\+phonetic\+\_\+properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this text has phonetic properties 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_adc3f89932b921f7945ae4a1efb612164}\label{classxlnt_1_1rich__text_adc3f89932b921f7945ae4a1efb612164}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::rich\+\_\+text\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the runs that make up this text are identical to those in rhs. 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_ad74f5fff22ca105320b026756356ac61}\label{classxlnt_1_1rich__text_ad74f5fff22ca105320b026756356ac61}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool xlnt\+::rich\+\_\+text\+::operator!= (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this text has a single unformatted run with text equal to rhs. 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_a80a93158d58806f01225f95b39ab29f9}\label{classxlnt_1_1rich__text_a80a93158d58806f01225f95b39ab29f9}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!operator=@{operator=}}
+\index{operator=@{operator=}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \& xlnt\+::rich\+\_\+text\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Copies rich text object from other 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_a0b0f5c886f984040032349c3271c5389}\label{classxlnt_1_1rich__text_a0b0f5c886f984040032349c3271c5389}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool xlnt\+::rich\+\_\+text\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1rich__text}{rich\+\_\+text}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the runs that make up this text are identical to those in rhs. 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_a26a030112ee2aac545687b5c6033d43e}\label{classxlnt_1_1rich__text_a26a030112ee2aac545687b5c6033d43e}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!operator==@{operator==}}
+\index{operator==@{operator==}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool xlnt\+::rich\+\_\+text\+::operator== (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if this text has a single unformatted run with text equal to rhs. 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_a124a7b501611ca07de127537e06298d0}\label{classxlnt_1_1rich__text_a124a7b501611ca07de127537e06298d0}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!phonetic\_properties@{phonetic\_properties}}
+\index{phonetic\_properties@{phonetic\_properties}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{phonetic\_properties()}{phonetic\_properties()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1phonetic__pr}{phonetic\+\_\+pr}} \& xlnt\+::rich\+\_\+text\+::phonetic\+\_\+properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the phonetic properties of this text. 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_afbd3fc18f001773e1c403d7c0f7a414d}\label{classxlnt_1_1rich__text_afbd3fc18f001773e1c403d7c0f7a414d}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!phonetic\_properties@{phonetic\_properties}}
+\index{phonetic\_properties@{phonetic\_properties}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{phonetic\_properties()}{phonetic\_properties()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::rich\+\_\+text\+::phonetic\+\_\+properties (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classxlnt_1_1phonetic__pr}{phonetic\+\_\+pr}} \&}]{phonetic\+\_\+props }\end{DoxyParamCaption})}
+
+
+
+Sets the phonetic properties of this text to phonetic\+\_\+props 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_af9bca6bb270d5cd4c6cb3857c44e036d}\label{classxlnt_1_1rich__text_af9bca6bb270d5cd4c6cb3857c44e036d}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!phonetic\_runs@{phonetic\_runs}}
+\index{phonetic\_runs@{phonetic\_runs}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{phonetic\_runs()}{phonetic\_runs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structxlnt_1_1phonetic__run}{phonetic\+\_\+run}} $>$ xlnt\+::rich\+\_\+text\+::phonetic\+\_\+runs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a copy of the individual runs that comprise this text. 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_a1fb8b38e6ada8a05120935a18432e5e5}\label{classxlnt_1_1rich__text_a1fb8b38e6ada8a05120935a18432e5e5}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!phonetic\_runs@{phonetic\_runs}}
+\index{phonetic\_runs@{phonetic\_runs}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{phonetic\_runs()}{phonetic\_runs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::rich\+\_\+text\+::phonetic\+\_\+runs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structxlnt_1_1phonetic__run}{phonetic\+\_\+run}} $>$ \&}]{new\+\_\+phonetic\+\_\+runs }\end{DoxyParamCaption})}
+
+
+
+Sets the runs of this text all at once. 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_a90e4cbb43ea6b422d475aa2b29c0d976}\label{classxlnt_1_1rich__text_a90e4cbb43ea6b422d475aa2b29c0d976}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!plain\_text@{plain\_text}}
+\index{plain\_text@{plain\_text}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{plain\_text()}{plain\_text()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string xlnt\+::rich\+\_\+text\+::plain\+\_\+text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Combines the textual content of each text run in order and returns the result. 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_a642d23380a2e33bcce2dc67a49c36313}\label{classxlnt_1_1rich__text_a642d23380a2e33bcce2dc67a49c36313}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!plain\_text@{plain\_text}}
+\index{plain\_text@{plain\_text}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{plain\_text()}{plain\_text()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::rich\+\_\+text\+::plain\+\_\+text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s,  }\item[{bool}]{preserve\+\_\+space = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Clears any runs in this text and adds a single run with default formatting and the given string as its textual content. 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_ac1c5a4f0b4ee2fbb19569ca5e53e7a36}\label{classxlnt_1_1rich__text_ac1c5a4f0b4ee2fbb19569ca5e53e7a36}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!runs@{runs}}
+\index{runs@{runs}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{runs()}{runs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structxlnt_1_1rich__text__run}{rich\+\_\+text\+\_\+run}} $>$ xlnt\+::rich\+\_\+text\+::runs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a copy of the individual runs that comprise this text. 
+
+\mbox{\Hypertarget{classxlnt_1_1rich__text_a2b1dc91f5eb4ab1df57fe5c590a4df75}\label{classxlnt_1_1rich__text_a2b1dc91f5eb4ab1df57fe5c590a4df75}} 
+\index{xlnt::rich\_text@{xlnt::rich\_text}!runs@{runs}}
+\index{runs@{runs}!xlnt::rich\_text@{xlnt::rich\_text}}
+\doxysubsubsection{\texorpdfstring{runs()}{runs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void xlnt\+::rich\+\_\+text\+::runs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structxlnt_1_1rich__text__run}{rich\+\_\+text\+\_\+run}} $>$ \&}]{new\+\_\+runs }\end{DoxyParamCaption})}
+
+
+
+Sets the runs of this text all at once. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/include/xlnt/cell/\mbox{\hyperlink{rich__text_8hpp}{rich\+\_\+text.\+hpp}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/source/cell/\mbox{\hyperlink{rich__text_8cpp}{rich\+\_\+text.\+cpp}}\end{DoxyCompactItemize}
