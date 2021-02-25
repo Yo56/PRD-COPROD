@@ -126,5 +126,16 @@ public:
 
 	string getDeclinaisonMR();
 	void setDeclinaisonMR(string str);
+
+
 };
 
+/*!
+*  \brief Surcharge <<
+*
+*  Methode qui permet de surcharger l'utilisation de l'operateur << pour afficher directement le contenu de l'objet.
+*
+*	Ex : std::cout << monOperation;
+*
+*/
+ostream &operator<<(std::ostream &out, COperation &obj);

@@ -8,6 +8,7 @@
 #pragma once
 #include <vector>
 #include "CChantier.h"
+#include "COperation.h"
 using namespace std;
 
 /*! \class CAcquisition
@@ -29,6 +30,18 @@ public:
 	 *	\return la liste des objets chantiers
 	 */
 	static vector<CChantier> chantiers(string path);
+
+	/*!
+	 *  \brief Parseur Operations de maintenance
+	 *
+	 *  Methode statique qui permet de construire la liste des operations de maintenance a partir du fichiers csv
+	 *
+	 *  \param path : chemin d'acces au fichier
+	 *	\return la liste des operations
+	 */
+	static vector<COperation> operations(string path);
+
+	
 
 };
 

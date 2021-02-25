@@ -125,7 +125,7 @@ void PLNE::run() {
 	}
 
 	//{Intervalles[t−;t+]q de disponibilité de la rame f}
-	IloArray<IloArray<IloIntArray> > Ttrain(env, nTrain); // IMPORTANT : espace entre les chevrons -> >' '> 
+	IloArray<IloArray<IloIntArray> > Ttrain(env, nTrain); 
 	for (int f = 0; f < nTrain; f++) {
 		Ttrain[f] = IloArray<IloIntArray>(env); // tableau qui va contenir les q creneaux de disponibilité à ajouter au cas par cas puisque chaque rame va avoir des creneaux différents
 		// chaque creneau est un tableau de 2 ints 

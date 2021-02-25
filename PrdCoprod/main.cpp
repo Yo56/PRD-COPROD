@@ -25,9 +25,14 @@ int main()
 	cout << "====================== Acquisition ===================" << endl << endl;
 
 	vector<CChantier> chantiers = CAcquisition::chantiers("data/Chantier.csv");
-	for (auto ch = chantiers.begin(); ch != chantiers.end(); ++ch) {
-	cout << *ch << endl;
-	}
+	//for (auto ch = chantiers.begin(); ch != chantiers.end(); ++ch) {
+	//cout << *ch << endl;
+	//}
+
+	vector<COperation> operations = CAcquisition::operations("data/op.csv");
+	/*for (auto op = operations.begin(); op != operations.end(); ++op) {
+		cout << *op << endl;
+	}*/
 
 	return 0;
 }

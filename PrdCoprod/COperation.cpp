@@ -230,3 +230,15 @@ void COperation::setDeclinaisonMR(string str)
 {
 	declinaisonMR = str;
 }
+
+
+ostream & operator<<(std::ostream & out, COperation & obj)
+{
+	out << " === Operation === \n" << obj.getIdCplex() << endl << obj.getIdReference() << endl << obj.getRefOperation() << endl << obj.getDescOperation() << endl << obj.getVersionPMS() << endl
+		<< obj.getVersionPMSEnCours() << endl << obj.getTypeOperationPartService() << endl << obj.getCycle() << endl << obj.getStfOpePart() << endl << obj.getStatutOpeRef() << endl
+		<< obj.getLcnRacine() << endl << obj.getLcnArticle() << endl << obj.getRefDocMaintenance() << endl << obj.getRang() << endl << obj.getDateDebutApplicabilite() << endl
+		<< obj.getDateFinApplicabilite() << endl << obj.getSEF() << endl << obj.getCadence() << endl << obj.getTypeOperation() << endl << obj.getLibelleTypeOperation() << endl
+		<< obj.getNbReferentielsApplicables() << endl << obj.getDeclinaisonMR() << endl;
+
+	return out;
+}
