@@ -11,10 +11,17 @@ private:
 	double alpha;
 
 	vector<double> p;
+	vector<double> pDelta;
+	vector<int> r;
+	vector<int> d;
+	vector<double> w;
+	vector<double> u;
 
 public:
 	CInput();
-	CInput(int n, int m, int D, int nInfra, int nSite, int nSlot, int nTrain, int nAgent, int nSkill, double alpha, std::vector<double> p);
+	CInput(int n, int m, int D, int nInfra, int nSite, int nSlot, int nTrain, int nAgent, int nSkill, double alpha,
+		std::vector<double> p, std::vector<double> pDelta, std::vector<int> r, std::vector<int> d, std::vector<double> w, std::vector<double> u);
+
 	~CInput();
 	void print();
 
@@ -30,7 +37,12 @@ public:
 	int getNAgent();
 	int getNSkill();
 	double getAlpha();
-	/*double[] getP();*/
+	vector<double> getP();
+	vector<double> getPDelta();
+	vector<int> getR();
+	vector<int> getDateDeRentree();
+	vector<double> getW();
+	vector<double> getU();
 
 	void setN(int i);
 	void setM(int i);

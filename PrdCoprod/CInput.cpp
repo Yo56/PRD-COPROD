@@ -6,7 +6,7 @@ CInput::CInput()
 {
 }
 
-CInput::CInput(int n, int m, int D, int nInfra, int nSite, int nSlot, int nTrain, int nAgent, int nSkill, double alpha, std::vector<double> pParam)
+CInput::CInput(int n, int m, int D, int nInfra, int nSite, int nSlot, int nTrain, int nAgent, int nSkill, double alpha, std::vector<double> pParam, std::vector<double> pDeltaParam, std::vector<int> rParam, std::vector<int> dParam, std::vector<double> wParam, std::vector<double> uParam)
 {
 	this->n = n; 
 	this->m = m;
@@ -18,8 +18,13 @@ CInput::CInput(int n, int m, int D, int nInfra, int nSite, int nSlot, int nTrain
 	this->nAgent = nAgent;
 	this->nSkill = nSkill;
 	this->alpha = alpha;
-	this->p = pParam;
 
+	this->p = pParam;
+	this->pDelta = pDeltaParam;
+	this->r = rParam;
+	this->d = dParam;
+	this->w = wParam;
+	this->u = uParam;
 }
 
 
@@ -85,10 +90,36 @@ double CInput::getAlpha()
 	return alpha;
 }
 
-//double[] CInput::getP()
-//{
-//	return p;
-//}
+vector<double> CInput::getP()
+{
+	return p;
+}
+
+vector<double> CInput::getPDelta()
+{
+	return pDelta;
+}
+
+vector<int> CInput::getR()
+{
+	return r;
+}
+
+vector<int> CInput::getDateDeRentree()
+{
+	return d;
+}
+
+vector<double> CInput::getW()
+{
+	return w;
+}
+
+vector<double> CInput::getU()
+{
+	return u;
+}
+
 
 void CInput::setN(int i)
 {

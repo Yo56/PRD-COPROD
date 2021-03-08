@@ -43,16 +43,16 @@ int main()
 
 	const int nbOperations = 2;
 
-	double p[nbOperations] = {1.5,2};
-	vector<double> p_ { 0,0.5 };
-	double pDelta[nbOperations] = { 0,0.5};
+	//double p_[nbOperations] = {1.5,2};
+	vector<double> p { 0,0.5 };
+	vector<double> pDelta {0,0.5};
 	
-	int r[nbOperations] = { 0,1 };
-	int d[nbOperations] = { 12,14 };
-	double w[nbOperations] = { 0.1,0.2 };
-	double u[nbOperations] = { 0,0.5 };
+	vector<int> r { 0,1 };
+	vector<int> d { 12,14 };
+	vector<double> w { 0.1,0.2 };
+	vector<double> u { 0,0.5 };
 
-	CInput input(4,2,24,1,1,3,2,3,2,0.10,p_);
+	CInput input(nbOperations,2,24,1,1,3,2,3,2,0.10,p, pDelta,r,d,w,u);
 	input.print();
 
 	PLNE plne(input);

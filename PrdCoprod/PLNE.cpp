@@ -19,16 +19,38 @@ PLNE::PLNE(CInput input)
 	// -------------------------- definition des données vectorielles --------------------------------------//
 
 	p = IloNumArray(env, n);
+	for (int i = 0; i < n; i++) {
+		p[i] = input.getP().at(i);
+	}
 
 	pDelta = IloNumArray(env, n);
-
+	for (int i = 0; i < n; i++) {
+		pDelta[i] = input.getP().at(i);
+	}
+	
 	r = IloIntArray(env, n);
+	for (int i = 0; i < n; i++) {
+		r[i] = input.getR().at(i);
+	}
 
 	d = IloIntArray(env, n);
+	for (int i = 0; i < n; i++) {
+		d[i] = input.getDateDeRentree().at(i);
+	}
 
 	w = IloNumArray(env, n);
+	for (int i = 0; i < n; i++) {
+		w[i] = input.getW().at(i);
+	}
+	cout << "=============" << endl;
+	cout << w << endl;
 
 	u = IloNumArray(env, n);
+	for (int i = 0; i < n; i++) {
+		u[i] = input.getU().at(i);
+	}
+	cout << "=============" << endl;
+	cout << u << endl;
 
 	NI_ik = IloArray<IloBoolArray>(env, n);
 	for (int i = 0; i < n; i++) {
@@ -126,6 +148,12 @@ PLNE::PLNE(CInput input)
 	for (int a = 0; a < nAgent; a++) {
 		Tagent[a] = IloArray<IloIntArray>(env); // tableau qui va contenir les q creneaux de disponibilité à ajouter au cas par cas puisque chaque agent va avoir des creneaux différents
 		// chaque creneau est un tableau de 2 ints 
+	}
+
+	// -------------------------- Variables --------------------------------------//
+	Y = IloArray<IloBoolVarArray>(env, nTrain);
+	for (int f = 0; f < nTrain; f++) {
+		Y[f] = IloBoolVarArray(env);
 	}
 
 	cout << "Objet initialise " << endl;

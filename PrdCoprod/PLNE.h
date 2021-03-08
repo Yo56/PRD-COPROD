@@ -101,6 +101,30 @@ private:
 	//{Intervalles [t−;t+]q de disponibilité de l’agent a}
 	IloArray<IloArray<IloIntArray> > Tagent;
 
+	// -------------------------- Variables --------------------------------------//
+
+	//Xijt
+
+	//Yi
+	IloArray<IloBoolVarArray> Y;
+
+	//IloBoolVarArray y(env,);
+
+
+	//Zait
+
+	//Eflt
+
+	//Eflt start
+
+	//Si
+
+	//Ci
+
+	//Ei prev
+
+	//Ti corr
+
 	vector<int> operationsPrev;
 	vector<int> operationsCorr;
 
