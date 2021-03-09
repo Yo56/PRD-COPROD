@@ -20,91 +20,118 @@ PLNE::PLNE(CInput input)
 
 	p = IloNumArray(env, n);
 	for (int i = 0; i < n; i++) {
-		p[i] = input.getP().at(i);
+		p[i] = input.getP().at(i); //initialisation des données input
 	}
 
 	pDelta = IloNumArray(env, n);
 	for (int i = 0; i < n; i++) {
-		pDelta[i] = input.getP().at(i);
+		pDelta[i] = input.getP().at(i); 
 	}
 	
 	r = IloIntArray(env, n);
 	for (int i = 0; i < n; i++) {
-		r[i] = input.getR().at(i);
+		r[i] = input.getR().at(i); 
 	}
 
 	d = IloIntArray(env, n);
 	for (int i = 0; i < n; i++) {
-		d[i] = input.getDateDeRentree().at(i);
+		d[i] = input.getDateDeRentree().at(i); 
 	}
 
 	w = IloNumArray(env, n);
 	for (int i = 0; i < n; i++) {
-		w[i] = input.getW().at(i);
+		w[i] = input.getW().at(i); 
 	}
-	cout << "=============" << endl;
-	cout << w << endl;
 
 	u = IloNumArray(env, n);
 	for (int i = 0; i < n; i++) {
-		u[i] = input.getU().at(i);
+		u[i] = input.getU().at(i); 
 	}
-	cout << "=============" << endl;
-	cout << u << endl;
 
 	NI_ik = IloArray<IloBoolArray>(env, n);
 	for (int i = 0; i < n; i++) {
 		NI_ik[i] = IloBoolArray(env, nInfra);
+		for (int k = 0; k < nInfra; k++) {
+			NI_ik[i][k] = input.getNI_ik().at(i).at(k);
+		}
 	}
 
 	IN_jk = IloArray<IloBoolArray>(env, m);
 	for (int j = 0; j < m; j++) {
 		IN_jk[j] = IloBoolArray(env, nInfra);
+		for (int k = 0; k < nInfra; k++) {
+			IN_jk[j][k] = input.getIN_jk().at(j).at(k); 
+		}
 	}
 
 	rMax_lh = IloArray<IloIntArray>(env, nSite);
 	for (int l = 0; l < nSite; l++) {
 		rMax_lh[l] = IloIntArray(env, nSlot);
+		for (int h = 0; h < nSlot; h++) {
+			rMax_lh[l][h] = input.getRMax_lh().at(l).at(h); 
+		}
 	}
 
 	rTot = IloIntArray(env, D);
+	for (int h = 0; h < D; h++) {
+		rTot[h] = input.getRTot().at(h); 
+	}
+	
 
 	//Durée de voyage pour aller de la gare g1 à la gare g2
 	// TODO IloNumArray v(env, D);
 
-	nPrev = IloIntArray(env, nTrain); //construction d'un tableau de nTrain cases
+	nPrev = IloIntArray(env, nTrain);  // on les laisse de coter pour voir si on en a besoin
 
-	nCorr = IloIntArray(env, nTrain);
+	nCorr = IloIntArray(env, nTrain); // on les laisse de coter pour voir si on en a besoin
 
 	CO_ii = IloArray<IloBoolArray>(env, n);
 	for (int i = 0; i < n; i++) {
 		CO_ii[i] = IloBoolArray(env, n);
+		for (int i2 = 0; i2 < n; i2++) {
+			CO_ii[i][i2] = input.getCO_ii().at(i).at(i2); 
+		}
 	}
 
 	NS_is = IloArray<IloIntArray>(env, n);
 	for (int i = 0; i < n; i++) {
 		NS_is[i] = IloIntArray(env, nSkill);
+		for (int s = 0; s < nSkill; s++) {
+			NS_is[i][s] = input.getNS_is().at(i).at(s); 
+		}
 	}
 
-	SKL_asl = IloArray<IloArray<IloBoolArray> >(env, nAgent); // IMPORTANT : espace entre les chevrons -> >' '> 
+	SKL_asl = IloArray<IloArray<IloBoolArray> >(env, nAgent); 
 	for (int a = 0; a < nAgent; a++) {
 		SKL_asl[a] = IloArray<IloBoolArray>(env, nSkill);
 		for (int s = 0; s < nSkill; s++) {
 			SKL_asl[a][s] = IloBoolArray(env, nSite);
+			for (int l = 0; l < nSite; l++) {
+				SKL_asl[a][s][l] = input.getSKL_asl().at(a).at(s).at(l);
+			}
 		}
 	}
+
 
 	// -------------------------- definition des ensembles --------------------------------------//
 
 	H = IloArray<IloIntArray>(env, nSlot);
 	for (int h = 0; h < nSlot; h++) {
 		H[h] = IloIntArray(env); //taille variable pour chaque H[h]
+		for (int q = 0; q < input.getH().at(h).size(); q++) { //selon le cardinal de chaque slot on ajoute les valeurs
+			H[h].add(input.getH().at(h).at(q));
+		}
 	}
 
 	L = IloArray<IloIntArray>(env, nSite);
 	for (int l = 0; l < nSite; l++) {
 		L[l] = IloIntArray(env); //taille variable pour chaque L[l]
+		for (int q = 0; q < input.getL().at(l).size(); q++) { 
+			L[l].add(input.getL().at(l).at(q));
+		}
 	}
+	cout << "=============" << endl;
+	cout << L<< endl;
 
 	Oprev = IloArray<IloIntArray>(env, nTrain);
 	for (int f = 0; f < nTrain; f++) {
@@ -156,6 +183,7 @@ PLNE::PLNE(CInput input)
 		Y[f] = IloBoolVarArray(env);
 	}
 
+	cout << "================" << endl;
 	cout << "Objet initialise " << endl;
 	cout << Ocorr << endl;
 }

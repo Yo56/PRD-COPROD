@@ -53,7 +53,6 @@ private:
 	//Nombre maximum de rentrées de rames sur le site l pendant le créneau h
 	IloArray<IloIntArray> rMax_lh;
 
-
 	//Nombre maximum autorisé de rames en maintenance sur le réseau aux dates t
 	IloIntArray rTot;
 

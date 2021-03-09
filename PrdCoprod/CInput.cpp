@@ -6,7 +6,10 @@ CInput::CInput()
 {
 }
 
-CInput::CInput(int n, int m, int D, int nInfra, int nSite, int nSlot, int nTrain, int nAgent, int nSkill, double alpha, std::vector<double> pParam, std::vector<double> pDeltaParam, std::vector<int> rParam, std::vector<int> dParam, std::vector<double> wParam, std::vector<double> uParam)
+CInput::CInput(int n, int m, int D, int nInfra, int nSite, int nSlot, int nTrain, int nAgent, int nSkill, double alpha,
+	vector<double> pParam, vector<double> pDeltaParam, vector<int> rParam, vector<int> dParam, vector<double> wParam, vector<double> uParam,
+	vector <vector<int> > NI_ikParam, vector <vector<int> > IN_jkParam, vector <vector<int> > rMax_lhParam, vector<int> rTotParam,
+	vector <vector<int> > CO_iiParam, vector <vector<int> >NS_isParam, vector <vector <vector<int> > > SKL_aslParam, vector <vector<int> > HParam, vector <vector<int> > LParam)
 {
 	this->n = n; 
 	this->m = m;
@@ -25,6 +28,16 @@ CInput::CInput(int n, int m, int D, int nInfra, int nSite, int nSlot, int nTrain
 	this->d = dParam;
 	this->w = wParam;
 	this->u = uParam;
+	this->NI_ik = NI_ikParam;
+	this->IN_jk = IN_jkParam;
+	this->rMax_lh = rMax_lhParam;
+	this->rTot = rTotParam;
+	this->CO_ii = CO_iiParam;
+	this->NS_is = NS_isParam;
+	this->SKL_asl = SKL_aslParam;
+
+	this->H = HParam;
+	this->L = LParam;
 }
 
 
@@ -33,9 +46,43 @@ CInput::~CInput()
 }
 
 void CInput::print() {
+	cout << "== Input ==" << endl;
+	cout << "n : " << n << endl;
+	cout << "m : " << m << endl;
+	cout << "D : " << D << endl;
+	cout << "nInfra : " << nInfra << endl;
+	cout << "nSite : " << nSite << endl;
+	cout << "nSlot : " << nSlot << endl;
+	cout << "nTrain : " << nTrain << endl;
+	cout << "nAgent : " << nAgent << endl;
+	cout << "nSkill : " << nSkill << endl;
+	cout << "alpha : " << alpha << endl;
+
+	/*cout <<endl << "p : ";
 	for (auto val = p.begin(); val != p.end(); ++val) {
 	cout << *val << endl;
 	}
+	cout << "pDelta : ";
+	for (auto val = pDelta.begin(); val != pDelta.end(); ++val) {
+		cout << *val << endl;
+	}
+	cout << "r : ";
+	for (auto val = r.begin(); val != r.end(); ++val) {
+		cout << *val << endl;
+	}
+	cout << "d : ";
+	for (auto val = d.begin(); val != d.end(); ++val) {
+		cout << *val << endl;
+	}
+	cout << "w : ";
+	for (auto val = w.begin(); val != w.end(); ++val) {
+		cout << *val << endl;
+	}
+	cout << "u : ";
+	for (auto val = u.begin(); val != u.end(); ++val) {
+		cout << *val << endl;
+	}*/
+	
 }
 
 ////////////////// getters and setters
@@ -118,6 +165,51 @@ vector<double> CInput::getW()
 vector<double> CInput::getU()
 {
 	return u;
+}
+
+vector<vector<int>> CInput::getNI_ik()
+{
+	return NI_ik;
+}
+
+vector<vector<int>> CInput::getIN_jk()
+{
+	return IN_jk;
+}
+
+vector<vector<int>> CInput::getRMax_lh()
+{
+	return rMax_lh;
+}
+
+vector<int> CInput::getRTot()
+{
+	return rTot;
+}
+
+vector<vector<int>> CInput::getCO_ii()
+{
+	return CO_ii;
+}
+
+vector<vector<int>> CInput::getNS_is()
+{
+	return NS_is;
+}
+
+vector<vector<vector<int>>> CInput::getSKL_asl()
+{
+	return SKL_asl;
+}
+
+vector<vector<int>> CInput::getH()
+{
+	return H;
+}
+
+vector<vector<int>> CInput::getL()
+{
+	return L;
 }
 
 
