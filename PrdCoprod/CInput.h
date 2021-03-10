@@ -28,12 +28,22 @@ private:
 	vector <vector<int> > H;
 	vector <vector<int> > L;
 
+	vector <vector<int> > Oprev;
+	vector <vector<int> > Ocorr;
+
+	vector <vector <vector<int> > > Ttrain;
+	vector <vector <vector<int> > > Ttrack;
+	vector < vector <vector <vector<int> > > > Tfj;
+	vector <vector <vector<int> > > Tagent;
+
 public:
 	CInput();
 	CInput(int n, int m, int D, int nInfra, int nSite, int nSlot, int nTrain, int nAgent, int nSkill, double alpha,
 		std::vector<double> p, std::vector<double> pDelta, std::vector<int> r, std::vector<int> d, std::vector<double> w, std::vector<double> u,
 		vector <vector<int> > NI_ik, vector <vector<int> > IN_jk, vector <vector<int> > rMax_lh, vector<int> rTot, vector <vector<int> > CO_ii,
-		vector <vector<int> >NS_is, vector <vector <vector<int> > > SKL_asl, vector <vector<int> > H, vector <vector<int> > L);
+		vector <vector<int> >NS_is, vector <vector <vector<int> > > SKL_asl, vector <vector<int> > H, vector <vector<int> > L, vector <vector<int> > Oprev,
+		vector <vector<int> > Ocorr, vector <vector <vector<int> > > Ttrain, vector <vector <vector<int> > > Ttrack, vector < vector <vector <vector<int> > > > Tfj,
+		vector <vector <vector<int> > > Tagent);
 
 	~CInput();
 	void print();
@@ -65,6 +75,12 @@ public:
 	vector <vector <vector<int> > > getSKL_asl();
 	vector <vector<int> > getH();
 	vector <vector<int> > getL();
+	vector <vector<int> > getOprev();
+	vector <vector<int> > getOcorr();
+	vector <vector <vector<int> > > getTtrain();
+	vector <vector <vector<int> > > getTtrack();
+	vector < vector <vector <vector<int> > > > getTfj();
+	vector <vector <vector<int> > > getTagent();
 
 	void setN(int i);
 	void setM(int i);

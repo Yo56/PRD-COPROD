@@ -9,7 +9,9 @@ CInput::CInput()
 CInput::CInput(int n, int m, int D, int nInfra, int nSite, int nSlot, int nTrain, int nAgent, int nSkill, double alpha,
 	vector<double> pParam, vector<double> pDeltaParam, vector<int> rParam, vector<int> dParam, vector<double> wParam, vector<double> uParam,
 	vector <vector<int> > NI_ikParam, vector <vector<int> > IN_jkParam, vector <vector<int> > rMax_lhParam, vector<int> rTotParam,
-	vector <vector<int> > CO_iiParam, vector <vector<int> >NS_isParam, vector <vector <vector<int> > > SKL_aslParam, vector <vector<int> > HParam, vector <vector<int> > LParam)
+	vector <vector<int> > CO_iiParam, vector <vector<int> >NS_isParam, vector <vector <vector<int> > > SKL_aslParam, vector <vector<int> > HParam, vector <vector<int> > LParam,
+	vector <vector<int> > OprevParam, vector <vector<int> > OcorrParam, vector <vector <vector<int> > > TtrainParam,
+	vector <vector <vector<int> > > TtrackParam, vector < vector <vector <vector<int> > > > TfjParam, vector <vector <vector<int> > > TagentParam)
 {
 	this->n = n; 
 	this->m = m;
@@ -38,6 +40,12 @@ CInput::CInput(int n, int m, int D, int nInfra, int nSite, int nSlot, int nTrain
 
 	this->H = HParam;
 	this->L = LParam;
+	this->Oprev = OprevParam;
+	this->Ocorr = OcorrParam;
+	this->Ttrain = TtrainParam;
+	this->Ttrack = TtrackParam;
+	this->Tfj = TfjParam;
+	this->Tagent = TagentParam;
 }
 
 
@@ -210,6 +218,36 @@ vector<vector<int>> CInput::getH()
 vector<vector<int>> CInput::getL()
 {
 	return L;
+}
+
+vector<vector<int>> CInput::getOprev()
+{
+	return Oprev;
+}
+
+vector<vector<int>> CInput::getOcorr()
+{
+	return Ocorr;
+}
+
+vector<vector<vector<int>>> CInput::getTtrain()
+{
+	return Ttrain;
+}
+
+vector<vector<vector<int>>> CInput::getTtrack()
+{
+	return Ttrack;
+}
+
+vector<vector<vector<vector<int>>>> CInput::getTfj()
+{
+	return Tfj;
+}
+
+vector<vector<vector<int>>> CInput::getTagent()
+{
+	return Tagent;
 }
 
 
