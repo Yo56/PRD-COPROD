@@ -1,4 +1,11 @@
-﻿#include "PLNE.h"
+﻿/*!
+ * \file PLNE.cpp
+ * \brief Elements permettant de resoudre un probleme d'optimisation
+ * \author Yohan Nouet
+ * \version 1
+ */
+
+#include "PLNE.h"
 
 
 PLNE::PLNE(CInput input)

@@ -1,3 +1,10 @@
+/*!
+ * \file CChantier.cpp
+ * \brief Elements representant un chantier (atelier de maintenance)
+ * \author Yohan Nouet
+ * \version 1
+ */
+
 #include "CChantier.h"
 
 

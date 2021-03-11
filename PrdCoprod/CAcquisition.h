@@ -1,6 +1,6 @@
 /*!
  * \file CAcquisition.h
- * \brief 
+ * \brief Aquisition des differentes sources de donnees
  * \author Yohan Nouet
  * \version 1
  */

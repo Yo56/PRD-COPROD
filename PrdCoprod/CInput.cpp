@@ -1,10 +1,13 @@
+/*!
+ * \file Cinput.cpp
+ * \brief Elements permettant de fournir les donnees d'entrees a un modele de résolution
+ * \author Yohan Nouet
+ * \version 1
+ */
+
 #include "CInput.h"
 
 
-
-CInput::CInput()
-{
-}
 
 CInput::CInput(int n, int m, int D, int nInfra, int nSite, int nSlot, int nTrain, int nAgent, int nSkill, double alpha,
 	vector<double> pParam, vector<double> pDeltaParam, vector<int> rParam, vector<int> dParam, vector<double> wParam, vector<double> uParam,

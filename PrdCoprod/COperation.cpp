@@ -1,3 +1,10 @@
+/*!
+ * \file COperation.cpp
+ * \brief manipulation d'une operation de maintenance
+ * \author Yohan Nouet
+ * \version 1
+ */
+
 #include "COperation.h"
 
 

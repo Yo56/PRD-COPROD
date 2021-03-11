@@ -4,6 +4,7 @@
  * \author Yohan Nouet
  * \version 1
  */
+
 #pragma once
 #include <iostream>
 #include <string>

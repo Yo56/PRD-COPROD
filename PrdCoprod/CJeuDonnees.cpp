@@ -1,5 +1,11 @@
-#include "CJeuDonnees.h"
+/*!
+ * \file CJeuDonnees.h
+ * \brief Elements permettant d instancier des jeux de donnees pour resoudre des instances avec le solveur
+ * \author Yohan Nouet
+ * \version 1
+ */
 
+#include "CJeuDonnees.h"
 
 
 CInput CJeuDonnees::version1()
@@ -32,24 +38,23 @@ CInput CJeuDonnees::version1()
 	vector <vector<int> > Oprev{ {5},{} };
 	vector <vector<int> > Ocorr{ {},{8} };
 
-	//	 		  TrainA			   TrainB
-	//		    cren1   cren2		   cren1
+									//	 		  TrainA			   TrainB
+									//		    cren1   cren2		   cren1
 	vector <vector <vector<int> > > Ttrain{ { {10,16}, {18,22} },   { {8,20} } };
 
-	//	 		 VoieA			   VoieB
+									//	 		 VoieA			   VoieB
 	vector <vector <vector<int> > > Ttrack{ { {8,20}, {22,23} },   { {9,17}, {20,21}, {22,23} } };
 
-	//	 							TrainA									TrainB
-	//	 					voie1			   voie2				  voie1		voie2
-	// creneaux dispo		  A|1				A|2					  B|1		 B|2
+									//	 							TrainA									TrainB
+									//	 					voie1			   voie2				  voie1		voie2
+									// creneaux dispo		  A|1				A|2					  B|1		 B|2
 	vector < vector <vector <vector<int> > > > Tfj{ { {{10,16}, {18,20}},{{10,16}, {20,21}} },    { {{8,20}}, {{9,17}} } };
 
 	vector <vector <vector<int> > > Tagent{ { {8,10}, {11,18} }, { {8,16} } , { {9,18}  } };
 
 	//creation de l'objet Input
-	CInput input(nbOperations, 2, 24, 2, 1, 3, 2, 3, 2, 0.10, p, pDelta,
-		r, d, w, u, NI_ik, IN_jk, rMax_lh, rTot, CO_ii, NS_is, SKL_asl, H, L,
-		Oprev, Ocorr, Ttrain, Ttrack, Tfj, Tagent);
+	CInput input(nbOperations, 2, 24, 2, 1, 3, 2, 3, 2, 0.10, p, pDelta,r, d, w, u, NI_ik, IN_jk, rMax_lh, rTot,
+		CO_ii, NS_is, SKL_asl, H, L,Oprev, Ocorr, Ttrain, Ttrack, Tfj, Tagent);
 
 	return input;
 }

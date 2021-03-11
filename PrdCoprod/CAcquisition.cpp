@@ -1,3 +1,10 @@
+/*!
+ * \file CAcquisition.cpp
+ * \brief Aquisition des differentes sources de donnees
+ * \author Yohan Nouet
+ * \version 1
+ */
+
 #include "CAcquisition.h"
 #include <vector>
 #include "CChantier.h"

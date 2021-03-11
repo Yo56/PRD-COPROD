@@ -1,4 +1,11 @@
-﻿#pragma once
+﻿/*!
+ * \file PLNE.h
+ * \brief Elements permettant de resoudre un probleme d'optimisation
+ * \author Yohan Nouet
+ * \version 1
+ */
+
+#pragma once
 #include <iostream>
 #include <ilcplex/ilocplex.h>
 #include <vector>
@@ -7,54 +14,59 @@
 
 using namespace std;
 
+/*! \class PLNE
+   * \brief Classe PLNE
+   *
+   *  La classe permet de creer une instance de Cplex a partir d un ensemble de donnees representant un probleme d optimisation
+   */
 class PLNE
 {
 private:
 
-	IloEnv env; //variable d'environnement
-	IloModel model;
+	IloEnv env; /*! variable d'environnement */
+	IloModel model; /*! variable cplex representant le modele a resoudre (variables, contraintes) */
 
-	IloInt n; // nombre total d'opérations
-	IloInt m; // nombre de voies
-	IloInt D; // Horizon de planification (en heures)
-	IloInt nInfra; // nombre de types d'infrastructures
-	IloInt nSite; // nombre sites
-	IloInt nSlot; // Nombre de créneaux horaires de travail des sites sur l’horizon
-	IloInt nTrain; // nombre rames
-	IloInt nAgent; // nombre agents
-	IloInt nSkill; // nombre compétences
-	IloNum alpha; //taux d'avance maximum par rapport à la butée
+	IloInt n; /*! nombre total d'operations*/
+	IloInt m; /*! nombre de voies*/
+	IloInt D; /*! Horizon de planification (en heures)*/
+	IloInt nInfra; /*! nombre de types d'infrastructures*/
+	IloInt nSite; /*!  nombre sites*/
+	IloInt nSlot; /*! Nombre de creneaux horaires de travail des sites sur l horizon*/
+	IloInt nTrain; /*! nombre rames*/
+	IloInt nAgent; /*! nombre agents*/
+	IloInt nSkill; /*! nombre competences*/
+	IloNum alpha; /*! taux d'avance maximum par rapport a la butee*/
 
 	// -------------------------- definition des données vectorielles --------------------------------------//
 
-	//Durées complètes des opérations i
+	/*! Durees completes des operations i */
 	IloNumArray p;
 
-	//Durées diagnostiques des opérations i
+	/*! Durees diagnostiques des operations i */
 	IloNumArray pDelta;
 
-	//Possibilité de rejeter ou non les opérations i (booléen)
+	/*! Possibilite de rejeter ou non les operations i (booleen)*/
 	IloIntArray r;
 
-	//Dates maximum de début souhaité des opérations i (dates de rentrée souhaitée des rames)
+	/*! Dates maximum de debut souhaite des operations i (dates de rentree souhaitee des rames) */
 	IloIntArray d;
 
-	//Poids unitaire de retard des opérations i
+	/*! Poids unitaire de retard des operations i*/
 	IloNumArray w;
 
-	//Poids associé au rejets des opérations i
+	/*! Poids associe au rejets des operations i */
 	IloNumArray u;
 
-	//Besoin de l’opération i en infrastructure k (booléen)
+	/*! Besoin de l’operation i en infrastructure k (booleen)*/
 	IloArray<IloBoolArray> NI_ik;
 
-	//Équipement de la voie j en infrastructure k (booléen)
+	/*! Equipement de la voie j en infrastructure k (booleen)*/
 	IloArray<IloBoolArray> IN_jk;
 
-	//Nombre maximum de rentrées de rames sur le site l pendant le créneau h
+	/*! Nombre maximum de rentrees de rames sur le site l pendant le creneau h*/
 	IloArray<IloIntArray> rMax_lh;
 
-	//Nombre maximum autorisé de rames en maintenance sur le réseau aux dates t
+	/*! Nombre maximum autorise de rames en maintenance sur le reseau aux dates t*/
 	IloIntArray rTot;
 
 	//Durée de voyage pour aller de la gare g1 à la gare g2
@@ -66,81 +78,114 @@ private:
 	//Nombre d'opérations correctives par rame f
 	IloIntArray nCorr;
 
-	//Matrice de compatibilité des opérations i et i′(booléen)
+	/*! Matrice de compatibilité des opérations i et i2 (booleen)*/
 	IloArray<IloBoolArray> CO_ii;
 
-	//Nombre d’agents ayant la compétence s requise pour l’opération i
+	/*! Nombre d’agents ayant la competence s requise pour l’operation i*/
 	IloArray<IloIntArray> NS_is;
 
-	//L’agent a dispose de la compétence s sur le site l (booléen)
+	/*! L’agent a dispose de la competence s sur le site l (booleen)*/
 	IloArray<IloArray<IloBoolArray> > SKL_asl; 
 
 	// -------------------------- definition des ensembles --------------------------------------//
 
-	//{Dates t appartenant au créneau horaire h}
+	/*! {Dates t appartenant au creneau horaire h}*/
 	IloArray<IloIntArray> H;
 
-	//{Voies j appartenant au site l}
+	/*! {Voies j appartenant au site l} */
 	IloArray<IloIntArray> L;
 
-	//{Opérations préventives de la rame f}
+	/*! {Operations preventives de la rame f}*/
 	IloArray<IloIntArray> Oprev;
 	
-	//{Opérations correctives de la rame f}
+	/*! {Operations correctives de la rame f}*/
 	IloArray<IloIntArray> Ocorr;
 
-	//{Intervalles[t−;t+]q de disponibilité de la rame f}
+	/*! {Intervalles[t−;t+]q de disponibilite de la rame f} */
 	IloArray<IloArray<IloIntArray> > Ttrain;
 
-	//{Intervalles[t−;t+]q de disponibilité de la voie j}
+	/*! {Intervalles[t−;t+]q de disponibilite de la voie j}*/
 	IloArray<IloArray<IloIntArray> > Ttrack; 
 
-	//{Couples (j;[t−;t]q) de disponibilité simultanée des rames f et des voies j}
+	/*! {Couples (j;[t−;t]q) de disponibilite simultanee des rames f et des voies j}*/
 	IloArray<IloArray<IloArray<IloIntArray> > > Tfj; 
 	
-	//{Intervalles [t−;t+]q de disponibilité de l’agent a}
+	/*! {Intervalles [t−;t+]q de disponibilite de l’agent a}*/
 	IloArray<IloArray<IloIntArray> > Tagent;
 
 	// -------------------------- Variables --------------------------------------//
 
-	//Xijt
+	/*! Variable X(f)ijt */
 	IloArray< IloArray< IloArray<IloBoolVarArray> > > X;
 
-	//Yi : booleen qui indique le rejet ou non de l'operation
+	/*! Variable Y(f)i */
 	IloArray<IloBoolVarArray> Y;
 
-	//Zait
+	/*! Variable Za(f)it */
 	IloArray< IloArray< IloArray<IloBoolVarArray> > > Z;
 
-	//Eflt
+	/*! Variable Eflt */
 	IloArray< IloArray<IloBoolVarArray> > E;
 
-	//Eflt start
+	/*! Variable Efl start */
 	IloArray<IloBoolVarArray> Estart;
 
-	//Si
+	/*! Variable S(f)i */
 	IloArray<IloIntVarArray> S;
 
-	//Ci
+	/*! Variable C(f)i */
 	IloArray<IloIntVarArray> C;
 
-	//Ei prev
+	/*! Variable E(f)i prev */
 	IloArray<IloIntVarArray> Eprev;
 
-	//Ti corr
+	/*! Variable T(f)i corr */
 	IloArray<IloIntVarArray> Tcorr;
 
-	vector<int> operationsPrev; // ?
+	vector<int> operationsPrev; // utile ?
 	vector<int> operationsCorr; // ?
 
 public:
 
-	//PLNE();
+	/*!
+	*  \brief Constructeur
+	*
+	*  Constructeur de la classe PLNE. La fonction prepare l ensemble des donnees Cplex, les variables, les contraintes, en vue de la resolution
+	*
+	*  \param input : donnees d entree
+	*/
 	PLNE(CInput input);
 	
 	static void run();
+
+	/*!
+	 *  \brief fonction affichage
+	 *
+	 *  Methode qui permet d'afficher les donnees d une instance CInput
+	 *
+	 */
 	void printInfo();
-	int opY(int f, int indice); //retourne l'indice de l'opération corrective Of(indice)
-	int opX(int f, int indice); //retourne l'indice de l'opération preventive ou corrective Of(indice)
+
+	/*!
+	*  \brief fonction interface
+	*
+	*  permet d obtenir l indice d une operation dans l'ensemble Ocorr à partir de son numero de rame et sa position dans la liste des operations de cette rame
+	*
+	*  \param f : numero de la rame
+	*  \param indice : position relative à f de l'operation dont un souhaite connaitre l'indice
+	*  \return la valeur de l'operation dans l'ensemble des operations correctives
+	*/
+	int opY(int f, int indice); 
+
+	/*!
+*  \brief fonction interface
+*
+*  permet d obtenir l'indice d'une operation dans l'ensemble Oprev U Ocorr à partir de son numero de rame et sa position dans la liste des operations de cette rame
+*
+*  \param f : numero de la rame
+*  \param indice : position relative à f de l'operation dont un souhaite connaitre l'indice
+*  \return la valeur de l'operation dans l'ensemble des operations correctives ou préventives selon le type de l'operation
+*/
+	int opX(int f, int indice); 
 };
 
