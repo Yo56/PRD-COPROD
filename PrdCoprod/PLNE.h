@@ -12,16 +12,17 @@ class PLNE
 private:
 
 	IloEnv env; //variable d'environnement
+	IloModel model;
 
 	IloInt n; // nombre total d'opérations
 	IloInt m; // nombre de voies
 	IloInt D; // Horizon de planification (en heures)
-	IloInt nInfra; // nb de types d'infrastructures
-	IloInt nSite; // nb sites
+	IloInt nInfra; // nombre de types d'infrastructures
+	IloInt nSite; // nombre sites
 	IloInt nSlot; // Nombre de créneaux horaires de travail des sites sur l’horizon
-	IloInt nTrain; // nb rames
-	IloInt nAgent; // nb agents
-	IloInt nSkill; // nb compétences
+	IloInt nTrain; // nombre rames
+	IloInt nAgent; // nombre agents
+	IloInt nSkill; // nombre compétences
 	IloNum alpha; //taux d'avance maximum par rapport à la butée
 
 	// -------------------------- definition des données vectorielles --------------------------------------//
@@ -103,18 +104,19 @@ private:
 	// -------------------------- Variables --------------------------------------//
 
 	//Xijt
+	IloArray< IloArray< IloArray<IloBoolVarArray> > > X;
 
-	//Yi
+	//Yi : booleen qui indique le rejet ou non de l'operation
 	IloArray<IloBoolVarArray> Y;
 
-	//IloBoolVarArray y(env,);
-
-
 	//Zait
+	IloArray< IloArray< IloArray<IloBoolVarArray> > > Z;
 
 	//Eflt
+	IloArray< IloArray<IloBoolVarArray> > E;
 
 	//Eflt start
+	IloArray<IloBoolVarArray> Estart;
 
 	//Si
 
@@ -133,7 +135,8 @@ public:
 	PLNE(CInput input);
 	
 	static void run();
-	void print();
-	int opY(int f, int indice); //retourne l'indice de l'opération Of(indice) uniquement correctif
+	void printInfo();
+	int opY(int f, int indice); //retourne l'indice de l'opération corrective Of(indice)
+	int opX(int f, int indice); //retourne l'indice de l'opération preventive ou corrective Of(indice)
 };
 

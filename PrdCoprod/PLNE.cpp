@@ -3,7 +3,7 @@
 
 PLNE::PLNE(CInput input)
 {
-	cout << "Initialisation PLNE ...";
+	cout << "Instanciation PLNE ..." << endl;
 
 	n = input.getN(); // nombre total d'opérations
 	m = input.getM(); // nombre de voies
@@ -76,7 +76,6 @@ PLNE::PLNE(CInput input)
 	for (int h = 0; h < D; h++) {
 		rTot[h] = input.getRTot().at(h); 
 	}
-	
 
 	//Durée de voyage pour aller de la gare g1 à la gare g2
 	// TODO IloNumArray v(env, D);
@@ -190,15 +189,146 @@ PLNE::PLNE(CInput input)
 	}
 
 	// -------------------------- Variables --------------------------------------//
+	//modele CPLEX
+	model = IloModel(env);
 
-	Y = IloArray<IloBoolVarArray>(env, nTrain);
+	//////////////////////////////// variable X //////////////////////////////////
+
+	X = IloArray< IloArray< IloArray<IloBoolVarArray> > >(env, nTrain);
+
+	//boucle sur les rames
 	for (int f = 0; f < nTrain; f++) {
-		Y[f] = IloBoolVarArray(env);
+
+		int cardPrev = Oprev[f].getSize(); //nombre d'operations preventives
+		int cardCorr = Ocorr[f].getSize(); //nombre d'operations correctives
+
+		X[f] = IloArray< IloArray<IloBoolVarArray> > (env, cardPrev + cardCorr);
+
+		//boucle sur les operations prev + corr
+		for (int i = 0; i < cardPrev + cardCorr; i++) {
+			X[f][i] = IloArray<IloBoolVarArray>(env, m);
+
+			//boucle sur les voies
+			for (int j = 0; j < m; j++) {
+				X[f][i][j] = IloBoolVarArray(env);
+
+				int nbCreneaux = Tfj[f][j].getSize();
+
+				//boucle sur les creneaux
+				for (int c = 0; c < nbCreneaux; c++) {
+					int debut = Tfj[f][j][c][0];
+					int fin = Tfj[f][j][c][1];
+
+					//on créé (fin - debut) variables qui sont ajoutées a X[f][i][j]
+					for (int t = 0; t < fin - debut; t++) {
+						IloBoolVar variable(env);
+						X[f][i][j].add(variable);
+
+						//ajout au model CPLEX
+						model.add(variable);
+
+					}
+				}
+			}
+		}
 	}
 
-	cout << "OK" << endl;
-}
+	//////////////////////////////// variable Y //////////////////////////////////
 
+	Y = IloArray<IloBoolVarArray>(env, nTrain);
+
+	//boucle sur les rames
+	for (int f = 0; f < nTrain; f++) {
+
+		Y[f] = IloBoolVarArray(env, Ocorr[f].getSize()); //chaque Y[f] est dimensionné selon le nombre d'opérations contenues dans Ocorr[f]
+
+		for (int i = 0; i < Ocorr[f].getSize(); i++) {
+			model.add(Y[f][i]); //ajout de la variabe au modele cplex
+		}
+	}
+
+	//////////////////////////////// variable Z //////////////////////////////////
+
+	Z = IloArray< IloArray< IloArray<IloBoolVarArray> > >(env, nAgent);
+
+	//boucle sur les agents
+	for (int a = 0; a < nAgent; a++) {
+		Z[a] = IloArray< IloArray<IloBoolVarArray> >(env, nTrain);
+
+		//recuperation du nombre de creneau de l'agent
+		int nbCreneaux = Tagent[a].getSize();
+		cout << "nbCreneaux agent : " << nbCreneaux << endl;
+
+		//boucle sur les rames
+		for (int f = 0; f < nTrain; f++) {
+
+			int cardPrev = Oprev[f].getSize(); //nombre d'operations preventives
+			int cardCorr = Ocorr[f].getSize(); //nombre d'operations correctives
+
+			Z[a][f] = IloArray<IloBoolVarArray>(env, cardPrev + cardCorr);
+			
+			//boucle sur les operations
+			for (int i = 0; i < cardPrev + cardCorr; i++) {
+				
+				Z[a][f][i] = IloBoolVarArray(env);
+
+				//boucle sur les creneaux
+				for (int c = 0; c < nbCreneaux; c++) {
+					int debut = Tagent[a][c][0];
+					int fin = Tagent[a][c][1];
+
+					cout << "debut : " << debut << endl;
+					cout << "fin : " << fin << endl;
+
+					//on créé (fin - debut) variables qui sont ajoutées a A[a][f][i]
+					for (int t = 0; t < fin - debut; t++) {
+						IloBoolVar variable(env);
+						Z[a][f][i].add(variable);
+
+						//ajout au model CPLEX
+						model.add(variable);
+
+					}
+				}
+			}
+		}
+	}
+	cout << "Z" << endl;
+	cout << Z << endl << endl;
+
+	//////////////////////////////// variable E //////////////////////////////////
+
+	E = IloArray< IloArray<IloBoolVarArray> >(env,nTrain);
+
+	//boucle sur les rames
+	for (int f = 0; f < nTrain; f++) {
+		E[f] = IloArray<IloBoolVarArray>(env, nSite);
+
+		//boucle sur les sites
+		for (int l = 0; l < nSite; l++) {
+			E[f][l] = IloBoolVarArray(env, D); //PAS SUR DU D
+
+			for (int t = 0; t<D; t++)
+			model.add(E[f][l][t]); //ajout de la variabe au modele cplex
+		}
+	}
+	cout << "E :" << endl;
+	cout << E << endl;
+
+	//////////////////////////////// variable Estart //////////////////////////////////
+
+	Estart = IloArray<IloBoolVarArray>(env, nTrain);
+	for (int f = 0; f < nTrain; f++) {
+		Estart[f] = IloBoolVarArray(env, nSite);
+		for (int l = 0; l < nSite; l++) {
+			model.add(Estart[f][l]); //ajout de la variabe au modele cplex
+		}
+	}
+	cout << "Estart :" << endl;
+	cout << Estart << endl;
+
+	cout << "Instanciation PLNE : OK" << endl;
+}
 
 void PLNE::run() {
 	cout << "========== PLNE ============" << endl << endl;
@@ -378,8 +508,7 @@ void PLNE::run() {
 	//Ti corr
 }
 
-
-void PLNE::print()
+void PLNE::printInfo()
 {
 	cout << "============= instance PLNE  =============  " << endl;
 	cout << "== Donnees scalaires == " << endl;
@@ -420,8 +549,75 @@ void PLNE::print()
 	cout << "Tagent : " << Tagent << endl;
 }
 
-int PLNE::opY(int f, int indiceRelatifF)
+int PLNE::opY(int f, int indice)
 {
-	//cout << Ocorr << endl;
-	return Ocorr[f][indiceRelatifF];
+	if (Y.getSize() > f) {
+
+		if (Y[f].getSize() > indice) {
+			return Ocorr[f][indice];
+		}
+		else {
+			//Gestion des erreurs si l'indice dépasse le nombre d'operations de la rame f
+			if (Ocorr[f].getSize() == 0) {
+				cout << "Erreur : la rame " << f << " ne contient aucune operation corrective." << endl;
+			}
+			else {
+				cout << "Erreur : la rame " << f << " ne contient que " << Ocorr[f].getSize() << " operation(s) corrective(s), atteignable(s) avec les indices [0," << Ocorr[f].getSize() - 1 << "]" << endl;
+			}
+			return -1;
+		}
+	}
+	else {
+		cout << "Erreur : depassement de taille du nombre de rames." << endl;
+	}
+	return -1;
 }
+
+int PLNE::opX(int f, int indice)
+{
+	//verification de la borne max
+	if (f < nTrain) {
+
+		//on recupère le cardinal de Oprev et Ocorr
+		int cardPrev = Oprev[f].getSize(); //nombre d'operations preventives
+		int cardCorr = Ocorr[f].getSize(); //nombre d'operations correctives
+
+		//verification de la borne max
+		if (indice < cardPrev + cardCorr){
+
+			// valeur à retourner contenue dans Oprev ou Ocorr
+			int idOperation = NULL;
+
+			// soit l'operation est preventive
+			if (indice < cardPrev) {
+				cout << "OP preventive" << endl;
+				idOperation = Oprev[f][indice];
+			}
+
+			// soit l'operation est corrective
+			if (indice >= cardPrev && indice < cardPrev+cardCorr) {
+				cout << "OP Corrective" << endl;
+				idOperation = Ocorr[f][indice-cardPrev];
+			}
+
+			cout << "Id Operation : "<<idOperation << endl;
+			return idOperation;
+		}
+		else {
+			// dans ce cas, l'indice depasse le nombre d'operations de la rame
+			//affichage d'un message d'erreur
+			if (cardPrev + cardCorr == 0) {
+				cout << "Erreur : la rame " << f << " ne contient aucune operation." << endl;
+			}
+			else {
+				cout << "Erreur : la rame " << f << " ne contient que " << cardPrev + cardCorr << " operation(s), atteignable(s) avec les indices [0," << cardPrev + cardCorr - 1 << "]" << endl;
+			}
+			return -1;
+		}
+	}
+	else {
+		cout << "Erreur : depassement de taille du nombre de rames." << endl;
+	}
+	return -1;
+}
+
