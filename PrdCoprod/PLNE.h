@@ -119,15 +119,19 @@ private:
 	IloArray<IloBoolVarArray> Estart;
 
 	//Si
+	IloArray<IloIntVarArray> S;
 
 	//Ci
+	IloArray<IloIntVarArray> C;
 
 	//Ei prev
+	IloArray<IloIntVarArray> Eprev;
 
 	//Ti corr
+	IloArray<IloIntVarArray> Tcorr;
 
-	vector<int> operationsPrev;
-	vector<int> operationsCorr;
+	vector<int> operationsPrev; // ?
+	vector<int> operationsCorr; // ?
 
 public:
 

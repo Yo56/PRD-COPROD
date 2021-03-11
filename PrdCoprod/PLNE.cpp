@@ -257,7 +257,6 @@ PLNE::PLNE(CInput input)
 
 		//recuperation du nombre de creneau de l'agent
 		int nbCreneaux = Tagent[a].getSize();
-		cout << "nbCreneaux agent : " << nbCreneaux << endl;
 
 		//boucle sur les rames
 		for (int f = 0; f < nTrain; f++) {
@@ -277,9 +276,6 @@ PLNE::PLNE(CInput input)
 					int debut = Tagent[a][c][0];
 					int fin = Tagent[a][c][1];
 
-					cout << "debut : " << debut << endl;
-					cout << "fin : " << fin << endl;
-
 					//on créé (fin - debut) variables qui sont ajoutées a A[a][f][i]
 					for (int t = 0; t < fin - debut; t++) {
 						IloBoolVar variable(env);
@@ -293,8 +289,6 @@ PLNE::PLNE(CInput input)
 			}
 		}
 	}
-	cout << "Z" << endl;
-	cout << Z << endl << endl;
 
 	//////////////////////////////// variable E //////////////////////////////////
 
@@ -312,20 +306,87 @@ PLNE::PLNE(CInput input)
 			model.add(E[f][l][t]); //ajout de la variabe au modele cplex
 		}
 	}
-	cout << "E :" << endl;
-	cout << E << endl;
 
 	//////////////////////////////// variable Estart //////////////////////////////////
 
 	Estart = IloArray<IloBoolVarArray>(env, nTrain);
+
+	//boucle sur les rames
 	for (int f = 0; f < nTrain; f++) {
 		Estart[f] = IloBoolVarArray(env, nSite);
+
+		//boucle sur les sites
 		for (int l = 0; l < nSite; l++) {
 			model.add(Estart[f][l]); //ajout de la variabe au modele cplex
 		}
 	}
-	cout << "Estart :" << endl;
-	cout << Estart << endl;
+
+	//////////////////////////////// variable S //////////////////////////////////
+
+	S = IloArray<IloIntVarArray>(env, nTrain);
+
+	//boucle sur les rames
+	for (int f = 0; f < nTrain; f++) {
+		int cardPrev = Oprev[f].getSize(); //nombre d'operations preventives
+		int cardCorr = Ocorr[f].getSize(); //nombre d'operations correctives
+		S[f] = IloIntVarArray(env, cardPrev + cardCorr, 0, D);
+
+		//boucle sur les operations
+		for (int i = 0; i < cardPrev + cardCorr; i++) {
+			model.add(S[f][i]); //ajout de la variabe au modele cplex
+		}
+	}
+
+	//////////////////////////////// variable C //////////////////////////////////
+
+	C = IloArray<IloIntVarArray>(env, nTrain);
+
+	//boucle sur les rames
+	for (int f = 0; f < nTrain; f++) {
+		int cardPrev = Oprev[f].getSize(); //nombre d'operations preventives
+		int cardCorr = Ocorr[f].getSize(); //nombre d'operations correctives
+		C[f] = IloIntVarArray(env, cardPrev + cardCorr, 0, D);
+
+		//boucle sur les operations
+		for (int i = 0; i < cardPrev + cardCorr; i++) {
+			model.add(C[f][i]); //ajout de la variabe au modele cplex
+		}
+	}
+
+	//////////////////////////////// variable Eprev //////////////////////////////////
+
+	Eprev = IloArray<IloIntVarArray>(env, nTrain);
+
+	//boucle sur les rames
+	for (int f = 0; f < nTrain; f++) {
+
+		Eprev[f] = IloIntVarArray(env, Oprev[f].getSize()); //pour les IloBoolVarArray, la déclaration du tableau comme ici suffit à instancier les variables, ici il est necessaire de le faire.
+		
+		//boucle sur les operations preventives
+		for (int i = 0; i < Oprev[f].getSize(); i++) {
+			Eprev[f][i] = IloIntVar(env); //declaration de la variable
+			model.add(Eprev[f][i]); 
+		}
+	}
+
+	//////////////////////////////// variable Tcorr //////////////////////////////////
+
+	Tcorr = IloArray<IloIntVarArray>(env, nTrain);
+
+	//boucle sur les rames
+	for (int f = 0; f < nTrain; f++) {
+
+		Tcorr[f] = IloIntVarArray(env, Ocorr[f].getSize()); //pour les IloBoolVarArray, la déclaration du tableau comme ici suffit à instancier les variables, ici il est necessaire de le faire.
+
+		//boucle sur les operations preventives
+		for (int i = 0; i < Ocorr[f].getSize(); i++) {
+			Tcorr[f][i] = IloIntVar(env); //declaration de la variable
+			model.add(Tcorr[f][i]);
+		}
+	}
+
+
+	//////////////////////////////////////////////////////////////////////////////
 
 	cout << "Instanciation PLNE : OK" << endl;
 }
@@ -510,8 +571,8 @@ void PLNE::run() {
 
 void PLNE::printInfo()
 {
-	cout << "============= instance PLNE  =============  " << endl;
-	cout << "== Donnees scalaires == " << endl;
+	cout << endl << "================== instance PLNE  ==================  " << endl << endl;
+	cout << "======== Donnees scalaires ======== " << endl;
 	cout << "n : " << n << endl;
 	cout << "m : " << m << endl;
 	cout << "D : " << D << endl;
@@ -523,7 +584,7 @@ void PLNE::printInfo()
 	cout << "nSkill : " << nSkill << endl;
 	cout << "alpha : " << alpha << endl ;
 
-	cout << endl << "== Donnees vectorielles == " << endl;
+	cout << endl << "======== Donnees vectorielles ======== " << endl;
 	cout << "p : " << p << endl;
 	cout << "pDelta : " << pDelta << endl;
 	cout << "r : " << r << endl;
@@ -538,7 +599,7 @@ void PLNE::printInfo()
 	cout << "NS_is : " << NS_is << endl;
 	cout << "SKL_asl : " << SKL_asl << endl;
 
-	cout << endl << "== Donnees Ensemblistes == " << endl;
+	cout << endl << "======== Donnees Ensemblistes ======== " << endl;
 	cout << "H : " << H << endl;
 	cout << "L : " << L << endl;
 	cout << "Oprev : " << Oprev << endl;
@@ -547,6 +608,19 @@ void PLNE::printInfo()
 	cout << "Ttrack : " << Ttrack << endl;
 	cout << "Tfj : " << Tfj << endl;
 	cout << "Tagent : " << Tagent << endl;
+
+	cout << endl << "======== Variables ======== " << endl;
+	cout << endl << "X : " << endl << X << endl;
+	cout << endl << "Y : " << endl << Y << endl;
+	cout << endl << "Z : " << endl << Z << endl;
+	cout << endl << "E : " << endl << E << endl;
+	cout << endl << "Estart : " << endl << Estart << endl;
+	cout << endl << "S : " << endl << S << endl;
+	cout << endl << "C : " << endl << C << endl;
+	cout << endl << "Eprev : " << endl << Eprev << endl;
+	cout << endl << "Tcorr : " << endl << Tcorr << endl;
+
+	cout << endl << endl;
 }
 
 int PLNE::opY(int f, int indice)
