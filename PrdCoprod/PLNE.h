@@ -24,7 +24,8 @@ class PLNE
 private:
 
 	IloEnv env; /*! variable d'environnement */
-	IloModel model; /*! variable cplex representant le modele a resoudre (variables, contraintes) */
+	IloModel model; /*! variable representant le modele a resoudre (variables, contraintes) */
+	IloCplex cplex; /*! variable Cplex */
 
 	IloInt n; /*! nombre total d'operations*/
 	IloInt m; /*! nombre de voies*/

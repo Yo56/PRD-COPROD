@@ -12,258 +12,199 @@ PLNE::PLNE(CInput input)
 {
 	cout << "Instanciation PLNE ..." << endl;
 
-	n = input.getN(); // nombre total d'opérations
-	m = input.getM(); // nombre de voies
-	D = input.getD(); // Horizon de planification (en heures)
-	nInfra = input.getNInfra(); // nb de types d'infrastructures
-	nSite = input.getNSite(); // nb sites
-	nSlot = input.getNSlot(); // Nombre de créneaux horaires de travail des sites sur l’horizon
-	nTrain = input.getNTrain(); // nb rames
-	nAgent = input.getNAgent(); // nb agents
-	nSkill = input.getNSkill();// nb compétences
-	alpha = input.getAlpha(); //taux d'avance maximum par rapport à la butée
+	try {
 
-	// -------------------------- definition des données vectorielles --------------------------------------//
+		n = input.getN(); // nombre total d'opérations
+		m = input.getM(); // nombre de voies
+		D = input.getD(); // Horizon de planification (en heures)
+		nInfra = input.getNInfra(); // nb de types d'infrastructures
+		nSite = input.getNSite(); // nb sites
+		nSlot = input.getNSlot(); // Nombre de créneaux horaires de travail des sites sur l’horizon
+		nTrain = input.getNTrain(); // nb rames
+		nAgent = input.getNAgent(); // nb agents
+		nSkill = input.getNSkill();// nb compétences
+		alpha = input.getAlpha(); //taux d'avance maximum par rapport à la butée
 
-	p = IloNumArray(env, n);
-	for (int i = 0; i < n; i++) {
-		p[i] = input.getP().at(i); //initialisation des données input
-	}
+		// -------------------------- definition des données vectorielles --------------------------------------//
 
-	pDelta = IloNumArray(env, n);
-	for (int i = 0; i < n; i++) {
-		pDelta[i] = input.getP().at(i); 
-	}
-	
-	r = IloIntArray(env, n);
-	for (int i = 0; i < n; i++) {
-		r[i] = input.getR().at(i); 
-	}
-
-	d = IloIntArray(env, n);
-	for (int i = 0; i < n; i++) {
-		d[i] = input.getDateDeRentree().at(i); 
-	}
-
-	w = IloNumArray(env, n);
-	for (int i = 0; i < n; i++) {
-		w[i] = input.getW().at(i); 
-	}
-
-	u = IloNumArray(env, n);
-	for (int i = 0; i < n; i++) {
-		u[i] = input.getU().at(i); 
-	}
-
-	NI_ik = IloArray<IloBoolArray>(env, n);
-	for (int i = 0; i < n; i++) {
-		NI_ik[i] = IloBoolArray(env, nInfra);
-		for (int k = 0; k < nInfra; k++) {
-			NI_ik[i][k] = input.getNI_ik().at(i).at(k);
+		p = IloNumArray(env, n);
+		for (int i = 0; i < n; i++) {
+			p[i] = input.getP().at(i); //initialisation des données input
 		}
-	}
 
-	IN_jk = IloArray<IloBoolArray>(env, m);
-	for (int j = 0; j < m; j++) {
-		IN_jk[j] = IloBoolArray(env, nInfra);
-		for (int k = 0; k < nInfra; k++) {
-			IN_jk[j][k] = input.getIN_jk().at(j).at(k); 
+		pDelta = IloNumArray(env, n);
+		for (int i = 0; i < n; i++) {
+			pDelta[i] = input.getP().at(i);
 		}
-	}
 
-	rMax_lh = IloArray<IloIntArray>(env, nSite);
-	for (int l = 0; l < nSite; l++) {
-		rMax_lh[l] = IloIntArray(env, nSlot);
-		for (int h = 0; h < nSlot; h++) {
-			rMax_lh[l][h] = input.getRMax_lh().at(l).at(h); 
+		r = IloIntArray(env, n);
+		for (int i = 0; i < n; i++) {
+			r[i] = input.getR().at(i);
 		}
-	}
 
-	rTot = IloIntArray(env, D);
-	for (int h = 0; h < D; h++) {
-		rTot[h] = input.getRTot().at(h); 
-	}
-
-	//Durée de voyage pour aller de la gare g1 à la gare g2
-	// TODO IloNumArray v(env, D);
-
-	nPrev = IloIntArray(env, nTrain);  // on les laisse de coter pour voir si on en a besoin
-
-	nCorr = IloIntArray(env, nTrain); // on les laisse de coter pour voir si on en a besoin
-
-	CO_ii = IloArray<IloBoolArray>(env, n);
-	for (int i = 0; i < n; i++) {
-		CO_ii[i] = IloBoolArray(env, n);
-		for (int i2 = 0; i2 < n; i2++) {
-			CO_ii[i][i2] = input.getCO_ii().at(i).at(i2); 
+		d = IloIntArray(env, n);
+		for (int i = 0; i < n; i++) {
+			d[i] = input.getDateDeRentree().at(i);
 		}
-	}
 
-	NS_is = IloArray<IloIntArray>(env, n);
-	for (int i = 0; i < n; i++) {
-		NS_is[i] = IloIntArray(env, nSkill);
-		for (int s = 0; s < nSkill; s++) {
-			NS_is[i][s] = input.getNS_is().at(i).at(s); 
+		w = IloNumArray(env, n);
+		for (int i = 0; i < n; i++) {
+			w[i] = input.getW().at(i);
 		}
-	}
 
-	SKL_asl = IloArray<IloArray<IloBoolArray> >(env, nAgent); 
-	for (int a = 0; a < nAgent; a++) {
-		SKL_asl[a] = IloArray<IloBoolArray>(env, nSkill);
-		for (int s = 0; s < nSkill; s++) {
-			SKL_asl[a][s] = IloBoolArray(env, nSite);
-			for (int l = 0; l < nSite; l++) {
-				SKL_asl[a][s][l] = input.getSKL_asl().at(a).at(s).at(l);
+		u = IloNumArray(env, n);
+		for (int i = 0; i < n; i++) {
+			u[i] = input.getU().at(i);
+		}
+
+		NI_ik = IloArray<IloBoolArray>(env, n);
+		for (int i = 0; i < n; i++) {
+			NI_ik[i] = IloBoolArray(env, nInfra);
+			for (int k = 0; k < nInfra; k++) {
+				NI_ik[i][k] = input.getNI_ik().at(i).at(k);
 			}
 		}
-	}
 
-	// -------------------------- definition des ensembles --------------------------------------//
-
-	H = IloArray<IloIntArray>(env, nSlot);
-	for (int h = 0; h < nSlot; h++) {
-		H[h] = IloIntArray(env); //taille variable pour chaque H[h]
-		for (int q = 0; q < input.getH().at(h).size(); q++) { //selon le cardinal de chaque slot on ajoute les valeurs
-			H[h].add(input.getH().at(h).at(q));
-		}
-	}
-
-	L = IloArray<IloIntArray>(env, nSite);
-	for (int l = 0; l < nSite; l++) {
-		L[l] = IloIntArray(env); //taille variable pour chaque L[l]
-		for (int q = 0; q < input.getL().at(l).size(); q++) { //selon le cardinal de chaque ensemble
-			L[l].add(input.getL().at(l).at(q));
-		}
-	}
-
-	Oprev = IloArray<IloIntArray>(env, nTrain);
-	for (int f = 0; f < nTrain; f++) {
-		Oprev[f] = IloIntArray(env); //taille variable pour chaque Oprev[f]
-		for (int q = 0; q < input.getOprev().at(f).size(); q++) { //selon le cardinal de chaque ensemble
-			Oprev[f].add(input.getOprev().at(f).at(q));
-		}
-	}
-
-	Ocorr = IloArray<IloIntArray>(env, nTrain);
-	for (int f = 0; f < nTrain; f++) {
-		Ocorr[f] = IloIntArray(env); //taille variable pour chaque Ocorr[f]
-		for (int q = 0; q < input.getOcorr().at(f).size(); q++) { //selon le cardinal de chaque ensemble
-			Ocorr[f].add(input.getOcorr().at(f).at(q));
-		}
-	}
-	
-	Ttrain = IloArray<IloArray<IloIntArray> >(env, nTrain);
-	for (int f = 0; f < nTrain; f++) {
-		Ttrain[f] = IloArray<IloIntArray>(env, input.getTtrain().at(f).size()); // tableau qui va contenir les q creneaux de disponibilité -> pour chaque rame on dimensionne selon le nombre de creneaux
-		for (int q = 0; q < input.getTtrain().at(f).size(); q++) {	//selon le cardinal de chaque ensemble
-			Ttrain[f][q] = IloIntArray (env, 2);					// chaque creneau est un tableau de 2 ints 
-			Ttrain[f][q][0] = input.getTtrain().at(f).at(q).at(0);	// date de debut du creneau q
-			Ttrain[f][q][1] = input.getTtrain().at(f).at(q).at(1);	// date de fin du creneau q
-		}
-	}
-
-	Ttrack = IloArray<IloArray<IloIntArray> >(env, m);
-	for (int j = 0; j < m; j++) {
-		Ttrack[j] = IloArray<IloIntArray>(env, input.getTtrack().at(j).size()); // tableau qui va contenir les q creneaux de disponibilité à ajouter au cas par cas puisque chaque voie va avoir des creneaux différents
-		for (int q = 0; q < input.getTtrack().at(j).size(); q++) {	//selon le cardinal de chaque ensemble
-			Ttrack[j][q] = IloIntArray(env, 2);					// chaque creneau est un tableau de 2 ints 
-			Ttrack[j][q][0] = input.getTtrack().at(j).at(q).at(0);	// date de debut du creneau q
-			Ttrack[j][q][1] = input.getTtrack().at(j).at(q).at(1);	// date de fin du creneau q
-		}
-	}
-
-	Tfj = IloArray<IloArray<IloArray<IloIntArray> > >(env, nTrain);
-	for (int f = 0; f < nTrain; f++) {
-		Tfj[f] = IloArray<IloArray<IloIntArray> >(env, m); // tableau de chaque rame qui comporte l'ensemble des voies
+		IN_jk = IloArray<IloBoolArray>(env, m);
 		for (int j = 0; j < m; j++) {
-			Tfj[f][j] = IloArray<IloIntArray>(env, input.getTfj().at(f).at(j).size()); //ensemble de couples [t-,t+]1, [t-,t+]2... de compatibilité de la rame f et de la voie j. Selon le cardinal de chaque ensemble
-			for (int q = 0; q < input.getTfj().at(f).at(j).size(); q++) {	//selon le cardinal de chaque ensemble
-				Tfj[f][j][q] = IloIntArray(env, 2);					// chaque creneau q est un tableau de 2 ints 
-				Tfj[f][j][q][0] = input.getTfj().at(f).at(j).at(q).at(0);	// date de debut du creneau q
-				Tfj[f][j][q][1] = input.getTfj().at(f).at(j).at(q).at(1);	// date de fin du creneau q
+			IN_jk[j] = IloBoolArray(env, nInfra);
+			for (int k = 0; k < nInfra; k++) {
+				IN_jk[j][k] = input.getIN_jk().at(j).at(k);
 			}
 		}
-	}
 
-	Tagent = IloArray<IloArray<IloIntArray> >(env, nAgent);
-	for (int a = 0; a < nAgent; a++) {
-		Tagent[a] = IloArray<IloIntArray>(env, input.getTagent().at(a).size()); // tableau qui va contenir les q creneaux de disponibilité à ajouter au cas par cas puisque chaque agent va avoir des creneaux différents
-		for (int q = 0; q < input.getTagent().at(a).size(); q++) {	//selon le cardinal de chaque ensemble
-			Tagent[a][q] = IloIntArray(env, 2);					// chaque creneau est un tableau de 2 ints 
-			Tagent[a][q][0] = input.getTagent().at(a).at(q).at(0);	// date de debut du creneau q
-			Tagent[a][q][1] = input.getTagent().at(a).at(q).at(1);	// date de fin du creneau q
+		rMax_lh = IloArray<IloIntArray>(env, nSite);
+		for (int l = 0; l < nSite; l++) {
+			rMax_lh[l] = IloIntArray(env, nSlot);
+			for (int h = 0; h < nSlot; h++) {
+				rMax_lh[l][h] = input.getRMax_lh().at(l).at(h);
+			}
 		}
-	}
 
-	// -------------------------- Variables --------------------------------------//
-	//modele CPLEX
-	model = IloModel(env);
+		rTot = IloIntArray(env, D);
+		for (int h = 0; h < D; h++) {
+			rTot[h] = input.getRTot().at(h);
+		}
 
-	//////////////////////////////// variable X //////////////////////////////////
+		//Durée de voyage pour aller de la gare g1 à la gare g2
+		// TODO IloNumArray v(env, D);
 
-	X = IloArray< IloArray< IloArray<IloBoolVarArray> > >(env, nTrain);
+		nPrev = IloIntArray(env, nTrain);  // on les laisse de coter pour voir si on en a besoin
 
-	//boucle sur les rames
-	for (int f = 0; f < nTrain; f++) {
+		nCorr = IloIntArray(env, nTrain); // on les laisse de coter pour voir si on en a besoin
 
-		int cardPrev = Oprev[f].getSize(); //nombre d'operations preventives
-		int cardCorr = Ocorr[f].getSize(); //nombre d'operations correctives
+		CO_ii = IloArray<IloBoolArray>(env, n);
+		for (int i = 0; i < n; i++) {
+			CO_ii[i] = IloBoolArray(env, n);
+			for (int i2 = 0; i2 < n; i2++) {
+				CO_ii[i][i2] = input.getCO_ii().at(i).at(i2);
+			}
+		}
 
-		X[f] = IloArray< IloArray<IloBoolVarArray> > (env, cardPrev + cardCorr);
+		NS_is = IloArray<IloIntArray>(env, n);
+		for (int i = 0; i < n; i++) {
+			NS_is[i] = IloIntArray(env, nSkill);
+			for (int s = 0; s < nSkill; s++) {
+				NS_is[i][s] = input.getNS_is().at(i).at(s);
+			}
+		}
 
-		//boucle sur les operations prev + corr
-		for (int i = 0; i < cardPrev + cardCorr; i++) {
-			X[f][i] = IloArray<IloBoolVarArray>(env, m);
-
-			//boucle sur les voies
-			for (int j = 0; j < m; j++) {
-				X[f][i][j] = IloBoolVarArray(env);
-
-				int nbCreneaux = Tfj[f][j].getSize();
-
-				//boucle sur les creneaux
-				for (int c = 0; c < nbCreneaux; c++) {
-					int debut = Tfj[f][j][c][0];
-					int fin = Tfj[f][j][c][1];
-
-					//on créé (fin - debut) variables qui sont ajoutées a X[f][i][j]
-					for (int t = 0; t < fin - debut; t++) {
-						IloBoolVar variable(env);
-						X[f][i][j].add(variable);
-
-						//ajout au model CPLEX
-						model.add(variable);
-
-					}
+		SKL_asl = IloArray<IloArray<IloBoolArray> >(env, nAgent);
+		for (int a = 0; a < nAgent; a++) {
+			SKL_asl[a] = IloArray<IloBoolArray>(env, nSkill);
+			for (int s = 0; s < nSkill; s++) {
+				SKL_asl[a][s] = IloBoolArray(env, nSite);
+				for (int l = 0; l < nSite; l++) {
+					SKL_asl[a][s][l] = input.getSKL_asl().at(a).at(s).at(l);
 				}
 			}
 		}
-	}
 
-	//////////////////////////////// variable Y //////////////////////////////////
+		// -------------------------- definition des ensembles --------------------------------------//
 
-	Y = IloArray<IloBoolVarArray>(env, nTrain);
-
-	//boucle sur les rames
-	for (int f = 0; f < nTrain; f++) {
-
-		Y[f] = IloBoolVarArray(env, Ocorr[f].getSize()); //chaque Y[f] est dimensionné selon le nombre d'opérations contenues dans Ocorr[f]
-
-		for (int i = 0; i < Ocorr[f].getSize(); i++) {
-			model.add(Y[f][i]); //ajout de la variabe au modele cplex
+		H = IloArray<IloIntArray>(env, nSlot);
+		for (int h = 0; h < nSlot; h++) {
+			H[h] = IloIntArray(env); //taille variable pour chaque H[h]
+			for (int q = 0; q < input.getH().at(h).size(); q++) { //selon le cardinal de chaque slot on ajoute les valeurs
+				H[h].add(input.getH().at(h).at(q));
+			}
 		}
-	}
 
-	//////////////////////////////// variable Z //////////////////////////////////
+		L = IloArray<IloIntArray>(env, nSite);
+		for (int l = 0; l < nSite; l++) {
+			L[l] = IloIntArray(env); //taille variable pour chaque L[l]
+			for (int q = 0; q < input.getL().at(l).size(); q++) { //selon le cardinal de chaque ensemble
+				L[l].add(input.getL().at(l).at(q));
+			}
+		}
 
-	Z = IloArray< IloArray< IloArray<IloBoolVarArray> > >(env, nAgent);
+		Oprev = IloArray<IloIntArray>(env, nTrain);
+		for (int f = 0; f < nTrain; f++) {
+			Oprev[f] = IloIntArray(env); //taille variable pour chaque Oprev[f]
+			for (int q = 0; q < input.getOprev().at(f).size(); q++) { //selon le cardinal de chaque ensemble
+				Oprev[f].add(input.getOprev().at(f).at(q));
+			}
+		}
 
-	//boucle sur les agents
-	for (int a = 0; a < nAgent; a++) {
-		Z[a] = IloArray< IloArray<IloBoolVarArray> >(env, nTrain);
+		Ocorr = IloArray<IloIntArray>(env, nTrain);
+		for (int f = 0; f < nTrain; f++) {
+			Ocorr[f] = IloIntArray(env); //taille variable pour chaque Ocorr[f]
+			for (int q = 0; q < input.getOcorr().at(f).size(); q++) { //selon le cardinal de chaque ensemble
+				Ocorr[f].add(input.getOcorr().at(f).at(q));
+			}
+		}
 
-		//recuperation du nombre de creneau de l'agent
-		int nbCreneaux = Tagent[a].getSize();
+		Ttrain = IloArray<IloArray<IloIntArray> >(env, nTrain);
+		for (int f = 0; f < nTrain; f++) {
+			Ttrain[f] = IloArray<IloIntArray>(env, input.getTtrain().at(f).size()); // tableau qui va contenir les q creneaux de disponibilité -> pour chaque rame on dimensionne selon le nombre de creneaux
+			for (int q = 0; q < input.getTtrain().at(f).size(); q++) {	//selon le cardinal de chaque ensemble
+				Ttrain[f][q] = IloIntArray(env, 2);					// chaque creneau est un tableau de 2 ints 
+				Ttrain[f][q][0] = input.getTtrain().at(f).at(q).at(0);	// date de debut du creneau q
+				Ttrain[f][q][1] = input.getTtrain().at(f).at(q).at(1);	// date de fin du creneau q
+			}
+		}
+
+		Ttrack = IloArray<IloArray<IloIntArray> >(env, m);
+		for (int j = 0; j < m; j++) {
+			Ttrack[j] = IloArray<IloIntArray>(env, input.getTtrack().at(j).size()); // tableau qui va contenir les q creneaux de disponibilité à ajouter au cas par cas puisque chaque voie va avoir des creneaux différents
+			for (int q = 0; q < input.getTtrack().at(j).size(); q++) {	//selon le cardinal de chaque ensemble
+				Ttrack[j][q] = IloIntArray(env, 2);					// chaque creneau est un tableau de 2 ints 
+				Ttrack[j][q][0] = input.getTtrack().at(j).at(q).at(0);	// date de debut du creneau q
+				Ttrack[j][q][1] = input.getTtrack().at(j).at(q).at(1);	// date de fin du creneau q
+			}
+		}
+
+		Tfj = IloArray<IloArray<IloArray<IloIntArray> > >(env, nTrain);
+		for (int f = 0; f < nTrain; f++) {
+			Tfj[f] = IloArray<IloArray<IloIntArray> >(env, m); // tableau de chaque rame qui comporte l'ensemble des voies
+			for (int j = 0; j < m; j++) {
+				Tfj[f][j] = IloArray<IloIntArray>(env, input.getTfj().at(f).at(j).size()); //ensemble de couples [t-,t+]1, [t-,t+]2... de compatibilité de la rame f et de la voie j. Selon le cardinal de chaque ensemble
+				for (int q = 0; q < input.getTfj().at(f).at(j).size(); q++) {	//selon le cardinal de chaque ensemble
+					Tfj[f][j][q] = IloIntArray(env, 2);					// chaque creneau q est un tableau de 2 ints 
+					Tfj[f][j][q][0] = input.getTfj().at(f).at(j).at(q).at(0);	// date de debut du creneau q
+					Tfj[f][j][q][1] = input.getTfj().at(f).at(j).at(q).at(1);	// date de fin du creneau q
+				}
+			}
+		}
+
+		Tagent = IloArray<IloArray<IloIntArray> >(env, nAgent);
+		for (int a = 0; a < nAgent; a++) {
+			Tagent[a] = IloArray<IloIntArray>(env, input.getTagent().at(a).size()); // tableau qui va contenir les q creneaux de disponibilité à ajouter au cas par cas puisque chaque agent va avoir des creneaux différents
+			for (int q = 0; q < input.getTagent().at(a).size(); q++) {	//selon le cardinal de chaque ensemble
+				Tagent[a][q] = IloIntArray(env, 2);					// chaque creneau est un tableau de 2 ints 
+				Tagent[a][q][0] = input.getTagent().at(a).at(q).at(0);	// date de debut du creneau q
+				Tagent[a][q][1] = input.getTagent().at(a).at(q).at(1);	// date de fin du creneau q
+			}
+		}
+
+		// -------------------------- Variables --------------------------------------//
+		//modele CPLEX
+		model = IloModel(env);
+		cplex = IloCplex(model);
+
+		//////////////////////////////// variable X //////////////////////////////////
+
+		X = IloArray< IloArray< IloArray<IloBoolVarArray> > >(env, nTrain);
 
 		//boucle sur les rames
 		for (int f = 0; f < nTrain; f++) {
@@ -271,131 +212,209 @@ PLNE::PLNE(CInput input)
 			int cardPrev = Oprev[f].getSize(); //nombre d'operations preventives
 			int cardCorr = Ocorr[f].getSize(); //nombre d'operations correctives
 
-			Z[a][f] = IloArray<IloBoolVarArray>(env, cardPrev + cardCorr);
-			
-			//boucle sur les operations
+			X[f] = IloArray< IloArray<IloBoolVarArray> >(env, cardPrev + cardCorr);
+
+			//boucle sur les operations prev + corr
 			for (int i = 0; i < cardPrev + cardCorr; i++) {
-				
-				Z[a][f][i] = IloBoolVarArray(env);
+				X[f][i] = IloArray<IloBoolVarArray>(env, m);
 
-				//boucle sur les creneaux
-				for (int c = 0; c < nbCreneaux; c++) {
-					int debut = Tagent[a][c][0];
-					int fin = Tagent[a][c][1];
+				//boucle sur les voies
+				for (int j = 0; j < m; j++) {
+					X[f][i][j] = IloBoolVarArray(env);
 
-					//on créé (fin - debut) variables qui sont ajoutées a A[a][f][i]
-					for (int t = 0; t < fin - debut; t++) {
-						IloBoolVar variable(env);
-						Z[a][f][i].add(variable);
+					int nbCreneaux = Tfj[f][j].getSize();
 
-						//ajout au model CPLEX
-						model.add(variable);
+					//boucle sur les creneaux
+					for (int c = 0; c < nbCreneaux; c++) {
+						int debut = Tfj[f][j][c][0];
+						int fin = Tfj[f][j][c][1];
 
+						//on créé (fin - debut) variables qui sont ajoutées a X[f][i][j]
+						for (int t = 0; t < fin - debut; t++) {
+							IloBoolVar variable(env);
+							X[f][i][j].add(variable);
+
+							//ajout au model CPLEX
+							model.add(variable);
+
+						}
 					}
 				}
 			}
 		}
-	}
 
-	//////////////////////////////// variable E //////////////////////////////////
+		//////////////////////////////// variable Y //////////////////////////////////
 
-	E = IloArray< IloArray<IloBoolVarArray> >(env,nTrain);
+		Y = IloArray<IloBoolVarArray>(env, nTrain);
 
-	//boucle sur les rames
-	for (int f = 0; f < nTrain; f++) {
-		E[f] = IloArray<IloBoolVarArray>(env, nSite);
+		//boucle sur les rames
+		for (int f = 0; f < nTrain; f++) {
 
-		//boucle sur les sites
-		for (int l = 0; l < nSite; l++) {
-			E[f][l] = IloBoolVarArray(env, D); //PAS SUR DU D
+			Y[f] = IloBoolVarArray(env, Ocorr[f].getSize()); //chaque Y[f] est dimensionné selon le nombre d'opérations contenues dans Ocorr[f]
 
-			for (int t = 0; t<D; t++)
-			model.add(E[f][l][t]); //ajout de la variabe au modele cplex
+			for (int i = 0; i < Ocorr[f].getSize(); i++) {
+				model.add(Y[f][i]); //ajout de la variabe au modele cplex
+			}
 		}
-	}
 
-	//////////////////////////////// variable Estart //////////////////////////////////
+		//////////////////////////////// variable Z //////////////////////////////////
 
-	Estart = IloArray<IloBoolVarArray>(env, nTrain);
+		Z = IloArray< IloArray< IloArray<IloBoolVarArray> > >(env, nAgent);
 
-	//boucle sur les rames
-	for (int f = 0; f < nTrain; f++) {
-		Estart[f] = IloBoolVarArray(env, nSite);
+		//boucle sur les agents
+		for (int a = 0; a < nAgent; a++) {
+			Z[a] = IloArray< IloArray<IloBoolVarArray> >(env, nTrain);
 
-		//boucle sur les sites
-		for (int l = 0; l < nSite; l++) {
-			model.add(Estart[f][l]); //ajout de la variabe au modele cplex
+			//recuperation du nombre de creneau de l'agent
+			int nbCreneaux = Tagent[a].getSize();
+
+			//boucle sur les rames
+			for (int f = 0; f < nTrain; f++) {
+
+				int cardPrev = Oprev[f].getSize(); //nombre d'operations preventives
+				int cardCorr = Ocorr[f].getSize(); //nombre d'operations correctives
+
+				Z[a][f] = IloArray<IloBoolVarArray>(env, cardPrev + cardCorr);
+
+				//boucle sur les operations
+				for (int i = 0; i < cardPrev + cardCorr; i++) {
+
+					Z[a][f][i] = IloBoolVarArray(env);
+
+					//boucle sur les creneaux
+					for (int c = 0; c < nbCreneaux; c++) {
+						int debut = Tagent[a][c][0];
+						int fin = Tagent[a][c][1];
+
+						//on créé (fin - debut) variables qui sont ajoutées a A[a][f][i]
+						for (int t = 0; t < fin - debut; t++) {
+							IloBoolVar variable(env);
+							Z[a][f][i].add(variable);
+
+							//ajout au model CPLEX
+							model.add(variable);
+
+						}
+					}
+				}
+			}
 		}
-	}
 
-	//////////////////////////////// variable S //////////////////////////////////
+		//////////////////////////////// variable E //////////////////////////////////
 
-	S = IloArray<IloIntVarArray>(env, nTrain);
+		E = IloArray< IloArray<IloBoolVarArray> >(env, nTrain);
 
-	//boucle sur les rames
-	for (int f = 0; f < nTrain; f++) {
-		int cardPrev = Oprev[f].getSize(); //nombre d'operations preventives
-		int cardCorr = Ocorr[f].getSize(); //nombre d'operations correctives
-		S[f] = IloIntVarArray(env, cardPrev + cardCorr, 0, D);
+		//boucle sur les rames
+		for (int f = 0; f < nTrain; f++) {
+			E[f] = IloArray<IloBoolVarArray>(env, nSite);
 
-		//boucle sur les operations
-		for (int i = 0; i < cardPrev + cardCorr; i++) {
-			model.add(S[f][i]); //ajout de la variabe au modele cplex
+			//boucle sur les sites
+			for (int l = 0; l < nSite; l++) {
+				E[f][l] = IloBoolVarArray(env, D); //PAS SUR DU D
+
+				for (int t = 0; t < D; t++)
+					model.add(E[f][l][t]); //ajout de la variabe au modele cplex
+			}
 		}
-	}
 
-	//////////////////////////////// variable C //////////////////////////////////
+		//////////////////////////////// variable Estart //////////////////////////////////
 
-	C = IloArray<IloIntVarArray>(env, nTrain);
+		Estart = IloArray<IloBoolVarArray>(env, nTrain);
 
-	//boucle sur les rames
-	for (int f = 0; f < nTrain; f++) {
-		int cardPrev = Oprev[f].getSize(); //nombre d'operations preventives
-		int cardCorr = Ocorr[f].getSize(); //nombre d'operations correctives
-		C[f] = IloIntVarArray(env, cardPrev + cardCorr, 0, D);
+		//boucle sur les rames
+		for (int f = 0; f < nTrain; f++) {
+			Estart[f] = IloBoolVarArray(env, nSite);
 
-		//boucle sur les operations
-		for (int i = 0; i < cardPrev + cardCorr; i++) {
-			model.add(C[f][i]); //ajout de la variabe au modele cplex
+			//boucle sur les sites
+			for (int l = 0; l < nSite; l++) {
+				model.add(Estart[f][l]); //ajout de la variabe au modele cplex
+			}
 		}
-	}
 
-	//////////////////////////////// variable Eprev //////////////////////////////////
+		//////////////////////////////// variable S //////////////////////////////////
 
-	Eprev = IloArray<IloIntVarArray>(env, nTrain);
+		S = IloArray<IloIntVarArray>(env, nTrain);
 
-	//boucle sur les rames
-	for (int f = 0; f < nTrain; f++) {
+		//boucle sur les rames
+		for (int f = 0; f < nTrain; f++) {
+			int cardPrev = Oprev[f].getSize(); //nombre d'operations preventives
+			int cardCorr = Ocorr[f].getSize(); //nombre d'operations correctives
+			S[f] = IloIntVarArray(env, cardPrev + cardCorr, 0, D);
 
-		Eprev[f] = IloIntVarArray(env, Oprev[f].getSize()); //pour les IloBoolVarArray, la déclaration du tableau comme ici suffit à instancier les variables, ici il est necessaire de le faire.
+			//boucle sur les operations
+			for (int i = 0; i < cardPrev + cardCorr; i++) {
+				model.add(S[f][i]); //ajout de la variabe au modele cplex
+			}
+		}
+
+		//////////////////////////////// variable C //////////////////////////////////
+
+		C = IloArray<IloIntVarArray>(env, nTrain);
+
+		//boucle sur les rames
+		for (int f = 0; f < nTrain; f++) {
+			int cardPrev = Oprev[f].getSize(); //nombre d'operations preventives
+			int cardCorr = Ocorr[f].getSize(); //nombre d'operations correctives
+			C[f] = IloIntVarArray(env, cardPrev + cardCorr, 0, D);
+
+			//boucle sur les operations
+			for (int i = 0; i < cardPrev + cardCorr; i++) {
+				model.add(C[f][i]); //ajout de la variabe au modele cplex
+			}
+		}
+
+		//////////////////////////////// variable Eprev //////////////////////////////////
+
+		Eprev = IloArray<IloIntVarArray>(env, nTrain);
+
+		//boucle sur les rames
+		for (int f = 0; f < nTrain; f++) {
+
+			Eprev[f] = IloIntVarArray(env, Oprev[f].getSize()); //pour les IloBoolVarArray, la déclaration du tableau comme ici suffit à instancier les variables, ici il est necessaire de le faire.
+
+			//boucle sur les operations preventives
+			for (int i = 0; i < Oprev[f].getSize(); i++) {
+				Eprev[f][i] = IloIntVar(env); //declaration de la variable
+				model.add(Eprev[f][i]);
+			}
+		}
+
+		//////////////////////////////// variable Tcorr //////////////////////////////////
+
+		Tcorr = IloArray<IloIntVarArray>(env, nTrain);
+
+		//boucle sur les rames
+		for (int f = 0; f < nTrain; f++) {
+
+			Tcorr[f] = IloIntVarArray(env, Ocorr[f].getSize()); //pour les IloBoolVarArray, la déclaration du tableau comme ici suffit à instancier les variables, ici il est necessaire de le faire.
+
+			//boucle sur les operations preventives
+			for (int i = 0; i < Ocorr[f].getSize(); i++) {
+				Tcorr[f][i] = IloIntVar(env); //declaration de la variable
+				model.add(Tcorr[f][i]);
+			}
+		}
+
+
+		// -------------------------- Contraintes --------------------------------------//
 		
-		//boucle sur les operations preventives
-		for (int i = 0; i < Oprev[f].getSize(); i++) {
-			Eprev[f][i] = IloIntVar(env); //declaration de la variable
-			model.add(Eprev[f][i]); 
-		}
+		const double epsilon = 0.5;
+
+
+
+		
+	} //fin try
+	catch(IloException&e){
+		cerr<<"ConcertException: "<<e<<endl;
+	}
+	catch(...){
+		cerr<<"Autre Exception "<<endl;
 	}
 
-	//////////////////////////////// variable Tcorr //////////////////////////////////
-
-	Tcorr = IloArray<IloIntVarArray>(env, nTrain);
-
-	//boucle sur les rames
-	for (int f = 0; f < nTrain; f++) {
-
-		Tcorr[f] = IloIntVarArray(env, Ocorr[f].getSize()); //pour les IloBoolVarArray, la déclaration du tableau comme ici suffit à instancier les variables, ici il est necessaire de le faire.
-
-		//boucle sur les operations preventives
-		for (int i = 0; i < Ocorr[f].getSize(); i++) {
-			Tcorr[f][i] = IloIntVar(env); //declaration de la variable
-			model.add(Tcorr[f][i]);
-		}
-	}
-
-
-	//////////////////////////////////////////////////////////////////////////////
+	
 
 	cout << "Instanciation PLNE : OK" << endl;
+	//cplex.exportModel("AAtestAA.lp");
 }
 
 void PLNE::run() {
