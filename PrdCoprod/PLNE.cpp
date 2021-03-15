@@ -398,7 +398,22 @@ PLNE::PLNE(CInput input)
 
 		// -------------------------- Contraintes --------------------------------------//
 		
-		const double epsilon = 0.5;
+		///////////////////////////// Contrainte (1)
+		IloNum EPSILON = 0.5;
+
+		// boucle sur les rames
+		for (int f = 0; f < nTrain; f++) {
+
+			int nbCorr = Ocorr[f].getSize();
+
+			// boucle sur les opérations correctives de la rame
+			for (int i = 0; i < nbCorr; i++) {
+				// contrainte :
+				model.add(Y[f][i] * u[getIndiceGeneralFromOperationCorrective(f, i)] <= EPSILON);
+			}
+		}
+
+		///////////////////////////// Contrainte (2)
 
 
 
@@ -414,7 +429,8 @@ PLNE::PLNE(CInput input)
 	
 
 	cout << "Instanciation PLNE : OK" << endl;
-	//cplex.exportModel("AAtestAA.lp");
+	cplex.exportModel("AAtestAA.lp");
+	cout << "NRows: " << cplex.getNrows() << endl;
 }
 
 void PLNE::run() {
@@ -721,3 +737,90 @@ int PLNE::opX(int f, int indice)
 	return -1;
 }
 
+int PLNE::getIndiceGeneralFromOperationCorrective(int fParam, int iParam) {
+
+	int compte = 0;
+
+	// verification de la saisie
+	if (fParam < nTrain) {
+
+		int f = 0;// indice de la rame
+
+		// on parcour les opérations qui précedent la rame fParam
+		while (f < fParam) {
+			// on ajoute les nombres d'opérations préventive et corrective de la rame au total
+			compte = compte + Oprev[f].getSize() + Ocorr[f].getSize();
+			f++;
+		}
+
+		// on ajoute les opérations préventives
+		compte = compte + Oprev[fParam].getSize();
+
+		// on ajoute les opérations correctives jusqu'a iParam
+		compte = compte + iParam;
+
+		//retourne la position dans globale de l'operation dans [0, n[
+		return compte;
+
+	}
+	else {
+		cout << "Erreur : depassement de taille du nombre de rames." << endl;
+		return -1;
+	}
+}
+
+int PLNE::getIndiceGeneralFromOperationPreventive(int fParam, int iParam) {
+
+	int compte = 0;
+
+	// verification de la saisie
+	if (fParam < nTrain) {
+
+		int f = 0;// indice de la rame
+
+		// on parcour les opérations qui précedent la rame fParam
+		while (f < fParam) {
+			// on ajoute les nombres d'opérations préventive et corrective de la rame au total
+			compte = compte + Oprev[f].getSize() + Ocorr[f].getSize();
+			f++;
+		}
+
+		// on ajoute les opérations préventives jusqu'a iParam
+		compte = compte + iParam;
+
+		//retourne la position dans globale de l'operation dans [0, n[
+		return compte;
+	}
+	else {
+		cout << "Erreur : depassement de taille du nombre de rames." << endl;
+		return -1;
+	}
+}
+
+int PLNE::getIndiceGeneralFromOperation(int fParam, int iParam) {
+
+	int compte = 0;
+
+	// verification de la saisie
+	if (fParam < nTrain) {
+
+		int f = 0;// indice de la rame
+
+		// on parcour les opérations qui précedent la rame fParam
+		while (f < fParam) {
+			// on ajoute les nombres d'opérations préventive et corrective de la rame au total
+			compte = compte + Oprev[f].getSize() + Ocorr[f].getSize();
+			f++;
+		}
+
+		// on ajoute les opérations jusqu'a iParam
+		compte = compte + iParam;
+
+		//retourne la position dans globale de l'operation dans [0, n[
+		return compte;
+	}
+	else {
+		cout << "Erreur : depassement de taille du nombre de rames." << endl;
+		return -1;
+	}
+}

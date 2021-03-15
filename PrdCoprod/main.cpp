@@ -41,13 +41,18 @@ int main()
 
 	// instanciation du modèle Cplex à partir du jeu de données
 	PLNE plne(input);
-	plne.printInfo();
+	//plne.printInfo();
 
 	int valeur = plne.opX(1,0);
 
 	cout <<" valeur : "<< valeur << endl;
 
 	cout << plne.opY(1, 0) << endl;
+
+	cout << "#### " << plne.getIndiceGeneralFromOperationCorrective(1, 0) << endl;
+	cout << "#### " << plne.getIndiceGeneralFromOperationPreventive(0, 0) << endl;
+	cout << "#### " << plne.getIndiceGeneralFromOperation(1, 0) << endl;
+	
 
 	return 0;
 }

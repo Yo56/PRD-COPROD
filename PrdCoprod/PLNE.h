@@ -187,6 +187,14 @@ public:
 *  \param indice : position relative à f de l'operation dont un souhaite connaitre l'indice
 *  \return la valeur de l'operation dans l'ensemble des operations correctives ou préventives selon le type de l'operation
 */
-	int opX(int f, int indice); 
+	int opX(int f, int indice);
+
+
+	int getIndiceGeneralFromOperationCorrective(int f, int i);
+
+	int getIndiceGeneralFromOperationPreventive(int fParam, int iParam);
+
+	int getIndiceGeneralFromOperation(int fParam, int iParam);
+
 };
 
