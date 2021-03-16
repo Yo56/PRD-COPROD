@@ -388,7 +388,7 @@ PLNE::PLNE(CInput input)
 
 			Tcorr[f] = IloIntVarArray(env, Ocorr[f].getSize()); //pour les IloBoolVarArray, la déclaration du tableau comme ici suffit à instancier les variables, ici il est necessaire de le faire.
 
-			//boucle sur les operations preventives
+			//boucle sur les operations correctives
 			for (int i = 0; i < Ocorr[f].getSize(); i++) {
 				Tcorr[f][i] = IloIntVar(env); //declaration de la variable
 				model.add(Tcorr[f][i]);
@@ -415,7 +415,38 @@ PLNE::PLNE(CInput input)
 
 		///////////////////////////// Contrainte (2)
 
+		//boucle sur les rames
+		for (int f = 0; f < nTrain; f++) {
 
+			int nbPrev = Oprev[f].getSize();
+			int nbCorr = Ocorr[f].getSize();
+			
+
+			// boucle sur les opérations correctives de la rame
+			for (int i = 0; i < nbCorr; i++) {
+				// contrainte :
+				model.add(Tcorr[f][i] >= S[f][nbPrev + i] - d[getIndiceGeneralFromOperationCorrective(f, i)]);
+			}
+		}
+
+		///////////////////////////// Contrainte (3)
+
+		//boucle sur les rames
+		for (int f = 0; f < nTrain; f++) {
+
+			int nbPrev = Oprev[f].getSize();
+			int nbCorr = Ocorr[f].getSize();
+
+			//boucle sur les operations preventives de la rame
+			for (int i = 0; i < nbPrev; i++) {
+				// contrainte
+				model.add(Eprev[f][i] >= d[getIndiceGeneralFromOperationPreventive(f, i)] - C[f][i]);
+			}
+		}
+
+		///////////////////////////// Contrainte (4.1)
+
+		///////////////////////////// Contrainte (4.2)
 
 		
 	} //fin try
@@ -429,8 +460,8 @@ PLNE::PLNE(CInput input)
 	
 
 	cout << "Instanciation PLNE : OK" << endl;
-	cplex.exportModel("AAtestAA.lp");
-	cout << "NRows: " << cplex.getNrows() << endl;
+	//cplex.exportModel("AAtestAA.lp");
+	cout << "Nombre de contraintes (NRows) : " << cplex.getNrows() << endl;
 }
 
 void PLNE::run() {
