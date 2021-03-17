@@ -1,0 +1,119 @@
+.TH "PLNE" 3 "Wed Mar 17 2021" "Version 1" "PRD COPROD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PLNE \- Classe \fBPLNE\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PLNE\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPLNE\fP (\fBCInput\fP input)"
+.br
+.RI "Constructeur\&. "
+.ti -1c
+.RI "void \fBprintInfo\fP ()"
+.br
+.RI "fonction affichage "
+.ti -1c
+.RI "int \fBopY\fP (int f, int indice)"
+.br
+.RI "fonction interface "
+.ti -1c
+.RI "int \fBopX\fP (int f, int indice)"
+.br
+.RI "fonction interface "
+.ti -1c
+.RI "int \fBgetIndiceGeneralFromOperationCorrective\fP (int f, int i)"
+.br
+.ti -1c
+.RI "int \fBgetIndiceGeneralFromOperationPreventive\fP (int fParam, int iParam)"
+.br
+.ti -1c
+.RI "int \fBgetIndiceGeneralFromOperation\fP (int fParam, int iParam)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBrun\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Classe \fBPLNE\fP\&. 
+
+La classe permet de creer une instance de Cplex a partir d un ensemble de donnees representant un probleme d optimisation 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PLNE::PLNE (\fBCInput\fP input)"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBPLNE\fP\&. La fonction prepare l ensemble des donnees Cplex, les variables, les contraintes, en vue de la resolution
+.PP
+\fBParameters\fP
+.RS 4
+\fIinput\fP : donnees d entree 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "int PLNE::getIndiceGeneralFromOperation (int fParam, int iParam)"
+
+.SS "int PLNE::getIndiceGeneralFromOperationCorrective (int f, int i)"
+
+.SS "int PLNE::getIndiceGeneralFromOperationPreventive (int fParam, int iParam)"
+
+.SS "int PLNE::opX (int f, int indice)"
+
+.PP
+fonction interface permet d obtenir l'indice d'une operation dans l'ensemble Oprev U Ocorr à partir de son numero de rame et sa position dans la liste des operations de cette rame
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP : numero de la rame 
+.br
+\fIindice\fP : position relative à f de l'operation dont un souhaite connaitre l'indice 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+la valeur de l'operation dans l'ensemble des operations correctives ou préventives selon le type de l'operation 
+.RE
+.PP
+
+.SS "int PLNE::opY (int f, int indice)"
+
+.PP
+fonction interface permet d obtenir l indice d une operation dans l'ensemble Ocorr à partir de son numero de rame et sa position dans la liste des operations de cette rame
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP : numero de la rame 
+.br
+\fIindice\fP : position relative à f de l'operation dont un souhaite connaitre l'indice 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+la valeur de l'operation dans l'ensemble des operations correctives 
+.RE
+.PP
+
+.SS "void PLNE::printInfo ()"
+
+.PP
+fonction affichage Methode qui permet d'afficher les donnees d une instance \fBCInput\fP 
+.SS "void PLNE::run ()\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PRD COPROD from the source code\&.

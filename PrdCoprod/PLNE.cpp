@@ -14,22 +14,22 @@ PLNE::PLNE(CInput input)
 
 	try {
 
-		n = input.getN(); // nombre total d'opérations
+		n = input.getN(); // nombre total d'operations
 		m = input.getM(); // nombre de voies
 		D = input.getD(); // Horizon de planification (en heures)
 		nInfra = input.getNInfra(); // nb de types d'infrastructures
 		nSite = input.getNSite(); // nb sites
-		nSlot = input.getNSlot(); // Nombre de créneaux horaires de travail des sites sur l’horizon
+		nSlot = input.getNSlot(); // Nombre de creneaux horaires de travail des sites sur l’horizon
 		nTrain = input.getNTrain(); // nb rames
 		nAgent = input.getNAgent(); // nb agents
-		nSkill = input.getNSkill();// nb compétences
-		alpha = input.getAlpha(); //taux d'avance maximum par rapport à la butée
+		nSkill = input.getNSkill();// nb competences
+		alpha = input.getAlpha(); //taux d'avance maximum par rapport a la butee
 
-		// -------------------------- definition des données vectorielles --------------------------------------//
+		// -------------------------- definition des donnees vectorielles --------------------------------------//
 
 		p = IloNumArray(env, n);
 		for (int i = 0; i < n; i++) {
-			p[i] = input.getP().at(i); //initialisation des données input
+			p[i] = input.getP().at(i); //initialisation des donnees input
 		}
 
 		pDelta = IloNumArray(env, n);
@@ -86,7 +86,7 @@ PLNE::PLNE(CInput input)
 			rTot[h] = input.getRTot().at(h);
 		}
 
-		//Durée de voyage pour aller de la gare g1 à la gare g2
+		//Duree de voyage pour aller de la gare g1 a la gare g2
 		// TODO IloNumArray v(env, D);
 
 		nPrev = IloIntArray(env, nTrain);  // on les laisse de coter pour voir si on en a besoin
@@ -156,7 +156,7 @@ PLNE::PLNE(CInput input)
 
 		Ttrain = IloArray<IloArray<IloIntArray> >(env, nTrain);
 		for (int f = 0; f < nTrain; f++) {
-			Ttrain[f] = IloArray<IloIntArray>(env, input.getTtrain().at(f).size()); // tableau qui va contenir les q creneaux de disponibilité -> pour chaque rame on dimensionne selon le nombre de creneaux
+			Ttrain[f] = IloArray<IloIntArray>(env, input.getTtrain().at(f).size()); // tableau qui va contenir les q creneaux de disponibilite -> pour chaque rame on dimensionne selon le nombre de creneaux
 			for (int q = 0; q < input.getTtrain().at(f).size(); q++) {	//selon le cardinal de chaque ensemble
 				Ttrain[f][q] = IloIntArray(env, 2);					// chaque creneau est un tableau de 2 ints 
 				Ttrain[f][q][0] = input.getTtrain().at(f).at(q).at(0);	// date de debut du creneau q
@@ -166,7 +166,7 @@ PLNE::PLNE(CInput input)
 
 		Ttrack = IloArray<IloArray<IloIntArray> >(env, m);
 		for (int j = 0; j < m; j++) {
-			Ttrack[j] = IloArray<IloIntArray>(env, input.getTtrack().at(j).size()); // tableau qui va contenir les q creneaux de disponibilité à ajouter au cas par cas puisque chaque voie va avoir des creneaux différents
+			Ttrack[j] = IloArray<IloIntArray>(env, input.getTtrack().at(j).size()); // tableau qui va contenir les q creneaux de disponibilite a ajouter au cas par cas puisque chaque voie va avoir des creneaux differents
 			for (int q = 0; q < input.getTtrack().at(j).size(); q++) {	//selon le cardinal de chaque ensemble
 				Ttrack[j][q] = IloIntArray(env, 2);					// chaque creneau est un tableau de 2 ints 
 				Ttrack[j][q][0] = input.getTtrack().at(j).at(q).at(0);	// date de debut du creneau q
@@ -178,7 +178,7 @@ PLNE::PLNE(CInput input)
 		for (int f = 0; f < nTrain; f++) {
 			Tfj[f] = IloArray<IloArray<IloIntArray> >(env, m); // tableau de chaque rame qui comporte l'ensemble des voies
 			for (int j = 0; j < m; j++) {
-				Tfj[f][j] = IloArray<IloIntArray>(env, input.getTfj().at(f).at(j).size()); //ensemble de couples [t-,t+]1, [t-,t+]2... de compatibilité de la rame f et de la voie j. Selon le cardinal de chaque ensemble
+				Tfj[f][j] = IloArray<IloIntArray>(env, input.getTfj().at(f).at(j).size()); //ensemble de couples [t-,t+]1, [t-,t+]2... de compatibilite de la rame f et de la voie j. Selon le cardinal de chaque ensemble
 				for (int q = 0; q < input.getTfj().at(f).at(j).size(); q++) {	//selon le cardinal de chaque ensemble
 					Tfj[f][j][q] = IloIntArray(env, 2);					// chaque creneau q est un tableau de 2 ints 
 					Tfj[f][j][q][0] = input.getTfj().at(f).at(j).at(q).at(0);	// date de debut du creneau q
@@ -189,7 +189,7 @@ PLNE::PLNE(CInput input)
 
 		Tagent = IloArray<IloArray<IloIntArray> >(env, nAgent);
 		for (int a = 0; a < nAgent; a++) {
-			Tagent[a] = IloArray<IloIntArray>(env, input.getTagent().at(a).size()); // tableau qui va contenir les q creneaux de disponibilité à ajouter au cas par cas puisque chaque agent va avoir des creneaux différents
+			Tagent[a] = IloArray<IloIntArray>(env, input.getTagent().at(a).size()); // tableau qui va contenir les q creneaux de disponibilite a ajouter au cas par cas puisque chaque agent va avoir des creneaux differents
 			for (int q = 0; q < input.getTagent().at(a).size(); q++) {	//selon le cardinal de chaque ensemble
 				Tagent[a][q] = IloIntArray(env, 2);					// chaque creneau est un tableau de 2 ints 
 				Tagent[a][q][0] = input.getTagent().at(a).at(q).at(0);	// date de debut du creneau q
@@ -229,7 +229,7 @@ PLNE::PLNE(CInput input)
 						int debut = Tfj[f][j][c][0];
 						int fin = Tfj[f][j][c][1];
 
-						//on créé (fin - debut) variables qui sont ajoutées a X[f][i][j]
+						//on cree (fin - debut) variables qui sont ajoutees a X[f][i][j]
 						for (int t = 0; t < fin - debut; t++) {
 							IloBoolVar variable(env);
 							X[f][i][j].add(variable);
@@ -250,7 +250,7 @@ PLNE::PLNE(CInput input)
 		//boucle sur les rames
 		for (int f = 0; f < nTrain; f++) {
 
-			Y[f] = IloBoolVarArray(env, Ocorr[f].getSize()); //chaque Y[f] est dimensionné selon le nombre d'opérations contenues dans Ocorr[f]
+			Y[f] = IloBoolVarArray(env, Ocorr[f].getSize()); //chaque Y[f] est dimensionne selon le nombre d'operations contenues dans Ocorr[f]
 
 			for (int i = 0; i < Ocorr[f].getSize(); i++) {
 				model.add(Y[f][i]); //ajout de la variabe au modele cplex
@@ -286,7 +286,7 @@ PLNE::PLNE(CInput input)
 						int debut = Tagent[a][c][0];
 						int fin = Tagent[a][c][1];
 
-						//on créé (fin - debut) variables qui sont ajoutées a A[a][f][i]
+						//on cree (fin - debut) variables qui sont ajoutees a A[a][f][i]
 						for (int t = 0; t < fin - debut; t++) {
 							IloBoolVar variable(env);
 							Z[a][f][i].add(variable);
@@ -370,7 +370,7 @@ PLNE::PLNE(CInput input)
 		//boucle sur les rames
 		for (int f = 0; f < nTrain; f++) {
 
-			Eprev[f] = IloIntVarArray(env, Oprev[f].getSize()); //pour les IloBoolVarArray, la déclaration du tableau comme ici suffit à instancier les variables, ici il est necessaire de le faire.
+			Eprev[f] = IloIntVarArray(env, Oprev[f].getSize()); //pour les IloBoolVarArray, la declaration du tableau comme ici suffit a instancier les variables, ici il est necessaire de le faire.
 
 			//boucle sur les operations preventives
 			for (int i = 0; i < Oprev[f].getSize(); i++) {
@@ -386,7 +386,7 @@ PLNE::PLNE(CInput input)
 		//boucle sur les rames
 		for (int f = 0; f < nTrain; f++) {
 
-			Tcorr[f] = IloIntVarArray(env, Ocorr[f].getSize()); //pour les IloBoolVarArray, la déclaration du tableau comme ici suffit à instancier les variables, ici il est necessaire de le faire.
+			Tcorr[f] = IloIntVarArray(env, Ocorr[f].getSize()); //pour les IloBoolVarArray, la declaration du tableau comme ici suffit a instancier les variables, ici il est necessaire de le faire.
 
 			//boucle sur les operations correctives
 			for (int i = 0; i < Ocorr[f].getSize(); i++) {
@@ -406,7 +406,7 @@ PLNE::PLNE(CInput input)
 
 			int nbCorr = Ocorr[f].getSize();
 
-			// boucle sur les opérations correctives de la rame
+			// boucle sur les operations correctives de la rame
 			for (int i = 0; i < nbCorr; i++) {
 				// contrainte :
 				model.add(Y[f][i] * u[getIndiceGeneralFromOperationCorrective(f, i)] <= EPSILON);
@@ -422,7 +422,7 @@ PLNE::PLNE(CInput input)
 			int nbCorr = Ocorr[f].getSize();
 			
 
-			// boucle sur les opérations correctives de la rame
+			// boucle sur les operations correctives de la rame
 			for (int i = 0; i < nbCorr; i++) {
 				// contrainte :
 				model.add(Tcorr[f][i] >= S[f][nbPrev + i] - d[getIndiceGeneralFromOperationCorrective(f, i)]);
@@ -435,7 +435,6 @@ PLNE::PLNE(CInput input)
 		for (int f = 0; f < nTrain; f++) {
 
 			int nbPrev = Oprev[f].getSize();
-			int nbCorr = Ocorr[f].getSize();
 
 			//boucle sur les operations preventives de la rame
 			for (int i = 0; i < nbPrev; i++) {
@@ -444,9 +443,10 @@ PLNE::PLNE(CInput input)
 			}
 		}
 
-		///////////////////////////// Contrainte (4.1)
+		///////////////////////////// Contrainte (4)
 
-		///////////////////////////// Contrainte (4.2)
+		
+
 
 		
 	} //fin try
@@ -468,93 +468,93 @@ void PLNE::run() {
 	cout << "========== PLNE ============" << endl << endl;
 	IloEnv env; //variable d'environnement
 
-	// -------------------------- definition des données scalaires --------------------------------------//
+	// -------------------------- definition des donnees scalaires --------------------------------------//
 
-	IloInt n; // nombre total d'opérations
+	IloInt n; // nombre total d'operations
 	IloInt m; // nombre de voies
 	IloInt D; // Horizon de planification (en heures)
 	IloInt nInfra; // nb de types d'infrastructures
 	IloInt nSite; // nb sites
-	IloInt nSlot; // Nombre de créneaux horaires de travail des sites sur l’horizon
+	IloInt nSlot; // Nombre de creneaux horaires de travail des sites sur l’horizon
 	IloInt nTrain; // nb rames
 	IloInt nAgent; // nb agents
-	IloInt nSkill; // nb compétences
-	IloNum alpha; //taux d'avance maximum par rapport à la butée
+	IloInt nSkill; // nb competences
+	IloNum alpha; //taux d'avance maximum par rapport a la butee
 
-	 n = 30; // nombre total d'opérations
+	 n = 30; // nombre total d'operations
 	 m = 2; // nombre de voies
 	 D = 24; // Horizon de planification (en heures)
 	 nInfra = 4; // nb de types d'infrastructures
 	 nSite = 1; // nb sites
-	 nSlot = 3; // Nombre de créneaux horaires de travail des sites sur l’horizon
+	 nSlot = 3; // Nombre de creneaux horaires de travail des sites sur l’horizon
 	 nTrain = 5; // nb rames
 	 nAgent = 3; // nb agents
-	 nSkill = 5;// nb compétences
-	 alpha = 0.10; //taux d'avance maximum par rapport à la butée
+	 nSkill = 5;// nb competences
+	 alpha = 0.10; //taux d'avance maximum par rapport a la butee
 
-	// -------------------------- definition des données vectorielles --------------------------------------//
+	// -------------------------- definition des donnees vectorielles --------------------------------------//
 
-	//Durées complètes des opérations i
+	//Durees completes des operations i
 	IloIntArray p(env, n);
 
-	//Durées diagnostiques des opérations i
+	//Durees diagnostiques des operations i
 	IloIntArray pDelta(env, n);
 
-	//Possibilité de rejeter ou non les opérations i (booléen)
+	//Possibilite de rejeter ou non les operations i (booleen)
 	IloIntArray r(env, n);
 
-	//Dates maximum de début souhaité des opérations i (dates de rentrée souhaitée des rames)
+	//Dates maximum de debut souhaite des operations i (dates de rentree souhaitee des rames)
 	IloIntArray d(env, n);
 
-	//Poids unitaire de retard des opérations i
+	//Poids unitaire de retard des operations i
 	IloIntArray w(env, n);
 
-	//Poids associé au rejets des opérations i
+	//Poids associe au rejets des operations i
 	IloIntArray u(env, n);
 
-	//Besoin de l’opération i en infrastructure k (booléen)
+	//Besoin de l’operation i en infrastructure k (booleen)
 	IloArray<IloBoolArray> NI_ik(env, n); 
 	for (int i = 0; i < n; i++) {
 		NI_ik[i] = IloBoolArray(env, nInfra);
 	}
 
-	//Équipement de la voie j en infrastructure k (booléen)
+	//equipement de la voie j en infrastructure k (booleen)
 	IloArray<IloBoolArray> IN_jk(env, m);
 	for (int j = 0; j < m; j++) {
 		IN_jk[j] = IloBoolArray(env, nInfra);
 	}
 
-	//Nombre maximum de rentrées de rames sur le site l pendant le créneau h
+	//Nombre maximum de rentrees de rames sur le site l pendant le creneau h
 	IloArray<IloIntArray> rMax_lh(env, nSite);
 	for (int l = 0; l < nSite; l++) {
 		rMax_lh[l] = IloIntArray(env, nSlot);
 	}
 
-	//Nombre maximum autorisé de rames en maintenance sur le réseau aux dates t
+	//Nombre maximum autorise de rames en maintenance sur le reseau aux dates t
 	IloIntArray rTot(env, D);
 
-	//Durée de voyage pour aller de la gare g1 à la gare g2
+	//Duree de voyage pour aller de la gare g1 a la gare g2
 	// TODO IloNumArray v(env, D);
 
-	//Nombre d'opérations préventives par rame f
+	//Nombre d'operations preventives par rame f
 	IloIntArray nPrev(env,nTrain); //construction d'un tableau de nTrain cases
 
-	//Nombre d'opérations correctives par rame f
+	//Nombre d'operations correctives par rame f
 	IloIntArray nCorr(env, nTrain);
 
-	//Matrice de compatibilité des opérations i et i′(booléen)
+	//Matrice de compatibilite des operations i et i′(booleen)
 	IloArray<IloBoolArray> CO_ii(env, n);
 	for (int i = 0; i < n; i++) {
 		CO_ii[i] = IloBoolArray(env, n);
 	}
 
-	//Nombre d’agents ayant la compétence s requise pour l’opération i
+	//Nombre d’agents ayant la competence s requise pour l’operation i
 	IloArray<IloIntArray> NS_is (env, n);
 	for (int i = 0; i < n; i++) {
 		NS_is[i] = IloIntArray(env, nSkill);
 	}
 
-	//L’agent a dispose de la compétence s sur le site l (booléen)
+	//L’agent a dispose de la competence s sur le site l (booleen)
 	IloArray<IloArray<IloBoolArray> > SKL_asl(env, nAgent); // IMPORTANT : espace entre les chevrons -> >' '> 
 	for (int a = 0; a < nAgent; a++) {
 		SKL_asl[a] = IloArray<IloBoolArray>(env, nSkill);
@@ -565,7 +565,7 @@ void PLNE::run() {
 
 	// -------------------------- definition des ensembles --------------------------------------//
 
-	//{Dates t appartenant au créneau horaire h}
+	//{Dates t appartenant au creneau horaire h}
 	IloArray<IloIntArray> H(env, nSlot);
 	for (int h = 0; h < nSlot; h++) {
 		H[h] = IloIntArray(env); //taille variable pour chaque H[h]
@@ -577,44 +577,44 @@ void PLNE::run() {
 		L[l] = IloIntArray(env); //taille variable pour chaque L[l]
 	}
 
-	//{Opérations préventives de la rame f}
+	//{Operations preventives de la rame f}
 	IloArray<IloIntArray> Oprev(env, nTrain);
 	for (int f = 0; f < nTrain; f++) {
 		Oprev[f] = IloIntArray(env); //taille variable pour chaque Oprev[f]
 	}
-	//{Opérations correctives de la rame f}
+	//{Operations correctives de la rame f}
 	IloArray<IloIntArray> Ocorr(env, nTrain);
 	for (int f = 0; f < nTrain; f++) {
 		Ocorr[f] = IloIntArray(env); //taille variable pour chaque Ocorr[f]
 	}
 
-	//{Intervalles[t−;t+]q de disponibilité de la rame f}
+	//{Intervalles[t−;t+]q de disponibilite de la rame f}
 	IloArray<IloArray<IloIntArray> > Ttrain(env, nTrain); 
 	for (int f = 0; f < nTrain; f++) {
-		Ttrain[f] = IloArray<IloIntArray>(env); // tableau qui va contenir les q creneaux de disponibilité à ajouter au cas par cas puisque chaque rame va avoir des creneaux différents
+		Ttrain[f] = IloArray<IloIntArray>(env); // tableau qui va contenir les q creneaux de disponibilite a ajouter au cas par cas puisque chaque rame va avoir des creneaux differents
 		// chaque creneau est un tableau de 2 ints 
 	}
 
-	//{Intervalles[t−;t+]q de disponibilité de la voie j}
+	//{Intervalles[t−;t+]q de disponibilite de la voie j}
 	IloArray<IloArray<IloIntArray> > Ttrack(env, m); // IMPORTANT : espace entre les chevrons -> >' '> 
 	for (int j = 0; j < m; j++) {
-		Ttrack[j] = IloArray<IloIntArray>(env); // tableau qui va contenir les q creneaux de disponibilité à ajouter au cas par cas puisque chaque voie va avoir des creneaux différents
+		Ttrack[j] = IloArray<IloIntArray>(env); // tableau qui va contenir les q creneaux de disponibilite a ajouter au cas par cas puisque chaque voie va avoir des creneaux differents
 		// chaque creneau est un tableau de 2 ints 
 	}
 
-	//{Couples (j;[t−;t]q) de disponibilité simultanée des rames f et des voies j}
+	//{Couples (j;[t−;t]q) de disponibilite simultanee des rames f et des voies j}
 	IloArray<IloArray<IloArray<IloIntArray> > > Tfj(env, nTrain); // IMPORTANT : espace entre les chevrons -> >' '> 
 	for (int f = 0; f < nTrain; f++) {
 		Tfj[f] = IloArray<IloArray<IloIntArray> >(env,m); // tableau de chaque rame qui comporte l'ensemble des voies
 		for (int j = 0; j < m; j++) {
-			Tfj[f][j] = IloArray<IloIntArray>(env); //ensemble de couples [t-,t+]1, [t-,t+]2... de compatibilité de la rame f et de la voie j 
+			Tfj[f][j] = IloArray<IloIntArray>(env); //ensemble de couples [t-,t+]1, [t-,t+]2... de compatibilite de la rame f et de la voie j 
 		}
 	}
 
-	//{Intervalles [t−;t+]q de disponibilité de l’agent a}
+	//{Intervalles [t−;t+]q de disponibilite de l’agent a}
 	IloArray<IloArray<IloIntArray> > Tagent(env, nAgent); // IMPORTANT : espace entre les chevrons -> >' '> 
 	for (int a = 0; a < nAgent; a++) {
-		Tagent[a] = IloArray<IloIntArray>(env); // tableau qui va contenir les q creneaux de disponibilité à ajouter au cas par cas puisque chaque agent va avoir des creneaux différents
+		Tagent[a] = IloArray<IloIntArray>(env); // tableau qui va contenir les q creneaux de disponibilite a ajouter au cas par cas puisque chaque agent va avoir des creneaux differents
 		// chaque creneau est un tableau de 2 ints 
 	}
 
@@ -704,7 +704,7 @@ int PLNE::opY(int f, int indice)
 			return Ocorr[f][indice];
 		}
 		else {
-			//Gestion des erreurs si l'indice dépasse le nombre d'operations de la rame f
+			//Gestion des erreurs si l'indice depasse le nombre d'operations de la rame f
 			if (Ocorr[f].getSize() == 0) {
 				cout << "Erreur : la rame " << f << " ne contient aucune operation corrective." << endl;
 			}
@@ -725,14 +725,14 @@ int PLNE::opX(int f, int indice)
 	//verification de la borne max
 	if (f < nTrain) {
 
-		//on recupère le cardinal de Oprev et Ocorr
+		//on recupere le cardinal de Oprev et Ocorr
 		int cardPrev = Oprev[f].getSize(); //nombre d'operations preventives
 		int cardCorr = Ocorr[f].getSize(); //nombre d'operations correctives
 
 		//verification de la borne max
 		if (indice < cardPrev + cardCorr){
 
-			// valeur à retourner contenue dans Oprev ou Ocorr
+			// valeur a retourner contenue dans Oprev ou Ocorr
 			int idOperation = NULL;
 
 			// soit l'operation est preventive
@@ -777,17 +777,17 @@ int PLNE::getIndiceGeneralFromOperationCorrective(int fParam, int iParam) {
 
 		int f = 0;// indice de la rame
 
-		// on parcour les opérations qui précedent la rame fParam
+		// on parcour les operations qui precedent la rame fParam
 		while (f < fParam) {
-			// on ajoute les nombres d'opérations préventive et corrective de la rame au total
+			// on ajoute les nombres d'operations preventive et corrective de la rame au total
 			compte = compte + Oprev[f].getSize() + Ocorr[f].getSize();
 			f++;
 		}
 
-		// on ajoute les opérations préventives
+		// on ajoute les operations preventives
 		compte = compte + Oprev[fParam].getSize();
 
-		// on ajoute les opérations correctives jusqu'a iParam
+		// on ajoute les operations correctives jusqu'a iParam
 		compte = compte + iParam;
 
 		//retourne la position dans globale de l'operation dans [0, n[
@@ -809,14 +809,14 @@ int PLNE::getIndiceGeneralFromOperationPreventive(int fParam, int iParam) {
 
 		int f = 0;// indice de la rame
 
-		// on parcour les opérations qui précedent la rame fParam
+		// on parcour les operations qui precedent la rame fParam
 		while (f < fParam) {
-			// on ajoute les nombres d'opérations préventive et corrective de la rame au total
+			// on ajoute les nombres d'operations preventive et corrective de la rame au total
 			compte = compte + Oprev[f].getSize() + Ocorr[f].getSize();
 			f++;
 		}
 
-		// on ajoute les opérations préventives jusqu'a iParam
+		// on ajoute les operations preventives jusqu'a iParam
 		compte = compte + iParam;
 
 		//retourne la position dans globale de l'operation dans [0, n[
@@ -837,14 +837,14 @@ int PLNE::getIndiceGeneralFromOperation(int fParam, int iParam) {
 
 		int f = 0;// indice de la rame
 
-		// on parcour les opérations qui précedent la rame fParam
+		// on parcour les operations qui precedent la rame fParam
 		while (f < fParam) {
-			// on ajoute les nombres d'opérations préventive et corrective de la rame au total
+			// on ajoute les nombres d'operations preventive et corrective de la rame au total
 			compte = compte + Oprev[f].getSize() + Ocorr[f].getSize();
 			f++;
 		}
 
-		// on ajoute les opérations jusqu'a iParam
+		// on ajoute les operations jusqu'a iParam
 		compte = compte + iParam;
 
 		//retourne la position dans globale de l'operation dans [0, n[

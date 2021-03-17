@@ -1,0 +1,50 @@
+.TH "rapidcsv" 3 "Wed Mar 17 2021" "Version 1" "PRD COPROD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+rapidcsv
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBConverterParams\fP"
+.br
+.RI "Datastructure holding parameters controlling how invalid numbers (including empty strings) should be handled\&. "
+.ti -1c
+.RI "class \fBno_converter\fP"
+.br
+.RI "Exception thrown when attempting to access \fBDocument\fP data in a datatype which is not supported by the \fBConverter\fP class\&. "
+.ti -1c
+.RI "class \fBConverter\fP"
+.br
+.RI "Class providing conversion to/from numerical datatypes and strings\&. Only intended for rapidcsv internal usage, but exposed externally to allow specialization for custom datatype conversions\&. "
+.ti -1c
+.RI "struct \fBLabelParams\fP"
+.br
+.RI "Datastructure holding parameters controlling which row and column should be treated as labels\&. "
+.ti -1c
+.RI "struct \fBSeparatorParams\fP"
+.br
+.RI "Datastructure holding parameters controlling how the CSV data fields are separated\&. "
+.ti -1c
+.RI "class \fBDocument\fP"
+.br
+.RI "Class representing a CSV document\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > using \fBConvFunc\fP = std::function< void(const std::string &pStr, T &pVal)>"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "template<typename T > using \fBrapidcsv::ConvFunc\fP = typedef std::function<void (const std::string & pStr, T & pVal)>"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PRD COPROD from the source code\&.

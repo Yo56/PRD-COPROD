@@ -1,0 +1,63 @@
+.TH "rapidcsv::LabelParams" 3 "Wed Mar 17 2021" "Version 1" "PRD COPROD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+rapidcsv::LabelParams \- Datastructure holding parameters controlling which row and column should be treated as labels\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <rapidcsv\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLabelParams\fP (const int pColumnNameIdx=0, const int pRowNameIdx=\-1)"
+.br
+.RI "Constructor\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBmColumnNameIdx\fP"
+.br
+.RI "specifies the zero-based row index of the column labels\&. "
+.ti -1c
+.RI "int \fBmRowNameIdx\fP"
+.br
+.RI "specifies the zero-based column index of the row labels\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Datastructure holding parameters controlling which row and column should be treated as labels\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "rapidcsv::LabelParams::LabelParams (const int pColumnNameIdx = \fC0\fP, const int pRowNameIdx = \fC\-1\fP)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnNameIdx\fP specifies the zero-based row index of the column labels, setting it to -1 prevents column lookup by label name, and gives access to all rows as document data\&. Default: 0 
+.br
+\fIpRowNameIdx\fP specifies the zero-based column index of the row labels, setting it to -1 prevents row lookup by label name, and gives access to all columns as document data\&. Default: -1 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int rapidcsv::LabelParams::mColumnNameIdx"
+
+.PP
+specifies the zero-based row index of the column labels\&. 
+.SS "int rapidcsv::LabelParams::mRowNameIdx"
+
+.PP
+specifies the zero-based column index of the row labels\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PRD COPROD from the source code\&.

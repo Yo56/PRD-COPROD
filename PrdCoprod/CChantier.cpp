@@ -8,7 +8,7 @@
 #include "CChantier.h"
 
 
-//Constructeur par défaut
+//Constructeur par defaut
 CChantier::CChantier()
 {
 }
@@ -22,7 +22,7 @@ CChantier::CChantier(int idParam, string abreviationParam, string nomParam)
 
 CChantier::CChantier( string abreviationParam, string nomParam)
 {
-	id = -1; //doit être modifié par la suite
+	id = -1; //doit etre modifie par la suite
 	abreviation = abreviationParam;
 	nom = nomParam;
 }

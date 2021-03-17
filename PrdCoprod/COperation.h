@@ -14,27 +14,27 @@ using namespace std;
 	* \brief Classe Operation de maintenance
 	*
 	*  La classe permet de creer une instance de chaque operation de maintenance (quelle soit preventive ou corrective) constituee des differents attributs permettant son identification.
-	* L'objet est cree a partir des donnees récuperees dans les fichiers csv.
+	* L'objet est cree a partir des donnees recuperees dans les fichiers csv.
 	*/
 class COperation
 {
 private:
 	int idCplex;					/*!< identifiant CPlex*/
 	int idReference;				/*!< champ fichier csv : Id Op. Ref*/
-	string refOperation;			/*!< champ fichier csv : Opération Ref*/
+	string refOperation;			/*!< champ fichier csv : Operation Ref*/
 	string descOperation;			/*!< champ fichier csv : Description Op. Ref*/
 	string versionPMS;				/*!< champ fichier csv : Version PMS Op.Ref */
 	bool versionPMSEnCours;			/*!< champ fichier csv : Version PMS en cours*/
 	string typeOperationPartService;/*!< champ fichier csv : Type d'Operation Part/Service */
-	string cycle;					/*!< champ fichier csv : Cycle */		// peut être transformer en enumeration MODULAIRE REVISION CORRECTIF...
+	string cycle;					/*!< champ fichier csv : Cycle */		// peut etre transformer en enumeration MODULAIRE REVISION CORRECTIF...
 	string stfOpePart;				/*!< champ fichier csv : STF / Ope. Part.*/
 	string statutOpeRef;			/*!< champ fichier csv : Statut Op. Ref*/
 	string lcnRacine;				/*!< champ fichier csv : LCN Racine Op. Ref*/
 	string lcnArticle;				/*!< champ fichier csv : LCN Article Op. Ref */
 	string refDocMaintenance;		/*!< champ fichier csv : Reference document Maintenance*/
 	int rang;						/*!< champ fichier csv : Rang */
-	string dateDebutApplicabilite;	/*!< champ fichier csv : Date debut applicabilité Op. Ref */		//TODO changer pour un type date
-	string dateFinApplicabilite;	/*!< champ fichier csv : Date fin applicabilité Op. Ref */		//TODO changer pour un type date
+	string dateDebutApplicabilite;	/*!< champ fichier csv : Date debut applicabilite Op. Ref */		//TODO changer pour un type date
+	string dateFinApplicabilite;	/*!< champ fichier csv : Date fin applicabilite Op. Ref */		//TODO changer pour un type date
 	string sef;						/*!< champ fichier csv : SEF */
 	string cadence;					/*!< champ fichier csv : Cadence Op. Ref */
 	string typeOperation;			/*!< champ fichier csv : Type Op. Ref */

@@ -1,6 +1,6 @@
 /*!
  * \file Cinput.cpp
- * \brief Elements permettant de fournir les donnees d'entrees a un modele de résolution
+ * \brief Elements permettant de fournir les donnees d'entrees a un modele de resolution
  * \author Yohan Nouet
  * \version 1
  */

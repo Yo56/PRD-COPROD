@@ -1,0 +1,113 @@
+.TH "rapidcsv::Converter< T >" 3 "Wed Mar 17 2021" "Version 1" "PRD COPROD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+rapidcsv::Converter< T > \- Class providing conversion to/from numerical datatypes and strings\&. Only intended for rapidcsv internal usage, but exposed externally to allow specialization for custom datatype conversions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <rapidcsv\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConverter\fP (const \fBConverterParams\fP &pConverterParams)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "void \fBToStr\fP (const T &pVal, std::string &pStr) const"
+.br
+.RI "Converts numerical value to string representation\&. "
+.ti -1c
+.RI "void \fBToVal\fP (const std::string &pStr, T &pVal) const"
+.br
+.RI "Converts string holding a numerical value to numerical datatype representation\&. "
+.ti -1c
+.RI "void \fBToStr\fP (const std::string &pVal, std::string &pStr) const"
+.br
+.RI "Specialized implementation handling string to string conversion\&. "
+.ti -1c
+.RI "void \fBToVal\fP (const std::string &pStr, std::string &pVal) const"
+.br
+.RI "Specialized implementation handling string to string conversion\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T>
+.br
+class rapidcsv::Converter< T >"
+Class providing conversion to/from numerical datatypes and strings\&. Only intended for rapidcsv internal usage, but exposed externally to allow specialization for custom datatype conversions\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename T > \fBrapidcsv::Converter\fP< T >::\fBConverter\fP (const \fBConverterParams\fP & pConverterParams)\fC [inline]\fP"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpConverterParams\fP specifies how conversion of non-numerical values to numerical datatype shall be handled\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBrapidcsv::Converter\fP< std::string >::ToStr (const std::string & pVal, std::string & pStr) const\fC [inline]\fP"
+
+.PP
+Specialized implementation handling string to string conversion\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpVal\fP string 
+.br
+\fIpStr\fP string 
+.RE
+.PP
+
+.SS "template<typename T > void \fBrapidcsv::Converter\fP< T >::ToStr (const T & pVal, std::string & pStr) const\fC [inline]\fP"
+
+.PP
+Converts numerical value to string representation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpVal\fP numerical value 
+.br
+\fIpStr\fP output string 
+.RE
+.PP
+
+.SS "void \fBrapidcsv::Converter\fP< std::string >::ToVal (const std::string & pStr, std::string & pVal) const\fC [inline]\fP"
+
+.PP
+Specialized implementation handling string to string conversion\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpVal\fP string 
+.br
+\fIpStr\fP string 
+.RE
+.PP
+
+.SS "template<typename T > void \fBrapidcsv::Converter\fP< T >::ToVal (const std::string & pStr, T & pVal) const\fC [inline]\fP"
+
+.PP
+Converts string holding a numerical value to numerical datatype representation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpVal\fP numerical value 
+.br
+\fIpStr\fP output string 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PRD COPROD from the source code\&.

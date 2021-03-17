@@ -1,0 +1,341 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_c_input_8cpp" kind="file" language="C++">
+    <compoundname>CInput.cpp</compoundname>
+    <includes refid="_c_input_8h" local="yes">CInput.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/CInput.cpp</label>
+        <link refid="_c_input_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="2">
+        <label>CInput.h</label>
+        <link refid="_c_input_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Elements permettant de fournir les donnees d&apos;entrees a un modele de resolution. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Yohan Nouet </para>
+</simplesect>
+<simplesect kind="version"><para>1 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_c_input_8h" kindref="compound">CInput.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="class_c_input_1a667e3c38bfc7460c3c5ea2b48baa7352" kindref="member">CInput::CInput</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>D,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nInfra,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nSite,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nSlot,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nTrain,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nAgent,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nSkill,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;double&gt;<sp/>pParam,<sp/>vector&lt;double&gt;<sp/>pDeltaParam,<sp/>vector&lt;int&gt;<sp/>rParam,<sp/>vector&lt;int&gt;<sp/>dParam,<sp/>vector&lt;double&gt;<sp/>wParam,<sp/>vector&lt;double&gt;<sp/>uParam,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>vector<sp/>&lt;vector&lt;int&gt;<sp/>&gt;<sp/>NI_ikParam,<sp/>vector<sp/>&lt;vector&lt;int&gt;<sp/>&gt;<sp/>IN_jkParam,<sp/>vector<sp/>&lt;vector&lt;int&gt;<sp/>&gt;<sp/>rMax_lhParam,<sp/>vector&lt;int&gt;<sp/>rTotParam,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>vector<sp/>&lt;vector&lt;int&gt;<sp/>&gt;<sp/>CO_iiParam,<sp/>vector<sp/>&lt;vector&lt;int&gt;<sp/>&gt;NS_isParam,<sp/>vector<sp/>&lt;vector<sp/>&lt;vector&lt;int&gt;<sp/>&gt;<sp/>&gt;<sp/>SKL_aslParam,<sp/>vector<sp/>&lt;vector&lt;int&gt;<sp/>&gt;<sp/>HParam,<sp/>vector<sp/>&lt;vector&lt;int&gt;<sp/>&gt;<sp/>LParam,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>vector<sp/>&lt;vector&lt;int&gt;<sp/>&gt;<sp/>OprevParam,<sp/>vector<sp/>&lt;vector&lt;int&gt;<sp/>&gt;<sp/>OcorrParam,<sp/>vector<sp/>&lt;vector<sp/>&lt;vector&lt;int&gt;<sp/>&gt;<sp/>&gt;<sp/>TtrainParam,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>vector<sp/>&lt;vector<sp/>&lt;vector&lt;int&gt;<sp/>&gt;<sp/>&gt;<sp/>TtrackParam,<sp/>vector<sp/>&lt;<sp/>vector<sp/>&lt;vector<sp/>&lt;vector&lt;int&gt;<sp/>&gt;<sp/>&gt;<sp/>&gt;<sp/>TfjParam,<sp/>vector<sp/>&lt;vector<sp/>&lt;vector&lt;int&gt;<sp/>&gt;<sp/>&gt;<sp/>TagentParam)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;n<sp/>=<sp/>n;<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;m<sp/>=<sp/>m;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;D<sp/>=<sp/>D;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;nInfra<sp/>=<sp/>nInfra;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;nSite<sp/>=<sp/>nSite;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;nSlot<sp/>=<sp/>nSlot;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;nTrain<sp/>=<sp/>nTrain;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;nAgent<sp/>=<sp/>nAgent;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;nSkill<sp/>=<sp/>nSkill;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;alpha<sp/>=<sp/>alpha;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;p<sp/>=<sp/>pParam;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;pDelta<sp/>=<sp/>pDeltaParam;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;r<sp/>=<sp/>rParam;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;d<sp/>=<sp/>dParam;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;w<sp/>=<sp/>wParam;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;u<sp/>=<sp/>uParam;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;NI_ik<sp/>=<sp/>NI_ikParam;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;IN_jk<sp/>=<sp/>IN_jkParam;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;rMax_lh<sp/>=<sp/>rMax_lhParam;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;rTot<sp/>=<sp/>rTotParam;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;CO_ii<sp/>=<sp/>CO_iiParam;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;NS_is<sp/>=<sp/>NS_isParam;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;SKL_asl<sp/>=<sp/>SKL_aslParam;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;H<sp/>=<sp/>HParam;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;L<sp/>=<sp/>LParam;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;Oprev<sp/>=<sp/>OprevParam;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;Ocorr<sp/>=<sp/>OcorrParam;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;Ttrain<sp/>=<sp/>TtrainParam;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;Ttrack<sp/>=<sp/>TtrackParam;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;Tfj<sp/>=<sp/>TfjParam;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;Tagent<sp/>=<sp/>TagentParam;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><ref refid="class_c_input_1a282370813c9dfe52799b1a1ec49e497e" kindref="member">CInput::~CInput</ref>()</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1aab610f8ca523efc6ac8041aa0462dd5c" kindref="member">CInput::print</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;==<sp/>Input<sp/>==&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;n<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>n<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;m<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;D<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>D<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;nInfra<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>nInfra<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;nSite<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>nSite<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;nSlot<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>nSlot<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;nTrain<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>nTrain<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;nAgent<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>nAgent<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;nSkill<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>nSkill<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;alpha<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>alpha<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*cout<sp/>&lt;&lt;endl<sp/>&lt;&lt;<sp/>&quot;p<sp/>:<sp/>&quot;;</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>val<sp/>=<sp/>p.begin();<sp/>val<sp/>!=<sp/>p.end();<sp/>++val)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>*val<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;pDelta<sp/>:<sp/>&quot;;</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>val<sp/>=<sp/>pDelta.begin();<sp/>val<sp/>!=<sp/>pDelta.end();<sp/>++val)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>*val<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;r<sp/>:<sp/>&quot;;</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>val<sp/>=<sp/>r.begin();<sp/>val<sp/>!=<sp/>r.end();<sp/>++val)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>*val<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;d<sp/>:<sp/>&quot;;</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>val<sp/>=<sp/>d.begin();<sp/>val<sp/>!=<sp/>d.end();<sp/>++val)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>*val<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;w<sp/>:<sp/>&quot;;</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>val<sp/>=<sp/>w.begin();<sp/>val<sp/>!=<sp/>w.end();<sp/>++val)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>*val<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;u<sp/>:<sp/>&quot;;</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>val<sp/>=<sp/>u.begin();<sp/>val<sp/>!=<sp/>u.end();<sp/>++val)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>*val<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/><sp/>}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1ac3b5a116c1f72d25c63c84ce0492f30e" kindref="member">CInput::getN</ref>()</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>n;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1a9813f1f392009716ede91dadc7d0bd58" kindref="member">CInput::getM</ref>()</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1ac80600fc03147d4d75c7803d380a971b" kindref="member">CInput::getD</ref>()</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>D;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1a66cf2117dd74a4d69b6f36bfe76cf030" kindref="member">CInput::getNInfra</ref>()</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nInfra;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1a9bbc0c0d6d874360c6dd496e08407a9d" kindref="member">CInput::getNSite</ref>()</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nSite;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1a738e52013dc912addecfad258f197ff6" kindref="member">CInput::getNSlot</ref>()</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nSlot;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1a987b55b4ce7ecff1b13f2c36a26732dc" kindref="member">CInput::getNTrain</ref>()</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nTrain;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1a2d18e110ea227f23e58d7ddd443462e3" kindref="member">CInput::getNAgent</ref>()</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nAgent;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1a3bfeddac815cf0677fc1cdcbb632501c" kindref="member">CInput::getNSkill</ref>()</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nSkill;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1a24304c5f68875ff88adc6dbe1f423053" kindref="member">CInput::getAlpha</ref>()</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>alpha;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">vector&lt;double&gt;<sp/><ref refid="class_c_input_1a63b6d9ad7406b37c2c9c3712dbce243f" kindref="member">CInput::getP</ref>()</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">vector&lt;double&gt;<sp/><ref refid="class_c_input_1aab9b36ff21b2f31b5aef9ed2f1115acc" kindref="member">CInput::getPDelta</ref>()</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pDelta;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal">vector&lt;int&gt;<sp/><ref refid="class_c_input_1ad4f51f932664fbbea027db2bd4e6c1ca" kindref="member">CInput::getR</ref>()</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">vector&lt;int&gt;<sp/><ref refid="class_c_input_1a640d09daef31a6c10f02210b46b437dc" kindref="member">CInput::getDateDeRentree</ref>()</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal">vector&lt;double&gt;<sp/><ref refid="class_c_input_1aad0ca65a312839544dd0653058132cab" kindref="member">CInput::getW</ref>()</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>w;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal">vector&lt;double&gt;<sp/><ref refid="class_c_input_1a8832fc8bca5ddacd4976e0ed69867fb5" kindref="member">CInput::getU</ref>()</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>u;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal">vector&lt;vector&lt;int&gt;&gt;<sp/><ref refid="class_c_input_1a7091bc498ad6dac20b0799b3146a4def" kindref="member">CInput::getNI_ik</ref>()</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NI_ik;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal">vector&lt;vector&lt;int&gt;&gt;<sp/><ref refid="class_c_input_1a4bd2b5e584401777c642b1753544978c" kindref="member">CInput::getIN_jk</ref>()</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>IN_jk;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal">vector&lt;vector&lt;int&gt;&gt;<sp/><ref refid="class_c_input_1a3ced31e67bc48edc08f8535eceb4e68b" kindref="member">CInput::getRMax_lh</ref>()</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rMax_lh;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal">vector&lt;int&gt;<sp/><ref refid="class_c_input_1ac0f7878703fa336777ddb9b1c80555fd" kindref="member">CInput::getRTot</ref>()</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rTot;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal">vector&lt;vector&lt;int&gt;&gt;<sp/><ref refid="class_c_input_1aca8d853607dc6d7fed633357c3d27fd1" kindref="member">CInput::getCO_ii</ref>()</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>CO_ii;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal">vector&lt;vector&lt;int&gt;&gt;<sp/><ref refid="class_c_input_1ae07cb97f318726d9fad34c7018027a65" kindref="member">CInput::getNS_is</ref>()</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS_is;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal">vector&lt;vector&lt;vector&lt;int&gt;&gt;&gt;<sp/><ref refid="class_c_input_1a9e08a2d00a0ee327aeafa02eb11bf587" kindref="member">CInput::getSKL_asl</ref>()</highlight></codeline>
+<codeline lineno="212"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>SKL_asl;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal">vector&lt;vector&lt;int&gt;&gt;<sp/><ref refid="class_c_input_1abf8fb449e2cc2b39bbd23f069503d9a9" kindref="member">CInput::getH</ref>()</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>H;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal">vector&lt;vector&lt;int&gt;&gt;<sp/><ref refid="class_c_input_1a7bc9064d6ec6c372a57fa1e6ae610674" kindref="member">CInput::getL</ref>()</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>L;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal">vector&lt;vector&lt;int&gt;&gt;<sp/><ref refid="class_c_input_1adffec908a07493c31f84a124536ba872" kindref="member">CInput::getOprev</ref>()</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Oprev;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal">vector&lt;vector&lt;int&gt;&gt;<sp/><ref refid="class_c_input_1ae03c0692c8689dfc92921d237722eb7d" kindref="member">CInput::getOcorr</ref>()</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Ocorr;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal">vector&lt;vector&lt;vector&lt;int&gt;&gt;&gt;<sp/><ref refid="class_c_input_1ab80bc0ed367eec6d8688b49871ee7750" kindref="member">CInput::getTtrain</ref>()</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Ttrain;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal">vector&lt;vector&lt;vector&lt;int&gt;&gt;&gt;<sp/><ref refid="class_c_input_1a1445cfc79608e0e8e9afa617645c3596" kindref="member">CInput::getTtrack</ref>()</highlight></codeline>
+<codeline lineno="242"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Ttrack;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal">vector&lt;vector&lt;vector&lt;vector&lt;int&gt;&gt;&gt;&gt;<sp/><ref refid="class_c_input_1a61e5a6987ea73a4d36e7535d3b445578" kindref="member">CInput::getTfj</ref>()</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Tfj;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal">vector&lt;vector&lt;vector&lt;int&gt;&gt;&gt;<sp/><ref refid="class_c_input_1abfc821df59ce1097497bd14792f3dd95" kindref="member">CInput::getTagent</ref>()</highlight></codeline>
+<codeline lineno="252"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Tagent;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1a9fb6fd224d73f8133f8208d90c827c7c" kindref="member">CInput::setN</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>n<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1a646def65e5c25e5efd0463b8af2d31e4" kindref="member">CInput::setM</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)</highlight></codeline>
+<codeline lineno="263"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>m<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1a9678dc8921cb3434b816559143a0f22e" kindref="member">CInput::setD</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>D<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1ad697d39d0a71a7b331ee23446a68c1d7" kindref="member">CInput::setNInfra</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)</highlight></codeline>
+<codeline lineno="273"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>nInfra<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1aa91448c9b081d9a337b46e618f99f067" kindref="member">CInput::setNSite</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)</highlight></codeline>
+<codeline lineno="278"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>nSite<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1a88c1ca65590c1ba73374a366ca1b2578" kindref="member">CInput::setNSlot</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)</highlight></codeline>
+<codeline lineno="283"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>nSlot<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1aec0b5705e71e98b249bb9b600df88c6d" kindref="member">CInput::setNTrain</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)</highlight></codeline>
+<codeline lineno="288"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>nTrain<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1ada30777c8f67fc7e0cbb05c569f48f45" kindref="member">CInput::setNAgent</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)</highlight></codeline>
+<codeline lineno="293"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>nAgent<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1ac1c68f1f35320b88ab7865822f4c0382" kindref="member">CInput::setNSkill</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)</highlight></codeline>
+<codeline lineno="298"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/>nSkill<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_input_1ae77743e296a39746cd9715504fd6de5c" kindref="member">CInput::setAlpha</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>i)</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>alpha<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/CInput.cpp"/>
+  </compounddef>
+</doxygen>

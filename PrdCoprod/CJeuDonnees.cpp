@@ -10,7 +10,7 @@
 
 CInput CJeuDonnees::version1()
 {
-	///////////			construction jeu de données		//////////////
+	///////////			construction jeu de donnees		//////////////
 	//		2 operations :  preventif, correctif
 
 	const int nbOperations = 2;

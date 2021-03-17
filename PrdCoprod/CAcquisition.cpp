@@ -30,7 +30,7 @@ vector<CChantier> CAcquisition::chantiers(string path)
 
 	// 1ère colonne = SR
 	vector<string> col1 = doc.GetColumn<string>(0);
-	// 2e colonne = libellé SR
+	// 2e colonne = libelle SR
 	vector<string> col2 = doc.GetColumn<string>(1);
 	// 3e colonne = SR Long
 	vector<string> col3 = doc.GetColumn<string>(2);
@@ -38,7 +38,7 @@ vector<CChantier> CAcquisition::chantiers(string path)
 	cout << "Lecture de  " << col1.size() << " lignes a partir du fichier : "<< path  << endl;
 	cout << "Acquisition : ";
 
-	//création des objets Chantier
+	//creation des objets Chantier
 	for (int i = 0; i < col1.size(); i++)
 	{
 		string SR = col1[i];
@@ -66,7 +66,7 @@ vector<COperation> CAcquisition::operations(string path)
 
 	// 1ère colonne = Id Op. Ref
 	vector<int> col0 = doc.GetColumn<int>(0);
-	// 2e colonne = Opération Ref
+	// 2e colonne = Operation Ref
 	vector<string> col1 = doc.GetColumn<string>(1);
 	// 3e colonne = Description Op. Ref
 	vector<string> col2 = doc.GetColumn<string>(2);
@@ -90,9 +90,9 @@ vector<COperation> CAcquisition::operations(string path)
 	vector<string> col11 = doc.GetColumn<string>(11);
 	// 13e colonne = Rang
 	vector<int> col12 = doc.GetColumn<int>(12);
-	// 14e colonne = Date debut applicabilité Op. Ref
+	// 14e colonne = Date debut applicabilite Op. Ref
 	vector<string> col13 = doc.GetColumn<string>(13);
-	// 15e colonne =  Date fin applicabilité Op. Ref
+	// 15e colonne =  Date fin applicabilite Op. Ref
 	vector<string> col14 = doc.GetColumn<string>(14);
 	// 16e colonne = SEF
 	vector<string> col15 = doc.GetColumn<string>(15);
@@ -109,7 +109,7 @@ vector<COperation> CAcquisition::operations(string path)
 
 	cout << "Lecture de  " << col0.size() << " lignes a partir du fichier : " << path << endl;
 	cout << "Acquisition : ";
-	//création des objets COperation
+	//creation des objets COperation
 	for (int i = 0; i < col1.size(); i++)
 	{
 		COperation operation;

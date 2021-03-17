@@ -13,7 +13,9 @@ Classe Aqcuisition.
 \begin{DoxyCompactItemize}
 \item 
 static vector$<$ \mbox{\hyperlink{class_c_chantier}{CChantier}} $>$ \mbox{\hyperlink{class_c_acquisition_ae4d7d7b8c16d9ca3bf59627d084bfc35}{chantiers}} (string path)
-\begin{DoxyCompactList}\small\item\em Parseur Chantiers (sites de maintenance) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Parseur Chantiers (sites de maintenance) \end{DoxyCompactList}\item 
+static vector$<$ \mbox{\hyperlink{class_c_operation}{COperation}} $>$ \mbox{\hyperlink{class_c_acquisition_afce5b22a685e51c7a9ba3bb680184364}{operations}} (string path)
+\begin{DoxyCompactList}\small\item\em Parseur Operations de maintenance. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -41,6 +43,26 @@ Methode statique qui permet de construire la liste des chantiers a partir du fic
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 la liste des objets chantiers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_acquisition_afce5b22a685e51c7a9ba3bb680184364}\label{class_c_acquisition_afce5b22a685e51c7a9ba3bb680184364}} 
+\index{CAcquisition@{CAcquisition}!operations@{operations}}
+\index{operations@{operations}!CAcquisition@{CAcquisition}}
+\doxysubsubsection{\texorpdfstring{operations()}{operations()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_c_operation}{COperation}} $>$ CAcquisition\+::operations (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parseur Operations de maintenance. 
+
+Methode statique qui permet de construire la liste des operations de maintenance a partir du fichiers csv
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \+: chemin d\textquotesingle{}acces au fichier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la liste des operations 
 \end{DoxyReturn}
 
 

@@ -2,8 +2,30 @@
 \label{class_p_l_n_e}\index{PLNE@{PLNE}}
 
 
+Classe \mbox{\hyperlink{class_p_l_n_e}{PLNE}}.  
+
+
+
+
 {\ttfamily \#include $<$PLNE.\+h$>$}
 
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_l_n_e_aea613753596ce940138235765612a844}{PLNE}} (\mbox{\hyperlink{class_c_input}{CInput}} input)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_l_n_e_a4b5492fa03170448a3ea6cf1f0f6f70b}{print\+Info}} ()
+\begin{DoxyCompactList}\small\item\em fonction affichage \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_p_l_n_e_abb72413c4aa5c3597d22857f3c3305fa}{opY}} (int f, int indice)
+\begin{DoxyCompactList}\small\item\em fonction interface \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_p_l_n_e_a38f5ec91bac65f94ed611d177729b44e}{opX}} (int f, int indice)
+\begin{DoxyCompactList}\small\item\em fonction interface \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_p_l_n_e_aebb227afedd81545d7d7d77aa5dedb14}{get\+Indice\+General\+From\+Operation\+Corrective}} (int f, int i)
+\item 
+int \mbox{\hyperlink{class_p_l_n_e_a88a172ddcf9e7a8dacc63bf4f5c15057}{get\+Indice\+General\+From\+Operation\+Preventive}} (int f\+Param, int i\+Param)
+\item 
+int \mbox{\hyperlink{class_p_l_n_e_a7429582310f4d62ae1a2d196a66b535f}{get\+Indice\+General\+From\+Operation}} (int f\+Param, int i\+Param)
+\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -11,8 +33,105 @@ static void \mbox{\hyperlink{class_p_l_n_e_aa03f14f03047c0b5c7b6b0ae719e4bd7}{ru
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Classe \mbox{\hyperlink{class_p_l_n_e}{PLNE}}. 
+
+La classe permet de creer une instance de Cplex a partir d un ensemble de donnees representant un probleme d optimisation 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_p_l_n_e_aea613753596ce940138235765612a844}\label{class_p_l_n_e_aea613753596ce940138235765612a844}} 
+\index{PLNE@{PLNE}!PLNE@{PLNE}}
+\index{PLNE@{PLNE}!PLNE@{PLNE}}
+\doxysubsubsection{\texorpdfstring{PLNE()}{PLNE()}}
+{\footnotesize\ttfamily PLNE\+::\+PLNE (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_input}{CInput}}}]{input }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+Constructeur de la classe \mbox{\hyperlink{class_p_l_n_e}{PLNE}}. La fonction prepare l ensemble des donnees Cplex, les variables, les contraintes, en vue de la resolution
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & \+: donnees d entree \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_p_l_n_e_aa03f14f03047c0b5c7b6b0ae719e4bd7}\label{class_p_l_n_e_aa03f14f03047c0b5c7b6b0ae719e4bd7}} 
+\mbox{\Hypertarget{class_p_l_n_e_a7429582310f4d62ae1a2d196a66b535f}\label{class_p_l_n_e_a7429582310f4d62ae1a2d196a66b535f}} 
+\index{PLNE@{PLNE}!getIndiceGeneralFromOperation@{getIndiceGeneralFromOperation}}
+\index{getIndiceGeneralFromOperation@{getIndiceGeneralFromOperation}!PLNE@{PLNE}}
+\doxysubsubsection{\texorpdfstring{getIndiceGeneralFromOperation()}{getIndiceGeneralFromOperation()}}
+{\footnotesize\ttfamily int PLNE\+::get\+Indice\+General\+From\+Operation (\begin{DoxyParamCaption}\item[{int}]{f\+Param,  }\item[{int}]{i\+Param }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_p_l_n_e_aebb227afedd81545d7d7d77aa5dedb14}\label{class_p_l_n_e_aebb227afedd81545d7d7d77aa5dedb14}} 
+\index{PLNE@{PLNE}!getIndiceGeneralFromOperationCorrective@{getIndiceGeneralFromOperationCorrective}}
+\index{getIndiceGeneralFromOperationCorrective@{getIndiceGeneralFromOperationCorrective}!PLNE@{PLNE}}
+\doxysubsubsection{\texorpdfstring{getIndiceGeneralFromOperationCorrective()}{getIndiceGeneralFromOperationCorrective()}}
+{\footnotesize\ttfamily int PLNE\+::get\+Indice\+General\+From\+Operation\+Corrective (\begin{DoxyParamCaption}\item[{int}]{f,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_p_l_n_e_a88a172ddcf9e7a8dacc63bf4f5c15057}\label{class_p_l_n_e_a88a172ddcf9e7a8dacc63bf4f5c15057}} 
+\index{PLNE@{PLNE}!getIndiceGeneralFromOperationPreventive@{getIndiceGeneralFromOperationPreventive}}
+\index{getIndiceGeneralFromOperationPreventive@{getIndiceGeneralFromOperationPreventive}!PLNE@{PLNE}}
+\doxysubsubsection{\texorpdfstring{getIndiceGeneralFromOperationPreventive()}{getIndiceGeneralFromOperationPreventive()}}
+{\footnotesize\ttfamily int PLNE\+::get\+Indice\+General\+From\+Operation\+Preventive (\begin{DoxyParamCaption}\item[{int}]{f\+Param,  }\item[{int}]{i\+Param }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_p_l_n_e_a38f5ec91bac65f94ed611d177729b44e}\label{class_p_l_n_e_a38f5ec91bac65f94ed611d177729b44e}} 
+\index{PLNE@{PLNE}!opX@{opX}}
+\index{opX@{opX}!PLNE@{PLNE}}
+\doxysubsubsection{\texorpdfstring{opX()}{opX()}}
+{\footnotesize\ttfamily int PLNE\+::opX (\begin{DoxyParamCaption}\item[{int}]{f,  }\item[{int}]{indice }\end{DoxyParamCaption})}
+
+
+
+fonction interface 
+
+permet d obtenir l\textquotesingle{}indice d\textquotesingle{}une operation dans l\textquotesingle{}ensemble Oprev U Ocorr à partir de son numero de rame et sa position dans la liste des operations de cette rame
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & \+: numero de la rame \\
+\hline
+{\em indice} & \+: position relative à f de l\textquotesingle{}operation dont un souhaite connaitre l\textquotesingle{}indice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la valeur de l\textquotesingle{}operation dans l\textquotesingle{}ensemble des operations correctives ou préventives selon le type de l\textquotesingle{}operation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_l_n_e_abb72413c4aa5c3597d22857f3c3305fa}\label{class_p_l_n_e_abb72413c4aa5c3597d22857f3c3305fa}} 
+\index{PLNE@{PLNE}!opY@{opY}}
+\index{opY@{opY}!PLNE@{PLNE}}
+\doxysubsubsection{\texorpdfstring{opY()}{opY()}}
+{\footnotesize\ttfamily int PLNE\+::opY (\begin{DoxyParamCaption}\item[{int}]{f,  }\item[{int}]{indice }\end{DoxyParamCaption})}
+
+
+
+fonction interface 
+
+permet d obtenir l indice d une operation dans l\textquotesingle{}ensemble Ocorr à partir de son numero de rame et sa position dans la liste des operations de cette rame
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & \+: numero de la rame \\
+\hline
+{\em indice} & \+: position relative à f de l\textquotesingle{}operation dont un souhaite connaitre l\textquotesingle{}indice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la valeur de l\textquotesingle{}operation dans l\textquotesingle{}ensemble des operations correctives 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_l_n_e_a4b5492fa03170448a3ea6cf1f0f6f70b}\label{class_p_l_n_e_a4b5492fa03170448a3ea6cf1f0f6f70b}} 
+\index{PLNE@{PLNE}!printInfo@{printInfo}}
+\index{printInfo@{printInfo}!PLNE@{PLNE}}
+\doxysubsubsection{\texorpdfstring{printInfo()}{printInfo()}}
+{\footnotesize\ttfamily void PLNE\+::print\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+fonction affichage 
+
+Methode qui permet d\textquotesingle{}afficher les donnees d une instance \mbox{\hyperlink{class_c_input}{CInput}} \mbox{\Hypertarget{class_p_l_n_e_aa03f14f03047c0b5c7b6b0ae719e4bd7}\label{class_p_l_n_e_aa03f14f03047c0b5c7b6b0ae719e4bd7}} 
 \index{PLNE@{PLNE}!run@{run}}
 \index{run@{run}!PLNE@{PLNE}}
 \doxysubsubsection{\texorpdfstring{run()}{run()}}

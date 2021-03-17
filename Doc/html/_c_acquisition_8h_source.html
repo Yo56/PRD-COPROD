@@ -9,10 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -28,7 +24,7 @@
    <div id="projectname">PRD COPROD
    &#160;<span id="projectnumber">1</span>
    </div>
-   <div id="projectbrief">Projet de Recherche et Développement 2020-2021 Polytech Tours - Yohan Nouet - SNCF</div>
+   <div id="projectbrief">Conception d&#39;un outil d&#39;aide a la plannification des operations de maintenance SNCF</div>
   </td>
  </tr>
  </tbody>
@@ -51,23 +47,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('_c_acquisition_8h_source.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -82,6 +61,11 @@ $(document).ready(function(){initNavTree('_c_acquisition_8h_source.html',''); in
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_291959c2947a576705c2ed1bd4785cec.html">PrdCoprod</a></li><li class="navelem"><a class="el" href="dir_91c1bffd27e3dd57ab5137843232e966.html">PrdCoprod</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">CAcquisition.h</div>  </div>
@@ -91,26 +75,28 @@ $(document).ready(function(){initNavTree('_c_acquisition_8h_source.html',''); in
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_c_chantier_8h.html">CChantier.h</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_c_acquisition.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_acquisition.html">CAcquisition</a></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">static</span> vector&lt;CChantier&gt; chantiers(<span class="keywordtype">string</span> path);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_c_operation_8h.html">COperation.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_c_acquisition.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_acquisition.html">CAcquisition</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">static</span> vector&lt;CChantier&gt; chantiers(<span class="keywordtype">string</span> path);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">static</span> vector&lt;COperation&gt; operations(<span class="keywordtype">string</span> path);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="ttc" id="a_c_chantier_8h_html"><div class="ttname"><a href="_c_chantier_8h.html">CChantier.h</a></div><div class="ttdoc">Elements representant un chantier (atelier de maintenance)</div></div>
-<div class="ttc" id="aclass_c_acquisition_html"><div class="ttname"><a href="class_c_acquisition.html">CAcquisition</a></div><div class="ttdoc">Classe Aqcuisition.</div><div class="ttdef"><b>Definition:</b> CAcquisition.h:20</div></div>
+<div class="ttc" id="a_c_operation_8h_html"><div class="ttname"><a href="_c_operation_8h.html">COperation.h</a></div><div class="ttdoc">manipulation d'une operation de maintenance</div></div>
+<div class="ttc" id="aclass_c_acquisition_html"><div class="ttname"><a href="class_c_acquisition.html">CAcquisition</a></div><div class="ttdoc">Classe Aqcuisition.</div><div class="ttdef"><b>Definition:</b> CAcquisition.h:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_291959c2947a576705c2ed1bd4785cec.html">PrdCoprod</a></li><li class="navelem"><a class="el" href="dir_91c1bffd27e3dd57ab5137843232e966.html">PrdCoprod</a></li><li class="navelem"><a class="el" href="_c_acquisition_8h.html">CAcquisition.h</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
 </body>
 </html>

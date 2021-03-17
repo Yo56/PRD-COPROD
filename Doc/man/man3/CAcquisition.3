@@ -1,0 +1,66 @@
+.TH "CAcquisition" 3 "Wed Mar 17 2021" "Version 1" "PRD COPROD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CAcquisition \- Classe Aqcuisition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <CAcquisition\&.h>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static vector< \fBCChantier\fP > \fBchantiers\fP (string path)"
+.br
+.RI "Parseur Chantiers (sites de maintenance) "
+.ti -1c
+.RI "static vector< \fBCOperation\fP > \fBoperations\fP (string path)"
+.br
+.RI "Parseur Operations de maintenance\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Classe Aqcuisition\&. 
+
+La classe permet de recuperer les donnees a partir des differents fichiers de donnees *\&.csv Une methode statique est definie pour format de donnee 
+.SH "Member Function Documentation"
+.PP 
+.SS "vector< \fBCChantier\fP > CAcquisition::chantiers (string path)\fC [static]\fP"
+
+.PP
+Parseur Chantiers (sites de maintenance) Methode statique qui permet de construire la liste des chantiers a partir du fichiers csv
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP : chemin d'acces au fichier 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+la liste des objets chantiers 
+.RE
+.PP
+
+.SS "vector< \fBCOperation\fP > CAcquisition::operations (string path)\fC [static]\fP"
+
+.PP
+Parseur Operations de maintenance\&. Methode statique qui permet de construire la liste des operations de maintenance a partir du fichiers csv
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP : chemin d'acces au fichier 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+la liste des operations 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PRD COPROD from the source code\&.

@@ -1,0 +1,937 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_p_l_n_e" kind="class" language="C++" prot="public">
+    <compoundname>PLNE</compoundname>
+    <includes refid="_p_l_n_e_8h" local="no">PLNE.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_p_l_n_e_1acd99aeec87484c6cde076478160694d1" prot="private" static="no" mutable="no">
+        <type>IloEnv</type>
+        <definition>IloEnv PLNE::env</definition>
+        <argsstring></argsstring>
+        <name>env</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="26" column="8" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a68391b01dfe61db20b5df7a5623de1c3" prot="private" static="no" mutable="no">
+        <type>IloModel</type>
+        <definition>IloModel PLNE::model</definition>
+        <argsstring></argsstring>
+        <name>model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>variable d&apos;environnement </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="27" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a7daba6e84fa37c6d0dbcd50f0c1f00da" prot="private" static="no" mutable="no">
+        <type>IloCplex</type>
+        <definition>IloCplex PLNE::cplex</definition>
+        <argsstring></argsstring>
+        <name>cplex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>variable representant le modele a resoudre (variables, contraintes) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="28" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a7e073a6909779499291cf21cd38fbde5" prot="private" static="no" mutable="no">
+        <type>IloInt</type>
+        <definition>IloInt PLNE::n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>variable Cplex </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="30" column="8" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1af0a5c867486e4417695eb037e435c6a8" prot="private" static="no" mutable="no">
+        <type>IloInt</type>
+        <definition>IloInt PLNE::m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>nombre total d&apos;operations </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="31" column="8" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1ab63c639b0fe4e3e9be14b58c37d21ee6" prot="private" static="no" mutable="no">
+        <type>IloInt</type>
+        <definition>IloInt PLNE::D</definition>
+        <argsstring></argsstring>
+        <name>D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>nombre de voies </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="32" column="8" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1aa3ffc06fcfd60a9fd245470584f4fb7d" prot="private" static="no" mutable="no">
+        <type>IloInt</type>
+        <definition>IloInt PLNE::nInfra</definition>
+        <argsstring></argsstring>
+        <name>nInfra</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Horizon de planification (en heures) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="33" column="8" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a08f80ecb02a8bd6d42931b5d5e222ae7" prot="private" static="no" mutable="no">
+        <type>IloInt</type>
+        <definition>IloInt PLNE::nSite</definition>
+        <argsstring></argsstring>
+        <name>nSite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>nombre de types d&apos;infrastructures </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="34" column="8" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1abc7e507ac092171ff6ebd26694c7d624" prot="private" static="no" mutable="no">
+        <type>IloInt</type>
+        <definition>IloInt PLNE::nSlot</definition>
+        <argsstring></argsstring>
+        <name>nSlot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>nombre sites </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="35" column="8" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1aeba1d08f57be95256b79a95295e86ef8" prot="private" static="no" mutable="no">
+        <type>IloInt</type>
+        <definition>IloInt PLNE::nTrain</definition>
+        <argsstring></argsstring>
+        <name>nTrain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Nombre de creneaux horaires de travail des sites sur l horizon </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="36" column="8" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1ae941e10c5c2c2f231fbd7d84e826b390" prot="private" static="no" mutable="no">
+        <type>IloInt</type>
+        <definition>IloInt PLNE::nAgent</definition>
+        <argsstring></argsstring>
+        <name>nAgent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>nombre rames </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="37" column="8" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a301ca96e70c6171286067f0e538502b0" prot="private" static="no" mutable="no">
+        <type>IloInt</type>
+        <definition>IloInt PLNE::nSkill</definition>
+        <argsstring></argsstring>
+        <name>nSkill</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>nombre agents </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="38" column="8" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a33df18577f14c58108929c6e0f2adf10" prot="private" static="no" mutable="no">
+        <type>IloNum</type>
+        <definition>IloNum PLNE::alpha</definition>
+        <argsstring></argsstring>
+        <name>alpha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>nombre competences </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="39" column="8" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a324b43841a6694a2ba7345c0bcf0ea40" prot="private" static="no" mutable="no">
+        <type>IloNumArray</type>
+        <definition>IloNumArray PLNE::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>taux d&apos;avance maximum par rapport a la butee</para>
+<para>Durees completes des operations i </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="44" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a20219e56bcf8d1432a32619fd121b8cc" prot="private" static="no" mutable="no">
+        <type>IloNumArray</type>
+        <definition>IloNumArray PLNE::pDelta</definition>
+        <argsstring></argsstring>
+        <name>pDelta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Durees diagnostiques des operations i </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="47" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a5bcce2c5891406de939c065b72b30da2" prot="private" static="no" mutable="no">
+        <type>IloIntArray</type>
+        <definition>IloIntArray PLNE::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Possibilite de rejeter ou non les operations i (booleen) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="50" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a5fd34e237de667129bb6ec560834e401" prot="private" static="no" mutable="no">
+        <type>IloIntArray</type>
+        <definition>IloIntArray PLNE::d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dates maximum de debut souhaite des operations i (dates de rentree souhaitee des rames) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="53" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a97a3d589838697cfb16f2839b3c3f0fb" prot="private" static="no" mutable="no">
+        <type>IloNumArray</type>
+        <definition>IloNumArray PLNE::w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Poids unitaire de retard des operations i </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="56" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1ac60c04c1a44559d9e674f2188842bb3d" prot="private" static="no" mutable="no">
+        <type>IloNumArray</type>
+        <definition>IloNumArray PLNE::u</definition>
+        <argsstring></argsstring>
+        <name>u</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Poids associe au rejets des operations i </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="59" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a34dd612a24b65c295a8c40c61ffbb139" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloBoolArray &gt;</type>
+        <definition>IloArray&lt;IloBoolArray&gt; PLNE::NI_ik</definition>
+        <argsstring></argsstring>
+        <name>NI_ik</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Besoin de l’operation i en infrastructure k (booleen) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="62" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1ad01994cf3f4f4f900fd59042cc7dc24f" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloBoolArray &gt;</type>
+        <definition>IloArray&lt;IloBoolArray&gt; PLNE::IN_jk</definition>
+        <argsstring></argsstring>
+        <name>IN_jk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Equipement de la voie j en infrastructure k (booleen) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="65" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a6433421e36587fa926a251b2b5756f67" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloIntArray &gt;</type>
+        <definition>IloArray&lt;IloIntArray&gt; PLNE::rMax_lh</definition>
+        <argsstring></argsstring>
+        <name>rMax_lh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Nombre maximum de rentrees de rames sur le site l pendant le creneau h </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="68" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a1963c9bf3786bf6d53aed6dbf3c99a12" prot="private" static="no" mutable="no">
+        <type>IloIntArray</type>
+        <definition>IloIntArray PLNE::rTot</definition>
+        <argsstring></argsstring>
+        <name>rTot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Nombre maximum autorise de rames en maintenance sur le reseau aux dates t </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="71" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a24ec205dc4a946cb75195ad2f885312f" prot="private" static="no" mutable="no">
+        <type>IloIntArray</type>
+        <definition>IloIntArray PLNE::nPrev</definition>
+        <argsstring></argsstring>
+        <name>nPrev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="77" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1ad63d467730372653a2c90b358aa5af69" prot="private" static="no" mutable="no">
+        <type>IloIntArray</type>
+        <definition>IloIntArray PLNE::nCorr</definition>
+        <argsstring></argsstring>
+        <name>nCorr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="80" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a4daa20769d0cec9027e5589a919c7238" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloBoolArray &gt;</type>
+        <definition>IloArray&lt;IloBoolArray&gt; PLNE::CO_ii</definition>
+        <argsstring></argsstring>
+        <name>CO_ii</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Matrice de compatibilité des opérations i et i2 (booleen) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="83" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1aacb225ba09060b5ed3e0ba2a70248304" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloIntArray &gt;</type>
+        <definition>IloArray&lt;IloIntArray&gt; PLNE::NS_is</definition>
+        <argsstring></argsstring>
+        <name>NS_is</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Nombre d’agents ayant la competence s requise pour l’operation i </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="86" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1aec955b4636c3742a386aa6b940015103" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloArray&lt; IloBoolArray &gt; &gt;</type>
+        <definition>IloArray&lt;IloArray&lt;IloBoolArray&gt; &gt; PLNE::SKL_asl</definition>
+        <argsstring></argsstring>
+        <name>SKL_asl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>L’agent a dispose de la competence s sur le site l (booleen) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="89" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a95de5fc670f104722a8933ba42cfe5a7" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloIntArray &gt;</type>
+        <definition>IloArray&lt;IloIntArray&gt; PLNE::H</definition>
+        <argsstring></argsstring>
+        <name>H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{Dates t appartenant au creneau horaire h} </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="94" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1ad2d0a47ac9631b72bbb17bf3d447471d" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloIntArray &gt;</type>
+        <definition>IloArray&lt;IloIntArray&gt; PLNE::L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{Voies j appartenant au site l} </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="97" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a0c0f4e28dfdc37db4399ea1dfd6ea09e" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloIntArray &gt;</type>
+        <definition>IloArray&lt;IloIntArray&gt; PLNE::Oprev</definition>
+        <argsstring></argsstring>
+        <name>Oprev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{Operations preventives de la rame f} </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="100" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a5252dd8db1362c4fef78e8a451f0467f" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloIntArray &gt;</type>
+        <definition>IloArray&lt;IloIntArray&gt; PLNE::Ocorr</definition>
+        <argsstring></argsstring>
+        <name>Ocorr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{Operations correctives de la rame f} </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="103" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1ae9b35b9c6d7abd2d5ad35e090e05df50" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloArray&lt; IloIntArray &gt; &gt;</type>
+        <definition>IloArray&lt;IloArray&lt;IloIntArray&gt; &gt; PLNE::Ttrain</definition>
+        <argsstring></argsstring>
+        <name>Ttrain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{Intervalles[t−;t+]q de disponibilite de la rame f} </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="106" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1ac1cbf09801c6b6d3df23d34a21ef7050" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloArray&lt; IloIntArray &gt; &gt;</type>
+        <definition>IloArray&lt;IloArray&lt;IloIntArray&gt; &gt; PLNE::Ttrack</definition>
+        <argsstring></argsstring>
+        <name>Ttrack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{Intervalles[t−;t+]q de disponibilite de la voie j} </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="109" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1ad97b19e639f1a492652be568ee46608b" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloArray&lt; IloArray&lt; IloIntArray &gt; &gt; &gt;</type>
+        <definition>IloArray&lt;IloArray&lt;IloArray&lt;IloIntArray&gt; &gt; &gt; PLNE::Tfj</definition>
+        <argsstring></argsstring>
+        <name>Tfj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{Couples (j;[t−;t]q) de disponibilite simultanee des rames f et des voies j} </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="112" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a1d2a0532b942b2c9863c0b4968ee7432" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloArray&lt; IloIntArray &gt; &gt;</type>
+        <definition>IloArray&lt;IloArray&lt;IloIntArray&gt; &gt; PLNE::Tagent</definition>
+        <argsstring></argsstring>
+        <name>Tagent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{Intervalles [t−;t+]q de disponibilite de l’agent a} </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="115" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a5465b71398b32c5e75033874a24510ea" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloArray&lt; IloArray&lt; IloBoolVarArray &gt; &gt; &gt;</type>
+        <definition>IloArray&lt; IloArray&lt; IloArray&lt;IloBoolVarArray&gt; &gt; &gt; PLNE::X</definition>
+        <argsstring></argsstring>
+        <name>X</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable X(f)ijt </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="120" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a2e4217e384be875b748e4d5a2637a0c4" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloBoolVarArray &gt;</type>
+        <definition>IloArray&lt;IloBoolVarArray&gt; PLNE::Y</definition>
+        <argsstring></argsstring>
+        <name>Y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable Y(f)i </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="123" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1acb9b171fcf4c23e83b20efb91fbbd06f" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloArray&lt; IloArray&lt; IloBoolVarArray &gt; &gt; &gt;</type>
+        <definition>IloArray&lt; IloArray&lt; IloArray&lt;IloBoolVarArray&gt; &gt; &gt; PLNE::Z</definition>
+        <argsstring></argsstring>
+        <name>Z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable Za(f)it </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="126" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1aa5f5c52580db4b230389040b71ceaa7f" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloArray&lt; IloBoolVarArray &gt; &gt;</type>
+        <definition>IloArray&lt; IloArray&lt;IloBoolVarArray&gt; &gt; PLNE::E</definition>
+        <argsstring></argsstring>
+        <name>E</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable Eflt </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="129" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a0a06db17c4591baf138290f184cbc37f" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloBoolVarArray &gt;</type>
+        <definition>IloArray&lt;IloBoolVarArray&gt; PLNE::Estart</definition>
+        <argsstring></argsstring>
+        <name>Estart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable Efl start </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="132" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a0253caedbf226a2539b35119787eabf5" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloIntVarArray &gt;</type>
+        <definition>IloArray&lt;IloIntVarArray&gt; PLNE::S</definition>
+        <argsstring></argsstring>
+        <name>S</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable S(f)i </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="135" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a837b986271a50a6064e9e8d08c088e8a" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloIntVarArray &gt;</type>
+        <definition>IloArray&lt;IloIntVarArray&gt; PLNE::C</definition>
+        <argsstring></argsstring>
+        <name>C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable C(f)i </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="138" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1aeb9d210754aa72b7061cf6fe9e0bfec7" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloIntVarArray &gt;</type>
+        <definition>IloArray&lt;IloIntVarArray&gt; PLNE::Eprev</definition>
+        <argsstring></argsstring>
+        <name>Eprev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable E(f)i prev </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="141" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a5d2ddf563e21be7e469e027c43140296" prot="private" static="no" mutable="no">
+        <type>IloArray&lt; IloIntVarArray &gt;</type>
+        <definition>IloArray&lt;IloIntVarArray&gt; PLNE::Tcorr</definition>
+        <argsstring></argsstring>
+        <name>Tcorr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable T(f)i corr </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="144" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1a57c24df1b52d583ce1ac82357448a41f" prot="private" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; PLNE::operationsPrev</definition>
+        <argsstring></argsstring>
+        <name>operationsPrev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="146" column="8" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_l_n_e_1ad2336e0595dba234b77a7d2f1faab6a7" prot="private" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; PLNE::operationsCorr</definition>
+        <argsstring></argsstring>
+        <name>operationsCorr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="147" column="8" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_p_l_n_e_1aea613753596ce940138235765612a844" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PLNE::PLNE</definition>
+        <argsstring>(CInput input)</argsstring>
+        <name>PLNE</name>
+        <param>
+          <type><ref refid="class_c_input" kindref="compound">CInput</ref></type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Constructeur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructeur de la classe <ref refid="class_p_l_n_e" kindref="compound">PLNE</ref>. La fonction prepare l ensemble des donnees Cplex, les variables, les contraintes, en vue de la resolution</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: donnees d entree </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="158" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.cpp" bodystart="11" bodyend="465"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_l_n_e_1a4b5492fa03170448a3ea6cf1f0f6f70b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PLNE::printInfo</definition>
+        <argsstring>()</argsstring>
+        <name>printInfo</name>
+        <briefdescription>
+<para>fonction affichage </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Methode qui permet d&apos;afficher les donnees d une instance <ref refid="class_c_input" kindref="compound">CInput</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="168" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.cpp" bodystart="645" bodyend="697"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_l_n_e_1abb72413c4aa5c3597d22857f3c3305fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int PLNE::opY</definition>
+        <argsstring>(int f, int indice)</argsstring>
+        <name>opY</name>
+        <param>
+          <type>int</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>indice</declname>
+        </param>
+        <briefdescription>
+<para>fonction interface </para>
+        </briefdescription>
+        <detaileddescription>
+<para>permet d obtenir l indice d une operation dans l&apos;ensemble Ocorr à partir de son numero de rame et sa position dans la liste des operations de cette rame</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: numero de la rame </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>indice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: position relative à f de l&apos;operation dont un souhaite connaitre l&apos;indice </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>la valeur de l&apos;operation dans l&apos;ensemble des operations correctives </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="179" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.cpp" bodystart="699" bodyend="721"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_l_n_e_1a38f5ec91bac65f94ed611d177729b44e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int PLNE::opX</definition>
+        <argsstring>(int f, int indice)</argsstring>
+        <name>opX</name>
+        <param>
+          <type>int</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>indice</declname>
+        </param>
+        <briefdescription>
+<para>fonction interface </para>
+        </briefdescription>
+        <detaileddescription>
+<para>permet d obtenir l&apos;indice d&apos;une operation dans l&apos;ensemble Oprev U Ocorr à partir de son numero de rame et sa position dans la liste des operations de cette rame</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: numero de la rame </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>indice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: position relative à f de l&apos;operation dont un souhaite connaitre l&apos;indice </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>la valeur de l&apos;operation dans l&apos;ensemble des operations correctives ou préventives selon le type de l&apos;operation </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="190" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.cpp" bodystart="723" bodyend="769"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_l_n_e_1aebb227afedd81545d7d7d77aa5dedb14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int PLNE::getIndiceGeneralFromOperationCorrective</definition>
+        <argsstring>(int f, int i)</argsstring>
+        <name>getIndiceGeneralFromOperationCorrective</name>
+        <param>
+          <type>int</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="193" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.cpp" bodystart="771" bodyend="801"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_l_n_e_1a88a172ddcf9e7a8dacc63bf4f5c15057" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int PLNE::getIndiceGeneralFromOperationPreventive</definition>
+        <argsstring>(int fParam, int iParam)</argsstring>
+        <name>getIndiceGeneralFromOperationPreventive</name>
+        <param>
+          <type>int</type>
+          <declname>fParam</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iParam</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="195" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.cpp" bodystart="803" bodyend="829"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_l_n_e_1a7429582310f4d62ae1a2d196a66b535f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int PLNE::getIndiceGeneralFromOperation</definition>
+        <argsstring>(int fParam, int iParam)</argsstring>
+        <name>getIndiceGeneralFromOperation</name>
+        <param>
+          <type>int</type>
+          <declname>fParam</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iParam</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="197" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.cpp" bodystart="831" bodyend="857"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_p_l_n_e_1aa03f14f03047c0b5c7b6b0ae719e4bd7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PLNE::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="160" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.cpp" bodystart="467" bodyend="643"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe <ref refid="class_p_l_n_e" kindref="compound">PLNE</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>La classe permet de creer une instance de Cplex a partir d un ensemble de donnees representant un probleme d optimisation </para>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" line="22" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/PLNE.h" bodystart="23" bodyend="199"/>
+    <listofallmembers>
+      <member refid="class_p_l_n_e_1a33df18577f14c58108929c6e0f2adf10" prot="private" virt="non-virtual"><scope>PLNE</scope><name>alpha</name></member>
+      <member refid="class_p_l_n_e_1a837b986271a50a6064e9e8d08c088e8a" prot="private" virt="non-virtual"><scope>PLNE</scope><name>C</name></member>
+      <member refid="class_p_l_n_e_1a4daa20769d0cec9027e5589a919c7238" prot="private" virt="non-virtual"><scope>PLNE</scope><name>CO_ii</name></member>
+      <member refid="class_p_l_n_e_1a7daba6e84fa37c6d0dbcd50f0c1f00da" prot="private" virt="non-virtual"><scope>PLNE</scope><name>cplex</name></member>
+      <member refid="class_p_l_n_e_1a5fd34e237de667129bb6ec560834e401" prot="private" virt="non-virtual"><scope>PLNE</scope><name>d</name></member>
+      <member refid="class_p_l_n_e_1ab63c639b0fe4e3e9be14b58c37d21ee6" prot="private" virt="non-virtual"><scope>PLNE</scope><name>D</name></member>
+      <member refid="class_p_l_n_e_1aa5f5c52580db4b230389040b71ceaa7f" prot="private" virt="non-virtual"><scope>PLNE</scope><name>E</name></member>
+      <member refid="class_p_l_n_e_1acd99aeec87484c6cde076478160694d1" prot="private" virt="non-virtual"><scope>PLNE</scope><name>env</name></member>
+      <member refid="class_p_l_n_e_1aeb9d210754aa72b7061cf6fe9e0bfec7" prot="private" virt="non-virtual"><scope>PLNE</scope><name>Eprev</name></member>
+      <member refid="class_p_l_n_e_1a0a06db17c4591baf138290f184cbc37f" prot="private" virt="non-virtual"><scope>PLNE</scope><name>Estart</name></member>
+      <member refid="class_p_l_n_e_1a7429582310f4d62ae1a2d196a66b535f" prot="public" virt="non-virtual"><scope>PLNE</scope><name>getIndiceGeneralFromOperation</name></member>
+      <member refid="class_p_l_n_e_1aebb227afedd81545d7d7d77aa5dedb14" prot="public" virt="non-virtual"><scope>PLNE</scope><name>getIndiceGeneralFromOperationCorrective</name></member>
+      <member refid="class_p_l_n_e_1a88a172ddcf9e7a8dacc63bf4f5c15057" prot="public" virt="non-virtual"><scope>PLNE</scope><name>getIndiceGeneralFromOperationPreventive</name></member>
+      <member refid="class_p_l_n_e_1a95de5fc670f104722a8933ba42cfe5a7" prot="private" virt="non-virtual"><scope>PLNE</scope><name>H</name></member>
+      <member refid="class_p_l_n_e_1ad01994cf3f4f4f900fd59042cc7dc24f" prot="private" virt="non-virtual"><scope>PLNE</scope><name>IN_jk</name></member>
+      <member refid="class_p_l_n_e_1ad2d0a47ac9631b72bbb17bf3d447471d" prot="private" virt="non-virtual"><scope>PLNE</scope><name>L</name></member>
+      <member refid="class_p_l_n_e_1af0a5c867486e4417695eb037e435c6a8" prot="private" virt="non-virtual"><scope>PLNE</scope><name>m</name></member>
+      <member refid="class_p_l_n_e_1a68391b01dfe61db20b5df7a5623de1c3" prot="private" virt="non-virtual"><scope>PLNE</scope><name>model</name></member>
+      <member refid="class_p_l_n_e_1a7e073a6909779499291cf21cd38fbde5" prot="private" virt="non-virtual"><scope>PLNE</scope><name>n</name></member>
+      <member refid="class_p_l_n_e_1ae941e10c5c2c2f231fbd7d84e826b390" prot="private" virt="non-virtual"><scope>PLNE</scope><name>nAgent</name></member>
+      <member refid="class_p_l_n_e_1ad63d467730372653a2c90b358aa5af69" prot="private" virt="non-virtual"><scope>PLNE</scope><name>nCorr</name></member>
+      <member refid="class_p_l_n_e_1a34dd612a24b65c295a8c40c61ffbb139" prot="private" virt="non-virtual"><scope>PLNE</scope><name>NI_ik</name></member>
+      <member refid="class_p_l_n_e_1aa3ffc06fcfd60a9fd245470584f4fb7d" prot="private" virt="non-virtual"><scope>PLNE</scope><name>nInfra</name></member>
+      <member refid="class_p_l_n_e_1a24ec205dc4a946cb75195ad2f885312f" prot="private" virt="non-virtual"><scope>PLNE</scope><name>nPrev</name></member>
+      <member refid="class_p_l_n_e_1aacb225ba09060b5ed3e0ba2a70248304" prot="private" virt="non-virtual"><scope>PLNE</scope><name>NS_is</name></member>
+      <member refid="class_p_l_n_e_1a08f80ecb02a8bd6d42931b5d5e222ae7" prot="private" virt="non-virtual"><scope>PLNE</scope><name>nSite</name></member>
+      <member refid="class_p_l_n_e_1a301ca96e70c6171286067f0e538502b0" prot="private" virt="non-virtual"><scope>PLNE</scope><name>nSkill</name></member>
+      <member refid="class_p_l_n_e_1abc7e507ac092171ff6ebd26694c7d624" prot="private" virt="non-virtual"><scope>PLNE</scope><name>nSlot</name></member>
+      <member refid="class_p_l_n_e_1aeba1d08f57be95256b79a95295e86ef8" prot="private" virt="non-virtual"><scope>PLNE</scope><name>nTrain</name></member>
+      <member refid="class_p_l_n_e_1a5252dd8db1362c4fef78e8a451f0467f" prot="private" virt="non-virtual"><scope>PLNE</scope><name>Ocorr</name></member>
+      <member refid="class_p_l_n_e_1ad2336e0595dba234b77a7d2f1faab6a7" prot="private" virt="non-virtual"><scope>PLNE</scope><name>operationsCorr</name></member>
+      <member refid="class_p_l_n_e_1a57c24df1b52d583ce1ac82357448a41f" prot="private" virt="non-virtual"><scope>PLNE</scope><name>operationsPrev</name></member>
+      <member refid="class_p_l_n_e_1a0c0f4e28dfdc37db4399ea1dfd6ea09e" prot="private" virt="non-virtual"><scope>PLNE</scope><name>Oprev</name></member>
+      <member refid="class_p_l_n_e_1a38f5ec91bac65f94ed611d177729b44e" prot="public" virt="non-virtual"><scope>PLNE</scope><name>opX</name></member>
+      <member refid="class_p_l_n_e_1abb72413c4aa5c3597d22857f3c3305fa" prot="public" virt="non-virtual"><scope>PLNE</scope><name>opY</name></member>
+      <member refid="class_p_l_n_e_1a324b43841a6694a2ba7345c0bcf0ea40" prot="private" virt="non-virtual"><scope>PLNE</scope><name>p</name></member>
+      <member refid="class_p_l_n_e_1a20219e56bcf8d1432a32619fd121b8cc" prot="private" virt="non-virtual"><scope>PLNE</scope><name>pDelta</name></member>
+      <member refid="class_p_l_n_e_1aea613753596ce940138235765612a844" prot="public" virt="non-virtual"><scope>PLNE</scope><name>PLNE</name></member>
+      <member refid="class_p_l_n_e_1a4b5492fa03170448a3ea6cf1f0f6f70b" prot="public" virt="non-virtual"><scope>PLNE</scope><name>printInfo</name></member>
+      <member refid="class_p_l_n_e_1a5bcce2c5891406de939c065b72b30da2" prot="private" virt="non-virtual"><scope>PLNE</scope><name>r</name></member>
+      <member refid="class_p_l_n_e_1a6433421e36587fa926a251b2b5756f67" prot="private" virt="non-virtual"><scope>PLNE</scope><name>rMax_lh</name></member>
+      <member refid="class_p_l_n_e_1a1963c9bf3786bf6d53aed6dbf3c99a12" prot="private" virt="non-virtual"><scope>PLNE</scope><name>rTot</name></member>
+      <member refid="class_p_l_n_e_1aa03f14f03047c0b5c7b6b0ae719e4bd7" prot="public" virt="non-virtual"><scope>PLNE</scope><name>run</name></member>
+      <member refid="class_p_l_n_e_1a0253caedbf226a2539b35119787eabf5" prot="private" virt="non-virtual"><scope>PLNE</scope><name>S</name></member>
+      <member refid="class_p_l_n_e_1aec955b4636c3742a386aa6b940015103" prot="private" virt="non-virtual"><scope>PLNE</scope><name>SKL_asl</name></member>
+      <member refid="class_p_l_n_e_1a1d2a0532b942b2c9863c0b4968ee7432" prot="private" virt="non-virtual"><scope>PLNE</scope><name>Tagent</name></member>
+      <member refid="class_p_l_n_e_1a5d2ddf563e21be7e469e027c43140296" prot="private" virt="non-virtual"><scope>PLNE</scope><name>Tcorr</name></member>
+      <member refid="class_p_l_n_e_1ad97b19e639f1a492652be568ee46608b" prot="private" virt="non-virtual"><scope>PLNE</scope><name>Tfj</name></member>
+      <member refid="class_p_l_n_e_1ac1cbf09801c6b6d3df23d34a21ef7050" prot="private" virt="non-virtual"><scope>PLNE</scope><name>Ttrack</name></member>
+      <member refid="class_p_l_n_e_1ae9b35b9c6d7abd2d5ad35e090e05df50" prot="private" virt="non-virtual"><scope>PLNE</scope><name>Ttrain</name></member>
+      <member refid="class_p_l_n_e_1ac60c04c1a44559d9e674f2188842bb3d" prot="private" virt="non-virtual"><scope>PLNE</scope><name>u</name></member>
+      <member refid="class_p_l_n_e_1a97a3d589838697cfb16f2839b3c3f0fb" prot="private" virt="non-virtual"><scope>PLNE</scope><name>w</name></member>
+      <member refid="class_p_l_n_e_1a5465b71398b32c5e75033874a24510ea" prot="private" virt="non-virtual"><scope>PLNE</scope><name>X</name></member>
+      <member refid="class_p_l_n_e_1a2e4217e384be875b748e4d5a2637a0c4" prot="private" virt="non-virtual"><scope>PLNE</scope><name>Y</name></member>
+      <member refid="class_p_l_n_e_1acb9b171fcf4c23e83b20efb91fbbd06f" prot="private" virt="non-virtual"><scope>PLNE</scope><name>Z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

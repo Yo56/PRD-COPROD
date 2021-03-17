@@ -35,11 +35,11 @@ int main()
 	//	cout << *op << endl;
 	//}
 
-	// génération d'un jeu de données 
+	// generation d'un jeu de donnees 
 	CInput input = CJeuDonnees::version1();
 	//input.print();
 
-	// instanciation du modèle Cplex à partir du jeu de données
+	// instanciation du modele Cplex a partir du jeu de donnees
 	PLNE plne(input);
 	//plne.printInfo();
 

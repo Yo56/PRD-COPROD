@@ -1,0 +1,261 @@
+.TH "CInput" 3 "Wed Mar 17 2021" "Version 1" "PRD COPROD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CInput \- Classe Input\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <CInput\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCInput\fP (int n, int m, int D, int nInfra, int nSite, int nSlot, int nTrain, int nAgent, int nSkill, double alpha, std::vector< double > p, std::vector< double > pDelta, std::vector< int > r, std::vector< int > d, std::vector< double > w, std::vector< double > u, vector< vector< int > > NI_ik, vector< vector< int > > IN_jk, vector< vector< int > > rMax_lh, vector< int > rTot, vector< vector< int > > CO_ii, vector< vector< int > >NS_is, vector< vector< vector< int > > > SKL_asl, vector< vector< int > > H, vector< vector< int > > L, vector< vector< int > > Oprev, vector< vector< int > > Ocorr, vector< vector< vector< int > > > Ttrain, vector< vector< vector< int > > > Ttrack, vector< vector< vector< vector< int > > > > Tfj, vector< vector< vector< int > > > Tagent)"
+.br
+.RI "Constructeur\&. "
+.ti -1c
+.RI "\fB~CInput\fP ()"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "void \fBprint\fP ()"
+.br
+.RI "fonction affichage "
+.ti -1c
+.RI "int \fBgetN\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetM\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetD\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetNInfra\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetNSite\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetNSlot\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetNTrain\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetNAgent\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetNSkill\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetAlpha\fP ()"
+.br
+.ti -1c
+.RI "vector< double > \fBgetP\fP ()"
+.br
+.ti -1c
+.RI "vector< double > \fBgetPDelta\fP ()"
+.br
+.ti -1c
+.RI "vector< int > \fBgetR\fP ()"
+.br
+.ti -1c
+.RI "vector< int > \fBgetDateDeRentree\fP ()"
+.br
+.ti -1c
+.RI "vector< double > \fBgetW\fP ()"
+.br
+.ti -1c
+.RI "vector< double > \fBgetU\fP ()"
+.br
+.ti -1c
+.RI "vector< vector< int > > \fBgetNI_ik\fP ()"
+.br
+.ti -1c
+.RI "vector< vector< int > > \fBgetIN_jk\fP ()"
+.br
+.ti -1c
+.RI "vector< vector< int > > \fBgetRMax_lh\fP ()"
+.br
+.ti -1c
+.RI "vector< int > \fBgetRTot\fP ()"
+.br
+.ti -1c
+.RI "vector< vector< int > > \fBgetCO_ii\fP ()"
+.br
+.ti -1c
+.RI "vector< vector< int > > \fBgetNS_is\fP ()"
+.br
+.ti -1c
+.RI "vector< vector< vector< int > > > \fBgetSKL_asl\fP ()"
+.br
+.ti -1c
+.RI "vector< vector< int > > \fBgetH\fP ()"
+.br
+.ti -1c
+.RI "vector< vector< int > > \fBgetL\fP ()"
+.br
+.ti -1c
+.RI "vector< vector< int > > \fBgetOprev\fP ()"
+.br
+.ti -1c
+.RI "vector< vector< int > > \fBgetOcorr\fP ()"
+.br
+.ti -1c
+.RI "vector< vector< vector< int > > > \fBgetTtrain\fP ()"
+.br
+.ti -1c
+.RI "vector< vector< vector< int > > > \fBgetTtrack\fP ()"
+.br
+.ti -1c
+.RI "vector< vector< vector< vector< int > > > > \fBgetTfj\fP ()"
+.br
+.ti -1c
+.RI "vector< vector< vector< int > > > \fBgetTagent\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetN\fP (int i)"
+.br
+.ti -1c
+.RI "void \fBsetM\fP (int i)"
+.br
+.ti -1c
+.RI "void \fBsetD\fP (int i)"
+.br
+.ti -1c
+.RI "void \fBsetNInfra\fP (int i)"
+.br
+.ti -1c
+.RI "void \fBsetNSite\fP (int i)"
+.br
+.ti -1c
+.RI "void \fBsetNSlot\fP (int i)"
+.br
+.ti -1c
+.RI "void \fBsetNTrain\fP (int i)"
+.br
+.ti -1c
+.RI "void \fBsetNAgent\fP (int i)"
+.br
+.ti -1c
+.RI "void \fBsetNSkill\fP (int i)"
+.br
+.ti -1c
+.RI "void \fBsetAlpha\fP (double i)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Classe Input\&. 
+
+La classe permet de creer une instance regroupant les donnees en vue de la resolution par le solveur\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CInput::CInput (int n, int m, int D, int nInfra, int nSite, int nSlot, int nTrain, int nAgent, int nSkill, double alpha, std::vector< double > p, std::vector< double > pDelta, std::vector< int > r, std::vector< int > d, std::vector< double > w, std::vector< double > u, vector< vector< int > > NI_ik, vector< vector< int > > IN_jk, vector< vector< int > > rMax_lh, vector< int > rTot, vector< vector< int > > CO_ii, vector< vector< int > > NS_is, vector< vector< vector< int > > > SKL_asl, vector< vector< int > > H, vector< vector< int > > L, vector< vector< int > > Oprev, vector< vector< int > > Ocorr, vector< vector< vector< int > > > Ttrain, vector< vector< vector< int > > > Ttrack, vector< vector< vector< vector< int > > > > Tfj, vector< vector< vector< int > > > Tagent)"
+
+.PP
+Constructeur\&. {Intervalles [t−;t+]q de disponibilite de l’agent a}
+.PP
+Constructeur de la classe \fBCInput\fP
+.PP
+Tous les parametres sont requis et representent les differentes donnees necessaire a la resolution du modele 
+.SS "CInput::~CInput ()"
+
+.PP
+Destructeur\&. Destructeur de la classe \fBCInput\fP 
+.SH "Member Function Documentation"
+.PP 
+.SS "double CInput::getAlpha ()"
+
+.SS "vector< vector< int > > CInput::getCO_ii ()"
+
+.SS "int CInput::getD ()"
+
+.SS "vector< int > CInput::getDateDeRentree ()"
+
+.SS "vector< vector< int > > CInput::getH ()"
+
+.SS "vector< vector< int > > CInput::getIN_jk ()"
+
+.SS "vector< vector< int > > CInput::getL ()"
+
+.SS "int CInput::getM ()"
+
+.SS "int CInput::getN ()"
+
+.SS "int CInput::getNAgent ()"
+
+.SS "vector< vector< int > > CInput::getNI_ik ()"
+
+.SS "int CInput::getNInfra ()"
+
+.SS "vector< vector< int > > CInput::getNS_is ()"
+
+.SS "int CInput::getNSite ()"
+
+.SS "int CInput::getNSkill ()"
+
+.SS "int CInput::getNSlot ()"
+
+.SS "int CInput::getNTrain ()"
+
+.SS "vector< vector< int > > CInput::getOcorr ()"
+
+.SS "vector< vector< int > > CInput::getOprev ()"
+
+.SS "vector< double > CInput::getP ()"
+
+.SS "vector< double > CInput::getPDelta ()"
+
+.SS "vector< int > CInput::getR ()"
+
+.SS "vector< vector< int > > CInput::getRMax_lh ()"
+
+.SS "vector< int > CInput::getRTot ()"
+
+.SS "vector< vector< vector< int > > > CInput::getSKL_asl ()"
+
+.SS "vector< vector< vector< int > > > CInput::getTagent ()"
+
+.SS "vector< vector< vector< vector< int > > > > CInput::getTfj ()"
+
+.SS "vector< vector< vector< int > > > CInput::getTtrack ()"
+
+.SS "vector< vector< vector< int > > > CInput::getTtrain ()"
+
+.SS "vector< double > CInput::getU ()"
+
+.SS "vector< double > CInput::getW ()"
+
+.SS "void CInput::print ()"
+
+.PP
+fonction affichage Methode qui permet d'afficher les donnees d une instance \fBCInput\fP 
+.SS "void CInput::setAlpha (double i)"
+
+.SS "void CInput::setD (int i)"
+
+.SS "void CInput::setM (int i)"
+
+.SS "void CInput::setN (int i)"
+
+.SS "void CInput::setNAgent (int i)"
+
+.SS "void CInput::setNInfra (int i)"
+
+.SS "void CInput::setNSite (int i)"
+
+.SS "void CInput::setNSkill (int i)"
+
+.SS "void CInput::setNSlot (int i)"
+
+.SS "void CInput::setNTrain (int i)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PRD COPROD from the source code\&.

@@ -1,0 +1,73 @@
+.TH "rapidcsv::ConverterParams" 3 "Wed Mar 17 2021" "Version 1" "PRD COPROD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+rapidcsv::ConverterParams \- Datastructure holding parameters controlling how invalid numbers (including empty strings) should be handled\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <rapidcsv\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConverterParams\fP (const bool pHasDefaultConverter=false, const long double pDefaultFloat=std::numeric_limits< long double >::signaling_NaN(), const long long pDefaultInteger=0)"
+.br
+.RI "Constructor\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBmHasDefaultConverter\fP"
+.br
+.RI "specifies if conversion of non-numerical strings shall be converted to a default numerical value, instead of causing an exception to be thrown (default)\&. "
+.ti -1c
+.RI "long double \fBmDefaultFloat\fP"
+.br
+.RI "floating-point default value to represent invalid numbers\&. "
+.ti -1c
+.RI "long long \fBmDefaultInteger\fP"
+.br
+.RI "integer default value to represent invalid numbers\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Datastructure holding parameters controlling how invalid numbers (including empty strings) should be handled\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "rapidcsv::ConverterParams::ConverterParams (const bool pHasDefaultConverter = \fCfalse\fP, const long double pDefaultFloat = \fCstd::numeric_limits<long double>::signaling_NaN()\fP, const long long pDefaultInteger = \fC0\fP)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpHasDefaultConverter\fP specifies if conversion of non-numerical strings shall be converted to a default numerical value, instead of causing an exception to be thrown (default)\&. 
+.br
+\fIpDefaultFloat\fP floating-point default value to represent invalid numbers\&. 
+.br
+\fIpDefaultInteger\fP integer default value to represent invalid numbers\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "long double rapidcsv::ConverterParams::mDefaultFloat"
+
+.PP
+floating-point default value to represent invalid numbers\&. 
+.SS "long long rapidcsv::ConverterParams::mDefaultInteger"
+
+.PP
+integer default value to represent invalid numbers\&. 
+.SS "bool rapidcsv::ConverterParams::mHasDefaultConverter"
+
+.PP
+specifies if conversion of non-numerical strings shall be converted to a default numerical value, instead of causing an exception to be thrown (default)\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PRD COPROD from the source code\&.

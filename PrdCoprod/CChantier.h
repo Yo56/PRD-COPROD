@@ -14,7 +14,7 @@ using namespace std;
    * \brief Classe Chantier (Atelier de maintenance)
    *
    *  La classe permet de creer une instance de chaque site de maintenance constituee des differents attributs permettant son identification.
-   * L'objet est cree a partir des donnees récuperees dans les fichiers csv.
+   * L'objet est cree a partir des donnees recuperees dans les fichiers csv.
    */
 class CChantier
 {
@@ -76,7 +76,7 @@ public:
 	 *
 	 *  Methode qui permet de definir l'identifiant utilise dans la modelisation CPlex
 	 *
-	 *  \param idParam : l'identifiant à ajouter
+	 *  \param idParam : l'identifiant a ajouter
 	 */
 	void setId(int idParam);
 

@@ -1,0 +1,820 @@
+.TH "rapidcsv::Document" 3 "Wed Mar 17 2021" "Version 1" "PRD COPROD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+rapidcsv::Document \- Class representing a CSV document\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <rapidcsv\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDocument\fP (const std::string &pPath=std::string(), const \fBLabelParams\fP &pLabelParams=\fBLabelParams\fP(), const \fBSeparatorParams\fP &pSeparatorParams=\fBSeparatorParams\fP(), const \fBConverterParams\fP &pConverterParams=\fBConverterParams\fP())"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "\fBDocument\fP (std::istream &pStream, const \fBLabelParams\fP &pLabelParams=\fBLabelParams\fP(), const \fBSeparatorParams\fP &pSeparatorParams=\fBSeparatorParams\fP(), const \fBConverterParams\fP &pConverterParams=\fBConverterParams\fP())"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "void \fBLoad\fP (const std::string &pPath)"
+.br
+.RI "Read \fBDocument\fP data from file\&. "
+.ti -1c
+.RI "void \fBLoad\fP (std::istream &pStream)"
+.br
+.RI "Read \fBDocument\fP data from stream\&. "
+.ti -1c
+.RI "void \fBSave\fP (const std::string &pPath=std::string())"
+.br
+.RI "Write \fBDocument\fP data to file\&. "
+.ti -1c
+.RI "void \fBSave\fP (std::ostream &pStream)"
+.br
+.RI "Write \fBDocument\fP data to stream\&. "
+.ti -1c
+.RI "ssize_t \fBGetColumnIdx\fP (const std::string &pColumnName) const"
+.br
+.RI "Get column index by name\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBGetColumn\fP (const size_t pColumnIdx) const"
+.br
+.RI "Get column by index\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBGetColumn\fP (const size_t pColumnIdx, \fBConvFunc\fP< T > pToVal) const"
+.br
+.RI "Get column by index\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBGetColumn\fP (const std::string &pColumnName) const"
+.br
+.RI "Get column by name\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBGetColumn\fP (const std::string &pColumnName, \fBConvFunc\fP< T > pToVal) const"
+.br
+.RI "Get column by name\&. "
+.ti -1c
+.RI "template<typename T > void \fBSetColumn\fP (const size_t pColumnIdx, const std::vector< T > &pColumn)"
+.br
+.RI "Set column by index\&. "
+.ti -1c
+.RI "template<typename T > void \fBSetColumn\fP (const std::string &pColumnName, const std::vector< T > &pColumn)"
+.br
+.RI "Set column by name\&. "
+.ti -1c
+.RI "void \fBRemoveColumn\fP (const size_t pColumnIdx)"
+.br
+.RI "Remove column by index\&. "
+.ti -1c
+.RI "void \fBRemoveColumn\fP (const std::string &pColumnName)"
+.br
+.RI "Remove column by name\&. "
+.ti -1c
+.RI "size_t \fBGetColumnCount\fP () const"
+.br
+.RI "Get number of data columns (excluding label columns)\&. "
+.ti -1c
+.RI "ssize_t \fBGetRowIdx\fP (const std::string &pRowName) const"
+.br
+.RI "Get row index by name\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBGetRow\fP (const size_t pRowIdx) const"
+.br
+.RI "Get row by index\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBGetRow\fP (const size_t pRowIdx, \fBConvFunc\fP< T > pToVal) const"
+.br
+.RI "Get row by index\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBGetRow\fP (const std::string &pRowName) const"
+.br
+.RI "Get row by name\&. "
+.ti -1c
+.RI "template<typename T > std::vector< T > \fBGetRow\fP (const std::string &pRowName, \fBConvFunc\fP< T > pToVal) const"
+.br
+.RI "Get row by name\&. "
+.ti -1c
+.RI "template<typename T > void \fBSetRow\fP (const size_t pRowIdx, const std::vector< T > &pRow)"
+.br
+.RI "Set row by index\&. "
+.ti -1c
+.RI "template<typename T > void \fBSetRow\fP (const std::string &pRowName, const std::vector< T > &pRow)"
+.br
+.RI "Set row by name\&. "
+.ti -1c
+.RI "void \fBRemoveRow\fP (const size_t pRowIdx)"
+.br
+.RI "Remove row by index\&. "
+.ti -1c
+.RI "void \fBRemoveRow\fP (const std::string &pRowName)"
+.br
+.RI "Remove row by name\&. "
+.ti -1c
+.RI "size_t \fBGetRowCount\fP () const"
+.br
+.RI "Get number of data rows (excluding label rows)\&. "
+.ti -1c
+.RI "template<typename T > T \fBGetCell\fP (const size_t pColumnIdx, const size_t pRowIdx) const"
+.br
+.RI "Get cell by index\&. "
+.ti -1c
+.RI "template<typename T > T \fBGetCell\fP (const size_t pColumnIdx, const size_t pRowIdx, \fBConvFunc\fP< T > pToVal) const"
+.br
+.RI "Get cell by index\&. "
+.ti -1c
+.RI "template<typename T > T \fBGetCell\fP (const std::string &pColumnName, const std::string &pRowName) const"
+.br
+.RI "Get cell by name\&. "
+.ti -1c
+.RI "template<typename T > T \fBGetCell\fP (const std::string &pColumnName, const std::string &pRowName, \fBConvFunc\fP< T > pToVal) const"
+.br
+.RI "Get cell by name\&. "
+.ti -1c
+.RI "template<typename T > T \fBGetCell\fP (const std::string &pColumnName, const size_t pRowIdx) const"
+.br
+.RI "Get cell by column name and row index\&. "
+.ti -1c
+.RI "template<typename T > T \fBGetCell\fP (const std::string &pColumnName, const size_t pRowIdx, \fBConvFunc\fP< T > pToVal) const"
+.br
+.RI "Get cell by column name and row index\&. "
+.ti -1c
+.RI "template<typename T > T \fBGetCell\fP (const size_t pColumnIdx, const std::string &pRowName) const"
+.br
+.RI "Get cell by column index and row name\&. "
+.ti -1c
+.RI "template<typename T > T \fBGetCell\fP (const size_t pColumnIdx, const std::string &pRowName, \fBConvFunc\fP< T > pToVal) const"
+.br
+.RI "Get cell by column index and row name\&. "
+.ti -1c
+.RI "template<typename T > void \fBSetCell\fP (const size_t pColumnIdx, const size_t pRowIdx, const T &pCell)"
+.br
+.RI "Set cell by index\&. "
+.ti -1c
+.RI "template<typename T > void \fBSetCell\fP (const std::string &pColumnName, const std::string &pRowName, const T &pCell)"
+.br
+.RI "Set cell by name\&. "
+.ti -1c
+.RI "std::string \fBGetColumnName\fP (const ssize_t pColumnIdx)"
+.br
+.RI "Get column name\&. "
+.ti -1c
+.RI "void \fBSetColumnName\fP (size_t pColumnIdx, const std::string &pColumnName)"
+.br
+.RI "Set column name\&. "
+.ti -1c
+.RI "std::vector< std::string > \fBGetColumnNames\fP ()"
+.br
+.RI "Get column names\&. "
+.ti -1c
+.RI "std::string \fBGetRowName\fP (const ssize_t pRowIdx)"
+.br
+.RI "Get row name\&. "
+.ti -1c
+.RI "void \fBSetRowName\fP (size_t pRowIdx, const std::string &pRowName)"
+.br
+.RI "Set row name\&. "
+.ti -1c
+.RI "std::vector< std::string > \fBGetRowNames\fP ()"
+.br
+.RI "Get row names\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class representing a CSV document\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "rapidcsv::Document::Document (const std::string & pPath = \fCstd::string()\fP, const \fBLabelParams\fP & pLabelParams = \fC\fBLabelParams\fP()\fP, const \fBSeparatorParams\fP & pSeparatorParams = \fC\fBSeparatorParams\fP()\fP, const \fBConverterParams\fP & pConverterParams = \fC\fBConverterParams\fP()\fP)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpPath\fP specifies the path of an existing CSV-file to populate the \fBDocument\fP data with\&. 
+.br
+\fIpLabelParams\fP specifies which row and column should be treated as labels\&. 
+.br
+\fIpSeparatorParams\fP specifies which field and row separators should be used\&. 
+.br
+\fIpConverterParams\fP specifies how invalid numbers (including empty strings) should be handled\&. 
+.RE
+.PP
+
+.SS "rapidcsv::Document::Document (std::istream & pStream, const \fBLabelParams\fP & pLabelParams = \fC\fBLabelParams\fP()\fP, const \fBSeparatorParams\fP & pSeparatorParams = \fC\fBSeparatorParams\fP()\fP, const \fBConverterParams\fP & pConverterParams = \fC\fBConverterParams\fP()\fP)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpStream\fP specifies an input stream to read CSV data from\&. 
+.br
+\fIpLabelParams\fP specifies which row and column should be treated as labels\&. 
+.br
+\fIpSeparatorParams\fP specifies which field and row separators should be used\&. 
+.br
+\fIpConverterParams\fP specifies how invalid numbers (including empty strings) should be handled\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T > T rapidcsv::Document::GetCell (const size_t pColumnIdx, const size_t pRowIdx) const\fC [inline]\fP"
+
+.PP
+Get cell by index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnIdx\fP zero-based column index\&. 
+.br
+\fIpRowIdx\fP zero-based row index\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+cell data\&. 
+.RE
+.PP
+
+.SS "template<typename T > T rapidcsv::Document::GetCell (const size_t pColumnIdx, const size_t pRowIdx, \fBConvFunc\fP< T > pToVal) const\fC [inline]\fP"
+
+.PP
+Get cell by index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnIdx\fP zero-based column index\&. 
+.br
+\fIpRowIdx\fP zero-based row index\&. 
+.br
+\fIpToVal\fP conversion function\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+cell data\&. 
+.RE
+.PP
+
+.SS "template<typename T > T rapidcsv::Document::GetCell (const size_t pColumnIdx, const std::string & pRowName) const\fC [inline]\fP"
+
+.PP
+Get cell by column index and row name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnIdx\fP zero-based column index\&. 
+.br
+\fIpRowName\fP row label name\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+cell data\&. 
+.RE
+.PP
+
+.SS "template<typename T > T rapidcsv::Document::GetCell (const size_t pColumnIdx, const std::string & pRowName, \fBConvFunc\fP< T > pToVal) const\fC [inline]\fP"
+
+.PP
+Get cell by column index and row name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnIdx\fP zero-based column index\&. 
+.br
+\fIpRowName\fP row label name\&. 
+.br
+\fIpToVal\fP conversion function\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+cell data\&. 
+.RE
+.PP
+
+.SS "template<typename T > T rapidcsv::Document::GetCell (const std::string & pColumnName, const size_t pRowIdx) const\fC [inline]\fP"
+
+.PP
+Get cell by column name and row index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnName\fP column label name\&. 
+.br
+\fIpRowIdx\fP zero-based row index\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+cell data\&. 
+.RE
+.PP
+
+.SS "template<typename T > T rapidcsv::Document::GetCell (const std::string & pColumnName, const size_t pRowIdx, \fBConvFunc\fP< T > pToVal) const\fC [inline]\fP"
+
+.PP
+Get cell by column name and row index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnName\fP column label name\&. 
+.br
+\fIpRowIdx\fP zero-based row index\&. 
+.br
+\fIpToVal\fP conversion function\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+cell data\&. 
+.RE
+.PP
+
+.SS "template<typename T > T rapidcsv::Document::GetCell (const std::string & pColumnName, const std::string & pRowName) const\fC [inline]\fP"
+
+.PP
+Get cell by name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnName\fP column label name\&. 
+.br
+\fIpRowName\fP row label name\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+cell data\&. 
+.RE
+.PP
+
+.SS "template<typename T > T rapidcsv::Document::GetCell (const std::string & pColumnName, const std::string & pRowName, \fBConvFunc\fP< T > pToVal) const\fC [inline]\fP"
+
+.PP
+Get cell by name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnName\fP column label name\&. 
+.br
+\fIpRowName\fP row label name\&. 
+.br
+\fIpToVal\fP conversion function\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+cell data\&. 
+.RE
+.PP
+
+.SS "template<typename T > std::vector<T> rapidcsv::Document::GetColumn (const size_t pColumnIdx) const\fC [inline]\fP"
+
+.PP
+Get column by index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnIdx\fP zero-based column index\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+vector of column data\&. 
+.RE
+.PP
+
+.SS "template<typename T > std::vector<T> rapidcsv::Document::GetColumn (const size_t pColumnIdx, \fBConvFunc\fP< T > pToVal) const\fC [inline]\fP"
+
+.PP
+Get column by index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnIdx\fP zero-based column index\&. 
+.br
+\fIpToVal\fP conversion function\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+vector of column data\&. 
+.RE
+.PP
+
+.SS "template<typename T > std::vector<T> rapidcsv::Document::GetColumn (const std::string & pColumnName) const\fC [inline]\fP"
+
+.PP
+Get column by name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnName\fP column label name\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+vector of column data\&. 
+.RE
+.PP
+
+.SS "template<typename T > std::vector<T> rapidcsv::Document::GetColumn (const std::string & pColumnName, \fBConvFunc\fP< T > pToVal) const\fC [inline]\fP"
+
+.PP
+Get column by name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnName\fP column label name\&. 
+.br
+\fIpToVal\fP conversion function\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+vector of column data\&. 
+.RE
+.PP
+
+.SS "size_t rapidcsv::Document::GetColumnCount () const\fC [inline]\fP"
+
+.PP
+Get number of data columns (excluding label columns)\&. 
+.PP
+\fBReturns\fP
+.RS 4
+column count\&. 
+.RE
+.PP
+
+.SS "ssize_t rapidcsv::Document::GetColumnIdx (const std::string & pColumnName) const\fC [inline]\fP"
+
+.PP
+Get column index by name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnName\fP column label name\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+zero-based column index\&. 
+.RE
+.PP
+
+.SS "std::string rapidcsv::Document::GetColumnName (const ssize_t pColumnIdx)\fC [inline]\fP"
+
+.PP
+Get column name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnIdx\fP zero-based column index\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+column name\&. 
+.RE
+.PP
+
+.SS "std::vector<std::string> rapidcsv::Document::GetColumnNames ()\fC [inline]\fP"
+
+.PP
+Get column names\&. 
+.PP
+\fBReturns\fP
+.RS 4
+vector of column names\&. 
+.RE
+.PP
+
+.SS "template<typename T > std::vector<T> rapidcsv::Document::GetRow (const size_t pRowIdx) const\fC [inline]\fP"
+
+.PP
+Get row by index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpRowIdx\fP zero-based row index\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+vector of row data\&. 
+.RE
+.PP
+
+.SS "template<typename T > std::vector<T> rapidcsv::Document::GetRow (const size_t pRowIdx, \fBConvFunc\fP< T > pToVal) const\fC [inline]\fP"
+
+.PP
+Get row by index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpRowIdx\fP zero-based row index\&. 
+.br
+\fIpToVal\fP conversion function\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+vector of row data\&. 
+.RE
+.PP
+
+.SS "template<typename T > std::vector<T> rapidcsv::Document::GetRow (const std::string & pRowName) const\fC [inline]\fP"
+
+.PP
+Get row by name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpRowName\fP row label name\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+vector of row data\&. 
+.RE
+.PP
+
+.SS "template<typename T > std::vector<T> rapidcsv::Document::GetRow (const std::string & pRowName, \fBConvFunc\fP< T > pToVal) const\fC [inline]\fP"
+
+.PP
+Get row by name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpRowName\fP row label name\&. 
+.br
+\fIpToVal\fP conversion function\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+vector of row data\&. 
+.RE
+.PP
+
+.SS "size_t rapidcsv::Document::GetRowCount () const\fC [inline]\fP"
+
+.PP
+Get number of data rows (excluding label rows)\&. 
+.PP
+\fBReturns\fP
+.RS 4
+row count\&. 
+.RE
+.PP
+
+.SS "ssize_t rapidcsv::Document::GetRowIdx (const std::string & pRowName) const\fC [inline]\fP"
+
+.PP
+Get row index by name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpRowName\fP row label name\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+zero-based row index\&. 
+.RE
+.PP
+
+.SS "std::string rapidcsv::Document::GetRowName (const ssize_t pRowIdx)\fC [inline]\fP"
+
+.PP
+Get row name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpRowIdx\fP zero-based column index\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+row name\&. 
+.RE
+.PP
+
+.SS "std::vector<std::string> rapidcsv::Document::GetRowNames ()\fC [inline]\fP"
+
+.PP
+Get row names\&. 
+.PP
+\fBReturns\fP
+.RS 4
+vector of row names\&. 
+.RE
+.PP
+
+.SS "void rapidcsv::Document::Load (const std::string & pPath)\fC [inline]\fP"
+
+.PP
+Read \fBDocument\fP data from file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpPath\fP specifies the path of an existing CSV-file to populate the \fBDocument\fP data with\&. 
+.RE
+.PP
+
+.SS "void rapidcsv::Document::Load (std::istream & pStream)\fC [inline]\fP"
+
+.PP
+Read \fBDocument\fP data from stream\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpStream\fP specifies an input stream to read CSV data from\&. 
+.RE
+.PP
+
+.SS "void rapidcsv::Document::RemoveColumn (const size_t pColumnIdx)\fC [inline]\fP"
+
+.PP
+Remove column by index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnIdx\fP zero-based column index\&. 
+.RE
+.PP
+
+.SS "void rapidcsv::Document::RemoveColumn (const std::string & pColumnName)\fC [inline]\fP"
+
+.PP
+Remove column by name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnName\fP column label name\&. 
+.RE
+.PP
+
+.SS "void rapidcsv::Document::RemoveRow (const size_t pRowIdx)\fC [inline]\fP"
+
+.PP
+Remove row by index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpRowIdx\fP zero-based row index\&. 
+.RE
+.PP
+
+.SS "void rapidcsv::Document::RemoveRow (const std::string & pRowName)\fC [inline]\fP"
+
+.PP
+Remove row by name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpRowName\fP row label name\&. 
+.RE
+.PP
+
+.SS "void rapidcsv::Document::Save (const std::string & pPath = \fCstd::string()\fP)\fC [inline]\fP"
+
+.PP
+Write \fBDocument\fP data to file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpPath\fP optionally specifies the path where the CSV-file will be created (if not specified, the original path provided when creating or loading the \fBDocument\fP data will be used)\&. 
+.RE
+.PP
+
+.SS "void rapidcsv::Document::Save (std::ostream & pStream)\fC [inline]\fP"
+
+.PP
+Write \fBDocument\fP data to stream\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpStream\fP specifies an output stream to write the data to\&. 
+.RE
+.PP
+
+.SS "template<typename T > void rapidcsv::Document::SetCell (const size_t pColumnIdx, const size_t pRowIdx, const T & pCell)\fC [inline]\fP"
+
+.PP
+Set cell by index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpRowIdx\fP zero-based row index\&. 
+.br
+\fIpColumnIdx\fP zero-based column index\&. 
+.br
+\fIpCell\fP cell data\&. 
+.RE
+.PP
+
+.SS "template<typename T > void rapidcsv::Document::SetCell (const std::string & pColumnName, const std::string & pRowName, const T & pCell)\fC [inline]\fP"
+
+.PP
+Set cell by name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnName\fP column label name\&. 
+.br
+\fIpRowName\fP row label name\&. 
+.br
+\fIpCell\fP cell data\&. 
+.RE
+.PP
+
+.SS "template<typename T > void rapidcsv::Document::SetColumn (const size_t pColumnIdx, const std::vector< T > & pColumn)\fC [inline]\fP"
+
+.PP
+Set column by index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnIdx\fP zero-based column index\&. 
+.br
+\fIpColumn\fP vector of column data\&. 
+.RE
+.PP
+
+.SS "template<typename T > void rapidcsv::Document::SetColumn (const std::string & pColumnName, const std::vector< T > & pColumn)\fC [inline]\fP"
+
+.PP
+Set column by name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnName\fP column label name\&. 
+.br
+\fIpColumn\fP vector of column data\&. 
+.RE
+.PP
+
+.SS "void rapidcsv::Document::SetColumnName (size_t pColumnIdx, const std::string & pColumnName)\fC [inline]\fP"
+
+.PP
+Set column name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpColumnIdx\fP zero-based column index\&. 
+.br
+\fIpColumnName\fP column name\&. 
+.RE
+.PP
+
+.SS "template<typename T > void rapidcsv::Document::SetRow (const size_t pRowIdx, const std::vector< T > & pRow)\fC [inline]\fP"
+
+.PP
+Set row by index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpRowIdx\fP zero-based row index\&. 
+.br
+\fIpRow\fP vector of row data\&. 
+.RE
+.PP
+
+.SS "template<typename T > void rapidcsv::Document::SetRow (const std::string & pRowName, const std::vector< T > & pRow)\fC [inline]\fP"
+
+.PP
+Set row by name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpRowName\fP row label name\&. 
+.br
+\fIpRow\fP vector of row data\&. 
+.RE
+.PP
+
+.SS "void rapidcsv::Document::SetRowName (size_t pRowIdx, const std::string & pRowName)\fC [inline]\fP"
+
+.PP
+Set row name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpRowIdx\fP zero-based row index\&. 
+.br
+\fIpRowName\fP row name\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PRD COPROD from the source code\&.

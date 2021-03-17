@@ -1,0 +1,264 @@
+.TH "COperation" 3 "Wed Mar 17 2021" "Version 1" "PRD COPROD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+COperation \- Classe Operation de maintenance\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <COperation\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCOperation\fP ()"
+.br
+.RI "Constructeur\&. "
+.ti -1c
+.RI "\fB~COperation\fP ()"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "int \fBgetIdCplex\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetIdCplex\fP (int idParam)"
+.br
+.ti -1c
+.RI "int \fBgetIdReference\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetIdReference\fP (int idParam)"
+.br
+.ti -1c
+.RI "string \fBgetRefOperation\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetRefOperation\fP (string str)"
+.br
+.ti -1c
+.RI "string \fBgetDescOperation\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDescOperation\fP (string str)"
+.br
+.ti -1c
+.RI "string \fBgetVersionPMS\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetVersionPMS\fP (string str)"
+.br
+.ti -1c
+.RI "bool \fBgetVersionPMSEnCours\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetVersionPMSEnCours\fP (bool param)"
+.br
+.ti -1c
+.RI "string \fBgetTypeOperationPartService\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetTypeOperationPartService\fP (string str)"
+.br
+.ti -1c
+.RI "string \fBgetCycle\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCycle\fP (string str)"
+.br
+.ti -1c
+.RI "string \fBgetStfOpePart\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetStfOpePart\fP (string str)"
+.br
+.ti -1c
+.RI "string \fBgetStatutOpeRef\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetStatutOpeRef\fP (string str)"
+.br
+.ti -1c
+.RI "string \fBgetLcnRacine\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetLcnRacine\fP (string str)"
+.br
+.ti -1c
+.RI "string \fBgetLcnArticle\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetLcnArticle\fP (string str)"
+.br
+.ti -1c
+.RI "string \fBgetRefDocMaintenance\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetRefDocMaintenance\fP (string str)"
+.br
+.ti -1c
+.RI "int \fBgetRang\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetRang\fP (int idParam)"
+.br
+.ti -1c
+.RI "string \fBgetDateDebutApplicabilite\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDateDebutApplicabilite\fP (string str)"
+.br
+.ti -1c
+.RI "string \fBgetDateFinApplicabilite\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDateFinApplicabilite\fP (string str)"
+.br
+.ti -1c
+.RI "string \fBgetSEF\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetSEF\fP (string str)"
+.br
+.ti -1c
+.RI "string \fBgetCadence\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCadence\fP (string str)"
+.br
+.ti -1c
+.RI "string \fBgetTypeOperation\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetTypeOperation\fP (string str)"
+.br
+.ti -1c
+.RI "string \fBgetLibelleTypeOperation\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetLibelleTypeOperation\fP (string str)"
+.br
+.ti -1c
+.RI "int \fBgetNbReferentielsApplicables\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetNbReferentielsApplicables\fP (int i)"
+.br
+.ti -1c
+.RI "string \fBgetDeclinaisonMR\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDeclinaisonMR\fP (string str)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Classe Operation de maintenance\&. 
+
+La classe permet de creer une instance de chaque operation de maintenance (quelle soit preventive ou corrective) constituee des differents attributs permettant son identification\&. L'objet est cree a partir des donnees recuperees dans les fichiers csv\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "COperation::COperation ()"
+
+.PP
+Constructeur\&. Constructeur par defaut de la classe \fBCOperation\fP 
+.SS "COperation::~COperation ()"
+
+.PP
+Destructeur\&. Destructeur de la classe \fBCChantier\fP 
+.SH "Member Function Documentation"
+.PP 
+.SS "string COperation::getCadence ()"
+
+.SS "string COperation::getCycle ()"
+
+.SS "string COperation::getDateDebutApplicabilite ()"
+
+.SS "string COperation::getDateFinApplicabilite ()"
+
+.SS "string COperation::getDeclinaisonMR ()"
+
+.SS "string COperation::getDescOperation ()"
+
+.SS "int COperation::getIdCplex ()"
+
+.SS "int COperation::getIdReference ()"
+
+.SS "string COperation::getLcnArticle ()"
+
+.SS "string COperation::getLcnRacine ()"
+
+.SS "string COperation::getLibelleTypeOperation ()"
+
+.SS "int COperation::getNbReferentielsApplicables ()"
+
+.SS "int COperation::getRang ()"
+
+.SS "string COperation::getRefDocMaintenance ()"
+
+.SS "string COperation::getRefOperation ()"
+
+.SS "string COperation::getSEF ()"
+
+.SS "string COperation::getStatutOpeRef ()"
+
+.SS "string COperation::getStfOpePart ()"
+
+.SS "string COperation::getTypeOperation ()"
+
+.SS "string COperation::getTypeOperationPartService ()"
+
+.SS "string COperation::getVersionPMS ()"
+
+.SS "bool COperation::getVersionPMSEnCours ()"
+
+.SS "void COperation::setCadence (string str)"
+
+.SS "void COperation::setCycle (string str)"
+
+.SS "void COperation::setDateDebutApplicabilite (string str)"
+
+.SS "void COperation::setDateFinApplicabilite (string str)"
+
+.SS "void COperation::setDeclinaisonMR (string str)"
+
+.SS "void COperation::setDescOperation (string str)"
+
+.SS "void COperation::setIdCplex (int idParam)"
+
+.SS "void COperation::setIdReference (int idParam)"
+
+.SS "void COperation::setLcnArticle (string str)"
+
+.SS "void COperation::setLcnRacine (string str)"
+
+.SS "void COperation::setLibelleTypeOperation (string str)"
+
+.SS "void COperation::setNbReferentielsApplicables (int i)"
+
+.SS "void COperation::setRang (int idParam)"
+
+.SS "void COperation::setRefDocMaintenance (string str)"
+
+.SS "void COperation::setRefOperation (string str)"
+
+.SS "void COperation::setSEF (string str)"
+
+.SS "void COperation::setStatutOpeRef (string str)"
+
+.SS "void COperation::setStfOpePart (string str)"
+
+.SS "void COperation::setTypeOperation (string str)"
+
+.SS "void COperation::setTypeOperationPartService (string str)"
+
+.SS "void COperation::setVersionPMS (string str)"
+
+.SS "void COperation::setVersionPMSEnCours (bool param)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PRD COPROD from the source code\&.

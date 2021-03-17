@@ -1,0 +1,170 @@
+.TH "CChantier" 3 "Wed Mar 17 2021" "Version 1" "PRD COPROD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CChantier \- Classe Chantier (Atelier de maintenance)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <CChantier\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCChantier\fP ()"
+.br
+.RI "Constructeur\&. "
+.ti -1c
+.RI "\fBCChantier\fP (int idParam, string abreviationParam, string nomParam)"
+.br
+.RI "Constructeur\&. "
+.ti -1c
+.RI "\fBCChantier\fP (string abreviationParam, string nomParam)"
+.br
+.RI "Constructeur\&. "
+.ti -1c
+.RI "\fB~CChantier\fP ()"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "int \fBgetId\fP ()"
+.br
+.RI "GET identifiant\&. "
+.ti -1c
+.RI "void \fBsetId\fP (int idParam)"
+.br
+.RI "SET id\&. "
+.ti -1c
+.RI "string \fBgetAbreviation\fP ()"
+.br
+.RI "GET abreviation\&. "
+.ti -1c
+.RI "void \fBsetAbreviation\fP (string abreviationParam)"
+.br
+.RI "SET abreviation\&. "
+.ti -1c
+.RI "string \fBgetNom\fP ()"
+.br
+.RI "GET nom\&. "
+.ti -1c
+.RI "void \fBsetNom\fP (string nomParam)"
+.br
+.RI "SET nom\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Classe Chantier (Atelier de maintenance) 
+
+La classe permet de creer une instance de chaque site de maintenance constituee des differents attributs permettant son identification\&. L'objet est cree a partir des donnees recuperees dans les fichiers csv\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CChantier::CChantier ()"
+
+.PP
+Constructeur\&. Constructeur par defaut de la classe \fBCChantier\fP 
+.SS "CChantier::CChantier (int idParam, string abreviationParam, string nomParam)"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBCChantier\fP
+.PP
+\fBParameters\fP
+.RS 4
+\fIidParam\fP : identifiant representant l'objet dans le modele CPlex 
+.br
+\fIabreviationParam\fP : abreviation SNCF du nom du site 
+.br
+\fInomParam\fP : nom complet du site 
+.RE
+.PP
+
+.SS "CChantier::CChantier (string abreviationParam, string nomParam)"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBCChantier\fP
+.PP
+\fBParameters\fP
+.RS 4
+\fIabreviationParam\fP : abreviation SNCF du nom du site 
+.br
+\fInomParam\fP : nom complet du site 
+.RE
+.PP
+
+.SS "CChantier::~CChantier ()"
+
+.PP
+Destructeur\&. Destructeur de la classe \fBCChantier\fP 
+.SH "Member Function Documentation"
+.PP 
+.SS "string CChantier::getAbreviation ()"
+
+.PP
+GET abreviation\&. Methode qui permet d'obtenir l'abreviation SNCF du nom du site
+.PP
+\fBReturns\fP
+.RS 4
+l'abreviation (chaine de caracteres) 
+.RE
+.PP
+
+.SS "int CChantier::getId ()"
+
+.PP
+GET identifiant\&. Methode qui permet d'obtenir l'identifiant utilise dans la modelisation CPlex
+.PP
+\fBReturns\fP
+.RS 4
+l'identifiant (entier) 
+.RE
+.PP
+
+.SS "string CChantier::getNom ()"
+
+.PP
+GET nom\&. Methode qui permet d'obtenir le nom du site complet
+.PP
+\fBReturns\fP
+.RS 4
+le nom (chaine de caracteres) 
+.RE
+.PP
+
+.SS "void CChantier::setAbreviation (string abreviationParam)"
+
+.PP
+SET abreviation\&. Methode qui permet de definir l'abreviation SNCF du nom du site
+.PP
+\fBParameters\fP
+.RS 4
+\fIabreviationParam\fP : abreviation 
+.RE
+.PP
+
+.SS "void CChantier::setId (int idParam)"
+
+.PP
+SET id\&. Methode qui permet de definir l'identifiant utilise dans la modelisation CPlex
+.PP
+\fBParameters\fP
+.RS 4
+\fIidParam\fP : l'identifiant a ajouter 
+.RE
+.PP
+
+.SS "void CChantier::setNom (string nomParam)"
+
+.PP
+SET nom\&. Methode qui permet de definir le nom detaille du site de maintenance
+.PP
+\fBParameters\fP
+.RS 4
+\fInomParam\fP : nom complet du site 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PRD COPROD from the source code\&.
