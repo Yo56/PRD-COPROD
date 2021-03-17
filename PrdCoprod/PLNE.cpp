@@ -445,7 +445,24 @@ PLNE::PLNE(CInput input)
 
 		///////////////////////////// Contrainte (4)
 
-		
+		//boucle sur les rames
+		for (int f = 0; f < nTrain; f++) {
+
+			int nbPrev = Oprev[f].getSize();
+			int nbCorr = Ocorr[f].getSize();
+
+			//boucle sur les operations preventives
+			for (int i = 0; i < nbPrev; i++) {
+				//contrainte (4.1)
+				model.add(C[f][i] == S[f][i] + p[getIndiceGeneralFromOperationPreventive(f, i)]);
+			}
+
+			//boucle sur les operations correctives
+			for (int i = nbPrev; i < nbPrev + nbCorr; i++) {
+				//contrainte (4.2)
+				model.add(C[f][i] == S[f][i] + pDelta[getIndiceGeneralFromOperation(f, i)] + (1 - Y[f][i - nbPrev])*p[getIndiceGeneralFromOperation(f, i)]);
+			}
+		}
 
 
 		
