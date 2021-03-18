@@ -1,16 +1,14 @@
 #include <iostream>
-#include <Windows.h>
+//#include <Windows.h>
 //#include <cstdio>
 #include <ilcplex/ilocplex.h>
-
-#include "Tuto.h"
-#include "PLNE.h"
-#include "CChantier.h"
-#include "CAcquisition.h"
 #include <vector>
-#include "CJeuDonnees.h"
 
-//ILOSTBEGIN
+#include "Solveur/Tuto.h"
+#include "Solveur/PLNE.h"
+#include "Donnees/CAcquisition.h"
+#include "Donnees/CJeuDonnees.h"
+
 
 using namespace std;
 

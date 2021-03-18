@@ -9,8 +9,8 @@
 #include <iostream>
 #include <ilcplex/ilocplex.h>
 #include <vector>
-#include "COperation.h"
-#include "CInput.h"
+//#include "Modele/COperation.h"
+#include "../Donnees/CInput.h"
 
 using namespace std;
 
@@ -143,8 +143,8 @@ private:
 	/*! Variable T(f)i corr */
 	IloArray<IloIntVarArray> Tcorr;
 
-	vector<int> operationsPrev; // utile ?
-	vector<int> operationsCorr; // ?
+	//vector<int> operationsPrev; 
+	//vector<int> operationsCorr; 
 
 public:
 

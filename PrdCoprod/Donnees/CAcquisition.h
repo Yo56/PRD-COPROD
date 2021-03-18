@@ -7,8 +7,9 @@
 
 #pragma once
 #include <vector>
-#include "CChantier.h"
-#include "COperation.h"
+#include "../Modele/CChantier.h"
+#include "../Modele/COperation.h"
+
 using namespace std;
 
 /*! \class CAcquisition

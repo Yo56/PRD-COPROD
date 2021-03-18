@@ -465,6 +465,8 @@ PLNE::PLNE(CInput input)
 		}
 
 
+
+
 		
 	} //fin try
 	catch(IloException&e){
@@ -475,7 +477,6 @@ PLNE::PLNE(CInput input)
 	}
 
 	
-
 	cout << "Instanciation PLNE : OK" << endl;
 	//cplex.exportModel("AAtestAA.lp");
 	cout << "Nombre de contraintes (NRows) : " << cplex.getNrows() << endl;
