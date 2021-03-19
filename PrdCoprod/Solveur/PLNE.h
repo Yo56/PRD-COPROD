@@ -41,10 +41,10 @@ private:
 	// -------------------------- definition des données vectorielles --------------------------------------//
 
 	/*! Durees completes des operations i */
-	IloNumArray p;
+	IloIntArray p;
 
 	/*! Durees diagnostiques des operations i */
-	IloNumArray pDelta;
+	IloIntArray pDelta;
 
 	/*! Possibilite de rejeter ou non les operations i (booleen)*/
 	IloIntArray r;
@@ -156,8 +156,19 @@ public:
 	*  \param input : donnees d entree
 	*/
 	PLNE(CInput input);
+
+	void addContrainte1();
+
+	void addContrainte2();
+
+	void addContrainte3();
 	
-	static void run();
+	void addContrainte4();
+
+	void addContrainte5();
+
+	void addAllContraintes();
+
 
 	/*!
 	 *  \brief fonction affichage
@@ -195,6 +206,11 @@ public:
 	int getIndiceGeneralFromOperationPreventive(int fParam, int iParam);
 
 	int getIndiceGeneralFromOperation(int fParam, int iParam);
+
+	int getIndiceTempsFromValeur(int fParam, int jParam, int creneauParam, int tParam);
+
+	
+
 
 };
 

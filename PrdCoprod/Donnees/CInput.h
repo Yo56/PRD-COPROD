@@ -30,8 +30,8 @@ private:
 	int nSkill; /*! nombre competences*/
 	double alpha; /*! taux d'avance maximum par rapport a la butee*/
 
-	vector<double> p; /*! Durees completes des operations i */
-	vector<double> pDelta; /*! Durees diagnostiques des operations i */
+	vector<int> p; /*! Durees completes des operations i */
+	vector<int> pDelta; /*! Durees diagnostiques des operations i */
 	vector<int> r; /*! Possibilite de rejeter ou non les operations i (booleen)*/
 	vector<int> d; /*! Dates maximum de debut souhaite des operations i (dates de rentree souhaitee des rames) */
 	vector<double> w; /*! Poids unitaire de retard des operations i*/
@@ -66,7 +66,7 @@ public:
 	*  Tous les parametres sont requis et representent les differentes donnees necessaire a la resolution du modele
 	*/
 	CInput(int n, int m, int D, int nInfra, int nSite, int nSlot, int nTrain, int nAgent, int nSkill, double alpha,
-		std::vector<double> p, std::vector<double> pDelta, std::vector<int> r, std::vector<int> d, std::vector<double> w, std::vector<double> u,
+		vector<int> p, vector<int> pDelta, vector<int> r, vector<int> d, vector<double> w, vector<double> u,
 		vector <vector<int> > NI_ik, vector <vector<int> > IN_jk, vector <vector<int> > rMax_lh, vector<int> rTot, vector <vector<int> > CO_ii,
 		vector <vector<int> >NS_is, vector <vector <vector<int> > > SKL_asl, vector <vector<int> > H, vector <vector<int> > L, vector <vector<int> > Oprev,
 		vector <vector<int> > Ocorr, vector <vector <vector<int> > > Ttrain, vector <vector <vector<int> > > Ttrack, vector < vector <vector <vector<int> > > > Tfj,
@@ -99,8 +99,8 @@ public:
 	int getNAgent();
 	int getNSkill();
 	double getAlpha();
-	vector<double> getP();
-	vector<double> getPDelta();
+	vector<int> getP();
+	vector<int> getPDelta();
 	vector<int> getR();
 	vector<int> getDateDeRentree();
 	vector<double> getW();

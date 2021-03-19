@@ -15,8 +15,8 @@ CInput CJeuDonnees::version1()
 
 	const int nbOperations = 2;
 
-	vector<double> p{ 2,1.5 };
-	vector<double> pDelta{ 0,0.5 };
+	vector<int> p{ 3,2 };
+	vector<int> pDelta{ 0,1 };
 
 	vector<int> r{ 0,1 };
 	vector<int> d{ 12,14 };

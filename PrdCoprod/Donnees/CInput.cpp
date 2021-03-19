@@ -10,7 +10,7 @@
 
 
 CInput::CInput(int n, int m, int D, int nInfra, int nSite, int nSlot, int nTrain, int nAgent, int nSkill, double alpha,
-	vector<double> pParam, vector<double> pDeltaParam, vector<int> rParam, vector<int> dParam, vector<double> wParam, vector<double> uParam,
+	vector<int> pParam, vector<int> pDeltaParam, vector<int> rParam, vector<int> dParam, vector<double> wParam, vector<double> uParam,
 	vector <vector<int> > NI_ikParam, vector <vector<int> > IN_jkParam, vector <vector<int> > rMax_lhParam, vector<int> rTotParam,
 	vector <vector<int> > CO_iiParam, vector <vector<int> >NS_isParam, vector <vector <vector<int> > > SKL_aslParam, vector <vector<int> > HParam, vector <vector<int> > LParam,
 	vector <vector<int> > OprevParam, vector <vector<int> > OcorrParam, vector <vector <vector<int> > > TtrainParam,
@@ -148,12 +148,12 @@ double CInput::getAlpha()
 	return alpha;
 }
 
-vector<double> CInput::getP()
+vector<int> CInput::getP()
 {
 	return p;
 }
 
-vector<double> CInput::getPDelta()
+vector<int> CInput::getPDelta()
 {
 	return pDelta;
 }

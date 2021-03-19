@@ -40,6 +40,7 @@ int main()
 	// instanciation du modele Cplex a partir du jeu de donnees
 	PLNE plne(input);
 	//plne.printInfo();
+	plne.addAllContraintes();
 
 	int valeur = plne.opX(1,0);
 
