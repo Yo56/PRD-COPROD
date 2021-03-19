@@ -167,6 +167,8 @@ public:
 
 	void addContrainte5();
 
+	void addContrainte6();
+
 	void addAllContraintes();
 
 

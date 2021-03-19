@@ -1,14 +1,13 @@
 ﻿/*!
  * \file PLNE.cpp
- * \brief Elements permettant de resoudre un probleme d'optimisation
+ * \brief Elements permettant de construire et resoudre un probleme d'optimisation
  * \author Yohan Nouet
  * \version 1
  */
 
 #include "PLNE.h"
 using namespace std;
-//using std::cout;
-//using std::endl;
+
 
 PLNE::PLNE(CInput input)
 {
@@ -490,7 +489,7 @@ void PLNE::addContrainte4() {
 void PLNE::addContrainte5() {
 	cout << "+ Ajout contrainte 5prev au modele" << endl;
 
-		//boucle sur les rames
+	//boucle sur les rames
 	for (int f = 0; f < nTrain; f++) {
 
 		int nbPrev = Oprev[f].getSize();
@@ -586,13 +585,116 @@ void PLNE::addContrainte5() {
 	}
 }
 
+void PLNE::addContrainte6() {
+	cout << "+ Ajout contrainte 6prev au modele" << endl;
+	//boucle sur les rames
+	for (int f = 0; f < nTrain; f++) {
+
+		int nbPrev = Oprev[f].getSize();
+		int nbCorr = Ocorr[f].getSize();
+
+		//boucle sur les operations prev de la rame f
+		for (int i = 0; i < nbPrev; i++) {
+			/*cout << "operation : " << i << endl;*/
+
+			// expression qui va servir a sommer les variables de la contrainte
+			IloExpr sommeExpr(env);
+
+			//boucle sur les voies
+			for (int j = 0; j < m; j++) {
+				/*cout << "voie : " << j << endl;*/
+
+				// nombre de couples de dispo de la rame f et voie j
+				int nbCouples = Tfj[f][j].getSize();
+
+				// parcourt les couples
+				for (int q = 0; q < nbCouples; q++) {
+
+					int debut = Tfj[f][j][q][0];
+					int fin = Tfj[f][j][q][1];
+					/*cout << "couple : " << q << " -> de " << debut << " a " << fin << endl;
+					cout << "fin - p[getIndiceGeneralFromOperation(f, i)] + 1 : " << fin - p[getIndiceGeneralFromOperation(f, i)] + 1 <<endl;*/
+
+					//TODO cas a traiter ou fin - p[getIndiceGeneralFromOperation(f, i)] + 1 plus petit que debut
+
+					// parcourt le temps du couple
+					for (int t = debut; t <= fin - p[getIndiceGeneralFromOperation(f, i)] + 1; t++) {
+						/*cout << "t : " << t << endl;
+						cout << "getIndiceTempsFromValeur(f, j, q, t) : " << getIndiceTempsFromValeur(f, j, q, t) << endl;*/
+
+						// si t > alpha*di
+						if (t > alpha* d[getIndiceGeneralFromOperationPreventive(f, i)]) {
+							//ajout à la partie somme de la contrainte
+							sommeExpr += X[f][i][j][getIndiceTempsFromValeur(f, j, q, t)];
+						}
+						
+					}
+				}
+			}
+			// contrainte
+			model.add(sommeExpr == 1 );
+		}
+	}
+
+	/////////////// Contrainte 6 correctif
+	cout << "+ Ajout contrainte 6corr au modele" << endl;
+
+	//boucle sur les rames
+	for (int f = 0; f < nTrain; f++) {
+		/*cout << "rame : " << f << endl;*/
+
+		int nbPrev = Oprev[f].getSize();
+		int nbCorr = Ocorr[f].getSize();
+
+		//boucle sur les operations corr de la rame f
+		for (int i = nbPrev; i < nbPrev + nbCorr; i++) {
+			/*cout << "operation : " << i << endl;*/
+
+			// expression qui va servir a sommer les variables de la contrainte
+			IloExpr sommeExpr(env);
+
+			//boucle sur les voies
+			for (int j = 0; j < m; j++) {
+				/*cout << "voie : " << j << endl;*/
+
+				// nombre de couples de dispo de la rame f et voie j
+				int nbCouples = Tfj[f][j].getSize();
+
+				// parcourt les couples
+				for (int q = 0; q < nbCouples; q++) {
+
+					int debut = Tfj[f][j][q][0];
+					int fin = Tfj[f][j][q][1];
+					/*cout << "couple : " << q << " -> de " << debut << " a " << fin << endl;
+					cout << "fin - pDelta[getIndiceGeneralFromOperation(f, i)] + 1 : " << fin - pDelta[getIndiceGeneralFromOperation(f, i)] + 1 <<endl;*/
+
+					//TODO cas a traiter ou fin - p[getIndiceGeneralFromOperation(f, i)] + 1 plus petit que debut
+
+					// parcourt le temps du couple
+					for (int t = debut; t <= fin - p[getIndiceGeneralFromOperation(f, i)] + 1; t++) {
+						/*cout << "t : " << t << endl;
+						cout << "getIndiceTempsFromValeur(f, j, q, t) : " << getIndiceTempsFromValeur(f, j, q, t) << endl;*/
+
+						// ajout a la partie somme de la contrainte
+						sommeExpr += X[f][i][j][getIndiceTempsFromValeur(f, j, q, t)];
+					}
+				}
+			}
+			// contrainte
+			model.add(1 >= sommeExpr >= 1 - Y[f][i - nbPrev]);
+		}
+	}	
+}
+
 void PLNE::addAllContraintes() {
+	cout << "Ajout de toutes les contraintes au modele :" << endl;
 	addContrainte1();
 	addContrainte2();
 	addContrainte3();
 	addContrainte4();
 	addContrainte5();
-	cout << "Nombre de contraintes total dans le modèle (NRows) : " << cplex.getNrows() << endl;
+	addContrainte6();
+	cout << "Nombre de contraintes total dans le modele (NRows) : " << cplex.getNrows() << endl;
 }
 
 void PLNE::printInfo()
