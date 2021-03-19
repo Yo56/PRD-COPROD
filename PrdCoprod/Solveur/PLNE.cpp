@@ -500,7 +500,7 @@ void PLNE::addContrainte5() {
 		for (int i = 0; i < nbPrev; i++) {
 			/*cout << "operation : " << i << endl;*/
 
-			// expression qui va servir à sommer les variables de la contrainte
+			// expression qui va servir a sommer les variables de la contrainte
 			IloExpr sommeExpr(env);
 
 			//boucle sur les voies
@@ -550,7 +550,7 @@ void PLNE::addContrainte5() {
 		for (int i = nbPrev; i < nbPrev + nbCorr; i++) {
 			/*cout << "operation : " << i << endl;*/
 
-			// expression qui va servir à sommer les variables de la contrainte
+			// expression qui va servir a sommer les variables de la contrainte
 			IloExpr sommeExpr(env);
 
 			//boucle sur les voies
