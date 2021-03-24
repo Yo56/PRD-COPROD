@@ -173,6 +173,8 @@ public:
 
 	void addContrainte8();
 
+	void addContrainte9();
+
 	void addAllContraintes();
 
 
