@@ -292,20 +292,29 @@ PLNE::PLNE(CInput input)
 
 					Z[a][f][i] = IloBoolVarArray(env);
 
-					//boucle sur les creneaux
-					for (int c = 0; c < nbCreneaux; c++) {
-						int debut = Tagent[a][c][0];
-						int fin = Tagent[a][c][1];
+					////boucle sur les creneaux
+					//for (int c = 0; c < nbCreneaux; c++) {
+					//	int debut = Tagent[a][c][0];
+					//	int fin = Tagent[a][c][1];
+					//
+					//	//on cree (fin - debut) variables qui sont ajoutees a A[a][f][i]
+					//	for (int t = 0; t < fin - debut; t++) {
+					//		IloBoolVar variable(env);
+					//		Z[a][f][i].add(variable);
+					//
+					//		//ajout au model CPLEX
+					//		model.add(variable);
+					//
+					//	}
+					//}
 
-						//on cree (fin - debut) variables qui sont ajoutees a A[a][f][i]
-						for (int t = 0; t < fin - debut; t++) {
-							IloBoolVar variable(env);
-							Z[a][f][i].add(variable);
+					//boucle sur le temps
+					for (int t = 0; t < D; t++) {
+						IloBoolVar variable(env);
+						Z[a][f][i].add(variable);
 
-							//ajout au model CPLEX
-							model.add(variable);
-
-						}
+						//ajout au model CPLEX
+						model.add(variable);
 					}
 				}
 			}
@@ -915,33 +924,28 @@ void PLNE::addContrainte10() {
 
 	//boucle sur les rames
 	for (int f = 0; f < nTrain; f++) {
-		cout << "Rame f : " << f << endl;
 
 		int nbPrev = Oprev[f].getSize();
 		int nbCorr = Ocorr[f].getSize();
 
 		//boucle sur les operations prev de la rame f
 		for (int i = 0; i < nbPrev ; i++) {
-			cout << "Operation : " << i << endl;
 
 			//boucle sur les voies
 			for (int j = 0; j < m; j++) {
-				cout << "Voie : " << j << endl;
 
 				// nombre de couples de dispo de la rame f et voie j
 				int nbCouples = Tfj[f][j].getSize();
-				cout << "Nb couples de dispo de la rame "<<f <<" et voie "<<j<<" : " << nbCouples << endl;
 
 				// parcourt les couples
 				for (int q = 0; q < nbCouples; q++) {
 			
 					int debut = Tfj[f][j][q][0];
 					int fin = Tfj[f][j][q][1];
-					cout << "Couple : " << q << " (" << debut << " -> " << fin << ")" << endl;
 
 					// parcourt le temps du couple
 					for (int t = debut; t <= fin; t++) { 
-						cout << "t =" <<t<< endl;
+
 						// expression qui va servir a sommer les variables de la contrainte
 						IloExpr sommeExpr(env);
 
@@ -950,29 +954,22 @@ void PLNE::addContrainte10() {
 						// Boucle f' sur les rames
 						for (int f2 = 0; f2 < nTrain; f2++) {
 							if (f2 != f) {
-								cout << "	Rame f2 : " << f2 << "!= rame f : "<<f<<endl;
+
 								int nbPrev2 = Oprev[f2].getSize();
 								int nbCorr2 = Ocorr[f2].getSize();
-								cout << "	Nb operations f2 =  " << nbPrev2 << "+" << nbCorr2 <<" = " << nbCorr2+nbPrev2 << endl;
 								
 								//boucle sur toutes les operations de f2
 								for (int i2 = 0; i2 < nbPrev2 + nbCorr2; i2++) {
-									cout << "	operation i2 : " << i2 << endl;
 									
 									// nombre de couples de dispo de la rame f2 et voie j
 									int nbCouplesf2 = Tfj[f2][j].getSize();
-									cout << "	Nb couples de dispo de la rame " << f2 << " et voie " << j << " : " << nbCouplesf2 << endl;
 									
 									//boucle sur les couples de f2
 									for (int q2 = 0; q2 < nbCouplesf2; q2++) {
 
 										//boucle sur le temps
 										for (int t2 = t; t2 < t + p[getIndiceGeneralFromOperation(f, i)] - 1; t2++) {
-											cout << "	t2= " << t2 << endl;
-											cout << "	jusqu'a " << t + p[getIndiceGeneralFromOperation(f, i)] - 1 << endl;
-											cout << "	getIndiceTempsFromValeur(" << f2 << ", " << j << ", " << q2 << ", " << t2 << ") = " << endl;
-											cout << "	" << getIndiceTempsFromValeur(f2, j, q2, t2) << endl;
-
+											
 											// Ajout des Xi',j,t' a la contrainte
 											sommeExpr += X[f2][i2][j][t2]; //sommeExpr += X[f2][i2][j][getIndiceTempsFromValeur(f2, j, q2, t2)];
 										}
@@ -1048,8 +1045,7 @@ void PLNE::addContrainte10() {
 
 									// nombre de couples de dispo de la rame f2 et voie j
 									int nbCouplesf2 = Tfj[f2][j].getSize();
-									cout << "Nb couples de dispo de la rame " << f2 << " et voie " << j << " : " << nbCouplesf2 << endl;
-
+									
 									//boucle sur les couples de dispo de f2 sur j
 									for (int q2 = 0; q2 < nbCouplesf2; q2++) {
 
@@ -1115,18 +1111,18 @@ void PLNE::addContrainte12() {
 
 	//boucle sur les rames
 	for (int f = 0; f < nTrain; f++) {
-		cout << " f  :" << f << endl;
+
 		//boucle sur les sites
 		for (int l = 0; l < nSite; l++) {
-			cout << " l  :" << l << endl;
+
 			//boucle sur le temps
 			for (int t = 0; t < D; t++) {
-				cout << " t  :" << t << endl;
+
 				int nbPrev = Oprev[f].getSize();
 
 				//boucle sur les operations
 				for (int i = 0; i < nbPrev; i++) {
-					cout << " i  :" << i << endl;
+
 					// expression qui va servir a sommer les variables de la contrainte
 					IloExpr sommeExpr(env);
 
@@ -1135,25 +1131,236 @@ void PLNE::addContrainte12() {
 
 					//parcourt des voies du site l
 					for (int j = 0; j < nbVoies; j++) {
-						cout << " j  :" << j << endl;
-
+						
 						//parcourt le temps
 						int tMax = 0;
-						cout << " t - p[getIndiceGeneralFromOperation(f, i)] + 1 " << t - p[getIndiceGeneralFromOperation(f, i)] + 1 << endl;
 						
 						if (t - p[getIndiceGeneralFromOperation(f, i)] + 1 > tMax) {
-							cout << "toto" << endl;
 							tMax = t - p[getIndiceGeneralFromOperation(f, i)] + 1;
 						}
 
 						for (int t2 = tMax; t2 < t; t2++) {
-							cout <<" t2 "<< t2 << endl;
-							cout <<" getIndiceTempsGeneralFromValeur(f, j, t2)" << getIndiceTempsGeneralFromValeur(f, j, t2) << endl;
 							sommeExpr += X[f][i][getIndiceVoieGeneralFromIndiceDansL(l, j)][t2]; //sommeExpr += X[f][i][getIndiceVoieGeneralFromIndiceDansL(l, j)][getIndiceTempsGeneralFromValeur(f, j, t2)];
 						}
 					}
 					model.add(E[f][l][t] >= sommeExpr);
 				}
+			}
+		}
+	}
+	/////////////////////////////////  Contrainte 12 correctif (1)   ///////////////////////////////// 
+
+	cout << "+ Ajout contrainte 12corr-1 au modele" << endl;
+
+	//boucle sur les rames
+	for (int f = 0; f < nTrain; f++) {
+		
+		//boucle sur les sites
+		for (int l = 0; l < nSite; l++) {
+			
+			//boucle sur le temps
+			for (int t = 0; t < D; t++) {
+				
+				int nbPrev = Oprev[f].getSize();
+				int nbCorr = Ocorr[f].getSize();
+
+				//boucle sur les operations correctives
+				for (int i = nbPrev; i < nbPrev+nbCorr; i++) {
+					
+					// expression qui va servir a sommer les variables de la contrainte
+					IloExpr sommeExpr(env);
+
+					//nombre de voies surle site l
+					int nbVoies = L[l].getSize();
+
+					//parcourt des voies du site l
+					for (int j = 0; j < nbVoies; j++) {
+
+						//parcourt le temps 
+						int tMax = 0;
+						
+						if (t - pDelta[getIndiceGeneralFromOperation(f, i)] + 1 > tMax) {
+							tMax = t - pDelta[getIndiceGeneralFromOperation(f, i)] + 1;
+						}
+
+						for (int t2 = tMax; t2 < t; t2++) {
+
+							sommeExpr += X[f][i][getIndiceVoieGeneralFromIndiceDansL(l, j)][t2]; 
+						}
+					}
+					model.add(E[f][l][t] >= sommeExpr);
+				}
+			}
+		}
+	}
+	/////////////////////////////////  Contrainte 12 correctif (2)   ///////////////////////////////// 
+
+	cout << "+ Ajout contrainte 12corr-2 au modele" << endl;
+
+	//boucle sur les rames
+	for (int f = 0; f < nTrain; f++) {
+
+		//boucle sur les sites
+		for (int l = 0; l < nSite; l++) {
+
+			//boucle sur le temps
+			for (int t = 0; t < D; t++) {
+
+				int nbPrev = Oprev[f].getSize();
+				int nbCorr = Ocorr[f].getSize();
+
+				//boucle sur les operations correctives
+				for (int i = nbPrev; i < nbPrev + nbCorr; i++) {
+
+					// expression qui va servir a sommer les variables de la contrainte
+					IloExpr sommeExpr(env);
+
+					//nombre de voies surle site l
+					int nbVoies = L[l].getSize();
+
+					//parcourt des voies du site l
+					for (int j = 0; j < nbVoies; j++) {
+
+						//parcourt le temps de tMax a tMaxSup
+						int tMax = 0;
+						if (t - p[getIndiceGeneralFromOperation(f, i)] + 1 > tMax) {
+							tMax = t - p[getIndiceGeneralFromOperation(f, i)] + 1;
+						}
+
+						int tMaxSup = 0;
+						if (t - pDelta[getIndiceGeneralFromOperation(f, i)] > tMaxSup) {
+							tMaxSup = t - pDelta[getIndiceGeneralFromOperation(f, i)];
+						}
+
+						for (int t2 = tMax; t2 < tMaxSup; t2++) {
+
+							sommeExpr += X[f][i][getIndiceVoieGeneralFromIndiceDansL(l, j)][t2];
+						}
+					}
+					model.add(E[f][l][t] >= -Y[f][i - nbPrev] + sommeExpr);
+				}
+			}
+		}
+	}
+}
+
+void PLNE::addContrainte14() {
+	cout << "+ Ajout contrainte 14 au modele" << endl;
+
+	//boucle sur les rames
+	for (int f = 0; f < nTrain; f++) {
+
+		int nbPrev = Oprev[f].getSize();
+		int nbCorr = Ocorr[f].getSize();
+
+		//boucle sur les operations de la rame f
+		for (int i = 0; i < nbPrev + nbCorr; i++) {
+
+			//boucle sur les competences
+			for (int s = 0; s < nSkill; s++) {
+
+				//boucle sur le temps
+				for (int t = 0; t < D; t++) {
+
+					//  DEBUT MEMBRE DE GAUCHE
+
+					// expression qui va servir a sommer les variables de la contrainte
+					IloExpr sommeExprGauche(env);
+
+					//boucle sur les sites
+					for (int l = 0; l < nSite; l++) {
+
+						//boucle sur les agents
+						for (int a = 0; a < nAgent; a++) {
+							//contrainte
+							sommeExprGauche += SKL_asl[a][s][l] * Z[a][f][i][t];
+						}
+					}
+					// DEBUT MEMBRE DE DROITE
+
+					// expression qui va servir a sommer les variables de la contrainte
+					IloExpr sommeExprDroite(env);
+
+					//boucle sur les voies
+					for (int j = 0; j < m; j++) {
+
+						//parcourt du temps
+						int tMax = 0;
+						if (t - p[getIndiceGeneralFromOperation(f, i)] + 1 > 0) {
+							tMax = t - p[getIndiceGeneralFromOperation(f, i)] + 1;
+						}
+
+						for (int t2 = tMax; t2 < t; t2++) {
+							//contrainte
+							sommeExprDroite += X[f][i][j][t2];
+						}
+					}
+					// AJOUT CONTRAINTE
+					model.add(sommeExprGauche >= sommeExprDroite * NS_is[getIndiceGeneralFromOperation(f, i)][s]);
+				}
+			}
+		}
+	}
+}
+
+void PLNE::AddContrainte15() {
+	cout << "+ Ajout contrainte 15 au modele" << endl;
+
+	//boucle sur le temps
+	for (int t = 0; t < D; t++) {
+
+		//boucle sur les agents
+		for (int a = 0; a < nAgent; a++) {
+
+			// MEMBRE DE GAUCHE
+			// expression qui va servir a sommer les variables de la contrainte
+			IloExpr sommeExpr(env);
+
+			//boucle sur les rames
+			for (int f = 0; f < nTrain; f++) {
+
+				int nbPrev = Oprev[f].getSize();
+				int nbCorr = Ocorr[f].getSize();
+
+				//boucle sur les operations de la rame f
+				for (int i = 0; i < nbPrev + nbCorr; i++) {
+					sommeExpr += Z[a][f][i][t];
+				}
+			}
+			// AJOUT CONTRAINTE
+			model.add(sommeExpr <= 1);
+		}
+	}
+}
+
+void PLNE::AddContrainte16() {
+	cout << "+ Ajout contrainte 16 au modele" << endl;
+
+	//boucle sur les agents
+	for (int a = 0; a < nAgent; a++) {
+
+		//boucle sur le temps
+		for (int t = 0; t < D; t++) {
+
+			// si l'agent n'est pas disponible a l'heure t
+			if (agentDisponibleAUnInstant(a, t) == false) {
+
+				// expression qui va servir a sommer les variables de la contrainte
+				IloExpr sommeExpr(env);
+
+				//boucle sur les rames
+				for (int f = 0; f < nTrain; f++) {
+
+					int nbPrev = Oprev[f].getSize();
+					int nbCorr = Ocorr[f].getSize();
+
+					//boucle sur les operations de la rame f
+					for (int i = 0; i < nbPrev + nbCorr; i++) {
+						sommeExpr += Z[a][f][i][t];
+					}
+				}
+				// AJOUT CONTRAINTE
+				model.add(sommeExpr == 0);
 			}
 		}
 	}
@@ -1175,12 +1382,15 @@ void PLNE::addAllContraintes() {
 
 	addContrainte11();
 	addContrainte12();
+	addContrainte14();
+	AddContrainte15();
+
 	cout << "Nombre de contraintes total dans le modele (NRows) : " << cplex.getNrows() << endl;
 }
 
 void PLNE::printInfo()
 {
-	cout << endl << "================== instance PLNE  ==================  " << endl << endl;
+	cout << endl << "================== instance PLNE : affichage du contenu ==================  " << endl << endl;
 	cout << "======== Donnees scalaires ======== " << endl;
 	cout << "n : " << n << endl;
 	cout << "m : " << m << endl;
@@ -1481,4 +1691,24 @@ int PLNE::getIndiceVoieGeneralFromIndiceDansL(int lParam, int jParam) {
 		cout << "Erreur : depassement de taille du nombre de sites." << endl;
 		return -1;
 	}
+}
+
+//retourne la dispo d'un agent a un instant t donne
+bool PLNE::agentDisponibleAUnInstant(int agent, int tParam) {
+
+	//recuperes les heures de travail de l'agent
+	int nbCreneaux = Tagent[agent].getSize();
+
+	for (int creneau = 0; creneau < nbCreneaux; creneau++) {
+		int debut = Tagent[agent][creneau][0];
+		int fin = Tagent[agent][creneau][1];
+
+		for (int t = debut; t <= fin; t++) {
+			if (t == tParam) {
+				return true;
+			}
+		}
+	}
+
+	return false;
 }

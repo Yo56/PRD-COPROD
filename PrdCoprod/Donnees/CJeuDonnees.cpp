@@ -50,6 +50,8 @@ CInput CJeuDonnees::version1()
 									// creneaux dispo		  A|1				A|2					  B|1		 B|2
 	vector < vector <vector <vector<int> > > > Tfj{ { {{10,16}, {18,20}},{{10,16}, {20,21}} },    { {{8,20}}, {{9,17}} } };
 
+									//			  Agent1			Agent2		Agent3
+									//		creneau1 creneau2		creneau1	creneau1
 	vector <vector <vector<int> > > Tagent{ { {8,10}, {11,18} }, { {8,16} } , { {9,18}  } };
 
 	//creation de l'objet Input

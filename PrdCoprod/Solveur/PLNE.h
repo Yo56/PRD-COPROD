@@ -181,6 +181,12 @@ public:
 
 	void addContrainte12();
 
+	void addContrainte14();
+
+	void AddContrainte15();
+
+	void AddContrainte16();
+
 	void addAllContraintes();
 
 
@@ -226,6 +232,8 @@ public:
 	int getIndiceTempsGeneralFromValeur(int fParam, int jParam, int tParam);
 
 	int getIndiceVoieGeneralFromIndiceDansL(int lParam, int jParam);
+
+	bool agentDisponibleAUnInstant(int agent, int t);
 
 
 	

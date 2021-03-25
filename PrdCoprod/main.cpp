@@ -1,6 +1,4 @@
 #include <iostream>
-//#include <Windows.h>
-//#include <cstdio>
 #include <ilcplex/ilocplex.h>
 #include <vector>
 
@@ -14,12 +12,13 @@ using namespace std;
 
 int main()
 {
-	//SetConsoleOutputCP(65001);
-	//SetConsoleOutputCP(CP_UTF8);
-	//setvbuf(stdout, nullptr, _IOFBF, 1000);
+	// Header
+	cout << "==============================================================================================" << endl;
+	cout << "		OUTIL D'AIDE A LA DECISION - SNCF - COPROD" << endl;
+	cout << "		Projets de Recherche & Developpement - Polytech Tours - 2020/2021" << endl;
+	cout << "		PRD Yohan Nouet" << endl;
+	cout << "==============================================================================================" << endl << endl;
 
-	//Tuto::basic();
-	//PLNE::run();
 
 	//cout << "====================== Acquisition ===================" << endl << endl;
 	//
@@ -39,14 +38,9 @@ int main()
 
 	// instanciation du modele Cplex a partir du jeu de donnees
 	PLNE plne(input);
-	//plne.printInfo();
+	plne.printInfo();
 	plne.addAllContraintes();
 
-	int valeur = plne.opX(1,0);
-
-	cout <<" valeur : "<< valeur << endl;
-
-	cout << plne.opY(1, 0) << endl;
 
 	cout << "#### " << plne.getIndiceGeneralFromOperationCorrective(1, 0) << endl;
 	cout << "#### " << plne.getIndiceGeneralFromOperationPreventive(0, 0) << endl;
@@ -55,6 +49,3 @@ int main()
 
 	return 0;
 }
-
-
-
