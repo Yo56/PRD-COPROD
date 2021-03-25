@@ -516,14 +516,12 @@ void PLNE::addContrainte5() {
 
 		//boucle sur les operations prev de la rame f
 		for (int i = 0; i < nbPrev; i++) {
-			/*cout << "operation : " << i << endl;*/
 
 			// expression qui va servir a sommer les variables de la contrainte
 			IloExpr sommeExpr(env);
 
 			//boucle sur les voies
 			for (int j = 0; j < m; j++) {
-				/*cout << "voie : " << j << endl;*/
 
 				// nombre de couples de dispo de la rame f et voie j
 				int nbCouples = Tfj[f][j].getSize();
@@ -533,15 +531,11 @@ void PLNE::addContrainte5() {
 
 					int debut = Tfj[f][j][q][0];
 					int fin = Tfj[f][j][q][1];
-					/*cout << "couple : " << q << " -> de " << debut << " a " << fin << endl;
-					cout << "fin - p[getIndiceGeneralFromOperation(f, i)] + 1 : " << fin - p[getIndiceGeneralFromOperation(f, i)] + 1 <<endl;*/
 
 					//TODO cas a traiter ou fin - p[getIndiceGeneralFromOperation(f, i)] + 1 plus petit que debut
 
 					// parcourt le temps du couple
 					for (int t = debut; t <= fin - p[getIndiceGeneralFromOperation(f, i)] + 1; t++) {
-						/*cout << "t : " << t << endl;
-						cout << "getIndiceTempsFromValeur(f, j, q, t) : " << getIndiceTempsFromValeur(f, j, q, t) << endl;*/
 
 						// ajout a la partie somme de la contrainte
 						sommeExpr += X[f][i][j][t] * t;//sommeExpr += X[f][i][j][getIndiceTempsFromValeur(f, j, q, t)] * t;
@@ -559,21 +553,18 @@ void PLNE::addContrainte5() {
 
 	//boucle sur les rames
 	for (int f = 0; f < nTrain; f++) {
-		/*cout << "rame : " << f << endl;*/
 
 		int nbPrev = Oprev[f].getSize();
 		int nbCorr = Ocorr[f].getSize();
 
 		//boucle sur les operations corr de la rame f
 		for (int i = nbPrev; i < nbPrev + nbCorr; i++) {
-			/*cout << "operation : " << i << endl;*/
 
 			// expression qui va servir a sommer les variables de la contrainte
 			IloExpr sommeExpr(env);
 
 			//boucle sur les voies
 			for (int j = 0; j < m; j++) {
-				/*cout << "voie : " << j << endl;*/
 
 				// nombre de couples de dispo de la rame f et voie j
 				int nbCouples = Tfj[f][j].getSize();
@@ -583,18 +574,14 @@ void PLNE::addContrainte5() {
 
 					int debut = Tfj[f][j][q][0];
 					int fin = Tfj[f][j][q][1];
-					/*cout << "couple : " << q << " -> de " << debut << " a " << fin << endl;
-					cout << "fin - pDelta[getIndiceGeneralFromOperation(f, i)] + 1 : " << fin - pDelta[getIndiceGeneralFromOperation(f, i)] + 1 <<endl;*/
 
 					//TODO cas a traiter ou fin - p[getIndiceGeneralFromOperation(f, i)] + 1 plus petit que debut
 
 					// parcourt le temps du couple
 					for (int t = debut; t <= fin - pDelta[getIndiceGeneralFromOperation(f, i)] + 1; t++) {
-						/*cout << "t : " << t << endl;
-						cout << "getIndiceTempsFromValeur(f, j, q, t) : " << getIndiceTempsFromValeur(f, j, q, t) << endl;*/
 
 						// ajout a la partie somme de la contrainte
-						sommeExpr += X[f][i][j][t] * t;//sommeExpr += X[f][i][j][getIndiceTempsFromValeur(f, j, q, t)] * t;
+						sommeExpr += X[f][i][j][t] * t;
 					}
 				}
 			}
@@ -614,14 +601,12 @@ void PLNE::addContrainte6() {
 
 		//boucle sur les operations prev de la rame f
 		for (int i = 0; i < nbPrev; i++) {
-			/*cout << "operation : " << i << endl;*/
 
 			// expression qui va servir a sommer les variables de la contrainte
 			IloExpr sommeExpr(env);
 
 			//boucle sur les voies
 			for (int j = 0; j < m; j++) {
-				/*cout << "voie : " << j << endl;*/
 
 				// nombre de couples de dispo de la rame f et voie j
 				int nbCouples = Tfj[f][j].getSize();
@@ -631,22 +616,17 @@ void PLNE::addContrainte6() {
 
 					int debut = Tfj[f][j][q][0];
 					int fin = Tfj[f][j][q][1];
-					/*cout << "couple : " << q << " -> de " << debut << " a " << fin << endl;
-					cout << "fin - p[getIndiceGeneralFromOperation(f, i)] + 1 : " << fin - p[getIndiceGeneralFromOperation(f, i)] + 1 <<endl;*/
-
+					
 					//TODO cas a traiter ou fin - p[getIndiceGeneralFromOperation(f, i)] + 1 plus petit que debut
 
 					// parcourt le temps du couple
 					for (int t = debut; t <= fin - p[getIndiceGeneralFromOperation(f, i)] + 1; t++) {
-						/*cout << "t : " << t << endl;
-						cout << "getIndiceTempsFromValeur(f, j, q, t) : " << getIndiceTempsFromValeur(f, j, q, t) << endl;*/
-
+						
 						// si t > alpha*di
 						if (t > alpha* d[getIndiceGeneralFromOperationPreventive(f, i)]) {
 							//ajout a la partie somme de la contrainte
-							sommeExpr += X[f][i][j][t]; //sommeExpr += X[f][i][j][getIndiceTempsFromValeur(f, j, q, t)];
+							sommeExpr += X[f][i][j][t]; 
 						}
-						
 					}
 				}
 			}
@@ -654,28 +634,24 @@ void PLNE::addContrainte6() {
 			model.add(sommeExpr == 1 );
 		}
 	}
-
 	/////////////// Contrainte 6 correctif
 
 	cout << "+ Ajout contrainte 6corr au modele" << endl;
 
 	//boucle sur les rames
 	for (int f = 0; f < nTrain; f++) {
-		/*cout << "rame : " << f << endl;*/
 
 		int nbPrev = Oprev[f].getSize();
 		int nbCorr = Ocorr[f].getSize();
 
 		//boucle sur les operations corr de la rame f
 		for (int i = nbPrev; i < nbPrev + nbCorr; i++) {
-			/*cout << "operation : " << i << endl;*/
 
 			// expression qui va servir a sommer les variables de la contrainte
 			IloExpr sommeExpr(env);
 
 			//boucle sur les voies
 			for (int j = 0; j < m; j++) {
-				/*cout << "voie : " << j << endl;*/
 
 				// nombre de couples de dispo de la rame f et voie j
 				int nbCouples = Tfj[f][j].getSize();
@@ -685,18 +661,14 @@ void PLNE::addContrainte6() {
 
 					int debut = Tfj[f][j][q][0];
 					int fin = Tfj[f][j][q][1];
-					/*cout << "couple : " << q << " -> de " << debut << " a " << fin << endl;
-					cout << "fin - pDelta[getIndiceGeneralFromOperation(f, i)] + 1 : " << fin - pDelta[getIndiceGeneralFromOperation(f, i)] + 1 <<endl;*/
-
+					
 					//TODO cas a traiter ou fin - p[getIndiceGeneralFromOperation(f, i)] + 1 plus petit que debut
 
 					// parcourt le temps du couple
 					for (int t = debut; t <= fin - p[getIndiceGeneralFromOperation(f, i)] + 1; t++) {
-						/*cout << "t : " << t << endl;
-						cout << "getIndiceTempsFromValeur(f, j, q, t) : " << getIndiceTempsFromValeur(f, j, q, t) << endl;*/
-
+						
 						// ajout a la partie somme de la contrainte
-						sommeExpr += X[f][i][j][t];//sommeExpr += X[f][i][j][getIndiceTempsFromValeur(f, j, q, t)];
+						sommeExpr += X[f][i][j][t];
 					}
 				}
 			}
@@ -711,7 +683,6 @@ void PLNE::addContrainte7() {
 
 	//boucle sur les rames
 	for (int f = 0; f < nTrain; f++) {
-		/*cout << "rame : " << f << endl;*/
 
 		int nbPrev = Oprev[f].getSize();
 		int nbCorr = Ocorr[f].getSize();
@@ -738,7 +709,7 @@ void PLNE::addContrainte7() {
 					for (int t = debut; t <= fin - pDelta[getIndiceGeneralFromOperation(f, i)] + 1; t++) {
 
 						// ajout a la partie somme de la contrainte
-						sommeExpr += X[f][i][j][t];//sommeExpr += X[f][i][j][getIndiceTempsFromValeur(f, j, q, t)];
+						sommeExpr += X[f][i][j][t];
 					}
 				}
 			}
@@ -782,7 +753,7 @@ void PLNE::addContrainte8() {
 						for (int t = debut; t <= fin - p[getIndiceGeneralFromOperation(f, i)] + 1; t++) {
 
 							//ajout a la partie somme de la contrainte
-							sommeExpr += X[f][i][j][t]; //sommeExpr += X[f][i][j][getIndiceTempsFromValeur(f, j, q, t)];
+							sommeExpr += X[f][i][j][t]; 
 						}
 					}
 					// contrainte
@@ -825,7 +796,7 @@ void PLNE::addContrainte8() {
 						for (int t = debut; t <= fin - pDelta[getIndiceGeneralFromOperation(f, i)] + 1; t++) {
 
 							//ajout a la partie somme de la contrainte
-							sommeExpr += X[f][i][j][t]; //sommeExpr += X[f][i][j][getIndiceTempsFromValeur(f, j, q, t)];
+							sommeExpr += X[f][i][j][t]; 
 						}
 					}
 					// contrainte
@@ -861,7 +832,7 @@ void PLNE::addContrainte9() {
 					int fin = Tfj[f][j][q][1];
 					
 					// parcourt le temps du couple
-					for (int t = debut; t <= fin; t++) { //for (int t = debut; t <= fin - p[getIndiceGeneralFromOperation(f, i)] + 1; t++) {
+					for (int t = debut; t <= fin; t++) {
 
 						// expression qui va servir a sommer les variables de la contrainte
 						IloExpr sommeExpr(env);
@@ -886,9 +857,9 @@ void PLNE::addContrainte9() {
 									for (int q2 = 0; q2 < nbCouplesf2; q2++) {
 
 										//boucle sur le temps
-										for (int t2 = t; t2 < t + pDelta[getIndiceGeneralFromOperation(f, i)] - 1; t2++) {
+										for (int t2 = t; t2 <= t + pDelta[getIndiceGeneralFromOperation(f, i)] - 1; t2++) {
 											// Ajout des Xi',j,t' a la contrainte
-											sommeExpr += X[f2][i2][j][t2]; //sommeExpr += X[f2][i2][j][getIndiceTempsFromValeur(f2, j, q2, t2)];
+											sommeExpr += X[f2][i2][j][t2];
 										}
 									}
 								}
@@ -903,14 +874,14 @@ void PLNE::addContrainte9() {
 							if (CO_ii[i][i2] == 0) {
 
 								//boucle sur le temps
-								for (int t2 = t; t2 < t + pDelta[getIndiceGeneralFromOperation(f, i)] - 1; t2++) {
+								for (int t2 = t; t2 <= t + pDelta[getIndiceGeneralFromOperation(f, i)] - 1; t2++) {
 									// Ajout des Xi',j,t' a la contrainte
-									sommeExpr += X[f][i2][j][t2]; //sommeExpr += X[f][i2][j][getIndiceTempsFromValeur(f, j, q, t2)]; 
+									sommeExpr += X[f][i2][j][t2]; 
 								}
 							}
 						}
 						// AJOUT CONTRAINTE AU MODELE
-						model.add(sommeExpr <= (1 - X[f][i][j][t])*n ); //model.add(sommeExpr <= (1 - X[f][i][j][getIndiceTempsFromValeur(f, j, q, t)])*n );
+						model.add(sommeExpr <= (1 - X[f][i][j][t])*n );
 					}
 				}
 			}
@@ -968,10 +939,10 @@ void PLNE::addContrainte10() {
 									for (int q2 = 0; q2 < nbCouplesf2; q2++) {
 
 										//boucle sur le temps
-										for (int t2 = t; t2 < t + p[getIndiceGeneralFromOperation(f, i)] - 1; t2++) {
+										for (int t2 = t; t2 <= t + p[getIndiceGeneralFromOperation(f, i)] - 1; t2++) {
 											
 											// Ajout des Xi',j,t' a la contrainte
-											sommeExpr += X[f2][i2][j][t2]; //sommeExpr += X[f2][i2][j][getIndiceTempsFromValeur(f2, j, q2, t2)];
+											sommeExpr += X[f2][i2][j][t2]; 
 										}
 									}
 								}
@@ -986,14 +957,14 @@ void PLNE::addContrainte10() {
 							if (CO_ii[i][i2] == 0) {
 
 								//boucle sur le temps
-								for (int t2 = t; t2 < t + p[getIndiceGeneralFromOperation(f, i)] - 1; t2++) {
+								for (int t2 = t; t2 <= t + p[getIndiceGeneralFromOperation(f, i)] - 1; t2++) {
 									// Ajout des Xi',j,t' a la contrainte
-									sommeExpr += X[f][i2][j][t2]; //sommeExpr += X[f][i2][j][getIndiceTempsFromValeur(f, j, q, t2)];
+									sommeExpr += X[f][i2][j][t2]; 
 								}
 							}
 						}
 						// AJOUT CONTRAINTE AU MODELE
-						model.add(sommeExpr <= (1 - X[f][i][j][t])*n); //model.add(sommeExpr <= (1 - X[f][i][j][getIndiceTempsFromValeur(f, j, q, t)])*n);
+						model.add(sommeExpr <= (1 - X[f][i][j][t])*n);
 					}
 				}
 			}
@@ -1050,13 +1021,11 @@ void PLNE::addContrainte10() {
 									for (int q2 = 0; q2 < nbCouplesf2; q2++) {
 
 										//boucle sur le temps
-										for (int t2 = t + pDelta[getIndiceGeneralFromOperation(f, i)]; t2 < t + p[getIndiceGeneralFromOperation(f, i)] - 1; t2++) {
+										for (int t2 = t + pDelta[getIndiceGeneralFromOperation(f, i)]; t2 <= t + p[getIndiceGeneralFromOperation(f, i)] - 1; t2++) {
 											// Ajout des Xi',j,t' a la contrainte
-											sommeExpr += X[f2][i2][j][t2]; //sommeExpr += X[f2][i2][j][getIndiceTempsFromValeur(f2, j, q2, t2)];
+											sommeExpr += X[f2][i2][j][t2];
 										}
 									}
-
-									
 								}
 							}
 						}
@@ -1069,14 +1038,14 @@ void PLNE::addContrainte10() {
 							if (CO_ii[i][i2] == 0) {
 
 								//boucle sur le temps
-								for (int t2 = t + pDelta[getIndiceGeneralFromOperation(f, i)]; t2 < t + p[getIndiceGeneralFromOperation(f, i)] - 1; t2++) {
+								for (int t2 = t + pDelta[getIndiceGeneralFromOperation(f, i)]; t2 <= t + p[getIndiceGeneralFromOperation(f, i)] - 1; t2++) {
 									// Ajout des Xi',j,t' a la contrainte
-									sommeExpr += X[f][i2][j][t2]; //sommeExpr += X[f][i2][j][getIndiceTempsFromValeur(f, j, q, t2)];
+									sommeExpr += X[f][i2][j][t2];
 								}
 							}
 						}
 						// AJOUT CONTRAINTE AU MODELE
-						model.add(sommeExpr <= (Y[f][i - nbPrev] - X[f][i][j][t] + 1)*n); //model.add(sommeExpr <= (Y[f][i - nbPrev] - X[f][i][j][getIndiceTempsFromValeur(f, j, q, t)] + 1)*n);
+						model.add(sommeExpr <= (Y[f][i - nbPrev] - X[f][i][j][t] + 1)*n);
 					}
 				}
 			}
@@ -1139,8 +1108,8 @@ void PLNE::addContrainte12() {
 							tMax = t - p[getIndiceGeneralFromOperation(f, i)] + 1;
 						}
 
-						for (int t2 = tMax; t2 < t; t2++) {
-							sommeExpr += X[f][i][getIndiceVoieGeneralFromIndiceDansL(l, j)][t2]; //sommeExpr += X[f][i][getIndiceVoieGeneralFromIndiceDansL(l, j)][getIndiceTempsGeneralFromValeur(f, j, t2)];
+						for (int t2 = tMax; t2 <= t; t2++) {
+							sommeExpr += X[f][i][getIndiceVoieGeneralFromIndiceDansL(l, j)][t2];
 						}
 					}
 					model.add(E[f][l][t] >= sommeExpr);
@@ -1183,7 +1152,7 @@ void PLNE::addContrainte12() {
 							tMax = t - pDelta[getIndiceGeneralFromOperation(f, i)] + 1;
 						}
 
-						for (int t2 = tMax; t2 < t; t2++) {
+						for (int t2 = tMax; t2 <= t; t2++) {
 
 							sommeExpr += X[f][i][getIndiceVoieGeneralFromIndiceDansL(l, j)][t2]; 
 						}
@@ -1232,7 +1201,7 @@ void PLNE::addContrainte12() {
 							tMaxSup = t - pDelta[getIndiceGeneralFromOperation(f, i)];
 						}
 
-						for (int t2 = tMax; t2 < tMaxSup; t2++) {
+						for (int t2 = tMax; t2 <= tMaxSup; t2++) {
 
 							sommeExpr += X[f][i][getIndiceVoieGeneralFromIndiceDansL(l, j)][t2];
 						}
@@ -1290,7 +1259,7 @@ void PLNE::addContrainte14() {
 							tMax = t - p[getIndiceGeneralFromOperation(f, i)] + 1;
 						}
 
-						for (int t2 = tMax; t2 < t; t2++) {
+						for (int t2 = tMax; t2 <= t; t2++) {
 							//contrainte
 							sommeExprDroite += X[f][i][j][t2];
 						}
