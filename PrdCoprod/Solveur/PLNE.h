@@ -175,6 +175,12 @@ public:
 
 	void addContrainte9();
 
+	void addContrainte10();
+
+	void addContrainte11();
+
+	void addContrainte12();
+
 	void addAllContraintes();
 
 
@@ -216,6 +222,11 @@ public:
 	int getIndiceGeneralFromOperation(int fParam, int iParam);
 
 	int getIndiceTempsFromValeur(int fParam, int jParam, int creneauParam, int tParam);
+
+	int getIndiceTempsGeneralFromValeur(int fParam, int jParam, int tParam);
+
+	int getIndiceVoieGeneralFromIndiceDansL(int lParam, int jParam);
+
 
 	
 
