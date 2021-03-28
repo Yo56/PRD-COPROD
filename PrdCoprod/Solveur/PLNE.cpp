@@ -8,7 +8,7 @@
 #include "PLNE.h"
 using  std::cout;
 using  std::endl;
-#include<algorithm>
+//#include<algorithm>
 
 PLNE::PLNE(CInput input)
 {
@@ -1572,73 +1572,72 @@ int PLNE::getIndiceGeneralFromOperation(int fParam, int iParam) {
 }
 
 //retourne l'indice d une heure de dispo dans le tableau Xijt a partir de l heure
-int PLNE::getIndiceTempsFromValeur(int fParam, int jParam, int creneauParam, int tParam) {
-
-	// verification de la saisie
-	if (fParam < nTrain) {
-
-		int compteur = 0;
-
-		int nbCreneaux = Tfj[fParam][jParam].getSize();
-
-		//pour tous les creneaux precedents -> on incremente le compteur
-		for (int creneau = 0; creneau < creneauParam; creneau++) {
-
-			// on recupere les heures de debut et fin du creneau
-			int debut = Tfj[fParam][jParam][creneau][0];
-			int fin = Tfj[fParam][jParam][creneau][1];
-
-			compteur = compteur + (fin - debut);
-		}
-
-		// Pour le creneau en question on recupere la date de debut et on l'ajoute au compteur
-		int debut = Tfj[fParam][jParam][creneauParam][0];
-		compteur = compteur + tParam - debut;
-
-		//on retourne la position de ce t dans la liste
-		return compteur;
-	}
-	else {
-		cout << "Erreur : depassement de taille du nombre de rames." << endl;
-		return -1;
-	}
-}
+//int PLNE::getIndiceTempsFromValeur(int fParam, int jParam, int creneauParam, int tParam) {
+//
+//	// verification de la saisie
+//	if (fParam < nTrain) {
+//
+//		int compteur = 0;
+//
+//		int nbCreneaux = Tfj[fParam][jParam].getSize();
+//
+//		//pour tous les creneaux precedents -> on incremente le compteur
+//		for (int creneau = 0; creneau < creneauParam; creneau++) {
+//
+//			// on recupere les heures de debut et fin du creneau
+//			int debut = Tfj[fParam][jParam][creneau][0];
+//			int fin = Tfj[fParam][jParam][creneau][1];
+//
+//			compteur = compteur + (fin - debut);
+//		}
+//
+//		// Pour le creneau en question on recupere la date de debut et on l'ajoute au compteur
+//		int debut = Tfj[fParam][jParam][creneauParam][0];
+//		compteur = compteur + tParam - debut;
+//
+//		//on retourne la position de ce t dans la liste
+//		return compteur;
+//	}
+//	else {
+//		cout << "Erreur : depassement de taille du nombre de rames." << endl;
+//		return -1;
+//	}
+//}
 
 //retourne l'indice d une heure de dispo dans le tableau Xijt a partir de l heure sans tenir compte du creneau horaire (=> 1 heure ne doit pas apparaitre dans des creneaux differents pour un meme couple train|voie)
-int PLNE::getIndiceTempsGeneralFromValeur(int fParam, int jParam, int tParam) {
+//int PLNE::getIndiceTempsGeneralFromValeur(int fParam, int jParam, int tParam) {
+//
+//	// verification de la saisie
+//	if (fParam < nTrain) {
+//
+//		int compteur = 0;
+//
+//		int nbCreneaux = Tfj[fParam][jParam].getSize();
+//
+//		//pour tous les creneaux  -> on incremente le compteur tant que l'heure t n'est pas trouvee
+//		for (int creneau = 0; creneau < nbCreneaux; creneau++) {
+//
+//			// on recupere les heures de debut et fin du creneau
+//			int debut = Tfj[fParam][jParam][creneau][0];
+//			int fin = Tfj[fParam][jParam][creneau][1];
+//
+//			for (int t = debut; t <= fin; t++) {
+//				if (t == tParam) {
+//					return compteur;
+//				}
+//				compteur++;
+//			}
+//		}
+//
+//		cout << "Valeur introuvable" << endl;
+//		return -1;
+//	}
+//	else {
+//		cout << "Erreur : depassement de taille du nombre de rames." << endl;
+//		return -1;
+//	}
+//}
 
-	// verification de la saisie
-	if (fParam < nTrain) {
-
-		int compteur = 0;
-
-		int nbCreneaux = Tfj[fParam][jParam].getSize();
-
-		//pour tous les creneaux  -> on incremente le compteur tant que l'heure t n'est pas trouvee
-		for (int creneau = 0; creneau < nbCreneaux; creneau++) {
-
-			// on recupere les heures de debut et fin du creneau
-			int debut = Tfj[fParam][jParam][creneau][0];
-			int fin = Tfj[fParam][jParam][creneau][1];
-
-			for (int t = debut; t <= fin; t++) {
-				if (t == tParam) {
-					return compteur;
-				}
-				compteur++;
-			}
-		}
-
-		cout << "Valeur introuvable" << endl;
-		return -1;
-	}
-	else {
-		cout << "Erreur : depassement de taille du nombre de rames." << endl;
-		return -1;
-	}
-}
-
-//retourne l'indice j d une voie dans Xijt a partir de sa position dans L
 int PLNE::getIndiceVoieGeneralFromIndiceDansL(int lParam, int jParam) {
 	// verification de la saisie
 	if (lParam < nSite) {
@@ -1662,7 +1661,6 @@ int PLNE::getIndiceVoieGeneralFromIndiceDansL(int lParam, int jParam) {
 	}
 }
 
-//retourne la dispo d'un agent a un instant t donne
 bool PLNE::agentDisponibleAUnInstant(int agent, int tParam) {
 
 	//recuperes les heures de travail de l'agent

@@ -38,7 +38,7 @@ private:
 	IloInt nSkill; /*! nombre competences*/
 	IloNum alpha; /*! taux d'avance maximum par rapport a la butee*/
 
-	// -------------------------- definition des données vectorielles --------------------------------------//
+	// -------------------------- definition des donnees vectorielles --------------------------------------//
 
 	/*! Durees completes des operations i */
 	IloIntArray p;
@@ -70,16 +70,16 @@ private:
 	/*! Nombre maximum autorise de rames en maintenance sur le reseau aux dates t*/
 	IloIntArray rTot;
 
-	//Durée de voyage pour aller de la gare g1 à la gare g2
+	//Duree de voyage pour aller de la gare g1 a la gare g2
 	// TODO IloNumArray v(env, D);
 
-	//Nombre d'opérations préventives par rame f
+	//Nombre d'operations preventives par rame f
 	IloIntArray nPrev; //construction d'un tableau de nTrain cases
 
-	//Nombre d'opérations correctives par rame f
+	//Nombre d'operations correctives par rame f
 	IloIntArray nCorr;
 
-	/*! Matrice de compatibilité des opérations i et i2 (booleen)*/
+	/*! Matrice de compatibilite des operations i et i2 (booleen)*/
 	IloArray<IloBoolArray> CO_ii;
 
 	/*! Nombre d’agents ayant la competence s requise pour l’operation i*/
@@ -157,36 +157,132 @@ public:
 	*/
 	PLNE(CInput input);
 
+	/*!
+	 *  \brief Ajout contrainte 1
+	 *
+	 *  Methode qui permet d'ajouter au modele la contrainte 1 pour gerer l'objectif sur les rejets (epsilon contrainte)
+	 *
+	 */
 	void addContrainte1();
 
+	/*!
+	 *  \brief Ajout contrainte 2
+	 *
+	 *  Methode qui permet d'ajouter au modele la contrainte 2 de calcul de la quantite de retard de chaque operation
+	 *
+	 */
 	void addContrainte2();
 
+	/*!
+	 *  \brief Ajout contrainte 3
+	 *
+	 *  Methode qui permet d'ajouter au modele la contrainte 3 de calcul de la quantite d'avance de chaque operation
+	 *
+	 */
 	void addContrainte3();
 	
+	/*!
+	 *  \brief Ajout contrainte 4
+	 *
+	 *  Methode qui permet d'ajouter au modele la contrainte de calcul de la date de fin d'operation
+	 *
+	 */
 	void addContrainte4();
 
+	/*!
+	 *  \brief Ajout contrainte 5
+	 *
+	 *  Methode qui permet d'ajouter au modele la contrainte de calcul de la date de debut de chaque operation
+	 *
+	 */
 	void addContrainte5();
 
+	/*!
+	 *  \brief Ajout contrainte 6
+	 *
+	 *  Methode qui permet d'ajouter au modele la contrainte de planification de l'operation si il n'y a pas de diagnostic
+	 *
+	 */
 	void addContrainte6();
 
+	/*!
+	 *  \brief Ajout contrainte 7
+	 *
+	 *  Methode qui permet d'ajouter au modele la contrainte de planifiction de l'operation en cas de diagnostic
+	 *
+	 */
 	void addContrainte7();
 
+	/*!
+	 *  \brief Ajout contrainte 8
+	 *
+	 *  Methode qui permet d'ajouter au modele la contrainte de respect du besoin en infrastructure des opeartions
+	 *
+	 */
 	void addContrainte8();
 
+	/*!
+	 *  \brief Ajout contrainte 9
+	 *
+	 *  Methode qui permet d'ajouter au modele la contrainte de non chevauchement des operations sur les voies (diagnostic)
+	 *
+	 */
 	void addContrainte9();
 
+	/*!
+	 *  \brief Ajout contrainte 10
+	 *
+	 *  Methode qui permet d'ajouter au modele la contrainte complementaire a la contrainte 9 dans le cas ou l'on ne serait pas en diagnostic
+	 *
+	 */
 	void addContrainte10();
 
+	/*!
+	 *  \brief Ajout contrainte 11
+	 *
+	 *  Methode qui permet d'ajouter au modele la contrainte qui restreint le nombre de rames en immobilisation a chaque instant
+	 *
+	 */
 	void addContrainte11();
 
+	/*!
+	 *  \brief Ajout contrainte 12
+	 *
+	 *  Methode qui permet d'ajouter au modele la contrainte qui permet de declarer une rame en maintenance uniquement si au moins une operation est realisee
+	 *
+	 */
 	void addContrainte12();
 
+	/*!
+	 *  \brief Ajout contrainte 14
+	 *
+	 *  Methode qui permet d'ajouter au modele la contrainte du respect du besoin en competences des operations
+	 *
+	 */
 	void addContrainte14();
 
+	/*!
+	 *  \brief Ajout contrainte 15
+	 *
+	 *  Methode qui permet d'ajouter au modele la contrainte assurant que chaque agent fait au plus 1 operation a chaque instant
+	 *
+	 */
 	void AddContrainte15();
 
+	/*!
+	 *  \brief Ajout contrainte 16
+	 *
+	 *  Methode qui permet d'ajouter au modele la contrainte de respect des disponibilites des agents
+	 *
+	 */
 	void AddContrainte16();
 
+	/*!
+	 *  \brief Ajout de toutes les contraintes
+	 *
+	 *  Methode qui permet d'ajouter l'ensemble des contraintes au modele au appelant les methodes respectives
+	 *
+	 */
 	void addAllContraintes();
 
 
@@ -201,43 +297,85 @@ public:
 	/*!
 	*  \brief fonction interface
 	*
-	*  permet d obtenir l indice d une operation dans l'ensemble Ocorr à partir de son numero de rame et sa position dans la liste des operations de cette rame
+	*  permet d obtenir l indice d une operation dans l'ensemble Ocorr a partir de son numero de rame et sa position dans la liste des operations de cette rame
 	*
 	*  \param f : numero de la rame
-	*  \param indice : position relative à f de l'operation dont un souhaite connaitre l'indice
+	*  \param indice : position relative a f de l'operation dont un souhaite connaitre l'indice
 	*  \return la valeur de l'operation dans l'ensemble des operations correctives
 	*/
 	int opY(int f, int indice); 
 
-	/*!
+/*!
 *  \brief fonction interface
 *
-*  permet d obtenir l'indice d'une operation dans l'ensemble Oprev U Ocorr à partir de son numero de rame et sa position dans la liste des operations de cette rame
+*  permet d obtenir l'indice d'une operation dans l'ensemble Oprev U Ocorr a partir de son numero de rame et sa position dans la liste des operations de cette rame
 *
 *  \param f : numero de la rame
-*  \param indice : position relative à f de l'operation dont un souhaite connaitre l'indice
-*  \return la valeur de l'operation dans l'ensemble des operations correctives ou préventives selon le type de l'operation
+*  \param indice : position relative a f de l'operation dont un souhaite connaitre l'indice
+*  \return la valeur de l'operation dans l'ensemble des operations correctives ou preventives selon le type de l'operation
 */
 	int opX(int f, int indice);
 
-
+	/*!
+	*  \brief fonction interface
+	*
+	*  permet d'obtenir l'indice general, dans [0;n[, d'une operation corrective a partir de sa position dans la liste des operations correctives d'une rame f : Ocorr(f).
+	*
+	*  \param f : numero de la rame associee a l'operation
+	*  \param i : indice de l'operation dans Ocorr(f)
+	*  \return l'indice general de l'operation permettant d'iterer sur les listes dont les operations sont definies sur n.
+	*/
 	int getIndiceGeneralFromOperationCorrective(int f, int i);
 
+	/*!
+	*  \brief fonction interface
+	*
+	*  permet d'obtenir l'indice general, dans [0;n[, d'une operation preventive a partir de sa position dans la liste des operations preventives d'une rame f : Oprev(f).
+	*
+	*  \param f : numero de la rame associee a l'operation
+	*  \param i : indice de l'operation dans Oprev(f)
+	*  \return l'indice general de l'operation permettant d'iterer sur les listes dont les operations sont definies sur n.
+	*/
 	int getIndiceGeneralFromOperationPreventive(int fParam, int iParam);
 
+	/*!
+	*  \brief fonction interface
+	*
+	*  permet d'obtenir l'indice general, dans [0;n[, d'une operation quelconque a partir de sa position dans la liste des operations d'une rame f : Oprev(f) U Ocorr(f).
+	*
+	*  \param f : numero de la rame associee a l'operation
+	*  \param i : indice de l'operation dans Oprev(f) U Ocorr(f)
+	*  \return l'indice general de l'operation permettant d'iterer sur les listes dont les operations sont definies sur n.
+	*/
 	int getIndiceGeneralFromOperation(int fParam, int iParam);
 
-	int getIndiceTempsFromValeur(int fParam, int jParam, int creneauParam, int tParam);
 
-	int getIndiceTempsGeneralFromValeur(int fParam, int jParam, int tParam);
+	//int getIndiceTempsFromValeur(int fParam, int jParam, int creneauParam, int tParam);
 
+
+	//int getIndiceTempsGeneralFromValeur(int fParam, int jParam, int tParam);
+
+
+	/*!
+	*  \brief fonction interface
+	*
+	*  permet d obtenir l'indice j d'une voie dans Xijt a partir de sa position dans l'ensemble L
+	*
+	*  \param lParam : numero du site
+	*  \param jParam : numero de la voie du site lParam dont on souhaite connaitre l'indice
+	*  \return l'indice de la voie jParam dans Xijt
+	*/
 	int getIndiceVoieGeneralFromIndiceDansL(int lParam, int jParam);
 
+	/*!
+	*  \brief fonction interface
+	*
+	*  permet d obtenir la disponibilite d'un agent a une heure t donnee
+	*
+	*  \param agent : numero de l'agent
+	*  \param t : heure 
+	*  \return true si l'agent est disponible a l'heure t, false sinon 
+	*/
 	bool agentDisponibleAUnInstant(int agent, int t);
-
-
-	
-
-
 };
 
