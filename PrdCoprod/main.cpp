@@ -12,7 +12,7 @@ using namespace std;
 
 int main()
 {
-	// Header
+	// -------------------------------- Header --------------------------------
 	cout << "==============================================================================================" << endl;
 	cout << "		OUTIL D'AIDE A LA DECISION - SNCF - COPROD" << endl;
 	cout << "		Projets de Recherche & Developpement - Polytech Tours - 2020/2021" << endl;
@@ -38,14 +38,19 @@ int main()
 
 	// instanciation du modele Cplex a partir du jeu de donnees
 	PLNE plne(input);
+
+	//affichage des donnees instanciees
 	plne.printInfo();
-	plne.addAllContraintes();
-
-
-	cout << "#### " << plne.getIndiceGeneralFromOperationCorrective(1, 0) << endl;
-	cout << "#### " << plne.getIndiceGeneralFromOperationPreventive(0, 0) << endl;
-	cout << "#### " << plne.getIndiceGeneralFromOperation(1, 0) << endl;
 	
+	//ajout des contraintes et objectif
+	plne.addAllContraintes();
+	plne.addObjectif();
+
+	//export du modele
+	plne.exportationModele("AAAAAAAAAAA");
+	
+	//resolution
+	plne.solve();
 
 	return 0;
 }

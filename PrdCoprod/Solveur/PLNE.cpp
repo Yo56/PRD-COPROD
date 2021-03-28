@@ -427,7 +427,6 @@ PLNE::PLNE(CInput input)
 	}
 
 	cout << "Instanciation PLNE : OK" << endl;
-	//cplex.exportModel("AAtestAA.lp");
 }
 
 void PLNE::addContrainte1() {
@@ -1272,7 +1271,7 @@ void PLNE::addContrainte14() {
 	}
 }
 
-void PLNE::AddContrainte15() {
+void PLNE::addContrainte15() {
 	cout << "+ Ajout contrainte 15 au modele" << endl;
 
 	//boucle sur le temps
@@ -1302,7 +1301,7 @@ void PLNE::AddContrainte15() {
 	}
 }
 
-void PLNE::AddContrainte16() {
+void PLNE::addContrainte16() {
 	cout << "+ Ajout contrainte 16 au modele" << endl;
 
 	//boucle sur les agents
@@ -1337,24 +1336,53 @@ void PLNE::AddContrainte16() {
 
 void PLNE::addAllContraintes() {
 	cout << "Ajout de toutes les contraintes au modele :" << endl;
-	addContrainte1(); // +1 contrainte(s) (total=1)
-	addContrainte2(); // +1 contrainte(s) (total=2)
-	addContrainte3(); // +1 contrainte(s) (total=3)
-	addContrainte4(); // +2 contrainte(s) (total=5)
-	addContrainte5(); // +2 contrainte(s) (total=7)
-	addContrainte6(); // +2 contrainte(s) (total=9)
-	addContrainte7(); // +1 contrainte(s) (total=10)
-	addContrainte8(); // +8 contrainte(s) (total=18)
+	addContrainte1(); 
+	addContrainte2(); 
+	addContrainte3(); 
+	addContrainte4();
+	addContrainte5(); 
+	addContrainte6(); 
+	addContrainte7(); 
+	addContrainte8(); 
 
-	addContrainte9(); // +20 contrainte(s) (total=38)
-	addContrainte10();// +20 contrainte(s) (total=58)
+	addContrainte9(); 
+	addContrainte10();
 
 	addContrainte11();
 	addContrainte12();
-	addContrainte14();
-	AddContrainte15();
+	//addContrainte14(); provoque une infaisabilite 
+	addContrainte15();
+	addContrainte16();
 
 	cout << "Nombre de contraintes total dans le modele (NRows) : " << cplex.getNrows() << endl;
+}
+
+void PLNE::addObjectif() {
+	cout << "+ Ajout de l'objectif au modele" << endl;
+
+	// expression qui va servir a sommer les composantes de la fonction obj
+	IloExpr sommeExpr(env);
+
+	//boucle sur les rames
+	for (int f = 0; f < nTrain; f++) {
+
+		int nbPrev = Oprev[f].getSize();
+		int nbCorr = Ocorr[f].getSize();
+
+		//PREVENTIF -> boucle sur les operations
+		for (int i = 0; i < nbPrev; i++) {
+			sommeExpr += w[getIndiceGeneralFromOperationCorrective(f, i)] * Eprev[f][i];
+		}
+
+
+		//CORRECTIF -> boucle sur les operations
+		for (int i = 0; i < nbCorr; i++) {
+			sommeExpr += w[getIndiceGeneralFromOperationCorrective(f, i)] * Tcorr[f][i];
+		}
+	}
+
+	// OBJECTIF
+	model.add(IloMinimize(env, sommeExpr));
 }
 
 void PLNE::printInfo()
@@ -1409,6 +1437,28 @@ void PLNE::printInfo()
 	cout << endl << "Tcorr : " << endl << Tcorr << endl;
 
 	cout << endl << endl;
+}
+
+void PLNE::exportationModele(string nom) {
+	string nomComplet = nom + ".lp";
+
+	cplex.exportModel(nomComplet.c_str());
+	cout << "Exportation du modele " << nomComplet << " OK." << endl;
+}
+
+void PLNE::solve() {
+	try{
+		cplex.solve();
+		cout << " status = " << cplex.getStatus() << endl;
+		cout << " objectif = " << cplex.getObjValue() << endl;
+		cplex.writeSolution("BBBBBBB.txt");
+	}
+	catch (IloException &e) {
+		cerr << "Exception de la Concert Technology" << e << endl;
+	}
+	catch (...) {
+		cerr << "Exception inconnue" << endl;
+	}
 }
 
 int PLNE::opY(int f, int indice)

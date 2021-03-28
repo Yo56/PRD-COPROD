@@ -7,8 +7,8 @@ void Tuto::basic() {
 	IloEnv env; //variable d'environnement
 
 	try {
-		IloModel model(env); //modèle, on l'associe directement à l'environnement
-		IloCplex cplex(model); //solveur, on l'associe directement au modèle
+		IloModel model(env); //modele, on l'associe directement a l'environnement
+		IloCplex cplex(model); //solveur, on l'associe directement au modele
 
 		// ---------- Variables --------------
 
@@ -36,7 +36,7 @@ void Tuto::basic() {
 		cplex.solve();
 		cplex.writeSolution("sol.txt");
 
-		// récupère la solution et l'affiche à l'écran
+		// recupere la solution et l'affiche a l'ecran
 		std::cout << " status = " << cplex.getStatus() << std::endl;
 		std::cout << " objectif = " << cplex.getObjValue() << std::endl;
 		std::cout << " X1 = " << cplex.getValue(x1) << std::endl;
@@ -50,5 +50,5 @@ void Tuto::basic() {
 	}
 
 
-	env.end(); //libération de l'environnement
+	env.end(); //liberation de l'environnement
 }

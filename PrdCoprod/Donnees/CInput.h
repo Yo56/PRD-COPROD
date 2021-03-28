@@ -1,6 +1,6 @@
 ﻿/*!
  * \file Cinput.h
- * \brief Elements permettant de fournir les donnees d'entrees a un modele de résolution
+ * \brief Elements permettant de fournir les donnees d'entrees a un modele de resolution
  * \author Yohan Nouet
  * \version 1
  */
@@ -41,7 +41,7 @@ private:
 	vector <vector<int> > IN_jk; /*! Equipement de la voie j en infrastructure k (booleen)*/
 	vector <vector<int> > rMax_lh; /*! Nombre maximum de rentrees de rames sur le site l pendant le creneau h*/
 	vector <int> rTot; /*! Nombre maximum autorise de rames en maintenance sur le reseau aux dates t*/
-	vector <vector<int> > CO_ii; /*! Matrice de compatibilité des opérations i et i2 (booleen)*/
+	vector <vector<int> > CO_ii; /*! Matrice de compatibilite des operations i et i2 (booleen)*/
 	vector <vector<int> > NS_is; /*! Nombre d’agents ayant la competence s requise pour l’operation i*/
 	vector <vector <vector<int> > > SKL_asl; /*! L’agent a dispose de la competence s sur le site l (booleen)*/
 

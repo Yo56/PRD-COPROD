@@ -153,7 +153,7 @@ public:
 	*
 	*  Constructeur de la classe PLNE. La fonction prepare l ensemble des donnees Cplex, les variables, les contraintes, en vue de la resolution
 	*
-	*  \param input : donnees d entree
+	*  \param input : donnees d'entree
 	*/
 	PLNE(CInput input);
 
@@ -267,7 +267,7 @@ public:
 	 *  Methode qui permet d'ajouter au modele la contrainte assurant que chaque agent fait au plus 1 operation a chaque instant
 	 *
 	 */
-	void AddContrainte15();
+	void addContrainte15();
 
 	/*!
 	 *  \brief Ajout contrainte 16
@@ -275,7 +275,7 @@ public:
 	 *  Methode qui permet d'ajouter au modele la contrainte de respect des disponibilites des agents
 	 *
 	 */
-	void AddContrainte16();
+	void addContrainte16();
 
 	/*!
 	 *  \brief Ajout de toutes les contraintes
@@ -285,6 +285,14 @@ public:
 	 */
 	void addAllContraintes();
 
+	/*!
+	 *  \brief Ajout de l'objectif a optimiser 
+	 *
+	 *  Methode qui permet d'ajouter l'objectif du modele : minimiser la somme ponderee des retards des operations correctives et l'avance ponderee des operations preventives
+	 *
+	 */
+	void addObjectif();
+
 
 	/*!
 	 *  \brief fonction affichage
@@ -293,6 +301,23 @@ public:
 	 *
 	 */
 	void printInfo();
+
+	/*!
+	 *  \brief fonction d'export
+	 *
+	 *  Methode qui permet d'exporter le modele au format *.lp
+	 *
+	 *  \param nom : nom du fichier a exporter sans extension
+	 */
+	void exportationModele(string nom);
+
+	/*!
+	 *  \brief fonction de resolution du modele
+	 *
+	 *  Methode qui permet de lancer la resolution du modele
+	 *
+	 */
+	void solve();
 
 	/*!
 	*  \brief fonction interface
