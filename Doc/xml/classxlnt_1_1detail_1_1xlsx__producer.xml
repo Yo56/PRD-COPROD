@@ -1,0 +1,1252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classxlnt_1_1detail_1_1xlsx__producer" kind="class" language="C++" prot="public">
+    <compoundname>xlnt::detail::xlsx_producer</compoundname>
+    <includes refid="xlsx__producer_8hpp" local="no">xlsx_producer.hpp</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classxlnt_1_1detail_1_1xlsx__producer_1ae3a085b9fede4196d7c820736d118d85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class xlnt::streaming_workbook_writer</definition>
+        <argsstring></argsstring>
+        <name>xlnt::streaming_workbook_writer</name>
+        <param>
+          <type><ref refid="classxlnt_1_1streaming__workbook__writer" kindref="compound">xlnt::streaming_workbook_writer</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="76" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__producer_1adb55707cb00af9bdd4fc2eb88a93ad29" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classxlnt_1_1workbook" kindref="compound">workbook</ref> &amp;</type>
+        <definition>const workbook&amp; xlnt::detail::xlsx_producer::source_</definition>
+        <argsstring></argsstring>
+        <name>source_</name>
+        <briefdescription>
+<para>A reference to the workbook which is the object of read/write operations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="198" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__producer_1a7b761ee19439ad4237d5ca2f0c03c8b5" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classxlnt_1_1detail_1_1ozstream" kindref="compound">ozstream</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;ozstream&gt; xlnt::detail::xlsx_producer::archive_</definition>
+        <argsstring></argsstring>
+        <name>archive_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="200" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__producer_1a3f26db4bcb510692a11684fe585d851e" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classxml_1_1serializer" kindref="compound">xml::serializer</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;xml::serializer&gt; xlnt::detail::xlsx_producer::current_part_serializer_</definition>
+        <argsstring></argsstring>
+        <name>current_part_serializer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="201" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__producer_1a04230b85f53f878cdc89b8ad94fd6ee2" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; std::streambuf &gt;</type>
+        <definition>std::unique_ptr&lt;std::streambuf&gt; xlnt::detail::xlsx_producer::current_part_streambuf_</definition>
+        <argsstring></argsstring>
+        <name>current_part_streambuf_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="202" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__producer_1a3809ca9b1eb22c7f91200245b40534d1" prot="private" static="no" mutable="no">
+        <type>std::ostream</type>
+        <definition>std::ostream xlnt::detail::xlsx_producer::current_part_stream_</definition>
+        <argsstring></argsstring>
+        <name>current_part_stream_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="203" column="18" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__producer_1a9f1d7bffe425f23cc16a77f478baa21f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xlnt::detail::xlsx_producer::streaming_</definition>
+        <argsstring></argsstring>
+        <name>streaming_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="205" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__producer_1a0ed9ce7d3965c66d24a1182570bae501" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="structxlnt_1_1detail_1_1cell__impl" kindref="compound">detail::cell_impl</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;detail::cell_impl&gt; xlnt::detail::xlsx_producer::streaming_cell_</definition>
+        <argsstring></argsstring>
+        <name>streaming_cell_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="207" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__producer_1a6a649191f05f0a9ae7b61a8244a0d972" prot="private" static="no" mutable="no">
+        <type><ref refid="structxlnt_1_1detail_1_1cell__impl" kindref="compound">detail::cell_impl</ref> *</type>
+        <definition>detail::cell_impl* xlnt::detail::xlsx_producer::current_cell_</definition>
+        <argsstring></argsstring>
+        <name>current_cell_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="209" column="23" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__producer_1a0dc4fb3fa98de186e1f7a5e57a038c52" prot="private" static="no" mutable="no">
+        <type><ref refid="structxlnt_1_1detail_1_1worksheet__impl" kindref="compound">detail::worksheet_impl</ref> *</type>
+        <definition>detail::worksheet_impl* xlnt::detail::xlsx_producer::current_worksheet_</definition>
+        <argsstring></argsstring>
+        <name>current_worksheet_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="211" column="28" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__producer_1af2343b88e6767aea30ad7731aef7550d" prot="private" static="no" mutable="no">
+        <type><ref refid="classxlnt_1_1detail_1_1number__serialiser" kindref="compound">detail::number_serialiser</ref></type>
+        <definition>detail::number_serialiser xlnt::detail::xlsx_producer::converter_</definition>
+        <argsstring></argsstring>
+        <name>converter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="212" column="31" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1aac45186a0f86b3cbbae7b0c317df2491" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::detail::xlsx_producer::xlsx_producer</definition>
+        <argsstring>(const workbook &amp;target)</argsstring>
+        <name>xlsx_producer</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1workbook" kindref="compound">workbook</ref> &amp;</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="67" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="81" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a5c5340304914a0f337e06c64beabadd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::detail::xlsx_producer::~xlsx_producer</definition>
+        <argsstring>()</argsstring>
+        <name>~xlsx_producer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="69" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="87" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a4b56ba2d9c5d6b9299f65f1f24f19a0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write</definition>
+        <argsstring>(std::ostream &amp;destination)</argsstring>
+        <name>write</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>destination</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="71" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="93" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1aa799d88fb812f0063a71d348622a6bfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write</definition>
+        <argsstring>(std::ostream &amp;destination, const std::string &amp;password)</argsstring>
+        <name>write</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="73" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/cryptography/xlsx_crypto_producer.cpp" bodystart="308" bodyend="320"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a8083506e098b2b4a270cd159643bfc59" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::open</definition>
+        <argsstring>(std::ostream &amp;destination)</argsstring>
+        <name>open</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>destination</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="78" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="99" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a99f223059d6a36994c5cd18eb446c73e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell" kindref="compound">cell</ref></type>
+        <definition>cell xlnt::detail::xlsx_producer::add_cell</definition>
+        <argsstring>(const cell_reference &amp;ref)</argsstring>
+        <name>add_cell</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="80" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="105" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1abbb3549ea1ed474c449d0ec8a8094d6c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1worksheet" kindref="compound">worksheet</ref></type>
+        <definition>worksheet xlnt::detail::xlsx_producer::add_worksheet</definition>
+        <argsstring>(const std::string &amp;title)</argsstring>
+        <name>add_worksheet</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="82" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="113" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a97e1191e8426a75ca78310dc011d3ccc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::populate_archive</definition>
+        <argsstring>(bool streaming)</argsstring>
+        <name>populate_archive</name>
+        <param>
+          <type>bool</type>
+          <declname>streaming</declname>
+        </param>
+        <briefdescription>
+<para>Write all files needed to create a valid XLSX file which represents all data contained in workbook. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="88" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="121" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1aef32c984a268bcb05f65198536a5ca02" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::begin_part</definition>
+        <argsstring>(const path &amp;part)</argsstring>
+        <name>begin_part</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>part</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="90" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="177" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1ada4e2cd9245adcdd8310b1f979a2bc84" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::end_part</definition>
+        <argsstring>()</argsstring>
+        <name>end_part</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="91" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="167" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a0ac5f2b35874248a0e37b0c132f89ad4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_content_types</definition>
+        <argsstring>()</argsstring>
+        <name>write_content_types</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="95" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="187" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1aad4a77647d3257ae7a55d319bb4b693f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_property</definition>
+        <argsstring>(const std::string &amp;name, const variant &amp;value, const std::string &amp;ns, bool custom, std::size_t pid)</argsstring>
+        <name>write_property</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1variant" kindref="compound">variant</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ns</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>custom</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="96" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="216" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a52253902bc4987e1e433de634bd48031" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_core_properties</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_core_properties</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="97" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="358" bodyend="385"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a1ef90757d44cfd19315369a805e4de79" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_extended_properties</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_extended_properties</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="98" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="387" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1ab5addf80beec281c6b334b2e5b72882b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_custom_properties</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_custom_properties</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="99" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="407" bodyend="422"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a1cd9fb67cad6228d6cd9dc10e9d39b84" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_image</definition>
+        <argsstring>(const path &amp;image_path)</argsstring>
+        <name>write_image</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>image_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="100" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="3318" bodyend="3325"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a829f49be16ec9e5aaa2e9554a3ecea83" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_workbook</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_workbook</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="104" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="426" bodyend="770"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1addfcb0619ca4e87f39284fc3ab410ee9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_connections</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_connections</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="108" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="780" bodyend="784"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a1d814aecec74c971ded445bd90307c45" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_custom_xml_mappings</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_custom_xml_mappings</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="109" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="786" bodyend="790"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a8201d5541fa84d60c86394a6a8c5c1bc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_external_workbook_references</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_external_workbook_references</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="110" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="798" bodyend="802"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1afd5b0495917d6c3d9ec3e5cb3cd99453" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_pivot_table</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_pivot_table</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="111" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="804" bodyend="808"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a8c27b59a0ad3e47d03c09e9842d00aa6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_shared_string_table</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_shared_string_table</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="112" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="911" bodyend="958"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1ac06165b701cb6a17c9a7fc0cb194f169" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_shared_workbook_revision_headers</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_shared_workbook_revision_headers</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="113" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="960" bodyend="964"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1ae60d6a0e2fdba72d04829b0ff500e080" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_shared_workbook</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_shared_workbook</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="114" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="966" bodyend="970"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1ad936c7e52b4f81f13336f604ef5330ab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_shared_workbook_user_data</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_shared_workbook_user_data</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="115" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="972" bodyend="976"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1ad5ea6a17a5497b2cfb2f278c5381425e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_styles</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_styles</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="116" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="1186" bodyend="1702"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a7596b4076591e72b2c49dcb61fd79b57" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_theme</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_theme</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="117" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="1704" bodyend="2173"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1ac5d7f832d190c220e3462dc1fcc8f491" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_volatile_dependencies</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_volatile_dependencies</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="118" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="2175" bodyend="2179"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a3584fd0472f76a4bee18888de210f18a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_chartsheet</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_chartsheet</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="120" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="774" bodyend="778"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1aec8c251114a7819992446d02e06baf17" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_dialogsheet</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_dialogsheet</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="121" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="792" bodyend="796"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a492b8cf3edacec28db3fe5e421dad205" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_worksheet</definition>
+        <argsstring>(const relationship &amp;rel)</argsstring>
+        <name>write_worksheet</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="122" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="2181" bodyend="3073"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1ad7bcb6b462e2864ce3f7414a8de73c69" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_comments</definition>
+        <argsstring>(const relationship &amp;rel, worksheet ws, const std::vector&lt; cell_reference &gt; &amp;cells)</argsstring>
+        <name>write_comments</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <param>
+          <type><ref refid="classxlnt_1_1worksheet" kindref="compound">worksheet</ref></type>
+          <declname>ws</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> &gt; &amp;</type>
+          <declname>cells</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="126" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="3077" bodyend="3134"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1af39256d48d67864945714c8cfdfb617d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_vml_drawings</definition>
+        <argsstring>(const relationship &amp;rel, worksheet ws, const std::vector&lt; cell_reference &gt; &amp;cells)</argsstring>
+        <name>write_vml_drawings</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <param>
+          <type><ref refid="classxlnt_1_1worksheet" kindref="compound">worksheet</ref></type>
+          <declname>ws</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> &gt; &amp;</type>
+          <declname>cells</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="127" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="3136" bodyend="3270"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a166677168fa57d2857afea9f16c93de6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_drawings</definition>
+        <argsstring>(const relationship &amp;rel, worksheet ws)</argsstring>
+        <name>write_drawings</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <param>
+          <type><ref refid="classxlnt_1_1worksheet" kindref="compound">worksheet</ref></type>
+          <declname>ws</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="128" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="3272" bodyend="3302"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1abadbbb43c01dfcf0318b78f5c2aa9f37" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_custom_property</definition>
+        <argsstring>()</argsstring>
+        <name>write_custom_property</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="132" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="3306" bodyend="3308"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a9f2043a28fc92e0d1278b3212bbf6191" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_unknown_parts</definition>
+        <argsstring>()</argsstring>
+        <name>write_unknown_parts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="133" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="3310" bodyend="3312"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1ad6ea8747338b60dd778e96e35c2efed2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_unknown_relationships</definition>
+        <argsstring>()</argsstring>
+        <name>write_unknown_relationships</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="134" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="3314" bodyend="3316"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a661780982dde61eb9a5ab60a87c2bd0d" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xlnt::detail::xlsx_producer::write_bool</definition>
+        <argsstring>(bool boolean) const</argsstring>
+        <name>write_bool</name>
+        <param>
+          <type>bool</type>
+          <declname>boolean</declname>
+        </param>
+        <briefdescription>
+<para>Some XLSX producers write booleans as &quot;true&quot; or &quot;false&quot; while others use &quot;1&quot; and &quot;0&quot;. Both are valid, but we can use this method to write either depending on the producer we&apos;re trying to match. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="143" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="3327" bodyend="3330"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1ad81f092ecf0fd22943f46b0d80aa8aa2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_relationships</definition>
+        <argsstring>(const std::vector&lt; xlnt::relationship &gt; &amp;relationships, const path &amp;part)</argsstring>
+        <name>write_relationships</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="classxlnt_1_1relationship" kindref="compound">xlnt::relationship</ref> &gt; &amp;</type>
+          <declname>relationships</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>part</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="145" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="3332" bodyend="3370"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a00f5487a8c11b5118823ff2af2db4b43" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_color</definition>
+        <argsstring>(const xlnt::color &amp;color)</argsstring>
+        <name>write_color</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1color" kindref="compound">xlnt::color</ref> &amp;</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="146" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="3372" bodyend="3397"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a636aa1c7a2616fd602e216376a4a02b5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_border</definition>
+        <argsstring>(const xlnt::border &amp;b)</argsstring>
+        <name>write_border</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1border" kindref="compound">xlnt::border</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="147" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="1141" bodyend="1184"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1aeb612a13e22770c75ac71187d4f7e8e4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_fill</definition>
+        <argsstring>(const xlnt::fill &amp;f)</argsstring>
+        <name>write_fill</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1fill" kindref="compound">xlnt::fill</ref> &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="148" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="1063" bodyend="1139"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1abc5a960482d04406be01d019dc433c74" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_font</definition>
+        <argsstring>(const xlnt::font &amp;f)</argsstring>
+        <name>write_font</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1font" kindref="compound">xlnt::font</ref> &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="149" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="978" bodyend="1061"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1ac186f733a041b8dc56b10f4debfb1e9a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_table_styles</definition>
+        <argsstring>()</argsstring>
+        <name>write_table_styles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="150" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a59ed41395e857efd8d4e866942d0b518" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_colors</definition>
+        <argsstring>(const std::vector&lt; xlnt::color &gt; &amp;colors)</argsstring>
+        <name>write_colors</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="classxlnt_1_1color" kindref="compound">xlnt::color</ref> &gt; &amp;</type>
+          <declname>colors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="151" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a5c8be75cc808585c8c0d60c1dd69f1b7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_rich_text</definition>
+        <argsstring>(const std::string &amp;ns, const xlnt::rich_text &amp;text)</argsstring>
+        <name>write_rich_text</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ns</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1rich__text" kindref="compound">xlnt::rich_text</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="152" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="810" bodyend="909"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a674b329d090b2c0683823478cf7289a7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_element</definition>
+        <argsstring>(const std::string &amp;ns, const std::string &amp;name, T value, bool preserve_whitespace=false)</argsstring>
+        <name>write_element</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ns</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>preserve_whitespace</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="155" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" bodystart="155" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a2d7e0cfd024380cbf37c05d2249ab6f1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_start_element</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>write_start_element</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="162" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="3399" bodyend="3402"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1ad3aeeedc8ca43b287ce6f7c623108cc0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_start_element</definition>
+        <argsstring>(const std::string &amp;ns, const std::string &amp;name)</argsstring>
+        <name>write_start_element</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ns</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="164" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="3404" bodyend="3407"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a9ea9b99578d8565a8aae5c70c078f578" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_end_element</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>write_end_element</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="166" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="3409" bodyend="3412"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a0be4b3016e0af927dbcb1d296bce512b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_end_element</definition>
+        <argsstring>(const std::string &amp;ns, const std::string &amp;name)</argsstring>
+        <name>write_end_element</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ns</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="168" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="3414" bodyend="3417"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a9c63d7d683223e897408ac795b7ad1b3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_namespace</definition>
+        <argsstring>(const std::string &amp;ns, const std::string &amp;prefix)</argsstring>
+        <name>write_namespace</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ns</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>prefix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="170" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp" bodystart="3419" bodyend="3422"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1ad6d8e562170da949b725bed87286b1c7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_attribute</definition>
+        <argsstring>(const std::string &amp;name, T value)</argsstring>
+        <name>write_attribute</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="173" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" bodystart="173" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a49aa9f1abae68b29b678a690185073c6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_attribute</definition>
+        <argsstring>(const xml::qname &amp;name, T value)</argsstring>
+        <name>write_attribute</name>
+        <param>
+          <type>const <ref refid="classxml_1_1qname" kindref="compound">xml::qname</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="179" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" bodystart="179" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__producer_1a7301ca5964ae95206f9f0d64058f9c57" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_producer::write_characters</definition>
+        <argsstring>(T characters, bool preserve_whitespace=false)</argsstring>
+        <name>write_characters</name>
+        <param>
+          <type>T</type>
+          <declname>characters</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>preserve_whitespace</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="185" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" bodystart="185" bodyend="193"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Handles writing a workbook into an XLSX file. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" line="64" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.hpp" bodystart="65" bodyend="213"/>
+    <listofallmembers>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a99f223059d6a36994c5cd18eb446c73e" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>add_cell</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1abbb3549ea1ed474c449d0ec8a8094d6c" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>add_worksheet</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a7b761ee19439ad4237d5ca2f0c03c8b5" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>archive_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1aef32c984a268bcb05f65198536a5ca02" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>begin_part</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1af2343b88e6767aea30ad7731aef7550d" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>converter_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a6a649191f05f0a9ae7b61a8244a0d972" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>current_cell_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a3f26db4bcb510692a11684fe585d851e" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>current_part_serializer_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a3809ca9b1eb22c7f91200245b40534d1" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>current_part_stream_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a04230b85f53f878cdc89b8ad94fd6ee2" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>current_part_streambuf_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a0dc4fb3fa98de186e1f7a5e57a038c52" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>current_worksheet_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1ada4e2cd9245adcdd8310b1f979a2bc84" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>end_part</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a8083506e098b2b4a270cd159643bfc59" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>open</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a97e1191e8426a75ca78310dc011d3ccc" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>populate_archive</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1adb55707cb00af9bdd4fc2eb88a93ad29" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>source_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a9f1d7bffe425f23cc16a77f478baa21f" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>streaming_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a0ed9ce7d3965c66d24a1182570bae501" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>streaming_cell_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a4b56ba2d9c5d6b9299f65f1f24f19a0d" prot="public" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1aa799d88fb812f0063a71d348622a6bfd" prot="public" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1ad6d8e562170da949b725bed87286b1c7" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_attribute</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a49aa9f1abae68b29b678a690185073c6" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_attribute</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a661780982dde61eb9a5ab60a87c2bd0d" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_bool</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a636aa1c7a2616fd602e216376a4a02b5" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_border</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a7301ca5964ae95206f9f0d64058f9c57" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_characters</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a3584fd0472f76a4bee18888de210f18a" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_chartsheet</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a00f5487a8c11b5118823ff2af2db4b43" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_color</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a59ed41395e857efd8d4e866942d0b518" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_colors</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1ad7bcb6b462e2864ce3f7414a8de73c69" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_comments</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1addfcb0619ca4e87f39284fc3ab410ee9" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_connections</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a0ac5f2b35874248a0e37b0c132f89ad4" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_content_types</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a52253902bc4987e1e433de634bd48031" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_core_properties</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1ab5addf80beec281c6b334b2e5b72882b" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_custom_properties</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1abadbbb43c01dfcf0318b78f5c2aa9f37" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_custom_property</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a1d814aecec74c971ded445bd90307c45" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_custom_xml_mappings</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1aec8c251114a7819992446d02e06baf17" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_dialogsheet</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a166677168fa57d2857afea9f16c93de6" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_drawings</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a674b329d090b2c0683823478cf7289a7" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_element</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a9ea9b99578d8565a8aae5c70c078f578" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_end_element</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a0be4b3016e0af927dbcb1d296bce512b" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_end_element</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a1ef90757d44cfd19315369a805e4de79" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_extended_properties</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a8201d5541fa84d60c86394a6a8c5c1bc" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_external_workbook_references</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1aeb612a13e22770c75ac71187d4f7e8e4" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_fill</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1abc5a960482d04406be01d019dc433c74" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_font</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a1cd9fb67cad6228d6cd9dc10e9d39b84" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_image</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a9c63d7d683223e897408ac795b7ad1b3" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_namespace</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1afd5b0495917d6c3d9ec3e5cb3cd99453" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_pivot_table</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1aad4a77647d3257ae7a55d319bb4b693f" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_property</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1ad81f092ecf0fd22943f46b0d80aa8aa2" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_relationships</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a5c8be75cc808585c8c0d60c1dd69f1b7" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_rich_text</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a8c27b59a0ad3e47d03c09e9842d00aa6" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_shared_string_table</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1ae60d6a0e2fdba72d04829b0ff500e080" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_shared_workbook</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1ac06165b701cb6a17c9a7fc0cb194f169" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_shared_workbook_revision_headers</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1ad936c7e52b4f81f13336f604ef5330ab" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_shared_workbook_user_data</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a2d7e0cfd024380cbf37c05d2249ab6f1" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_start_element</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1ad3aeeedc8ca43b287ce6f7c623108cc0" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_start_element</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1ad5ea6a17a5497b2cfb2f278c5381425e" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_styles</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1ac186f733a041b8dc56b10f4debfb1e9a" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_table_styles</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a7596b4076591e72b2c49dcb61fd79b57" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_theme</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a9f2043a28fc92e0d1278b3212bbf6191" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_unknown_parts</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1ad6ea8747338b60dd778e96e35c2efed2" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_unknown_relationships</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1af39256d48d67864945714c8cfdfb617d" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_vml_drawings</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1ac5d7f832d190c220e3462dc1fcc8f491" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_volatile_dependencies</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a829f49be16ec9e5aaa2e9554a3ecea83" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_workbook</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a492b8cf3edacec28db3fe5e421dad205" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>write_worksheet</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1ae3a085b9fede4196d7c820736d118d85" prot="public" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>xlnt::streaming_workbook_writer</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1aac45186a0f86b3cbbae7b0c317df2491" prot="public" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>xlsx_producer</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__producer_1a5c5340304914a0f337e06c64beabadd8" prot="public" virt="non-virtual"><scope>xlnt::detail::xlsx_producer</scope><name>~xlsx_producer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

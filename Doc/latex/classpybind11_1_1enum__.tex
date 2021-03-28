@@ -1,0 +1,89 @@
+\hypertarget{classpybind11_1_1enum__}{}\doxysection{pybind11\+::enum\+\_\+$<$ Type $>$ Class Template Reference}
+\label{classpybind11_1_1enum__}\index{pybind11::enum\_$<$ Type $>$@{pybind11::enum\_$<$ Type $>$}}
+
+
+Binds C++ enumerations and enumeration classes to Python.  
+
+
+
+
+{\ttfamily \#include $<$pybind11.\+h$>$}
+
+Inheritance diagram for pybind11\+::enum\+\_\+$<$ Type $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.000000cm]{classpybind11_1_1enum__}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classpybind11_1_1enum___ade0fc2892f84aee0f1857919356224d0}{Scalar}} = typename std\+::underlying\+\_\+type$<$ Type $>$\+::\mbox{\hyperlink{classpybind11_1_1class___a4187e5fbbdeee8234dc765fabee393d8}{type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Extra$>$ }\\\mbox{\hyperlink{classpybind11_1_1enum___ab9909928b1a82bbe2eeb5a8e3c933b73}{enum\+\_\+}} (const \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \&\mbox{\hyperlink{structpybind11_1_1scope}{scope}}, const char $\ast$\mbox{\hyperlink{structpybind11_1_1name}{name}}, const Extra \&... extra)
+\item 
+\mbox{\hyperlink{classpybind11_1_1enum__}{enum\+\_\+}} \& \mbox{\hyperlink{classpybind11_1_1enum___a2c7d70e5e0407e0160072219ead94e19}{export\+\_\+values}} ()
+\begin{DoxyCompactList}\small\item\em Export enumeration entries into the parent scope. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpybind11_1_1enum__}{enum\+\_\+}} \& \mbox{\hyperlink{classpybind11_1_1enum___a3b8045d2c579cef39f2b4b85e0f0c311}{value}} (char const $\ast$\mbox{\hyperlink{structpybind11_1_1name}{name}}, Type value)
+\begin{DoxyCompactList}\small\item\em Add an enumeration entry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Type$>$\newline
+class pybind11\+::enum\+\_\+$<$ Type $>$}
+
+Binds C++ enumerations and enumeration classes to Python. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classpybind11_1_1enum___ade0fc2892f84aee0f1857919356224d0}\label{classpybind11_1_1enum___ade0fc2892f84aee0f1857919356224d0}} 
+\index{pybind11::enum\_$<$ Type $>$@{pybind11::enum\_$<$ Type $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!pybind11::enum\_$<$ Type $>$@{pybind11::enum\_$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{classpybind11_1_1enum__}{pybind11\+::enum\+\_\+}}$<$ Type $>$\+::\mbox{\hyperlink{classpybind11_1_1enum___ade0fc2892f84aee0f1857919356224d0}{Scalar}} =  typename std\+::underlying\+\_\+type$<$Type$>$\+::\mbox{\hyperlink{classpybind11_1_1class___a4187e5fbbdeee8234dc765fabee393d8}{type}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpybind11_1_1enum___ab9909928b1a82bbe2eeb5a8e3c933b73}\label{classpybind11_1_1enum___ab9909928b1a82bbe2eeb5a8e3c933b73}} 
+\index{pybind11::enum\_$<$ Type $>$@{pybind11::enum\_$<$ Type $>$}!enum\_@{enum\_}}
+\index{enum\_@{enum\_}!pybind11::enum\_$<$ Type $>$@{pybind11::enum\_$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{enum\_()}{enum\_()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+template$<$typename... Extra$>$ \\
+\mbox{\hyperlink{classpybind11_1_1enum__}{pybind11\+::enum\+\_\+}}$<$ Type $>$\+::\mbox{\hyperlink{classpybind11_1_1enum__}{enum\+\_\+}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \&}]{scope,  }\item[{const char $\ast$}]{name,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1enum___a2c7d70e5e0407e0160072219ead94e19}\label{classpybind11_1_1enum___a2c7d70e5e0407e0160072219ead94e19}} 
+\index{pybind11::enum\_$<$ Type $>$@{pybind11::enum\_$<$ Type $>$}!export\_values@{export\_values}}
+\index{export\_values@{export\_values}!pybind11::enum\_$<$ Type $>$@{pybind11::enum\_$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{export\_values()}{export\_values()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classpybind11_1_1enum__}{enum\+\_\+}}\& \mbox{\hyperlink{classpybind11_1_1enum__}{pybind11\+::enum\+\_\+}}$<$ Type $>$\+::export\+\_\+values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Export enumeration entries into the parent scope. 
+
+\mbox{\Hypertarget{classpybind11_1_1enum___a3b8045d2c579cef39f2b4b85e0f0c311}\label{classpybind11_1_1enum___a3b8045d2c579cef39f2b4b85e0f0c311}} 
+\index{pybind11::enum\_$<$ Type $>$@{pybind11::enum\_$<$ Type $>$}!value@{value}}
+\index{value@{value}!pybind11::enum\_$<$ Type $>$@{pybind11::enum\_$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classpybind11_1_1enum__}{enum\+\_\+}}\& \mbox{\hyperlink{classpybind11_1_1enum__}{pybind11\+::enum\+\_\+}}$<$ Type $>$\+::value (\begin{DoxyParamCaption}\item[{char const $\ast$}]{name,  }\item[{Type}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add an enumeration entry. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{pybind11_8h}{pybind11.\+h}}\end{DoxyCompactItemize}

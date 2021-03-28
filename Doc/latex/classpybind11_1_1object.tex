@@ -1,0 +1,232 @@
+\hypertarget{classpybind11_1_1object}{}\doxysection{pybind11\+::object Class Reference}
+\label{classpybind11_1_1object}\index{pybind11::object@{pybind11::object}}
+
+
+{\ttfamily \#include $<$pytypes.\+h$>$}
+
+Inheritance diagram for pybind11\+::object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classpybind11_1_1object}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpybind11_1_1object_1_1borrowed__t}{borrowed\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structpybind11_1_1object_1_1stolen__t}{stolen\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpybind11_1_1object_a05110f45918e73ad56f66cc713fd1d21}{object}} ()=default
+\item 
+\mbox{\hyperlink{classpybind11_1_1object_af0de297f50a8c4db0b6712f4b990f8aa}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((deprecated(\char`\"{}Use \mbox{\hyperlink{classpybind11_1_1object_ac1ea1a4cbcf197d7c8096037633720d7}{reinterpret\+\_\+borrow}}$<$\mbox{\hyperlink{classpybind11_1_1object}{object}}$>$() or \mbox{\hyperlink{classpybind11_1_1object_ae1de2ab5a755c10582ac1e46071de5c5}{reinterpret\+\_\+steal}}$<$\mbox{\hyperlink{classpybind11_1_1object}{object}}$>$()\char`\"{}))) object(\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h
+\item 
+\mbox{\hyperlink{classpybind11_1_1object_acd1e392727b7870b82404c6077fd7da3}{object}} (const \mbox{\hyperlink{classpybind11_1_1object}{object}} \&o)
+\begin{DoxyCompactList}\small\item\em Copy constructor; always increases the reference count. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpybind11_1_1object_a8b3e38884a2467c88b61ad8b0f7b0469}{object}} (\mbox{\hyperlink{classpybind11_1_1object}{object}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor; steals the object from {\ttfamily other} and preserves its reference count. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpybind11_1_1object_a18a870a490c34d5a7775e90dc799d2f4}{$\sim$object}} ()
+\begin{DoxyCompactList}\small\item\em Destructor; automatically calls {\ttfamily \mbox{\hyperlink{classpybind11_1_1handle_aa5bf7731654070d8a6834183a3c63132}{handle\+::dec\+\_\+ref()}}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1object_a6db3ef1f8b39f2038ecf578a7f07b59d}{release}} ()
+\item 
+\mbox{\hyperlink{classpybind11_1_1object}{object}} \& \mbox{\hyperlink{classpybind11_1_1object_aa02e0b7ba3182ecea17911e5fdc631dd}{operator=}} (const \mbox{\hyperlink{classpybind11_1_1object}{object}} \&other)
+\item 
+\mbox{\hyperlink{classpybind11_1_1object}{object}} \& \mbox{\hyperlink{classpybind11_1_1object_a1f45b12a97cf4b93915fd9145747cd9b}{operator=}} (\mbox{\hyperlink{classpybind11_1_1object}{object}} \&\&other) noexcept
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classpybind11_1_1object_aece18ff0957cbd093908369dd7800519}{cast}} () const \&
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classpybind11_1_1object_a1d5a34290705e5124f352346563bf83d}{cast}} () \&\&
+\item 
+\mbox{\hyperlink{classpybind11_1_1object_af43aa8511d39ad9fa3aae093962ca471}{object}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h, \mbox{\hyperlink{structpybind11_1_1object_1_1borrowed__t}{borrowed\+\_\+t}})
+\item 
+\mbox{\hyperlink{classpybind11_1_1object_a03cf406a7bee2cde9264d89f5c321e95}{object}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h, \mbox{\hyperlink{structpybind11_1_1object_1_1stolen__t}{stolen\+\_\+t}})
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classpybind11_1_1object_aece18ff0957cbd093908369dd7800519}{cast}} () const \&
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classpybind11_1_1object_a1d5a34290705e5124f352346563bf83d}{cast}} () \&\&
+\item 
+template$<$$>$ void \mbox{\hyperlink{classpybind11_1_1object_a764785e72f3f451c198c9d09c9ff0fe2}{cast}} () const \&
+\item 
+template$<$$>$ void \mbox{\hyperlink{classpybind11_1_1object_a8bc02531431d381c27343568a60d641e}{cast}} () \&\&
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1object_a2cf33587d993fb836e9fcc7a9f3e5dcb}{is\+\_\+borrowed}}\+: \mbox{\hyperlink{classpybind11_1_1handle}{handle}}(h) \{ if (is\+\_\+borrowed) \mbox{\hyperlink{classpybind11_1_1handle_acc6d5c07da91466b4ebe6e5f8f7a1b58}{inc\+\_\+ref}}()
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classpybind11_1_1object_ac1ea1a4cbcf197d7c8096037633720d7}{reinterpret\+\_\+borrow}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}})
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classpybind11_1_1object_ae1de2ab5a755c10582ac1e46071de5c5}{reinterpret\+\_\+steal}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\textbackslash{}rst Holds a reference to a Python object (with reference counting)
+
+Like {\ttfamily handle}, the {\ttfamily object} class is a thin wrapper around an arbitrary Python object (i.\+e. a {\ttfamily Py\+Object $\ast$} in Python\textquotesingle{}s C API). In contrast to {\ttfamily handle}, it optionally increases the object\textquotesingle{}s reference count upon construction, and it always$\ast$ decreases the reference count when the {\ttfamily object} instance goes out of scope and is destructed. When using {\ttfamily object} instances consistently, it is much easier to get reference counting right at the first attempt. \textbackslash{}endrst 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpybind11_1_1object_a05110f45918e73ad56f66cc713fd1d21}\label{classpybind11_1_1object_a05110f45918e73ad56f66cc713fd1d21}} 
+\index{pybind11::object@{pybind11::object}!object@{object}}
+\index{object@{object}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{object()}{object()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily pybind11\+::object\+::object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classpybind11_1_1object_acd1e392727b7870b82404c6077fd7da3}\label{classpybind11_1_1object_acd1e392727b7870b82404c6077fd7da3}} 
+\index{pybind11::object@{pybind11::object}!object@{object}}
+\index{object@{object}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{object()}{object()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily pybind11\+::object\+::object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1object}{object}} \&}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor; always increases the reference count. 
+
+\mbox{\Hypertarget{classpybind11_1_1object_a8b3e38884a2467c88b61ad8b0f7b0469}\label{classpybind11_1_1object_a8b3e38884a2467c88b61ad8b0f7b0469}} 
+\index{pybind11::object@{pybind11::object}!object@{object}}
+\index{object@{object}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{object()}{object()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily pybind11\+::object\+::object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1object}{object}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor; steals the object from {\ttfamily other} and preserves its reference count. 
+
+\mbox{\Hypertarget{classpybind11_1_1object_a18a870a490c34d5a7775e90dc799d2f4}\label{classpybind11_1_1object_a18a870a490c34d5a7775e90dc799d2f4}} 
+\index{pybind11::object@{pybind11::object}!````~object@{$\sim$object}}
+\index{````~object@{$\sim$object}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{$\sim$object()}{~object()}}
+{\footnotesize\ttfamily pybind11\+::object\+::$\sim$object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor; automatically calls {\ttfamily \mbox{\hyperlink{classpybind11_1_1handle_aa5bf7731654070d8a6834183a3c63132}{handle\+::dec\+\_\+ref()}}} 
+
+\mbox{\Hypertarget{classpybind11_1_1object_af43aa8511d39ad9fa3aae093962ca471}\label{classpybind11_1_1object_af43aa8511d39ad9fa3aae093962ca471}} 
+\index{pybind11::object@{pybind11::object}!object@{object}}
+\index{object@{object}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{object()}{object()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily pybind11\+::object\+::object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{h,  }\item[{\mbox{\hyperlink{structpybind11_1_1object_1_1borrowed__t}{borrowed\+\_\+t}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1object_a03cf406a7bee2cde9264d89f5c321e95}\label{classpybind11_1_1object_a03cf406a7bee2cde9264d89f5c321e95}} 
+\index{pybind11::object@{pybind11::object}!object@{object}}
+\index{object@{object}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{object()}{object()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily pybind11\+::object\+::object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{h,  }\item[{\mbox{\hyperlink{structpybind11_1_1object_1_1stolen__t}{stolen\+\_\+t}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1object_af0de297f50a8c4db0b6712f4b990f8aa}\label{classpybind11_1_1object_af0de297f50a8c4db0b6712f4b990f8aa}} 
+\index{pybind11::object@{pybind11::object}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily pybind11\+::object\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(deprecated(\char`\"{}Use \mbox{\hyperlink{classpybind11_1_1object_ac1ea1a4cbcf197d7c8096037633720d7}{reinterpret\+\_\+borrow}}$<$\mbox{\hyperlink{classpybind11_1_1object}{object}}$>$() or \mbox{\hyperlink{classpybind11_1_1object_ae1de2ab5a755c10582ac1e46071de5c5}{reinterpret\+\_\+steal}}$<$\mbox{\hyperlink{classpybind11_1_1object}{object}}$>$()\char`\"{}))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpybind11_1_1object_a1d5a34290705e5124f352346563bf83d}\label{classpybind11_1_1object_a1d5a34290705e5124f352346563bf83d}} 
+\index{pybind11::object@{pybind11::object}!cast@{cast}}
+\index{cast@{cast}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T pybind11\+::object\+::cast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&}
+
+\mbox{\Hypertarget{classpybind11_1_1object_a8bc02531431d381c27343568a60d641e}\label{classpybind11_1_1object_a8bc02531431d381c27343568a60d641e}} 
+\index{pybind11::object@{pybind11::object}!cast@{cast}}
+\index{cast@{cast}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void pybind11\+::object\+::cast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1object_a1d5a34290705e5124f352346563bf83d}\label{classpybind11_1_1object_a1d5a34290705e5124f352346563bf83d}} 
+\index{pybind11::object@{pybind11::object}!cast@{cast}}
+\index{cast@{cast}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T pybind11\+::object\+::cast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&}
+
+\mbox{\Hypertarget{classpybind11_1_1object_aece18ff0957cbd093908369dd7800519}\label{classpybind11_1_1object_aece18ff0957cbd093908369dd7800519}} 
+\index{pybind11::object@{pybind11::object}!cast@{cast}}
+\index{cast@{cast}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T pybind11\+::object\+::cast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+\mbox{\Hypertarget{classpybind11_1_1object_a764785e72f3f451c198c9d09c9ff0fe2}\label{classpybind11_1_1object_a764785e72f3f451c198c9d09c9ff0fe2}} 
+\index{pybind11::object@{pybind11::object}!cast@{cast}}
+\index{cast@{cast}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void pybind11\+::object\+::cast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1object_aece18ff0957cbd093908369dd7800519}\label{classpybind11_1_1object_aece18ff0957cbd093908369dd7800519}} 
+\index{pybind11::object@{pybind11::object}!cast@{cast}}
+\index{cast@{cast}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T pybind11\+::object\+::cast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+\mbox{\Hypertarget{classpybind11_1_1object_aa02e0b7ba3182ecea17911e5fdc631dd}\label{classpybind11_1_1object_aa02e0b7ba3182ecea17911e5fdc631dd}} 
+\index{pybind11::object@{pybind11::object}!operator=@{operator=}}
+\index{operator=@{operator=}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpybind11_1_1object}{object}}\& pybind11\+::object\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1object}{object}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1object_a1f45b12a97cf4b93915fd9145747cd9b}\label{classpybind11_1_1object_a1f45b12a97cf4b93915fd9145747cd9b}} 
+\index{pybind11::object@{pybind11::object}!operator=@{operator=}}
+\index{operator=@{operator=}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpybind11_1_1object}{object}}\& pybind11\+::object\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1object}{object}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classpybind11_1_1object_a6db3ef1f8b39f2038ecf578a7f07b59d}\label{classpybind11_1_1object_a6db3ef1f8b39f2038ecf578a7f07b59d}} 
+\index{pybind11::object@{pybind11::object}!release@{release}}
+\index{release@{release}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpybind11_1_1handle}{handle}} pybind11\+::object\+::release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\textbackslash{}rst Resets the internal pointer to {\ttfamily nullptr} without without decreasing the object\textquotesingle{}s reference count. The function returns a raw handle to the original Python object. \textbackslash{}endrst 
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1object_ac1ea1a4cbcf197d7c8096037633720d7}\label{classpybind11_1_1object_ac1ea1a4cbcf197d7c8096037633720d7}} 
+\index{pybind11::object@{pybind11::object}!reinterpret\_borrow@{reinterpret\_borrow}}
+\index{reinterpret\_borrow@{reinterpret\_borrow}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{reinterpret\_borrow}{reinterpret\_borrow}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T reinterpret\+\_\+borrow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\textbackslash{}rst Declare that a {\ttfamily handle} or {\ttfamily Py\+Object $\ast$} is a certain type and borrow the reference. The target type {\ttfamily T} must be {\ttfamily object} or one of its derived classes. The function doesn\textquotesingle{}t do any conversions or checks. It\textquotesingle{}s up to the user to make sure that the target type is correct.
+
+.. code-\/block\+:: cpp \begin{DoxyVerb}PyObject *p = PyList_GetItem(obj, index);
+py::object o = reinterpret_borrow<py::object>(p);
+\end{DoxyVerb}
+ or py\+::tuple t = reinterpret\+\_\+borrow$<$py\+::tuple$>$(p); // $<$-- {\ttfamily p} must be already be a {\ttfamily tuple} \textbackslash{}endrst \mbox{\Hypertarget{classpybind11_1_1object_ae1de2ab5a755c10582ac1e46071de5c5}\label{classpybind11_1_1object_ae1de2ab5a755c10582ac1e46071de5c5}} 
+\index{pybind11::object@{pybind11::object}!reinterpret\_steal@{reinterpret\_steal}}
+\index{reinterpret\_steal@{reinterpret\_steal}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{reinterpret\_steal}{reinterpret\_steal}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T reinterpret\+\_\+steal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\textbackslash{}rst Like {\ttfamily reinterpret\+\_\+borrow}, but steals the reference.
+
+.. code-\/block\+:: cpp
+
+Py\+Object $\ast$p = Py\+Object\+\_\+\+Str(obj); py\+::str s = reinterpret\+\_\+steal$<$py\+::str$>$(p); // $<$-- {\ttfamily p} must be already be a {\ttfamily str} \textbackslash{}endrst 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpybind11_1_1object_a2cf33587d993fb836e9fcc7a9f3e5dcb}\label{classpybind11_1_1object_a2cf33587d993fb836e9fcc7a9f3e5dcb}} 
+\index{pybind11::object@{pybind11::object}!is\_borrowed@{is\_borrowed}}
+\index{is\_borrowed@{is\_borrowed}!pybind11::object@{pybind11::object}}
+\doxysubsubsection{\texorpdfstring{is\_borrowed}{is\_borrowed}}
+{\footnotesize\ttfamily bool pybind11\+::object\+::is\+\_\+borrowed}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{pytypes_8h}{pytypes.\+h}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{cast_8h}{cast.\+h}}\end{DoxyCompactItemize}

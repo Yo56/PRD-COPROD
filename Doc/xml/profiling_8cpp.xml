@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="profiling_8cpp" kind="file" language="C++">
+    <compoundname>profiling.cpp</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">from<sp/>io<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>BytesIO</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">from<sp/>lxml.etree<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>xmlfile</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>os</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">from<sp/>random<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>randint</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">from<sp/>openpyxl<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Workbook</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">from<sp/>openpyxl.xml.functions<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>XMLGenerator</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">def<sp/>make_worksheet():</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>wb<sp/>=<sp/>Workbook()</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>ws<sp/>=<sp/>wb.active</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a624a1a1288a51bfa1150e642694eca0c" kindref="member">for</ref><sp/>i<sp/>in<sp/><ref refid="namespacepybind11_1_1detail_1a33c4d7ef0a3ea3fc3c06ec4e58ee050c" kindref="member">range</ref>(1000):</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ws.<ref refid="namespaceutf8_1a3827e78596fc38cfdebd721e9c45c901" kindref="member">append</ref>(list(<ref refid="namespacepybind11_1_1detail_1a33c4d7ef0a3ea3fc3c06ec4e58ee050c" kindref="member">range</ref>(100)))</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>ws</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">def<sp/>lxml_writer(ws=None):</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>from<sp/>openpyxl.writer.lxml_worksheet<sp/>import<sp/>write_rows</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a18e02562143ea02421e635c169e2b8c3" kindref="member">if</ref><sp/>ws<sp/>is<sp/>None:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ws<sp/>=<sp/>make_worksheet()</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>=<sp/>BytesIO()</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>with<sp/>xmlfile(out)<sp/>as<sp/>xf:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>write_rows(xf,<sp/>ws)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>#with<sp/>open(</highlight><highlight class="stringliteral">&quot;lxml_writer.xml&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;wb&quot;</highlight><highlight class="normal">)<sp/>as<sp/>dump:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#dump.<ref refid="namespacepybind11_1_1detail_1af9b806016c247eaa721c7150fecdd5de" kindref="member">write</ref>(out.getvalue())</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>#ws.parent.<ref refid="namespacelibsize_1a54b9405a54b4089591f0941f0f5eae9b" kindref="member">save</ref>(</highlight><highlight class="stringliteral">&quot;lxml_writer.xlsx&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">def<sp/>make_dump_worksheet():</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>wb<sp/>=<sp/>Workbook(write_only=<ref refid="genx_8c_1add3ca9eefe3b5b754426f51d3043e579" kindref="member">True</ref>)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>ws<sp/>=<sp/>wb.create_sheet()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>ws</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">def<sp/>dump_writer(ws=None):</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a18e02562143ea02421e635c169e2b8c3" kindref="member">if</ref><sp/>ws<sp/>is<sp/>None:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ws<sp/>=<sp/>make_dump_worksheet()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a624a1a1288a51bfa1150e642694eca0c" kindref="member">for</ref><sp/>i<sp/>in<sp/><ref refid="namespacepybind11_1_1detail_1a33c4d7ef0a3ea3fc3c06ec4e58ee050c" kindref="member">range</ref>(1000):</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ws.<ref refid="namespaceutf8_1a3827e78596fc38cfdebd721e9c45c901" kindref="member">append</ref>(list(<ref refid="namespacepybind11_1_1detail_1a33c4d7ef0a3ea3fc3c06ec4e58ee050c" kindref="member">range</ref>(100)))</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">COLUMNS<sp/>=<sp/>100</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">ROWS<sp/>=<sp/>1000</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">BOLD<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">ITALIC<sp/>=<sp/>2</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">UNDERLINE<sp/>=<sp/>4</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">RED_BG<sp/>=<sp/>8</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">formatData<sp/>=<sp/>[[None]<sp/>*<sp/>COLUMNS<sp/><ref refid="namespacepybind11_1_1detail_1a624a1a1288a51bfa1150e642694eca0c" kindref="member">for</ref><sp/><ref refid="namespacepybind11_1_1detail_1afc58f2d75e8ea0b596c2b6e8041ab09c" kindref="member">_</ref><sp/>in<sp/><ref refid="namespacepybind11_1_1detail_1a33c4d7ef0a3ea3fc3c06ec4e58ee050c" kindref="member">range</ref>(ROWS)]</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">def<sp/>generate_format_data():</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a624a1a1288a51bfa1150e642694eca0c" kindref="member">for</ref><sp/><ref refid="page__setup_8hpp_1ad42e2d1ad172100a2cd1338656cf0425" kindref="member">row</ref><sp/>in<sp/><ref refid="namespacepybind11_1_1detail_1a33c4d7ef0a3ea3fc3c06ec4e58ee050c" kindref="member">range</ref>(ROWS):</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a624a1a1288a51bfa1150e642694eca0c" kindref="member">for</ref><sp/>col<sp/>in<sp/><ref refid="namespacepybind11_1_1detail_1a33c4d7ef0a3ea3fc3c06ec4e58ee050c" kindref="member">range</ref>(COLUMNS):</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>formatData[<ref refid="page__setup_8hpp_1ad42e2d1ad172100a2cd1338656cf0425" kindref="member">row</ref>][col]<sp/>=<sp/>randint(1,<sp/>15)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">def<sp/>styled_sheet():</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>from<sp/>openpyxl<sp/>import<sp/>Workbook</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>from<sp/>openpyxl.styles<sp/>import<sp/>Font,<sp/>Style,<sp/>PatternFill,<sp/>Color,<sp/>colors</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>wb<sp/>=<sp/>Workbook()</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>ws<sp/>=<sp/>wb.active</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>ws.<ref refid="namespacexlnt_1a71da3b08e3863a52b72b08a571ec029dad5d3db1765287eef77d7927cc956f50a" kindref="member">title</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Test<sp/>1&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>red_fill<sp/>=<sp/>PatternFill(fill_type=</highlight><highlight class="stringliteral">&apos;solid&apos;</highlight><highlight class="normal">,<sp/>fgColor=Color(colors.RED),<sp/>bgColor=Color(colors.RED))</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>empty_fill<sp/>=<sp/>PatternFill()</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>styles<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>#<sp/>pregenerate<sp/>relevant<sp/>styles</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a624a1a1288a51bfa1150e642694eca0c" kindref="member">for</ref><sp/><ref refid="page__setup_8hpp_1ad42e2d1ad172100a2cd1338656cf0425" kindref="member">row</ref><sp/>in<sp/><ref refid="namespacepybind11_1_1detail_1a33c4d7ef0a3ea3fc3c06ec4e58ee050c" kindref="member">range</ref>(ROWS):</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_row<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a624a1a1288a51bfa1150e642694eca0c" kindref="member">for</ref><sp/>col<sp/>in<sp/><ref refid="namespacepybind11_1_1detail_1a33c4d7ef0a3ea3fc3c06ec4e58ee050c" kindref="member">range</ref>(COLUMNS):</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cell<sp/>=<sp/>ws.cell(<ref refid="page__setup_8hpp_1ad42e2d1ad172100a2cd1338656cf0425" kindref="member">row</ref>=<ref refid="page__setup_8hpp_1ad42e2d1ad172100a2cd1338656cf0425" kindref="member">row</ref>+1,<sp/><ref refid="major__order_8hpp_1ae78e6e11a40e6dba1bae097358f97d15" kindref="member">column</ref>=col+1)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cell.value<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font<sp/>=<sp/>{}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="alignment_8hpp_1a23b3ecc690a716b53e9d0146b78d5ef2" kindref="member">fill</ref><sp/>=<sp/>PatternFill()</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a18e02562143ea02421e635c169e2b8c3" kindref="member">if</ref><sp/>formatData[<ref refid="page__setup_8hpp_1ad42e2d1ad172100a2cd1338656cf0425" kindref="member">row</ref>][col]<sp/>&amp;<sp/>BOLD:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font[&apos;bold&apos;]<sp/>=<sp/><ref refid="genx_8c_1add3ca9eefe3b5b754426f51d3043e579" kindref="member">True</ref></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a18e02562143ea02421e635c169e2b8c3" kindref="member">if</ref><sp/>formatData[<ref refid="page__setup_8hpp_1ad42e2d1ad172100a2cd1338656cf0425" kindref="member">row</ref>][col]<sp/>&amp;<sp/>ITALIC:</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font[&apos;italic&apos;]<sp/>=<sp/><ref refid="genx_8c_1add3ca9eefe3b5b754426f51d3043e579" kindref="member">True</ref></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a18e02562143ea02421e635c169e2b8c3" kindref="member">if</ref><sp/>formatData[<ref refid="page__setup_8hpp_1ad42e2d1ad172100a2cd1338656cf0425" kindref="member">row</ref>][col]<sp/>&amp;<sp/>UNDERLINE:</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font[&apos;underline&apos;]<sp/>=<sp/>&apos;single&apos;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a18e02562143ea02421e635c169e2b8c3" kindref="member">if</ref><sp/>formatData[<ref refid="page__setup_8hpp_1ad42e2d1ad172100a2cd1338656cf0425" kindref="member">row</ref>][col]<sp/>&amp;<sp/>RED_BG:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="alignment_8hpp_1a23b3ecc690a716b53e9d0146b78d5ef2" kindref="member">fill</ref><sp/>=<sp/>red_fill</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cell.style<sp/>=<sp/>Style(font=Font(**font),<sp/><ref refid="alignment_8hpp_1a23b3ecc690a716b53e9d0146b78d5ef2" kindref="member">fill</ref>=<ref refid="alignment_8hpp_1a23b3ecc690a716b53e9d0146b78d5ef2" kindref="member">fill</ref>)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">#wb.save(get_output_path(&apos;test_openpyxl_style_std_pregen.xlsx&apos;))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">def<sp/>read_workbook():</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>from<sp/>openpyxl<sp/>import<sp/>load_workbook</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>folder<sp/>=<sp/>os.path.split(__file__)[0]</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>src<sp/>=<sp/>os.path.join(folder,<sp/></highlight><highlight class="stringliteral">&quot;files&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;very_large.xlsx&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>wb<sp/>=<sp/>load_workbook(src)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>wb</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">def<sp/>rows(wb):</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>ws<sp/>=<sp/>wb.active</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>rows<sp/>=<sp/>ws.iter_rows()</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a624a1a1288a51bfa1150e642694eca0c" kindref="member">for</ref><sp/>r,<sp/><ref refid="page__setup_8hpp_1ad42e2d1ad172100a2cd1338656cf0425" kindref="member">row</ref><sp/>in<sp/>enumerate(rows):</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a624a1a1288a51bfa1150e642694eca0c" kindref="member">for</ref><sp/>c,<sp/>col<sp/>in<sp/>enumerate(<ref refid="page__setup_8hpp_1ad42e2d1ad172100a2cd1338656cf0425" kindref="member">row</ref>):</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pass</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1a913a30079a57934b1bfda83ba4080da4" kindref="member">print</ref>((r+1)*<sp/>(c+1),<sp/></highlight><highlight class="stringliteral">&quot;cells&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">def<sp/>col_index1():</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>from<sp/>openpyxl.cell<sp/>import<sp/>get_column_letter</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a624a1a1288a51bfa1150e642694eca0c" kindref="member">for</ref><sp/>i<sp/>in<sp/><ref refid="namespacepybind11_1_1detail_1a33c4d7ef0a3ea3fc3c06ec4e58ee050c" kindref="member">range</ref>(1,<sp/>18279):</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c<sp/>=<sp/>get_column_letter(i)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="113"><highlight class="stringliteral">Sample<sp/>use</highlight></codeline>
+<codeline lineno="114"><highlight class="stringliteral">import<sp/>cProfile</highlight></codeline>
+<codeline lineno="115"><highlight class="stringliteral">ws<sp/>=<sp/>make_worksheet()</highlight></codeline>
+<codeline lineno="116"><highlight class="stringliteral">cProfile.run(&quot;</highlight><highlight class="normal">profiling.lxml_writer(ws)</highlight><highlight class="stringliteral">&quot;,<sp/>sort=&quot;</highlight><highlight class="normal">tottime</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="117"><highlight class="stringliteral">&quot;</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><ref refid="namespacepybind11_1_1detail_1a18e02562143ea02421e635c169e2b8c3" kindref="member">if</ref><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;__main__&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>import<sp/>cProfile</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>ws<sp/>=<sp/>make_worksheet()</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>#wb<sp/>=<sp/>read_workbook()</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>#cProfile.run(</highlight><highlight class="stringliteral">&quot;rows(wb)&quot;</highlight><highlight class="normal">,<sp/>sort=</highlight><highlight class="stringliteral">&quot;tottime&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>#cProfile.run(</highlight><highlight class="stringliteral">&quot;make_worksheet()&quot;</highlight><highlight class="normal">,<sp/>sort=</highlight><highlight class="stringliteral">&quot;tottime&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>#cProfile.run(</highlight><highlight class="stringliteral">&quot;lxml_writer(ws)&quot;</highlight><highlight class="normal">,<sp/>sort=</highlight><highlight class="stringliteral">&quot;tottime&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>#generate_format_data()</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>#cProfile.run(</highlight><highlight class="stringliteral">&quot;styled_sheet()&quot;</highlight><highlight class="normal">,<sp/>sort=</highlight><highlight class="stringliteral">&quot;tottime&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>#ws<sp/>=<sp/>make_dump_worksheet()</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>#cProfile.run(</highlight><highlight class="stringliteral">&quot;dump_writer(ws)&quot;</highlight><highlight class="normal">,<sp/>sort=</highlight><highlight class="stringliteral">&quot;tottime&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>cProfile.run(</highlight><highlight class="stringliteral">&quot;col_index1()&quot;</highlight><highlight class="normal">,<sp/>sort=</highlight><highlight class="stringliteral">&quot;tottime&quot;</highlight><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/benchmarks/disabled/profiling.cpp"/>
+  </compounddef>
+</doxygen>

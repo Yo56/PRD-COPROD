@@ -1,0 +1,82 @@
+\hypertarget{classpybind11_1_1detail_1_1common__iterator}{}\doxysection{pybind11\+::detail\+::common\+\_\+iterator Class Reference}
+\label{classpybind11_1_1detail_1_1common__iterator}\index{pybind11::detail::common\_iterator@{pybind11::detail::common\_iterator}}
+
+
+{\ttfamily \#include $<$numpy.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1common__iterator_a4dc612b96b449c1bd5b0940257c3b931}{container\+\_\+type}} = std\+::vector$<$ \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $>$
+\item 
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1common__iterator_aec258828e713d856d1cca789ca4bd86c}{value\+\_\+type}} = container\+\_\+type\+::value\+\_\+type
+\item 
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1common__iterator_a477e82830438528cb662f22f33396c70}{size\+\_\+type}} = container\+\_\+type\+::size\+\_\+type
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1common__iterator_a53ea940bf95ea2b18bdef22f9d1eab27}{common\+\_\+iterator}} ()
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1common__iterator_a690752dac65c062566e68a40792b2a95}{common\+\_\+iterator}} (void $\ast$ptr, const \mbox{\hyperlink{classpybind11_1_1detail_1_1common__iterator_a4dc612b96b449c1bd5b0940257c3b931}{container\+\_\+type}} \&strides, const \mbox{\hyperlink{classpybind11_1_1detail_1_1common__iterator_a4dc612b96b449c1bd5b0940257c3b931}{container\+\_\+type}} \&shape)
+\item 
+void \mbox{\hyperlink{classpybind11_1_1detail_1_1common__iterator_ab7034f7446b74fe6b14aaeff5be8dbfc}{increment}} (\mbox{\hyperlink{classpybind11_1_1detail_1_1common__iterator_a477e82830438528cb662f22f33396c70}{size\+\_\+type}} dim)
+\item 
+void $\ast$ \mbox{\hyperlink{classpybind11_1_1detail_1_1common__iterator_a62b0790a899b60a7947d1b140bb50d4e}{data}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1common__iterator_a4dc612b96b449c1bd5b0940257c3b931}\label{classpybind11_1_1detail_1_1common__iterator_a4dc612b96b449c1bd5b0940257c3b931}} 
+\index{pybind11::detail::common\_iterator@{pybind11::detail::common\_iterator}!container\_type@{container\_type}}
+\index{container\_type@{container\_type}!pybind11::detail::common\_iterator@{pybind11::detail::common\_iterator}}
+\doxysubsubsection{\texorpdfstring{container\_type}{container\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1detail_1_1common__iterator_a4dc612b96b449c1bd5b0940257c3b931}{pybind11\+::detail\+::common\+\_\+iterator\+::container\+\_\+type}} =  std\+::vector$<$\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}$>$}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1common__iterator_a477e82830438528cb662f22f33396c70}\label{classpybind11_1_1detail_1_1common__iterator_a477e82830438528cb662f22f33396c70}} 
+\index{pybind11::detail::common\_iterator@{pybind11::detail::common\_iterator}!size\_type@{size\_type}}
+\index{size\_type@{size\_type}!pybind11::detail::common\_iterator@{pybind11::detail::common\_iterator}}
+\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1detail_1_1common__iterator_a477e82830438528cb662f22f33396c70}{pybind11\+::detail\+::common\+\_\+iterator\+::size\+\_\+type}} =  container\+\_\+type\+::size\+\_\+type}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1common__iterator_aec258828e713d856d1cca789ca4bd86c}\label{classpybind11_1_1detail_1_1common__iterator_aec258828e713d856d1cca789ca4bd86c}} 
+\index{pybind11::detail::common\_iterator@{pybind11::detail::common\_iterator}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!pybind11::detail::common\_iterator@{pybind11::detail::common\_iterator}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1detail_1_1common__iterator_aec258828e713d856d1cca789ca4bd86c}{pybind11\+::detail\+::common\+\_\+iterator\+::value\+\_\+type}} =  container\+\_\+type\+::value\+\_\+type}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1common__iterator_a53ea940bf95ea2b18bdef22f9d1eab27}\label{classpybind11_1_1detail_1_1common__iterator_a53ea940bf95ea2b18bdef22f9d1eab27}} 
+\index{pybind11::detail::common\_iterator@{pybind11::detail::common\_iterator}!common\_iterator@{common\_iterator}}
+\index{common\_iterator@{common\_iterator}!pybind11::detail::common\_iterator@{pybind11::detail::common\_iterator}}
+\doxysubsubsection{\texorpdfstring{common\_iterator()}{common\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily pybind11\+::detail\+::common\+\_\+iterator\+::common\+\_\+iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1common__iterator_a690752dac65c062566e68a40792b2a95}\label{classpybind11_1_1detail_1_1common__iterator_a690752dac65c062566e68a40792b2a95}} 
+\index{pybind11::detail::common\_iterator@{pybind11::detail::common\_iterator}!common\_iterator@{common\_iterator}}
+\index{common\_iterator@{common\_iterator}!pybind11::detail::common\_iterator@{pybind11::detail::common\_iterator}}
+\doxysubsubsection{\texorpdfstring{common\_iterator()}{common\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily pybind11\+::detail\+::common\+\_\+iterator\+::common\+\_\+iterator (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1common__iterator_a4dc612b96b449c1bd5b0940257c3b931}{container\+\_\+type}} \&}]{strides,  }\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1common__iterator_a4dc612b96b449c1bd5b0940257c3b931}{container\+\_\+type}} \&}]{shape }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1common__iterator_a62b0790a899b60a7947d1b140bb50d4e}\label{classpybind11_1_1detail_1_1common__iterator_a62b0790a899b60a7947d1b140bb50d4e}} 
+\index{pybind11::detail::common\_iterator@{pybind11::detail::common\_iterator}!data@{data}}
+\index{data@{data}!pybind11::detail::common\_iterator@{pybind11::detail::common\_iterator}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily void$\ast$ pybind11\+::detail\+::common\+\_\+iterator\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1common__iterator_ab7034f7446b74fe6b14aaeff5be8dbfc}\label{classpybind11_1_1detail_1_1common__iterator_ab7034f7446b74fe6b14aaeff5be8dbfc}} 
+\index{pybind11::detail::common\_iterator@{pybind11::detail::common\_iterator}!increment@{increment}}
+\index{increment@{increment}!pybind11::detail::common\_iterator@{pybind11::detail::common\_iterator}}
+\doxysubsubsection{\texorpdfstring{increment()}{increment()}}
+{\footnotesize\ttfamily void pybind11\+::detail\+::common\+\_\+iterator\+::increment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1detail_1_1common__iterator_a477e82830438528cb662f22f33396c70}{size\+\_\+type}}}]{dim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{numpy_8h}{numpy.\+h}}\end{DoxyCompactItemize}

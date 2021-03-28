@@ -1,0 +1,69 @@
+\hypertarget{structpybind11_1_1detail_1_1process__attribute_3_01keep__alive_3_01_nurse_00_01_patient_01_4_01_4}{}\doxysection{pybind11\+::detail\+::process\+\_\+attribute$<$ keep\+\_\+alive$<$ Nurse, Patient $>$ $>$ Struct Template Reference}
+\label{structpybind11_1_1detail_1_1process__attribute_3_01keep__alive_3_01_nurse_00_01_patient_01_4_01_4}\index{pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$@{pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$}}
+
+
+{\ttfamily \#include $<$attr.\+h$>$}
+
+Inheritance diagram for pybind11\+::detail\+::process\+\_\+attribute$<$ keep\+\_\+alive$<$ Nurse, Patient $>$ $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structpybind11_1_1detail_1_1process__attribute_3_01keep__alive_3_01_nurse_00_01_patient_01_4_01_4}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$size\+\_\+t N = Nurse, size\+\_\+t P = Patient, enable\+\_\+if\+\_\+t$<$ N !=0 \&\&\+P !=0, int $>$  = 0$>$ }\\static void \mbox{\hyperlink{structpybind11_1_1detail_1_1process__attribute_3_01keep__alive_3_01_nurse_00_01_patient_01_4_01_4_a070196a560d82a5ac62ad275ca2503aa}{precall}} (\mbox{\hyperlink{structpybind11_1_1detail_1_1function__call}{function\+\_\+call}} \&\mbox{\hyperlink{namespacepybind11_1_1detail_ad8c72601e9b3b2dadd0a5cf35b5a9fd8}{call}})
+\item 
+{\footnotesize template$<$size\+\_\+t N = Nurse, size\+\_\+t P = Patient, enable\+\_\+if\+\_\+t$<$ N !=0 \&\&\+P !=0, int $>$  = 0$>$ }\\static void \mbox{\hyperlink{structpybind11_1_1detail_1_1process__attribute_3_01keep__alive_3_01_nurse_00_01_patient_01_4_01_4_a1b73a861be60ff3f27702c49941c6a9e}{postcall}} (\mbox{\hyperlink{structpybind11_1_1detail_1_1function__call}{function\+\_\+call}} \&, \mbox{\hyperlink{classpybind11_1_1handle}{handle}})
+\item 
+{\footnotesize template$<$size\+\_\+t N = Nurse, size\+\_\+t P = Patient, enable\+\_\+if\+\_\+t$<$ N==0$\vert$$\vert$\+P==0, int $>$  = 0$>$ }\\static void \mbox{\hyperlink{structpybind11_1_1detail_1_1process__attribute_3_01keep__alive_3_01_nurse_00_01_patient_01_4_01_4_afa04221c71a949e617c45c129e7dc8f5}{precall}} (\mbox{\hyperlink{structpybind11_1_1detail_1_1function__call}{function\+\_\+call}} \&)
+\item 
+{\footnotesize template$<$size\+\_\+t N = Nurse, size\+\_\+t P = Patient, enable\+\_\+if\+\_\+t$<$ N==0$\vert$$\vert$\+P==0, int $>$  = 0$>$ }\\static void \mbox{\hyperlink{structpybind11_1_1detail_1_1process__attribute_3_01keep__alive_3_01_nurse_00_01_patient_01_4_01_4_ad37c5771db301ed43d1d68d8476ed0af}{postcall}} (\mbox{\hyperlink{structpybind11_1_1detail_1_1function__call}{function\+\_\+call}} \&\mbox{\hyperlink{namespacepybind11_1_1detail_ad8c72601e9b3b2dadd0a5cf35b5a9fd8}{call}}, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{namespacepybind11_1_1detail_a41b003f0f244f4f7d572d2008c9bbea2}{ret}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$size\+\_\+t Nurse, size\+\_\+t Patient$>$\newline
+struct pybind11\+::detail\+::process\+\_\+attribute$<$ keep\+\_\+alive$<$ Nurse, Patient $>$ $>$}
+
+Process a \mbox{\hyperlink{structpybind11_1_1keep__alive}{keep\+\_\+alive}} call policy -- invokes keep\+\_\+alive\+\_\+impl during the pre-\/call handler if both Nurse, Patient != 0 and use the post-\/call handler otherwise 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1process__attribute_3_01keep__alive_3_01_nurse_00_01_patient_01_4_01_4_a1b73a861be60ff3f27702c49941c6a9e}\label{structpybind11_1_1detail_1_1process__attribute_3_01keep__alive_3_01_nurse_00_01_patient_01_4_01_4_a1b73a861be60ff3f27702c49941c6a9e}} 
+\index{pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$@{pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$}!postcall@{postcall}}
+\index{postcall@{postcall}!pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$@{pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{postcall()}{postcall()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t Nurse, size\+\_\+t Patient$>$ \\
+template$<$size\+\_\+t N = Nurse, size\+\_\+t P = Patient, enable\+\_\+if\+\_\+t$<$ N !=0 \&\&\+P !=0, int $>$  = 0$>$ \\
+static void \mbox{\hyperlink{structpybind11_1_1detail_1_1process__attribute}{pybind11\+::detail\+::process\+\_\+attribute}}$<$ \mbox{\hyperlink{structpybind11_1_1keep__alive}{keep\+\_\+alive}}$<$ Nurse, \mbox{\hyperlink{namespacepybind11_1_1detail_aea77a49f75ac89645a479ae8562c6565}{Patient}} $>$ $>$\+::postcall (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpybind11_1_1detail_1_1function__call}{function\+\_\+call}} \&}]{,  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1process__attribute_3_01keep__alive_3_01_nurse_00_01_patient_01_4_01_4_ad37c5771db301ed43d1d68d8476ed0af}\label{structpybind11_1_1detail_1_1process__attribute_3_01keep__alive_3_01_nurse_00_01_patient_01_4_01_4_ad37c5771db301ed43d1d68d8476ed0af}} 
+\index{pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$@{pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$}!postcall@{postcall}}
+\index{postcall@{postcall}!pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$@{pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{postcall()}{postcall()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t Nurse, size\+\_\+t Patient$>$ \\
+template$<$size\+\_\+t N = Nurse, size\+\_\+t P = Patient, enable\+\_\+if\+\_\+t$<$ N==0$\vert$$\vert$\+P==0, int $>$  = 0$>$ \\
+static void \mbox{\hyperlink{structpybind11_1_1detail_1_1process__attribute}{pybind11\+::detail\+::process\+\_\+attribute}}$<$ \mbox{\hyperlink{structpybind11_1_1keep__alive}{keep\+\_\+alive}}$<$ Nurse, \mbox{\hyperlink{namespacepybind11_1_1detail_aea77a49f75ac89645a479ae8562c6565}{Patient}} $>$ $>$\+::postcall (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpybind11_1_1detail_1_1function__call}{function\+\_\+call}} \&}]{call,  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{ret }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1process__attribute_3_01keep__alive_3_01_nurse_00_01_patient_01_4_01_4_afa04221c71a949e617c45c129e7dc8f5}\label{structpybind11_1_1detail_1_1process__attribute_3_01keep__alive_3_01_nurse_00_01_patient_01_4_01_4_afa04221c71a949e617c45c129e7dc8f5}} 
+\index{pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$@{pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$}!precall@{precall}}
+\index{precall@{precall}!pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$@{pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{precall()}{precall()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t Nurse, size\+\_\+t Patient$>$ \\
+template$<$size\+\_\+t N = Nurse, size\+\_\+t P = Patient, enable\+\_\+if\+\_\+t$<$ N==0$\vert$$\vert$\+P==0, int $>$  = 0$>$ \\
+static void \mbox{\hyperlink{structpybind11_1_1detail_1_1process__attribute}{pybind11\+::detail\+::process\+\_\+attribute}}$<$ \mbox{\hyperlink{structpybind11_1_1keep__alive}{keep\+\_\+alive}}$<$ Nurse, \mbox{\hyperlink{namespacepybind11_1_1detail_aea77a49f75ac89645a479ae8562c6565}{Patient}} $>$ $>$\+::precall (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpybind11_1_1detail_1_1function__call}{function\+\_\+call}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1process__attribute_3_01keep__alive_3_01_nurse_00_01_patient_01_4_01_4_a070196a560d82a5ac62ad275ca2503aa}\label{structpybind11_1_1detail_1_1process__attribute_3_01keep__alive_3_01_nurse_00_01_patient_01_4_01_4_a070196a560d82a5ac62ad275ca2503aa}} 
+\index{pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$@{pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$}!precall@{precall}}
+\index{precall@{precall}!pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$@{pybind11::detail::process\_attribute$<$ keep\_alive$<$ Nurse, Patient $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{precall()}{precall()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t Nurse, size\+\_\+t Patient$>$ \\
+template$<$size\+\_\+t N = Nurse, size\+\_\+t P = Patient, enable\+\_\+if\+\_\+t$<$ N !=0 \&\&\+P !=0, int $>$  = 0$>$ \\
+static void \mbox{\hyperlink{structpybind11_1_1detail_1_1process__attribute}{pybind11\+::detail\+::process\+\_\+attribute}}$<$ \mbox{\hyperlink{structpybind11_1_1keep__alive}{keep\+\_\+alive}}$<$ Nurse, \mbox{\hyperlink{namespacepybind11_1_1detail_aea77a49f75ac89645a479ae8562c6565}{Patient}} $>$ $>$\+::precall (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpybind11_1_1detail_1_1function__call}{function\+\_\+call}} \&}]{call }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{attr_8h}{attr.\+h}}\end{DoxyCompactItemize}

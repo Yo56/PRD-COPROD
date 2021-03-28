@@ -1,0 +1,166 @@
+\hypertarget{structpybind11_1_1detail_1_1instance}{}\doxysection{pybind11\+::detail\+::instance Struct Reference}
+\label{structpybind11_1_1detail_1_1instance}\index{pybind11::detail::instance@{pybind11::detail::instance}}
+
+
+The \textquotesingle{}instance\textquotesingle{} type which needs to be standard layout (need to be able to use \textquotesingle{}offsetof\textquotesingle{})  
+
+
+
+
+{\ttfamily \#include $<$common.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structpybind11_1_1detail_1_1instance_a4e87038aac7ab30d4fe6d55eeecdb28e}{allocate\+\_\+layout}} ()
+\begin{DoxyCompactList}\small\item\em Initializes all of the above type/values/holders data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structpybind11_1_1detail_1_1instance_ad702c1154fc949ef835ad01d8431b0f1}{deallocate\+\_\+layout}} ()
+\begin{DoxyCompactList}\small\item\em Destroys/deallocates all of the above. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1value__and__holder}{value\+\_\+and\+\_\+holder}} \mbox{\hyperlink{structpybind11_1_1detail_1_1instance_af4572097604480baa6e50178ff138193}{get\+\_\+value\+\_\+and\+\_\+holder}} (const \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info}{type\+\_\+info}} $\ast$find\+\_\+type=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>void $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1instance_acacd8310d732420ce47f63faafc580c1}{simple\_value\_holder}} \mbox{[}1+\mbox{\hyperlink{namespacepybind11_1_1detail_a4917e6f04e358a58f42892a941be3ce3}{instance\_simple\_holder\_in\_ptrs}}()\mbox{]}\\
+\>struct \{\\
+\>\>void $\ast$$\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1instance_adcbbf0bcd5cdf7797eff237fdac072fe}{values\_and\_holders}}\\
+\>\>bool $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1instance_a42aa25094b97dbba7d0913c5f5a1edf4}{holder\_constructed}}\\
+\>\} \mbox{\hyperlink{structpybind11_1_1detail_1_1instance_a6f2189faa41ccf0bb0a88d89b431cb50}{nonsimple}}\\
+\}; \\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em Storage for pointers and holder; see simple\+\_\+layout, below, for a description. \end{DoxyCompactList}\item 
+Py\+Object $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1instance_a3ad16c93d8c6a53b14f269ab4745c2c4}{weakrefs}}
+\begin{DoxyCompactList}\small\item\em Weak references (needed for keep alive)\+: \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1instance_a8a2005f2b03490c24273ac666219fe90}{owned}}\+: 1
+\begin{DoxyCompactList}\small\item\em If true, the pointer is owned which means we\textquotesingle{}re free to manage it with a holder. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1instance_a25b6f302c3797ba94ee06a9519f85ad5}{simple\+\_\+layout}}\+: 1
+\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1instance_acad9708259eee278d8f2743794acd71e}{simple\+\_\+holder\+\_\+constructed}}\+: 1
+\begin{DoxyCompactList}\small\item\em For simple layout, tracks whether the holder has been constructed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1instance_a63d97cb91e33886f8220c690f02ac760}{has\+\_\+patients}}\+: 1
+\begin{DoxyCompactList}\small\item\em If true, \mbox{\hyperlink{namespacepybind11_1_1detail_a32ba309d834c9384f019760a21d1213c}{get\+\_\+internals()}}.patients has an entry for this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \textquotesingle{}instance\textquotesingle{} type which needs to be standard layout (need to be able to use \textquotesingle{}offsetof\textquotesingle{}) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1instance_a4e87038aac7ab30d4fe6d55eeecdb28e}\label{structpybind11_1_1detail_1_1instance_a4e87038aac7ab30d4fe6d55eeecdb28e}} 
+\index{pybind11::detail::instance@{pybind11::detail::instance}!allocate\_layout@{allocate\_layout}}
+\index{allocate\_layout@{allocate\_layout}!pybind11::detail::instance@{pybind11::detail::instance}}
+\doxysubsubsection{\texorpdfstring{allocate\_layout()}{allocate\_layout()}}
+{\footnotesize\ttfamily void pybind11\+::detail\+::instance\+::allocate\+\_\+layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes all of the above type/values/holders data. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1instance_ad702c1154fc949ef835ad01d8431b0f1}\label{structpybind11_1_1detail_1_1instance_ad702c1154fc949ef835ad01d8431b0f1}} 
+\index{pybind11::detail::instance@{pybind11::detail::instance}!deallocate\_layout@{deallocate\_layout}}
+\index{deallocate\_layout@{deallocate\_layout}!pybind11::detail::instance@{pybind11::detail::instance}}
+\doxysubsubsection{\texorpdfstring{deallocate\_layout()}{deallocate\_layout()}}
+{\footnotesize\ttfamily void pybind11\+::detail\+::instance\+::deallocate\+\_\+layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys/deallocates all of the above. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1instance_af4572097604480baa6e50178ff138193}\label{structpybind11_1_1detail_1_1instance_af4572097604480baa6e50178ff138193}} 
+\index{pybind11::detail::instance@{pybind11::detail::instance}!get\_value\_and\_holder@{get\_value\_and\_holder}}
+\index{get\_value\_and\_holder@{get\_value\_and\_holder}!pybind11::detail::instance@{pybind11::detail::instance}}
+\doxysubsubsection{\texorpdfstring{get\_value\_and\_holder()}{get\_value\_and\_holder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpybind11_1_1detail_1_1value__and__holder}{value\+\_\+and\+\_\+holder}} pybind11\+::detail\+::instance\+::get\+\_\+value\+\_\+and\+\_\+holder (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info}{type\+\_\+info}} $\ast$}]{find\+\_\+type = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Returns the \mbox{\hyperlink{structpybind11_1_1detail_1_1value__and__holder}{value\+\_\+and\+\_\+holder}} wrapper for the given type (or the first, if {\ttfamily find\+\_\+type} omitted) 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1instance_a210077f71adb527ad5049c2b030208c1}\label{structpybind11_1_1detail_1_1instance_a210077f71adb527ad5049c2b030208c1}} 
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily Py\+Object\+\_\+\+HEAD \{ ... \} }
+
+
+
+Storage for pointers and holder; see simple\+\_\+layout, below, for a description. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1instance_a63d97cb91e33886f8220c690f02ac760}\label{structpybind11_1_1detail_1_1instance_a63d97cb91e33886f8220c690f02ac760}} 
+\index{pybind11::detail::instance@{pybind11::detail::instance}!has\_patients@{has\_patients}}
+\index{has\_patients@{has\_patients}!pybind11::detail::instance@{pybind11::detail::instance}}
+\doxysubsubsection{\texorpdfstring{has\_patients}{has\_patients}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::instance\+::has\+\_\+patients}
+
+
+
+If true, \mbox{\hyperlink{namespacepybind11_1_1detail_a32ba309d834c9384f019760a21d1213c}{get\+\_\+internals()}}.patients has an entry for this object. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1instance_a42aa25094b97dbba7d0913c5f5a1edf4}\label{structpybind11_1_1detail_1_1instance_a42aa25094b97dbba7d0913c5f5a1edf4}} 
+\index{pybind11::detail::instance@{pybind11::detail::instance}!holder\_constructed@{holder\_constructed}}
+\index{holder\_constructed@{holder\_constructed}!pybind11::detail::instance@{pybind11::detail::instance}}
+\doxysubsubsection{\texorpdfstring{holder\_constructed}{holder\_constructed}}
+{\footnotesize\ttfamily bool$\ast$ pybind11\+::detail\+::instance\+::holder\+\_\+constructed}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1instance_a6f2189faa41ccf0bb0a88d89b431cb50}\label{structpybind11_1_1detail_1_1instance_a6f2189faa41ccf0bb0a88d89b431cb50}} 
+\index{pybind11::detail::instance@{pybind11::detail::instance}!nonsimple@{nonsimple}}
+\index{nonsimple@{nonsimple}!pybind11::detail::instance@{pybind11::detail::instance}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily struct \{ ... \}  pybind11\+::detail\+::instance\+::nonsimple}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1instance_a8a2005f2b03490c24273ac666219fe90}\label{structpybind11_1_1detail_1_1instance_a8a2005f2b03490c24273ac666219fe90}} 
+\index{pybind11::detail::instance@{pybind11::detail::instance}!owned@{owned}}
+\index{owned@{owned}!pybind11::detail::instance@{pybind11::detail::instance}}
+\doxysubsubsection{\texorpdfstring{owned}{owned}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::instance\+::owned}
+
+
+
+If true, the pointer is owned which means we\textquotesingle{}re free to manage it with a holder. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1instance_acad9708259eee278d8f2743794acd71e}\label{structpybind11_1_1detail_1_1instance_acad9708259eee278d8f2743794acd71e}} 
+\index{pybind11::detail::instance@{pybind11::detail::instance}!simple\_holder\_constructed@{simple\_holder\_constructed}}
+\index{simple\_holder\_constructed@{simple\_holder\_constructed}!pybind11::detail::instance@{pybind11::detail::instance}}
+\doxysubsubsection{\texorpdfstring{simple\_holder\_constructed}{simple\_holder\_constructed}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::instance\+::simple\+\_\+holder\+\_\+constructed}
+
+
+
+For simple layout, tracks whether the holder has been constructed. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1instance_a25b6f302c3797ba94ee06a9519f85ad5}\label{structpybind11_1_1detail_1_1instance_a25b6f302c3797ba94ee06a9519f85ad5}} 
+\index{pybind11::detail::instance@{pybind11::detail::instance}!simple\_layout@{simple\_layout}}
+\index{simple\_layout@{simple\_layout}!pybind11::detail::instance@{pybind11::detail::instance}}
+\doxysubsubsection{\texorpdfstring{simple\_layout}{simple\_layout}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::instance\+::simple\+\_\+layout}
+
+An instance has two possible value/holder layouts.
+
+Simple layout (when this flag is true), means the {\ttfamily simple\+\_\+value\+\_\+holder} is set with a pointer and the holder object governing that pointer, i.\+e. \mbox{[}val1$\ast$\mbox{]}\mbox{[}holder\mbox{]}. This layout is applied whenever there is no python-\/side multiple inheritance of bound C++ types {\itshape and} the type\textquotesingle{}s holder will fit in the default space (which is large enough to hold either a std\+::unique\+\_\+ptr or std\+::shared\+\_\+ptr).
+
+Non-\/simple layout applies when using custom holders that require more space than {\ttfamily shared\+\_\+ptr} (which is typically the size of two pointers), or when multiple inheritance is used on the python side. Non-\/simple layout allocates the required amount of memory to have multiple bound C++ classes as parents. Under this layout, {\ttfamily nonsimple.\+values\+\_\+and\+\_\+holders} is set to a pointer to allocated space of the required space to hold a a sequence of value pointers and holders followed by a set of holder-\/constructed flags (1 byte each), i.\+e. \mbox{[}val1$\ast$\mbox{]}\mbox{[}holder1\mbox{]}\mbox{[}val2$\ast$\mbox{]}\mbox{[}holder2\mbox{]}...\mbox{[}bb...\mbox{]} where each \mbox{[}block\mbox{]} is rounded up to a multiple of {\ttfamily sizeof(void $\ast$)}. {\ttfamily nonsimple.\+holder\+\_\+constructed} is, for convenience, a pointer to the beginning of the \mbox{[}bb...\mbox{]} block (but not independently allocated). \mbox{\Hypertarget{structpybind11_1_1detail_1_1instance_acacd8310d732420ce47f63faafc580c1}\label{structpybind11_1_1detail_1_1instance_acacd8310d732420ce47f63faafc580c1}} 
+\index{pybind11::detail::instance@{pybind11::detail::instance}!simple\_value\_holder@{simple\_value\_holder}}
+\index{simple\_value\_holder@{simple\_value\_holder}!pybind11::detail::instance@{pybind11::detail::instance}}
+\doxysubsubsection{\texorpdfstring{simple\_value\_holder}{simple\_value\_holder}}
+{\footnotesize\ttfamily void$\ast$ pybind11\+::detail\+::instance\+::simple\+\_\+value\+\_\+holder\mbox{[}1+\mbox{\hyperlink{namespacepybind11_1_1detail_a4917e6f04e358a58f42892a941be3ce3}{instance\+\_\+simple\+\_\+holder\+\_\+in\+\_\+ptrs}}()\mbox{]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1instance_adcbbf0bcd5cdf7797eff237fdac072fe}\label{structpybind11_1_1detail_1_1instance_adcbbf0bcd5cdf7797eff237fdac072fe}} 
+\index{pybind11::detail::instance@{pybind11::detail::instance}!values\_and\_holders@{values\_and\_holders}}
+\index{values\_and\_holders@{values\_and\_holders}!pybind11::detail::instance@{pybind11::detail::instance}}
+\doxysubsubsection{\texorpdfstring{values\_and\_holders}{values\_and\_holders}}
+{\footnotesize\ttfamily void$\ast$$\ast$ pybind11\+::detail\+::instance\+::values\+\_\+and\+\_\+holders}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1instance_a3ad16c93d8c6a53b14f269ab4745c2c4}\label{structpybind11_1_1detail_1_1instance_a3ad16c93d8c6a53b14f269ab4745c2c4}} 
+\index{pybind11::detail::instance@{pybind11::detail::instance}!weakrefs@{weakrefs}}
+\index{weakrefs@{weakrefs}!pybind11::detail::instance@{pybind11::detail::instance}}
+\doxysubsubsection{\texorpdfstring{weakrefs}{weakrefs}}
+{\footnotesize\ttfamily Py\+Object$\ast$ pybind11\+::detail\+::instance\+::weakrefs}
+
+
+
+Weak references (needed for keep alive)\+: 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{common_8h}{common.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_third_party_pybind11__r_e_a_d_m_e" kind="page">
+    <compoundname>md_C__Users_nouet_Documents_Cours_5A_Dev_PRD_PrdCoprod_PrdCoprod_libs_xlnt_1_5_0_third_party_pybind11_README</compoundname>
+    <title>README</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><image type="html" name="https://github.com/pybind/pybind11/raw/master/docs/pybind11-logo.png" alt="pybind11 logo" inline="yes"></image>
+</para>
+<sect1 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_third_party_pybind11__r_e_a_d_m_e_1autotoc_md192">
+<title>pybind11 — Seamless operability between C++11 and Python</title>
+<para><ulink url="http://pybind11.readthedocs.org/en/master/?badge=master"><image type="html" name="https://readthedocs.org/projects/pybind11/badge/?version=master" alt="Documentation Status" inline="yes"></image>
+</ulink> <ulink url="http://pybind11.readthedocs.org/en/stable/?badge=stable"><image type="html" name="https://readthedocs.org/projects/pybind11/badge/?version=stable" alt="Documentation Status" inline="yes"></image>
+</ulink> <ulink url="https://gitter.im/pybind/Lobby"><image type="html" name="https://img.shields.io/gitter/room/gitterHQ/gitter.svg" alt="Gitter chat" inline="yes"></image>
+</ulink> <ulink url="https://travis-ci.org/pybind/pybind11"><image type="html" name="https://travis-ci.org/pybind/pybind11.svg?branch=master" alt="Build Status" inline="yes"></image>
+</ulink> <ulink url="https://ci.appveyor.com/project/wjakob/pybind11"><image type="html" name="https://ci.appveyor.com/api/projects/status/riaj54pn4h08xy40?svg=true" alt="Build status" inline="yes"></image>
+</ulink></para>
+<para><bold><ref refid="namespacepybind11" kindref="compound">pybind11</ref></bold> is a lightweight header-only library that exposes C++ types in Python and vice versa, mainly to create Python bindings of existing C++ code. Its goals and syntax are similar to the excellent <ulink url="http://www.boost.org/doc/libs/1_58_0/libs/python/doc/">Boost.Python</ulink> library by David Abrahams: to minimize boilerplate code in traditional extension modules by inferring type information using compile-time introspection.</para>
+<para>The main issue with Boost.Python—and the reason for creating such a similar project—is Boost. Boost is an enormously large and complex suite of utility libraries that works with almost every C++ compiler in existence. This compatibility has its cost: arcane template tricks and workarounds are necessary to support the oldest and buggiest of compiler specimens. Now that C++11-compatible compilers are widely available, this heavy machinery has become an excessively large and unnecessary dependency.</para>
+<para>Think of this library as a tiny self-contained version of Boost.Python with everything stripped away that isn&apos;t relevant for binding generation. Without comments, the core header files only require ~4K lines of code and depend on Python (2.7 or 3.x, or PyPy2.7 &gt;= 5.7) and the C++ standard library. This compact implementation was possible thanks to some of the new C++11 language features (specifically: tuples, lambda functions and variadic templates). Since its creation, this library has grown beyond Boost.Python in many ways, leading to dramatically simpler binding code in many common situations.</para>
+<para>Tutorial and reference documentation is provided at <ulink url="http://pybind11.readthedocs.org/en/master">http://pybind11.readthedocs.org/en/master</ulink>. A PDF version of the manual is available <ulink url="https://media.readthedocs.org/pdf/pybind11/master/pybind11.pdf">here</ulink>.</para>
+<sect2 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_third_party_pybind11__r_e_a_d_m_e_1autotoc_md193">
+<title>Core features</title>
+<para><ref refid="namespacepybind11" kindref="compound">pybind11</ref> can map the following core C++ features to Python</para>
+<para><itemizedlist>
+<listitem><para>Functions accepting and returning custom data structures per value, reference, or pointer</para>
+</listitem><listitem><para>Instance methods and static methods</para>
+</listitem><listitem><para>Overloaded functions</para>
+</listitem><listitem><para>Instance attributes and static attributes</para>
+</listitem><listitem><para>Arbitrary exception types</para>
+</listitem><listitem><para>Enumerations</para>
+</listitem><listitem><para>Callbacks</para>
+</listitem><listitem><para>Iterators and ranges</para>
+</listitem><listitem><para>Custom operators</para>
+</listitem><listitem><para>Single and multiple inheritance</para>
+</listitem><listitem><para>STL data structures</para>
+</listitem><listitem><para>Iterators and ranges</para>
+</listitem><listitem><para>Smart pointers with reference counting like <computeroutput>std::shared_ptr</computeroutput></para>
+</listitem><listitem><para>Internal references with correct reference counting</para>
+</listitem><listitem><para>C++ classes with virtual (and pure virtual) methods can be extended in Python</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_third_party_pybind11__r_e_a_d_m_e_1autotoc_md194">
+<title>Goodies</title>
+<para>In addition to the core functionality, <ref refid="namespacepybind11" kindref="compound">pybind11</ref> provides some extra goodies:</para>
+<para><itemizedlist>
+<listitem><para>Python 2.7, 3.x, and PyPy (PyPy2.7 &gt;= 5.7) are supported with an implementation-agnostic interface.</para>
+</listitem><listitem><para>It is possible to bind C++11 lambda functions with captured variables. The lambda capture data is stored inside the resulting Python function object.</para>
+</listitem><listitem><para><ref refid="namespacepybind11" kindref="compound">pybind11</ref> uses C++11 move constructors and move assignment operators whenever possible to efficiently transfer custom data types.</para>
+</listitem><listitem><para>It&apos;s easy to expose the internal storage of custom data types through Pythons&apos; buffer protocols. This is handy e.g. for fast conversion between C++ matrix classes like Eigen and NumPy without expensive copy operations.</para>
+</listitem><listitem><para><ref refid="namespacepybind11" kindref="compound">pybind11</ref> can automatically vectorize functions so that they are transparently applied to all entries of one or more NumPy array arguments.</para>
+</listitem><listitem><para>Python&apos;s slice-based access and assignment operations can be supported with just a few lines of code.</para>
+</listitem><listitem><para>Everything is contained in just a few header files; there is no need to link against any additional libraries.</para>
+</listitem><listitem><para>Binaries are generally smaller by a factor of at least 2 compared to equivalent bindings generated by Boost.Python. A recent <ref refid="namespacepybind11" kindref="compound">pybind11</ref> conversion of PyRosetta, an enormous Boost.Python binding project, <ulink url="http://graylab.jhu.edu/RosettaCon2016/PyRosetta-4.pdf">reported</ulink> a binary size reduction of <bold>5.4x</bold> and compile time reduction by <bold>5.8x</bold>.</para>
+</listitem><listitem><para>When supported by the compiler, two new C++14 features (relaxed constexpr and return value deduction) are used to precompute function signatures at compile time, leading to smaller binaries.</para>
+</listitem><listitem><para>With little extra effort, C++ types can be pickled and unpickled similar to regular Python objects.</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_third_party_pybind11__r_e_a_d_m_e_1autotoc_md195">
+<title>Supported compilers</title>
+<para><orderedlist>
+<listitem><para>Clang/LLVM 3.3 or newer (for Apple Xcode&apos;s clang, this is 5.0.0 or newer)</para>
+</listitem><listitem><para>GCC 4.8 or newer</para>
+</listitem><listitem><para>Microsoft Visual Studio 2015 Update 3 or newer</para>
+</listitem><listitem><para>Intel C++ compiler 16 or newer (15 with a <ulink url="https://github.com/pybind/pybind11/issues/276">workaround</ulink>)</para>
+</listitem><listitem><para>Cygwin/GCC (tested on 2.5.1)</para>
+</listitem></orderedlist>
+</para>
+</sect2>
+<sect2 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_third_party_pybind11__r_e_a_d_m_e_1autotoc_md196">
+<title>About</title>
+<para>This project was created by <ulink url="http://rgl.epfl.ch/people/wjakob">Wenzel Jakob</ulink>. Significant features and/or improvements to the code were contributed by Jonas Adler, Sylvain Corlay, Trent Houliston, Axel Huebl, @hulucc, Sergey Lyskov Johan Mabille, Tomasz Miąsko, Dean Moldovan, Ben Pritchard, Jason Rhinelander, Boris Schäling, Pim Schellart, Ivan Smirnov, and Patrick Stewart.</para>
+<sect3 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_third_party_pybind11__r_e_a_d_m_e_1autotoc_md197">
+<title>License</title>
+<para><ref refid="namespacepybind11" kindref="compound">pybind11</ref> is provided under a BSD-style license that can be found in the <computeroutput>LICENSE</computeroutput> file. By using, distributing, or contributing to this project, you agree to the terms and conditions of this license. </para>
+</sect3>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/README.md"/>
+  </compounddef>
+</doxygen>

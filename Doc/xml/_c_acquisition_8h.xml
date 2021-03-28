@@ -1,18 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
   <compounddef id="_c_acquisition_8h" kind="file" language="C++">
     <compoundname>CAcquisition.h</compoundname>
     <includes local="no">vector</includes>
-    <includes refid="_c_chantier_8h" local="yes">CChantier.h</includes>
-    <includes refid="_c_operation_8h" local="yes">COperation.h</includes>
-    <includedby refid="_c_acquisition_8cpp" local="yes">C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/CAcquisition.cpp</includedby>
+    <includes refid="_c_chantier_8h" local="yes">../Modele/CChantier.h</includes>
+    <includes refid="_c_operation_8h" local="yes">../Modele/COperation.h</includes>
+    <includedby refid="_c_acquisition_8cpp" local="yes">C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/Donnees/CAcquisition.cpp</includedby>
     <includedby refid="main_8cpp" local="yes">C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/main.cpp</includedby>
     <incdepgraph>
-      <node id="5">
-        <label>string</label>
-      </node>
       <node id="1">
-        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/CAcquisition.h</label>
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/Donnees/CAcquisition.h</label>
         <link refid="_c_acquisition_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -21,44 +18,47 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>CChantier.h</label>
-        <link refid="_c_chantier_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
+      <node id="5">
+        <label>string</label>
       </node>
       <node id="2">
         <label>vector</label>
       </node>
-      <node id="4">
-        <label>iostream</label>
-      </node>
       <node id="6">
-        <label>COperation.h</label>
+        <label>../Modele/COperation.h</label>
         <link refid="_c_operation_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
+      <node id="3">
+        <label>../Modele/CChantier.h</label>
+        <link refid="_c_chantier_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3">
-        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/main.cpp</label>
-        <link refid="main_8cpp"/>
-      </node>
       <node id="1">
-        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/CAcquisition.h</label>
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/Donnees/CAcquisition.h</label>
         <link refid="_c_acquisition_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+      <node id="3">
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
       <node id="2">
-        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/CAcquisition.cpp</label>
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/Donnees/CAcquisition.cpp</label>
         <link refid="_c_acquisition_8cpp"/>
       </node>
     </invincdepgraph>
@@ -77,23 +77,24 @@
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_c_chantier_8h" kindref="compound">CChantier.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_c_operation_8h" kindref="compound">COperation.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="class_c_acquisition" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_acquisition" kindref="compound">CAcquisition</ref></highlight></codeline>
-<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>vector&lt;CChantier&gt;<sp/>chantiers(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>path);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>vector&lt;COperation&gt;<sp/>operations(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>path);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Modele/CChantier.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Modele/COperation.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_c_acquisition" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_acquisition" kindref="compound">CAcquisition</ref></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>vector&lt;CChantier&gt;<sp/>chantiers(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>path);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>vector&lt;COperation&gt;<sp/>operations(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>path);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/CAcquisition.h"/>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/Donnees/CAcquisition.h"/>
   </compounddef>
 </doxygen>

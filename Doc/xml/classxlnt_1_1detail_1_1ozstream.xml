@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classxlnt_1_1detail_1_1ozstream" kind="class" language="C++" prot="public">
+    <compoundname>xlnt::detail::ozstream</compoundname>
+    <includes refid="zstream_8hpp" local="no">zstream.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1ozstream_1aa8ad82f9b5209bafe7589073c1189f9f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structxlnt_1_1detail_1_1zheader" kindref="compound">zheader</ref> &gt;</type>
+        <definition>std::vector&lt;zheader&gt; xlnt::detail::ozstream::file_headers_</definition>
+        <argsstring></argsstring>
+        <name>file_headers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/zstream.hpp" line="94" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/zstream.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1ozstream_1ae8739dd7cc6e3504edc422fb9e8c9c2f" prot="private" static="no" mutable="no">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; xlnt::detail::ozstream::destination_stream_</definition>
+        <argsstring></argsstring>
+        <name>destination_stream_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/zstream.hpp" line="95" column="18" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/zstream.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1ozstream_1ab8f64f5a540dadd49e051d10437c5500" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::detail::ozstream::ozstream</definition>
+        <argsstring>(std::ostream &amp;stream)</argsstring>
+        <name>ozstream</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new zip_file_writer which writes a ZIP archive to the given stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/zstream.hpp" line="81" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/zstream.cpp" bodystart="447" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1ozstream_1a274bbf5453a04db65af0c1377bd60cae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>xlnt::detail::ozstream::~ozstream</definition>
+        <argsstring>()</argsstring>
+        <name>~ozstream</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/zstream.hpp" line="86" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/zstream.cpp" bodystart="456" bodyend="477"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1ozstream_1a76e256952655849d908078f81d03e2de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unique_ptr&lt; std::streambuf &gt;</type>
+        <definition>std::unique_ptr&lt; std::streambuf &gt; xlnt::detail::ozstream::open</definition>
+        <argsstring>(const path &amp;file)</argsstring>
+        <name>open</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Returns a pointer to a streambuf which compresses the data it receives. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/zstream.hpp" line="91" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/zstream.cpp" bodystart="479" bodyend="487"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Writes a series of uncompressed binary file data as ostreams into another ostream according to the ZIP format. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/zstream.hpp" line="75" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/zstream.hpp" bodystart="76" bodyend="96"/>
+    <listofallmembers>
+      <member refid="classxlnt_1_1detail_1_1ozstream_1ae8739dd7cc6e3504edc422fb9e8c9c2f" prot="private" virt="non-virtual"><scope>xlnt::detail::ozstream</scope><name>destination_stream_</name></member>
+      <member refid="classxlnt_1_1detail_1_1ozstream_1aa8ad82f9b5209bafe7589073c1189f9f" prot="private" virt="non-virtual"><scope>xlnt::detail::ozstream</scope><name>file_headers_</name></member>
+      <member refid="classxlnt_1_1detail_1_1ozstream_1a76e256952655849d908078f81d03e2de" prot="public" virt="non-virtual"><scope>xlnt::detail::ozstream</scope><name>open</name></member>
+      <member refid="classxlnt_1_1detail_1_1ozstream_1ab8f64f5a540dadd49e051d10437c5500" prot="public" virt="non-virtual"><scope>xlnt::detail::ozstream</scope><name>ozstream</name></member>
+      <member refid="classxlnt_1_1detail_1_1ozstream_1a274bbf5453a04db65af0c1377bd60cae" prot="public" virt="virtual"><scope>xlnt::detail::ozstream</scope><name>~ozstream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="reader_8cpp" kind="file" language="C++">
+    <compoundname>reader.cpp</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">import</highlight><highlight class="normal"><sp/>os</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sys</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>timeit</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>openpyxl</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">def<sp/>reader(optimised):</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="10"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Loop<sp/>through<sp/>all<sp/>cells<sp/>of<sp/>a<sp/>workbook</highlight></codeline>
+<codeline lineno="11"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>folder<sp/>=<sp/>os.path.split(__file__)[0]</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>src<sp/>=<sp/>os.path.join(folder,<sp/></highlight><highlight class="stringliteral">&quot;files&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;very_large.xlsx&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>wb<sp/>=<sp/>openpyxl.load_workbook(src,<sp/>use_iterators=optimised)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>ws<sp/>=<sp/>wb.active</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>rows<sp/>=<sp/>ws.iter_rows()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a624a1a1288a51bfa1150e642694eca0c" kindref="member">for</ref><sp/>r,<sp/><ref refid="page__setup_8hpp_1ad42e2d1ad172100a2cd1338656cf0425" kindref="member">row</ref><sp/>in<sp/>enumerate(rows):</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a624a1a1288a51bfa1150e642694eca0c" kindref="member">for</ref><sp/>c,<sp/>col<sp/>in<sp/>enumerate(<ref refid="page__setup_8hpp_1ad42e2d1ad172100a2cd1338656cf0425" kindref="member">row</ref>):</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pass</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1a913a30079a57934b1bfda83ba4080da4" kindref="member">print</ref>((r+1)*<sp/>(c+1),<sp/></highlight><highlight class="stringliteral">&quot;cells&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">def<sp/>timer(fn):</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="24"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Create<sp/>a<sp/>timeit<sp/>call<sp/>to<sp/>a<sp/>function<sp/>and<sp/>pass<sp/>in<sp/>keyword<sp/>arguments.</highlight></codeline>
+<codeline lineno="25"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>The<sp/>function<sp/>is<sp/>called<sp/>twice,<sp/>once<sp/>using<sp/>the<sp/>standard<sp/>workbook,<sp/>then<sp/>with<sp/>the<sp/>optimised<sp/>one.</highlight></codeline>
+<codeline lineno="26"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Time<sp/>from<sp/>the<sp/>best<sp/>of<sp/>three<sp/>is<sp/>taken.</highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1a913a30079a57934b1bfda83ba4080da4" kindref="member">print</ref>(</highlight><highlight class="stringliteral">&quot;lxml&quot;</highlight><highlight class="normal">,<sp/>openpyxl.LXML)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a624a1a1288a51bfa1150e642694eca0c" kindref="member">for</ref><sp/>opt<sp/>in<sp/>(<ref refid="genx_8c_1a306ebd41c0cd1303b1372c6153f0caf8" kindref="member">False</ref>,<sp/><ref refid="genx_8c_1add3ca9eefe3b5b754426f51d3043e579" kindref="member">True</ref>,):</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1a913a30079a57934b1bfda83ba4080da4" kindref="member">print</ref>(</highlight><highlight class="stringliteral">&quot;Workbook<sp/>is<sp/>{0}&quot;</highlight><highlight class="normal">.format(opt<sp/>and<sp/></highlight><highlight class="stringliteral">&quot;optimised&quot;</highlight><highlight class="normal"><sp/>or<sp/></highlight><highlight class="stringliteral">&quot;not<sp/>optimised&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>times<sp/>=<sp/>timeit.repeat(</highlight><highlight class="stringliteral">&quot;{0}({1})&quot;</highlight><highlight class="normal">.format(fn.__name__,<sp/>opt),</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesetup" kindref="compound">setup</ref>=</highlight><highlight class="stringliteral">&quot;from<sp/>__main__<sp/>import<sp/>{0}&quot;</highlight><highlight class="normal">.format(fn.__name__),</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cell__type_8hpp_1af31813e2131200936cf54234db95808d" kindref="member">number</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>repeat<sp/>=<sp/>3</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1a913a30079a57934b1bfda83ba4080da4" kindref="member">print</ref>(</highlight><highlight class="stringliteral">&quot;{0:.2f}s&quot;</highlight><highlight class="normal">.format(<ref refid="namespacexlnt_1_1detail_1ab4626c34c3d8bbd270e96c4b8700ad4e" kindref="member">min</ref>(times)))</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result.<ref refid="namespaceutf8_1a3827e78596fc38cfdebd721e9c45c901" kindref="member">append</ref>(<ref refid="namespacexlnt_1_1detail_1ab4626c34c3d8bbd270e96c4b8700ad4e" kindref="member">min</ref>(times))</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacestd" kindref="compound">std</ref>,<sp/>opt<sp/>=<sp/>result</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1a913a30079a57934b1bfda83ba4080da4" kindref="member">print</ref>(</highlight><highlight class="stringliteral">&quot;Optimised<sp/>takes<sp/>{0:.2%}<sp/>time\n&quot;</highlight><highlight class="normal">.format(opt/<ref refid="namespacestd" kindref="compound">std</ref>))</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/><ref refid="namespacestd" kindref="compound">std</ref>,<sp/>opt</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="namespacepybind11_1_1detail_1a18e02562143ea02421e635c169e2b8c3" kindref="member">if</ref><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;__main__&quot;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>timer(reader)</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/benchmarks/disabled/reader.cpp"/>
+  </compounddef>
+</doxygen>

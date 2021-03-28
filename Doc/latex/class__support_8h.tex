@@ -1,273 +1,69 @@
 \hypertarget{class__support_8h}{}\doxysection{C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.5.0/third-\/party/pybind11/include/pybind11/class\+\_\+support.h File Reference}
 \label{class__support_8h}\index{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/pybind11/include/pybind11/class\_support.h@{C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-\/1.5.0/third-\/party/pybind11/include/pybind11/class\_support.h}}
 {\ttfamily \#include \char`\"{}attr.\+h\char`\"{}}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacepybind11}{pybind11}}
+\begin{DoxyCompactList}\small\item\em glibc defines I as a macro which breaks things, e.\+g., boost template names \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacepybind11_1_1detail}{pybind11\+::detail}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-Py\+Type\+Object $\ast$ \mbox{\hyperlink{class__support_8h_a308600e9d148ac132caaa4c0637b6559}{type\+\_\+incref}} (Py\+Type\+Object $\ast$type)
+Py\+Type\+Object $\ast$ \mbox{\hyperlink{namespacepybind11_1_1detail_a5baa19168451e7acf7a909b8a1b55206}{pybind11\+::detail\+::type\+\_\+incref}} (Py\+Type\+Object $\ast$type)
 \item 
-Py\+Object $\ast$ \mbox{\hyperlink{class__support_8h_a2efe954cedce4c8deb7a2db9ab874803}{pybind11\+\_\+static\+\_\+get}} (Py\+Object $\ast$self, Py\+Object $\ast$, Py\+Object $\ast$cls)
+Py\+Object $\ast$ \mbox{\hyperlink{namespacepybind11_1_1detail_a55271caa4d22851a3aa599de2e5f63ea}{pybind11\+::detail\+::pybind11\+\_\+static\+\_\+get}} (Py\+Object $\ast$self, Py\+Object $\ast$, Py\+Object $\ast$cls)
 \begin{DoxyCompactList}\small\item\em {\ttfamily pybind11\+\_\+static\+\_\+property.\+\_\+\+\_\+get\+\_\+\+\_\+()}\+: Always pass the class instead of the instance. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class__support_8h_a390e869f7c6120e463bd5c4db7a6c12d}{pybind11\+\_\+static\+\_\+set}} (Py\+Object $\ast$self, Py\+Object $\ast$obj, Py\+Object $\ast$value)
+int \mbox{\hyperlink{namespacepybind11_1_1detail_a318f14520900d1d6763501b50cbefd1f}{pybind11\+::detail\+::pybind11\+\_\+static\+\_\+set}} (Py\+Object $\ast$self, Py\+Object $\ast$obj, Py\+Object $\ast$value)
 \begin{DoxyCompactList}\small\item\em {\ttfamily pybind11\+\_\+static\+\_\+property.\+\_\+\+\_\+set\+\_\+\+\_\+()}\+: Just like the above {\ttfamily \+\_\+\+\_\+get\+\_\+\+\_\+()}. \end{DoxyCompactList}\item 
-Py\+Type\+Object $\ast$ \mbox{\hyperlink{class__support_8h_aaea95bf4b1207c83bfbe863e5f7abe6e}{make\+\_\+static\+\_\+property\+\_\+type}} ()
+Py\+Type\+Object $\ast$ \mbox{\hyperlink{namespacepybind11_1_1detail_aee7739636a3f44597b68656d476bb41e}{pybind11\+::detail\+::make\+\_\+static\+\_\+property\+\_\+type}} ()
 \item 
-int \mbox{\hyperlink{class__support_8h_a7a2d1b9a42df823366b438980fadb488}{pybind11\+\_\+meta\+\_\+setattro}} (Py\+Object $\ast$obj, Py\+Object $\ast$\mbox{\hyperlink{structname}{name}}, Py\+Object $\ast$value)
+int \mbox{\hyperlink{namespacepybind11_1_1detail_af890f322200bd699e7aaa8da55a97428}{pybind11\+::detail\+::pybind11\+\_\+meta\+\_\+setattro}} (Py\+Object $\ast$obj, Py\+Object $\ast$name, Py\+Object $\ast$value)
 \item 
-Py\+Type\+Object $\ast$ \mbox{\hyperlink{class__support_8h_abccd2a99616e0a3725f8ebae7a23bd3e}{make\+\_\+default\+\_\+metaclass}} ()
+Py\+Type\+Object $\ast$ \mbox{\hyperlink{namespacepybind11_1_1detail_ae99453a6a2f0d9cfa4bc1500a150e016}{pybind11\+::detail\+::make\+\_\+default\+\_\+metaclass}} ()
 \item 
-void \mbox{\hyperlink{class__support_8h_ad9b07afb9ab14dab442a1ca53387f4ad}{traverse\+\_\+offset\+\_\+bases}} (void $\ast$valueptr, const detail\+::type\+\_\+info $\ast$tinfo, \mbox{\hyperlink{structinstance}{instance}} $\ast$self, bool($\ast$f)(void $\ast$, \mbox{\hyperlink{structinstance}{instance}} $\ast$))
+void \mbox{\hyperlink{namespacepybind11_1_1detail_a67d4396e43eb0554341545e975e11deb}{pybind11\+::detail\+::traverse\+\_\+offset\+\_\+bases}} (void $\ast$valueptr, const detail\+::type\+\_\+info $\ast$tinfo, instance $\ast$self, bool($\ast$f)(void $\ast$, instance $\ast$))
 \item 
-bool \mbox{\hyperlink{class__support_8h_acf395803278f6801196c9605e84e8c6e}{register\+\_\+instance\+\_\+impl}} (void $\ast$ptr, \mbox{\hyperlink{structinstance}{instance}} $\ast$self)
+bool \mbox{\hyperlink{namespacepybind11_1_1detail_ace567a86d547556a42a9c328253dcf89}{pybind11\+::detail\+::register\+\_\+instance\+\_\+impl}} (void $\ast$ptr, instance $\ast$self)
 \item 
-bool \mbox{\hyperlink{class__support_8h_ab53cc81121d4b87ebbbb3722756ebe92}{deregister\+\_\+instance\+\_\+impl}} (void $\ast$ptr, \mbox{\hyperlink{structinstance}{instance}} $\ast$self)
+bool \mbox{\hyperlink{namespacepybind11_1_1detail_a5f6df2076eb919963d91679e93e7659b}{pybind11\+::detail\+::deregister\+\_\+instance\+\_\+impl}} (void $\ast$ptr, instance $\ast$self)
 \item 
-void \mbox{\hyperlink{class__support_8h_a6dd9d77b6860f791d6c520484f039da9}{register\+\_\+instance}} (\mbox{\hyperlink{structinstance}{instance}} $\ast$self, void $\ast$valptr, const \mbox{\hyperlink{structtype__info}{type\+\_\+info}} $\ast$tinfo)
+void \mbox{\hyperlink{namespacepybind11_1_1detail_a9c191f1b7b78275ca2aaec29008f3b02}{pybind11\+::detail\+::register\+\_\+instance}} (instance $\ast$self, void $\ast$valptr, const type\+\_\+info $\ast$tinfo)
 \item 
-bool \mbox{\hyperlink{class__support_8h_a50304f7593df56fd5e2def288643653f}{deregister\+\_\+instance}} (\mbox{\hyperlink{structinstance}{instance}} $\ast$self, void $\ast$valptr, const \mbox{\hyperlink{structtype__info}{type\+\_\+info}} $\ast$tinfo)
+bool \mbox{\hyperlink{namespacepybind11_1_1detail_a501f56bb31293adc9497e08f0c27bd95}{pybind11\+::detail\+::deregister\+\_\+instance}} (instance $\ast$self, void $\ast$valptr, const type\+\_\+info $\ast$tinfo)
 \item 
-Py\+Object $\ast$ \mbox{\hyperlink{class__support_8h_a66723f5caa45263d1952931756896289}{make\+\_\+new\+\_\+instance}} (Py\+Type\+Object $\ast$type, bool allocate\+\_\+value)
+Py\+Object $\ast$ \mbox{\hyperlink{namespacepybind11_1_1detail_a6295a3814da747beecb99da3095ddb00}{pybind11\+::detail\+::make\+\_\+new\+\_\+instance}} (Py\+Type\+Object $\ast$type, bool allocate\+\_\+value=true)
 \item 
-Py\+Object $\ast$ \mbox{\hyperlink{class__support_8h_a004e9fb1b59c81f056d9fd039e29400f}{pybind11\+\_\+object\+\_\+new}} (Py\+Type\+Object $\ast$type, Py\+Object $\ast$, Py\+Object $\ast$)
+Py\+Object $\ast$ \mbox{\hyperlink{namespacepybind11_1_1detail_acdfc8125a018f1d1b47a8dec119cf17d}{pybind11\+::detail\+::pybind11\+\_\+object\+\_\+new}} (Py\+Type\+Object $\ast$type, Py\+Object $\ast$, Py\+Object $\ast$)
 \item 
-int \mbox{\hyperlink{class__support_8h_a44b3a6702982c09e74d9db412a6dd3c3}{pybind11\+\_\+object\+\_\+init}} (Py\+Object $\ast$self, Py\+Object $\ast$, Py\+Object $\ast$)
+int \mbox{\hyperlink{namespacepybind11_1_1detail_a21c40030f5a35e6135753ba25dc5fbe4}{pybind11\+::detail\+::pybind11\+\_\+object\+\_\+init}} (Py\+Object $\ast$self, Py\+Object $\ast$, Py\+Object $\ast$)
 \item 
-void \mbox{\hyperlink{class__support_8h_ad51f8b39fe425fd3d4cb873ad3e59999}{add\+\_\+patient}} (Py\+Object $\ast$nurse, Py\+Object $\ast$patient)
+void \mbox{\hyperlink{namespacepybind11_1_1detail_af62c3b270c006fce8eb96756ca0c3979}{pybind11\+::detail\+::add\+\_\+patient}} (Py\+Object $\ast$nurse, Py\+Object $\ast$patient)
 \item 
-void \mbox{\hyperlink{class__support_8h_a4a2af2ab16d6d444f7142b9b4485cb43}{clear\+\_\+patients}} (Py\+Object $\ast$self)
+void \mbox{\hyperlink{namespacepybind11_1_1detail_a3c1bddfa3d772a31c75b6a294c59198c}{pybind11\+::detail\+::clear\+\_\+patients}} (Py\+Object $\ast$self)
 \item 
-void \mbox{\hyperlink{class__support_8h_a66c13496282e829d83ba0711a10363a8}{clear\+\_\+instance}} (Py\+Object $\ast$self)
+void \mbox{\hyperlink{namespacepybind11_1_1detail_a55470ea4fc479575fcc487f3818de75b}{pybind11\+::detail\+::clear\+\_\+instance}} (Py\+Object $\ast$self)
 \item 
-void \mbox{\hyperlink{class__support_8h_a629cca75d875fdd8b55c5a3a7cd33cdb}{pybind11\+\_\+object\+\_\+dealloc}} (Py\+Object $\ast$self)
+void \mbox{\hyperlink{namespacepybind11_1_1detail_a06542d285d3812cea1e7b26008360912}{pybind11\+::detail\+::pybind11\+\_\+object\+\_\+dealloc}} (Py\+Object $\ast$self)
 \item 
-Py\+Object $\ast$ \mbox{\hyperlink{class__support_8h_a891ba5da5fdb0fa713f95b70602075c5}{make\+\_\+object\+\_\+base\+\_\+type}} (Py\+Type\+Object $\ast$\mbox{\hyperlink{structmetaclass}{metaclass}})
+Py\+Object $\ast$ \mbox{\hyperlink{namespacepybind11_1_1detail_a4aad17fe209f5c6187910481e33654f1}{pybind11\+::detail\+::make\+\_\+object\+\_\+base\+\_\+type}} (Py\+Type\+Object $\ast$metaclass)
 \item 
-Py\+Object $\ast$ \mbox{\hyperlink{class__support_8h_a5fdd18aca0f944f6dc5942e193cd6898}{pybind11\+\_\+get\+\_\+dict}} (Py\+Object $\ast$self, void $\ast$)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structdynamic__attr}{dynamic\+\_\+attr}}\+: Support for {\ttfamily d = instance.\+\_\+\+\_\+dict\+\_\+\+\_\+}. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class__support_8h_a76dda6430b9e8261f24329fe7cf8b49e}{pybind11\+\_\+set\+\_\+dict}} (Py\+Object $\ast$self, Py\+Object $\ast$new\+\_\+dict, void $\ast$)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structdynamic__attr}{dynamic\+\_\+attr}}\+: Support for {\ttfamily instance.\+\_\+\+\_\+dict\+\_\+\+\_\+ = \mbox{\hyperlink{classdict}{dict()}}}. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class__support_8h_a8015cabe7bb9709326f4d539a7788d7a}{pybind11\+\_\+traverse}} (Py\+Object $\ast$self, visitproc visit, void $\ast$\mbox{\hyperlink{structarg}{arg}})
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structdynamic__attr}{dynamic\+\_\+attr}}\+: Allow the garbage collector to traverse the internal instance {\ttfamily \+\_\+\+\_\+dict\+\_\+\+\_\+}. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class__support_8h_a5fa8056059587b7581c706f21022be16}{pybind11\+\_\+clear}} (Py\+Object $\ast$self)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structdynamic__attr}{dynamic\+\_\+attr}}\+: Allow the GC to clear the dictionary. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class__support_8h_a77922dc479edfaafa2b14f1bc9258965}{enable\+\_\+dynamic\+\_\+attributes}} (Py\+Heap\+Type\+Object $\ast$heap\+\_\+type)
+Py\+Object $\ast$ \mbox{\hyperlink{namespacepybind11_1_1detail_a6a31a52104ee526197fe3414f7a40112}{pybind11\+::detail\+::pybind11\+\_\+get\+\_\+dict}} (Py\+Object $\ast$self, void $\ast$)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structpybind11_1_1dynamic__attr}{dynamic\+\_\+attr}}\+: Support for {\ttfamily d = instance.\+\_\+\+\_\+dict\+\_\+\+\_\+}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacepybind11_1_1detail_a8609cf12c865ed20300a29d94a97ff1a}{pybind11\+::detail\+::pybind11\+\_\+set\+\_\+dict}} (Py\+Object $\ast$self, Py\+Object $\ast$new\+\_\+dict, void $\ast$)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structpybind11_1_1dynamic__attr}{dynamic\+\_\+attr}}\+: Support for {\ttfamily instance.\+\_\+\+\_\+dict\+\_\+\+\_\+ = dict()}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacepybind11_1_1detail_a1c0811ba6263b5d434f0754e5712ba4d}{pybind11\+::detail\+::pybind11\+\_\+traverse}} (Py\+Object $\ast$self, visitproc visit, void $\ast$arg)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structpybind11_1_1dynamic__attr}{dynamic\+\_\+attr}}\+: Allow the garbage collector to traverse the internal instance {\ttfamily \+\_\+\+\_\+dict\+\_\+\+\_\+}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacepybind11_1_1detail_af6d2c92603e911e84148a7c1a2ce1602}{pybind11\+::detail\+::pybind11\+\_\+clear}} (Py\+Object $\ast$self)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structpybind11_1_1dynamic__attr}{dynamic\+\_\+attr}}\+: Allow the GC to clear the dictionary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacepybind11_1_1detail_a37231709e183633480c3b06e22e70de3}{pybind11\+::detail\+::enable\+\_\+dynamic\+\_\+attributes}} (Py\+Heap\+Type\+Object $\ast$heap\+\_\+type)
 \begin{DoxyCompactList}\small\item\em Give instances of this type a {\ttfamily \+\_\+\+\_\+dict\+\_\+\+\_\+} and opt into garbage collection. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class__support_8h_ae0f8b9ed2890d4fdfe2b3d903dbb1617}{pybind11\+\_\+getbuffer}} (Py\+Object $\ast$obj, Py\+\_\+buffer $\ast$view, int flags)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structbuffer__protocol}{buffer\+\_\+protocol}}\+: Fill in the view as specified by flags. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class__support_8h_a588422e2b384d74aa115a77c906221d2}{pybind11\+\_\+releasebuffer}} (Py\+Object $\ast$, Py\+\_\+buffer $\ast$view)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structbuffer__protocol}{buffer\+\_\+protocol}}\+: Release the resources of the buffer. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class__support_8h_a0432e7f16ca8c60833fd9a0ac3ccc1a7}{enable\+\_\+buffer\+\_\+protocol}} (Py\+Heap\+Type\+Object $\ast$heap\+\_\+type)
+int \mbox{\hyperlink{namespacepybind11_1_1detail_a955088dd65826639036cbc0d5886956c}{pybind11\+::detail\+::pybind11\+\_\+getbuffer}} (Py\+Object $\ast$obj, Py\+\_\+buffer $\ast$view, int flags)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structpybind11_1_1buffer__protocol}{buffer\+\_\+protocol}}\+: Fill in the view as specified by flags. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacepybind11_1_1detail_a25d421a8dfae2015037edd61590a7374}{pybind11\+::detail\+::pybind11\+\_\+releasebuffer}} (Py\+Object $\ast$, Py\+\_\+buffer $\ast$view)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structpybind11_1_1buffer__protocol}{buffer\+\_\+protocol}}\+: Release the resources of the buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacepybind11_1_1detail_a5ac12a1c623a584e2a6b275e9793b3e6}{pybind11\+::detail\+::enable\+\_\+buffer\+\_\+protocol}} (Py\+Heap\+Type\+Object $\ast$heap\+\_\+type)
 \begin{DoxyCompactList}\small\item\em Give this type a buffer interface. \end{DoxyCompactList}\item 
-Py\+Object $\ast$ \mbox{\hyperlink{class__support_8h_aaa85f1a8dc05ca44a68ff94d5a6faff2}{make\+\_\+new\+\_\+python\+\_\+type}} (const \mbox{\hyperlink{structtype__record}{type\+\_\+record}} \&rec)
+Py\+Object $\ast$ \mbox{\hyperlink{namespacepybind11_1_1detail_a0fe1a62ca38562fd83993b3abf9c49fd}{pybind11\+::detail\+::make\+\_\+new\+\_\+python\+\_\+type}} (const type\+\_\+record \&rec)
 \end{DoxyCompactItemize}
-
-
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{class__support_8h_ad51f8b39fe425fd3d4cb873ad3e59999}\label{class__support_8h_ad51f8b39fe425fd3d4cb873ad3e59999}} 
-\index{class\_support.h@{class\_support.h}!add\_patient@{add\_patient}}
-\index{add\_patient@{add\_patient}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{add\_patient()}{add\_patient()}}
-{\footnotesize\ttfamily void add\+\_\+patient (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{nurse,  }\item[{Py\+Object $\ast$}]{patient }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{class__support_8h_a66c13496282e829d83ba0711a10363a8}\label{class__support_8h_a66c13496282e829d83ba0711a10363a8}} 
-\index{class\_support.h@{class\_support.h}!clear\_instance@{clear\_instance}}
-\index{clear\_instance@{clear\_instance}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{clear\_instance()}{clear\_instance()}}
-{\footnotesize\ttfamily void clear\+\_\+instance (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-Clears all internal data from the instance and removes it from registered instances in preparation for deallocation. \mbox{\Hypertarget{class__support_8h_a4a2af2ab16d6d444f7142b9b4485cb43}\label{class__support_8h_a4a2af2ab16d6d444f7142b9b4485cb43}} 
-\index{class\_support.h@{class\_support.h}!clear\_patients@{clear\_patients}}
-\index{clear\_patients@{clear\_patients}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{clear\_patients()}{clear\_patients()}}
-{\footnotesize\ttfamily void clear\+\_\+patients (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{class__support_8h_a50304f7593df56fd5e2def288643653f}\label{class__support_8h_a50304f7593df56fd5e2def288643653f}} 
-\index{class\_support.h@{class\_support.h}!deregister\_instance@{deregister\_instance}}
-\index{deregister\_instance@{deregister\_instance}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{deregister\_instance()}{deregister\_instance()}}
-{\footnotesize\ttfamily bool deregister\+\_\+instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structinstance}{instance}} $\ast$}]{self,  }\item[{void $\ast$}]{valptr,  }\item[{const \mbox{\hyperlink{structtype__info}{type\+\_\+info}} $\ast$}]{tinfo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{class__support_8h_ab53cc81121d4b87ebbbb3722756ebe92}\label{class__support_8h_ab53cc81121d4b87ebbbb3722756ebe92}} 
-\index{class\_support.h@{class\_support.h}!deregister\_instance\_impl@{deregister\_instance\_impl}}
-\index{deregister\_instance\_impl@{deregister\_instance\_impl}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{deregister\_instance\_impl()}{deregister\_instance\_impl()}}
-{\footnotesize\ttfamily bool deregister\+\_\+instance\+\_\+impl (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{structinstance}{instance}} $\ast$}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{class__support_8h_a0432e7f16ca8c60833fd9a0ac3ccc1a7}\label{class__support_8h_a0432e7f16ca8c60833fd9a0ac3ccc1a7}} 
-\index{class\_support.h@{class\_support.h}!enable\_buffer\_protocol@{enable\_buffer\_protocol}}
-\index{enable\_buffer\_protocol@{enable\_buffer\_protocol}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{enable\_buffer\_protocol()}{enable\_buffer\_protocol()}}
-{\footnotesize\ttfamily void enable\+\_\+buffer\+\_\+protocol (\begin{DoxyParamCaption}\item[{Py\+Heap\+Type\+Object $\ast$}]{heap\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Give this type a buffer interface. 
-
-\mbox{\Hypertarget{class__support_8h_a77922dc479edfaafa2b14f1bc9258965}\label{class__support_8h_a77922dc479edfaafa2b14f1bc9258965}} 
-\index{class\_support.h@{class\_support.h}!enable\_dynamic\_attributes@{enable\_dynamic\_attributes}}
-\index{enable\_dynamic\_attributes@{enable\_dynamic\_attributes}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{enable\_dynamic\_attributes()}{enable\_dynamic\_attributes()}}
-{\footnotesize\ttfamily void enable\+\_\+dynamic\+\_\+attributes (\begin{DoxyParamCaption}\item[{Py\+Heap\+Type\+Object $\ast$}]{heap\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Give instances of this type a {\ttfamily \+\_\+\+\_\+dict\+\_\+\+\_\+} and opt into garbage collection. 
-
-\mbox{\Hypertarget{class__support_8h_abccd2a99616e0a3725f8ebae7a23bd3e}\label{class__support_8h_abccd2a99616e0a3725f8ebae7a23bd3e}} 
-\index{class\_support.h@{class\_support.h}!make\_default\_metaclass@{make\_default\_metaclass}}
-\index{make\_default\_metaclass@{make\_default\_metaclass}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{make\_default\_metaclass()}{make\_default\_metaclass()}}
-{\footnotesize\ttfamily Py\+Type\+Object$\ast$ make\+\_\+default\+\_\+metaclass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-This metaclass is assigned by default to all \mbox{\hyperlink{namespacepybind11}{pybind11}} types and is required in order for static properties to function correctly. Users may override this using {\ttfamily py\+::metaclass}. Return value\+: New reference. \mbox{\Hypertarget{class__support_8h_a66723f5caa45263d1952931756896289}\label{class__support_8h_a66723f5caa45263d1952931756896289}} 
-\index{class\_support.h@{class\_support.h}!make\_new\_instance@{make\_new\_instance}}
-\index{make\_new\_instance@{make\_new\_instance}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{make\_new\_instance()}{make\_new\_instance()}}
-{\footnotesize\ttfamily Py\+Object$\ast$ make\+\_\+new\+\_\+instance (\begin{DoxyParamCaption}\item[{Py\+Type\+Object $\ast$}]{type,  }\item[{bool}]{allocate\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-Instance creation function for all \mbox{\hyperlink{namespacepybind11}{pybind11}} types. It only allocates space for the C++ object (or multiple objects, for Python-\/side inheritance from multiple \mbox{\hyperlink{namespacepybind11}{pybind11}} types), but doesn\textquotesingle{}t call the constructor -- an {\ttfamily \+\_\+\+\_\+init\+\_\+\+\_\+} function must do that. If allocating value, the instance is registered; otherwise register\+\_\+instance will need to be called once the value has been assigned. \mbox{\Hypertarget{class__support_8h_aaa85f1a8dc05ca44a68ff94d5a6faff2}\label{class__support_8h_aaa85f1a8dc05ca44a68ff94d5a6faff2}} 
-\index{class\_support.h@{class\_support.h}!make\_new\_python\_type@{make\_new\_python\_type}}
-\index{make\_new\_python\_type@{make\_new\_python\_type}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{make\_new\_python\_type()}{make\_new\_python\_type()}}
-{\footnotesize\ttfamily Py\+Object$\ast$ make\+\_\+new\+\_\+python\+\_\+type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtype__record}{type\+\_\+record}} \&}]{rec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-Create a brand new Python type according to the {\ttfamily \mbox{\hyperlink{structtype__record}{type\+\_\+record}}} specification. Return value\+: New reference. \mbox{\Hypertarget{class__support_8h_a891ba5da5fdb0fa713f95b70602075c5}\label{class__support_8h_a891ba5da5fdb0fa713f95b70602075c5}} 
-\index{class\_support.h@{class\_support.h}!make\_object\_base\_type@{make\_object\_base\_type}}
-\index{make\_object\_base\_type@{make\_object\_base\_type}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{make\_object\_base\_type()}{make\_object\_base\_type()}}
-{\footnotesize\ttfamily Py\+Object$\ast$ make\+\_\+object\+\_\+base\+\_\+type (\begin{DoxyParamCaption}\item[{Py\+Type\+Object $\ast$}]{metaclass }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-Create the type which can be used as a common base for all classes. This is needed in order to satisfy Python\textquotesingle{}s requirements for multiple inheritance. Return value\+: New reference. \mbox{\Hypertarget{class__support_8h_aaea95bf4b1207c83bfbe863e5f7abe6e}\label{class__support_8h_aaea95bf4b1207c83bfbe863e5f7abe6e}} 
-\index{class\_support.h@{class\_support.h}!make\_static\_property\_type@{make\_static\_property\_type}}
-\index{make\_static\_property\_type@{make\_static\_property\_type}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{make\_static\_property\_type()}{make\_static\_property\_type()}}
-{\footnotesize\ttfamily Py\+Type\+Object$\ast$ make\+\_\+static\+\_\+property\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-A {\ttfamily static\+\_\+property} is the same as a {\ttfamily property} but the {\ttfamily \+\_\+\+\_\+get\+\_\+\+\_\+()} and {\ttfamily \+\_\+\+\_\+set\+\_\+\+\_\+()} methods are modified to always use the object type instead of a concrete instance. Return value\+: New reference. \mbox{\Hypertarget{class__support_8h_a5fa8056059587b7581c706f21022be16}\label{class__support_8h_a5fa8056059587b7581c706f21022be16}} 
-\index{class\_support.h@{class\_support.h}!pybind11\_clear@{pybind11\_clear}}
-\index{pybind11\_clear@{pybind11\_clear}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{pybind11\_clear()}{pybind11\_clear()}}
-{\footnotesize\ttfamily int pybind11\+\_\+clear (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-\mbox{\hyperlink{structdynamic__attr}{dynamic\+\_\+attr}}\+: Allow the GC to clear the dictionary. 
-
-\mbox{\Hypertarget{class__support_8h_a5fdd18aca0f944f6dc5942e193cd6898}\label{class__support_8h_a5fdd18aca0f944f6dc5942e193cd6898}} 
-\index{class\_support.h@{class\_support.h}!pybind11\_get\_dict@{pybind11\_get\_dict}}
-\index{pybind11\_get\_dict@{pybind11\_get\_dict}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{pybind11\_get\_dict()}{pybind11\_get\_dict()}}
-{\footnotesize\ttfamily Py\+Object$\ast$ pybind11\+\_\+get\+\_\+dict (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{self,  }\item[{void $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-\mbox{\hyperlink{structdynamic__attr}{dynamic\+\_\+attr}}\+: Support for {\ttfamily d = instance.\+\_\+\+\_\+dict\+\_\+\+\_\+}. 
-
-\mbox{\Hypertarget{class__support_8h_ae0f8b9ed2890d4fdfe2b3d903dbb1617}\label{class__support_8h_ae0f8b9ed2890d4fdfe2b3d903dbb1617}} 
-\index{class\_support.h@{class\_support.h}!pybind11\_getbuffer@{pybind11\_getbuffer}}
-\index{pybind11\_getbuffer@{pybind11\_getbuffer}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{pybind11\_getbuffer()}{pybind11\_getbuffer()}}
-{\footnotesize\ttfamily int pybind11\+\_\+getbuffer (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{obj,  }\item[{Py\+\_\+buffer $\ast$}]{view,  }\item[{int}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-\mbox{\hyperlink{structbuffer__protocol}{buffer\+\_\+protocol}}\+: Fill in the view as specified by flags. 
-
-\mbox{\Hypertarget{class__support_8h_a7a2d1b9a42df823366b438980fadb488}\label{class__support_8h_a7a2d1b9a42df823366b438980fadb488}} 
-\index{class\_support.h@{class\_support.h}!pybind11\_meta\_setattro@{pybind11\_meta\_setattro}}
-\index{pybind11\_meta\_setattro@{pybind11\_meta\_setattro}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{pybind11\_meta\_setattro()}{pybind11\_meta\_setattro()}}
-{\footnotesize\ttfamily int pybind11\+\_\+meta\+\_\+setattro (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{obj,  }\item[{Py\+Object $\ast$}]{name,  }\item[{Py\+Object $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-Types with static properties need to handle {\ttfamily Type.\+static\+\_\+prop = x} in a specific way. By default, Python replaces the {\ttfamily static\+\_\+property} itself, but for wrapped C++ types we need to call {\ttfamily static\+\_\+property.\+\_\+\+\_\+set\+\_\+\+\_\+()} in order to propagate the new value to the underlying C++ data structure. \mbox{\Hypertarget{class__support_8h_a629cca75d875fdd8b55c5a3a7cd33cdb}\label{class__support_8h_a629cca75d875fdd8b55c5a3a7cd33cdb}} 
-\index{class\_support.h@{class\_support.h}!pybind11\_object\_dealloc@{pybind11\_object\_dealloc}}
-\index{pybind11\_object\_dealloc@{pybind11\_object\_dealloc}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{pybind11\_object\_dealloc()}{pybind11\_object\_dealloc()}}
-{\footnotesize\ttfamily void pybind11\+\_\+object\+\_\+dealloc (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-Instance destructor function for all \mbox{\hyperlink{namespacepybind11}{pybind11}} types. It calls {\ttfamily \mbox{\hyperlink{structtype__info_aea07980b3b2c6d575ac4674701be8937}{type\+\_\+info.\+dealloc}}} to destroy the C++ object itself, while the rest is Python bookkeeping. \mbox{\Hypertarget{class__support_8h_a44b3a6702982c09e74d9db412a6dd3c3}\label{class__support_8h_a44b3a6702982c09e74d9db412a6dd3c3}} 
-\index{class\_support.h@{class\_support.h}!pybind11\_object\_init@{pybind11\_object\_init}}
-\index{pybind11\_object\_init@{pybind11\_object\_init}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{pybind11\_object\_init()}{pybind11\_object\_init()}}
-{\footnotesize\ttfamily int pybind11\+\_\+object\+\_\+init (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{self,  }\item[{Py\+Object $\ast$}]{,  }\item[{Py\+Object $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-An {\ttfamily \+\_\+\+\_\+init\+\_\+\+\_\+} function constructs the C++ object. Users should provide at least one of these using {\ttfamily py\+::init} or directly with {\ttfamily .def(\+\_\+\+\_\+init\+\_\+\+\_\+, ...)}. Otherwise, the following default function will be used which simply throws an exception. \mbox{\Hypertarget{class__support_8h_a004e9fb1b59c81f056d9fd039e29400f}\label{class__support_8h_a004e9fb1b59c81f056d9fd039e29400f}} 
-\index{class\_support.h@{class\_support.h}!pybind11\_object\_new@{pybind11\_object\_new}}
-\index{pybind11\_object\_new@{pybind11\_object\_new}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{pybind11\_object\_new()}{pybind11\_object\_new()}}
-{\footnotesize\ttfamily Py\+Object$\ast$ pybind11\+\_\+object\+\_\+new (\begin{DoxyParamCaption}\item[{Py\+Type\+Object $\ast$}]{type,  }\item[{Py\+Object $\ast$}]{,  }\item[{Py\+Object $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-Instance creation function for all \mbox{\hyperlink{namespacepybind11}{pybind11}} types. It only allocates space for the C++ object, but doesn\textquotesingle{}t call the constructor -- an {\ttfamily \+\_\+\+\_\+init\+\_\+\+\_\+} function must do that. \mbox{\Hypertarget{class__support_8h_a588422e2b384d74aa115a77c906221d2}\label{class__support_8h_a588422e2b384d74aa115a77c906221d2}} 
-\index{class\_support.h@{class\_support.h}!pybind11\_releasebuffer@{pybind11\_releasebuffer}}
-\index{pybind11\_releasebuffer@{pybind11\_releasebuffer}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{pybind11\_releasebuffer()}{pybind11\_releasebuffer()}}
-{\footnotesize\ttfamily void pybind11\+\_\+releasebuffer (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{,  }\item[{Py\+\_\+buffer $\ast$}]{view }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-\mbox{\hyperlink{structbuffer__protocol}{buffer\+\_\+protocol}}\+: Release the resources of the buffer. 
-
-\mbox{\Hypertarget{class__support_8h_a76dda6430b9e8261f24329fe7cf8b49e}\label{class__support_8h_a76dda6430b9e8261f24329fe7cf8b49e}} 
-\index{class\_support.h@{class\_support.h}!pybind11\_set\_dict@{pybind11\_set\_dict}}
-\index{pybind11\_set\_dict@{pybind11\_set\_dict}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{pybind11\_set\_dict()}{pybind11\_set\_dict()}}
-{\footnotesize\ttfamily int pybind11\+\_\+set\+\_\+dict (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{self,  }\item[{Py\+Object $\ast$}]{new\+\_\+dict,  }\item[{void $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-\mbox{\hyperlink{structdynamic__attr}{dynamic\+\_\+attr}}\+: Support for {\ttfamily instance.\+\_\+\+\_\+dict\+\_\+\+\_\+ = \mbox{\hyperlink{classdict}{dict()}}}. 
-
-\mbox{\Hypertarget{class__support_8h_a2efe954cedce4c8deb7a2db9ab874803}\label{class__support_8h_a2efe954cedce4c8deb7a2db9ab874803}} 
-\index{class\_support.h@{class\_support.h}!pybind11\_static\_get@{pybind11\_static\_get}}
-\index{pybind11\_static\_get@{pybind11\_static\_get}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{pybind11\_static\_get()}{pybind11\_static\_get()}}
-{\footnotesize\ttfamily Py\+Object$\ast$ pybind11\+\_\+static\+\_\+get (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{self,  }\item[{Py\+Object $\ast$}]{,  }\item[{Py\+Object $\ast$}]{cls }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-{\ttfamily pybind11\+\_\+static\+\_\+property.\+\_\+\+\_\+get\+\_\+\+\_\+()}\+: Always pass the class instead of the instance. 
-
-\mbox{\Hypertarget{class__support_8h_a390e869f7c6120e463bd5c4db7a6c12d}\label{class__support_8h_a390e869f7c6120e463bd5c4db7a6c12d}} 
-\index{class\_support.h@{class\_support.h}!pybind11\_static\_set@{pybind11\_static\_set}}
-\index{pybind11\_static\_set@{pybind11\_static\_set}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{pybind11\_static\_set()}{pybind11\_static\_set()}}
-{\footnotesize\ttfamily int pybind11\+\_\+static\+\_\+set (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{self,  }\item[{Py\+Object $\ast$}]{obj,  }\item[{Py\+Object $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-{\ttfamily pybind11\+\_\+static\+\_\+property.\+\_\+\+\_\+set\+\_\+\+\_\+()}\+: Just like the above {\ttfamily \+\_\+\+\_\+get\+\_\+\+\_\+()}. 
-
-\mbox{\Hypertarget{class__support_8h_a8015cabe7bb9709326f4d539a7788d7a}\label{class__support_8h_a8015cabe7bb9709326f4d539a7788d7a}} 
-\index{class\_support.h@{class\_support.h}!pybind11\_traverse@{pybind11\_traverse}}
-\index{pybind11\_traverse@{pybind11\_traverse}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{pybind11\_traverse()}{pybind11\_traverse()}}
-{\footnotesize\ttfamily int pybind11\+\_\+traverse (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{self,  }\item[{visitproc}]{visit,  }\item[{void $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-\mbox{\hyperlink{structdynamic__attr}{dynamic\+\_\+attr}}\+: Allow the garbage collector to traverse the internal instance {\ttfamily \+\_\+\+\_\+dict\+\_\+\+\_\+}. 
-
-\mbox{\Hypertarget{class__support_8h_a6dd9d77b6860f791d6c520484f039da9}\label{class__support_8h_a6dd9d77b6860f791d6c520484f039da9}} 
-\index{class\_support.h@{class\_support.h}!register\_instance@{register\_instance}}
-\index{register\_instance@{register\_instance}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{register\_instance()}{register\_instance()}}
-{\footnotesize\ttfamily void register\+\_\+instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structinstance}{instance}} $\ast$}]{self,  }\item[{void $\ast$}]{valptr,  }\item[{const \mbox{\hyperlink{structtype__info}{type\+\_\+info}} $\ast$}]{tinfo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{class__support_8h_acf395803278f6801196c9605e84e8c6e}\label{class__support_8h_acf395803278f6801196c9605e84e8c6e}} 
-\index{class\_support.h@{class\_support.h}!register\_instance\_impl@{register\_instance\_impl}}
-\index{register\_instance\_impl@{register\_instance\_impl}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{register\_instance\_impl()}{register\_instance\_impl()}}
-{\footnotesize\ttfamily bool register\+\_\+instance\+\_\+impl (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{structinstance}{instance}} $\ast$}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{class__support_8h_ad9b07afb9ab14dab442a1ca53387f4ad}\label{class__support_8h_ad9b07afb9ab14dab442a1ca53387f4ad}} 
-\index{class\_support.h@{class\_support.h}!traverse\_offset\_bases@{traverse\_offset\_bases}}
-\index{traverse\_offset\_bases@{traverse\_offset\_bases}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{traverse\_offset\_bases()}{traverse\_offset\_bases()}}
-{\footnotesize\ttfamily void traverse\+\_\+offset\+\_\+bases (\begin{DoxyParamCaption}\item[{void $\ast$}]{valueptr,  }\item[{const detail\+::type\+\_\+info $\ast$}]{tinfo,  }\item[{\mbox{\hyperlink{structinstance}{instance}} $\ast$}]{self,  }\item[{bool($\ast$)(void $\ast$, \mbox{\hyperlink{structinstance}{instance}} $\ast$)}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-For multiple inheritance types we need to recursively register/deregister base pointers for any base classes with pointers that are difference from the instance value pointer so that we can correctly recognize an offset base class pointer. This calls a function with any offset base ptrs. \mbox{\Hypertarget{class__support_8h_a308600e9d148ac132caaa4c0637b6559}\label{class__support_8h_a308600e9d148ac132caaa4c0637b6559}} 
-\index{class\_support.h@{class\_support.h}!type\_incref@{type\_incref}}
-\index{type\_incref@{type\_incref}!class\_support.h@{class\_support.h}}
-\doxysubsubsection{\texorpdfstring{type\_incref()}{type\_incref()}}
-{\footnotesize\ttfamily Py\+Type\+Object$\ast$ type\+\_\+incref (\begin{DoxyParamCaption}\item[{Py\+Type\+Object $\ast$}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-

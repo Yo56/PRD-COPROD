@@ -1,0 +1,283 @@
+\hypertarget{classpybind11_1_1detail_1_1generic__iterator}{}\doxysection{pybind11\+::detail\+::generic\+\_\+iterator$<$ Policy $>$ Class Template Reference}
+\label{classpybind11_1_1detail_1_1generic__iterator}\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+
+
+STL iterator template used for tuple, list, sequence and dict.  
+
+
+
+
+{\ttfamily \#include $<$pytypes.\+h$>$}
+
+Inheritance diagram for pybind11\+::detail\+::generic\+\_\+iterator$<$ Policy $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpybind11_1_1detail_1_1generic__iterator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}{difference\+\_\+type}} = \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}
+\item 
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a6364472bdd2de461622fea3bee21329e}{iterator\+\_\+category}} = typename Policy\+::iterator\+\_\+category
+\item 
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_aa43185a5e68cd6be7612c7549c20db05}{value\+\_\+type}} = typename Policy\+::value\+\_\+type
+\item 
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1c2390404e4ce1093acca8061a524897}{reference}} = typename Policy\+::reference
+\item 
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a3b95ff694acebd71b281cf56bd678a2f}{pointer}} = typename Policy\+::pointer
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a98494fb4cff15cb8e58afa0ca184276c}{generic\+\_\+iterator}} ()=default
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a780b8b680f6f4503b473f25e41ee72ae}{generic\+\_\+iterator}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} seq, \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} index)
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1c2390404e4ce1093acca8061a524897}{reference}} \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_afb9f86efa4b5e199fd9e3fbea5dfcd66}{operator$\ast$}} () const
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1c2390404e4ce1093acca8061a524897}{reference}} \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a2c6a04a587796e6ff2fbcc5e446f8f7a}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}{difference\+\_\+type}} n) const
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a3b95ff694acebd71b281cf56bd678a2f}{pointer}} \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_aee3781a590f28f8ce7d0a8a9f392c0c7}{operator-\/$>$}} () const
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \& \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a6625d0bade092a4ba8ddfa49162ade95}{operator++}} ()
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a602f5357684c658c9c1a29997d3365a6}{operator++}} (int)
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \& \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a728e881ad33ed7f3b0db4d2901b7a493}{operator-\/-\/}} ()
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a3a40de3fc2b8ad09a708bcb6216be832}{operator-\/-\/}} (int)
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \& \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a34c230cbc6e77f03b1b10f84e1e55799}{operator+=}} (\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}{difference\+\_\+type}} n)
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \& \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a6821edf1ef4b47549c1076ec2efd6f3b}{operator-\/=}} (\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}{difference\+\_\+type}} n)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a33b5fcd097d1dcc87426b4f085094d30}{operator+}} (const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&a, \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}{difference\+\_\+type}} n)
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a7f7c67731fffe592d503faa2ac6929e9}{operator+}} (\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}{difference\+\_\+type}} n, const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&b)
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a040063b4d21cbdf70abffd52563067da}{operator-\/}} (const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&a, \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}{difference\+\_\+type}} n)
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}{difference\+\_\+type}} \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a970506dfb104f24039493a495ff45a2e}{operator-\/}} (const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&a, const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&b)
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a4c3a003f1490fd5ac1289f8b7c63565c}{operator==}} (const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&a, const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&b)
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a00afb6c7a0f23ae65ef61656fa48dbc3}{operator!=}} (const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&a, const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&b)
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1ba57b963ed90488609924525018c0ba}{operator$<$}} (const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&a, const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&b)
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a86651101e3caeb262109b10e9393a6c6}{operator$>$}} (const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&a, const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&b)
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a089329cd2b3273776dcdd13b8cd1e396}{operator$>$=}} (const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&a, const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&b)
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1fb0728d300b006b90032e11e3aafe76}{operator$<$=}} (const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&a, const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&b)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Policy$>$\newline
+class pybind11\+::detail\+::generic\+\_\+iterator$<$ Policy $>$}
+
+STL iterator template used for tuple, list, sequence and dict. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}\label{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{pybind11\+::detail\+::generic\+\_\+iterator}}$<$ Policy $>$\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}{difference\+\_\+type}} =  \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a6364472bdd2de461622fea3bee21329e}\label{classpybind11_1_1detail_1_1generic__iterator_a6364472bdd2de461622fea3bee21329e}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!iterator\_category@{iterator\_category}}
+\index{iterator\_category@{iterator\_category}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{pybind11\+::detail\+::generic\+\_\+iterator}}$<$ Policy $>$\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a6364472bdd2de461622fea3bee21329e}{iterator\+\_\+category}} =  typename Policy\+::iterator\+\_\+category}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a3b95ff694acebd71b281cf56bd678a2f}\label{classpybind11_1_1detail_1_1generic__iterator_a3b95ff694acebd71b281cf56bd678a2f}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!pointer@{pointer}}
+\index{pointer@{pointer}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{pybind11\+::detail\+::generic\+\_\+iterator}}$<$ Policy $>$\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a3b95ff694acebd71b281cf56bd678a2f}{pointer}} =  typename Policy\+::pointer}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a1c2390404e4ce1093acca8061a524897}\label{classpybind11_1_1detail_1_1generic__iterator_a1c2390404e4ce1093acca8061a524897}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!reference@{reference}}
+\index{reference@{reference}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{pybind11\+::detail\+::generic\+\_\+iterator}}$<$ Policy $>$\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1c2390404e4ce1093acca8061a524897}{reference}} =  typename Policy\+::reference}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_aa43185a5e68cd6be7612c7549c20db05}\label{classpybind11_1_1detail_1_1generic__iterator_aa43185a5e68cd6be7612c7549c20db05}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{pybind11\+::detail\+::generic\+\_\+iterator}}$<$ Policy $>$\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_aa43185a5e68cd6be7612c7549c20db05}{value\+\_\+type}} =  typename Policy\+::value\+\_\+type}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a98494fb4cff15cb8e58afa0ca184276c}\label{classpybind11_1_1detail_1_1generic__iterator_a98494fb4cff15cb8e58afa0ca184276c}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!generic\_iterator@{generic\_iterator}}
+\index{generic\_iterator@{generic\_iterator}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{generic\_iterator()}{generic\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{pybind11\+::detail\+::generic\+\_\+iterator}}$<$ Policy $>$\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{generic\+\_\+iterator}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a780b8b680f6f4503b473f25e41ee72ae}\label{classpybind11_1_1detail_1_1generic__iterator_a780b8b680f6f4503b473f25e41ee72ae}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!generic\_iterator@{generic\_iterator}}
+\index{generic\_iterator@{generic\_iterator}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{generic\_iterator()}{generic\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{pybind11\+::detail\+::generic\+\_\+iterator}}$<$ Policy $>$\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{generic\+\_\+iterator}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{seq,  }\item[{\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_afb9f86efa4b5e199fd9e3fbea5dfcd66}\label{classpybind11_1_1detail_1_1generic__iterator_afb9f86efa4b5e199fd9e3fbea5dfcd66}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1c2390404e4ce1093acca8061a524897}{reference}} \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{pybind11\+::detail\+::generic\+\_\+iterator}}$<$ Policy $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a6625d0bade092a4ba8ddfa49162ade95}\label{classpybind11_1_1detail_1_1generic__iterator_a6625d0bade092a4ba8ddfa49162ade95}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}}\& \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{pybind11\+::detail\+::generic\+\_\+iterator}}$<$ Policy $>$\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a602f5357684c658c9c1a29997d3365a6}\label{classpybind11_1_1detail_1_1generic__iterator_a602f5357684c658c9c1a29997d3365a6}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{pybind11\+::detail\+::generic\+\_\+iterator}}$<$ Policy $>$\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a34c230cbc6e77f03b1b10f84e1e55799}\label{classpybind11_1_1detail_1_1generic__iterator_a34c230cbc6e77f03b1b10f84e1e55799}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}}\& \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{pybind11\+::detail\+::generic\+\_\+iterator}}$<$ Policy $>$\+::operator+= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}{difference\+\_\+type}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a728e881ad33ed7f3b0db4d2901b7a493}\label{classpybind11_1_1detail_1_1generic__iterator_a728e881ad33ed7f3b0db4d2901b7a493}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}}\& \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{pybind11\+::detail\+::generic\+\_\+iterator}}$<$ Policy $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a3a40de3fc2b8ad09a708bcb6216be832}\label{classpybind11_1_1detail_1_1generic__iterator_a3a40de3fc2b8ad09a708bcb6216be832}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{pybind11\+::detail\+::generic\+\_\+iterator}}$<$ Policy $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a6821edf1ef4b47549c1076ec2efd6f3b}\label{classpybind11_1_1detail_1_1generic__iterator_a6821edf1ef4b47549c1076ec2efd6f3b}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}}\& \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{pybind11\+::detail\+::generic\+\_\+iterator}}$<$ Policy $>$\+::operator-\/= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}{difference\+\_\+type}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_aee3781a590f28f8ce7d0a8a9f392c0c7}\label{classpybind11_1_1detail_1_1generic__iterator_aee3781a590f28f8ce7d0a8a9f392c0c7}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a3b95ff694acebd71b281cf56bd678a2f}{pointer}} \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{pybind11\+::detail\+::generic\+\_\+iterator}}$<$ Policy $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a2c6a04a587796e6ff2fbcc5e446f8f7a}\label{classpybind11_1_1detail_1_1generic__iterator_a2c6a04a587796e6ff2fbcc5e446f8f7a}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1c2390404e4ce1093acca8061a524897}{reference}} \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{pybind11\+::detail\+::generic\+\_\+iterator}}$<$ Policy $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}{difference\+\_\+type}}}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a00afb6c7a0f23ae65ef61656fa48dbc3}\label{classpybind11_1_1detail_1_1generic__iterator_a00afb6c7a0f23ae65ef61656fa48dbc3}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=}{operator!=}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+bool \mbox{\hyperlink{namespacepybind11_1_1detail_aa9ce215a92db60737fd2f016b1922b4c}{operator!}}= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&}]{a,  }\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a33b5fcd097d1dcc87426b4f085094d30}\label{classpybind11_1_1detail_1_1generic__iterator_a33b5fcd097d1dcc87426b4f085094d30}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator+}{operator+}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&}]{a,  }\item[{\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}{difference\+\_\+type}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a7f7c67731fffe592d503faa2ac6929e9}\label{classpybind11_1_1detail_1_1generic__iterator_a7f7c67731fffe592d503faa2ac6929e9}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator+}{operator+}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}{difference\+\_\+type}}}]{n,  }\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a970506dfb104f24039493a495ff45a2e}\label{classpybind11_1_1detail_1_1generic__iterator_a970506dfb104f24039493a495ff45a2e}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/}{operator-}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}{difference\+\_\+type}} operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&}]{a,  }\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a040063b4d21cbdf70abffd52563067da}\label{classpybind11_1_1detail_1_1generic__iterator_a040063b4d21cbdf70abffd52563067da}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/}{operator-}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&}]{a,  }\item[{\mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator_a1161259f074a40e65cde08f0b0876151}{difference\+\_\+type}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a1ba57b963ed90488609924525018c0ba}\label{classpybind11_1_1detail_1_1generic__iterator_a1ba57b963ed90488609924525018c0ba}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$}{operator<}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+bool operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&}]{a,  }\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a1fb0728d300b006b90032e11e3aafe76}\label{classpybind11_1_1detail_1_1generic__iterator_a1fb0728d300b006b90032e11e3aafe76}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$=}{operator<=}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+bool operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&}]{a,  }\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a4c3a003f1490fd5ac1289f8b7c63565c}\label{classpybind11_1_1detail_1_1generic__iterator_a4c3a003f1490fd5ac1289f8b7c63565c}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&}]{a,  }\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a86651101e3caeb262109b10e9393a6c6}\label{classpybind11_1_1detail_1_1generic__iterator_a86651101e3caeb262109b10e9393a6c6}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator$>$}{operator>}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+bool operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&}]{a,  }\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1generic__iterator_a089329cd2b3273776dcdd13b8cd1e396}\label{classpybind11_1_1detail_1_1generic__iterator_a089329cd2b3273776dcdd13b8cd1e396}} 
+\index{pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!pybind11::detail::generic\_iterator$<$ Policy $>$@{pybind11::detail::generic\_iterator$<$ Policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator$>$=}{operator>=}}
+{\footnotesize\ttfamily template$<$typename Policy $>$ \\
+bool operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&}]{a,  }\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1generic__iterator}{It}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{pytypes_8h}{pytypes.\+h}}\end{DoxyCompactItemize}

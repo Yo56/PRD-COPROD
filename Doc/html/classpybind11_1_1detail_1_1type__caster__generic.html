@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PR&amp;D COPROD: Référence de la classe pybind11::detail::type_caster_generic</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PR&amp;D COPROD
+   &#160;<span id="projectnumber">1</span>
+   </div>
+   <div id="projectbrief">Outil d&#39;aide a la planification des operations de maintenance preventive et corrective - Polytech Tours - Yohan Nouet</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacepybind11.html">pybind11</a></li><li class="navelem"><a class="el" href="namespacepybind11_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classpybind11_1_1detail_1_1type__caster__generic.html">type_caster_generic</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pub-attribs">Attributs publics</a> &#124;
+<a href="classpybind11_1_1detail_1_1type__caster__generic-members.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence de la classe pybind11::detail::type_caster_generic</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="cast_8h_source.html">cast.h</a>&gt;</code></p>
+<div class="dynheader">
+Graphe d'héritage de pybind11::detail::type_caster_generic:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classpybind11_1_1detail_1_1type__caster__generic.png" usemap="#pybind11::detail::type_5Fcaster_5Fgeneric_map" alt=""/>
+  <map id="pybind11::detail::type_5Fcaster_5Fgeneric_map" name="pybind11::detail::type_5Fcaster_5Fgeneric_map">
+<area href="classpybind11_1_1detail_1_1type__caster__base.html" title="Generic type caster for objects stored on the heap." alt="pybind11::detail::type_caster_base&lt; type &gt;" shape="rect" coords="610,56,1007,80"/>
+<area href="structpybind11_1_1detail_1_1copyable__holder__caster.html" alt="pybind11::detail::copyable_holder_caster&lt; T, std::shared_ptr&lt; T &gt; &gt;" shape="rect" coords="0,112,397,136"/>
+<area href="classpybind11_1_1detail_1_1type__caster.html" alt="pybind11::detail::type_caster&lt; StringType &gt;" shape="rect" coords="407,112,804,136"/>
+<area href="structpybind11_1_1detail_1_1copyable__holder__caster.html" title="Type caster for holder types like std::shared_ptr, etc." alt="pybind11::detail::copyable_holder_caster&lt; type, holder_type &gt;" shape="rect" coords="814,112,1211,136"/>
+<area href="classpybind11_1_1detail_1_1type__caster.html" alt="pybind11::detail::type_caster&lt; type, SFINAE &gt;" shape="rect" coords="1221,112,1618,136"/>
+<area href="classpybind11_1_1detail_1_1type__caster_3_01std_1_1shared__ptr_3_01_t_01_4_01_4.html" title="Specialize for the common std::shared_ptr, so users don&#39;t need to." alt="pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;" shape="rect" coords="0,168,397,192"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a10796f8999edcdb3d6e4a658c2cca73e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1type__caster__generic.html#a10796f8999edcdb3d6e4a658c2cca73e">__attribute__</a> ((noinline)) <a class="el" href="classpybind11_1_1detail_1_1type__caster__generic.html">type_caster_generic</a>(const std</td></tr>
+<tr class="separator:a10796f8999edcdb3d6e4a658c2cca73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7b1b60b55293ee21be336e3daac4227"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1type__caster__generic.html#ab7b1b60b55293ee21be336e3daac4227">load</a> (<a class="el" href="classpybind11_1_1handle.html">handle</a> src, bool convert)</td></tr>
+<tr class="separator:ab7b1b60b55293ee21be336e3daac4227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89236503bc93c9d9cadda35831f6af36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1type__caster__generic.html#a89236503bc93c9d9cadda35831f6af36">__attribute__</a> ((noinline)) static <a class="el" href="classpybind11_1_1handle.html">handle</a> <a class="el" href="namespacepybind11.html#ade1f8946c805279f41d7f6eed0d4f07d">cast</a>(const void *_src</td></tr>
+<tr class="separator:a89236503bc93c9d9cadda35831f6af36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Attributs publics</h2></td></tr>
+<tr class="memitem:a2ec264c8440447e927d4ce605f278984"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacepybind11.html#a5f83e7a05cee9068927633ac47dbe69c">return_value_policy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1type__caster__generic.html#a2ec264c8440447e927d4ce605f278984">policy</a></td></tr>
+<tr class="separator:a2ec264c8440447e927d4ce605f278984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1455e47a864e1487370527cd1a91634"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacepybind11.html#a5f83e7a05cee9068927633ac47dbe69c">return_value_policy</a> <a class="el" href="classpybind11_1_1handle.html">handle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1type__caster__generic.html#aa1455e47a864e1487370527cd1a91634">parent</a></td></tr>
+<tr class="separator:aa1455e47a864e1487370527cd1a91634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a647882c53b3120f6e031d8657d6c4c11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacepybind11.html#a5f83e7a05cee9068927633ac47dbe69c">return_value_policy</a> <a class="el" href="classpybind11_1_1handle.html">handle</a> const <a class="el" href="structpybind11_1_1detail_1_1type__info.html">detail::type_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1type__caster__generic.html#a647882c53b3120f6e031d8657d6c4c11">tinfo</a></td></tr>
+<tr class="separator:a647882c53b3120f6e031d8657d6c4c11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a655767dd596ec032eec7740328f3fe84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacepybind11.html#a5f83e7a05cee9068927633ac47dbe69c">return_value_policy</a> <a class="el" href="classpybind11_1_1handle.html">handle</a> const <a class="el" href="structpybind11_1_1detail_1_1type__info.html">detail::type_info</a> void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1type__caster__generic.html#a655767dd596ec032eec7740328f3fe84">copy_constructor</a> )(const void *)</td></tr>
+<tr class="separator:a655767dd596ec032eec7740328f3fe84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a951ed06cb81e22e3b106b3e23cecfd05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacepybind11.html#a5f83e7a05cee9068927633ac47dbe69c">return_value_policy</a> <a class="el" href="classpybind11_1_1handle.html">handle</a> const <a class="el" href="structpybind11_1_1detail_1_1type__info.html">detail::type_info</a> void *(*) void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1type__caster__generic.html#a951ed06cb81e22e3b106b3e23cecfd05">move_constructor</a> )(const void *)</td></tr>
+<tr class="separator:a951ed06cb81e22e3b106b3e23cecfd05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c3a1017a1539f916dc2b0b65231a88f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacepybind11.html#a5f83e7a05cee9068927633ac47dbe69c">return_value_policy</a> <a class="el" href="classpybind11_1_1handle.html">handle</a> const <a class="el" href="structpybind11_1_1detail_1_1type__info.html">detail::type_info</a> void *(*) void *(*) const void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1type__caster__generic.html#a8c3a1017a1539f916dc2b0b65231a88f">existing_holder</a> )</td></tr>
+<tr class="separator:a8c3a1017a1539f916dc2b0b65231a88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8416df5db92073a3eb985d37189b0573"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacepybind11.html#a5f83e7a05cee9068927633ac47dbe69c">return_value_policy</a> <a class="el" href="classpybind11_1_1handle.html">handle</a> const <a class="el" href="structpybind11_1_1detail_1_1type__info.html">detail::type_info</a> void *(*) void *(*) const void const <a class="el" href="structpybind11_1_1detail_1_1type__info.html">type_info</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1type__caster__generic.html#a8416df5db92073a3eb985d37189b0573">src_and_type</a> )(const void *src, const std::type_info &amp;cast_type, const std::type_info *rtti_type=nullptr)</td></tr>
+<tr class="separator:a8416df5db92073a3eb985d37189b0573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a860d37bda0e4b2cbf26be541e059dbeb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structpybind11_1_1detail_1_1type__info.html">type_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1type__caster__generic.html#a860d37bda0e4b2cbf26be541e059dbeb">typeinfo</a> = nullptr</td></tr>
+<tr class="separator:a860d37bda0e4b2cbf26be541e059dbeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9209746eb23e540a3a48ec3e4e18a8ea"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1type__caster__generic.html#a9209746eb23e540a3a48ec3e4e18a8ea">value</a> = nullptr</td></tr>
+<tr class="separator:a9209746eb23e540a3a48ec3e4e18a8ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="a89236503bc93c9d9cadda35831f6af36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89236503bc93c9d9cadda35831f6af36">&#9670;&nbsp;</a></span>__attribute__() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pybind11::detail::type_caster_generic::__attribute__ </td>
+          <td>(</td>
+          <td class="paramtype">(noinline)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10796f8999edcdb3d6e4a658c2cca73e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10796f8999edcdb3d6e4a658c2cca73e">&#9670;&nbsp;</a></span>__attribute__() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pybind11::detail::type_caster_generic::__attribute__ </td>
+          <td>(</td>
+          <td class="paramtype">(noinline)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7b1b60b55293ee21be336e3daac4227"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7b1b60b55293ee21be336e3daac4227">&#9670;&nbsp;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool pybind11::detail::type_caster_generic::load </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classpybind11_1_1handle.html">handle</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>convert</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des données membres</h2>
+<a id="a655767dd596ec032eec7740328f3fe84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a655767dd596ec032eec7740328f3fe84">&#9670;&nbsp;</a></span>copy_constructor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacepybind11.html#a5f83e7a05cee9068927633ac47dbe69c">return_value_policy</a> <a class="el" href="classpybind11_1_1handle.html">handle</a> const <a class="el" href="structpybind11_1_1detail_1_1type__info.html">detail::type_info</a> void*(* pybind11::detail::type_caster_generic::copy_constructor) (const void *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c3a1017a1539f916dc2b0b65231a88f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c3a1017a1539f916dc2b0b65231a88f">&#9670;&nbsp;</a></span>existing_holder</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacepybind11.html#a5f83e7a05cee9068927633ac47dbe69c">return_value_policy</a> <a class="el" href="classpybind11_1_1handle.html">handle</a> const <a class="el" href="structpybind11_1_1detail_1_1type__info.html">detail::type_info</a> void*(*) void*(*) const void pybind11::detail::type_caster_generic::existing_holder) </td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a951ed06cb81e22e3b106b3e23cecfd05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a951ed06cb81e22e3b106b3e23cecfd05">&#9670;&nbsp;</a></span>move_constructor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacepybind11.html#a5f83e7a05cee9068927633ac47dbe69c">return_value_policy</a> <a class="el" href="classpybind11_1_1handle.html">handle</a> const <a class="el" href="structpybind11_1_1detail_1_1type__info.html">detail::type_info</a> void*(*) void*(* pybind11::detail::type_caster_generic::move_constructor) (const void *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1455e47a864e1487370527cd1a91634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1455e47a864e1487370527cd1a91634">&#9670;&nbsp;</a></span>parent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacepybind11.html#a5f83e7a05cee9068927633ac47dbe69c">return_value_policy</a> <a class="el" href="classpybind11_1_1handle.html">handle</a> pybind11::detail::type_caster_generic::parent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ec264c8440447e927d4ce605f278984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ec264c8440447e927d4ce605f278984">&#9670;&nbsp;</a></span>policy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacepybind11.html#a5f83e7a05cee9068927633ac47dbe69c">return_value_policy</a> pybind11::detail::type_caster_generic::policy</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8416df5db92073a3eb985d37189b0573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8416df5db92073a3eb985d37189b0573">&#9670;&nbsp;</a></span>src_and_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacepybind11.html#a5f83e7a05cee9068927633ac47dbe69c">return_value_policy</a> <a class="el" href="classpybind11_1_1handle.html">handle</a> const <a class="el" href="structpybind11_1_1detail_1_1type__info.html">detail::type_info</a> void*(*) void*(*) const void const <a class="el" href="structpybind11_1_1detail_1_1type__info.html">type_info</a> pybind11::detail::type_caster_generic::src_and_type) (const void *src, const std::type_info &amp;cast_type, const std::type_info *rtti_type=nullptr)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a647882c53b3120f6e031d8657d6c4c11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a647882c53b3120f6e031d8657d6c4c11">&#9670;&nbsp;</a></span>tinfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacepybind11.html#a5f83e7a05cee9068927633ac47dbe69c">return_value_policy</a> <a class="el" href="classpybind11_1_1handle.html">handle</a> const <a class="el" href="structpybind11_1_1detail_1_1type__info.html">detail::type_info</a>* pybind11::detail::type_caster_generic::tinfo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a860d37bda0e4b2cbf26be541e059dbeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a860d37bda0e4b2cbf26be541e059dbeb">&#9670;&nbsp;</a></span>typeinfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structpybind11_1_1detail_1_1type__info.html">type_info</a>* pybind11::detail::type_caster_generic::typeinfo = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9209746eb23e540a3a48ec3e4e18a8ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9209746eb23e540a3a48ec3e4e18a8ea">&#9670;&nbsp;</a></span>value</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* pybind11::detail::type_caster_generic::value = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+<li>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/<a class="el" href="cast_8h_source.html">cast.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

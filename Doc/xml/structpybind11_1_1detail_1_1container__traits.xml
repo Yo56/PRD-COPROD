@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="structpybind11_1_1detail_1_1container__traits" kind="struct" language="C++" prot="public">
+    <compoundname>pybind11::detail::container_traits</compoundname>
+    <includes refid="stl__bind_8h" local="no">stl_bind.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1container__traits_1ab1a6873700778f1d12ffd9f35c494607" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr const bool</type>
+        <definition>constexpr const bool pybind11::detail::container_traits&lt; T &gt;::is_comparable</definition>
+        <argsstring></argsstring>
+        <name>is_comparable</name>
+        <initializer>= std::is_same&lt;std::true_type, decltype(<ref refid="structpybind11_1_1detail_1_1container__traits_1ad35d9ae6cc4e6cf9fa6ad4dadf8a6816" kindref="member">test_comparable</ref>&lt;T&gt;(nullptr))&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl_bind.h" line="30" column="33" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl_bind.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1container__traits_1a9ccb49122782782236b5d1f925d45ab0" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr const bool</type>
+        <definition>constexpr const bool pybind11::detail::container_traits&lt; T &gt;::is_pair</definition>
+        <argsstring></argsstring>
+        <name>is_pair</name>
+        <initializer>= std::is_same&lt;std::true_type, decltype(<ref refid="structpybind11_1_1detail_1_1container__traits_1a6707174a66bbae53314ddbe47ef3c8e6" kindref="member">test_pair</ref>&lt;T&gt;(nullptr, nullptr))&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl_bind.h" line="31" column="33" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl_bind.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1container__traits_1a15d3bd5e381888c46ee0ec47a09ea4cb" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr const bool</type>
+        <definition>constexpr const bool pybind11::detail::container_traits&lt; T &gt;::is_vector</definition>
+        <argsstring></argsstring>
+        <name>is_vector</name>
+        <initializer>= std::is_same&lt;std::true_type, decltype(<ref refid="structpybind11_1_1detail_1_1container__traits_1a1a583f1b25cb680b86e396ba0a8a33c9" kindref="member">test_value</ref>&lt;T&gt;(nullptr))&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl_bind.h" line="32" column="33" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl_bind.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1container__traits_1ac52fccec45b02d8201f7e3625c1fb7ed" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr const bool</type>
+        <definition>constexpr const bool pybind11::detail::container_traits&lt; T &gt;::is_element</definition>
+        <argsstring></argsstring>
+        <name>is_element</name>
+        <initializer>= !<ref refid="structpybind11_1_1detail_1_1container__traits_1a9ccb49122782782236b5d1f925d45ab0" kindref="member">is_pair</ref> &amp;&amp; !<ref refid="structpybind11_1_1detail_1_1container__traits_1a15d3bd5e381888c46ee0ec47a09ea4cb" kindref="member">is_vector</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl_bind.h" line="33" column="33" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl_bind.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1container__traits_1ad35d9ae6cc4e6cf9fa6ad4dadf8a6816" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T2</type>
+          </param>
+        </templateparamlist>
+        <type>std::true_type</type>
+        <definition>static std::true_type pybind11::detail::container_traits&lt; T &gt;::test_comparable</definition>
+        <argsstring>(decltype(std::declval&lt; const T2 &amp; &gt;()==std::declval&lt; const T2 &amp; &gt;()) *)</argsstring>
+        <name>test_comparable</name>
+        <param>
+          <type>decltype(std::declval&lt; const T2 &amp; &gt;()==std::declval&lt; const T2 &amp; &gt;()) *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl_bind.h" line="23" column="39"/>
+      </memberdef>
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1container__traits_1acc3315cc15e0374d9c64edce8d0bfcfc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T2</type>
+          </param>
+        </templateparamlist>
+        <type>std::false_type</type>
+        <definition>static std::false_type pybind11::detail::container_traits&lt; T &gt;::test_comparable</definition>
+        <argsstring>(...)</argsstring>
+        <name>test_comparable</name>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl_bind.h" line="24" column="40"/>
+      </memberdef>
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1container__traits_1a1a583f1b25cb680b86e396ba0a8a33c9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T2</type>
+          </param>
+        </templateparamlist>
+        <type>std::true_type</type>
+        <definition>static std::true_type pybind11::detail::container_traits&lt; T &gt;::test_value</definition>
+        <argsstring>(typename T2::value_type *)</argsstring>
+        <name>test_value</name>
+        <param>
+          <type>typename T2::value_type *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl_bind.h" line="25" column="39"/>
+      </memberdef>
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1container__traits_1a77fa596363821128b4ba91a510651cba" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T2</type>
+          </param>
+        </templateparamlist>
+        <type>std::false_type</type>
+        <definition>static std::false_type pybind11::detail::container_traits&lt; T &gt;::test_value</definition>
+        <argsstring>(...)</argsstring>
+        <name>test_value</name>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl_bind.h" line="26" column="40"/>
+      </memberdef>
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1container__traits_1a6707174a66bbae53314ddbe47ef3c8e6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T2</type>
+          </param>
+        </templateparamlist>
+        <type>std::true_type</type>
+        <definition>static std::true_type pybind11::detail::container_traits&lt; T &gt;::test_pair</definition>
+        <argsstring>(typename T2::first_type *, typename T2::second_type *)</argsstring>
+        <name>test_pair</name>
+        <param>
+          <type>typename T2::first_type *</type>
+        </param>
+        <param>
+          <type>typename T2::second_type *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl_bind.h" line="27" column="39"/>
+      </memberdef>
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1container__traits_1a2075898ff25355886df7cac08c2f449c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T2</type>
+          </param>
+        </templateparamlist>
+        <type>std::false_type</type>
+        <definition>static std::false_type pybind11::detail::container_traits&lt; T &gt;::test_pair</definition>
+        <argsstring>(...)</argsstring>
+        <name>test_pair</name>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl_bind.h" line="28" column="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl_bind.h" line="22" column="12" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl_bind.h" bodystart="22" bodyend="34"/>
+    <listofallmembers>
+      <member refid="structpybind11_1_1detail_1_1container__traits_1ab1a6873700778f1d12ffd9f35c494607" prot="public" virt="non-virtual"><scope>pybind11::detail::container_traits</scope><name>is_comparable</name></member>
+      <member refid="structpybind11_1_1detail_1_1container__traits_1ac52fccec45b02d8201f7e3625c1fb7ed" prot="public" virt="non-virtual"><scope>pybind11::detail::container_traits</scope><name>is_element</name></member>
+      <member refid="structpybind11_1_1detail_1_1container__traits_1a9ccb49122782782236b5d1f925d45ab0" prot="public" virt="non-virtual"><scope>pybind11::detail::container_traits</scope><name>is_pair</name></member>
+      <member refid="structpybind11_1_1detail_1_1container__traits_1a15d3bd5e381888c46ee0ec47a09ea4cb" prot="public" virt="non-virtual"><scope>pybind11::detail::container_traits</scope><name>is_vector</name></member>
+      <member refid="structpybind11_1_1detail_1_1container__traits_1ad35d9ae6cc4e6cf9fa6ad4dadf8a6816" prot="public" virt="non-virtual"><scope>pybind11::detail::container_traits</scope><name>test_comparable</name></member>
+      <member refid="structpybind11_1_1detail_1_1container__traits_1acc3315cc15e0374d9c64edce8d0bfcfc" prot="public" virt="non-virtual"><scope>pybind11::detail::container_traits</scope><name>test_comparable</name></member>
+      <member refid="structpybind11_1_1detail_1_1container__traits_1a6707174a66bbae53314ddbe47ef3c8e6" prot="public" virt="non-virtual"><scope>pybind11::detail::container_traits</scope><name>test_pair</name></member>
+      <member refid="structpybind11_1_1detail_1_1container__traits_1a2075898ff25355886df7cac08c2f449c" prot="public" virt="non-virtual"><scope>pybind11::detail::container_traits</scope><name>test_pair</name></member>
+      <member refid="structpybind11_1_1detail_1_1container__traits_1a1a583f1b25cb680b86e396ba0a8a33c9" prot="public" virt="non-virtual"><scope>pybind11::detail::container_traits</scope><name>test_value</name></member>
+      <member refid="structpybind11_1_1detail_1_1container__traits_1a77fa596363821128b4ba91a510651cba" prot="public" virt="non-virtual"><scope>pybind11::detail::container_traits</scope><name>test_value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

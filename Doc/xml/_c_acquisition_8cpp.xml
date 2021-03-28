@@ -1,17 +1,26 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
   <compounddef id="_c_acquisition_8cpp" kind="file" language="C++">
     <compoundname>CAcquisition.cpp</compoundname>
     <includes refid="_c_acquisition_8h" local="yes">CAcquisition.h</includes>
     <includes local="no">vector</includes>
-    <includes refid="_c_chantier_8h" local="yes">CChantier.h</includes>
     <includes local="no">iostream</includes>
     <includes local="no">fstream</includes>
     <includes local="no">xlnt/xlnt.hpp</includes>
-    <includes refid="rapidcsv_8h" local="yes">rapidcsv.h</includes>
+    <includes refid="rapidcsv_8h" local="yes">../rapidcsv.h</includes>
     <incdepgraph>
       <node id="14">
         <label>functional</label>
+      </node>
+      <node id="2">
+        <label>CAcquisition.h</label>
+        <link refid="_c_acquisition_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
       <node id="13">
         <label>cmath</label>
@@ -25,47 +34,11 @@
       <node id="15">
         <label>map</label>
       </node>
-      <node id="2">
-        <label>CAcquisition.h</label>
-        <link refid="_c_acquisition_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
       <node id="8">
         <label>fstream</label>
       </node>
-      <node id="1">
-        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/CAcquisition.cpp</label>
-        <link refid="_c_acquisition_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>CChantier.h</label>
-        <link refid="_c_chantier_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
       <node id="10">
-        <label>rapidcsv.h</label>
+        <label>../rapidcsv.h</label>
         <link refid="rapidcsv_8h"/>
         <childnode refid="11" relation="include">
         </childnode>
@@ -99,6 +72,22 @@
       <node id="16">
         <label>sstream</label>
       </node>
+      <node id="7">
+        <label>../Modele/COperation.h</label>
+        <link refid="_c_operation_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>../Modele/CChantier.h</label>
+        <link refid="_c_chantier_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
       <node id="5">
         <label>iostream</label>
       </node>
@@ -108,12 +97,20 @@
       <node id="11">
         <label>algorithm</label>
       </node>
-      <node id="7">
-        <label>COperation.h</label>
-        <link refid="_c_operation_8h"/>
+      <node id="1">
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/Donnees/CAcquisition.cpp</label>
+        <link refid="_c_acquisition_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -132,149 +129,148 @@
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_c_acquisition_8h" kindref="compound">CAcquisition.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_c_chantier_8h" kindref="compound">CChantier.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;xlnt/xlnt.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rapidcsv_8h" kindref="compound">rapidcsv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;xlnt/xlnt.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../rapidcsv.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal">vector&lt;CChantier&gt;<sp/><ref refid="class_c_acquisition_1ae4d7d7b8c16d9ca3bf59627d084bfc35" kindref="member">CAcquisition::chantiers</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>path)</highlight></codeline>
-<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrapidcsv_1_1_document" kindref="compound">rapidcsv::Document</ref><sp/>doc(path,<sp/><ref refid="structrapidcsv_1_1_label_params" kindref="compound">rapidcsv::LabelParams</ref>(0,<sp/>-1),<sp/><ref refid="structrapidcsv_1_1_separator_params" kindref="compound">rapidcsv::SeparatorParams</ref>(</highlight><highlight class="charliteral">&apos;;&apos;</highlight><highlight class="normal">));</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;CChantier&gt;<sp/>listeChantiers;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOMS<sp/>DES<sp/>COLONNES</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>nomsColonnes<sp/>=<sp/>doc.GetColumnNames();<sp/></highlight><highlight class="comment">//<sp/>not<sp/>used</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ofstream<sp/>myfile;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//myfile.open(&quot;example.txt&quot;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//myfile<sp/>&lt;&lt;<sp/>&quot;===<sp/>COLONNES<sp/>(&quot;<sp/>&lt;&lt;<sp/>nomsColonnes.size()<sp/>&lt;&lt;&quot;)<sp/>===&quot;<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1ère<sp/>colonne<sp/>=<sp/>SR</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col1<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(0);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2e<sp/>colonne<sp/>=<sp/>libelle<sp/>SR</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col2<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(1);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3e<sp/>colonne<sp/>=<sp/>SR<sp/>Long</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col3<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(2);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Lecture<sp/>de<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>col1.size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>lignes<sp/>a<sp/>partir<sp/>du<sp/>fichier<sp/>:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;<sp/>path<sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Acquisition<sp/>:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//creation<sp/>des<sp/>objets<sp/>Chantier</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>col1.size();<sp/>i++)</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>SR<sp/>=<sp/>col1[i];</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>libelleSR<sp/>=<sp/>col2[i];</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>SRLong<sp/>=<sp/>col3[i];</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_chantier" kindref="compound">CChantier</ref><sp/>chantier(SR,<sp/>libelleSR);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>listeChantiers.push_back(chantier);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*myfile<sp/>&lt;&lt;<sp/>SR<sp/>&lt;&lt;&quot;<sp/>|<sp/>&quot;<sp/>&lt;&lt;<sp/>libelleSR<sp/>&lt;&lt;<sp/>&quot;<sp/>|<sp/>&quot;<sp/>&lt;&lt;<sp/>SRLong<sp/>&lt;&lt;<sp/>&quot;<sp/>|<sp/>&quot;<sp/>&lt;&lt;<sp/>endl;*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*myfile.close();*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;OK&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>listeChantiers;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal">vector&lt;COperation&gt;<sp/><ref refid="class_c_acquisition_1afce5b22a685e51c7a9ba3bb680184364" kindref="member">CAcquisition::operations</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>path)</highlight></codeline>
-<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrapidcsv_1_1_document" kindref="compound">rapidcsv::Document</ref><sp/>doc(path,<sp/><ref refid="structrapidcsv_1_1_label_params" kindref="compound">rapidcsv::LabelParams</ref>(0,<sp/>-1),<sp/><ref refid="structrapidcsv_1_1_separator_params" kindref="compound">rapidcsv::SeparatorParams</ref>(</highlight><highlight class="charliteral">&apos;;&apos;</highlight><highlight class="normal">));</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;COperation&gt;<sp/>listeOperations;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOMS<sp/>DES<sp/>COLONNES</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>nomsColonnes<sp/>=<sp/>doc.GetColumnNames();<sp/></highlight><highlight class="comment">//<sp/>not<sp/>used</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1ère<sp/>colonne<sp/>=<sp/>Id<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;int&gt;<sp/>col0<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;(0);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2e<sp/>colonne<sp/>=<sp/>Operation<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col1<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(1);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3e<sp/>colonne<sp/>=<sp/>Description<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col2<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(2);</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>4e<sp/>colonne<sp/>=<sp/>Version<sp/>PMS<sp/>Op.Ref</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col3<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(3);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>5e<sp/>colonne<sp/>=<sp/>Version<sp/>PMS<sp/>en<sp/>cours</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col4<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(4);<sp/></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>6e<sp/>colonne<sp/>=<sp/>Type<sp/>d&apos;Operation<sp/>Part/Service</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col5<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(5);<sp/></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>7e<sp/>colonne<sp/>=<sp/>Cycle</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col6<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(6);</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>8e<sp/>colonne<sp/>=<sp/>STF<sp/>/<sp/>Ope.<sp/>Part.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col7<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(7);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>9e<sp/>colonne<sp/>=<sp/>Statut<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col8<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(8);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>10e<sp/>colonne<sp/>=<sp/>LCN<sp/>Racine<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col9<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(9);</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>11e<sp/>colonne<sp/>=<sp/>LCN<sp/>Article<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col10<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(10);</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>12e<sp/>colonne<sp/>=<sp/>Reference<sp/>document<sp/>Maintenance</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col11<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(11);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>13e<sp/>colonne<sp/>=<sp/>Rang</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;int&gt;<sp/>col12<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;(12);</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>14e<sp/>colonne<sp/>=<sp/>Date<sp/>debut<sp/>applicabilite<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col13<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(13);</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>15e<sp/>colonne<sp/>=<sp/><sp/>Date<sp/>fin<sp/>applicabilite<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col14<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(14);</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>16e<sp/>colonne<sp/>=<sp/>SEF</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col15<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(15);</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>17e<sp/>colonne<sp/>=<sp/>Cadence<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col16<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(16);</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>18e<sp/>colonne<sp/>=<sp/><sp/>Type<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col17<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(17);</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>19e<sp/>colonne<sp/>=<sp/>Libelle<sp/>Type<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col18<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(18);</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>20e<sp/>colonne<sp/>=<sp/>Nb<sp/>Referentiels<sp/>Applicables</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;int&gt;<sp/>col19<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;(19);</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>21e<sp/>colonne<sp/>=<sp/>Declinaison<sp/>MR</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col20<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(20);</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Lecture<sp/>de<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>col0.size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>lignes<sp/>a<sp/>partir<sp/>du<sp/>fichier<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>path<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Acquisition<sp/>:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//creation<sp/>des<sp/>objets<sp/>COperation</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>col1.size();<sp/>i++)</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_operation" kindref="compound">COperation</ref><sp/>operation;</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a07b2df9ba0d0c4a868c67b7c1454abc9" kindref="member">setIdReference</ref>(col0[i]);</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a8fc2d4ee322fee04597488999a778504" kindref="member">setRefOperation</ref>(col1[i]);</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1ad4e82d12e88d614048b71cf74ba06163" kindref="member">setDescOperation</ref>(col2[i]);</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1ad380f2054f5752e8f6ea6f6501a16e7b" kindref="member">setVersionPMS</ref>(col3[i]);</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>versionPMSEnCours<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(col4[i].compare(</highlight><highlight class="stringliteral">&quot;N&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0)<sp/>{<sp/></highlight><highlight class="comment">//&quot;N&quot;<sp/>=&gt;<sp/>false,<sp/>&quot;O&quot;<sp/>=&gt;<sp/>true</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>versionPMSEnCours<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1af6465f82ef3a3c514ff6fc496f481e6f" kindref="member">setVersionPMSEnCours</ref>(versionPMSEnCours);</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a5283451db267dd283c66b825e37b076c" kindref="member">setTypeOperationPartService</ref>(col5[i]);</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a3a2431ee4144e7d2a4d885865f616ba7" kindref="member">setCycle</ref>(col6[i]);</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a31507eae655dd4bb2e0f7d1b58f9242c" kindref="member">setStfOpePart</ref>(col7[i]);</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a970d548c31bc3d51cfbf0ae33e01fcbf" kindref="member">setStatutOpeRef</ref>(col8[i]);</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a2828599b680545335e2ddca61872316c" kindref="member">setLcnRacine</ref>(col9[i]);</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a19a88170ad3c11dc3ce2fab04920d63a" kindref="member">setLcnArticle</ref>(col10[i]);</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1ad1d4c20268e10142ae1cfea4f20bf689" kindref="member">setRefDocMaintenance</ref>(col11[i]);</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a7c999eb13180f043dd56433d5211b6e2" kindref="member">setRang</ref>(col12[i]);</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a55f1bee49698449df20a75578211af3e" kindref="member">setDateDebutApplicabilite</ref>(col13[i]);</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a26a4779723be511cb50eaef5c22ba9df" kindref="member">setDateFinApplicabilite</ref>(col14[i]);</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a18beed08e3fee02f55dd4d83d101aa59" kindref="member">setSEF</ref>(col15[i]);</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a8bfc80ef642ae3775183ecaf47d56eba" kindref="member">setCadence</ref>(col16[i]);</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1afe0c7b1d4f2790b1f668894dc12cc4b4" kindref="member">setTypeOperation</ref>(col17[i]);</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1aadd25b7111d4fdd7dd977ce5e07c08f1" kindref="member">setLibelleTypeOperation</ref>(col18[i]);</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1aaf2cea194473a1c04ab47943b45f4cfc" kindref="member">setNbReferentielsApplicables</ref>(col19[i]);</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a8578a3daf794eeb03107be986b0ce20f" kindref="member">setDeclinaisonMR</ref>(col20[i]);</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout<sp/>&lt;&lt;<sp/>operation<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>listeOperations.push_back(operation);</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"></highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;OK&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"></highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>listeOperations;</highlight></codeline>
-<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">vector&lt;CChantier&gt;<sp/><ref refid="class_c_acquisition_1ae4d7d7b8c16d9ca3bf59627d084bfc35" kindref="member">CAcquisition::chantiers</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>path)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrapidcsv_1_1_document" kindref="compound">rapidcsv::Document</ref><sp/>doc(path,<sp/><ref refid="structrapidcsv_1_1_label_params" kindref="compound">rapidcsv::LabelParams</ref>(0,<sp/>-1),<sp/><ref refid="structrapidcsv_1_1_separator_params" kindref="compound">rapidcsv::SeparatorParams</ref>(</highlight><highlight class="charliteral">&apos;;&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;CChantier&gt;<sp/>listeChantiers;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOMS<sp/>DES<sp/>COLONNES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>nomsColonnes<sp/>=<sp/>doc.GetColumnNames();<sp/></highlight><highlight class="comment">//<sp/>not<sp/>used</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ofstream<sp/>myfile;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//myfile.open(&quot;example.txt&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//myfile<sp/>&lt;&lt;<sp/>&quot;===<sp/>COLONNES<sp/>(&quot;<sp/>&lt;&lt;<sp/>nomsColonnes.size()<sp/>&lt;&lt;&quot;)<sp/>===&quot;<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1ère<sp/>colonne<sp/>=<sp/>SR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col1<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(0);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2e<sp/>colonne<sp/>=<sp/>libelle<sp/>SR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col2<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(1);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3e<sp/>colonne<sp/>=<sp/>SR<sp/>Long</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col3<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(2);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Lecture<sp/>de<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>col1.size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>lignes<sp/>a<sp/>partir<sp/>du<sp/>fichier<sp/>:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;<sp/>path<sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Acquisition<sp/>:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//creation<sp/>des<sp/>objets<sp/>Chantier</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>col1.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>SR<sp/>=<sp/>col1[i];</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>libelleSR<sp/>=<sp/>col2[i];</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>SRLong<sp/>=<sp/>col3[i];</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_chantier" kindref="compound">CChantier</ref><sp/>chantier(SR,<sp/>libelleSR);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>listeChantiers.push_back(chantier);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*myfile<sp/>&lt;&lt;<sp/>SR<sp/>&lt;&lt;&quot;<sp/>|<sp/>&quot;<sp/>&lt;&lt;<sp/>libelleSR<sp/>&lt;&lt;<sp/>&quot;<sp/>|<sp/>&quot;<sp/>&lt;&lt;<sp/>SRLong<sp/>&lt;&lt;<sp/>&quot;<sp/>|<sp/>&quot;<sp/>&lt;&lt;<sp/>endl;*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*myfile.close();*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;OK&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>listeChantiers;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">vector&lt;COperation&gt;<sp/><ref refid="class_c_acquisition_1afce5b22a685e51c7a9ba3bb680184364" kindref="member">CAcquisition::operations</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>path)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrapidcsv_1_1_document" kindref="compound">rapidcsv::Document</ref><sp/>doc(path,<sp/><ref refid="structrapidcsv_1_1_label_params" kindref="compound">rapidcsv::LabelParams</ref>(0,<sp/>-1),<sp/><ref refid="structrapidcsv_1_1_separator_params" kindref="compound">rapidcsv::SeparatorParams</ref>(</highlight><highlight class="charliteral">&apos;;&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;COperation&gt;<sp/>listeOperations;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOMS<sp/>DES<sp/>COLONNES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>nomsColonnes<sp/>=<sp/>doc.GetColumnNames();<sp/></highlight><highlight class="comment">//<sp/>not<sp/>used</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1ère<sp/>colonne<sp/>=<sp/>Id<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;int&gt;<sp/>col0<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;(0);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2e<sp/>colonne<sp/>=<sp/>Operation<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col1<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(1);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3e<sp/>colonne<sp/>=<sp/>Description<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col2<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(2);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>4e<sp/>colonne<sp/>=<sp/>Version<sp/>PMS<sp/>Op.Ref</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col3<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(3);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>5e<sp/>colonne<sp/>=<sp/>Version<sp/>PMS<sp/>en<sp/>cours</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col4<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(4);<sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>6e<sp/>colonne<sp/>=<sp/>Type<sp/>d&apos;Operation<sp/>Part/Service</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col5<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(5);<sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>7e<sp/>colonne<sp/>=<sp/>Cycle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col6<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(6);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>8e<sp/>colonne<sp/>=<sp/>STF<sp/>/<sp/>Ope.<sp/>Part.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col7<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(7);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>9e<sp/>colonne<sp/>=<sp/>Statut<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col8<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(8);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>10e<sp/>colonne<sp/>=<sp/>LCN<sp/>Racine<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col9<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(9);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>11e<sp/>colonne<sp/>=<sp/>LCN<sp/>Article<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col10<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(10);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>12e<sp/>colonne<sp/>=<sp/>Reference<sp/>document<sp/>Maintenance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col11<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(11);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>13e<sp/>colonne<sp/>=<sp/>Rang</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;int&gt;<sp/>col12<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;(12);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>14e<sp/>colonne<sp/>=<sp/>Date<sp/>debut<sp/>applicabilite<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col13<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(13);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>15e<sp/>colonne<sp/>=<sp/><sp/>Date<sp/>fin<sp/>applicabilite<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col14<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(14);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>16e<sp/>colonne<sp/>=<sp/>SEF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col15<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(15);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>17e<sp/>colonne<sp/>=<sp/>Cadence<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col16<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(16);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>18e<sp/>colonne<sp/>=<sp/><sp/>Type<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col17<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(17);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>19e<sp/>colonne<sp/>=<sp/>Libelle<sp/>Type<sp/>Op.<sp/>Ref</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col18<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(18);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>20e<sp/>colonne<sp/>=<sp/>Nb<sp/>Referentiels<sp/>Applicables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;int&gt;<sp/>col19<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;(19);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>21e<sp/>colonne<sp/>=<sp/>Declinaison<sp/>MR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/>col20<sp/>=<sp/>doc.GetColumn&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;(20);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Lecture<sp/>de<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>col0.size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>lignes<sp/>a<sp/>partir<sp/>du<sp/>fichier<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>path<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Acquisition<sp/>:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//creation<sp/>des<sp/>objets<sp/>COperation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>col1.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_operation" kindref="compound">COperation</ref><sp/>operation;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a07b2df9ba0d0c4a868c67b7c1454abc9" kindref="member">setIdReference</ref>(col0[i]);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a8fc2d4ee322fee04597488999a778504" kindref="member">setRefOperation</ref>(col1[i]);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1ad4e82d12e88d614048b71cf74ba06163" kindref="member">setDescOperation</ref>(col2[i]);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1ad380f2054f5752e8f6ea6f6501a16e7b" kindref="member">setVersionPMS</ref>(col3[i]);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>versionPMSEnCours<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(col4[i].compare(</highlight><highlight class="stringliteral">&quot;N&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>0)<sp/>{<sp/></highlight><highlight class="comment">//&quot;N&quot;<sp/>=&gt;<sp/>false,<sp/>&quot;O&quot;<sp/>=&gt;<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>versionPMSEnCours<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1af6465f82ef3a3c514ff6fc496f481e6f" kindref="member">setVersionPMSEnCours</ref>(versionPMSEnCours);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a5283451db267dd283c66b825e37b076c" kindref="member">setTypeOperationPartService</ref>(col5[i]);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a3a2431ee4144e7d2a4d885865f616ba7" kindref="member">setCycle</ref>(col6[i]);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a31507eae655dd4bb2e0f7d1b58f9242c" kindref="member">setStfOpePart</ref>(col7[i]);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a970d548c31bc3d51cfbf0ae33e01fcbf" kindref="member">setStatutOpeRef</ref>(col8[i]);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a2828599b680545335e2ddca61872316c" kindref="member">setLcnRacine</ref>(col9[i]);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a19a88170ad3c11dc3ce2fab04920d63a" kindref="member">setLcnArticle</ref>(col10[i]);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1ad1d4c20268e10142ae1cfea4f20bf689" kindref="member">setRefDocMaintenance</ref>(col11[i]);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a7c999eb13180f043dd56433d5211b6e2" kindref="member">setRang</ref>(col12[i]);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a55f1bee49698449df20a75578211af3e" kindref="member">setDateDebutApplicabilite</ref>(col13[i]);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a26a4779723be511cb50eaef5c22ba9df" kindref="member">setDateFinApplicabilite</ref>(col14[i]);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a18beed08e3fee02f55dd4d83d101aa59" kindref="member">setSEF</ref>(col15[i]);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a8bfc80ef642ae3775183ecaf47d56eba" kindref="member">setCadence</ref>(col16[i]);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1afe0c7b1d4f2790b1f668894dc12cc4b4" kindref="member">setTypeOperation</ref>(col17[i]);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1aadd25b7111d4fdd7dd977ce5e07c08f1" kindref="member">setLibelleTypeOperation</ref>(col18[i]);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1aaf2cea194473a1c04ab47943b45f4cfc" kindref="member">setNbReferentielsApplicables</ref>(col19[i]);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation.<ref refid="class_c_operation_1a8578a3daf794eeb03107be986b0ce20f" kindref="member">setDeclinaisonMR</ref>(col20[i]);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout<sp/>&lt;&lt;<sp/>operation<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>listeOperations.push_back(operation);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;OK&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>listeOperations;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/CAcquisition.cpp"/>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/Donnees/CAcquisition.cpp"/>
   </compounddef>
 </doxygen>

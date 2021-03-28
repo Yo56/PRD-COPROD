@@ -68,7 +68,7 @@ double \mbox{\hyperlink{classxlnt_1_1font_a9232cda51681d17382809f7cc105b446}{siz
 \begin{DoxyCompactList}\small\item\em Returns the size of the font. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classxlnt_1_1font_a1588aa75ae16d3b08774f1ca5fee250b}{has\+\_\+name}} () const
 \begin{DoxyCompactList}\small\item\em Returns true if this font has a particular face applied (e.\+g. \char`\"{}\+Comic Sans\char`\"{}). \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classxlnt_1_1font}{font}} \& \mbox{\hyperlink{classxlnt_1_1font_a831d2681d0d49371659d464012bd952f}{name}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\mbox{\hyperlink{classxlnt_1_1font}{font}} \& \mbox{\hyperlink{classxlnt_1_1font_a831d2681d0d49371659d464012bd952f}{name}} (const std\+::string \&name)
 \begin{DoxyCompactList}\small\item\em Sets the font face to name and returns a reference to the font. \end{DoxyCompactList}\item 
 const std\+::string \& \mbox{\hyperlink{classxlnt_1_1font_a9b942fc0f5323c050a0a560377cde54f}{name}} () const
 \begin{DoxyCompactList}\small\item\em Returns the name of the font face. \end{DoxyCompactList}\item 
@@ -80,15 +80,15 @@ bool \mbox{\hyperlink{classxlnt_1_1font_acb854f8871df86620cb549a0ee161338}{has\+
 \begin{DoxyCompactList}\small\item\em Returns the color that this font is using. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classxlnt_1_1font_a7044c8e4b65c7ad0a6f96aa12d197420}{has\+\_\+family}} () const
 \begin{DoxyCompactList}\small\item\em Returns true if this font has a family defined. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classxlnt_1_1font}{font}} \& \mbox{\hyperlink{classxlnt_1_1font_a6a8eabdf6925fdc438717ec23c9c7b94}{family}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} family)
+\mbox{\hyperlink{classxlnt_1_1font}{font}} \& \mbox{\hyperlink{classxlnt_1_1font_a6a8eabdf6925fdc438717ec23c9c7b94}{family}} (std\+::size\+\_\+t family)
 \begin{DoxyCompactList}\small\item\em Sets the family index of the font to family and returns a reference to the font. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1font_abca2788c8a38e8d4398b4d08ff2fe574}{family}} () const
+std\+::size\+\_\+t \mbox{\hyperlink{classxlnt_1_1font_abca2788c8a38e8d4398b4d08ff2fe574}{family}} () const
 \begin{DoxyCompactList}\small\item\em Returns the family index for the font. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classxlnt_1_1font_acf57a2c389fc66a3085db89f3c9481b4}{has\+\_\+charset}} () const
 \begin{DoxyCompactList}\small\item\em Returns true if this font has a charset defined. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classxlnt_1_1font}{font}} \& \mbox{\hyperlink{classxlnt_1_1font_ae7e0d3665417fd377ee4fdd4c17152a4}{charset}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} charset)
+\mbox{\hyperlink{classxlnt_1_1font}{font}} \& \mbox{\hyperlink{classxlnt_1_1font_ae7e0d3665417fd377ee4fdd4c17152a4}{charset}} (std\+::size\+\_\+t charset)
 \begin{DoxyCompactList}\small\item\em Sets the charset of the font to charset and returns a reference to the font. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1font_a7afbc51c6f0cf0db3caab4c7daa0834f}{charset}} () const
+std\+::size\+\_\+t \mbox{\hyperlink{classxlnt_1_1font_a7afbc51c6f0cf0db3caab4c7daa0834f}{charset}} () const
 \begin{DoxyCompactList}\small\item\em Returns the charset of the font. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classxlnt_1_1font_a6933fbd5c23914bf4fa9bef388f9a599}{has\+\_\+scheme}} () const
 \begin{DoxyCompactList}\small\item\em Returns true if this font has a scheme. \end{DoxyCompactList}\item 
@@ -185,7 +185,7 @@ Sets the bold state of the font to bold and returns a reference to the font.
 \index{xlnt::font@{xlnt::font}!charset@{charset}}
 \index{charset@{charset}!xlnt::font@{xlnt::font}}
 \doxysubsubsection{\texorpdfstring{charset()}{charset()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::font\+::charset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily std\+::size\+\_\+t xlnt\+::font\+::charset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -195,7 +195,7 @@ Returns the charset of the font.
 \index{xlnt::font@{xlnt::font}!charset@{charset}}
 \index{charset@{charset}!xlnt::font@{xlnt::font}}
 \doxysubsubsection{\texorpdfstring{charset()}{charset()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1font}{font}} \& xlnt\+::font\+::charset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{charset }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1font}{font}} \& xlnt\+::font\+::charset (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{charset }\end{DoxyParamCaption})}
 
 
 
@@ -225,7 +225,7 @@ Sets the color of the font to c and returns a reference to the font.
 \index{xlnt::font@{xlnt::font}!family@{family}}
 \index{family@{family}!xlnt::font@{xlnt::font}}
 \doxysubsubsection{\texorpdfstring{family()}{family()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::font\+::family (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily std\+::size\+\_\+t xlnt\+::font\+::family (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -235,7 +235,7 @@ Returns the family index for the font.
 \index{xlnt::font@{xlnt::font}!family@{family}}
 \index{family@{family}!xlnt::font@{xlnt::font}}
 \doxysubsubsection{\texorpdfstring{family()}{family()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1font}{font}} \& xlnt\+::font\+::family (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{family }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1font}{font}} \& xlnt\+::font\+::family (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{family }\end{DoxyParamCaption})}
 
 
 

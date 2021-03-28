@@ -1,0 +1,1190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classxlnt_1_1detail_1_1xlsx__consumer" kind="class" language="C++" prot="public">
+    <compoundname>xlnt::detail::xlsx_consumer</compoundname>
+    <includes refid="xlsx__consumer_8hpp" local="no">xlsx_consumer.hpp</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classxlnt_1_1detail_1_1xlsx__consumer_1a858da3b467fedd1b117463bf9fabb707" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class xlnt::streaming_workbook_reader</definition>
+        <argsstring></argsstring>
+        <name>xlnt::streaming_workbook_reader</name>
+        <param>
+          <type><ref refid="classxlnt_1_1streaming__workbook__reader" kindref="compound">xlnt::streaming_workbook_reader</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="75" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__consumer_1afa49c3b845f2817a19baedba17c53a3a" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classxlnt_1_1detail_1_1izstream" kindref="compound">izstream</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;izstream&gt; xlnt::detail::xlsx_consumer::archive_</definition>
+        <argsstring></argsstring>
+        <name>archive_</name>
+        <briefdescription>
+<para>The ZIP file containing the files that make up the OOXML package. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="383" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" bodystart="383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__consumer_1a014f46b5ef9f99305b1a2b6b13ac5217" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::size_t &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::size_t&gt; xlnt::detail::xlsx_consumer::sheet_title_id_map_</definition>
+        <argsstring></argsstring>
+        <name>sheet_title_id_map_</name>
+        <briefdescription>
+<para>Map of sheet titles to relationship IDs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="388" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" bodystart="388" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__consumer_1ac62f7b424c57377f20688beb01d67a85" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::size_t &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::size_t&gt; xlnt::detail::xlsx_consumer::sheet_title_index_map_</definition>
+        <argsstring></argsstring>
+        <name>sheet_title_index_map_</name>
+        <briefdescription>
+<para>Map of sheet titles to indices. Used to ensure sheets are maintained in the correct order. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="394" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" bodystart="394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__consumer_1a8a50e5d69e117bc7dae65868b9248853" prot="private" static="no" mutable="no">
+        <type><ref refid="classxlnt_1_1workbook" kindref="compound">workbook</ref> &amp;</type>
+        <definition>workbook&amp; xlnt::detail::xlsx_consumer::target_</definition>
+        <argsstring></argsstring>
+        <name>target_</name>
+        <briefdescription>
+<para>A reference to the workbook which is being read. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="399" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__consumer_1a93a00c3f10682d1ecd9c938705b7f966" prot="private" static="no" mutable="no">
+        <type><ref refid="classxml_1_1parser" kindref="compound">xml::parser</ref> *</type>
+        <definition>xml::parser* xlnt::detail::xlsx_consumer::parser_</definition>
+        <argsstring></argsstring>
+        <name>parser_</name>
+        <briefdescription>
+<para>This pointer is generally set by instantiating an <ref refid="classxml_1_1parser" kindref="compound">xml::parser</ref> in a function scope and then calling a read_*() method which uses xlsx_consumer::parser() to access the object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="406" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__consumer_1a07bfbdcfddbd58ed0c4d29978e9bccb7" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classxml_1_1qname" kindref="compound">xml::qname</ref> &gt;</type>
+        <definition>std::vector&lt;xml::qname&gt; xlnt::detail::xlsx_consumer::stack_</definition>
+        <argsstring></argsstring>
+        <name>stack_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="408" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__consumer_1a819cce6d5f63e908d21b4506bf3173b3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xlnt::detail::xlsx_consumer::preserve_space_</definition>
+        <argsstring></argsstring>
+        <name>preserve_space_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="410" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__consumer_1acd3b61848b1034a9a176ca741c174730" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xlnt::detail::xlsx_consumer::streaming_</definition>
+        <argsstring></argsstring>
+        <name>streaming_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="412" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__consumer_1a93293a4c822fc89bc831b1371a5fd445" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="structxlnt_1_1detail_1_1cell__impl" kindref="compound">detail::cell_impl</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;detail::cell_impl&gt; xlnt::detail::xlsx_consumer::streaming_cell_</definition>
+        <argsstring></argsstring>
+        <name>streaming_cell_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="414" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__consumer_1a810525992dc7130d9d6b4bf9fe9afe22" prot="private" static="no" mutable="no">
+        <type><ref refid="structxlnt_1_1detail_1_1cell__impl" kindref="compound">detail::cell_impl</ref> *</type>
+        <definition>detail::cell_impl* xlnt::detail::xlsx_consumer::current_cell_</definition>
+        <argsstring></argsstring>
+        <name>current_cell_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="416" column="23" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__consumer_1a7769ce3670aaf87bb0debdbb0b82db7c" prot="private" static="no" mutable="no">
+        <type><ref refid="structxlnt_1_1detail_1_1worksheet__impl" kindref="compound">detail::worksheet_impl</ref> *</type>
+        <definition>detail::worksheet_impl* xlnt::detail::xlsx_consumer::current_worksheet_</definition>
+        <argsstring></argsstring>
+        <name>current_worksheet_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="418" column="28" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1detail_1_1xlsx__consumer_1af2ae5f8d0a7fdb0ddab6e7f645a2820f" prot="private" static="no" mutable="no">
+        <type><ref refid="classxlnt_1_1detail_1_1number__serialiser" kindref="compound">number_serialiser</ref></type>
+        <definition>number_serialiser xlnt::detail::xlsx_consumer::converter_</definition>
+        <argsstring></argsstring>
+        <name>converter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="419" column="23" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a6d9b14d748430a185301efcd3403b692" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::detail::xlsx_consumer::xlsx_consumer</definition>
+        <argsstring>(workbook &amp;destination)</argsstring>
+        <name>xlsx_consumer</name>
+        <param>
+          <type><ref refid="classxlnt_1_1workbook" kindref="compound">workbook</ref> &amp;</type>
+          <declname>destination</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="66" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="444" bodyend="448"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a5442c7fd6c13a0390d9ddd88f83cd312" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::detail::xlsx_consumer::~xlsx_consumer</definition>
+        <argsstring>()</argsstring>
+        <name>~xlsx_consumer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="68" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="450" bodyend="452"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a6f18315a7ea4d5490ccac93879b7c1d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read</definition>
+        <argsstring>(std::istream &amp;source)</argsstring>
+        <name>read</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="70" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="454" bodyend="458"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a4323882ad65ea5ae64f51e2104a4662c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read</definition>
+        <argsstring>(std::istream &amp;source, const std::string &amp;password)</argsstring>
+        <name>read</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="72" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/cryptography/xlsx_crypto_consumer.cpp" bodystart="342" bodyend="349"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a82326ec0b1cfa08858c1bb92eff0bb69" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::open</definition>
+        <argsstring>(std::istream &amp;source)</argsstring>
+        <name>open</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="77" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="460" bodyend="464"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1aa98a2e96bd5aabd61ff937a6e7f2e813" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::detail::xlsx_consumer::has_cell</definition>
+        <argsstring>()</argsstring>
+        <name>has_cell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="79" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="1471" bodyend="1475"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1aed74445500dc94a5c013cf861a98185c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell" kindref="compound">cell</ref></type>
+        <definition>cell xlnt::detail::xlsx_consumer::read_cell</definition>
+        <argsstring>()</argsstring>
+        <name>read_cell</name>
+        <briefdescription>
+<para>Reads the next cell in the current worksheet and optionally returns it if the last cell in the sheet has not yet been read. An exception will be thrown if this is not open as a streaming consumer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="86" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="466" bodyend="633"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a8aac755e3b14b63dda374958edfb3889" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::populate_workbook</definition>
+        <argsstring>(bool streaming)</argsstring>
+        <name>populate_workbook</name>
+        <param>
+          <type>bool</type>
+          <declname>streaming</declname>
+        </param>
+        <briefdescription>
+<para>Read all the files needed from the XLSX archive and initialize all of the data in the workbook to match. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="92" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="1654" bodyend="1689"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a903d765678b404c3fd1a8d0b82b9a23a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_content_types</definition>
+        <argsstring>()</argsstring>
+        <name>read_content_types</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="97" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="1693" bodyend="1728"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a73d615dca55a46f7f7d31b2c93b853de" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_core_properties</definition>
+        <argsstring>()</argsstring>
+        <name>read_core_properties</name>
+        <briefdescription>
+<para>Parse the core properties about the current package. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="104" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="1730" bodyend="1749"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1acf26d264524a99b34592de36e9a0c418" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_extended_properties</definition>
+        <argsstring>()</argsstring>
+        <name>read_extended_properties</name>
+        <briefdescription>
+<para>Parse the core properties about the current package. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="109" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="1751" bodyend="1764"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1acd861cebdd4daf3441258bc2a84158c3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_custom_properties</definition>
+        <argsstring>()</argsstring>
+        <name>read_custom_properties</name>
+        <briefdescription>
+<para>Parse the core properties about the current package. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="114" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="1766" bodyend="1781"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1ac8e849fba29b1af6c1b864304d8a3203" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_office_document</definition>
+        <argsstring>(const std::string &amp;content_type)</argsstring>
+        <name>read_office_document</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>content_type</declname>
+        </param>
+        <briefdescription>
+<para>Parse the main XML document about the workbook and then all child relationships of the workbook (e.g. worksheets). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="122" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="1783" bodyend="2096"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a4fd1837be5ac21fd268c7272bd51df1d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_calculation_chain</definition>
+        <argsstring>()</argsstring>
+        <name>read_calculation_chain</name>
+        <briefdescription>
+<para>xl/calcChain.xml </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="129" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2100" bodyend="2102"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1ab1730a26ab2d1ca5758acf2228b8c173" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_connections</definition>
+        <argsstring>()</argsstring>
+        <name>read_connections</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="134" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2108" bodyend="2110"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a7aee87aa2d8b0b373a2682e07dcc66ad" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_custom_property</definition>
+        <argsstring>()</argsstring>
+        <name>read_custom_property</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="139" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2112" bodyend="2114"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a7faf36b9527eac97ddee1e24f1acffde" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_custom_xml_mappings</definition>
+        <argsstring>()</argsstring>
+        <name>read_custom_xml_mappings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="144" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2116" bodyend="2118"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a6b9c104a95a717c58485e80bd4273956" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_external_workbook_references</definition>
+        <argsstring>()</argsstring>
+        <name>read_external_workbook_references</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="149" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2124" bodyend="2126"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1aaca31e5926b7c9a00e65163791aca9bc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_pivot_table</definition>
+        <argsstring>()</argsstring>
+        <name>read_pivot_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="154" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2128" bodyend="2130"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1adf7f8728efe6d4ccfcfba87ae7515c40" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_shared_string_table</definition>
+        <argsstring>()</argsstring>
+        <name>read_shared_string_table</name>
+        <briefdescription>
+<para>xl/sharedStrings.xml </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="159" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2132" bodyend="2160"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1aa23b2d2b6ae5bd3777b102bcd80b1481" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_shared_workbook_revision_headers</definition>
+        <argsstring>()</argsstring>
+        <name>read_shared_workbook_revision_headers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="164" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2162" bodyend="2164"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1ac2ac21653f5d96bf38f00f182893b24c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_shared_workbook</definition>
+        <argsstring>()</argsstring>
+        <name>read_shared_workbook</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="169" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2166" bodyend="2168"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1abed32c192c1c44584e68b671221efed0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_shared_workbook_user_data</definition>
+        <argsstring>()</argsstring>
+        <name>read_shared_workbook_user_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="174" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2170" bodyend="2172"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a2effced5086d10ca7e36faeea5316a5c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_stylesheet</definition>
+        <argsstring>()</argsstring>
+        <name>read_stylesheet</name>
+        <briefdescription>
+<para>xl/styles.xml </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="179" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2174" bodyend="2845"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1abeac37391365581658d81944961cd890" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_theme</definition>
+        <argsstring>()</argsstring>
+        <name>read_theme</name>
+        <briefdescription>
+<para>xl/theme/theme1.xml </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="184" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2847" bodyend="2863"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1aca2a846f15ebf5ffcae23fbef54bd7cd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_volatile_dependencies</definition>
+        <argsstring>()</argsstring>
+        <name>read_volatile_dependencies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="189" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2865" bodyend="2867"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a9f8b4832365a6545ef275239ca0f8ceb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_chartsheet</definition>
+        <argsstring>(const std::string &amp;rel_id)</argsstring>
+        <name>read_chartsheet</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>rel_id</declname>
+        </param>
+        <briefdescription>
+<para>xl/sheets/*.xml </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="194" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2104" bodyend="2106"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a95d52758bdd60b2b566c6bc68d6a3477" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_dialogsheet</definition>
+        <argsstring>(const std::string &amp;rel_id)</argsstring>
+        <name>read_dialogsheet</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>rel_id</declname>
+        </param>
+        <briefdescription>
+<para>xl/sheets/*.xml </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="199" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2120" bodyend="2122"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a22f1ad4e3493c077521ed95cd83a315e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_worksheet</definition>
+        <argsstring>(const std::string &amp;rel_id)</argsstring>
+        <name>read_worksheet</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>rel_id</declname>
+        </param>
+        <briefdescription>
+<para>xl/sheets/*.xml </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="204" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="635" bodyend="644"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a55ff5880b8e248b87be4510f171e63d3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xlnt::detail::xlsx_consumer::read_worksheet_begin</definition>
+        <argsstring>(const std::string &amp;rel_id)</argsstring>
+        <name>read_worksheet_begin</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>rel_id</declname>
+        </param>
+        <briefdescription>
+<para>xl/sheets/*.xml </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="209" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="646" bodyend="957"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a45a72664a17b6b664b3139d59a53019e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_worksheet_sheetdata</definition>
+        <argsstring>()</argsstring>
+        <name>read_worksheet_sheetdata</name>
+        <briefdescription>
+<para>xl/sheets/*.xml </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="214" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="959" bodyend="1026"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a93c0a511554e5bb8f35542dafea670c3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1worksheet" kindref="compound">worksheet</ref></type>
+        <definition>worksheet xlnt::detail::xlsx_consumer::read_worksheet_end</definition>
+        <argsstring>(const std::string &amp;rel_id)</argsstring>
+        <name>read_worksheet_end</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>rel_id</declname>
+        </param>
+        <briefdescription>
+<para>xl/sheets/*.xml </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="219" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="1028" bodyend="1464"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a9be5a76f963d1cf141b8e1a743b88868" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_comments</definition>
+        <argsstring>(worksheet ws)</argsstring>
+        <name>read_comments</name>
+        <param>
+          <type><ref refid="classxlnt_1_1worksheet" kindref="compound">worksheet</ref></type>
+          <declname>ws</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="226" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2875" bodyend="2920"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a511499088a5c6b4d2c26c05dcdf8cf5f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_vml_drawings</definition>
+        <argsstring>(worksheet ws)</argsstring>
+        <name>read_vml_drawings</name>
+        <param>
+          <type><ref refid="classxlnt_1_1worksheet" kindref="compound">worksheet</ref></type>
+          <declname>ws</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="231" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2871" bodyend="2873"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a3e18470d6842ed0580589bf196680c2f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_drawings</definition>
+        <argsstring>(worksheet ws, const path &amp;part)</argsstring>
+        <name>read_drawings</name>
+        <param>
+          <type><ref refid="classxlnt_1_1worksheet" kindref="compound">worksheet</ref></type>
+          <declname>ws</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>part</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="236" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2922" bodyend="2942"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1aa6ec5d08df7dd7eb7262aa7b1e161d57" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_unknown_parts</definition>
+        <argsstring>()</argsstring>
+        <name>read_unknown_parts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="243" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2946" bodyend="2948"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a56089b55d899c92700968376d6897e61" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_unknown_relationships</definition>
+        <argsstring>()</argsstring>
+        <name>read_unknown_relationships</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="248" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2950" bodyend="2952"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a9ebf21692c1dfe0aa248fa3c7591aa53" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_image</definition>
+        <argsstring>(const path &amp;part)</argsstring>
+        <name>read_image</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>part</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="253" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2954" bodyend="2960"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a158135fe61976051bd81ad766b3255e0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &gt;</type>
+        <definition>std::vector&lt; relationship &gt; xlnt::detail::xlsx_consumer::read_relationships</definition>
+        <argsstring>(const path &amp;part)</argsstring>
+        <name>read_relationships</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>part</declname>
+        </param>
+        <briefdescription>
+<para>Read part from the archive and return a vector of relationships based on the content of that part. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="261" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="1477" bodyend="1516"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a3ee2dd445577261bb60a0afda56b58f4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1color" kindref="compound">color</ref></type>
+        <definition>xlnt::color xlnt::detail::xlsx_consumer::read_color</definition>
+        <argsstring>()</argsstring>
+        <name>read_color</name>
+        <briefdescription>
+<para>Read a CT_Color from the document currently being parsed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="266" column="11" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="3285" bodyend="3314"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1aa82620cf67850a1c3af1031c796ce751" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref></type>
+        <definition>rich_text xlnt::detail::xlsx_consumer::read_rich_text</definition>
+        <argsstring>(const xml::qname &amp;parent)</argsstring>
+        <name>read_rich_text</name>
+        <param>
+          <type>const <ref refid="classxml_1_1qname" kindref="compound">xml::qname</ref> &amp;</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+<para>Read a rich text CT_RElt from the document currently being parsed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="271" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="3133" bodyend="3283"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a29420d163643ea0acabb5935e18f79fb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::detail::xlsx_consumer::document_type_is_xlsx</definition>
+        <argsstring>(const std::string &amp;document_content_type)</argsstring>
+        <name>document_type_is_xlsx</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>document_content_type</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the givent document type represents an XLSX file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="276" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a7d219ffba81f824b9b7bb45b77ec34e9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xlnt::detail::xlsx_consumer::read_text</definition>
+        <argsstring>()</argsstring>
+        <name>read_text</name>
+        <briefdescription>
+<para>In mixed content XML elements, whitespace before and after is not ignored. Additionally, if PCDATA spans the boundary of the XML read buffer, it will be parsed as two separate strings instead of on longer string. This method will read character data until non-character data is peek()ed from the parser and returns the combined strings. This should be used when parsing mixed content to ignore whitespace and whenever character data is expected between tags. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="289" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2962" bodyend="2973"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a3c778adeee6797c272c3779e8df1659e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1variant" kindref="compound">variant</ref></type>
+        <definition>variant xlnt::detail::xlsx_consumer::read_variant</definition>
+        <argsstring>()</argsstring>
+        <name>read_variant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="291" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="2975" bodyend="3027"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a363a1058be74ce6b2ee209770de97bed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::read_part</definition>
+        <argsstring>(const std::vector&lt; relationship &gt; &amp;rel_chain)</argsstring>
+        <name>read_part</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &gt; &amp;</type>
+          <declname>rel_chain</declname>
+        </param>
+        <briefdescription>
+<para>Read the part from the archive and parse it as XML. After this is called, xlsx_consumer::parser() will return a reference to the parser that reads this part. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="298" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="1518" bodyend="1652"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a65fd49e93792b70fc6b9ce07cffceda7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::skip_attributes</definition>
+        <argsstring>()</argsstring>
+        <name>skip_attributes</name>
+        <briefdescription>
+<para>libstudxml will throw an exception if all attributes on an element are not read with xml::parser::attribute(const std::string &amp;). This should therefore be called if every remaining attribute should be ignored on an element. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="305" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="3051" bodyend="3054"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a47b0cfc1da0e448ddd673302884bde91" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::skip_attribute</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>skip_attribute</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Skip attribute name if it exists on the currently parsed element in the XML parser. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="311" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="3064" bodyend="3070"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1ad93814cbb6eeda9c8742dc4f7638c7f1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::skip_attribute</definition>
+        <argsstring>(const xml::qname &amp;name)</argsstring>
+        <name>skip_attribute</name>
+        <param>
+          <type>const <ref refid="classxml_1_1qname" kindref="compound">xml::qname</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Skip attribute name if it exists on the currently parsed element in the XML parser. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="317" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="3056" bodyend="3062"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1ad6b626bf38b4fa976080d6812dcc136e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::skip_attributes</definition>
+        <argsstring>(const std::vector&lt; xml::qname &gt; &amp;names)</argsstring>
+        <name>skip_attributes</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="classxml_1_1qname" kindref="compound">xml::qname</ref> &gt; &amp;</type>
+          <declname>names</declname>
+        </param>
+        <briefdescription>
+<para>Call skip_attribute on every name in names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="322" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="3040" bodyend="3049"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1afee3097e3777eb1facb1fef984755e81" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::skip_attributes</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;names)</argsstring>
+        <name>skip_attributes</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>names</declname>
+        </param>
+        <briefdescription>
+<para>Call skip_attribute on every name in names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="327" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="3029" bodyend="3038"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1ae4ee865be5b7df554d133d71c3899d61" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::skip_remaining_content</definition>
+        <argsstring>(const xml::qname &amp;name)</argsstring>
+        <name>skip_remaining_content</name>
+        <param>
+          <type>const <ref refid="classxml_1_1qname" kindref="compound">xml::qname</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Read all content in name until the closing tag is reached. The closing tag will not be handled after this is called. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="333" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="3072" bodyend="3087"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a70ce5425d5dcda7296340d10f600d3ff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxml_1_1qname" kindref="compound">xml::qname</ref></type>
+        <definition>xml::qname xlnt::detail::xlsx_consumer::expect_start_element</definition>
+        <argsstring>(xml::content content)</argsstring>
+        <name>expect_start_element</name>
+        <param>
+          <type><ref refid="structxml_1_1content" kindref="compound">xml::content</ref></type>
+          <declname>content</declname>
+        </param>
+        <briefdescription>
+<para>Handles the next event in the XML parser and throws an exception if it is not the start of an element. Additionally sets the content type of the element to content. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="340" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="3095" bodyend="3105"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a8a960163b22476ad29c7a6cf395e1d97" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::expect_start_element</definition>
+        <argsstring>(const xml::qname &amp;name, xml::content content)</argsstring>
+        <name>expect_start_element</name>
+        <param>
+          <type>const <ref refid="classxml_1_1qname" kindref="compound">xml::qname</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="structxml_1_1content" kindref="compound">xml::content</ref></type>
+          <declname>content</declname>
+        </param>
+        <briefdescription>
+<para>Handles the next event in the XML parser and throws an exception if the next element is not named name. Sets the content type of the element to content. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="347" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="3107" bodyend="3115"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a5141eccd3f4983adc1eee862326531cf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::expect_end_element</definition>
+        <argsstring>(const xml::qname &amp;name)</argsstring>
+        <name>expect_end_element</name>
+        <param>
+          <type>const <ref refid="classxml_1_1qname" kindref="compound">xml::qname</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Throws an exception if the next event in the XML parser is not the end of element called name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="353" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="3117" bodyend="3122"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a7bc3336a647b050b462b55140cc1655b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::detail::xlsx_consumer::in_element</definition>
+        <argsstring>(const xml::qname &amp;name)</argsstring>
+        <name>in_element</name>
+        <param>
+          <type>const <ref refid="classxml_1_1qname" kindref="compound">xml::qname</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the top of the parsing stack is called name and the end of that element hasn&apos;t been reached in the XML document. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="359" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="3089" bodyend="3093"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a8e8fa0a61c5804cf8c4e9dacd1f6b8e9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::detail::xlsx_consumer::unexpected_element</definition>
+        <argsstring>(const xml::qname &amp;name)</argsstring>
+        <name>unexpected_element</name>
+        <param>
+          <type>const <ref refid="classxml_1_1qname" kindref="compound">xml::qname</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Throws an exception or skips remaining elements depending on the value of THROW_ON_INVALID_XML. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="365" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="3124" bodyend="3131"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1addd9d7ae6f23e82d203fcb4b26edce6d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxml_1_1parser" kindref="compound">xml::parser</ref> &amp;</type>
+        <definition>xml::parser &amp; xlnt::detail::xlsx_consumer::parser</definition>
+        <argsstring>()</argsstring>
+        <name>parser</name>
+        <briefdescription>
+<para>Convenience method to dereference the pointer to the current parser to avoid having to use &quot;parser_-&gt;&quot; constantly. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="373" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="1466" bodyend="1469"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1detail_1_1xlsx__consumer_1a59d3fbc6e52ef8d6621dac48a48a2234" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class <ref refid="classxlnt_1_1manifest" kindref="compound">manifest</ref> &amp;</type>
+        <definition>manifest &amp; xlnt::detail::xlsx_consumer::manifest</definition>
+        <argsstring>()</argsstring>
+        <name>manifest</name>
+        <briefdescription>
+<para>Convenience method to access the target workbook&apos;s manifest. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="378" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp" bodystart="3316" bodyend="3319"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Handles writing a workbook into an XLSX file. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" line="63" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.hpp" bodystart="64" bodyend="420"/>
+    <listofallmembers>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1afa49c3b845f2817a19baedba17c53a3a" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>archive_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1af2ae5f8d0a7fdb0ddab6e7f645a2820f" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>converter_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a810525992dc7130d9d6b4bf9fe9afe22" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>current_cell_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a7769ce3670aaf87bb0debdbb0b82db7c" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>current_worksheet_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a29420d163643ea0acabb5935e18f79fb" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>document_type_is_xlsx</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a5141eccd3f4983adc1eee862326531cf" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>expect_end_element</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a70ce5425d5dcda7296340d10f600d3ff" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>expect_start_element</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a8a960163b22476ad29c7a6cf395e1d97" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>expect_start_element</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1aa98a2e96bd5aabd61ff937a6e7f2e813" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>has_cell</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a7bc3336a647b050b462b55140cc1655b" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>in_element</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a59d3fbc6e52ef8d6621dac48a48a2234" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>manifest</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a82326ec0b1cfa08858c1bb92eff0bb69" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>open</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1addd9d7ae6f23e82d203fcb4b26edce6d" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>parser</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a93a00c3f10682d1ecd9c938705b7f966" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>parser_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a8aac755e3b14b63dda374958edfb3889" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>populate_workbook</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a819cce6d5f63e908d21b4506bf3173b3" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>preserve_space_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a6f18315a7ea4d5490ccac93879b7c1d4" prot="public" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a4323882ad65ea5ae64f51e2104a4662c" prot="public" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a4fd1837be5ac21fd268c7272bd51df1d" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_calculation_chain</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1aed74445500dc94a5c013cf861a98185c" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_cell</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a9f8b4832365a6545ef275239ca0f8ceb" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_chartsheet</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a3ee2dd445577261bb60a0afda56b58f4" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_color</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a9be5a76f963d1cf141b8e1a743b88868" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_comments</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1ab1730a26ab2d1ca5758acf2228b8c173" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_connections</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a903d765678b404c3fd1a8d0b82b9a23a" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_content_types</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a73d615dca55a46f7f7d31b2c93b853de" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_core_properties</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1acd861cebdd4daf3441258bc2a84158c3" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_custom_properties</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a7aee87aa2d8b0b373a2682e07dcc66ad" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_custom_property</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a7faf36b9527eac97ddee1e24f1acffde" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_custom_xml_mappings</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a95d52758bdd60b2b566c6bc68d6a3477" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_dialogsheet</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a3e18470d6842ed0580589bf196680c2f" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_drawings</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1acf26d264524a99b34592de36e9a0c418" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_extended_properties</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a6b9c104a95a717c58485e80bd4273956" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_external_workbook_references</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a9ebf21692c1dfe0aa248fa3c7591aa53" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_image</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1ac8e849fba29b1af6c1b864304d8a3203" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_office_document</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a363a1058be74ce6b2ee209770de97bed" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_part</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1aaca31e5926b7c9a00e65163791aca9bc" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_pivot_table</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a158135fe61976051bd81ad766b3255e0" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_relationships</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1aa82620cf67850a1c3af1031c796ce751" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_rich_text</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1adf7f8728efe6d4ccfcfba87ae7515c40" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_shared_string_table</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1ac2ac21653f5d96bf38f00f182893b24c" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_shared_workbook</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1aa23b2d2b6ae5bd3777b102bcd80b1481" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_shared_workbook_revision_headers</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1abed32c192c1c44584e68b671221efed0" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_shared_workbook_user_data</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a2effced5086d10ca7e36faeea5316a5c" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_stylesheet</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a7d219ffba81f824b9b7bb45b77ec34e9" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_text</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1abeac37391365581658d81944961cd890" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_theme</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1aa6ec5d08df7dd7eb7262aa7b1e161d57" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_unknown_parts</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a56089b55d899c92700968376d6897e61" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_unknown_relationships</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a3c778adeee6797c272c3779e8df1659e" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_variant</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a511499088a5c6b4d2c26c05dcdf8cf5f" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_vml_drawings</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1aca2a846f15ebf5ffcae23fbef54bd7cd" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_volatile_dependencies</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a22f1ad4e3493c077521ed95cd83a315e" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_worksheet</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a55ff5880b8e248b87be4510f171e63d3" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_worksheet_begin</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a93c0a511554e5bb8f35542dafea670c3" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_worksheet_end</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a45a72664a17b6b664b3139d59a53019e" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>read_worksheet_sheetdata</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a014f46b5ef9f99305b1a2b6b13ac5217" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>sheet_title_id_map_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1ac62f7b424c57377f20688beb01d67a85" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>sheet_title_index_map_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a47b0cfc1da0e448ddd673302884bde91" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>skip_attribute</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1ad93814cbb6eeda9c8742dc4f7638c7f1" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>skip_attribute</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a65fd49e93792b70fc6b9ce07cffceda7" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>skip_attributes</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1ad6b626bf38b4fa976080d6812dcc136e" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>skip_attributes</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1afee3097e3777eb1facb1fef984755e81" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>skip_attributes</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1ae4ee865be5b7df554d133d71c3899d61" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>skip_remaining_content</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a07bfbdcfddbd58ed0c4d29978e9bccb7" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>stack_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1acd3b61848b1034a9a176ca741c174730" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>streaming_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a93293a4c822fc89bc831b1371a5fd445" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>streaming_cell_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a8a50e5d69e117bc7dae65868b9248853" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>target_</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a8e8fa0a61c5804cf8c4e9dacd1f6b8e9" prot="private" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>unexpected_element</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a858da3b467fedd1b117463bf9fabb707" prot="public" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>xlnt::streaming_workbook_reader</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a6d9b14d748430a185301efcd3403b692" prot="public" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>xlsx_consumer</name></member>
+      <member refid="classxlnt_1_1detail_1_1xlsx__consumer_1a5442c7fd6c13a0390d9ddd88f83cd312" prot="public" virt="non-virtual"><scope>xlnt::detail::xlsx_consumer</scope><name>~xlsx_consumer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

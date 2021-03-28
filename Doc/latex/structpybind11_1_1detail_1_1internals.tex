@@ -1,0 +1,121 @@
+\hypertarget{structpybind11_1_1detail_1_1internals}{}\doxysection{pybind11\+::detail\+::internals Struct Reference}
+\label{structpybind11_1_1detail_1_1internals}\index{pybind11::detail::internals@{pybind11::detail::internals}}
+
+
+Internal data structure used to track registered instances and types.  
+
+
+
+
+{\ttfamily \#include $<$common.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepybind11_1_1detail_ab290ef99c5e3c87236b1fec3c277c6e4}{type\+\_\+map}}$<$ void $\ast$ $>$ \mbox{\hyperlink{structpybind11_1_1detail_1_1internals_abfffd504056cf67c94d35fe101b64c06}{registered\+\_\+types\+\_\+cpp}}
+\item 
+std\+::unordered\+\_\+map$<$ Py\+Type\+Object $\ast$, std\+::vector$<$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info}{type\+\_\+info}} $\ast$ $>$ $>$ \mbox{\hyperlink{structpybind11_1_1detail_1_1internals_aca38286f978b7e059690321da744ea2f}{registered\+\_\+types\+\_\+py}}
+\item 
+std\+::unordered\+\_\+multimap$<$ const void $\ast$, \mbox{\hyperlink{structpybind11_1_1detail_1_1instance}{instance}} $\ast$ $>$ \mbox{\hyperlink{structpybind11_1_1detail_1_1internals_a52c01de2ba25ab667539a9fb01e7defe}{registered\+\_\+instances}}
+\item 
+std\+::unordered\+\_\+set$<$ std\+::pair$<$ const Py\+Object $\ast$, const char $\ast$ $>$, \mbox{\hyperlink{structpybind11_1_1detail_1_1overload__hash}{overload\+\_\+hash}} $>$ \mbox{\hyperlink{structpybind11_1_1detail_1_1internals_afa24a87f87aee7bd7666fa31dac5e529}{inactive\+\_\+overload\+\_\+cache}}
+\item 
+\mbox{\hyperlink{namespacepybind11_1_1detail_ab290ef99c5e3c87236b1fec3c277c6e4}{type\+\_\+map}}$<$ std\+::vector$<$ bool($\ast$)(Py\+Object $\ast$, void $\ast$\&)$>$ $>$ \mbox{\hyperlink{structpybind11_1_1detail_1_1internals_aff8f17a57c8c8bc398a7bc14e0c1199d}{direct\+\_\+conversions}}
+\item 
+std\+::unordered\+\_\+map$<$ const Py\+Object $\ast$, std\+::vector$<$ Py\+Object $\ast$ $>$ $>$ \mbox{\hyperlink{structpybind11_1_1detail_1_1internals_a20763dcb7302528068f8289edd4ea9d7}{patients}}
+\item 
+std\+::forward\+\_\+list$<$ void($\ast$)(std\+::exception\+\_\+ptr)$>$ \mbox{\hyperlink{structpybind11_1_1detail_1_1internals_a3d4d8868728159a959ad949e276df796}{registered\+\_\+exception\+\_\+translators}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, void $\ast$ $>$ \mbox{\hyperlink{structpybind11_1_1detail_1_1internals_a6a543db2d1d11952560031723aa542e2}{shared\+\_\+data}}
+\item 
+std\+::vector$<$ Py\+Object $\ast$ $>$ \mbox{\hyperlink{structpybind11_1_1detail_1_1internals_abd1e008d90435e3f43622d78751a9dda}{loader\+\_\+patient\+\_\+stack}}
+\item 
+Py\+Type\+Object $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1internals_a3fb3b0e6b890c1f11b3e85b061a0023a}{static\+\_\+property\+\_\+type}}
+\item 
+Py\+Type\+Object $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1internals_a19dc621a948379dcd41195d906211de4}{default\+\_\+metaclass}}
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1internals_ab8f874364d8be98700e06109e38542d5}{instance\+\_\+base}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Internal data structure used to track registered instances and types. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1internals_a19dc621a948379dcd41195d906211de4}\label{structpybind11_1_1detail_1_1internals_a19dc621a948379dcd41195d906211de4}} 
+\index{pybind11::detail::internals@{pybind11::detail::internals}!default\_metaclass@{default\_metaclass}}
+\index{default\_metaclass@{default\_metaclass}!pybind11::detail::internals@{pybind11::detail::internals}}
+\doxysubsubsection{\texorpdfstring{default\_metaclass}{default\_metaclass}}
+{\footnotesize\ttfamily Py\+Type\+Object$\ast$ pybind11\+::detail\+::internals\+::default\+\_\+metaclass}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1internals_aff8f17a57c8c8bc398a7bc14e0c1199d}\label{structpybind11_1_1detail_1_1internals_aff8f17a57c8c8bc398a7bc14e0c1199d}} 
+\index{pybind11::detail::internals@{pybind11::detail::internals}!direct\_conversions@{direct\_conversions}}
+\index{direct\_conversions@{direct\_conversions}!pybind11::detail::internals@{pybind11::detail::internals}}
+\doxysubsubsection{\texorpdfstring{direct\_conversions}{direct\_conversions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepybind11_1_1detail_ab290ef99c5e3c87236b1fec3c277c6e4}{type\+\_\+map}}$<$std\+::vector$<$bool ($\ast$)(Py\+Object $\ast$, void $\ast$\&)$>$ $>$ pybind11\+::detail\+::internals\+::direct\+\_\+conversions}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1internals_afa24a87f87aee7bd7666fa31dac5e529}\label{structpybind11_1_1detail_1_1internals_afa24a87f87aee7bd7666fa31dac5e529}} 
+\index{pybind11::detail::internals@{pybind11::detail::internals}!inactive\_overload\_cache@{inactive\_overload\_cache}}
+\index{inactive\_overload\_cache@{inactive\_overload\_cache}!pybind11::detail::internals@{pybind11::detail::internals}}
+\doxysubsubsection{\texorpdfstring{inactive\_overload\_cache}{inactive\_overload\_cache}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+set$<$std\+::pair$<$const Py\+Object $\ast$, const char $\ast$$>$, \mbox{\hyperlink{structpybind11_1_1detail_1_1overload__hash}{overload\+\_\+hash}}$>$ pybind11\+::detail\+::internals\+::inactive\+\_\+overload\+\_\+cache}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1internals_ab8f874364d8be98700e06109e38542d5}\label{structpybind11_1_1detail_1_1internals_ab8f874364d8be98700e06109e38542d5}} 
+\index{pybind11::detail::internals@{pybind11::detail::internals}!instance\_base@{instance\_base}}
+\index{instance\_base@{instance\_base}!pybind11::detail::internals@{pybind11::detail::internals}}
+\doxysubsubsection{\texorpdfstring{instance\_base}{instance\_base}}
+{\footnotesize\ttfamily Py\+Object$\ast$ pybind11\+::detail\+::internals\+::instance\+\_\+base}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1internals_abd1e008d90435e3f43622d78751a9dda}\label{structpybind11_1_1detail_1_1internals_abd1e008d90435e3f43622d78751a9dda}} 
+\index{pybind11::detail::internals@{pybind11::detail::internals}!loader\_patient\_stack@{loader\_patient\_stack}}
+\index{loader\_patient\_stack@{loader\_patient\_stack}!pybind11::detail::internals@{pybind11::detail::internals}}
+\doxysubsubsection{\texorpdfstring{loader\_patient\_stack}{loader\_patient\_stack}}
+{\footnotesize\ttfamily std\+::vector$<$Py\+Object $\ast$$>$ pybind11\+::detail\+::internals\+::loader\+\_\+patient\+\_\+stack}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1internals_a20763dcb7302528068f8289edd4ea9d7}\label{structpybind11_1_1detail_1_1internals_a20763dcb7302528068f8289edd4ea9d7}} 
+\index{pybind11::detail::internals@{pybind11::detail::internals}!patients@{patients}}
+\index{patients@{patients}!pybind11::detail::internals@{pybind11::detail::internals}}
+\doxysubsubsection{\texorpdfstring{patients}{patients}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$const Py\+Object $\ast$, std\+::vector$<$Py\+Object $\ast$$>$ $>$ pybind11\+::detail\+::internals\+::patients}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1internals_a3d4d8868728159a959ad949e276df796}\label{structpybind11_1_1detail_1_1internals_a3d4d8868728159a959ad949e276df796}} 
+\index{pybind11::detail::internals@{pybind11::detail::internals}!registered\_exception\_translators@{registered\_exception\_translators}}
+\index{registered\_exception\_translators@{registered\_exception\_translators}!pybind11::detail::internals@{pybind11::detail::internals}}
+\doxysubsubsection{\texorpdfstring{registered\_exception\_translators}{registered\_exception\_translators}}
+{\footnotesize\ttfamily std\+::forward\+\_\+list$<$void ($\ast$) (std\+::exception\+\_\+ptr)$>$ pybind11\+::detail\+::internals\+::registered\+\_\+exception\+\_\+translators}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1internals_a52c01de2ba25ab667539a9fb01e7defe}\label{structpybind11_1_1detail_1_1internals_a52c01de2ba25ab667539a9fb01e7defe}} 
+\index{pybind11::detail::internals@{pybind11::detail::internals}!registered\_instances@{registered\_instances}}
+\index{registered\_instances@{registered\_instances}!pybind11::detail::internals@{pybind11::detail::internals}}
+\doxysubsubsection{\texorpdfstring{registered\_instances}{registered\_instances}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+multimap$<$const void $\ast$, \mbox{\hyperlink{structpybind11_1_1detail_1_1instance}{instance}}$\ast$$>$ pybind11\+::detail\+::internals\+::registered\+\_\+instances}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1internals_abfffd504056cf67c94d35fe101b64c06}\label{structpybind11_1_1detail_1_1internals_abfffd504056cf67c94d35fe101b64c06}} 
+\index{pybind11::detail::internals@{pybind11::detail::internals}!registered\_types\_cpp@{registered\_types\_cpp}}
+\index{registered\_types\_cpp@{registered\_types\_cpp}!pybind11::detail::internals@{pybind11::detail::internals}}
+\doxysubsubsection{\texorpdfstring{registered\_types\_cpp}{registered\_types\_cpp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepybind11_1_1detail_ab290ef99c5e3c87236b1fec3c277c6e4}{type\+\_\+map}}$<$void $\ast$$>$ pybind11\+::detail\+::internals\+::registered\+\_\+types\+\_\+cpp}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1internals_aca38286f978b7e059690321da744ea2f}\label{structpybind11_1_1detail_1_1internals_aca38286f978b7e059690321da744ea2f}} 
+\index{pybind11::detail::internals@{pybind11::detail::internals}!registered\_types\_py@{registered\_types\_py}}
+\index{registered\_types\_py@{registered\_types\_py}!pybind11::detail::internals@{pybind11::detail::internals}}
+\doxysubsubsection{\texorpdfstring{registered\_types\_py}{registered\_types\_py}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$Py\+Type\+Object $\ast$, std\+::vector$<$\mbox{\hyperlink{structpybind11_1_1detail_1_1type__info}{type\+\_\+info}} $\ast$$>$ $>$ pybind11\+::detail\+::internals\+::registered\+\_\+types\+\_\+py}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1internals_a6a543db2d1d11952560031723aa542e2}\label{structpybind11_1_1detail_1_1internals_a6a543db2d1d11952560031723aa542e2}} 
+\index{pybind11::detail::internals@{pybind11::detail::internals}!shared\_data@{shared\_data}}
+\index{shared\_data@{shared\_data}!pybind11::detail::internals@{pybind11::detail::internals}}
+\doxysubsubsection{\texorpdfstring{shared\_data}{shared\_data}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, void $\ast$$>$ pybind11\+::detail\+::internals\+::shared\+\_\+data}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1internals_a3fb3b0e6b890c1f11b3e85b061a0023a}\label{structpybind11_1_1detail_1_1internals_a3fb3b0e6b890c1f11b3e85b061a0023a}} 
+\index{pybind11::detail::internals@{pybind11::detail::internals}!static\_property\_type@{static\_property\_type}}
+\index{static\_property\_type@{static\_property\_type}!pybind11::detail::internals@{pybind11::detail::internals}}
+\doxysubsubsection{\texorpdfstring{static\_property\_type}{static\_property\_type}}
+{\footnotesize\ttfamily Py\+Type\+Object$\ast$ pybind11\+::detail\+::internals\+::static\+\_\+property\+\_\+type}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{common_8h}{common.\+h}}\end{DoxyCompactItemize}

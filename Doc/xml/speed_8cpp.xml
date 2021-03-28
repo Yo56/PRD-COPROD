@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="speed_8cpp" kind="file" language="C++">
+    <compoundname>speed.cpp</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="speed_8cpp_1a63faad48700b046a2ad50d04f6eecea8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Benchmark some different implementations for cells from openpyxl compat import range from openpyxl cell import Cell from openpyxl cell read_only import ReadOnlyCell from memory_profiler import memory_usage import time def</type>
+        <definition>Benchmark some different implementations for cells from openpyxl compat import range from openpyxl cell import Cell from openpyxl cell read_only import ReadOnlyCell from memory_profiler import memory_usage import time def standard</definition>
+        <argsstring>()</argsstring>
+        <name>standard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/benchmarks/disabled/speed.cpp" line="11" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/benchmarks/disabled/speed.cpp" bodystart="11" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="stringliteral">&quot;Benchmark<sp/>some<sp/>different<sp/>implementations<sp/>for<sp/>cells&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">from<sp/>openpyxl.compat<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/><ref refid="namespacepybind11_1_1detail_1a33c4d7ef0a3ea3fc3c06ec4e58ee050c" kindref="member">range</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">from<sp/>openpyxl.cell<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Cell</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">from<sp/>openpyxl.cell.read_only<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>ReadOnlyCell</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">from<sp/>memory_profiler<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>memory_usage</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>time</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">def<sp/><ref refid="speed_8cpp_1a63faad48700b046a2ad50d04f6eecea8" kindref="member">standard</ref>():</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>c<sp/>=<sp/>Cell(None,<sp/></highlight><highlight class="stringliteral">&quot;A&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;0&quot;</highlight><highlight class="normal">,<sp/>None)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">def<sp/>iterative():</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>c<sp/>=<sp/>ReadOnlyCell(None,<sp/>None,<sp/>None,<sp/></highlight><highlight class="stringliteral">&apos;n&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">def<sp/>dictionary():</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>c<sp/>=<sp/>{</highlight><highlight class="stringliteral">&apos;ws&apos;</highlight><highlight class="normal">:</highlight><highlight class="stringliteral">&apos;None&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;col&apos;</highlight><highlight class="normal">:</highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;row&apos;</highlight><highlight class="normal">:0,<sp/></highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">:1}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;__main__&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>initial_use<sp/>=<sp/>memory_usage(proc=-1,<sp/>interval=1)[0]</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>fn<sp/>in<sp/>(<ref refid="speed_8cpp_1a63faad48700b046a2ad50d04f6eecea8" kindref="member">standard</ref>,<sp/>iterative,<sp/>dictionary):</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/>time.time()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>container<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1_1detail_1a624a1a1288a51bfa1150e642694eca0c" kindref="member">for</ref><sp/>i<sp/>in<sp/><ref refid="namespacepybind11_1_1detail_1a33c4d7ef0a3ea3fc3c06ec4e58ee050c" kindref="member">range</ref>(1000000):</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>container.<ref refid="namespaceutf8_1a3827e78596fc38cfdebd721e9c45c901" kindref="member">append</ref>(fn())</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1a913a30079a57934b1bfda83ba4080da4" kindref="member">print</ref>(</highlight><highlight class="stringliteral">&quot;{0}<sp/>{1}<sp/>MB,<sp/>{2:.2f}s&quot;</highlight><highlight class="normal">.format(</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fn.func_name,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memory_usage(proc=-1,<sp/>interval=1)[0]<sp/>-<sp/>initial_use,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time.time()<sp/>-<sp/>t))</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/benchmarks/disabled/speed.cpp"/>
+  </compounddef>
+</doxygen>

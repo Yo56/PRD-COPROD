@@ -1,0 +1,136 @@
+\hypertarget{structpybind11_1_1detail_1_1string__caster}{}\doxysection{pybind11\+::detail\+::string\+\_\+caster$<$ String\+Type, Is\+View $>$ Struct Template Reference}
+\label{structpybind11_1_1detail_1_1string__caster}\index{pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}}
+
+
+{\ttfamily \#include $<$cast.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster_a5af3f7b0e4999d0e7d4eafde0dda688b}{CharT}} = typename String\+Type\+::value\+\_\+type
+\item 
+{\footnotesize template$<$typename T\+\_\+ $>$ }\\using \mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster_a2797f3ee8b88ec1f48fcf71e81667f81}{cast\+\_\+op\+\_\+type}} = \mbox{\hyperlink{namespacepybind11_1_1detail_a3e4f52c827f0391c3ca8166590c559c9}{pybind11\+::detail\+::movable\+\_\+cast\+\_\+op\+\_\+type}}$<$ T\+\_\+ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster_a56395b71453be6a570972f5be2b60859}{load}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} src, bool)
+\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster_a7661aa9954fa1e4acf07a65a27f6e1dd}{operator String\+Type $\ast$}} ()
+\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster_ad9c8a60284b8f7cfb20904831d9bb40d}{operator String\+Type \&}} ()
+\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster_a88f01f2253d541d5670f94b8f1858c46}{operator String\+Type \&\&}} () \&\&
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster_a6a89113cefa6388771bc44da5ddee8a9}{cast}} (const String\+Type \&src, \mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}}, \mbox{\hyperlink{classpybind11_1_1handle}{handle}})
+\item 
+\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1descr}{pybind11\+::detail\+::descr}} \mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster_a264b91b02185a45e78b7e4ad1e8da1c3}{name}} ()
+\item 
+{\footnotesize template$<$typename T\+\_\+ , enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same$<$ String\+Type, remove\+\_\+cv\+\_\+t$<$ T\+\_\+ $>$$>$\+::value, int $>$  = 0$>$ }\\static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster_aa49eba4261cd91b43858954b1667be85}{cast}} (T\+\_\+ $\ast$src, \mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}} policy, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} parent)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}} \mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster_a194749f84b31a3ca9f84012b6249973e}{UTF\+\_\+N}} = 8 $\ast$ sizeof(\mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster_a5af3f7b0e4999d0e7d4eafde0dda688b}{CharT}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String\+Type \mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster_a7cb42400017a34fde39d636df320f599}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1string__caster_a2797f3ee8b88ec1f48fcf71e81667f81}\label{structpybind11_1_1detail_1_1string__caster_a2797f3ee8b88ec1f48fcf71e81667f81}} 
+\index{pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}!cast\_op\_type@{cast\_op\_type}}
+\index{cast\_op\_type@{cast\_op\_type}!pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}}
+\doxysubsubsection{\texorpdfstring{cast\_op\_type}{cast\_op\_type}}
+{\footnotesize\ttfamily template$<$typename String\+Type , bool Is\+View = false$>$ \\
+template$<$typename T\+\_\+ $>$ \\
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster}{pybind11\+::detail\+::string\+\_\+caster}}$<$ String\+Type, Is\+View $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster_a2797f3ee8b88ec1f48fcf71e81667f81}{cast\+\_\+op\+\_\+type}} =  \mbox{\hyperlink{namespacepybind11_1_1detail_a3e4f52c827f0391c3ca8166590c559c9}{pybind11\+::detail\+::movable\+\_\+cast\+\_\+op\+\_\+type}}$<$T\+\_\+$>$}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1string__caster_a5af3f7b0e4999d0e7d4eafde0dda688b}\label{structpybind11_1_1detail_1_1string__caster_a5af3f7b0e4999d0e7d4eafde0dda688b}} 
+\index{pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}!CharT@{CharT}}
+\index{CharT@{CharT}!pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}}
+\doxysubsubsection{\texorpdfstring{CharT}{CharT}}
+{\footnotesize\ttfamily template$<$typename String\+Type , bool Is\+View = false$>$ \\
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster}{pybind11\+::detail\+::string\+\_\+caster}}$<$ String\+Type, Is\+View $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster_a5af3f7b0e4999d0e7d4eafde0dda688b}{CharT}} =  typename String\+Type\+::value\+\_\+type}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1string__caster_a6a89113cefa6388771bc44da5ddee8a9}\label{structpybind11_1_1detail_1_1string__caster_a6a89113cefa6388771bc44da5ddee8a9}} 
+\index{pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}!cast@{cast}}
+\index{cast@{cast}!pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename String\+Type , bool Is\+View = false$>$ \\
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster}{pybind11\+::detail\+::string\+\_\+caster}}$<$ String\+Type, Is\+View $>$\+::cast (\begin{DoxyParamCaption}\item[{const String\+Type \&}]{src,  }\item[{\mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}}}]{,  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1string__caster_aa49eba4261cd91b43858954b1667be85}\label{structpybind11_1_1detail_1_1string__caster_aa49eba4261cd91b43858954b1667be85}} 
+\index{pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}!cast@{cast}}
+\index{cast@{cast}!pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename String\+Type , bool Is\+View = false$>$ \\
+template$<$typename T\+\_\+ , enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same$<$ String\+Type, remove\+\_\+cv\+\_\+t$<$ T\+\_\+ $>$$>$\+::value, int $>$  = 0$>$ \\
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster}{pybind11\+::detail\+::string\+\_\+caster}}$<$ String\+Type, Is\+View $>$\+::cast (\begin{DoxyParamCaption}\item[{T\+\_\+ $\ast$}]{src,  }\item[{\mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}}}]{policy,  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1string__caster_a56395b71453be6a570972f5be2b60859}\label{structpybind11_1_1detail_1_1string__caster_a56395b71453be6a570972f5be2b60859}} 
+\index{pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}!load@{load}}
+\index{load@{load}!pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$typename String\+Type , bool Is\+View = false$>$ \\
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster}{pybind11\+::detail\+::string\+\_\+caster}}$<$ String\+Type, Is\+View $>$\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{src,  }\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1string__caster_a264b91b02185a45e78b7e4ad1e8da1c3}\label{structpybind11_1_1detail_1_1string__caster_a264b91b02185a45e78b7e4ad1e8da1c3}} 
+\index{pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}!name@{name}}
+\index{name@{name}!pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily template$<$typename String\+Type , bool Is\+View = false$>$ \\
+\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1descr}{pybind11\+::detail\+::descr}} \mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster}{pybind11\+::detail\+::string\+\_\+caster}}$<$ String\+Type, Is\+View $>$\+::\mbox{\hyperlink{structpybind11_1_1name}{name}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1string__caster_ad9c8a60284b8f7cfb20904831d9bb40d}\label{structpybind11_1_1detail_1_1string__caster_ad9c8a60284b8f7cfb20904831d9bb40d}} 
+\index{pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}!operator StringType \&@{operator StringType \&}}
+\index{operator StringType \&@{operator StringType \&}!pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}}
+\doxysubsubsection{\texorpdfstring{operator StringType \&()}{operator StringType \&()}}
+{\footnotesize\ttfamily template$<$typename String\+Type , bool Is\+View = false$>$ \\
+\mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster}{pybind11\+::detail\+::string\+\_\+caster}}$<$ String\+Type, Is\+View $>$\+::operator String\+Type \& (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1string__caster_a88f01f2253d541d5670f94b8f1858c46}\label{structpybind11_1_1detail_1_1string__caster_a88f01f2253d541d5670f94b8f1858c46}} 
+\index{pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}!operator StringType \&\&@{operator StringType \&\&}}
+\index{operator StringType \&\&@{operator StringType \&\&}!pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}}
+\doxysubsubsection{\texorpdfstring{operator StringType \&\&()}{operator StringType \&\&()}}
+{\footnotesize\ttfamily template$<$typename String\+Type , bool Is\+View = false$>$ \\
+\mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster}{pybind11\+::detail\+::string\+\_\+caster}}$<$ String\+Type, Is\+View $>$\+::operator String\+Type \&\& (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1string__caster_a7661aa9954fa1e4acf07a65a27f6e1dd}\label{structpybind11_1_1detail_1_1string__caster_a7661aa9954fa1e4acf07a65a27f6e1dd}} 
+\index{pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}!operator StringType $\ast$@{operator StringType $\ast$}}
+\index{operator StringType $\ast$@{operator StringType $\ast$}!pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}}
+\doxysubsubsection{\texorpdfstring{operator StringType $\ast$()}{operator StringType *()}}
+{\footnotesize\ttfamily template$<$typename String\+Type , bool Is\+View = false$>$ \\
+\mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster}{pybind11\+::detail\+::string\+\_\+caster}}$<$ String\+Type, Is\+View $>$\+::operator String\+Type $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1string__caster_a194749f84b31a3ca9f84012b6249973e}\label{structpybind11_1_1detail_1_1string__caster_a194749f84b31a3ca9f84012b6249973e}} 
+\index{pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}!UTF\_N@{UTF\_N}}
+\index{UTF\_N@{UTF\_N}!pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}}
+\doxysubsubsection{\texorpdfstring{UTF\_N}{UTF\_N}}
+{\footnotesize\ttfamily template$<$typename String\+Type , bool Is\+View = false$>$ \\
+constexpr \mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}} \mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster}{pybind11\+::detail\+::string\+\_\+caster}}$<$ String\+Type, Is\+View $>$\+::UTF\+\_\+N = 8 $\ast$ sizeof(\mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster_a5af3f7b0e4999d0e7d4eafde0dda688b}{CharT}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1string__caster_a7cb42400017a34fde39d636df320f599}\label{structpybind11_1_1detail_1_1string__caster_a7cb42400017a34fde39d636df320f599}} 
+\index{pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}!value@{value}}
+\index{value@{value}!pybind11::detail::string\_caster$<$ StringType, IsView $>$@{pybind11::detail::string\_caster$<$ StringType, IsView $>$}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily template$<$typename String\+Type , bool Is\+View = false$>$ \\
+String\+Type \mbox{\hyperlink{structpybind11_1_1detail_1_1string__caster}{pybind11\+::detail\+::string\+\_\+caster}}$<$ String\+Type, Is\+View $>$\+::value\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{cast_8h}{cast.\+h}}\end{DoxyCompactItemize}

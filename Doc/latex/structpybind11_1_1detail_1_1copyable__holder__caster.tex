@@ -1,0 +1,217 @@
+\hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster}{}\doxysection{pybind11\+::detail\+::copyable\+\_\+holder\+\_\+caster$<$ type, holder\+\_\+type $>$ Struct Template Reference}
+\label{structpybind11_1_1detail_1_1copyable__holder__caster}\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+
+
+Type caster for holder types like std\+::shared\+\_\+ptr, etc.  
+
+
+
+
+{\ttfamily \#include $<$cast.\+h$>$}
+
+Inheritance diagram for pybind11\+::detail\+::copyable\+\_\+holder\+\_\+caster$<$ type, holder\+\_\+type $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structpybind11_1_1detail_1_1copyable__holder__caster}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_a5c28bafc94c53278095dc869dc5c5737}{base}} = \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster__base}{type\+\_\+caster\+\_\+base}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_a3fa88695191222da1021e31eace02bfa}{load}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} src, bool convert)
+\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_a78c58c36ffbc469b84031257ae7a12e1}{operator type $\ast$}} ()
+\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_a69305fcd964a19cab862a80708a79f71}{operator type \&}} ()
+\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_aacc88af505b2ab84c49ac713dc05274f}{operator holder\+\_\+type $\ast$}} ()
+\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_af03bdcbb00577d0d0bcfc326505b6c3c}{operator holder\+\_\+type \&}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_a431e797b8089d2f55c2968221c030aad}{cast}} (const holder\+\_\+type \&src, \mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}}, \mbox{\hyperlink{classpybind11_1_1handle}{handle}})
+\item 
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_afb028f5da33ba373d8aad123f0cd3c23}{cast}} (const itype \&src, \mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}} \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster__generic_a2ec264c8440447e927d4ce605f278984}{policy}}, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster__generic_aa1455e47a864e1487370527cd1a91634}{parent}})
+\item 
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_ab8c449a3210c553469f620b5222cae06}{cast}} (itype \&\&src, \mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}}, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster__generic_aa1455e47a864e1487370527cd1a91634}{parent}})
+\item 
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_a0ad42918189a055ae43bae3ab241656e}{cast}} (const itype $\ast$src, \mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}} \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster__generic_a2ec264c8440447e927d4ce605f278984}{policy}}, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster__generic_aa1455e47a864e1487370527cd1a91634}{parent}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_a8d0ce2632f3447894486ed9e783bf8b5}{check\+\_\+holder\+\_\+compat}} ()
+\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_ad8302676538b44cb69c5e3409eb08c58}{load\+\_\+value}} (const \mbox{\hyperlink{structpybind11_1_1detail_1_1value__and__holder}{value\+\_\+and\+\_\+holder}} \&v\+\_\+h)
+\item 
+{\footnotesize template$<$typename T  = holder\+\_\+type, detail\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+constructible$<$ T, const T \&, type $\ast$ $>$\+::value, int $>$  = 0$>$ }\\bool \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_a8645db3783f38479dfc2b58aff3477c0}{try\+\_\+implicit\+\_\+casts}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}}, bool)
+\item 
+{\footnotesize template$<$typename T  = holder\+\_\+type, detail\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+constructible$<$ T, const T \&, type $\ast$ $>$\+::value, int $>$  = 0$>$ }\\bool \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_a6390c778768ca0ccda1ede71ccefe237}{try\+\_\+implicit\+\_\+casts}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} src, bool convert)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_a627986c69d192a8dc2ee9470ae2c9c9d}{try\+\_\+direct\+\_\+conversions}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+holder\+\_\+type \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_a2557f2aa3c9bfe451f57cb5d075d84a6}{holder}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_a47dd585b718e81e33e44307daa659ba4}{type\+\_\+caster\+\_\+generic}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename type, typename holder\+\_\+type$>$\newline
+struct pybind11\+::detail\+::copyable\+\_\+holder\+\_\+caster$<$ type, holder\+\_\+type $>$}
+
+Type caster for holder types like std\+::shared\+\_\+ptr, etc. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster_a5c28bafc94c53278095dc869dc5c5737}\label{structpybind11_1_1detail_1_1copyable__holder__caster_a5c28bafc94c53278095dc869dc5c5737}} 
+\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}!base@{base}}
+\index{base@{base}!pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{base}{base}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster}{pybind11\+::detail\+::copyable\+\_\+holder\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}}, holder\+\_\+type $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster_a5c28bafc94c53278095dc869dc5c5737}{base}} =  \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster__base}{type\+\_\+caster\+\_\+base}}$<$\mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}}$>$}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster_a431e797b8089d2f55c2968221c030aad}\label{structpybind11_1_1detail_1_1copyable__holder__caster_a431e797b8089d2f55c2968221c030aad}} 
+\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}!cast@{cast}}
+\index{cast@{cast}!pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster}{pybind11\+::detail\+::copyable\+\_\+holder\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}}, holder\+\_\+type $>$\+::cast (\begin{DoxyParamCaption}\item[{const holder\+\_\+type \&}]{src,  }\item[{\mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}}}]{,  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster_afb028f5da33ba373d8aad123f0cd3c23}\label{structpybind11_1_1detail_1_1copyable__holder__caster_afb028f5da33ba373d8aad123f0cd3c23}} 
+\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}!cast@{cast}}
+\index{cast@{cast}!pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster__base}{pybind11\+::detail\+::type\+\_\+caster\+\_\+base}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$\+::cast\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster_a0ad42918189a055ae43bae3ab241656e}\label{structpybind11_1_1detail_1_1copyable__holder__caster_a0ad42918189a055ae43bae3ab241656e}} 
+\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}!cast@{cast}}
+\index{cast@{cast}!pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster__base}{pybind11\+::detail\+::type\+\_\+caster\+\_\+base}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$\+::cast\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster_ab8c449a3210c553469f620b5222cae06}\label{structpybind11_1_1detail_1_1copyable__holder__caster_ab8c449a3210c553469f620b5222cae06}} 
+\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}!cast@{cast}}
+\index{cast@{cast}!pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster__base}{pybind11\+::detail\+::type\+\_\+caster\+\_\+base}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$\+::cast\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster_a8d0ce2632f3447894486ed9e783bf8b5}\label{structpybind11_1_1detail_1_1copyable__holder__caster_a8d0ce2632f3447894486ed9e783bf8b5}} 
+\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}!check\_holder\_compat@{check\_holder\_compat}}
+\index{check\_holder\_compat@{check\_holder\_compat}!pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{check\_holder\_compat()}{check\_holder\_compat()}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+void \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster}{pybind11\+::detail\+::copyable\+\_\+holder\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}}, holder\+\_\+type $>$\+::check\+\_\+holder\+\_\+compat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster_a3fa88695191222da1021e31eace02bfa}\label{structpybind11_1_1detail_1_1copyable__holder__caster_a3fa88695191222da1021e31eace02bfa}} 
+\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}!load@{load}}
+\index{load@{load}!pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster}{pybind11\+::detail\+::copyable\+\_\+holder\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}}, holder\+\_\+type $>$\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{src,  }\item[{bool}]{convert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster_ad8302676538b44cb69c5e3409eb08c58}\label{structpybind11_1_1detail_1_1copyable__holder__caster_ad8302676538b44cb69c5e3409eb08c58}} 
+\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}!load\_value@{load\_value}}
+\index{load\_value@{load\_value}!pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{load\_value()}{load\_value()}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster}{pybind11\+::detail\+::copyable\+\_\+holder\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}}, holder\+\_\+type $>$\+::load\+\_\+value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structpybind11_1_1detail_1_1value__and__holder}{value\+\_\+and\+\_\+holder}} \&}]{v\+\_\+h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster_af03bdcbb00577d0d0bcfc326505b6c3c}\label{structpybind11_1_1detail_1_1copyable__holder__caster_af03bdcbb00577d0d0bcfc326505b6c3c}} 
+\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}!operator holder\_type \&@{operator holder\_type \&}}
+\index{operator holder\_type \&@{operator holder\_type \&}!pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{operator holder\_type \&()}{operator holder\_type \&()}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+\mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster}{pybind11\+::detail\+::copyable\+\_\+holder\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}}, holder\+\_\+type $>$\+::operator holder\+\_\+type \& (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster_aacc88af505b2ab84c49ac713dc05274f}\label{structpybind11_1_1detail_1_1copyable__holder__caster_aacc88af505b2ab84c49ac713dc05274f}} 
+\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}!operator holder\_type $\ast$@{operator holder\_type $\ast$}}
+\index{operator holder\_type $\ast$@{operator holder\_type $\ast$}!pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{operator holder\_type $\ast$()}{operator holder\_type *()}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+\mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster}{pybind11\+::detail\+::copyable\+\_\+holder\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}}, holder\+\_\+type $>$\+::operator holder\+\_\+type $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster_a69305fcd964a19cab862a80708a79f71}\label{structpybind11_1_1detail_1_1copyable__holder__caster_a69305fcd964a19cab862a80708a79f71}} 
+\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}!operator type \&@{operator type \&}}
+\index{operator type \&@{operator type \&}!pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{operator type \&()}{operator type \&()}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+\mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster}{pybind11\+::detail\+::copyable\+\_\+holder\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}}, holder\+\_\+type $>$\+::operator \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} \& (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster_a78c58c36ffbc469b84031257ae7a12e1}\label{structpybind11_1_1detail_1_1copyable__holder__caster_a78c58c36ffbc469b84031257ae7a12e1}} 
+\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}!operator type $\ast$@{operator type $\ast$}}
+\index{operator type $\ast$@{operator type $\ast$}!pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{operator type $\ast$()}{operator type *()}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+\mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster}{pybind11\+::detail\+::copyable\+\_\+holder\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}}, holder\+\_\+type $>$\+::operator \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster_a627986c69d192a8dc2ee9470ae2c9c9d}\label{structpybind11_1_1detail_1_1copyable__holder__caster_a627986c69d192a8dc2ee9470ae2c9c9d}} 
+\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}!try\_direct\_conversions@{try\_direct\_conversions}}
+\index{try\_direct\_conversions@{try\_direct\_conversions}!pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{try\_direct\_conversions()}{try\_direct\_conversions()}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+static bool \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster}{pybind11\+::detail\+::copyable\+\_\+holder\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}}, holder\+\_\+type $>$\+::try\+\_\+direct\+\_\+conversions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster_a6390c778768ca0ccda1ede71ccefe237}\label{structpybind11_1_1detail_1_1copyable__holder__caster_a6390c778768ca0ccda1ede71ccefe237}} 
+\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}!try\_implicit\_casts@{try\_implicit\_casts}}
+\index{try\_implicit\_casts@{try\_implicit\_casts}!pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{try\_implicit\_casts()}{try\_implicit\_casts()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+template$<$typename T  = holder\+\_\+type, detail\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+constructible$<$ T, const T \&, type $\ast$ $>$\+::value, int $>$  = 0$>$ \\
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster}{pybind11\+::detail\+::copyable\+\_\+holder\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}}, holder\+\_\+type $>$\+::try\+\_\+implicit\+\_\+casts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{src,  }\item[{bool}]{convert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster_a8645db3783f38479dfc2b58aff3477c0}\label{structpybind11_1_1detail_1_1copyable__holder__caster_a8645db3783f38479dfc2b58aff3477c0}} 
+\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}!try\_implicit\_casts@{try\_implicit\_casts}}
+\index{try\_implicit\_casts@{try\_implicit\_casts}!pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{try\_implicit\_casts()}{try\_implicit\_casts()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+template$<$typename T  = holder\+\_\+type, detail\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+constructible$<$ T, const T \&, type $\ast$ $>$\+::value, int $>$  = 0$>$ \\
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster}{pybind11\+::detail\+::copyable\+\_\+holder\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}}, holder\+\_\+type $>$\+::try\+\_\+implicit\+\_\+casts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{,  }\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster_a47dd585b718e81e33e44307daa659ba4}\label{structpybind11_1_1detail_1_1copyable__holder__caster_a47dd585b718e81e33e44307daa659ba4}} 
+\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}!type\_caster\_generic@{type\_caster\_generic}}
+\index{type\_caster\_generic@{type\_caster\_generic}!pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{type\_caster\_generic}{type\_caster\_generic}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+friend class \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster__generic}{type\+\_\+caster\+\_\+generic}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1copyable__holder__caster_a2557f2aa3c9bfe451f57cb5d075d84a6}\label{structpybind11_1_1detail_1_1copyable__holder__caster_a2557f2aa3c9bfe451f57cb5d075d84a6}} 
+\index{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}!holder@{holder}}
+\index{holder@{holder}!pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$@{pybind11::detail::copyable\_holder\_caster$<$ type, holder\_type $>$}}
+\doxysubsubsection{\texorpdfstring{holder}{holder}}
+{\footnotesize\ttfamily template$<$typename type , typename holder\+\_\+type $>$ \\
+holder\+\_\+type \mbox{\hyperlink{structpybind11_1_1detail_1_1copyable__holder__caster}{pybind11\+::detail\+::copyable\+\_\+holder\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}}, holder\+\_\+type $>$\+::holder\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{cast_8h}{cast.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="namespacexlntpyarrow" kind="namespace" language="Python">
+    <compoundname>xlntpyarrow</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacexlntpyarrow_1a7a4f6f5d8105e98a00514f4acc4af11b" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary xlntpyarrow.COLUMN_TYPE_FIELD</definition>
+        <argsstring></argsstring>
+        <name>COLUMN_TYPE_FIELD</name>
+        <initializer>=  {
+    xpa.Cell.Type.Number: pa.float64,
+    xpa.Cell.Type.SharedString: pa.string,
+    xpa.Cell.Type.InlineString: pa.string,
+    xpa.Cell.Type.FormulaString: pa.string,
+    xpa.Cell.Type.Error: pa.string,
+    xpa.Cell.Type.Boolean: pa.bool_,
+    xpa.Cell.Type.Date: pa.date32,
+    xpa.Cell.Type.Empty: pa.string,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/python/xlntpyarrow/__init__.py" line="4" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/python/xlntpyarrow/__init__.py" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacexlntpyarrow_1a6ea67d5a733e6b9888b779f8d209c96c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>xlntpyarrow.file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <initializer>=  open(&apos;tmp.xlsx&apos;, &apos;rb&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/python/xlntpyarrow/__init__.py" line="84" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/python/xlntpyarrow/__init__.py" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacexlntpyarrow_1ae9f76b72e1c7ace085d22e733893007d" prot="public" static="no" mutable="no">
+        <type>def</type>
+        <definition>def xlntpyarrow.table</definition>
+        <argsstring></argsstring>
+        <name>table</name>
+        <initializer>=  <ref refid="namespacexlntpyarrow_1a9b59a62dbc10e14d2099e34e0ed78eb8" kindref="member">xlsx2arrow</ref>(<ref refid="namespacexlntpyarrow_1a6ea67d5a733e6b9888b779f8d209c96c" kindref="member">file</ref>, &apos;Sheet1&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/python/xlntpyarrow/__init__.py" line="85" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/python/xlntpyarrow/__init__.py" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacexlntpyarrow_1ac0a2e569f31994756daa252bc988cfab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def xlntpyarrow.cell_to_pyarrow_array</definition>
+        <argsstring>(cell, type)</argsstring>
+        <name>cell_to_pyarrow_array</name>
+        <param>
+          <type>cell</type>
+          <defname>cell</defname>
+        </param>
+        <param>
+          <type>type</type>
+          <defname>type</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/python/xlntpyarrow/__init__.py" line="15" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/python/xlntpyarrow/__init__.py" bodystart="15" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacexlntpyarrow_1a9b59a62dbc10e14d2099e34e0ed78eb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def xlntpyarrow.xlsx2arrow</definition>
+        <argsstring>(io, sheetname)</argsstring>
+        <name>xlsx2arrow</name>
+        <param>
+          <type>io</type>
+          <defname>io</defname>
+        </param>
+        <param>
+          <type>sheetname</type>
+          <defname>sheetname</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/python/xlntpyarrow/__init__.py" line="33" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/python/xlntpyarrow/__init__.py" bodystart="33" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/python/xlntpyarrow/__init__.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

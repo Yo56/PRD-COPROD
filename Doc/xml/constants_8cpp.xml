@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="constants_8cpp" kind="file" language="C++">
+    <compoundname>constants.cpp</compoundname>
+    <includes local="no">limits</includes>
+    <includes refid="xlnt__config_8hpp" local="no">xlnt/xlnt_config.hpp</includes>
+    <includes refid="exceptions_8hpp" local="no">xlnt/utils/exceptions.hpp</includes>
+    <includes refid="constants_8hpp" local="no">detail/constants.hpp</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>xlnt/utils/exceptions.hpp</label>
+        <link refid="exceptions_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>xlnt/xlnt_config.hpp</label>
+        <link refid="xlnt__config_8hpp"/>
+      </node>
+      <node id="2">
+        <label>limits</label>
+      </node>
+      <node id="10">
+        <label>detail/constants.hpp</label>
+        <link refid="constants_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="7">
+        <label>xlnt/cell/index_types.hpp</label>
+        <link refid="index__types_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdexcept</label>
+      </node>
+      <node id="9">
+        <label>string</label>
+      </node>
+      <node id="14">
+        <label>vector</label>
+      </node>
+      <node id="13">
+        <label>utility</label>
+      </node>
+      <node id="11">
+        <label>unordered_map</label>
+      </node>
+      <node id="1">
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/constants.cpp</label>
+        <link refid="constants_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>algorithm</label>
+      </node>
+      <node id="12">
+        <label>xlnt/utils/path.hpp</label>
+        <link refid="path_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacexlnt">xlnt</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2014-2020<sp/>Thomas<sp/>Fussell</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>WRISING<sp/>FROM,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>THE<sp/>SOFTWARE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>@license:<sp/>http://www.opensource.org/licenses/mit-license.php</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>@author:<sp/>see<sp/>AUTHORS<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="xlnt__config_8hpp" kindref="compound">xlnt/xlnt_config.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="exceptions_8hpp" kindref="compound">xlnt/utils/exceptions.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="constants_8hpp" kindref="compound">detail/constants.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacexlnt" kindref="compound">xlnt</ref><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="namespacexlnt_1abd2bb61f1d4794b8affafb8957b151b6" kindref="member">row_t</ref><sp/><ref refid="structxlnt_1_1constants_1aaf23ece8797b021b8ca3f6e21a99626c" kindref="member">constants::min_row</ref>()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="namespacexlnt_1abd2bb61f1d4794b8affafb8957b151b6" kindref="member">row_t</ref><sp/><ref refid="structxlnt_1_1constants_1a5d655a98cd4f7ab9a8ac2b9552aa4d78" kindref="member">constants::max_row</ref>()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacexlnt_1_1detail_1afb41b740bceeaa00b0232737e784385c" kindref="member">std::numeric_limits&lt;row_t&gt;::max</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>column_t<sp/><ref refid="structxlnt_1_1constants_1a07016be250633209b5058fa0c4a68084" kindref="member">constants::min_column</ref>()</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>column_t(1);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>column_t<sp/><ref refid="structxlnt_1_1constants_1a34e7555a39d79f56d1956cbb5d5b40c9" kindref="member">constants::max_column</ref>()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>column_t(<ref refid="namespacexlnt_1_1detail_1afb41b740bceeaa00b0232737e784385c" kindref="member">std::numeric_limits&lt;column_t::index_t&gt;::max</ref>());</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>constants</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>path<sp/><ref refid="structxlnt_1_1constants_1a135fefd6d02d8a4f0ac4d927a8c8e6ef" kindref="member">constants::package_properties</ref>()</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path(</highlight><highlight class="stringliteral">&quot;docProps&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>path<sp/><ref refid="structxlnt_1_1constants_1abfd707029337f0cc73905d3f25db885a" kindref="member">constants::package_xl</ref>()</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path(</highlight><highlight class="stringliteral">&quot;/xl&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>path<sp/><ref refid="structxlnt_1_1constants_1a630c65e0999040f973440f9635446394" kindref="member">constants::package_root_rels</ref>()</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path(std::string(</highlight><highlight class="stringliteral">&quot;_rels&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>path<sp/><ref refid="structxlnt_1_1constants_1a1e48a3236bb0d0115589dfbe76e46374" kindref="member">constants::package_theme</ref>()</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1constants_1abfd707029337f0cc73905d3f25db885a" kindref="member">package_xl</ref>().<ref refid="classxlnt_1_1path_1adfb1aac9ce279cf94e87233490da20e8" kindref="member">append</ref>(</highlight><highlight class="stringliteral">&quot;theme&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>path<sp/><ref refid="structxlnt_1_1constants_1a65693eddd21c6df5c2b120589f234ae2" kindref="member">constants::package_worksheets</ref>()</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1constants_1abfd707029337f0cc73905d3f25db885a" kindref="member">package_xl</ref>().<ref refid="classxlnt_1_1path_1adfb1aac9ce279cf94e87233490da20e8" kindref="member">append</ref>(</highlight><highlight class="stringliteral">&quot;worksheets&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>path<sp/><ref refid="structxlnt_1_1constants_1aebe2fcf4de5ad570d64cb229d69e86d3" kindref="member">constants::package_drawings</ref>()</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1constants_1abfd707029337f0cc73905d3f25db885a" kindref="member">package_xl</ref>().<ref refid="classxlnt_1_1path_1adfb1aac9ce279cf94e87233490da20e8" kindref="member">append</ref>(</highlight><highlight class="stringliteral">&quot;drawings&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>path<sp/><ref refid="structxlnt_1_1constants_1af7bdf9f5f80fe1afe85f736473733444" kindref="member">constants::part_content_types</ref>()</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path(</highlight><highlight class="stringliteral">&quot;[Content_Types].xml&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>path<sp/><ref refid="structxlnt_1_1constants_1a7d23e197e52cd40a6e4f412c77904339" kindref="member">constants::part_root_relationships</ref>()</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1constants_1a630c65e0999040f973440f9635446394" kindref="member">package_root_rels</ref>().<ref refid="classxlnt_1_1path_1adfb1aac9ce279cf94e87233490da20e8" kindref="member">append</ref>(</highlight><highlight class="stringliteral">&quot;.rels&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>path<sp/><ref refid="structxlnt_1_1constants_1a48724dcd328f860a129fefaaff41e8ad" kindref="member">constants::part_core</ref>()</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1constants_1a135fefd6d02d8a4f0ac4d927a8c8e6ef" kindref="member">package_properties</ref>().<ref refid="classxlnt_1_1path_1adfb1aac9ce279cf94e87233490da20e8" kindref="member">append</ref>(</highlight><highlight class="stringliteral">&quot;core.xml&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>path<sp/><ref refid="structxlnt_1_1constants_1ac42b983e3eae8d78e33a9b519187b85d" kindref="member">constants::part_app</ref>()</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1constants_1a135fefd6d02d8a4f0ac4d927a8c8e6ef" kindref="member">package_properties</ref>().<ref refid="classxlnt_1_1path_1adfb1aac9ce279cf94e87233490da20e8" kindref="member">append</ref>(</highlight><highlight class="stringliteral">&quot;app.xml&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>path<sp/><ref refid="structxlnt_1_1constants_1ab3051667517f9f7630b209ecf0f1a2aa" kindref="member">constants::part_workbook</ref>()</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1constants_1abfd707029337f0cc73905d3f25db885a" kindref="member">package_xl</ref>().<ref refid="classxlnt_1_1path_1adfb1aac9ce279cf94e87233490da20e8" kindref="member">append</ref>(</highlight><highlight class="stringliteral">&quot;workbook.xml&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>path<sp/><ref refid="structxlnt_1_1constants_1a420918b57fa71a49996f16a744138aa8" kindref="member">constants::part_styles</ref>()</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1constants_1abfd707029337f0cc73905d3f25db885a" kindref="member">package_xl</ref>().<ref refid="classxlnt_1_1path_1adfb1aac9ce279cf94e87233490da20e8" kindref="member">append</ref>(</highlight><highlight class="stringliteral">&quot;styles.xml&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>path<sp/><ref refid="structxlnt_1_1constants_1aecd0652b72a37557abf9cddf59c469b2" kindref="member">constants::part_theme</ref>()</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1constants_1a1e48a3236bb0d0115589dfbe76e46374" kindref="member">package_theme</ref>().<ref refid="classxlnt_1_1path_1adfb1aac9ce279cf94e87233490da20e8" kindref="member">append</ref>(</highlight><highlight class="stringliteral">&quot;theme1.xml&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>path<sp/><ref refid="structxlnt_1_1constants_1a61c9c87780278b1c61b80c05a0f8febf" kindref="member">constants::part_shared_strings</ref>()</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1constants_1abfd707029337f0cc73905d3f25db885a" kindref="member">package_xl</ref>().<ref refid="classxlnt_1_1path_1adfb1aac9ce279cf94e87233490da20e8" kindref="member">append</ref>(</highlight><highlight class="stringliteral">&quot;sharedStrings.xml&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::unordered_map&lt;std::string,<sp/>std::string&gt;<sp/>&amp;<ref refid="structxlnt_1_1constants_1ae8b70c23f080b2d42ad0c5b69db55f26" kindref="member">constants::namespaces</ref>()</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::unordered_map&lt;std::string,<sp/>std::string&gt;<sp/>*<ref refid="structxlnt_1_1constants_1ae8b70c23f080b2d42ad0c5b69db55f26" kindref="member">namespaces</ref><sp/>=</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>std::unordered_map&lt;std::string,<sp/>std::string&gt;{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;spreadsheetml&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.openxmlformats.org/spreadsheetml/2006/main&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;content-types&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.openxmlformats.org/package/2006/content-types&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;relationships&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.openxmlformats.org/package/2006/relationships&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;drawingml&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.openxmlformats.org/drawingml/2006/main&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;workbook&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.openxmlformats.org/spreadsheetml/2006/main&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;core-properties&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.openxmlformats.org/package/2006/metadata/core-properties&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;extended-properties&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.openxmlformats.org/officeDocument/2006/extended-properties&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;custom-properties&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.openxmlformats.org/officeDocument/2006/custom-properties&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;encryption&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.microsoft.com/office/2006/encryption&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;encryption-password&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.microsoft.com/office/2006/keyEncryptor/password&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;encryption-certificate&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.microsoft.com/office/2006/keyEncryptor/certificate&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;dc&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://purl.org/dc/elements/1.1/&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;dcterms&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://purl.org/dc/terms/&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;dcmitype&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://purl.org/dc/dcmitype/&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;mc&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;mx&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.microsoft.com/office/mac/excel/2008/main&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.openxmlformats.org/officeDocument/2006/relationships&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;thm15&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.microsoft.com/office/thememl/2012/main&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;vt&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;x14&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.microsoft.com/office/spreadsheetml/2009/9/main&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;x14ac&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;x15&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.microsoft.com/office/spreadsheetml/2010/11/main&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;x15ac&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;xml&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://www.w3.org/XML/1998/namespace&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;xsi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;a&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.openxmlformats.org/drawingml/2006/main&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;xdr&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;loext&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;http://schemas.libreoffice.org/&quot;</highlight><highlight class="normal">}};</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="structxlnt_1_1constants_1ae8b70c23f080b2d42ad0c5b69db55f26" kindref="member">namespaces</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="structxlnt_1_1constants_1a11228dad62051c8bc6dc7ebf48bf1fc5" kindref="member">constants::ns</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>match<sp/>=<sp/><ref refid="structxlnt_1_1constants_1ae8b70c23f080b2d42ad0c5b69db55f26" kindref="member">namespaces</ref>().find(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(match<sp/>==<sp/><ref refid="structxlnt_1_1constants_1ae8b70c23f080b2d42ad0c5b69db55f26" kindref="member">namespaces</ref>().<ref refid="border_8hpp_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref>())</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classxlnt_1_1exception" kindref="compound">xlnt::exception</ref>(</highlight><highlight class="stringliteral">&quot;bad<sp/>namespace&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>match-&gt;second;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>xlnt</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/constants.cpp"/>
+  </compounddef>
+</doxygen>

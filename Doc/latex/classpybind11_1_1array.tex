@@ -1,0 +1,506 @@
+\hypertarget{classpybind11_1_1array}{}\doxysection{pybind11\+::array Class Reference}
+\label{classpybind11_1_1array}\index{pybind11::array@{pybind11::array}}
+
+
+{\ttfamily \#include $<$numpy.\+h$>$}
+
+Inheritance diagram for pybind11\+::array\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.075446cm]{classpybind11_1_1array}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classpybind11_1_1array_aac2f71721e5b612933b0a7d2cdc53349}{Shape\+Container}} = \mbox{\hyperlink{classpybind11_1_1detail_1_1any__container}{detail\+::any\+\_\+container}}$<$ \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $>$
+\item 
+using \mbox{\hyperlink{classpybind11_1_1array_a9fe6f45309595710451472fbf16e89c1}{Strides\+Container}} = \mbox{\hyperlink{classpybind11_1_1detail_1_1any__container}{detail\+::any\+\_\+container}}$<$ \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpybind11_1_1array_a917457eea05ecc0d8568c49e87495aab}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((deprecated(\char`\"{}Use \mbox{\hyperlink{classpybind11_1_1object_ac1ea1a4cbcf197d7c8096037633720d7}{reinterpret\+\_\+borrow}}$<$\char`\"{}\char`\"{}\mbox{\hyperlink{classpybind11_1_1array}{array}}\char`\"{}\char`\"{}$>$() or \mbox{\hyperlink{classpybind11_1_1object_ae1de2ab5a755c10582ac1e46071de5c5}{reinterpret\+\_\+steal}}$<$\char`\"{}\char`\"{}\mbox{\hyperlink{classpybind11_1_1array}{array}}\char`\"{}\char`\"{}$>$()\char`\"{}))) array(\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h
+\item 
+\mbox{\hyperlink{classpybind11_1_1array_a1627f32955fb284f23093d51faba300c}{array}} ()
+\item 
+\mbox{\hyperlink{classpybind11_1_1array_a87b716fffe8b8099513be5dae61ced16}{array}} (const \mbox{\hyperlink{classpybind11_1_1dtype}{pybind11\+::dtype}} \&dt, \mbox{\hyperlink{classpybind11_1_1array_aac2f71721e5b612933b0a7d2cdc53349}{Shape\+Container}} \mbox{\hyperlink{classpybind11_1_1array_a1babc40ac1727b89010bc9617d2221dd}{shape}}, \mbox{\hyperlink{classpybind11_1_1array_a9fe6f45309595710451472fbf16e89c1}{Strides\+Container}} \mbox{\hyperlink{classpybind11_1_1array_a313b0d36b25a7dd0eb134b57406b257b}{strides}}, const void $\ast$\mbox{\hyperlink{classpybind11_1_1handle_a6f7e2e6beecb8c59c5192ea9bae7eaa5}{ptr}}=nullptr, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1base}{base}}=\mbox{\hyperlink{classpybind11_1_1handle}{handle}}())
+\item 
+\mbox{\hyperlink{classpybind11_1_1array_a100ac01194d9e1f8fa8e429a68ca1ff1}{array}} (const \mbox{\hyperlink{classpybind11_1_1dtype}{pybind11\+::dtype}} \&dt, \mbox{\hyperlink{classpybind11_1_1array_aac2f71721e5b612933b0a7d2cdc53349}{Shape\+Container}} \mbox{\hyperlink{classpybind11_1_1array_a1babc40ac1727b89010bc9617d2221dd}{shape}}, const void $\ast$\mbox{\hyperlink{classpybind11_1_1handle_a6f7e2e6beecb8c59c5192ea9bae7eaa5}{ptr}}=nullptr, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1base}{base}}=\mbox{\hyperlink{classpybind11_1_1handle}{handle}}())
+\item 
+{\footnotesize template$<$typename T , typename  = detail\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+integral$<$\+T$>$\+::value \&\& !std\+::is\+\_\+same$<$bool, T$>$\+::value$>$$>$ }\\\mbox{\hyperlink{classpybind11_1_1array_a58419b2fe82f698eef80dbb632c99a0e}{array}} (const \mbox{\hyperlink{classpybind11_1_1dtype}{pybind11\+::dtype}} \&dt, T count, const void $\ast$\mbox{\hyperlink{classpybind11_1_1handle_a6f7e2e6beecb8c59c5192ea9bae7eaa5}{ptr}}=nullptr, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1base}{base}}=\mbox{\hyperlink{classpybind11_1_1handle}{handle}}())
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classpybind11_1_1array_a1df48786687418251b7dd029c03b06d3}{array}} (\mbox{\hyperlink{classpybind11_1_1array_aac2f71721e5b612933b0a7d2cdc53349}{Shape\+Container}} \mbox{\hyperlink{classpybind11_1_1array_a1babc40ac1727b89010bc9617d2221dd}{shape}}, \mbox{\hyperlink{classpybind11_1_1array_a9fe6f45309595710451472fbf16e89c1}{Strides\+Container}} \mbox{\hyperlink{classpybind11_1_1array_a313b0d36b25a7dd0eb134b57406b257b}{strides}}, const T $\ast$\mbox{\hyperlink{classpybind11_1_1handle_a6f7e2e6beecb8c59c5192ea9bae7eaa5}{ptr}}, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1base}{base}}=\mbox{\hyperlink{classpybind11_1_1handle}{handle}}())
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classpybind11_1_1array_ac42023abe1ecb65e89de6eff7e14e91d}{array}} (\mbox{\hyperlink{classpybind11_1_1array_aac2f71721e5b612933b0a7d2cdc53349}{Shape\+Container}} \mbox{\hyperlink{classpybind11_1_1array_a1babc40ac1727b89010bc9617d2221dd}{shape}}, const T $\ast$\mbox{\hyperlink{classpybind11_1_1handle_a6f7e2e6beecb8c59c5192ea9bae7eaa5}{ptr}}, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1base}{base}}=\mbox{\hyperlink{classpybind11_1_1handle}{handle}}())
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classpybind11_1_1array_a3dbfc46aac2ceb9758d4d953ac8bdfa8}{array}} (\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} count, const T $\ast$\mbox{\hyperlink{classpybind11_1_1handle_a6f7e2e6beecb8c59c5192ea9bae7eaa5}{ptr}}, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1base}{base}}=\mbox{\hyperlink{classpybind11_1_1handle}{handle}}())
+\item 
+\mbox{\hyperlink{classpybind11_1_1array_a1a95b42e29a9e407e81b1da49dcf6c4e}{array}} (const \mbox{\hyperlink{structpybind11_1_1buffer__info}{buffer\+\_\+info}} \&info)
+\item 
+\mbox{\hyperlink{classpybind11_1_1dtype}{pybind11\+::dtype}} \mbox{\hyperlink{classpybind11_1_1array_a7f0f5c84c5de37740fc6edc943c65b2b}{dtype}} () const
+\begin{DoxyCompactList}\small\item\em Array descriptor (dtype) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1array_afca19b0c0896314a48ba4bd1d8015924}{size}} () const
+\begin{DoxyCompactList}\small\item\em Total number of elements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1array_a10340a5561983400712a61483f9f478f}{itemsize}} () const
+\begin{DoxyCompactList}\small\item\em Byte size of a single element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1array_a38c15f5e8b761232e1ba84aca95ae18c}{nbytes}} () const
+\begin{DoxyCompactList}\small\item\em Total number of bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1array_a1f347b49d01c2f35ad5fadc7e620d8ad}{ndim}} () const
+\begin{DoxyCompactList}\small\item\em Number of dimensions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpybind11_1_1object}{object}} \mbox{\hyperlink{classpybind11_1_1array_a246d06d1ca129a526b7c5efdeee48652}{base}} () const
+\begin{DoxyCompactList}\small\item\em Base object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$ \mbox{\hyperlink{classpybind11_1_1array_a1babc40ac1727b89010bc9617d2221dd}{shape}} () const
+\begin{DoxyCompactList}\small\item\em Dimensions of the array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1array_ac7bb2da511133347b3a1b5deaf3686dd}{shape}} (\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} dim) const
+\begin{DoxyCompactList}\small\item\em Dimension along a given axis. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$ \mbox{\hyperlink{classpybind11_1_1array_a313b0d36b25a7dd0eb134b57406b257b}{strides}} () const
+\begin{DoxyCompactList}\small\item\em Strides of the array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1array_a78085e31576480cc5d1d303ab17f9eef}{strides}} (\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} dim) const
+\begin{DoxyCompactList}\small\item\em Stride along a given axis. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classpybind11_1_1array_a6f4666d560c848144be4761ee630d957}{flags}} () const
+\begin{DoxyCompactList}\small\item\em Return the Num\+Py array flags. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpybind11_1_1array_a3e0d57570e47aa5e1637b3d7f872197a}{writeable}} () const
+\begin{DoxyCompactList}\small\item\em If set, the array is writeable (otherwise the buffer is read-\/only) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpybind11_1_1array_a803f1928e8d7ccf259c28797461a2880}{owndata}} () const
+\begin{DoxyCompactList}\small\item\em If set, the array owns the data (will be freed when the array is deleted) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Ix$>$ }\\const void $\ast$ \mbox{\hyperlink{classpybind11_1_1array_a89cb34c10b4e3cea34bd5d5534623986}{data}} (Ix... index) const
+\item 
+{\footnotesize template$<$typename... Ix$>$ }\\void $\ast$ \mbox{\hyperlink{classpybind11_1_1array_ac07e441b9918ff66a74537bc0bb39f40}{mutable\+\_\+data}} (Ix... index)
+\item 
+{\footnotesize template$<$typename... Ix$>$ }\\\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1array_a8856b8f237145987a62c19e61c9c26ba}{offset\+\_\+at}} (Ix... index) const
+\item 
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1array_a94678462afc88cbb99a8b04dbf1127bc}{offset\+\_\+at}} () const
+\item 
+{\footnotesize template$<$typename... Ix$>$ }\\\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1array_a726f25422313b8cc0e57a5604813ffc5}{index\+\_\+at}} (Ix... index) const
+\item 
+{\footnotesize template$<$typename T , ssize\+\_\+t Dims = -\/1$>$ }\\\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__mutable__reference}{detail\+::unchecked\+\_\+mutable\+\_\+reference}}$<$ T, Dims $>$ \mbox{\hyperlink{classpybind11_1_1array_a1fddd41f99198ff3b1a4f8b6b11df693}{mutable\+\_\+unchecked}} ()
+\item 
+{\footnotesize template$<$typename T , ssize\+\_\+t Dims = -\/1$>$ }\\\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$ \mbox{\hyperlink{classpybind11_1_1array_a95704d8136f515bbac57fe0e32560787}{unchecked}} () const
+\item 
+\mbox{\hyperlink{classpybind11_1_1array}{array}} \mbox{\hyperlink{classpybind11_1_1array_ac25411005216cb5f14b7aff7c68ef111}{squeeze}} ()
+\begin{DoxyCompactList}\small\item\em Return a new view with all of the dimensions of length 1 removed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpybind11_1_1array_a33b1bd4c889fbaf108fa0352be379ef1}{resize}} (\mbox{\hyperlink{classpybind11_1_1array_aac2f71721e5b612933b0a7d2cdc53349}{Shape\+Container}} new\+\_\+shape, bool refcheck=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classpybind11_1_1array}{array}} \mbox{\hyperlink{classpybind11_1_1array_a816d966ca405344a5b2b60a2630154c8}{ensure}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h, int Extra\+Flags=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1array_ae30c0d8e4d1041b7020c8ae48ea78b2b}{is\+\_\+borrowed}}\+: \mbox{\hyperlink{classpybind11_1_1buffer}{buffer}} (is\+\_\+borrowed ? \mbox{\hyperlink{classpybind11_1_1buffer}{buffer}} (h
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1array_a0facc4bb58356f1022fd6c7477e7e1af}{borrowed\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classpybind11_1_1array_a0101c3b28ac7ad0900c4f69882343f97}{fail\+\_\+dim\+\_\+check}} (\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} dim, const std\+::string \&msg) const
+\item 
+{\footnotesize template$<$typename... Ix$>$ }\\\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1array_aa7f2aa4ebce00e7130e119960055b55b}{byte\+\_\+offset}} (Ix... index) const
+\item 
+void \mbox{\hyperlink{classpybind11_1_1array_aa5c88e5779838efe8829c8bb7bc96509}{check\+\_\+writeable}} () const
+\item 
+{\footnotesize template$<$typename... Ix$>$ }\\void \mbox{\hyperlink{classpybind11_1_1array_ae2219067fcf2c35d05bb83fd997ac8e2}{check\+\_\+dimensions}} (Ix... index) const
+\item 
+void \mbox{\hyperlink{classpybind11_1_1array_a8d15f04f8b31149ed7e13c88e8cfbfcd}{check\+\_\+dimensions\+\_\+impl}} (\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}, const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$) const
+\item 
+{\footnotesize template$<$typename... Ix$>$ }\\void \mbox{\hyperlink{classpybind11_1_1array_aea4957e16ef5e288ffa8e5d87c1381fb}{check\+\_\+dimensions\+\_\+impl}} (\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} axis, const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$\mbox{\hyperlink{classpybind11_1_1array_a1babc40ac1727b89010bc9617d2221dd}{shape}}, \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} i, Ix... index) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $>$ \mbox{\hyperlink{classpybind11_1_1array_aa361b6020a1c147f62d3ffab1082cfd9}{c\+\_\+strides}} (const std\+::vector$<$ \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $>$ \&\mbox{\hyperlink{classpybind11_1_1array_a1babc40ac1727b89010bc9617d2221dd}{shape}}, \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1array_a10340a5561983400712a61483f9f478f}{itemsize}})
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $>$ \mbox{\hyperlink{classpybind11_1_1array_a7eb28e9f937babc09e85124c080ec3d0}{f\+\_\+strides}} (const std\+::vector$<$ \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $>$ \&\mbox{\hyperlink{classpybind11_1_1array_a1babc40ac1727b89010bc9617d2221dd}{shape}}, \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1array_a10340a5561983400712a61483f9f478f}{itemsize}})
+\item 
+static Py\+Object $\ast$ \mbox{\hyperlink{classpybind11_1_1array_a8c106da762d14abf1b52f8eefb6cd41e}{raw\+\_\+array}} (Py\+Object $\ast$\mbox{\hyperlink{classpybind11_1_1handle_a6f7e2e6beecb8c59c5192ea9bae7eaa5}{ptr}}, int Extra\+Flags=0)
+\begin{DoxyCompactList}\small\item\em Create array from any object -- always returns a new reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename , typename $>$ }\\struct \mbox{\hyperlink{classpybind11_1_1array_a2d7124af4924ef006d3b7bfd42b05085}{detail\+::npy\+\_\+format\+\_\+descriptor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classpybind11_1_1array_aac2f71721e5b612933b0a7d2cdc53349}\label{classpybind11_1_1array_aac2f71721e5b612933b0a7d2cdc53349}} 
+\index{pybind11::array@{pybind11::array}!ShapeContainer@{ShapeContainer}}
+\index{ShapeContainer@{ShapeContainer}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{ShapeContainer}{ShapeContainer}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1array_aac2f71721e5b612933b0a7d2cdc53349}{pybind11\+::array\+::\+Shape\+Container}} =  \mbox{\hyperlink{classpybind11_1_1detail_1_1any__container}{detail\+::any\+\_\+container}}$<$\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}$>$}
+
+\mbox{\Hypertarget{classpybind11_1_1array_a9fe6f45309595710451472fbf16e89c1}\label{classpybind11_1_1array_a9fe6f45309595710451472fbf16e89c1}} 
+\index{pybind11::array@{pybind11::array}!StridesContainer@{StridesContainer}}
+\index{StridesContainer@{StridesContainer}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{StridesContainer}{StridesContainer}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1array_a9fe6f45309595710451472fbf16e89c1}{pybind11\+::array\+::\+Strides\+Container}} =  \mbox{\hyperlink{classpybind11_1_1detail_1_1any__container}{detail\+::any\+\_\+container}}$<$\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpybind11_1_1array_a1627f32955fb284f23093d51faba300c}\label{classpybind11_1_1array_a1627f32955fb284f23093d51faba300c}} 
+\index{pybind11::array@{pybind11::array}!array@{array}}
+\index{array@{array}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{array()}{array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily pybind11\+::array\+::array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array_a87b716fffe8b8099513be5dae61ced16}\label{classpybind11_1_1array_a87b716fffe8b8099513be5dae61ced16}} 
+\index{pybind11::array@{pybind11::array}!array@{array}}
+\index{array@{array}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{array()}{array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily pybind11\+::array\+::array (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1dtype}{pybind11\+::dtype}} \&}]{dt,  }\item[{\mbox{\hyperlink{classpybind11_1_1array_aac2f71721e5b612933b0a7d2cdc53349}{Shape\+Container}}}]{shape,  }\item[{\mbox{\hyperlink{classpybind11_1_1array_a9fe6f45309595710451472fbf16e89c1}{Strides\+Container}}}]{strides,  }\item[{const void $\ast$}]{ptr = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{base = {\ttfamily \mbox{\hyperlink{classpybind11_1_1handle}{handle}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array_a100ac01194d9e1f8fa8e429a68ca1ff1}\label{classpybind11_1_1array_a100ac01194d9e1f8fa8e429a68ca1ff1}} 
+\index{pybind11::array@{pybind11::array}!array@{array}}
+\index{array@{array}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{array()}{array()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily pybind11\+::array\+::array (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1dtype}{pybind11\+::dtype}} \&}]{dt,  }\item[{\mbox{\hyperlink{classpybind11_1_1array_aac2f71721e5b612933b0a7d2cdc53349}{Shape\+Container}}}]{shape,  }\item[{const void $\ast$}]{ptr = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{base = {\ttfamily \mbox{\hyperlink{classpybind11_1_1handle}{handle}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array_a58419b2fe82f698eef80dbb632c99a0e}\label{classpybind11_1_1array_a58419b2fe82f698eef80dbb632c99a0e}} 
+\index{pybind11::array@{pybind11::array}!array@{array}}
+\index{array@{array}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{array()}{array()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily template$<$typename T , typename  = detail\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+integral$<$\+T$>$\+::value \&\& !std\+::is\+\_\+same$<$bool, T$>$\+::value$>$$>$ \\
+pybind11\+::array\+::array (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1dtype}{pybind11\+::dtype}} \&}]{dt,  }\item[{T}]{count,  }\item[{const void $\ast$}]{ptr = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{base = {\ttfamily \mbox{\hyperlink{classpybind11_1_1handle}{handle}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array_a1df48786687418251b7dd029c03b06d3}\label{classpybind11_1_1array_a1df48786687418251b7dd029c03b06d3}} 
+\index{pybind11::array@{pybind11::array}!array@{array}}
+\index{array@{array}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{array()}{array()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+pybind11\+::array\+::array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1array_aac2f71721e5b612933b0a7d2cdc53349}{Shape\+Container}}}]{shape,  }\item[{\mbox{\hyperlink{classpybind11_1_1array_a9fe6f45309595710451472fbf16e89c1}{Strides\+Container}}}]{strides,  }\item[{const T $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{base = {\ttfamily \mbox{\hyperlink{classpybind11_1_1handle}{handle}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array_ac42023abe1ecb65e89de6eff7e14e91d}\label{classpybind11_1_1array_ac42023abe1ecb65e89de6eff7e14e91d}} 
+\index{pybind11::array@{pybind11::array}!array@{array}}
+\index{array@{array}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{array()}{array()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+pybind11\+::array\+::array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1array_aac2f71721e5b612933b0a7d2cdc53349}{Shape\+Container}}}]{shape,  }\item[{const T $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{base = {\ttfamily \mbox{\hyperlink{classpybind11_1_1handle}{handle}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array_a3dbfc46aac2ceb9758d4d953ac8bdfa8}\label{classpybind11_1_1array_a3dbfc46aac2ceb9758d4d953ac8bdfa8}} 
+\index{pybind11::array@{pybind11::array}!array@{array}}
+\index{array@{array}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{array()}{array()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+pybind11\+::array\+::array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}]{count,  }\item[{const T $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{base = {\ttfamily \mbox{\hyperlink{classpybind11_1_1handle}{handle}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array_a1a95b42e29a9e407e81b1da49dcf6c4e}\label{classpybind11_1_1array_a1a95b42e29a9e407e81b1da49dcf6c4e}} 
+\index{pybind11::array@{pybind11::array}!array@{array}}
+\index{array@{array}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{array()}{array()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily pybind11\+::array\+::array (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structpybind11_1_1buffer__info}{buffer\+\_\+info}} \&}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1array_a917457eea05ecc0d8568c49e87495aab}\label{classpybind11_1_1array_a917457eea05ecc0d8568c49e87495aab}} 
+\index{pybind11::array@{pybind11::array}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily pybind11\+::array\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(deprecated(\char`\"{}Use \mbox{\hyperlink{classpybind11_1_1object_ac1ea1a4cbcf197d7c8096037633720d7}{reinterpret\+\_\+borrow}}$<$\char`\"{}\char`\"{}\mbox{\hyperlink{classpybind11_1_1array}{array}}\char`\"{}\char`\"{}$>$() or \mbox{\hyperlink{classpybind11_1_1object_ae1de2ab5a755c10582ac1e46071de5c5}{reinterpret\+\_\+steal}}$<$\char`\"{}\char`\"{}\mbox{\hyperlink{classpybind11_1_1array}{array}}\char`\"{}\char`\"{}$>$()\char`\"{}))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpybind11_1_1array_a246d06d1ca129a526b7c5efdeee48652}\label{classpybind11_1_1array_a246d06d1ca129a526b7c5efdeee48652}} 
+\index{pybind11::array@{pybind11::array}!base@{base}}
+\index{base@{base}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{base()}{base()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpybind11_1_1object}{object}} pybind11\+::array\+::base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Base object. 
+
+\mbox{\Hypertarget{classpybind11_1_1array_aa7f2aa4ebce00e7130e119960055b55b}\label{classpybind11_1_1array_aa7f2aa4ebce00e7130e119960055b55b}} 
+\index{pybind11::array@{pybind11::array}!byte\_offset@{byte\_offset}}
+\index{byte\_offset@{byte\_offset}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{byte\_offset()}{byte\_offset()}}
+{\footnotesize\ttfamily template$<$typename... Ix$>$ \\
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} pybind11\+::array\+::byte\+\_\+offset (\begin{DoxyParamCaption}\item[{Ix...}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array_aa361b6020a1c147f62d3ffab1082cfd9}\label{classpybind11_1_1array_aa361b6020a1c147f62d3ffab1082cfd9}} 
+\index{pybind11::array@{pybind11::array}!c\_strides@{c\_strides}}
+\index{c\_strides@{c\_strides}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{c\_strides()}{c\_strides()}}
+{\footnotesize\ttfamily static std\+::vector$<$\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}$>$ pybind11\+::array\+::c\+\_\+strides (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $>$ \&}]{shape,  }\item[{\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}]{itemsize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array_ae2219067fcf2c35d05bb83fd997ac8e2}\label{classpybind11_1_1array_ae2219067fcf2c35d05bb83fd997ac8e2}} 
+\index{pybind11::array@{pybind11::array}!check\_dimensions@{check\_dimensions}}
+\index{check\_dimensions@{check\_dimensions}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{check\_dimensions()}{check\_dimensions()}}
+{\footnotesize\ttfamily template$<$typename... Ix$>$ \\
+void pybind11\+::array\+::check\+\_\+dimensions (\begin{DoxyParamCaption}\item[{Ix...}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array_aea4957e16ef5e288ffa8e5d87c1381fb}\label{classpybind11_1_1array_aea4957e16ef5e288ffa8e5d87c1381fb}} 
+\index{pybind11::array@{pybind11::array}!check\_dimensions\_impl@{check\_dimensions\_impl}}
+\index{check\_dimensions\_impl@{check\_dimensions\_impl}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{check\_dimensions\_impl()}{check\_dimensions\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename... Ix$>$ \\
+void pybind11\+::array\+::check\+\_\+dimensions\+\_\+impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}]{axis,  }\item[{const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$}]{shape,  }\item[{\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}]{i,  }\item[{Ix...}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array_a8d15f04f8b31149ed7e13c88e8cfbfcd}\label{classpybind11_1_1array_a8d15f04f8b31149ed7e13c88e8cfbfcd}} 
+\index{pybind11::array@{pybind11::array}!check\_dimensions\_impl@{check\_dimensions\_impl}}
+\index{check\_dimensions\_impl@{check\_dimensions\_impl}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{check\_dimensions\_impl()}{check\_dimensions\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void pybind11\+::array\+::check\+\_\+dimensions\+\_\+impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}]{,  }\item[{const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array_aa5c88e5779838efe8829c8bb7bc96509}\label{classpybind11_1_1array_aa5c88e5779838efe8829c8bb7bc96509}} 
+\index{pybind11::array@{pybind11::array}!check\_writeable@{check\_writeable}}
+\index{check\_writeable@{check\_writeable}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{check\_writeable()}{check\_writeable()}}
+{\footnotesize\ttfamily void pybind11\+::array\+::check\+\_\+writeable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array_a89cb34c10b4e3cea34bd5d5534623986}\label{classpybind11_1_1array_a89cb34c10b4e3cea34bd5d5534623986}} 
+\index{pybind11::array@{pybind11::array}!data@{data}}
+\index{data@{data}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily template$<$typename... Ix$>$ \\
+const void$\ast$ pybind11\+::array\+::data (\begin{DoxyParamCaption}\item[{Ix...}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Pointer to the contained data. If index is not provided, points to the beginning of the buffer. May throw if the index would lead to out of bounds access. \mbox{\Hypertarget{classpybind11_1_1array_a7f0f5c84c5de37740fc6edc943c65b2b}\label{classpybind11_1_1array_a7f0f5c84c5de37740fc6edc943c65b2b}} 
+\index{pybind11::array@{pybind11::array}!dtype@{dtype}}
+\index{dtype@{dtype}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{dtype()}{dtype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpybind11_1_1dtype}{pybind11\+::dtype}} pybind11\+::array\+::dtype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Array descriptor (dtype) 
+
+\mbox{\Hypertarget{classpybind11_1_1array_a816d966ca405344a5b2b60a2630154c8}\label{classpybind11_1_1array_a816d966ca405344a5b2b60a2630154c8}} 
+\index{pybind11::array@{pybind11::array}!ensure@{ensure}}
+\index{ensure@{ensure}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{ensure()}{ensure()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classpybind11_1_1array}{array}} pybind11\+::array\+::ensure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{h,  }\item[{int}]{Extra\+Flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Ensure that the argument is a Num\+Py array In case of an error, nullptr is returned and the Python error is cleared. \mbox{\Hypertarget{classpybind11_1_1array_a7eb28e9f937babc09e85124c080ec3d0}\label{classpybind11_1_1array_a7eb28e9f937babc09e85124c080ec3d0}} 
+\index{pybind11::array@{pybind11::array}!f\_strides@{f\_strides}}
+\index{f\_strides@{f\_strides}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{f\_strides()}{f\_strides()}}
+{\footnotesize\ttfamily static std\+::vector$<$\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}$>$ pybind11\+::array\+::f\+\_\+strides (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $>$ \&}]{shape,  }\item[{\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}]{itemsize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array_a0101c3b28ac7ad0900c4f69882343f97}\label{classpybind11_1_1array_a0101c3b28ac7ad0900c4f69882343f97}} 
+\index{pybind11::array@{pybind11::array}!fail\_dim\_check@{fail\_dim\_check}}
+\index{fail\_dim\_check@{fail\_dim\_check}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{fail\_dim\_check()}{fail\_dim\_check()}}
+{\footnotesize\ttfamily void pybind11\+::array\+::fail\+\_\+dim\+\_\+check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}]{dim,  }\item[{const std\+::string \&}]{msg }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array_a6f4666d560c848144be4761ee630d957}\label{classpybind11_1_1array_a6f4666d560c848144be4761ee630d957}} 
+\index{pybind11::array@{pybind11::array}!flags@{flags}}
+\index{flags@{flags}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{flags()}{flags()}}
+{\footnotesize\ttfamily int pybind11\+::array\+::flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the Num\+Py array flags. 
+
+\mbox{\Hypertarget{classpybind11_1_1array_a726f25422313b8cc0e57a5604813ffc5}\label{classpybind11_1_1array_a726f25422313b8cc0e57a5604813ffc5}} 
+\index{pybind11::array@{pybind11::array}!index\_at@{index\_at}}
+\index{index\_at@{index\_at}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{index\_at()}{index\_at()}}
+{\footnotesize\ttfamily template$<$typename... Ix$>$ \\
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} pybind11\+::array\+::index\+\_\+at (\begin{DoxyParamCaption}\item[{Ix...}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Item count from beginning of the array to a given index (full or partial). May throw if the index would lead to out of bounds access. \mbox{\Hypertarget{classpybind11_1_1array_a10340a5561983400712a61483f9f478f}\label{classpybind11_1_1array_a10340a5561983400712a61483f9f478f}} 
+\index{pybind11::array@{pybind11::array}!itemsize@{itemsize}}
+\index{itemsize@{itemsize}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{itemsize()}{itemsize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} pybind11\+::array\+::itemsize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Byte size of a single element. 
+
+\mbox{\Hypertarget{classpybind11_1_1array_ac07e441b9918ff66a74537bc0bb39f40}\label{classpybind11_1_1array_ac07e441b9918ff66a74537bc0bb39f40}} 
+\index{pybind11::array@{pybind11::array}!mutable\_data@{mutable\_data}}
+\index{mutable\_data@{mutable\_data}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{mutable\_data()}{mutable\_data()}}
+{\footnotesize\ttfamily template$<$typename... Ix$>$ \\
+void$\ast$ pybind11\+::array\+::mutable\+\_\+data (\begin{DoxyParamCaption}\item[{Ix...}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Mutable pointer to the contained data. If index is not provided, points to the beginning of the buffer. May throw if the index would lead to out of bounds access. May throw if the array is not writeable. \mbox{\Hypertarget{classpybind11_1_1array_a1fddd41f99198ff3b1a4f8b6b11df693}\label{classpybind11_1_1array_a1fddd41f99198ff3b1a4f8b6b11df693}} 
+\index{pybind11::array@{pybind11::array}!mutable\_unchecked@{mutable\_unchecked}}
+\index{mutable\_unchecked@{mutable\_unchecked}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{mutable\_unchecked()}{mutable\_unchecked()}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims = -\/1$>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__mutable__reference}{detail\+::unchecked\+\_\+mutable\+\_\+reference}}$<$T, Dims$>$ pybind11\+::array\+::mutable\+\_\+unchecked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a proxy object that provides access to the array\textquotesingle{}s data without bounds or dimensionality checking. Will throw if the array is missing the {\ttfamily writeable} flag. Use with care\+: the array must not be destroyed or reshaped for the duration of the returned object, and the caller must take care not to access invalid dimensions or dimension indices. \mbox{\Hypertarget{classpybind11_1_1array_a38c15f5e8b761232e1ba84aca95ae18c}\label{classpybind11_1_1array_a38c15f5e8b761232e1ba84aca95ae18c}} 
+\index{pybind11::array@{pybind11::array}!nbytes@{nbytes}}
+\index{nbytes@{nbytes}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{nbytes()}{nbytes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} pybind11\+::array\+::nbytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Total number of bytes. 
+
+\mbox{\Hypertarget{classpybind11_1_1array_a1f347b49d01c2f35ad5fadc7e620d8ad}\label{classpybind11_1_1array_a1f347b49d01c2f35ad5fadc7e620d8ad}} 
+\index{pybind11::array@{pybind11::array}!ndim@{ndim}}
+\index{ndim@{ndim}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{ndim()}{ndim()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} pybind11\+::array\+::ndim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Number of dimensions. 
+
+\mbox{\Hypertarget{classpybind11_1_1array_a94678462afc88cbb99a8b04dbf1127bc}\label{classpybind11_1_1array_a94678462afc88cbb99a8b04dbf1127bc}} 
+\index{pybind11::array@{pybind11::array}!offset\_at@{offset\_at}}
+\index{offset\_at@{offset\_at}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{offset\_at()}{offset\_at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} pybind11\+::array\+::offset\+\_\+at (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array_a8856b8f237145987a62c19e61c9c26ba}\label{classpybind11_1_1array_a8856b8f237145987a62c19e61c9c26ba}} 
+\index{pybind11::array@{pybind11::array}!offset\_at@{offset\_at}}
+\index{offset\_at@{offset\_at}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{offset\_at()}{offset\_at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename... Ix$>$ \\
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} pybind11\+::array\+::offset\+\_\+at (\begin{DoxyParamCaption}\item[{Ix...}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Byte offset from beginning of the array to a given index (full or partial). May throw if the index would lead to out of bounds access. \mbox{\Hypertarget{classpybind11_1_1array_a803f1928e8d7ccf259c28797461a2880}\label{classpybind11_1_1array_a803f1928e8d7ccf259c28797461a2880}} 
+\index{pybind11::array@{pybind11::array}!owndata@{owndata}}
+\index{owndata@{owndata}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{owndata()}{owndata()}}
+{\footnotesize\ttfamily bool pybind11\+::array\+::owndata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If set, the array owns the data (will be freed when the array is deleted) 
+
+\mbox{\Hypertarget{classpybind11_1_1array_a8c106da762d14abf1b52f8eefb6cd41e}\label{classpybind11_1_1array_a8c106da762d14abf1b52f8eefb6cd41e}} 
+\index{pybind11::array@{pybind11::array}!raw\_array@{raw\_array}}
+\index{raw\_array@{raw\_array}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{raw\_array()}{raw\_array()}}
+{\footnotesize\ttfamily static Py\+Object$\ast$ pybind11\+::array\+::raw\+\_\+array (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{ptr,  }\item[{int}]{Extra\+Flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Create array from any object -- always returns a new reference. 
+
+\mbox{\Hypertarget{classpybind11_1_1array_a33b1bd4c889fbaf108fa0352be379ef1}\label{classpybind11_1_1array_a33b1bd4c889fbaf108fa0352be379ef1}} 
+\index{pybind11::array@{pybind11::array}!resize@{resize}}
+\index{resize@{resize}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void pybind11\+::array\+::resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1array_aac2f71721e5b612933b0a7d2cdc53349}{Shape\+Container}}}]{new\+\_\+shape,  }\item[{bool}]{refcheck = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Resize array to given shape If refcheck is true and more that one reference exist to this array then resize will succeed only if it makes a reshape, i.\+e. original size doesn\textquotesingle{}t change \mbox{\Hypertarget{classpybind11_1_1array_a1babc40ac1727b89010bc9617d2221dd}\label{classpybind11_1_1array_a1babc40ac1727b89010bc9617d2221dd}} 
+\index{pybind11::array@{pybind11::array}!shape@{shape}}
+\index{shape@{shape}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{shape()}{shape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}$\ast$ pybind11\+::array\+::shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dimensions of the array. 
+
+\mbox{\Hypertarget{classpybind11_1_1array_ac7bb2da511133347b3a1b5deaf3686dd}\label{classpybind11_1_1array_ac7bb2da511133347b3a1b5deaf3686dd}} 
+\index{pybind11::array@{pybind11::array}!shape@{shape}}
+\index{shape@{shape}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{shape()}{shape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} pybind11\+::array\+::shape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}]{dim }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dimension along a given axis. 
+
+\mbox{\Hypertarget{classpybind11_1_1array_afca19b0c0896314a48ba4bd1d8015924}\label{classpybind11_1_1array_afca19b0c0896314a48ba4bd1d8015924}} 
+\index{pybind11::array@{pybind11::array}!size@{size}}
+\index{size@{size}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} pybind11\+::array\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Total number of elements. 
+
+\mbox{\Hypertarget{classpybind11_1_1array_ac25411005216cb5f14b7aff7c68ef111}\label{classpybind11_1_1array_ac25411005216cb5f14b7aff7c68ef111}} 
+\index{pybind11::array@{pybind11::array}!squeeze@{squeeze}}
+\index{squeeze@{squeeze}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{squeeze()}{squeeze()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpybind11_1_1array}{array}} pybind11\+::array\+::squeeze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a new view with all of the dimensions of length 1 removed. 
+
+\mbox{\Hypertarget{classpybind11_1_1array_a313b0d36b25a7dd0eb134b57406b257b}\label{classpybind11_1_1array_a313b0d36b25a7dd0eb134b57406b257b}} 
+\index{pybind11::array@{pybind11::array}!strides@{strides}}
+\index{strides@{strides}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{strides()}{strides()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}$\ast$ pybind11\+::array\+::strides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Strides of the array. 
+
+\mbox{\Hypertarget{classpybind11_1_1array_a78085e31576480cc5d1d303ab17f9eef}\label{classpybind11_1_1array_a78085e31576480cc5d1d303ab17f9eef}} 
+\index{pybind11::array@{pybind11::array}!strides@{strides}}
+\index{strides@{strides}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{strides()}{strides()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} pybind11\+::array\+::strides (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}]{dim }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stride along a given axis. 
+
+\mbox{\Hypertarget{classpybind11_1_1array_a95704d8136f515bbac57fe0e32560787}\label{classpybind11_1_1array_a95704d8136f515bbac57fe0e32560787}} 
+\index{pybind11::array@{pybind11::array}!unchecked@{unchecked}}
+\index{unchecked@{unchecked}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{unchecked()}{unchecked()}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims = -\/1$>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{detail\+::unchecked\+\_\+reference}}$<$T, Dims$>$ pybind11\+::array\+::unchecked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a proxy object that provides const access to the array\textquotesingle{}s data without bounds or dimensionality checking. Unlike {\ttfamily \mbox{\hyperlink{classpybind11_1_1array_a1fddd41f99198ff3b1a4f8b6b11df693}{mutable\+\_\+unchecked()}}}, this does not require that the underlying array have the {\ttfamily writable} flag. Use with care\+: the array must not be destroyed or reshaped for the duration of the returned object, and the caller must take care not to access invalid dimensions or dimension indices. \mbox{\Hypertarget{classpybind11_1_1array_a3e0d57570e47aa5e1637b3d7f872197a}\label{classpybind11_1_1array_a3e0d57570e47aa5e1637b3d7f872197a}} 
+\index{pybind11::array@{pybind11::array}!writeable@{writeable}}
+\index{writeable@{writeable}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{writeable()}{writeable()}}
+{\footnotesize\ttfamily bool pybind11\+::array\+::writeable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If set, the array is writeable (otherwise the buffer is read-\/only) 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1array_a2d7124af4924ef006d3b7bfd42b05085}\label{classpybind11_1_1array_a2d7124af4924ef006d3b7bfd42b05085}} 
+\index{pybind11::array@{pybind11::array}!detail::npy\_format\_descriptor@{detail::npy\_format\_descriptor}}
+\index{detail::npy\_format\_descriptor@{detail::npy\_format\_descriptor}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{detail::npy\_format\_descriptor}{detail::npy\_format\_descriptor}}
+{\footnotesize\ttfamily template$<$typename , typename $>$ \\
+friend struct \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__format__descriptor}{detail\+::npy\+\_\+format\+\_\+descriptor}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpybind11_1_1array_a0facc4bb58356f1022fd6c7477e7e1af}\label{classpybind11_1_1array_a0facc4bb58356f1022fd6c7477e7e1af}} 
+\index{pybind11::array@{pybind11::array}!borrowed\_t@{borrowed\_t}}
+\index{borrowed\_t@{borrowed\_t}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{borrowed\_t}{borrowed\_t}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{structpybind11_1_1object_1_1borrowed__t}{pybind11\+::array\+::borrowed\+\_\+t}}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{\}) :  \mbox{\hyperlink{xmlparse_8c_aaadc06b5dac8070de2c8677210967bdb}{buffer}} (h, stolen\_t\{\})) \{ \}    \mbox{\hyperlink{classpybind11_1_1array_a1627f32955fb284f23093d51faba300c}{array}} (\mbox{\hyperlink{classpybind11_1_1handle_a4ba87579a3fba33e8e35e7a7884fe998}{handle}} h, \mbox{\hyperlink{classpybind11_1_1array_a0facc4bb58356f1022fd6c7477e7e1af}{borrowed\_t}}) :  \mbox{\hyperlink{xmlparse_8c_aaadc06b5dac8070de2c8677210967bdb}{buffer}} (h, \mbox{\hyperlink{classpybind11_1_1array_a0facc4bb58356f1022fd6c7477e7e1af}{borrowed\_t}}\{\}) \{ \}    \mbox{\hyperlink{classpybind11_1_1array_a1627f32955fb284f23093d51faba300c}{array}} (\mbox{\hyperlink{classpybind11_1_1handle_a4ba87579a3fba33e8e35e7a7884fe998}{handle}} h, stolen\_t) :  \mbox{\hyperlink{xmlparse_8c_aaadc06b5dac8070de2c8677210967bdb}{buffer}} (h, stolen\_t\{\}) \{ \}   \mbox{\hyperlink{common_8h_ae4ba3bb24593b13133ae78407f466353}{PYBIND11\_DEPRECATED}}(\textcolor{stringliteral}{"{}Use py::isinstance<py::python\_type>(obj) instead"{}})   bool check()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} m\_ptr != \textcolor{keyword}{nullptr} \&\& (bool)  \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a6cbffe9763f89f63d3cfc8f94c90791f}{detail::npy\_api::get}}().\mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_add491ff97b037c3f8343d052d71a9c32}{PyArray\_Check\_}} (m\_ptr); \}   \textcolor{keyword}{static} \textcolor{keywordtype}{bool} check\_(\mbox{\hyperlink{classpybind11_1_1handle_a4ba87579a3fba33e8e35e7a7884fe998}{handle}} h) \{ \textcolor{keywordflow}{return} h.ptr() != \textcolor{keyword}{nullptr} \&\&  \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a6cbffe9763f89f63d3cfc8f94c90791f}{detail::npy\_api::get}}().\mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_add491ff97b037c3f8343d052d71a9c32}{PyArray\_Check\_}} (h.ptr()); \}       \mbox{\hyperlink{classpybind11_1_1array_a1627f32955fb284f23093d51faba300c}{array}} (\textcolor{keyword}{const} \textcolor{keywordtype}{object} \&o) :  \mbox{\hyperlink{xmlparse_8c_aaadc06b5dac8070de2c8677210967bdb}{buffer}} ( \mbox{\hyperlink{classpybind11_1_1array_a8c106da762d14abf1b52f8eefb6cd41e}{raw\_array}} (o.\mbox{\hyperlink{classpybind11_1_1handle_a6f7e2e6beecb8c59c5192ea9bae7eaa5}{ptr}}()), stolen\_t\{\}) \{ \textcolor{keywordflow}{if} (!m\_ptr) \textcolor{keywordflow}{throw} error\_already\_set(); \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{        c\_style = \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cad3a6eac781c5323bfe42db2d538df452}{detail::npy\_api::NPY\_ARRAY\_C\_CONTIGUOUS\_}},}
+\DoxyCodeLine{        f\_style = \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cac87d7818b597c4b1c58f280c3da771b3}{detail::npy\_api::NPY\_ARRAY\_F\_CONTIGUOUS\_}},}
+\DoxyCodeLine{        forcecast = \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca0e95362a8e700112aa6115831179a42c}{detail::npy\_api::NPY\_ARRAY\_FORCECAST\_}}}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpybind11_1_1array_ae30c0d8e4d1041b7020c8ae48ea78b2b}\label{classpybind11_1_1array_ae30c0d8e4d1041b7020c8ae48ea78b2b}} 
+\index{pybind11::array@{pybind11::array}!is\_borrowed@{is\_borrowed}}
+\index{is\_borrowed@{is\_borrowed}!pybind11::array@{pybind11::array}}
+\doxysubsubsection{\texorpdfstring{is\_borrowed}{is\_borrowed}}
+{\footnotesize\ttfamily bool pybind11\+::array\+::is\+\_\+borrowed}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{numpy_8h}{numpy.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,568 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classxlnt_1_1manifest" kind="class" language="C++" prot="public">
+    <compoundname>xlnt::manifest</compoundname>
+    <includes refid="manifest_8hpp" local="no">manifest.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxlnt_1_1manifest_1a9b92ed48b60216371a737cafe2547dbe" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::string &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::string&gt; xlnt::manifest::default_content_types_</definition>
+        <argsstring></argsstring>
+        <name>default_content_types_</name>
+        <briefdescription>
+<para>The map of extensions to default content types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="186" column="24" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1manifest_1a602eed00ebba9336fd66a6129856ec1f" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; <ref refid="classxlnt_1_1path" kindref="compound">path</ref>, std::string &gt;</type>
+        <definition>std::unordered_map&lt;path, std::string&gt; xlnt::manifest::override_content_types_</definition>
+        <argsstring></argsstring>
+        <name>override_content_types_</name>
+        <briefdescription>
+<para>The map of package parts to overriding content types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="191" column="24" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1manifest_1ad8c403be0291fef7f2a4d7198a777f9d" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; <ref refid="classxlnt_1_1path" kindref="compound">path</ref>, std::unordered_map&lt; std::string, <ref refid="classxlnt_1_1relationship" kindref="compound">xlnt::relationship</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt;path, std::unordered_map&lt;std::string, xlnt::relationship&gt; &gt; xlnt::manifest::relationships_</definition>
+        <argsstring></argsstring>
+        <name>relationships_</name>
+        <briefdescription>
+<para>The map of package parts to their registered relationships. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="196" column="24" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxlnt_1_1manifest_1a54af1cbef09453b57440cb36c22ca0cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::manifest::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+<para>Unregisters all default and override type and all relationships and known parts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="46" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="33" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1ac01069db708b02148b23f5a285b8116f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &gt;</type>
+        <definition>std::vector&lt; path &gt; xlnt::manifest::parts</definition>
+        <argsstring>() const</argsstring>
+        <name>parts</name>
+        <briefdescription>
+<para>Returns the path to all internal package parts registered as a source or target of a relationship. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="52" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="205" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1aa3b15806378006db18e6d7304d5160c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::manifest::has_relationship</definition>
+        <argsstring>(const path &amp;source, relationship_type type) const</argsstring>
+        <name>has_relationship</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>relationship_type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the manifest contains a relationship with the given type with part as the source. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="59" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="81" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1aff71c2d2f7ad97100c9c79cd68699776" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::manifest::has_relationship</definition>
+        <argsstring>(const path &amp;source, const std::string &amp;rel_id) const</argsstring>
+        <name>has_relationship</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>rel_id</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the manifest contains a relationship with the given type with part as the source. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="64" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="91" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1aad326450d4e265a98dbfb0ec4a45d398" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>class <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref></type>
+        <definition>relationship xlnt::manifest::relationship</definition>
+        <argsstring>(const path &amp;source, relationship_type type) const</argsstring>
+        <name>relationship</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>relationship_type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Returns the relationship with &quot;source&quot; as the source and with a type of &quot;type&quot;. Throws a <ref refid="classxlnt_1_1key__not__found" kindref="compound">key_not_found</ref> exception if no such relationship is found. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="64" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="101" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1aff757b78ed22190ea8dd3ce98b150324" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>class <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref></type>
+        <definition>relationship xlnt::manifest::relationship</definition>
+        <argsstring>(const path &amp;source, const std::string &amp;rel_id) const</argsstring>
+        <name>relationship</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>rel_id</declname>
+        </param>
+        <briefdescription>
+<para>Returns the relationship with &quot;source&quot; as the source and with an ID of &quot;rel_id&quot;. Throws a <ref refid="classxlnt_1_1key__not__found" kindref="compound">key_not_found</ref> exception if no such relationship is found. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="64" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="187" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1a2240e4e7b43ece1b3fb82c5be31cb944" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classxlnt_1_1relationship" kindref="compound">xlnt::relationship</ref> &gt;</type>
+        <definition>std::vector&lt; relationship &gt; xlnt::manifest::relationships</definition>
+        <argsstring>(const path &amp;source) const</argsstring>
+        <name>relationships</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Returns all relationship with &quot;source&quot; as the source. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="81" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="170" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1acc666808a03eb4b0ff215aea7db9a4e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classxlnt_1_1relationship" kindref="compound">xlnt::relationship</ref> &gt;</type>
+        <definition>std::vector&lt; xlnt::relationship &gt; xlnt::manifest::relationships</definition>
+        <argsstring>(const path &amp;source, relationship_type type) const</argsstring>
+        <name>relationships</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>relationship_type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Returns all relationships with &quot;source&quot; as the source and with a type of &quot;type&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="86" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="113" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1a2655028632b906b2537c6a5732ad56ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1path" kindref="compound">path</ref></type>
+        <definition>path xlnt::manifest::canonicalize</definition>
+        <argsstring>(const std::vector&lt; xlnt::relationship &gt; &amp;rels) const</argsstring>
+        <name>canonicalize</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="classxlnt_1_1relationship" kindref="compound">xlnt::relationship</ref> &gt; &amp;</type>
+          <declname>rels</declname>
+        </param>
+        <briefdescription>
+<para>Returns the canonical path of the chain of relationships by traversing through rels and forming the absolute combined path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="92" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="40" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1a258b180a7e667509fefaccadc2694eea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xlnt::manifest::register_relationship</definition>
+        <argsstring>(const uri &amp;source, relationship_type type, const uri &amp;target, target_mode mode)</argsstring>
+        <name>register_relationship</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1uri" kindref="compound">uri</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>relationship_type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1uri" kindref="compound">uri</ref> &amp;</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>target_mode</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Registers a new relationship by specifying all of the relationship properties explicitly. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="97" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="225" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1a94ace52389d3cd6b6c887fb4d52f5228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xlnt::manifest::register_relationship</definition>
+        <argsstring>(const class relationship &amp;rel)</argsstring>
+        <name>register_relationship</name>
+        <param>
+          <type>const class <ref refid="classxlnt_1_1relationship" kindref="compound">relationship</ref> &amp;</type>
+          <declname>rel</declname>
+        </param>
+        <briefdescription>
+<para>Registers a new relationship already constructed elsewhere. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="102" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="232" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1ad182f641b3410f258adcf9a1a1edd423" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unordered_map&lt; std::string, std::string &gt;</type>
+        <definition>std::unordered_map&lt; std::string, std::string &gt; xlnt::manifest::unregister_relationship</definition>
+        <argsstring>(const uri &amp;source, const std::string &amp;rel_id)</argsstring>
+        <name>unregister_relationship</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1uri" kindref="compound">uri</ref> &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>rel_id</declname>
+        </param>
+        <briefdescription>
+<para>Delete the relationship with the given id from source part. Returns a mapping of relationship IDs since IDs are shifted down. For example, if there are three relationships for part a.xml like [rId1, rId2, rId3] and rId2 is deleted, the resulting map would look like [rId3-&gt;rId2]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="110" column="24" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="238" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1ae1cffaac41ad585535e389fb0f872929" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xlnt::manifest::content_type</definition>
+        <argsstring>(const path &amp;part) const</argsstring>
+        <name>content_type</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>part</declname>
+        </param>
+        <briefdescription>
+<para>Given the path to a part, returns the content type of the part as a string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="117" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="131" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1a56e02d02403b73482a8b9362f9be314e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::manifest::has_default_type</definition>
+        <argsstring>(const std::string &amp;extension) const</argsstring>
+        <name>has_default_type</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>extension</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if a default content type for the extension has been registered. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="124" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="272" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1a2f7bb6208e0e57f0ab7cc7b9a4e4d2ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; xlnt::manifest::extensions_with_default_types</definition>
+        <argsstring>() const</argsstring>
+        <name>extensions_with_default_types</name>
+        <briefdescription>
+<para>Returns a vector of all extensions with registered default content types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="129" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="277" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1a278940484f977f13b554a29483ae0acb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xlnt::manifest::default_type</definition>
+        <argsstring>(const std::string &amp;extension) const</argsstring>
+        <name>default_type</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>extension</declname>
+        </param>
+        <briefdescription>
+<para>Returns the registered default content type for parts of the given extension. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="134" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="289" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1a696f9d51dcfca5af3c39d3fda40f8a8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::manifest::register_default_type</definition>
+        <argsstring>(const std::string &amp;extension, const std::string &amp;type)</argsstring>
+        <name>register_default_type</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>extension</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Associates the given extension with the given content type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="139" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="299" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1a28741a3ff2ea5b8cc61870a15e1f0743" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::manifest::unregister_default_type</definition>
+        <argsstring>(const std::string &amp;extension)</argsstring>
+        <name>unregister_default_type</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>extension</declname>
+        </param>
+        <briefdescription>
+<para>Unregisters the default content type for the given extension. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="144" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="304" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1aef8c17dfe1cfdcadccb977db1b57fbf2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::manifest::has_override_type</definition>
+        <argsstring>(const path &amp;part) const</argsstring>
+        <name>has_override_type</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>part</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if a content type overriding the default content type has been registered for the given part. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="152" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="324" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1a8f8400ba54883c2391d6d03a49fdb165" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xlnt::manifest::override_type</definition>
+        <argsstring>(const path &amp;part) const</argsstring>
+        <name>override_type</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>part</declname>
+        </param>
+        <briefdescription>
+<para>Returns the override content type registered for the given part. Throws <ref refid="classxlnt_1_1key__not__found" kindref="compound">key_not_found</ref> exception if no override type was found. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="158" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="329" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1a5e325ca8cf3cacc8b3a36ccca1ad117c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &gt;</type>
+        <definition>std::vector&lt; path &gt; xlnt::manifest::parts_with_overriden_types</definition>
+        <argsstring>() const</argsstring>
+        <name>parts_with_overriden_types</name>
+        <briefdescription>
+<para>Returns the path of every part in this manifest with an overriden content type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="163" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="158" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1a6f839f478ecc20d7945d62b3ad513511" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::manifest::register_override_type</definition>
+        <argsstring>(const path &amp;part, const std::string &amp;type)</argsstring>
+        <name>register_override_type</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>part</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Overrides any default type registered for the part&apos;s extension with the given content type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="168" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="148" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1ad60b4fd8bd7300646e975900356f102c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::manifest::unregister_override_type</definition>
+        <argsstring>(const path &amp;part)</argsstring>
+        <name>unregister_override_type</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>part</declname>
+        </param>
+        <briefdescription>
+<para>Unregisters the overriding content type of the given part. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="173" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="153" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1manifest_1a6860a3f697a377526e365626f345fff8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::manifest::operator==</definition>
+        <argsstring>(const manifest &amp;other) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1manifest" kindref="compound">manifest</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="175" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="339" bodyend="344"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classxlnt_1_1manifest_1a36c5d23621dd00c9bb51daf3e6dc9477" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xlnt::manifest::next_relationship_id</definition>
+        <argsstring>(const path &amp;part) const</argsstring>
+        <name>next_relationship_id</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1path" kindref="compound">path</ref> &amp;</type>
+          <declname>part</declname>
+        </param>
+        <briefdescription>
+<para>Returns the lowest rId for the given part that hasn&apos;t already been registered. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="181" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/packaging/manifest.cpp" bodystart="309" bodyend="322"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The manifest keeps track of all files in the OOXML package and their type and relationships. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" line="40" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/packaging/manifest.hpp" bodystart="41" bodyend="197"/>
+    <listofallmembers>
+      <member refid="classxlnt_1_1manifest_1a2655028632b906b2537c6a5732ad56ce" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>canonicalize</name></member>
+      <member refid="classxlnt_1_1manifest_1a54af1cbef09453b57440cb36c22ca0cb" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>clear</name></member>
+      <member refid="classxlnt_1_1manifest_1ae1cffaac41ad585535e389fb0f872929" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>content_type</name></member>
+      <member refid="classxlnt_1_1manifest_1a9b92ed48b60216371a737cafe2547dbe" prot="private" virt="non-virtual"><scope>xlnt::manifest</scope><name>default_content_types_</name></member>
+      <member refid="classxlnt_1_1manifest_1a278940484f977f13b554a29483ae0acb" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>default_type</name></member>
+      <member refid="classxlnt_1_1manifest_1a2f7bb6208e0e57f0ab7cc7b9a4e4d2ac" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>extensions_with_default_types</name></member>
+      <member refid="classxlnt_1_1manifest_1a56e02d02403b73482a8b9362f9be314e" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>has_default_type</name></member>
+      <member refid="classxlnt_1_1manifest_1aef8c17dfe1cfdcadccb977db1b57fbf2" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>has_override_type</name></member>
+      <member refid="classxlnt_1_1manifest_1aa3b15806378006db18e6d7304d5160c4" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>has_relationship</name></member>
+      <member refid="classxlnt_1_1manifest_1aff71c2d2f7ad97100c9c79cd68699776" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>has_relationship</name></member>
+      <member refid="classxlnt_1_1manifest_1a36c5d23621dd00c9bb51daf3e6dc9477" prot="private" virt="non-virtual"><scope>xlnt::manifest</scope><name>next_relationship_id</name></member>
+      <member refid="classxlnt_1_1manifest_1a6860a3f697a377526e365626f345fff8" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>operator==</name></member>
+      <member refid="classxlnt_1_1manifest_1a602eed00ebba9336fd66a6129856ec1f" prot="private" virt="non-virtual"><scope>xlnt::manifest</scope><name>override_content_types_</name></member>
+      <member refid="classxlnt_1_1manifest_1a8f8400ba54883c2391d6d03a49fdb165" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>override_type</name></member>
+      <member refid="classxlnt_1_1manifest_1ac01069db708b02148b23f5a285b8116f" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>parts</name></member>
+      <member refid="classxlnt_1_1manifest_1a5e325ca8cf3cacc8b3a36ccca1ad117c" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>parts_with_overriden_types</name></member>
+      <member refid="classxlnt_1_1manifest_1a696f9d51dcfca5af3c39d3fda40f8a8c" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>register_default_type</name></member>
+      <member refid="classxlnt_1_1manifest_1a6f839f478ecc20d7945d62b3ad513511" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>register_override_type</name></member>
+      <member refid="classxlnt_1_1manifest_1a258b180a7e667509fefaccadc2694eea" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>register_relationship</name></member>
+      <member refid="classxlnt_1_1manifest_1a94ace52389d3cd6b6c887fb4d52f5228" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>register_relationship</name></member>
+      <member refid="classxlnt_1_1manifest_1aad326450d4e265a98dbfb0ec4a45d398" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>relationship</name></member>
+      <member refid="classxlnt_1_1manifest_1aff757b78ed22190ea8dd3ce98b150324" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>relationship</name></member>
+      <member refid="classxlnt_1_1manifest_1a2240e4e7b43ece1b3fb82c5be31cb944" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>relationships</name></member>
+      <member refid="classxlnt_1_1manifest_1acc666808a03eb4b0ff215aea7db9a4e7" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>relationships</name></member>
+      <member refid="classxlnt_1_1manifest_1ad8c403be0291fef7f2a4d7198a777f9d" prot="private" virt="non-virtual"><scope>xlnt::manifest</scope><name>relationships_</name></member>
+      <member refid="classxlnt_1_1manifest_1a28741a3ff2ea5b8cc61870a15e1f0743" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>unregister_default_type</name></member>
+      <member refid="classxlnt_1_1manifest_1ad60b4fd8bd7300646e975900356f102c" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>unregister_override_type</name></member>
+      <member refid="classxlnt_1_1manifest_1ad182f641b3410f258adcf9a1a1edd423" prot="public" virt="non-virtual"><scope>xlnt::manifest</scope><name>unregister_relationship</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,460 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classpybind11_1_1cpp__function" kind="class" language="C++" prot="public">
+    <compoundname>pybind11::cpp_function</compoundname>
+    <basecompoundref refid="classpybind11_1_1function" prot="public" virt="non-virtual">pybind11::function</basecompoundref>
+    <includes refid="pybind11_8h" local="no">pybind11.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpybind11_1_1cpp__function_1a132747c2ceb48f66e31a2a0a8cdbcd04" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pybind11::cpp_function::cpp_function</definition>
+        <argsstring>()</argsstring>
+        <name>cpp_function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" line="52" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1cpp__function_1a6876ca7fb5a6747ae0828d6c0335e487" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Return</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Extra</declname>
+            <defname>Extra</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>pybind11::cpp_function::cpp_function</definition>
+        <argsstring>(Return(*f)(Args...), const Extra &amp;... extra)</argsstring>
+        <name>cpp_function</name>
+        <param>
+          <type>Return(*)(Args...)</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const Extra &amp;...</type>
+          <declname>extra</declname>
+        </param>
+        <briefdescription>
+<para>Construct a <ref refid="classpybind11_1_1cpp__function" kindref="compound">cpp_function</ref> from a vanilla function pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" line="56" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1cpp__function_1acfe302e5e16cb06b35def528437ee8d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Func</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Extra</declname>
+            <defname>Extra</defname>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval><ref refid="namespacepybind11_1_1detail_1a492fb1fcf079a5bc67248b852bc73619" kindref="member">detail::enable_if_t</ref>&lt;        <ref refid="namespacepybind11_1_1detail_1ad2bf911ee252ecbcf52d2ddec897ed0a" kindref="member">detail::satisfies_none_of</ref>&lt;            <ref refid="namespacepybind11_1_1detail_1a6c207068b00c8f12378fe4e8f02eaa73" kindref="member">detail::remove_reference_t</ref>&lt;Func&gt;,            std::is_function, std::is_pointer, std::is_member_pointer        &gt;::value&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>pybind11::cpp_function::cpp_function</definition>
+        <argsstring>(Func &amp;&amp;f, const Extra &amp;... extra)</argsstring>
+        <name>cpp_function</name>
+        <param>
+          <type>Func &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const Extra &amp;...</type>
+          <declname>extra</declname>
+        </param>
+        <briefdescription>
+<para>Construct a <ref refid="classpybind11_1_1cpp__function" kindref="compound">cpp_function</ref> from a lambda function (possibly with internal state) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" line="67" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" bodystart="67" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1cpp__function_1afbea329616cf693374fc35be7e79fbf3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Return</type>
+          </param>
+          <param>
+            <type>typename Class</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Arg</declname>
+            <defname>Arg</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Extra</declname>
+            <defname>Extra</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>pybind11::cpp_function::cpp_function</definition>
+        <argsstring>(Return(Class::*f)(Arg...), const Extra &amp;... extra)</argsstring>
+        <name>cpp_function</name>
+        <param>
+          <type>Return(Class::*)(Arg...)</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const Extra &amp;...</type>
+          <declname>extra</declname>
+        </param>
+        <briefdescription>
+<para>Construct a <ref refid="classpybind11_1_1cpp__function" kindref="compound">cpp_function</ref> from a class method (non-const) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" line="75" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1cpp__function_1ae1f23749635c15b72ce0d5c5ae264481" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Return</type>
+          </param>
+          <param>
+            <type>typename Class</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Arg</declname>
+            <defname>Arg</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Extra</declname>
+            <defname>Extra</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>pybind11::cpp_function::cpp_function</definition>
+        <argsstring>(Return(Class::*f)(Arg...) const, const Extra &amp;... extra)</argsstring>
+        <name>cpp_function</name>
+        <param>
+          <type>Return(Class::*)(Arg...) const</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const Extra &amp;...</type>
+          <declname>extra</declname>
+        </param>
+        <briefdescription>
+<para>Construct a <ref refid="classpybind11_1_1cpp__function" kindref="compound">cpp_function</ref> from a class method (const) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" line="82" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1cpp__function_1a58dd2ab6841454f51331f2cc5c6dc235" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classpybind11_1_1object" kindref="compound">object</ref></type>
+        <definition>object pybind11::cpp_function::name</definition>
+        <argsstring>() const</argsstring>
+        <name>name</name>
+        <briefdescription>
+<para>Return the function name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" line="88" column="12" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" bodystart="88" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classpybind11_1_1cpp__function_1ac0311553831b32c5b398c9bd106c793b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pybind11::cpp_function::__attribute__</definition>
+        <argsstring>((noinline)) detail</argsstring>
+        <name>__attribute__</name>
+        <param>
+          <type>(noinline)</type>
+        </param>
+        <briefdescription>
+<para>Space optimization: don&apos;t inline this frequently instantiated fragment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" line="92" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1cpp__function_1ac0e6b6560c065900ca0412037a9fab0e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Func</type>
+          </param>
+          <param>
+            <type>typename Return</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Extra</declname>
+            <defname>Extra</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pybind11::cpp_function::initialize</definition>
+        <argsstring>(Func &amp;&amp;f, Return(*)(Args...), const Extra &amp;... extra)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>Func &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Return(*)(Args...)</type>
+        </param>
+        <param>
+          <type>const Extra &amp;...</type>
+          <declname>extra</declname>
+        </param>
+        <briefdescription>
+<para>Special internal constructor for functors, lambda functions, etc. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" line="98" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" bodystart="98" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1cpp__function_1af14b1ca8e2485667b160a54c910e120f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pybind11::cpp_function::initialize_generic</definition>
+        <argsstring>(detail::function_record *rec, const char *text, const std::type_info *const *types, size_t args)</argsstring>
+        <name>initialize_generic</name>
+        <param>
+          <type><ref refid="structpybind11_1_1detail_1_1function__record" kindref="compound">detail::function_record</ref> *</type>
+          <declname>rec</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>const std::type_info *const *</type>
+          <declname>types</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacepybind11_1a74292751b6fc8fe14d7c6772ae2fd0fc" kindref="member">size_t</ref></type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Register a function call with Python (generic non-templated code goes here) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" line="191" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" bodystart="191" bodyend="386"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classpybind11_1_1cpp__function_1aa3131b605539b3ba16529f85b6204e1a" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pybind11::cpp_function::destruct</definition>
+        <argsstring>(detail::function_record *rec)</argsstring>
+        <name>destruct</name>
+        <param>
+          <type><ref refid="structpybind11_1_1detail_1_1function__record" kindref="compound">detail::function_record</ref> *</type>
+          <declname>rec</declname>
+        </param>
+        <briefdescription>
+<para>When a <ref refid="classpybind11_1_1cpp__function" kindref="compound">cpp_function</ref> is GCed, release any memory allocated by <ref refid="namespacepybind11" kindref="compound">pybind11</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" line="389" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" bodystart="389" bodyend="409"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1cpp__function_1a8395a7e859aab590c33653e2817d0f56" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>static PyObject* pybind11::cpp_function::dispatcher</definition>
+        <argsstring>(PyObject *self, PyObject *args_in, PyObject *kwargs_in)</argsstring>
+        <name>dispatcher</name>
+        <param>
+          <type>PyObject *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>PyObject *</type>
+          <declname>args_in</declname>
+        </param>
+        <param>
+          <type>PyObject *</type>
+          <declname>kwargs_in</declname>
+        </param>
+        <briefdescription>
+<para>Main dispatch logic for calls to functions bound using <ref refid="namespacepybind11" kindref="compound">pybind11</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" line="412" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" bodystart="412" bodyend="721"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Wraps an arbitrary C++ function/method/lambda function/.. into a callable Python object. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>pybind11::detail::object_api&lt; handle &gt;</label>
+        <link refid="classpybind11_1_1detail_1_1object__api"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pybind11::function</label>
+        <link refid="classpybind11_1_1function"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pybind11::detail::pyobject_tag</label>
+        <link refid="classpybind11_1_1detail_1_1pyobject__tag"/>
+      </node>
+      <node id="3">
+        <label>pybind11::object</label>
+        <link refid="classpybind11_1_1object"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>pybind11::handle</label>
+        <link refid="classpybind11_1_1handle"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pybind11::cpp_function</label>
+        <link refid="classpybind11_1_1cpp__function"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>pybind11::detail::object_api&lt; handle &gt;</label>
+        <link refid="classpybind11_1_1detail_1_1object__api"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pybind11::function</label>
+        <link refid="classpybind11_1_1function"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pybind11::detail::pyobject_tag</label>
+        <link refid="classpybind11_1_1detail_1_1pyobject__tag"/>
+      </node>
+      <node id="3">
+        <label>pybind11::object</label>
+        <link refid="classpybind11_1_1object"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>pybind11::handle</label>
+        <link refid="classpybind11_1_1handle"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pybind11::cpp_function</label>
+        <link refid="classpybind11_1_1cpp__function"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" line="50" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" bodystart="50" bodyend="722"/>
+    <listofallmembers>
+      <member refid="classpybind11_1_1cpp__function_1ac0311553831b32c5b398c9bd106c793b" prot="protected" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>__attribute__</name></member>
+      <member refid="classpybind11_1_1function_1a5a6f5278ff50ebe54e71fcdf94936bf1" prot="public" virt="non-virtual" ambiguityscope="pybind11::function::"><scope>pybind11::cpp_function</scope><name>__attribute__</name></member>
+      <member refid="classpybind11_1_1object_1af0de297f50a8c4db0b6712f4b990f8aa" prot="public" virt="non-virtual" ambiguityscope="pybind11::object::"><scope>pybind11::cpp_function</scope><name>__attribute__</name></member>
+      <member refid="classpybind11_1_1handle_1aae1e3eb62dbe66c97c161da1dc408abd" prot="public" virt="non-virtual" ambiguityscope="pybind11::handle::"><scope>pybind11::cpp_function</scope><name>__attribute__</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a9e40315e3b89ae491c4ff308048550ba" prot="public" virt="non-virtual" ambiguityscope="object_api&lt; handle &gt;::"><scope>pybind11::cpp_function</scope><name>__attribute__</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a1515b5309996f3109e3e73ea6c1ab8df" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>attr</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a1ed2f42e544637c80b31c05c88cb916e" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>attr</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a186bda3e95a07f59f9449ce0d050ae5e" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>begin</name></member>
+      <member refid="classpybind11_1_1object_1aece18ff0957cbd093908369dd7800519" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1object_1a1d5a34290705e5124f352346563bf83d" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1object_1aece18ff0957cbd093908369dd7800519" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1object_1a1d5a34290705e5124f352346563bf83d" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1object_1a764785e72f3f451c198c9d09c9ff0fe2" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1object_1a8bc02531431d381c27343568a60d641e" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1handle_1a010389458d06cdacb08f1e0e62f66dfc" prot="public" virt="non-virtual" ambiguityscope="pybind11::handle::"><scope>pybind11::cpp_function</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a18a4dd49680420a502a89d6d75e07748" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>contains</name></member>
+      <member refid="classpybind11_1_1cpp__function_1a132747c2ceb48f66e31a2a0a8cdbcd04" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>cpp_function</name></member>
+      <member refid="classpybind11_1_1cpp__function_1a6876ca7fb5a6747ae0828d6c0335e487" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>cpp_function</name></member>
+      <member refid="classpybind11_1_1cpp__function_1acfe302e5e16cb06b35def528437ee8d4" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>cpp_function</name></member>
+      <member refid="classpybind11_1_1cpp__function_1afbea329616cf693374fc35be7e79fbf3" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>cpp_function</name></member>
+      <member refid="classpybind11_1_1cpp__function_1ae1f23749635c15b72ce0d5c5ae264481" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>cpp_function</name></member>
+      <member refid="classpybind11_1_1handle_1aa5bf7731654070d8a6834183a3c63132" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>dec_ref</name></member>
+      <member refid="classpybind11_1_1cpp__function_1aa3131b605539b3ba16529f85b6204e1a" prot="protected" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>destruct</name></member>
+      <member refid="classpybind11_1_1cpp__function_1a8395a7e859aab590c33653e2817d0f56" prot="protected" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>dispatcher</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a011483f62a9bd3c0fb60bfc7749fc28f" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>end</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1ab2bf58fa4e77779d723142a1a51a9033" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>get_type</name></member>
+      <member refid="classpybind11_1_1handle_1a4ba87579a3fba33e8e35e7a7884fe998" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>handle</name></member>
+      <member refid="classpybind11_1_1handle_1aa8016278dbe2e4534cfa09f688ea17ee" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>handle</name></member>
+      <member refid="classpybind11_1_1handle_1acc6d5c07da91466b4ebe6e5f8f7a1b58" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>inc_ref</name></member>
+      <member refid="classpybind11_1_1cpp__function_1ac0e6b6560c065900ca0412037a9fab0e" prot="protected" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>initialize</name></member>
+      <member refid="classpybind11_1_1cpp__function_1af14b1ca8e2485667b160a54c910e120f" prot="protected" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>initialize_generic</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a5107835e7630a10868373383c003100b" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>is</name></member>
+      <member refid="classpybind11_1_1function_1a9a4be53f118f5e8691b05ac0701b107b" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>is_borrowed</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a1e0426c7b1cc45d3b56574aaaa38ff06" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>is_none</name></member>
+      <member refid="classpybind11_1_1cpp__function_1a58dd2ab6841454f51331f2cc5c6dc235" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>name</name></member>
+      <member refid="classpybind11_1_1object_1a05110f45918e73ad56f66cc713fd1d21" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>object</name></member>
+      <member refid="classpybind11_1_1object_1acd1e392727b7870b82404c6077fd7da3" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>object</name></member>
+      <member refid="classpybind11_1_1object_1a8b3e38884a2467c88b61ad8b0f7b0469" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>object</name></member>
+      <member refid="classpybind11_1_1object_1af43aa8511d39ad9fa3aae093962ca471" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>object</name></member>
+      <member refid="classpybind11_1_1object_1a03cf406a7bee2cde9264d89f5c321e95" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>object</name></member>
+      <member refid="classpybind11_1_1handle_1ac487a4afc7fb27d01ce4216813c7a91c" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>operator bool</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1ad5605908755b3a6ad07bbfa63f398ab8" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>operator()</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a5babe5939b794c3408711be7fde14ee0" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>operator*</name></member>
+      <member refid="classpybind11_1_1object_1aa02e0b7ba3182ecea17911e5fdc631dd" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>operator=</name></member>
+      <member refid="classpybind11_1_1object_1a1f45b12a97cf4b93915fd9145747cd9b" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>operator=</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1ae10abab736d193f170eaa6cfbdab6d01" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>operator[]</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a579d2eeebff07ddab98814ccbfbe2728" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>operator[]</name></member>
+      <member refid="classpybind11_1_1handle_1a6f7e2e6beecb8c59c5192ea9bae7eaa5" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>ptr</name></member>
+      <member refid="classpybind11_1_1handle_1ae837f0f5edde0818cd37e92f5664ebf2" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>ptr</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1aa1e808c7d0773561b3c552cf93d13368" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>ref_count</name></member>
+      <member refid="classpybind11_1_1object_1a6db3ef1f8b39f2038ecf578a7f07b59d" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>release</name></member>
+      <member refid="classpybind11_1_1object_1a18a870a490c34d5a7775e90dc799d2f4" prot="public" virt="non-virtual"><scope>pybind11::cpp_function</scope><name>~object</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,152 @@
+\hypertarget{classpybind11_1_1detail_1_1tuple__caster}{}\doxysection{pybind11\+::detail\+::tuple\+\_\+caster$<$ Tuple, Ts $>$ Class Template Reference}
+\label{classpybind11_1_1detail_1_1tuple__caster}\index{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}}
+
+
+{\ttfamily \#include $<$cast.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster_ac229281f717e8e21415517ea4c4f2b67}{cast\+\_\+op\+\_\+type}} = type
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster_aacfc0faa03fa22c340bff6da14721728}{load}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} src, bool convert)
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster_a26eafb09af38c581a07bab144753f3ea}{operator type}} () \&
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster_ace79723e539420ef681271c69b041ed6}{operator type}} () \&\&
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster_ae6cbdbf8a9f0bb216ebb5fbaf1aa2142}{cast}} (T \&\&src, \mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}} policy, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} parent)
+\item 
+\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1descr}{pybind11\+::detail\+::descr}} \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster_add9ceea714b2c57ddd07b15b771cc26f}{name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$size\+\_\+t... Is$>$ }\\type \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster_af93362ccde1207805bb8a0cfb2f41233}{implicit\+\_\+cast}} (\mbox{\hyperlink{structpybind11_1_1detail_1_1index__sequence}{index\+\_\+sequence}}$<$ Is... $>$) \&
+\item 
+{\footnotesize template$<$size\+\_\+t... Is$>$ }\\type \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster_a0d2fe45fc6cd3b46579185aba5abc4e6}{implicit\+\_\+cast}} (\mbox{\hyperlink{structpybind11_1_1detail_1_1index__sequence}{index\+\_\+sequence}}$<$ Is... $>$) \&\&
+\item 
+{\footnotesize template$<$size\+\_\+t... Is$>$ }\\bool \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster_a8ed12d68fc7ca4922983fe86c4c98301}{load\+\_\+impl}} (const \mbox{\hyperlink{classpybind11_1_1sequence}{sequence}} \&seq, bool convert, \mbox{\hyperlink{structpybind11_1_1detail_1_1index__sequence}{index\+\_\+sequence}}$<$ Is... $>$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster_a2dc0cbbe66d11d06a1c3eeb0b0ea9ef6}{load\+\_\+impl}} (const \mbox{\hyperlink{classpybind11_1_1sequence}{sequence}} \&, bool, \mbox{\hyperlink{structpybind11_1_1detail_1_1index__sequence}{index\+\_\+sequence}}$<$$>$)
+\item 
+{\footnotesize template$<$typename T , size\+\_\+t... Is$>$ }\\static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster_a44ee7bbe7705e29e431c4870130af779}{cast\+\_\+impl}} (T \&\&src, \mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}} policy, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} parent, \mbox{\hyperlink{structpybind11_1_1detail_1_1index__sequence}{index\+\_\+sequence}}$<$ Is... $>$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Tuple$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a160181d61e7d73d29060503ffdf13e6f}{make\+\_\+caster}}$<$ Ts $>$... $>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster_ad4fcaaeafba69fae759dc4b912007266}{subcasters}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1tuple__caster_ac229281f717e8e21415517ea4c4f2b67}\label{classpybind11_1_1detail_1_1tuple__caster_ac229281f717e8e21415517ea4c4f2b67}} 
+\index{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}!cast\_op\_type@{cast\_op\_type}}
+\index{cast\_op\_type@{cast\_op\_type}!pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{cast\_op\_type}{cast\_op\_type}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+template$<$typename T $>$ \\
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster}{pybind11\+::detail\+::tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster_ac229281f717e8e21415517ea4c4f2b67}{cast\+\_\+op\+\_\+type}} =  type}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1tuple__caster_ae6cbdbf8a9f0bb216ebb5fbaf1aa2142}\label{classpybind11_1_1detail_1_1tuple__caster_ae6cbdbf8a9f0bb216ebb5fbaf1aa2142}} 
+\index{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}!cast@{cast}}
+\index{cast@{cast}!pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+template$<$typename T $>$ \\
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster}{pybind11\+::detail\+::tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::cast (\begin{DoxyParamCaption}\item[{T \&\&}]{src,  }\item[{\mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}}}]{policy,  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1tuple__caster_a44ee7bbe7705e29e431c4870130af779}\label{classpybind11_1_1detail_1_1tuple__caster_a44ee7bbe7705e29e431c4870130af779}} 
+\index{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}!cast\_impl@{cast\_impl}}
+\index{cast\_impl@{cast\_impl}!pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{cast\_impl()}{cast\_impl()}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+template$<$typename T , size\+\_\+t... Is$>$ \\
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster}{pybind11\+::detail\+::tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::cast\+\_\+impl (\begin{DoxyParamCaption}\item[{T \&\&}]{src,  }\item[{\mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}}}]{policy,  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{parent,  }\item[{\mbox{\hyperlink{structpybind11_1_1detail_1_1index__sequence}{index\+\_\+sequence}}$<$ Is... $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1tuple__caster_af93362ccde1207805bb8a0cfb2f41233}\label{classpybind11_1_1detail_1_1tuple__caster_af93362ccde1207805bb8a0cfb2f41233}} 
+\index{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}!implicit\_cast@{implicit\_cast}}
+\index{implicit\_cast@{implicit\_cast}!pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{implicit\_cast()}{implicit\_cast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+template$<$size\+\_\+t... Is$>$ \\
+type \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster}{pybind11\+::detail\+::tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::implicit\+\_\+cast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpybind11_1_1detail_1_1index__sequence}{index\+\_\+sequence}}$<$ Is... $>$}]{ }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1tuple__caster_a0d2fe45fc6cd3b46579185aba5abc4e6}\label{classpybind11_1_1detail_1_1tuple__caster_a0d2fe45fc6cd3b46579185aba5abc4e6}} 
+\index{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}!implicit\_cast@{implicit\_cast}}
+\index{implicit\_cast@{implicit\_cast}!pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{implicit\_cast()}{implicit\_cast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+template$<$size\+\_\+t... Is$>$ \\
+type \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster}{pybind11\+::detail\+::tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::implicit\+\_\+cast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpybind11_1_1detail_1_1index__sequence}{index\+\_\+sequence}}$<$ Is... $>$}]{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1tuple__caster_aacfc0faa03fa22c340bff6da14721728}\label{classpybind11_1_1detail_1_1tuple__caster_aacfc0faa03fa22c340bff6da14721728}} 
+\index{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}!load@{load}}
+\index{load@{load}!pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster}{pybind11\+::detail\+::tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{src,  }\item[{bool}]{convert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1tuple__caster_a2dc0cbbe66d11d06a1c3eeb0b0ea9ef6}\label{classpybind11_1_1detail_1_1tuple__caster_a2dc0cbbe66d11d06a1c3eeb0b0ea9ef6}} 
+\index{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}!load\_impl@{load\_impl}}
+\index{load\_impl@{load\_impl}!pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{load\_impl()}{load\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+static constexpr bool \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster}{pybind11\+::detail\+::tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::load\+\_\+impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1sequence}{sequence}} \&}]{,  }\item[{bool}]{,  }\item[{\mbox{\hyperlink{structpybind11_1_1detail_1_1index__sequence}{index\+\_\+sequence}}$<$$>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1tuple__caster_a8ed12d68fc7ca4922983fe86c4c98301}\label{classpybind11_1_1detail_1_1tuple__caster_a8ed12d68fc7ca4922983fe86c4c98301}} 
+\index{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}!load\_impl@{load\_impl}}
+\index{load\_impl@{load\_impl}!pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{load\_impl()}{load\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+template$<$size\+\_\+t... Is$>$ \\
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster}{pybind11\+::detail\+::tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::load\+\_\+impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1sequence}{sequence}} \&}]{seq,  }\item[{bool}]{convert,  }\item[{\mbox{\hyperlink{structpybind11_1_1detail_1_1index__sequence}{index\+\_\+sequence}}$<$ Is... $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1tuple__caster_add9ceea714b2c57ddd07b15b771cc26f}\label{classpybind11_1_1detail_1_1tuple__caster_add9ceea714b2c57ddd07b15b771cc26f}} 
+\index{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}!name@{name}}
+\index{name@{name}!pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1descr}{pybind11\+::detail\+::descr}} \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster}{pybind11\+::detail\+::tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::\mbox{\hyperlink{structpybind11_1_1name}{name}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1tuple__caster_a26eafb09af38c581a07bab144753f3ea}\label{classpybind11_1_1detail_1_1tuple__caster_a26eafb09af38c581a07bab144753f3ea}} 
+\index{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}!operator type@{operator type}}
+\index{operator type@{operator type}!pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{operator type()}{operator type()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster}{pybind11\+::detail\+::tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::operator type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1tuple__caster_ace79723e539420ef681271c69b041ed6}\label{classpybind11_1_1detail_1_1tuple__caster_ace79723e539420ef681271c69b041ed6}} 
+\index{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}!operator type@{operator type}}
+\index{operator type@{operator type}!pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{operator type()}{operator type()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster}{pybind11\+::detail\+::tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::operator type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1tuple__caster_ad4fcaaeafba69fae759dc4b912007266}\label{classpybind11_1_1detail_1_1tuple__caster_ad4fcaaeafba69fae759dc4b912007266}} 
+\index{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}!subcasters@{subcasters}}
+\index{subcasters@{subcasters}!pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$@{pybind11::detail::tuple\_caster$<$ Tuple, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{subcasters}{subcasters}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Tuple, typename... Ts$>$ \\
+Tuple$<$\mbox{\hyperlink{namespacepybind11_1_1detail_a160181d61e7d73d29060503ffdf13e6f}{make\+\_\+caster}}$<$Ts$>$...$>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1tuple__caster}{pybind11\+::detail\+::tuple\+\_\+caster}}$<$ Tuple, Ts $>$\+::subcasters\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{cast_8h}{cast.\+h}}\end{DoxyCompactItemize}

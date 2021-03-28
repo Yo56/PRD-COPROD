@@ -1,0 +1,56 @@
+\hypertarget{structpybind11_1_1detail_1_1exactly__one}{}\doxysection{pybind11\+::detail\+::exactly\+\_\+one$<$ Predicate, Default, Ts $>$ Struct Template Reference}
+\label{structpybind11_1_1detail_1_1exactly__one}\index{pybind11::detail::exactly\_one$<$ Predicate, Default, Ts $>$@{pybind11::detail::exactly\_one$<$ Predicate, Default, Ts $>$}}
+
+
+{\ttfamily \#include $<$common.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1exactly__one_a5602313589245f668b588ee8fb100127}{type}} = \mbox{\hyperlink{namespacepybind11_1_1detail_aef2d4be22c22106ff1a07aeb9394fb60}{conditional\+\_\+t}}$<$ \mbox{\hyperlink{structpybind11_1_1detail_1_1exactly__one_a6abde70907ca71038e3c23f4e3b54eae}{found}}, typename \mbox{\hyperlink{structpybind11_1_1detail_1_1pack__element}{pack\+\_\+element}}$<$ \mbox{\hyperlink{structpybind11_1_1detail_1_1exactly__one_a0dab487c0e9954d33320e06d006e87c0}{index}}, Ts... $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1exactly__one_a5602313589245f668b588ee8fb100127}{type}}, Default $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structpybind11_1_1detail_1_1exactly__one_a6abde70907ca71038e3c23f4e3b54eae}{found}} = \mbox{\hyperlink{namespacepybind11_1_1detail_aa7619c098964b9a8602bb66d5ebc26ff}{constexpr\+\_\+sum}}(Predicate$<$Ts$>$\+::value...)
+\item 
+static constexpr auto \mbox{\hyperlink{structpybind11_1_1detail_1_1exactly__one_a0dab487c0e9954d33320e06d006e87c0}{index}} = \mbox{\hyperlink{structpybind11_1_1detail_1_1exactly__one_a6abde70907ca71038e3c23f4e3b54eae}{found}} ? \mbox{\hyperlink{namespacepybind11_1_1detail_ac0dec32f83b00d849883c195ba9a0a01}{constexpr\+\_\+first}}$<$Predicate, Ts...$>$() \+: 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$template$<$ typename $>$ class Predicate, typename Default, typename... Ts$>$\newline
+struct pybind11\+::detail\+::exactly\+\_\+one$<$ Predicate, Default, Ts $>$}
+
+Return the one and only type which matches the predicate, or Default if none match. If more than one type matches the predicate, fail at compile-\/time. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1exactly__one_a5602313589245f668b588ee8fb100127}\label{structpybind11_1_1detail_1_1exactly__one_a5602313589245f668b588ee8fb100127}} 
+\index{pybind11::detail::exactly\_one$<$ Predicate, Default, Ts $>$@{pybind11::detail::exactly\_one$<$ Predicate, Default, Ts $>$}!type@{type}}
+\index{type@{type}!pybind11::detail::exactly\_one$<$ Predicate, Default, Ts $>$@{pybind11::detail::exactly\_one$<$ Predicate, Default, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily template$<$template$<$ typename $>$ class Predicate, typename Default , typename... Ts$>$ \\
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1exactly__one}{pybind11\+::detail\+::exactly\+\_\+one}}$<$ Predicate, Default, Ts $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1exactly__one_a5602313589245f668b588ee8fb100127}{type}} =  \mbox{\hyperlink{namespacepybind11_1_1detail_aef2d4be22c22106ff1a07aeb9394fb60}{conditional\+\_\+t}}$<$\mbox{\hyperlink{structpybind11_1_1detail_1_1exactly__one_a6abde70907ca71038e3c23f4e3b54eae}{found}}, typename \mbox{\hyperlink{structpybind11_1_1detail_1_1pack__element}{pack\+\_\+element}}$<$\mbox{\hyperlink{structpybind11_1_1detail_1_1exactly__one_a0dab487c0e9954d33320e06d006e87c0}{index}}, Ts...$>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1exactly__one_a5602313589245f668b588ee8fb100127}{type}}, Default$>$}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1exactly__one_a6abde70907ca71038e3c23f4e3b54eae}\label{structpybind11_1_1detail_1_1exactly__one_a6abde70907ca71038e3c23f4e3b54eae}} 
+\index{pybind11::detail::exactly\_one$<$ Predicate, Default, Ts $>$@{pybind11::detail::exactly\_one$<$ Predicate, Default, Ts $>$}!found@{found}}
+\index{found@{found}!pybind11::detail::exactly\_one$<$ Predicate, Default, Ts $>$@{pybind11::detail::exactly\_one$<$ Predicate, Default, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{found}{found}}
+{\footnotesize\ttfamily template$<$template$<$ typename $>$ class Predicate, typename Default , typename... Ts$>$ \\
+constexpr auto \mbox{\hyperlink{structpybind11_1_1detail_1_1exactly__one}{pybind11\+::detail\+::exactly\+\_\+one}}$<$ Predicate, Default, Ts $>$\+::found = \mbox{\hyperlink{namespacepybind11_1_1detail_aa7619c098964b9a8602bb66d5ebc26ff}{constexpr\+\_\+sum}}(Predicate$<$Ts$>$\+::value...)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1exactly__one_a0dab487c0e9954d33320e06d006e87c0}\label{structpybind11_1_1detail_1_1exactly__one_a0dab487c0e9954d33320e06d006e87c0}} 
+\index{pybind11::detail::exactly\_one$<$ Predicate, Default, Ts $>$@{pybind11::detail::exactly\_one$<$ Predicate, Default, Ts $>$}!index@{index}}
+\index{index@{index}!pybind11::detail::exactly\_one$<$ Predicate, Default, Ts $>$@{pybind11::detail::exactly\_one$<$ Predicate, Default, Ts $>$}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily template$<$template$<$ typename $>$ class Predicate, typename Default , typename... Ts$>$ \\
+constexpr auto \mbox{\hyperlink{structpybind11_1_1detail_1_1exactly__one}{pybind11\+::detail\+::exactly\+\_\+one}}$<$ Predicate, Default, Ts $>$\+::index = \mbox{\hyperlink{structpybind11_1_1detail_1_1exactly__one_a6abde70907ca71038e3c23f4e3b54eae}{found}} ? \mbox{\hyperlink{namespacepybind11_1_1detail_ac0dec32f83b00d849883c195ba9a0a01}{constexpr\+\_\+first}}$<$Predicate, Ts...$>$() \+: 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{common_8h}{common.\+h}}\end{DoxyCompactItemize}

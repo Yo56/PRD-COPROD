@@ -22,9 +22,9 @@ bool \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_af6ac8c4819f00c29
 \item 
 \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a2fd38f1e42516466b1a5e4fddbbbe4b9}{read\+\_\+cell}} ()
 \begin{DoxyCompactList}\small\item\em Reads the next cell in the current worksheet and optionally returns it if the last cell in the sheet has not yet been read. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_adad4163898d9f5a54b6725c2f945cdfc}{has\+\_\+worksheet}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+bool \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_adad4163898d9f5a54b6725c2f945cdfc}{has\+\_\+worksheet}} (const std\+::string \&name)
 \item 
-void \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_ada181daac2887630587c772a660f3dd0}{begin\+\_\+worksheet}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+void \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_ada181daac2887630587c772a660f3dd0}{begin\+\_\+worksheet}} (const std\+::string \&name)
 \begin{DoxyCompactList}\small\item\em Beings reading of the next worksheet in the workbook and optionally returns its title if the last worksheet has not yet been read. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_aa6662cc065f8aa379d094a651e7ae392}{end\+\_\+worksheet}} ()
 \begin{DoxyCompactList}\small\item\em Ends reading of the current worksheet in the workbook and optionally returns a worksheet object corresponding to the worksheet with the title returned by \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_ada181daac2887630587c772a660f3dd0}{begin\+\_\+worksheet()}}. \end{DoxyCompactList}\item 
@@ -36,7 +36,7 @@ void \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a08bfc55411516bce
 \begin{DoxyCompactList}\small\item\em Interprets file with the given filename as an XLSX file and sets the content of this workbook to match that file. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a4435de0ebb17d619620144369ebe0b3c}{open}} (std\+::istream \&stream)
 \begin{DoxyCompactList}\small\item\em Interprets data in stream as an XLSX file and sets the content of this workbook to match that file. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a9f1d9939195263dfca2503391c7431c8}{open}} (std\+::unique\+\_\+ptr$<$ std\+::streambuf $>$ \&\&\mbox{\hyperlink{classbuffer}{buffer}})
+void \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a9f1d9939195263dfca2503391c7431c8}{open}} (std\+::unique\+\_\+ptr$<$ std\+::streambuf $>$ \&\&\mbox{\hyperlink{xmlparse_8c_aaadc06b5dac8070de2c8677210967bdb}{buffer}})
 \begin{DoxyCompactList}\small\item\em Holds the given streambuf internally, creates a std\+::istream backed by the given buffer, and calls \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a4435de0ebb17d619620144369ebe0b3c}{open(std\+::istream \&)}} with that stream. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classxlnt_1_1streaming__workbook__reader_a2370347979955975f7079c3a5d136d7c}{sheet\+\_\+titles}} ()
 \begin{DoxyCompactList}\small\item\em Returns a vector of the titles of sheets in the workbook in order. \end{DoxyCompactList}\end{DoxyCompactItemize}

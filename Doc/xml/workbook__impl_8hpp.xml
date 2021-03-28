@@ -1,0 +1,1166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="workbook__impl_8hpp" kind="file" language="C++">
+    <compoundname>workbook_impl.hpp</compoundname>
+    <includes local="no">list</includes>
+    <includes local="no">string</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">vector</includes>
+    <includes refid="stylesheet_8hpp" local="no">detail/implementations/stylesheet.hpp</includes>
+    <includes refid="worksheet__impl_8hpp" local="no">detail/implementations/worksheet_impl.hpp</includes>
+    <includes refid="ext__list_8hpp" local="no">xlnt/packaging/ext_list.hpp</includes>
+    <includes refid="manifest_8hpp" local="no">xlnt/packaging/manifest.hpp</includes>
+    <includes refid="datetime_8hpp" local="no">xlnt/utils/datetime.hpp</includes>
+    <includes refid="variant_8hpp" local="no">xlnt/utils/variant.hpp</includes>
+    <includes refid="calculation__properties_8hpp" local="no">xlnt/workbook/calculation_properties.hpp</includes>
+    <includes refid="theme_8hpp" local="no">xlnt/workbook/theme.hpp</includes>
+    <includes refid="workbook__view_8hpp" local="no">xlnt/workbook/workbook_view.hpp</includes>
+    <includes refid="range_8hpp" local="no">xlnt/worksheet/range.hpp</includes>
+    <includes refid="range__reference_8hpp" local="no">xlnt/worksheet/range_reference.hpp</includes>
+    <includes refid="sheet__view_8hpp" local="no">xlnt/worksheet/sheet_view.hpp</includes>
+    <includedby refid="xlsx__consumer_8cpp" local="no">C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp</includedby>
+    <includedby refid="xlsx__producer_8cpp" local="no">C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp</includedby>
+    <includedby refid="streaming__workbook__reader_8cpp" local="no">C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/workbook/streaming_workbook_reader.cpp</includedby>
+    <includedby refid="workbook_8cpp" local="no">C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/workbook/workbook.cpp</includedby>
+    <includedby refid="worksheet_8cpp" local="no">C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/worksheet.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>list</label>
+      </node>
+      <node id="64">
+        <label>xlnt/workbook/named_range.hpp</label>
+        <link refid="named__range_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>xlnt/utils/exceptions.hpp</label>
+        <link refid="exceptions_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>xlnt/worksheet/column_properties.hpp</label>
+        <link refid="column__properties_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>xlnt/xlnt_config.hpp</label>
+        <link refid="xlnt__config_8hpp"/>
+      </node>
+      <node id="30">
+        <label>functional</label>
+      </node>
+      <node id="71">
+        <label>xlnt/worksheet/major_order.hpp</label>
+        <link refid="major__order_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>detail/implementations/stylesheet.hpp</label>
+        <link refid="stylesheet_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>limits</label>
+      </node>
+      <node id="44">
+        <label>xlnt/worksheet/phonetic_pr.hpp</label>
+        <link refid="phonetic__pr_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>iterator</label>
+      </node>
+      <node id="10">
+        <label>cstdint</label>
+      </node>
+      <node id="52">
+        <label>xlnt/worksheet/worksheet.hpp</label>
+        <link refid="worksheet_8hpp"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>xlnt/cell/phonetic_run.hpp</label>
+        <link refid="phonetic__run_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>detail/implementations/conditional_format_impl.hpp</label>
+        <link refid="conditional__format__impl_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>xlnt/worksheet/cell_vector.hpp</label>
+        <link refid="cell__vector_8hpp"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>xlnt/utils/numeric.hpp</label>
+        <link refid="numeric_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>xlnt/cell/cell_type.hpp</label>
+        <link refid="cell__type_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>xlnt/worksheet/range_iterator.hpp</label>
+        <link refid="range__iterator_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>cmath</label>
+      </node>
+      <node id="18">
+        <label>cassert</label>
+      </node>
+      <node id="15">
+        <label>xlnt/cell/index_types.hpp</label>
+        <link refid="index__types_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>stdexcept</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="50">
+        <label>map</label>
+      </node>
+      <node id="68">
+        <label>xlnt/worksheet/range.hpp</label>
+        <link refid="range_8hpp"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>xlnt/cell/rich_text.hpp</label>
+        <link refid="rich__text_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>xlnt/styles/border.hpp</label>
+        <link refid="border_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>xlnt/styles/color.hpp</label>
+        <link refid="color_8hpp"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>xlnt/worksheet/header_footer.hpp</label>
+        <link refid="header__footer_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>xlnt/drawing/spreadsheet_drawing.hpp</label>
+        <link refid="spreadsheet__drawing_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>ostream</label>
+      </node>
+      <node id="12">
+        <label>xlnt/utils/optional.hpp</label>
+        <link refid="optional_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>detail/implementations/hyperlink_impl.hpp</label>
+        <link refid="hyperlink__impl_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>xlnt/worksheet/page_margins.hpp</label>
+        <link refid="page__margins_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>xlnt/workbook/workbook.hpp</label>
+        <link refid="workbook_8hpp"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>detail/implementations/worksheet_impl.hpp</label>
+        <link refid="worksheet__impl_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>xlnt/worksheet/pane.hpp</label>
+        <link refid="pane_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>xlnt/worksheet/sheet_format_properties.hpp</label>
+        <link refid="sheet__format__properties_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>xlnt/worksheet/selection.hpp</label>
+        <link refid="selection_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>xlnt/packaging/uri.hpp</label>
+        <link refid="uri_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>xlnt/cell/cell.hpp</label>
+        <link refid="cell_8hpp"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>xlnt/utils/datetime.hpp</label>
+        <link refid="datetime_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>detail/implementations/style_impl.hpp</label>
+        <link refid="style__impl_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>tuple</label>
+      </node>
+      <node id="67">
+        <label>xlnt/utils/scoped_enum_hash.hpp</label>
+        <link refid="scoped__enum__hash_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="9">
+        <label>xlnt/styles/conditional_format.hpp</label>
+        <link refid="conditional__format_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>xlnt/worksheet/page_setup.hpp</label>
+        <link refid="page__setup_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>utility</label>
+      </node>
+      <node id="32">
+        <label>array</label>
+      </node>
+      <node id="21">
+        <label>sstream</label>
+      </node>
+      <node id="76">
+        <label>xlnt/worksheet/sheet_pr.hpp</label>
+        <link refid="sheet__pr_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>xlnt/styles/style.hpp</label>
+        <link refid="style_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>xlnt/styles/font.hpp</label>
+        <link refid="font_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>xlnt/utils/variant.hpp</label>
+        <link refid="variant_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/implementations/workbook_impl.hpp</label>
+        <link refid="workbook__impl_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>xlnt/workbook/theme.hpp</label>
+        <link refid="theme_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>xlnt/worksheet/row_properties.hpp</label>
+        <link refid="row__properties_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>cstddef</label>
+      </node>
+      <node id="82">
+        <label>xlnt/utils/calendar.hpp</label>
+        <link refid="calendar_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>xlnt/cell/rich_text_run.hpp</label>
+        <link refid="rich__text__run_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>unordered_map</label>
+      </node>
+      <node id="63">
+        <label>xlnt/packaging/ext_list.hpp</label>
+        <link refid="ext__list_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>xlnt/styles/protection.hpp</label>
+        <link refid="protection_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>detail/implementations/format_impl.hpp</label>
+        <link refid="format__impl_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>xlnt/styles/fill.hpp</label>
+        <link refid="fill_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>xlnt/worksheet/range_reference.hpp</label>
+        <link refid="range__reference_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>xlnt/worksheet/print_options.hpp</label>
+        <link refid="print__options_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>xlnt/workbook/workbook_view.hpp</label>
+        <link refid="workbook__view_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>xlnt/styles/number_format.hpp</label>
+        <link refid="number__format_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>detail/implementations/cell_impl.hpp</label>
+        <link refid="cell__impl_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>xlnt/styles/alignment.hpp</label>
+        <link refid="alignment_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="84">
+        <label>xlnt/workbook/calculation_properties.hpp</label>
+        <link refid="calculation__properties_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>xlnt/workbook/worksheet_iterator.hpp</label>
+        <link refid="worksheet__iterator_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>xlnt/cell/cell_reference.hpp</label>
+        <link refid="cell__reference_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>xlnt/worksheet/sheet_view.hpp</label>
+        <link refid="sheet__view_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>xlnt/styles/format.hpp</label>
+        <link refid="format_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>type_traits</label>
+      </node>
+      <node id="53">
+        <label>xlnt/packaging/relationship.hpp</label>
+        <link refid="relationship_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>algorithm</label>
+      </node>
+      <node id="80">
+        <label>xlnt/packaging/manifest.hpp</label>
+        <link refid="manifest_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>xlnt/utils/path.hpp</label>
+        <link refid="path_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>memory</label>
+      </node>
+      <node id="78">
+        <label>xlnt/cell/comment.hpp</label>
+        <link refid="comment_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>xlnt/worksheet/cell_iterator.hpp</label>
+        <link refid="cell__iterator_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_consumer.cpp</label>
+        <link refid="xlsx__consumer_8cpp"/>
+      </node>
+      <node id="5">
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/workbook/workbook.cpp</label>
+        <link refid="workbook_8cpp"/>
+      </node>
+      <node id="4">
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/workbook/streaming_workbook_reader.cpp</label>
+        <link refid="streaming__workbook__reader_8cpp"/>
+      </node>
+      <node id="6">
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/worksheet.cpp</label>
+        <link refid="worksheet_8cpp"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/implementations/workbook_impl.hpp</label>
+        <link refid="workbook__impl_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/serialization/xlsx_producer.cpp</label>
+        <link refid="xlsx__producer_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structxlnt_1_1detail_1_1workbook__impl" prot="public">xlnt::detail::workbook_impl</innerclass>
+    <innerclass refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t" prot="public">xlnt::detail::workbook_impl::file_version_t</innerclass>
+    <innernamespace refid="namespacexlnt">xlnt</innernamespace>
+    <innernamespace refid="namespacexlnt_1_1detail">xlnt::detail</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2014-2020<sp/>Thomas<sp/>Fussell</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>WRISING<sp/>FROM,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>THE<sp/>SOFTWARE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>@license:<sp/>http://www.opensource.org/licenses/mit-license.php</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>@author:<sp/>see<sp/>AUTHORS<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="stylesheet_8hpp" kindref="compound">detail/implementations/stylesheet.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="worksheet__impl_8hpp" kindref="compound">detail/implementations/worksheet_impl.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="ext__list_8hpp" kindref="compound">xlnt/packaging/ext_list.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="manifest_8hpp" kindref="compound">xlnt/packaging/manifest.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="datetime_8hpp" kindref="compound">xlnt/utils/datetime.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="variant_8hpp" kindref="compound">xlnt/utils/variant.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="calculation__properties_8hpp" kindref="compound">xlnt/workbook/calculation_properties.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="theme_8hpp" kindref="compound">xlnt/workbook/theme.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="workbook__view_8hpp" kindref="compound">xlnt/workbook/workbook_view.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="range_8hpp" kindref="compound">xlnt/worksheet/range.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="range__reference_8hpp" kindref="compound">xlnt/worksheet/range_reference.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="sheet__view_8hpp" kindref="compound">xlnt/worksheet/sheet_view.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacexlnt" kindref="compound">xlnt</ref><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">detail<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">worksheet_impl;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="structxlnt_1_1detail_1_1workbook__impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structxlnt_1_1detail_1_1workbook__impl" kindref="compound">workbook_impl</ref></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50" refid="structxlnt_1_1detail_1_1workbook__impl_1ad688fd6af11fc3796c6ce676297b5090" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1ad688fd6af11fc3796c6ce676297b5090" kindref="member">workbook_impl</ref>()<sp/>:<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a3fcf93ea1645e8795fab3b79346f1461" kindref="member">base_date_</ref>(calendar::<ref refid="calendar_8hpp_1a5e91a515809edf918c00120d02960593" kindref="member">windows_1900</ref>)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="structxlnt_1_1detail_1_1workbook__impl_1a866de5c803fd81ff9492ed13df743775" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a866de5c803fd81ff9492ed13df743775" kindref="member">workbook_impl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl" kindref="compound">workbook_impl</ref><sp/>&amp;other)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a8c0af42f5488cafccd82172c9ede87c7" kindref="member">active_sheet_index_</ref>(other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a8c0af42f5488cafccd82172c9ede87c7" kindref="member">active_sheet_index_</ref>),</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1aa68ce91ca9dd2574859ffaa6adb19515" kindref="member">worksheets_</ref>(other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1aa68ce91ca9dd2574859ffaa6adb19515" kindref="member">worksheets_</ref>),</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a1748271ff53b08be3276fe0b3cb1317b" kindref="member">shared_strings_ids_</ref>(other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a1748271ff53b08be3276fe0b3cb1317b" kindref="member">shared_strings_ids_</ref>),</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a05daea62e8901c50d4a99ae530d5e34a" kindref="member">shared_strings_values_</ref>(other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a05daea62e8901c50d4a99ae530d5e34a" kindref="member">shared_strings_values_</ref>),</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a106b372eb1137742b6eb1072d38b097e" kindref="member">stylesheet_</ref>(other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a106b372eb1137742b6eb1072d38b097e" kindref="member">stylesheet_</ref>),</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1ac9fbc46a6ac746fde9e5946492d138f8" kindref="member">manifest_</ref>(other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1ac9fbc46a6ac746fde9e5946492d138f8" kindref="member">manifest_</ref>),</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1ae99ef4f6f527f0abc1ef7d3fe6c66084" kindref="member">theme_</ref>(other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1ae99ef4f6f527f0abc1ef7d3fe6c66084" kindref="member">theme_</ref>),</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a6ea4df1703abd5f03f4d2cd90eef616b" kindref="member">core_properties_</ref>(other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a6ea4df1703abd5f03f4d2cd90eef616b" kindref="member">core_properties_</ref>),</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a5ae1343736849ecc9372abee5377b418" kindref="member">extended_properties_</ref>(other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a5ae1343736849ecc9372abee5377b418" kindref="member">extended_properties_</ref>),</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1ac70335a722d0427b9dac3052878683df" kindref="member">custom_properties_</ref>(other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1ac70335a722d0427b9dac3052878683df" kindref="member">custom_properties_</ref>),</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a6ee4f8f5342e4d116e88235e858d24e2" kindref="member">view_</ref>(other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a6ee4f8f5342e4d116e88235e858d24e2" kindref="member">view_</ref>),</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a4ad9546432581deffdb9c15434baf8b6" kindref="member">code_name_</ref>(other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a4ad9546432581deffdb9c15434baf8b6" kindref="member">code_name_</ref>),</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a128900dbebee93c9f495e47794a933a3" kindref="member">file_version_</ref>(other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a128900dbebee93c9f495e47794a933a3" kindref="member">file_version_</ref>)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="structxlnt_1_1detail_1_1workbook__impl_1a1cbcd8d03b73b9450729d8d1a126e4f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl" kindref="compound">workbook_impl</ref><sp/>&amp;<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a1cbcd8d03b73b9450729d8d1a126e4f4" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl" kindref="compound">workbook_impl</ref><sp/>&amp;other)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a8c0af42f5488cafccd82172c9ede87c7" kindref="member">active_sheet_index_</ref><sp/>=<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a8c0af42f5488cafccd82172c9ede87c7" kindref="member">active_sheet_index_</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1aa68ce91ca9dd2574859ffaa6adb19515" kindref="member">worksheets_</ref>.clear();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::copy(other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1aa68ce91ca9dd2574859ffaa6adb19515" kindref="member">worksheets_</ref>.begin(),<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1aa68ce91ca9dd2574859ffaa6adb19515" kindref="member">worksheets_</ref>.end(),<sp/>back_inserter(<ref refid="structxlnt_1_1detail_1_1workbook__impl_1aa68ce91ca9dd2574859ffaa6adb19515" kindref="member">worksheets_</ref>));</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a1748271ff53b08be3276fe0b3cb1317b" kindref="member">shared_strings_ids_</ref><sp/>=<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a1748271ff53b08be3276fe0b3cb1317b" kindref="member">shared_strings_ids_</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a05daea62e8901c50d4a99ae530d5e34a" kindref="member">shared_strings_values_</ref><sp/>=<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a05daea62e8901c50d4a99ae530d5e34a" kindref="member">shared_strings_values_</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1ae99ef4f6f527f0abc1ef7d3fe6c66084" kindref="member">theme_</ref><sp/>=<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1ae99ef4f6f527f0abc1ef7d3fe6c66084" kindref="member">theme_</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1ac9fbc46a6ac746fde9e5946492d138f8" kindref="member">manifest_</ref><sp/>=<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1ac9fbc46a6ac746fde9e5946492d138f8" kindref="member">manifest_</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a405956eb0b8e5156f75d391ac838e629" kindref="member">sheet_title_rel_id_map_</ref><sp/>=<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a405956eb0b8e5156f75d391ac838e629" kindref="member">sheet_title_rel_id_map_</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a6ee4f8f5342e4d116e88235e858d24e2" kindref="member">view_</ref><sp/>=<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a6ee4f8f5342e4d116e88235e858d24e2" kindref="member">view_</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a4ad9546432581deffdb9c15434baf8b6" kindref="member">code_name_</ref><sp/>=<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a4ad9546432581deffdb9c15434baf8b6" kindref="member">code_name_</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a128900dbebee93c9f495e47794a933a3" kindref="member">file_version_</ref><sp/>=<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a128900dbebee93c9f495e47794a933a3" kindref="member">file_version_</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a6ea4df1703abd5f03f4d2cd90eef616b" kindref="member">core_properties_</ref><sp/>=<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a6ea4df1703abd5f03f4d2cd90eef616b" kindref="member">core_properties_</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a5ae1343736849ecc9372abee5377b418" kindref="member">extended_properties_</ref><sp/>=<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a5ae1343736849ecc9372abee5377b418" kindref="member">extended_properties_</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1ac70335a722d0427b9dac3052878683df" kindref="member">custom_properties_</ref><sp/>=<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1ac70335a722d0427b9dac3052878683df" kindref="member">custom_properties_</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="structxlnt_1_1detail_1_1workbook__impl_1a1a4c6c745e784218b6906e267d7c9b80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a1a4c6c745e784218b6906e267d7c9b80" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl" kindref="compound">workbook_impl</ref><sp/>&amp;other)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a8c0af42f5488cafccd82172c9ede87c7" kindref="member">active_sheet_index_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a8c0af42f5488cafccd82172c9ede87c7" kindref="member">active_sheet_index_</ref></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1aa68ce91ca9dd2574859ffaa6adb19515" kindref="member">worksheets_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1aa68ce91ca9dd2574859ffaa6adb19515" kindref="member">worksheets_</ref></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a1748271ff53b08be3276fe0b3cb1317b" kindref="member">shared_strings_ids_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a1748271ff53b08be3276fe0b3cb1317b" kindref="member">shared_strings_ids_</ref></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a106b372eb1137742b6eb1072d38b097e" kindref="member">stylesheet_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a106b372eb1137742b6eb1072d38b097e" kindref="member">stylesheet_</ref></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a3fcf93ea1645e8795fab3b79346f1461" kindref="member">base_date_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a3fcf93ea1645e8795fab3b79346f1461" kindref="member">base_date_</ref></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1ad22381770dc586e405686d483169fa7e" kindref="member">title_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1ad22381770dc586e405686d483169fa7e" kindref="member">title_</ref></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1ac9fbc46a6ac746fde9e5946492d138f8" kindref="member">manifest_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1ac9fbc46a6ac746fde9e5946492d138f8" kindref="member">manifest_</ref></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1ae99ef4f6f527f0abc1ef7d3fe6c66084" kindref="member">theme_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1ae99ef4f6f527f0abc1ef7d3fe6c66084" kindref="member">theme_</ref></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1accff3bee370c1b60538c97e814a7eb58" kindref="member">images_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1accff3bee370c1b60538c97e814a7eb58" kindref="member">images_</ref></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a6ea4df1703abd5f03f4d2cd90eef616b" kindref="member">core_properties_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a6ea4df1703abd5f03f4d2cd90eef616b" kindref="member">core_properties_</ref></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a5ae1343736849ecc9372abee5377b418" kindref="member">extended_properties_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a5ae1343736849ecc9372abee5377b418" kindref="member">extended_properties_</ref></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1ac70335a722d0427b9dac3052878683df" kindref="member">custom_properties_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1ac70335a722d0427b9dac3052878683df" kindref="member">custom_properties_</ref></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a405956eb0b8e5156f75d391ac838e629" kindref="member">sheet_title_rel_id_map_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a405956eb0b8e5156f75d391ac838e629" kindref="member">sheet_title_rel_id_map_</ref></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a6ee4f8f5342e4d116e88235e858d24e2" kindref="member">view_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a6ee4f8f5342e4d116e88235e858d24e2" kindref="member">view_</ref></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a4ad9546432581deffdb9c15434baf8b6" kindref="member">code_name_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a4ad9546432581deffdb9c15434baf8b6" kindref="member">code_name_</ref></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a128900dbebee93c9f495e47794a933a3" kindref="member">file_version_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a128900dbebee93c9f495e47794a933a3" kindref="member">file_version_</ref></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1adfef25988990a0d6ea96912929a2abca" kindref="member">calculation_properties_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1adfef25988990a0d6ea96912929a2abca" kindref="member">calculation_properties_</ref></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a063920b55e237b3a6d16704ddaefb4ea" kindref="member">abs_path_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a063920b55e237b3a6d16704ddaefb4ea" kindref="member">abs_path_</ref></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a1a121d07f691b14298a690593056665c" kindref="member">arch_id_flags_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1a1a121d07f691b14298a690593056665c" kindref="member">arch_id_flags_</ref></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1ae465dd2932bcd0d0c9d7f9b3b9ee545e" kindref="member">extensions_</ref><sp/>==<sp/>other.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1ae465dd2932bcd0d0c9d7f9b3b9ee545e" kindref="member">extensions_</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="structxlnt_1_1detail_1_1workbook__impl_1a8c0af42f5488cafccd82172c9ede87c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classxlnt_1_1optional" kindref="compound">optional&lt;std::size_t&gt;</ref><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a8c0af42f5488cafccd82172c9ede87c7" kindref="member">active_sheet_index_</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="structxlnt_1_1detail_1_1workbook__impl_1aa68ce91ca9dd2574859ffaa6adb19515" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::list&lt;worksheet_impl&gt;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1aa68ce91ca9dd2574859ffaa6adb19515" kindref="member">worksheets_</ref>;</highlight></codeline>
+<codeline lineno="120" refid="structxlnt_1_1detail_1_1workbook__impl_1a1748271ff53b08be3276fe0b3cb1317b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unordered_map&lt;rich_text,<sp/>std::size_t,<sp/>rich_text_hash&gt;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a1748271ff53b08be3276fe0b3cb1317b" kindref="member">shared_strings_ids_</ref>;</highlight></codeline>
+<codeline lineno="121" refid="structxlnt_1_1detail_1_1workbook__impl_1a05daea62e8901c50d4a99ae530d5e34a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::size_t,<sp/>rich_text&gt;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a05daea62e8901c50d4a99ae530d5e34a" kindref="member">shared_strings_values_</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="structxlnt_1_1detail_1_1workbook__impl_1a106b372eb1137742b6eb1072d38b097e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classxlnt_1_1optional" kindref="compound">optional&lt;stylesheet&gt;</ref><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a106b372eb1137742b6eb1072d38b097e" kindref="member">stylesheet_</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="structxlnt_1_1detail_1_1workbook__impl_1a3fcf93ea1645e8795fab3b79346f1461" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>calendar<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a3fcf93ea1645e8795fab3b79346f1461" kindref="member">base_date_</ref>;</highlight></codeline>
+<codeline lineno="126" refid="structxlnt_1_1detail_1_1workbook__impl_1ad22381770dc586e405686d483169fa7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classxlnt_1_1optional" kindref="compound">optional&lt;std::string&gt;</ref><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1ad22381770dc586e405686d483169fa7e" kindref="member">title_</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="structxlnt_1_1detail_1_1workbook__impl_1ac9fbc46a6ac746fde9e5946492d138f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classxlnt_1_1manifest" kindref="compound">manifest</ref><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1ac9fbc46a6ac746fde9e5946492d138f8" kindref="member">manifest_</ref>;</highlight></codeline>
+<codeline lineno="129" refid="structxlnt_1_1detail_1_1workbook__impl_1ae99ef4f6f527f0abc1ef7d3fe6c66084" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classxlnt_1_1optional" kindref="compound">optional&lt;theme&gt;</ref><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1ae99ef4f6f527f0abc1ef7d3fe6c66084" kindref="member">theme_</ref>;</highlight></codeline>
+<codeline lineno="130" refid="structxlnt_1_1detail_1_1workbook__impl_1accff3bee370c1b60538c97e814a7eb58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unordered_map&lt;std::string,<sp/>std::vector&lt;std::uint8_t&gt;&gt;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1accff3bee370c1b60538c97e814a7eb58" kindref="member">images_</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="structxlnt_1_1detail_1_1workbook__impl_1a6ea4df1703abd5f03f4d2cd90eef616b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::pair&lt;xlnt::core_property,<sp/>variant&gt;&gt;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a6ea4df1703abd5f03f4d2cd90eef616b" kindref="member">core_properties_</ref>;</highlight></codeline>
+<codeline lineno="133" refid="structxlnt_1_1detail_1_1workbook__impl_1a5ae1343736849ecc9372abee5377b418" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::pair&lt;xlnt::extended_property,<sp/>variant&gt;&gt;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a5ae1343736849ecc9372abee5377b418" kindref="member">extended_properties_</ref>;</highlight></codeline>
+<codeline lineno="134" refid="structxlnt_1_1detail_1_1workbook__impl_1ac70335a722d0427b9dac3052878683df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::pair&lt;std::string,<sp/>variant&gt;&gt;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1ac70335a722d0427b9dac3052878683df" kindref="member">custom_properties_</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="structxlnt_1_1detail_1_1workbook__impl_1a405956eb0b8e5156f75d391ac838e629" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unordered_map&lt;std::string,<sp/>std::string&gt;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a405956eb0b8e5156f75d391ac838e629" kindref="member">sheet_title_rel_id_map_</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="structxlnt_1_1detail_1_1workbook__impl_1a6ee4f8f5342e4d116e88235e858d24e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classxlnt_1_1optional" kindref="compound">optional&lt;workbook_view&gt;</ref><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a6ee4f8f5342e4d116e88235e858d24e2" kindref="member">view_</ref>;</highlight></codeline>
+<codeline lineno="139" refid="structxlnt_1_1detail_1_1workbook__impl_1a4ad9546432581deffdb9c15434baf8b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classxlnt_1_1optional" kindref="compound">optional&lt;std::string&gt;</ref><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a4ad9546432581deffdb9c15434baf8b6" kindref="member">code_name_</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t" kindref="compound">file_version_t</ref></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143" refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1a4d9b2207a2fafad7a4c7b39d08020cec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1a4d9b2207a2fafad7a4c7b39d08020cec" kindref="member">app_name</ref>;</highlight></codeline>
+<codeline lineno="144" refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1acf7a7155ec47f08cb0e69de7bc01fea9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1a74292751b6fc8fe14d7c6772ae2fd0fc" kindref="member">std::size_t</ref><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1acf7a7155ec47f08cb0e69de7bc01fea9" kindref="member">last_edited</ref>;</highlight></codeline>
+<codeline lineno="145" refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1a828c26a6eddc005e19b4f4581e829286" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1a74292751b6fc8fe14d7c6772ae2fd0fc" kindref="member">std::size_t</ref><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1a828c26a6eddc005e19b4f4581e829286" kindref="member">lowest_edited</ref>;</highlight></codeline>
+<codeline lineno="146" refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1a2a7280b66f43f39c1d9809e0f4d7e5c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1a74292751b6fc8fe14d7c6772ae2fd0fc" kindref="member">std::size_t</ref><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1a2a7280b66f43f39c1d9809e0f4d7e5c0" kindref="member">rup_build</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1a646b1e4c7fb94cab463f288ee806fe76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1a646b1e4c7fb94cab463f288ee806fe76" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t" kindref="compound">file_version_t</ref>&amp;<sp/>rhs)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="149"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1a4d9b2207a2fafad7a4c7b39d08020cec" kindref="member">app_name</ref><sp/>==<sp/>rhs.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1a4d9b2207a2fafad7a4c7b39d08020cec" kindref="member">app_name</ref></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1acf7a7155ec47f08cb0e69de7bc01fea9" kindref="member">last_edited</ref><sp/>==<sp/>rhs.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1acf7a7155ec47f08cb0e69de7bc01fea9" kindref="member">last_edited</ref></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1a828c26a6eddc005e19b4f4581e829286" kindref="member">lowest_edited</ref><sp/>==<sp/>rhs.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1a828c26a6eddc005e19b4f4581e829286" kindref="member">lowest_edited</ref></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1a2a7280b66f43f39c1d9809e0f4d7e5c0" kindref="member">rup_build</ref><sp/>==<sp/>rhs.<ref refid="structxlnt_1_1detail_1_1workbook__impl_1_1file__version__t_1a2a7280b66f43f39c1d9809e0f4d7e5c0" kindref="member">rup_build</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="structxlnt_1_1detail_1_1workbook__impl_1a128900dbebee93c9f495e47794a933a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classxlnt_1_1optional" kindref="compound">optional&lt;file_version_t&gt;</ref><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a128900dbebee93c9f495e47794a933a3" kindref="member">file_version_</ref>;</highlight></codeline>
+<codeline lineno="158" refid="structxlnt_1_1detail_1_1workbook__impl_1adfef25988990a0d6ea96912929a2abca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classxlnt_1_1optional" kindref="compound">optional&lt;calculation_properties&gt;</ref><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1adfef25988990a0d6ea96912929a2abca" kindref="member">calculation_properties_</ref>;</highlight></codeline>
+<codeline lineno="159" refid="structxlnt_1_1detail_1_1workbook__impl_1a063920b55e237b3a6d16704ddaefb4ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classxlnt_1_1optional" kindref="compound">optional&lt;std::string&gt;</ref><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a063920b55e237b3a6d16704ddaefb4ea" kindref="member">abs_path_</ref>;</highlight></codeline>
+<codeline lineno="160" refid="structxlnt_1_1detail_1_1workbook__impl_1a1a121d07f691b14298a690593056665c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classxlnt_1_1optional" kindref="compound">optional&lt;std::size_t&gt;</ref><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1a1a121d07f691b14298a690593056665c" kindref="member">arch_id_flags_</ref>;</highlight></codeline>
+<codeline lineno="161" refid="structxlnt_1_1detail_1_1workbook__impl_1ae465dd2932bcd0d0c9d7f9b3b9ee545e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classxlnt_1_1optional" kindref="compound">optional&lt;ext_list&gt;</ref><sp/><ref refid="structxlnt_1_1detail_1_1workbook__impl_1ae465dd2932bcd0d0c9d7f9b3b9ee545e" kindref="member">extensions_</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>detail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>xlnt</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/detail/implementations/workbook_impl.hpp"/>
+  </compounddef>
+</doxygen>

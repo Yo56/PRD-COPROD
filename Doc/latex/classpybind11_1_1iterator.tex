@@ -1,0 +1,104 @@
+\hypertarget{classpybind11_1_1iterator}{}\doxysection{pybind11\+::iterator Class Reference}
+\label{classpybind11_1_1iterator}\index{pybind11::iterator@{pybind11::iterator}}
+
+
+{\ttfamily \#include $<$pytypes.\+h$>$}
+
+Inheritance diagram for pybind11\+::iterator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classpybind11_1_1iterator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classpybind11_1_1iterator_a6a4be18d68a1049272e688e31e1810e7}{iterator\+\_\+category}} = std\+::input\+\_\+iterator\+\_\+tag
+\item 
+using \mbox{\hyperlink{classpybind11_1_1iterator_aadc3b2d35874175edbf21313423cf378}{difference\+\_\+type}} = \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}
+\item 
+using \mbox{\hyperlink{classpybind11_1_1iterator_a24a7a60b9970835066a25a957abc17a1}{value\+\_\+type}} = \mbox{\hyperlink{classpybind11_1_1handle}{handle}}
+\item 
+using \mbox{\hyperlink{classpybind11_1_1iterator_af57442e13a1871542ef0db9b64ea1220}{reference}} = const \mbox{\hyperlink{classpybind11_1_1handle}{handle}}
+\item 
+using \mbox{\hyperlink{classpybind11_1_1iterator_a91c1b2259f1293462825af2cbbe7927d}{pointer}} = const \mbox{\hyperlink{classpybind11_1_1handle}{handle}} $\ast$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpybind11_1_1iterator_a9dd9f1c15ed36d39e2f39e067941564f}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((deprecated(\char`\"{}Use \mbox{\hyperlink{classpybind11_1_1object_ac1ea1a4cbcf197d7c8096037633720d7}{reinterpret\+\_\+borrow}}$<$\char`\"{}\char`\"{}\mbox{\hyperlink{classpybind11_1_1iterator}{iterator}}\char`\"{}\char`\"{}$>$() or \mbox{\hyperlink{classpybind11_1_1object_ae1de2ab5a755c10582ac1e46071de5c5}{reinterpret\+\_\+steal}}$<$\char`\"{}\char`\"{}\mbox{\hyperlink{classpybind11_1_1iterator}{iterator}}\char`\"{}\char`\"{}$>$()\char`\"{}))) iterator(\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1iterator_a39fb63fc7a0e53621b4fada0efcb0e43}{is\+\_\+borrowed}}\+: \mbox{\hyperlink{classpybind11_1_1object}{object}} (is\+\_\+borrowed ? \mbox{\hyperlink{classpybind11_1_1object}{object}} (h
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1iterator_a5874a9d42f14f9771a305c6ee7416b74}{borrowed\+\_\+t}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\textbackslash{}rst Wraps a Python iterator so that it can also be used as a C++ input iterator
+
+Caveat\+: copying an iterator does not (and cannot) clone the internal state of the Python iterable. This also applies to the post-\/increment operator. This iterator should only be used to retrieve the current value using {\ttfamily \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api_a5babe5939b794c3408711be7fde14ee0}{operator$\ast$()}}}. \textbackslash{}endrst 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classpybind11_1_1iterator_aadc3b2d35874175edbf21313423cf378}\label{classpybind11_1_1iterator_aadc3b2d35874175edbf21313423cf378}} 
+\index{pybind11::iterator@{pybind11::iterator}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!pybind11::iterator@{pybind11::iterator}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1iterator_aadc3b2d35874175edbf21313423cf378}{pybind11\+::iterator\+::difference\+\_\+type}} =  \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}
+
+\mbox{\Hypertarget{classpybind11_1_1iterator_a6a4be18d68a1049272e688e31e1810e7}\label{classpybind11_1_1iterator_a6a4be18d68a1049272e688e31e1810e7}} 
+\index{pybind11::iterator@{pybind11::iterator}!iterator\_category@{iterator\_category}}
+\index{iterator\_category@{iterator\_category}!pybind11::iterator@{pybind11::iterator}}
+\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1iterator_a6a4be18d68a1049272e688e31e1810e7}{pybind11\+::iterator\+::iterator\+\_\+category}} =  std\+::input\+\_\+iterator\+\_\+tag}
+
+\mbox{\Hypertarget{classpybind11_1_1iterator_a91c1b2259f1293462825af2cbbe7927d}\label{classpybind11_1_1iterator_a91c1b2259f1293462825af2cbbe7927d}} 
+\index{pybind11::iterator@{pybind11::iterator}!pointer@{pointer}}
+\index{pointer@{pointer}!pybind11::iterator@{pybind11::iterator}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1iterator_a91c1b2259f1293462825af2cbbe7927d}{pybind11\+::iterator\+::pointer}} =  const \mbox{\hyperlink{classpybind11_1_1handle}{handle}} $\ast$}
+
+\mbox{\Hypertarget{classpybind11_1_1iterator_af57442e13a1871542ef0db9b64ea1220}\label{classpybind11_1_1iterator_af57442e13a1871542ef0db9b64ea1220}} 
+\index{pybind11::iterator@{pybind11::iterator}!reference@{reference}}
+\index{reference@{reference}!pybind11::iterator@{pybind11::iterator}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1iterator_af57442e13a1871542ef0db9b64ea1220}{pybind11\+::iterator\+::reference}} =  const \mbox{\hyperlink{classpybind11_1_1handle}{handle}}}
+
+\mbox{\Hypertarget{classpybind11_1_1iterator_a24a7a60b9970835066a25a957abc17a1}\label{classpybind11_1_1iterator_a24a7a60b9970835066a25a957abc17a1}} 
+\index{pybind11::iterator@{pybind11::iterator}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!pybind11::iterator@{pybind11::iterator}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1iterator_a24a7a60b9970835066a25a957abc17a1}{pybind11\+::iterator\+::value\+\_\+type}} =  \mbox{\hyperlink{classpybind11_1_1handle}{handle}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1iterator_a9dd9f1c15ed36d39e2f39e067941564f}\label{classpybind11_1_1iterator_a9dd9f1c15ed36d39e2f39e067941564f}} 
+\index{pybind11::iterator@{pybind11::iterator}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!pybind11::iterator@{pybind11::iterator}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily pybind11\+::iterator\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(deprecated(\char`\"{}Use \mbox{\hyperlink{classpybind11_1_1object_ac1ea1a4cbcf197d7c8096037633720d7}{reinterpret\+\_\+borrow}}$<$\char`\"{}\char`\"{}\mbox{\hyperlink{classpybind11_1_1iterator}{iterator}}\char`\"{}\char`\"{}$>$() or \mbox{\hyperlink{classpybind11_1_1object_ae1de2ab5a755c10582ac1e46071de5c5}{reinterpret\+\_\+steal}}$<$\char`\"{}\char`\"{}\mbox{\hyperlink{classpybind11_1_1iterator}{iterator}}\char`\"{}\char`\"{}$>$()\char`\"{}))}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpybind11_1_1iterator_a5874a9d42f14f9771a305c6ee7416b74}\label{classpybind11_1_1iterator_a5874a9d42f14f9771a305c6ee7416b74}} 
+\index{pybind11::iterator@{pybind11::iterator}!borrowed\_t@{borrowed\_t}}
+\index{borrowed\_t@{borrowed\_t}!pybind11::iterator@{pybind11::iterator}}
+\doxysubsubsection{\texorpdfstring{borrowed\_t}{borrowed\_t}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{structpybind11_1_1object_1_1borrowed__t}{pybind11\+::iterator\+::borrowed\+\_\+t}}}
+
+\mbox{\Hypertarget{classpybind11_1_1iterator_a39fb63fc7a0e53621b4fada0efcb0e43}\label{classpybind11_1_1iterator_a39fb63fc7a0e53621b4fada0efcb0e43}} 
+\index{pybind11::iterator@{pybind11::iterator}!is\_borrowed@{is\_borrowed}}
+\index{is\_borrowed@{is\_borrowed}!pybind11::iterator@{pybind11::iterator}}
+\doxysubsubsection{\texorpdfstring{is\_borrowed}{is\_borrowed}}
+{\footnotesize\ttfamily bool pybind11\+::iterator\+::is\+\_\+borrowed}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{pytypes_8h}{pytypes.\+h}}\end{DoxyCompactItemize}

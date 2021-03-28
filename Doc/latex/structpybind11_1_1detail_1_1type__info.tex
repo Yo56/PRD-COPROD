@@ -1,0 +1,145 @@
+\hypertarget{structpybind11_1_1detail_1_1type__info}{}\doxysection{pybind11\+::detail\+::type\+\_\+info Struct Reference}
+\label{structpybind11_1_1detail_1_1type__info}\index{pybind11::detail::type\_info@{pybind11::detail::type\_info}}
+
+
+Additional type information which does not fit into the Py\+Type\+Object.  
+
+
+
+
+{\ttfamily \#include $<$cast.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Py\+Type\+Object $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info_a99cc6ada480e9088a9c9b1d1e5e98480}{type}}
+\item 
+const std\+::type\+\_\+info $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info_a0f1662694ef977531d38386c1cbb4423}{cpptype}}
+\item 
+\mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}} \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info_ad354deb6fbe6d09fd5f4f03691498c18}{type\+\_\+size}}
+\item 
+\mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}} \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info_a14b9bb2f87ba247377362d191cb841bc}{holder\+\_\+size\+\_\+in\+\_\+ptrs}}
+\item 
+void $\ast$($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info_a68b343d8b2a5643ee0a164cbae04fee7}{operator\+\_\+new}} )(\mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}})
+\item 
+void($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info_a45e773df98848981ad62ddf2e0f43d29}{init\+\_\+holder}} )(\mbox{\hyperlink{structpybind11_1_1detail_1_1instance}{instance}} $\ast$, const void $\ast$)
+\item 
+void($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info_ac2d391b653920f0b0506001042dffed2}{dealloc}} )(const \mbox{\hyperlink{structpybind11_1_1detail_1_1value__and__holder}{value\+\_\+and\+\_\+holder}} \&v\+\_\+h)
+\item 
+std\+::vector$<$ Py\+Object $\ast$($\ast$)(Py\+Object $\ast$, Py\+Type\+Object $\ast$)$>$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info_ad3d633639578683fa632798b1b10e7dc}{implicit\+\_\+conversions}}
+\item 
+std\+::vector$<$ std\+::pair$<$ const std\+::type\+\_\+info $\ast$, void $\ast$($\ast$)(void $\ast$)$>$ $>$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info_adb3468fb4277748bf2c6d38c2ea78564}{implicit\+\_\+casts}}
+\item 
+std\+::vector$<$ bool($\ast$)(Py\+Object $\ast$, void $\ast$\&)$>$ $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info_a2a80b7c9d9fb2689b4337cb358e02bcf}{direct\+\_\+conversions}}
+\item 
+\mbox{\hyperlink{structpybind11_1_1buffer__info}{buffer\+\_\+info}} $\ast$($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info_abdcdf07a7a705cd030d51c0a6630bd69}{get\+\_\+buffer}} )(Py\+Object $\ast$, void $\ast$) = nullptr
+\item 
+void $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info_a3fbbb3a3a5b8547ebfa5d44ea8362baa}{get\+\_\+buffer\+\_\+data}} = nullptr
+\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info_a71e89bf681bfd89635fb82502b515a5a}{simple\+\_\+type}}\+: 1
+\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info_ad4612f2c54e08f420e9112cfc899cfc1}{simple\+\_\+ancestors}}\+: 1
+\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1type__info_a0e7c470db1bd445ea92006573f5bb274}{default\+\_\+holder}}\+: 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Additional type information which does not fit into the Py\+Type\+Object. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__info_a0f1662694ef977531d38386c1cbb4423}\label{structpybind11_1_1detail_1_1type__info_a0f1662694ef977531d38386c1cbb4423}} 
+\index{pybind11::detail::type\_info@{pybind11::detail::type\_info}!cpptype@{cpptype}}
+\index{cpptype@{cpptype}!pybind11::detail::type\_info@{pybind11::detail::type\_info}}
+\doxysubsubsection{\texorpdfstring{cpptype}{cpptype}}
+{\footnotesize\ttfamily const std\+::type\+\_\+info$\ast$ pybind11\+::detail\+::type\+\_\+info\+::cpptype}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__info_ac2d391b653920f0b0506001042dffed2}\label{structpybind11_1_1detail_1_1type__info_ac2d391b653920f0b0506001042dffed2}} 
+\index{pybind11::detail::type\_info@{pybind11::detail::type\_info}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!pybind11::detail::type\_info@{pybind11::detail::type\_info}}
+\doxysubsubsection{\texorpdfstring{dealloc}{dealloc}}
+{\footnotesize\ttfamily void($\ast$ pybind11\+::detail\+::type\+\_\+info\+::dealloc) (const \mbox{\hyperlink{structpybind11_1_1detail_1_1value__and__holder}{value\+\_\+and\+\_\+holder}} \&v\+\_\+h)}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__info_a0e7c470db1bd445ea92006573f5bb274}\label{structpybind11_1_1detail_1_1type__info_a0e7c470db1bd445ea92006573f5bb274}} 
+\index{pybind11::detail::type\_info@{pybind11::detail::type\_info}!default\_holder@{default\_holder}}
+\index{default\_holder@{default\_holder}!pybind11::detail::type\_info@{pybind11::detail::type\_info}}
+\doxysubsubsection{\texorpdfstring{default\_holder}{default\_holder}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::type\+\_\+info\+::default\+\_\+holder}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__info_a2a80b7c9d9fb2689b4337cb358e02bcf}\label{structpybind11_1_1detail_1_1type__info_a2a80b7c9d9fb2689b4337cb358e02bcf}} 
+\index{pybind11::detail::type\_info@{pybind11::detail::type\_info}!direct\_conversions@{direct\_conversions}}
+\index{direct\_conversions@{direct\_conversions}!pybind11::detail::type\_info@{pybind11::detail::type\_info}}
+\doxysubsubsection{\texorpdfstring{direct\_conversions}{direct\_conversions}}
+{\footnotesize\ttfamily std\+::vector$<$bool ($\ast$)(Py\+Object $\ast$, void $\ast$\&)$>$$\ast$ pybind11\+::detail\+::type\+\_\+info\+::direct\+\_\+conversions}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__info_abdcdf07a7a705cd030d51c0a6630bd69}\label{structpybind11_1_1detail_1_1type__info_abdcdf07a7a705cd030d51c0a6630bd69}} 
+\index{pybind11::detail::type\_info@{pybind11::detail::type\_info}!get\_buffer@{get\_buffer}}
+\index{get\_buffer@{get\_buffer}!pybind11::detail::type\_info@{pybind11::detail::type\_info}}
+\doxysubsubsection{\texorpdfstring{get\_buffer}{get\_buffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpybind11_1_1buffer__info}{buffer\+\_\+info}}$\ast$($\ast$ pybind11\+::detail\+::type\+\_\+info\+::get\+\_\+buffer) (Py\+Object $\ast$, void $\ast$) = nullptr}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__info_a3fbbb3a3a5b8547ebfa5d44ea8362baa}\label{structpybind11_1_1detail_1_1type__info_a3fbbb3a3a5b8547ebfa5d44ea8362baa}} 
+\index{pybind11::detail::type\_info@{pybind11::detail::type\_info}!get\_buffer\_data@{get\_buffer\_data}}
+\index{get\_buffer\_data@{get\_buffer\_data}!pybind11::detail::type\_info@{pybind11::detail::type\_info}}
+\doxysubsubsection{\texorpdfstring{get\_buffer\_data}{get\_buffer\_data}}
+{\footnotesize\ttfamily void$\ast$ pybind11\+::detail\+::type\+\_\+info\+::get\+\_\+buffer\+\_\+data = nullptr}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__info_a14b9bb2f87ba247377362d191cb841bc}\label{structpybind11_1_1detail_1_1type__info_a14b9bb2f87ba247377362d191cb841bc}} 
+\index{pybind11::detail::type\_info@{pybind11::detail::type\_info}!holder\_size\_in\_ptrs@{holder\_size\_in\_ptrs}}
+\index{holder\_size\_in\_ptrs@{holder\_size\_in\_ptrs}!pybind11::detail::type\_info@{pybind11::detail::type\_info}}
+\doxysubsubsection{\texorpdfstring{holder\_size\_in\_ptrs}{holder\_size\_in\_ptrs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}} pybind11\+::detail\+::type\+\_\+info\+::holder\+\_\+size\+\_\+in\+\_\+ptrs}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__info_adb3468fb4277748bf2c6d38c2ea78564}\label{structpybind11_1_1detail_1_1type__info_adb3468fb4277748bf2c6d38c2ea78564}} 
+\index{pybind11::detail::type\_info@{pybind11::detail::type\_info}!implicit\_casts@{implicit\_casts}}
+\index{implicit\_casts@{implicit\_casts}!pybind11::detail::type\_info@{pybind11::detail::type\_info}}
+\doxysubsubsection{\texorpdfstring{implicit\_casts}{implicit\_casts}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$const std\+::type\+\_\+info $\ast$, void $\ast$($\ast$)(void $\ast$)$>$ $>$ pybind11\+::detail\+::type\+\_\+info\+::implicit\+\_\+casts}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__info_ad3d633639578683fa632798b1b10e7dc}\label{structpybind11_1_1detail_1_1type__info_ad3d633639578683fa632798b1b10e7dc}} 
+\index{pybind11::detail::type\_info@{pybind11::detail::type\_info}!implicit\_conversions@{implicit\_conversions}}
+\index{implicit\_conversions@{implicit\_conversions}!pybind11::detail::type\_info@{pybind11::detail::type\_info}}
+\doxysubsubsection{\texorpdfstring{implicit\_conversions}{implicit\_conversions}}
+{\footnotesize\ttfamily std\+::vector$<$Py\+Object $\ast$($\ast$)(Py\+Object $\ast$, Py\+Type\+Object $\ast$)$>$ pybind11\+::detail\+::type\+\_\+info\+::implicit\+\_\+conversions}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__info_a45e773df98848981ad62ddf2e0f43d29}\label{structpybind11_1_1detail_1_1type__info_a45e773df98848981ad62ddf2e0f43d29}} 
+\index{pybind11::detail::type\_info@{pybind11::detail::type\_info}!init\_holder@{init\_holder}}
+\index{init\_holder@{init\_holder}!pybind11::detail::type\_info@{pybind11::detail::type\_info}}
+\doxysubsubsection{\texorpdfstring{init\_holder}{init\_holder}}
+{\footnotesize\ttfamily void($\ast$ pybind11\+::detail\+::type\+\_\+info\+::init\+\_\+holder) (\mbox{\hyperlink{structpybind11_1_1detail_1_1instance}{instance}} $\ast$, const void $\ast$)}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__info_a68b343d8b2a5643ee0a164cbae04fee7}\label{structpybind11_1_1detail_1_1type__info_a68b343d8b2a5643ee0a164cbae04fee7}} 
+\index{pybind11::detail::type\_info@{pybind11::detail::type\_info}!operator\_new@{operator\_new}}
+\index{operator\_new@{operator\_new}!pybind11::detail::type\_info@{pybind11::detail::type\_info}}
+\doxysubsubsection{\texorpdfstring{operator\_new}{operator\_new}}
+{\footnotesize\ttfamily void$\ast$($\ast$ pybind11\+::detail\+::type\+\_\+info\+::operator\+\_\+new) (\mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}})}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__info_ad4612f2c54e08f420e9112cfc899cfc1}\label{structpybind11_1_1detail_1_1type__info_ad4612f2c54e08f420e9112cfc899cfc1}} 
+\index{pybind11::detail::type\_info@{pybind11::detail::type\_info}!simple\_ancestors@{simple\_ancestors}}
+\index{simple\_ancestors@{simple\_ancestors}!pybind11::detail::type\_info@{pybind11::detail::type\_info}}
+\doxysubsubsection{\texorpdfstring{simple\_ancestors}{simple\_ancestors}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::type\+\_\+info\+::simple\+\_\+ancestors}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__info_a71e89bf681bfd89635fb82502b515a5a}\label{structpybind11_1_1detail_1_1type__info_a71e89bf681bfd89635fb82502b515a5a}} 
+\index{pybind11::detail::type\_info@{pybind11::detail::type\_info}!simple\_type@{simple\_type}}
+\index{simple\_type@{simple\_type}!pybind11::detail::type\_info@{pybind11::detail::type\_info}}
+\doxysubsubsection{\texorpdfstring{simple\_type}{simple\_type}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::type\+\_\+info\+::simple\+\_\+type}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__info_a99cc6ada480e9088a9c9b1d1e5e98480}\label{structpybind11_1_1detail_1_1type__info_a99cc6ada480e9088a9c9b1d1e5e98480}} 
+\index{pybind11::detail::type\_info@{pybind11::detail::type\_info}!type@{type}}
+\index{type@{type}!pybind11::detail::type\_info@{pybind11::detail::type\_info}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily Py\+Type\+Object$\ast$ pybind11\+::detail\+::type\+\_\+info\+::type}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__info_ad354deb6fbe6d09fd5f4f03691498c18}\label{structpybind11_1_1detail_1_1type__info_ad354deb6fbe6d09fd5f4f03691498c18}} 
+\index{pybind11::detail::type\_info@{pybind11::detail::type\_info}!type\_size@{type\_size}}
+\index{type\_size@{type\_size}!pybind11::detail::type\_info@{pybind11::detail::type\_info}}
+\doxysubsubsection{\texorpdfstring{type\_size}{type\_size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}} pybind11\+::detail\+::type\+\_\+info\+::type\+\_\+size}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{cast_8h}{cast.\+h}}\end{DoxyCompactItemize}

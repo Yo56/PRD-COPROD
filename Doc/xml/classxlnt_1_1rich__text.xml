@@ -1,0 +1,460 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classxlnt_1_1rich__text" kind="class" language="C++" prot="public">
+    <compoundname>xlnt::rich_text</compoundname>
+    <includes refid="rich__text_8hpp" local="no">rich_text.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxlnt_1_1rich__text_1aaefee2e025777ba716ac1e3553924a6b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structxlnt_1_1rich__text__run" kindref="compound">rich_text_run</ref> &gt;</type>
+        <definition>std::vector&lt;rich_text_run&gt; xlnt::rich_text::runs_</definition>
+        <argsstring></argsstring>
+        <name>runs_</name>
+        <briefdescription>
+<para>The runs that make up this rich text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="158" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1rich__text_1a003286ea898771487ad338630dc5cbe7" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structxlnt_1_1phonetic__run" kindref="compound">phonetic_run</ref> &gt;</type>
+        <definition>std::vector&lt;phonetic_run&gt; xlnt::rich_text::phonetic_runs_</definition>
+        <argsstring></argsstring>
+        <name>phonetic_runs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="159" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1rich__text_1a88a4dbfa8ac583d092a7cc68d885de25" prot="private" static="no" mutable="no">
+        <type><ref refid="classxlnt_1_1optional" kindref="compound">optional</ref>&lt; <ref refid="classxlnt_1_1phonetic__pr" kindref="compound">phonetic_pr</ref> &gt;</type>
+        <definition>optional&lt;phonetic_pr&gt; xlnt::rich_text::phonetic_properties_</definition>
+        <argsstring></argsstring>
+        <name>phonetic_properties_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="160" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1a343e2254143af5e6037ab10d7b527997" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::rich_text::rich_text</definition>
+        <argsstring>()=default</argsstring>
+        <name>rich_text</name>
+        <briefdescription>
+<para>Constructs an empty rich text object with no font and empty text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="46" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1a2a1c063651e96b4947ddd5f485e4b282" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::rich_text::rich_text</definition>
+        <argsstring>(const std::string &amp;plain_text)</argsstring>
+        <name>rich_text</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>plain_text</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a rich text object with the given text and no font. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="51" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1ade6628efcf3dbbd494423b444520d37e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::rich_text::rich_text</definition>
+        <argsstring>(const rich_text &amp;other)</argsstring>
+        <name>rich_text</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a rich text object from other </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="56" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1a919222e6abe1d04f068e1f3966889667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::rich_text::rich_text</definition>
+        <argsstring>(const std::string &amp;plain_text, const class font &amp;text_font)</argsstring>
+        <name>rich_text</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>plain_text</declname>
+        </param>
+        <param>
+          <type>const class <ref refid="classxlnt_1_1font" kindref="compound">font</ref> &amp;</type>
+          <declname>text_font</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a rich text object with the given text and font. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="61" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1affff267c6f32c829b34c677b29131665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::rich_text::rich_text</definition>
+        <argsstring>(const rich_text_run &amp;single_run)</argsstring>
+        <name>rich_text</name>
+        <param>
+          <type>const <ref refid="structxlnt_1_1rich__text__run" kindref="compound">rich_text_run</ref> &amp;</type>
+          <declname>single_run</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="66" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1aeae6b654405636c483dfbb1c31860db1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::rich_text::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+<para>Removes all text runs from this text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="71" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="67" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1a642d23380a2e33bcce2dc67a49c36313" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::rich_text::plain_text</definition>
+        <argsstring>(const std::string &amp;s, bool preserve_space)</argsstring>
+        <name>plain_text</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>preserve_space</declname>
+        </param>
+        <briefdescription>
+<para>Clears any runs in this text and adds a single run with default formatting and the given string as its textual content. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="77" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="74" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1a90e4cbb43ea6b422d475aa2b29c0d976" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xlnt::rich_text::plain_text</definition>
+        <argsstring>() const</argsstring>
+        <name>plain_text</name>
+        <briefdescription>
+<para>Combines the textual content of each text run in order and returns the result. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="82" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="80" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1ac1c5a4f0b4ee2fbb19569ca5e53e7a36" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="structxlnt_1_1rich__text__run" kindref="compound">rich_text_run</ref> &gt;</type>
+        <definition>std::vector&lt; rich_text_run &gt; xlnt::rich_text::runs</definition>
+        <argsstring>() const</argsstring>
+        <name>runs</name>
+        <briefdescription>
+<para>Returns a copy of the individual runs that comprise this text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="87" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1a2b1dc91f5eb4ab1df57fe5c590a4df75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::rich_text::runs</definition>
+        <argsstring>(const std::vector&lt; rich_text_run &gt; &amp;new_runs)</argsstring>
+        <name>runs</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="structxlnt_1_1rich__text__run" kindref="compound">rich_text_run</ref> &gt; &amp;</type>
+          <declname>new_runs</declname>
+        </param>
+        <briefdescription>
+<para>Sets the runs of this text all at once. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="92" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1a3eba7c736ea13e227c5984dca0315637" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::rich_text::add_run</definition>
+        <argsstring>(const rich_text_run &amp;t)</argsstring>
+        <name>add_run</name>
+        <param>
+          <type>const <ref refid="structxlnt_1_1rich__text__run" kindref="compound">rich_text_run</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Adds a new run to the end of the set of runs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="97" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1af9bca6bb270d5cd4c6cb3857c44e036d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="structxlnt_1_1phonetic__run" kindref="compound">phonetic_run</ref> &gt;</type>
+        <definition>std::vector&lt; phonetic_run &gt; xlnt::rich_text::phonetic_runs</definition>
+        <argsstring>() const</argsstring>
+        <name>phonetic_runs</name>
+        <briefdescription>
+<para>Returns a copy of the individual runs that comprise this text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="102" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1a1fb8b38e6ada8a05120935a18432e5e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::rich_text::phonetic_runs</definition>
+        <argsstring>(const std::vector&lt; phonetic_run &gt; &amp;new_phonetic_runs)</argsstring>
+        <name>phonetic_runs</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="structxlnt_1_1phonetic__run" kindref="compound">phonetic_run</ref> &gt; &amp;</type>
+          <declname>new_phonetic_runs</declname>
+        </param>
+        <briefdescription>
+<para>Sets the runs of this text all at once. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="107" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="111" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1ad5a57ea473e765b7c2b9ae594958dbaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::rich_text::add_phonetic_run</definition>
+        <argsstring>(const phonetic_run &amp;t)</argsstring>
+        <name>add_phonetic_run</name>
+        <param>
+          <type>const <ref refid="structxlnt_1_1phonetic__run" kindref="compound">phonetic_run</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Adds a new run to the end of the set of runs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="112" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1a8bcb341d09fc78e5f3275482a64a4f75" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::rich_text::has_phonetic_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>has_phonetic_properties</name>
+        <briefdescription>
+<para>Returns true if this text has phonetic properties </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="117" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="121" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1a124a7b501611ca07de127537e06298d0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classxlnt_1_1phonetic__pr" kindref="compound">phonetic_pr</ref> &amp;</type>
+        <definition>const phonetic_pr &amp; xlnt::rich_text::phonetic_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>phonetic_properties</name>
+        <briefdescription>
+<para>Returns the phonetic properties of this text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="122" column="23" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="126" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1afbd3fc18f001773e1c403d7c0f7a414d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::rich_text::phonetic_properties</definition>
+        <argsstring>(const phonetic_pr &amp;phonetic_props)</argsstring>
+        <name>phonetic_properties</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1phonetic__pr" kindref="compound">phonetic_pr</ref> &amp;</type>
+          <declname>phonetic_props</declname>
+        </param>
+        <briefdescription>
+<para>Sets the phonetic properties of this text to phonetic_props </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="127" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="131" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1a80a93158d58806f01225f95b39ab29f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref> &amp;</type>
+        <definition>rich_text &amp; xlnt::rich_text::operator=</definition>
+        <argsstring>(const rich_text &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copies rich text object from other </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="132" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="53" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1a0b0f5c886f984040032349c3271c5389" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::rich_text::operator==</definition>
+        <argsstring>(const rich_text &amp;rhs) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the runs that make up this text are identical to those in rhs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="137" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="136" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1adc3f89932b921f7945ae4a1efb612164" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::rich_text::operator!=</definition>
+        <argsstring>(const rich_text &amp;rhs) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the runs that make up this text are identical to those in rhs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="142" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="162" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1a26a030112ee2aac545687b5c6033d43e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::rich_text::operator==</definition>
+        <argsstring>(const std::string &amp;rhs) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this text has a single unformatted run with text equal to rhs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="147" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="157" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rich__text_1ad74f5fff22ca105320b026756356ac61" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::rich_text::operator!=</definition>
+        <argsstring>(const std::string &amp;rhs) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this text has a single unformatted run with text equal to rhs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="152" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/rich_text.cpp" bodystart="167" bodyend="170"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Encapsulates zero or more formatted text runs where a text run is a string of text with the same defined formatting. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" line="40" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/rich_text.hpp" bodystart="41" bodyend="161"/>
+    <listofallmembers>
+      <member refid="classxlnt_1_1rich__text_1ad5a57ea473e765b7c2b9ae594958dbaa" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>add_phonetic_run</name></member>
+      <member refid="classxlnt_1_1rich__text_1a3eba7c736ea13e227c5984dca0315637" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>add_run</name></member>
+      <member refid="classxlnt_1_1rich__text_1aeae6b654405636c483dfbb1c31860db1" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>clear</name></member>
+      <member refid="classxlnt_1_1rich__text_1a8bcb341d09fc78e5f3275482a64a4f75" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>has_phonetic_properties</name></member>
+      <member refid="classxlnt_1_1rich__text_1adc3f89932b921f7945ae4a1efb612164" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>operator!=</name></member>
+      <member refid="classxlnt_1_1rich__text_1ad74f5fff22ca105320b026756356ac61" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>operator!=</name></member>
+      <member refid="classxlnt_1_1rich__text_1a80a93158d58806f01225f95b39ab29f9" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>operator=</name></member>
+      <member refid="classxlnt_1_1rich__text_1a0b0f5c886f984040032349c3271c5389" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>operator==</name></member>
+      <member refid="classxlnt_1_1rich__text_1a26a030112ee2aac545687b5c6033d43e" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>operator==</name></member>
+      <member refid="classxlnt_1_1rich__text_1a124a7b501611ca07de127537e06298d0" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>phonetic_properties</name></member>
+      <member refid="classxlnt_1_1rich__text_1afbd3fc18f001773e1c403d7c0f7a414d" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>phonetic_properties</name></member>
+      <member refid="classxlnt_1_1rich__text_1a88a4dbfa8ac583d092a7cc68d885de25" prot="private" virt="non-virtual"><scope>xlnt::rich_text</scope><name>phonetic_properties_</name></member>
+      <member refid="classxlnt_1_1rich__text_1af9bca6bb270d5cd4c6cb3857c44e036d" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>phonetic_runs</name></member>
+      <member refid="classxlnt_1_1rich__text_1a1fb8b38e6ada8a05120935a18432e5e5" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>phonetic_runs</name></member>
+      <member refid="classxlnt_1_1rich__text_1a003286ea898771487ad338630dc5cbe7" prot="private" virt="non-virtual"><scope>xlnt::rich_text</scope><name>phonetic_runs_</name></member>
+      <member refid="classxlnt_1_1rich__text_1a642d23380a2e33bcce2dc67a49c36313" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>plain_text</name></member>
+      <member refid="classxlnt_1_1rich__text_1a90e4cbb43ea6b422d475aa2b29c0d976" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>plain_text</name></member>
+      <member refid="classxlnt_1_1rich__text_1a343e2254143af5e6037ab10d7b527997" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>rich_text</name></member>
+      <member refid="classxlnt_1_1rich__text_1a2a1c063651e96b4947ddd5f485e4b282" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>rich_text</name></member>
+      <member refid="classxlnt_1_1rich__text_1ade6628efcf3dbbd494423b444520d37e" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>rich_text</name></member>
+      <member refid="classxlnt_1_1rich__text_1a919222e6abe1d04f068e1f3966889667" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>rich_text</name></member>
+      <member refid="classxlnt_1_1rich__text_1affff267c6f32c829b34c677b29131665" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>rich_text</name></member>
+      <member refid="classxlnt_1_1rich__text_1ac1c5a4f0b4ee2fbb19569ca5e53e7a36" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>runs</name></member>
+      <member refid="classxlnt_1_1rich__text_1a2b1dc91f5eb4ab1df57fe5c590a4df75" prot="public" virt="non-virtual"><scope>xlnt::rich_text</scope><name>runs</name></member>
+      <member refid="classxlnt_1_1rich__text_1aaefee2e025777ba716ac1e3553924a6b" prot="private" virt="non-virtual"><scope>xlnt::rich_text</scope><name>runs_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

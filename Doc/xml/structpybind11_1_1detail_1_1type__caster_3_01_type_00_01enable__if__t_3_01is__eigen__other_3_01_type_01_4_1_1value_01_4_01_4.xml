@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>pybind11::detail::type_caster&lt; Type, enable_if_t&lt; is_eigen_other&lt; Type &gt;::value &gt; &gt;</compoundname>
+    <includes refid="eigen_8h" local="no">eigen.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Type</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4_1a0e3a5af9be865a781c901892ec0b193d" prot="protected" static="no">
+        <type>Eigen::Matrix&lt; typename Type::Scalar, Type::RowsAtCompileTime, Type::ColsAtCompileTime &gt;</type>
+        <definition>using pybind11::detail::type_caster&lt; Type, enable_if_t&lt; is_eigen_other&lt; Type &gt;::value &gt; &gt;::Matrix =  Eigen::Matrix&lt;typename Type::Scalar, Type::RowsAtCompileTime, Type::ColsAtCompileTime&gt;</definition>
+        <argsstring></argsstring>
+        <name>Matrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/eigen.h" line="524" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/eigen.h" bodystart="524" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4_1ac796e70da1e4429d0231aca7915973fd" prot="protected" static="no">
+        <type><ref refid="structpybind11_1_1detail_1_1_eigen_props" kindref="compound">EigenProps</ref>&lt; <ref refid="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4_1a0e3a5af9be865a781c901892ec0b193d" kindref="member">Matrix</ref> &gt;</type>
+        <definition>using pybind11::detail::type_caster&lt; Type, enable_if_t&lt; is_eigen_other&lt; Type &gt;::value &gt; &gt;::props =  EigenProps&lt;Matrix&gt;</definition>
+        <argsstring></argsstring>
+        <name>props</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/eigen.h" line="525" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/eigen.h" bodystart="525" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4_1a9f0dd696853163ff8f0f771dafe89ab6" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename</type>
+          </param>
+        </templateparamlist>
+        <type>Type</type>
+        <definition>using pybind11::detail::type_caster&lt; Type, enable_if_t&lt; is_eigen_other&lt; Type &gt;::value &gt; &gt;::cast_op_type =  Type</definition>
+        <argsstring></argsstring>
+        <name>cast_op_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/eigen.h" line="540" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/eigen.h" bodystart="540" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4_1a91b59604005d5b0f7e19dd3a05087138" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+        <definition>static handle pybind11::detail::type_caster&lt; Type, enable_if_t&lt; is_eigen_other&lt; Type &gt;::value &gt; &gt;::cast</definition>
+        <argsstring>(const Type &amp;src, return_value_policy, handle)</argsstring>
+        <name>cast</name>
+        <param>
+          <type>const Type &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacepybind11_1a5f83e7a05cee9068927633ac47dbe69c" kindref="member">return_value_policy</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/eigen.h" line="527" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/eigen.h" bodystart="527" bodyend="530"/>
+      </memberdef>
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4_1a1cb6023a0ed6b142ce334e5f4442efa7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+        <definition>static handle pybind11::detail::type_caster&lt; Type, enable_if_t&lt; is_eigen_other&lt; Type &gt;::value &gt; &gt;::cast</definition>
+        <argsstring>(const Type *src, return_value_policy policy, handle parent)</argsstring>
+        <name>cast</name>
+        <param>
+          <type>const Type *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacepybind11_1a5f83e7a05cee9068927633ac47dbe69c" kindref="member">return_value_policy</ref></type>
+          <declname>policy</declname>
+        </param>
+        <param>
+          <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/eigen.h" line="531" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/eigen.h" bodystart="531" bodyend="531"/>
+      </memberdef>
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4_1a6bfda121d351697fdbfaca392875d6d1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>::<ref refid="classpybind11_1_1detail_1_1descr" kindref="compound">pybind11::detail::descr</ref></type>
+        <definition>::pybind11::detail::descr pybind11::detail::type_caster&lt; Type, enable_if_t&lt; is_eigen_other&lt; Type &gt;::value &gt; &gt;::name</definition>
+        <argsstring>()</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/eigen.h" line="533" column="40" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/eigen.h" bodystart="533" bodyend="533"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4_1a8826c8eb77dea58edf6945dd72648442" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pybind11::detail::type_caster&lt; Type, enable_if_t&lt; is_eigen_other&lt; Type &gt;::value &gt; &gt;::load</definition>
+        <argsstring>(handle, bool)=delete</argsstring>
+        <name>load</name>
+        <param>
+          <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+        </param>
+        <param>
+          <type>bool</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/eigen.h" line="538" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4_1a7df082b61d58d4c14d78aed601b8c780" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>pybind11::detail::type_caster&lt; Type, enable_if_t&lt; is_eigen_other&lt; Type &gt;::value &gt; &gt;::operator Type</definition>
+        <argsstring>()=delete</argsstring>
+        <name>operator Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/eigen.h" line="539" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/eigen.h" line="522" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/eigen.h" bodystart="522" bodyend="541"/>
+    <listofallmembers>
+      <member refid="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4_1a91b59604005d5b0f7e19dd3a05087138" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; Type, enable_if_t&lt; is_eigen_other&lt; Type &gt;::value &gt; &gt;</scope><name>cast</name></member>
+      <member refid="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4_1a1cb6023a0ed6b142ce334e5f4442efa7" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; Type, enable_if_t&lt; is_eigen_other&lt; Type &gt;::value &gt; &gt;</scope><name>cast</name></member>
+      <member refid="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4_1a9f0dd696853163ff8f0f771dafe89ab6" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; Type, enable_if_t&lt; is_eigen_other&lt; Type &gt;::value &gt; &gt;</scope><name>cast_op_type</name></member>
+      <member refid="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4_1a8826c8eb77dea58edf6945dd72648442" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; Type, enable_if_t&lt; is_eigen_other&lt; Type &gt;::value &gt; &gt;</scope><name>load</name></member>
+      <member refid="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4_1a0e3a5af9be865a781c901892ec0b193d" prot="protected" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; Type, enable_if_t&lt; is_eigen_other&lt; Type &gt;::value &gt; &gt;</scope><name>Matrix</name></member>
+      <member refid="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4_1a6bfda121d351697fdbfaca392875d6d1" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; Type, enable_if_t&lt; is_eigen_other&lt; Type &gt;::value &gt; &gt;</scope><name>name</name></member>
+      <member refid="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4_1a7df082b61d58d4c14d78aed601b8c780" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; Type, enable_if_t&lt; is_eigen_other&lt; Type &gt;::value &gt; &gt;</scope><name>operator Type</name></member>
+      <member refid="structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__other_3_01_type_01_4_1_1value_01_4_01_4_1ac796e70da1e4429d0231aca7915973fd" prot="protected" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; Type, enable_if_t&lt; is_eigen_other&lt; Type &gt;::value &gt; &gt;</scope><name>props</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

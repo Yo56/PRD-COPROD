@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classxlnt_1_1exception" kind="class" language="C++" prot="public">
+    <compoundname>xlnt::exception</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::runtime_error</basecompoundref>
+    <derivedcompoundref refid="classxlnt_1_1illegal__character" prot="public" virt="non-virtual">xlnt::illegal_character</derivedcompoundref>
+    <derivedcompoundref refid="classxlnt_1_1invalid__attribute" prot="public" virt="non-virtual">xlnt::invalid_attribute</derivedcompoundref>
+    <derivedcompoundref refid="classxlnt_1_1invalid__cell__reference" prot="public" virt="non-virtual">xlnt::invalid_cell_reference</derivedcompoundref>
+    <derivedcompoundref refid="classxlnt_1_1invalid__column__index" prot="public" virt="non-virtual">xlnt::invalid_column_index</derivedcompoundref>
+    <derivedcompoundref refid="classxlnt_1_1invalid__data__type" prot="public" virt="non-virtual">xlnt::invalid_data_type</derivedcompoundref>
+    <derivedcompoundref refid="classxlnt_1_1invalid__file" prot="public" virt="non-virtual">xlnt::invalid_file</derivedcompoundref>
+    <derivedcompoundref refid="classxlnt_1_1invalid__parameter" prot="public" virt="non-virtual">xlnt::invalid_parameter</derivedcompoundref>
+    <derivedcompoundref refid="classxlnt_1_1invalid__sheet__title" prot="public" virt="non-virtual">xlnt::invalid_sheet_title</derivedcompoundref>
+    <derivedcompoundref refid="classxlnt_1_1key__not__found" prot="public" virt="non-virtual">xlnt::key_not_found</derivedcompoundref>
+    <derivedcompoundref refid="classxlnt_1_1missing__number__format" prot="public" virt="non-virtual">xlnt::missing_number_format</derivedcompoundref>
+    <derivedcompoundref refid="classxlnt_1_1no__visible__worksheets" prot="public" virt="non-virtual">xlnt::no_visible_worksheets</derivedcompoundref>
+    <derivedcompoundref refid="classxlnt_1_1unhandled__switch__case" prot="public" virt="non-virtual">xlnt::unhandled_switch_case</derivedcompoundref>
+    <derivedcompoundref refid="classxlnt_1_1unsupported" prot="public" virt="non-virtual">xlnt::unsupported</derivedcompoundref>
+    <includes refid="exceptions_8hpp" local="no">exceptions.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxlnt_1_1exception_1adab9cbf4515156f4b443275f0016f690" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string xlnt::exception::message_</definition>
+        <argsstring></argsstring>
+        <name>message_</name>
+        <briefdescription>
+<para>The exception message </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/utils/exceptions.hpp" line="67" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/utils/exceptions.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxlnt_1_1exception_1a741ea380d203e093e9162961bae1f7a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::exception::exception</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>exception</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an exception with a message. This message will be returned by std::exception::what(), an inherited member of this class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/utils/exceptions.hpp" line="45" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/utils/exceptions.cpp" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1exception_1a1ca205aeb5fceae50b67de3b668fd539" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::exception::exception</definition>
+        <argsstring>(const exception &amp;)=default</argsstring>
+        <name>exception</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1exception" kindref="compound">exception</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Default copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/utils/exceptions.hpp" line="50" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1exception_1aa5851aae1eb645a713c87f839fc71b72" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>xlnt::exception::~exception</definition>
+        <argsstring>()</argsstring>
+        <name>~exception</name>
+        <briefdescription>
+<para>Destructor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/utils/exceptions.hpp" line="55" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/utils/exceptions.cpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1exception_1ae3c5019d8888e71be5a99c21935fbde7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::exception::message</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>message</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Sets the message after the <ref refid="classxlnt_1_1exception" kindref="compound">xlnt::exception</ref> is constructed. This can show more specific information than std::exception::what(). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/utils/exceptions.hpp" line="61" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/utils/exceptions.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Parent type of all custom exceptions thrown in this library. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>xlnt::exception</label>
+        <link refid="classxlnt_1_1exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>xlnt::no_visible_worksheets</label>
+        <link refid="classxlnt_1_1no__visible__worksheets"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>xlnt::invalid_column_index</label>
+        <link refid="classxlnt_1_1invalid__column__index"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::runtime_error</label>
+      </node>
+      <node id="15">
+        <label>xlnt::unsupported</label>
+        <link refid="classxlnt_1_1unsupported"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>xlnt::unhandled_switch_case</label>
+        <link refid="classxlnt_1_1unhandled__switch__case"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>xlnt::invalid_parameter</label>
+        <link refid="classxlnt_1_1invalid__parameter"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>xlnt::key_not_found</label>
+        <link refid="classxlnt_1_1key__not__found"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>xlnt::invalid_data_type</label>
+        <link refid="classxlnt_1_1invalid__data__type"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>xlnt::invalid_attribute</label>
+        <link refid="classxlnt_1_1invalid__attribute"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>xlnt::invalid_cell_reference</label>
+        <link refid="classxlnt_1_1invalid__cell__reference"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>xlnt::invalid_file</label>
+        <link refid="classxlnt_1_1invalid__file"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>xlnt::missing_number_format</label>
+        <link refid="classxlnt_1_1missing__number__format"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>xlnt::invalid_sheet_title</label>
+        <link refid="classxlnt_1_1invalid__sheet__title"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>xlnt::illegal_character</label>
+        <link refid="classxlnt_1_1illegal__character"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>xlnt::exception</label>
+        <link refid="classxlnt_1_1exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::runtime_error</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/utils/exceptions.hpp" line="38" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/utils/exceptions.hpp" bodystart="39" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classxlnt_1_1exception_1a741ea380d203e093e9162961bae1f7a6" prot="public" virt="non-virtual"><scope>xlnt::exception</scope><name>exception</name></member>
+      <member refid="classxlnt_1_1exception_1a1ca205aeb5fceae50b67de3b668fd539" prot="public" virt="non-virtual"><scope>xlnt::exception</scope><name>exception</name></member>
+      <member refid="classxlnt_1_1exception_1ae3c5019d8888e71be5a99c21935fbde7" prot="public" virt="non-virtual"><scope>xlnt::exception</scope><name>message</name></member>
+      <member refid="classxlnt_1_1exception_1adab9cbf4515156f4b443275f0016f690" prot="private" virt="non-virtual"><scope>xlnt::exception</scope><name>message_</name></member>
+      <member refid="classxlnt_1_1exception_1aa5851aae1eb645a713c87f839fc71b72" prot="public" virt="virtual"><scope>xlnt::exception</scope><name>~exception</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

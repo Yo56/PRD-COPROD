@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classpybind11_1_1detail_1_1argument__loader" kind="class" language="C++" prot="public">
+    <compoundname>pybind11::detail::argument_loader</compoundname>
+    <includes refid="cast_8h" local="no">cast.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename...</type>
+        <declname>Args</declname>
+        <defname>Args</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classpybind11_1_1detail_1_1argument__loader_1aa3107fa20352f85eeaa403e9f3f81e0a" prot="private" static="no">
+        <type><ref refid="namespacepybind11_1_1detail_1a5a29a5241a00f2bb37c172b70f6c2a3c" kindref="member">make_index_sequence</ref>&lt; sizeof...(Args)&gt;</type>
+        <definition>using pybind11::detail::argument_loader&lt; Args &gt;::indices =  make_index_sequence&lt;sizeof...(Args)&gt;</definition>
+        <argsstring></argsstring>
+        <name>indices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1775" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1775" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classpybind11_1_1detail_1_1argument__loader_1a01fb4099203cac7b90d68012eb0d0bd3" prot="private" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Arg</type>
+          </param>
+        </templateparamlist>
+        <type>std::is_same&lt; <ref refid="namespacepybind11_1_1detail_1aa37a5957cbb8ad416e9c0a3a9e0c365e" kindref="member">intrinsic_t</ref>&lt; Arg &gt;, <ref refid="classpybind11_1_1args" kindref="compound">args</ref> &gt;</type>
+        <definition>using pybind11::detail::argument_loader&lt; Args &gt;::argument_is_args =  std::is_same&lt;intrinsic_t&lt;Arg&gt;, args&gt;</definition>
+        <argsstring></argsstring>
+        <name>argument_is_args</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1777" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1777" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classpybind11_1_1detail_1_1argument__loader_1a9e7d9146cea0a1a4bd5c195c9df088de" prot="private" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Arg</type>
+          </param>
+        </templateparamlist>
+        <type>std::is_same&lt; <ref refid="namespacepybind11_1_1detail_1aa37a5957cbb8ad416e9c0a3a9e0c365e" kindref="member">intrinsic_t</ref>&lt; Arg &gt;, <ref refid="classpybind11_1_1kwargs" kindref="compound">kwargs</ref> &gt;</type>
+        <definition>using pybind11::detail::argument_loader&lt; Args &gt;::argument_is_kwargs =  std::is_same&lt;intrinsic_t&lt;Arg&gt;, kwargs&gt;</definition>
+        <argsstring></argsstring>
+        <name>argument_is_kwargs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1778" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1778" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classpybind11_1_1detail_1_1argument__loader_1a31db37349645a1a3ea6add3576e3458b" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto pybind11::detail::argument_loader&lt; Args &gt;::args_pos</definition>
+        <argsstring></argsstring>
+        <name>args_pos</name>
+        <initializer>= <ref refid="namespacepybind11_1_1detail_1ac0dec32f83b00d849883c195ba9a0a01" kindref="member">constexpr_first</ref>&lt;argument_is_args, Args...&gt;() - (int) sizeof...(Args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1780" column="27" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1780" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpybind11_1_1detail_1_1argument__loader_1a0380760317de425c03fb10a6bbc19572" prot="private" static="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto pybind11::detail::argument_loader&lt; Args &gt;::kwargs_pos</definition>
+        <argsstring></argsstring>
+        <name>kwargs_pos</name>
+        <initializer>= <ref refid="namespacepybind11_1_1detail_1ac0dec32f83b00d849883c195ba9a0a01" kindref="member">constexpr_first</ref>&lt;argument_is_kwargs, Args...&gt;() - (int) sizeof...(Args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1781" column="25" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1781" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpybind11_1_1detail_1_1argument__loader_1a17282c8957e747b99bd7f85fbf3001aa" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr bool</type>
+        <definition>constexpr bool pybind11::detail::argument_loader&lt; Args &gt;::args_kwargs_are_last</definition>
+        <argsstring></argsstring>
+        <name>args_kwargs_are_last</name>
+        <initializer>= kwargs_pos &gt;= - 1 &amp;&amp; args_pos &gt;= kwargs_pos - 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1783" column="27" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1783" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classpybind11_1_1detail_1_1argument__loader_1ae049fe17713f83569b29f32b7d84707f" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr bool</type>
+        <definition>constexpr bool pybind11::detail::argument_loader&lt; Args &gt;::has_kwargs</definition>
+        <argsstring></argsstring>
+        <name>has_kwargs</name>
+        <initializer>= kwargs_pos &lt; 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1788" column="27" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1788" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpybind11_1_1detail_1_1argument__loader_1af5db3b0b97a5b4392d5f36b5c3135835" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr bool</type>
+        <definition>constexpr bool pybind11::detail::argument_loader&lt; Args &gt;::has_args</definition>
+        <argsstring></argsstring>
+        <name>has_args</name>
+        <initializer>= args_pos &lt; 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1789" column="27" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1789" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpybind11_1_1detail_1_1argument__loader_1af30a79835a8cd3ab3d57b00f3574fd45" prot="private" static="no" mutable="no">
+        <type>std::tuple&lt; <ref refid="namespacepybind11_1_1detail_1a160181d61e7d73d29060503ffdf13e6f" kindref="member">make_caster</ref>&lt; Args &gt;... &gt;</type>
+        <definition>std::tuple&lt;make_caster&lt;Args&gt;...&gt; pybind11::detail::argument_loader&lt; Args &gt;::argcasters</definition>
+        <argsstring></argsstring>
+        <name>argcasters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1825" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1825" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1argument__loader_1af561fefc965b1269c43943a445eacf9b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>::<ref refid="classpybind11_1_1detail_1_1descr" kindref="compound">pybind11::detail::descr</ref></type>
+        <definition>::pybind11::detail::descr pybind11::detail::argument_loader&lt; Args &gt;::arg_names</definition>
+        <argsstring>()</argsstring>
+        <name>arg_names</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1791" column="40" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1791" bodyend="1791"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1argument__loader_1a32be088badccd7cb7e2e9bbb424d1a1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pybind11::detail::argument_loader&lt; Args &gt;::load_args</definition>
+        <argsstring>(function_call &amp;call)</argsstring>
+        <name>load_args</name>
+        <param>
+          <type><ref refid="structpybind11_1_1detail_1_1function__call" kindref="compound">function_call</ref> &amp;</type>
+          <declname>call</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1793" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1793" bodyend="1795"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1argument__loader_1a48c67a1e6bd71da946f488fc42c55b6d" prot="public" static="no" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Return</type>
+          </param>
+          <param>
+            <type>typename Guard</type>
+          </param>
+          <param>
+            <type>typename Func</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacepybind11_1_1detail_1a492fb1fcf079a5bc67248b852bc73619" kindref="member">enable_if_t</ref>&lt;!std::is_void&lt; Return &gt;::value, Return &gt;</type>
+        <definition>enable_if_t&lt;!std::is_void&lt;Return&gt;::value, Return&gt; pybind11::detail::argument_loader&lt; Args &gt;::call</definition>
+        <argsstring>(Func &amp;&amp;f) &amp;&amp;</argsstring>
+        <name>call</name>
+        <param>
+          <type>Func &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1798" column="18" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1798" bodyend="1800"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1argument__loader_1a528436efddd493a1e3e19bd811c8d637" prot="public" static="no" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Return</type>
+          </param>
+          <param>
+            <type>typename Guard</type>
+          </param>
+          <param>
+            <type>typename Func</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacepybind11_1_1detail_1a492fb1fcf079a5bc67248b852bc73619" kindref="member">enable_if_t</ref>&lt; std::is_void&lt; Return &gt;::value, <ref refid="structpybind11_1_1detail_1_1void__type" kindref="compound">void_type</ref> &gt;</type>
+        <definition>enable_if_t&lt;std::is_void&lt;Return&gt;::value, void_type&gt; pybind11::detail::argument_loader&lt; Args &gt;::call</definition>
+        <argsstring>(Func &amp;&amp;f) &amp;&amp;</argsstring>
+        <name>call</name>
+        <param>
+          <type>Func &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1803" column="18" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1803" bodyend="1806"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1argument__loader_1a3410d1c3af3bebf61d175ac2a7c598ac" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool pybind11::detail::argument_loader&lt; Args &gt;::load_impl_sequence</definition>
+        <argsstring>(function_call &amp;, index_sequence&lt;&gt;)</argsstring>
+        <name>load_impl_sequence</name>
+        <param>
+          <type><ref refid="structpybind11_1_1detail_1_1function__call" kindref="compound">function_call</ref> &amp;</type>
+        </param>
+        <param>
+          <type><ref refid="structpybind11_1_1detail_1_1index__sequence" kindref="compound">index_sequence</ref>&lt;&gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1810" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1810" bodyend="1810"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1argument__loader_1ad5823617e969d0507f204730a714d544" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t...</type>
+            <declname>Is</declname>
+            <defname>Is</defname>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool pybind11::detail::argument_loader&lt; Args &gt;::load_impl_sequence</definition>
+        <argsstring>(function_call &amp;call, index_sequence&lt; Is... &gt;)</argsstring>
+        <name>load_impl_sequence</name>
+        <param>
+          <type><ref refid="structpybind11_1_1detail_1_1function__call" kindref="compound">function_call</ref> &amp;</type>
+          <declname>call</declname>
+        </param>
+        <param>
+          <type><ref refid="structpybind11_1_1detail_1_1index__sequence" kindref="compound">index_sequence</ref>&lt; Is... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1813" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1813" bodyend="1818"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1argument__loader_1aa1c93f6205a801a006f9eeb3c95ccd4a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Return</type>
+          </param>
+          <param>
+            <type>typename Func</type>
+          </param>
+          <param>
+            <type>size_t...</type>
+            <declname>Is</declname>
+            <defname>Is</defname>
+          </param>
+          <param>
+            <type>typename Guard</type>
+          </param>
+        </templateparamlist>
+        <type>Return</type>
+        <definition>Return pybind11::detail::argument_loader&lt; Args &gt;::call_impl</definition>
+        <argsstring>(Func &amp;&amp;f, index_sequence&lt; Is... &gt;, Guard &amp;&amp;)</argsstring>
+        <name>call_impl</name>
+        <param>
+          <type>Func &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="structpybind11_1_1detail_1_1index__sequence" kindref="compound">index_sequence</ref>&lt; Is... &gt;</type>
+        </param>
+        <param>
+          <type>Guard &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1821" column="12" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1821" bodyend="1823"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper class which loads arguments for C++ functions called from Python. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1774" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1774" bodyend="1826"/>
+    <listofallmembers>
+      <member refid="classpybind11_1_1detail_1_1argument__loader_1af561fefc965b1269c43943a445eacf9b" prot="public" virt="non-virtual"><scope>pybind11::detail::argument_loader</scope><name>arg_names</name></member>
+      <member refid="classpybind11_1_1detail_1_1argument__loader_1af30a79835a8cd3ab3d57b00f3574fd45" prot="private" virt="non-virtual"><scope>pybind11::detail::argument_loader</scope><name>argcasters</name></member>
+      <member refid="classpybind11_1_1detail_1_1argument__loader_1a17282c8957e747b99bd7f85fbf3001aa" prot="private" virt="non-virtual"><scope>pybind11::detail::argument_loader</scope><name>args_kwargs_are_last</name></member>
+      <member refid="classpybind11_1_1detail_1_1argument__loader_1a31db37349645a1a3ea6add3576e3458b" prot="private" virt="non-virtual"><scope>pybind11::detail::argument_loader</scope><name>args_pos</name></member>
+      <member refid="classpybind11_1_1detail_1_1argument__loader_1a01fb4099203cac7b90d68012eb0d0bd3" prot="private" virt="non-virtual"><scope>pybind11::detail::argument_loader</scope><name>argument_is_args</name></member>
+      <member refid="classpybind11_1_1detail_1_1argument__loader_1a9e7d9146cea0a1a4bd5c195c9df088de" prot="private" virt="non-virtual"><scope>pybind11::detail::argument_loader</scope><name>argument_is_kwargs</name></member>
+      <member refid="classpybind11_1_1detail_1_1argument__loader_1a48c67a1e6bd71da946f488fc42c55b6d" prot="public" virt="non-virtual"><scope>pybind11::detail::argument_loader</scope><name>call</name></member>
+      <member refid="classpybind11_1_1detail_1_1argument__loader_1a528436efddd493a1e3e19bd811c8d637" prot="public" virt="non-virtual"><scope>pybind11::detail::argument_loader</scope><name>call</name></member>
+      <member refid="classpybind11_1_1detail_1_1argument__loader_1aa1c93f6205a801a006f9eeb3c95ccd4a" prot="private" virt="non-virtual"><scope>pybind11::detail::argument_loader</scope><name>call_impl</name></member>
+      <member refid="classpybind11_1_1detail_1_1argument__loader_1af5db3b0b97a5b4392d5f36b5c3135835" prot="public" virt="non-virtual"><scope>pybind11::detail::argument_loader</scope><name>has_args</name></member>
+      <member refid="classpybind11_1_1detail_1_1argument__loader_1ae049fe17713f83569b29f32b7d84707f" prot="public" virt="non-virtual"><scope>pybind11::detail::argument_loader</scope><name>has_kwargs</name></member>
+      <member refid="classpybind11_1_1detail_1_1argument__loader_1aa3107fa20352f85eeaa403e9f3f81e0a" prot="private" virt="non-virtual"><scope>pybind11::detail::argument_loader</scope><name>indices</name></member>
+      <member refid="classpybind11_1_1detail_1_1argument__loader_1a0380760317de425c03fb10a6bbc19572" prot="private" virt="non-virtual"><scope>pybind11::detail::argument_loader</scope><name>kwargs_pos</name></member>
+      <member refid="classpybind11_1_1detail_1_1argument__loader_1a32be088badccd7cb7e2e9bbb424d1a1f" prot="public" virt="non-virtual"><scope>pybind11::detail::argument_loader</scope><name>load_args</name></member>
+      <member refid="classpybind11_1_1detail_1_1argument__loader_1a3410d1c3af3bebf61d175ac2a7c598ac" prot="private" virt="non-virtual"><scope>pybind11::detail::argument_loader</scope><name>load_impl_sequence</name></member>
+      <member refid="classpybind11_1_1detail_1_1argument__loader_1ad5823617e969d0507f204730a714d544" prot="private" virt="non-virtual"><scope>pybind11::detail::argument_loader</scope><name>load_impl_sequence</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

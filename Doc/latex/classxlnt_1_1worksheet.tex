@@ -33,9 +33,9 @@ const class \mbox{\hyperlink{classxlnt_1_1workbook}{workbook}} \& \mbox{\hyperli
 \begin{DoxyCompactList}\small\item\em Returns a reference to the workbook this worksheet is owned by. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classxlnt_1_1worksheet_a4f218d49d06f6f44dbab452bf2bdec3e}{garbage\+\_\+collect}} ()
 \begin{DoxyCompactList}\small\item\em Deletes data held in the worksheet that does not affect the internal data or display. For example, unreference styles and empty cells will be removed. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1worksheet_a2a84f029276bfd9faec801fb17d3d6a9}{id}} () const
+std\+::size\+\_\+t \mbox{\hyperlink{classxlnt_1_1worksheet_a2a84f029276bfd9faec801fb17d3d6a9}{id}} () const
 \begin{DoxyCompactList}\small\item\em Returns the unique numeric identifier of this worksheet. This will sometimes but not necessarily be the index of the worksheet in the workbook. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classxlnt_1_1worksheet_aad07421a40956072818d448c7bc0e812}{id}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} id)
+void \mbox{\hyperlink{classxlnt_1_1worksheet_aad07421a40956072818d448c7bc0e812}{id}} (std\+::size\+\_\+t id)
 \begin{DoxyCompactList}\small\item\em Set the unique numeric identifier. The id defaults to the lowest unused id in the workbook so this should not be called without a good reason. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classxlnt_1_1worksheet_ad6b664b8fd51d88bb50b6aca9870ac07}{title}} () const
 \begin{DoxyCompactList}\small\item\em Returns the title of this sheet. \end{DoxyCompactList}\item 
@@ -111,17 +111,17 @@ double \mbox{\hyperlink{classxlnt_1_1worksheet_a9dfad3c8abf86758156649388d54d18e
 \begin{DoxyCompactList}\small\item\em Calculate the height of the given row. This will be the default row height if a custom height is not set on this row\textquotesingle{}s \mbox{\hyperlink{classxlnt_1_1row__properties}{row\+\_\+properties}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1worksheet_a627951189735a34fdbd953e91fb8534f}{point\+\_\+pos}} (int \mbox{\hyperlink{alignment_8hpp_a58c76f848f15df202254c1daec468567}{left}}, int \mbox{\hyperlink{border_8hpp_a8aab264665f2085687d9eeca4c67a691}{top}}) const
 \begin{DoxyCompactList}\small\item\em Returns a reference to the cell at the given point coordinates. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classxlnt_1_1worksheet_ad11c6a505ee9a08a13251250a355a447}{create\+\_\+named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, const std\+::string \&reference\+\_\+string)
+void \mbox{\hyperlink{classxlnt_1_1worksheet_ad11c6a505ee9a08a13251250a355a447}{create\+\_\+named\+\_\+range}} (const std\+::string \&name, const std\+::string \&reference\+\_\+string)
 \begin{DoxyCompactList}\small\item\em Creates a new named range with the given name encompassing the string representing a range. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classxlnt_1_1worksheet_af73844f7be716fa3f34ca2175a7fbfb5}{create\+\_\+named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&reference)
+void \mbox{\hyperlink{classxlnt_1_1worksheet_af73844f7be716fa3f34ca2175a7fbfb5}{create\+\_\+named\+\_\+range}} (const std\+::string \&name, const \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \&reference)
 \begin{DoxyCompactList}\small\item\em Creates a new named range with the given name encompassing the given range reference. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classxlnt_1_1worksheet_aaed7880fd2b7bf2ffcd92fe64e768e4f}{has\+\_\+named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}) const
+bool \mbox{\hyperlink{classxlnt_1_1worksheet_aaed7880fd2b7bf2ffcd92fe64e768e4f}{has\+\_\+named\+\_\+range}} (const std\+::string \&name) const
 \begin{DoxyCompactList}\small\item\em Returns true if this worksheet contains a named range with the given name. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1worksheet_a3e8416a110ca2603076dd5c72556472b}{named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+class \mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1worksheet_a3e8416a110ca2603076dd5c72556472b}{named\+\_\+range}} (const std\+::string \&name)
 \begin{DoxyCompactList}\small\item\em Returns the named range with the given name. Throws \mbox{\hyperlink{classxlnt_1_1key__not__found}{key\+\_\+not\+\_\+found}} exception if the named range doesn\textquotesingle{}t exist. \end{DoxyCompactList}\item 
-const class \mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1worksheet_a69a339b1a11a98ab428b23a0eda322a2}{named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}) const
+const class \mbox{\hyperlink{classxlnt_1_1range}{range}} \mbox{\hyperlink{classxlnt_1_1worksheet_a69a339b1a11a98ab428b23a0eda322a2}{named\+\_\+range}} (const std\+::string \&name) const
 \begin{DoxyCompactList}\small\item\em Returns the named range with the given name. Throws \mbox{\hyperlink{classxlnt_1_1key__not__found}{key\+\_\+not\+\_\+found}} exception if the named range doesn\textquotesingle{}t exist. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classxlnt_1_1worksheet_a3f527518c9a7b59c85c43c4a4f760c23}{remove\+\_\+named\+\_\+range}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+void \mbox{\hyperlink{classxlnt_1_1worksheet_a3f527518c9a7b59c85c43c4a4f760c23}{remove\+\_\+named\+\_\+range}} (const std\+::string \&name)
 \begin{DoxyCompactList}\small\item\em Removes a named range with the given name. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacexlnt_abd2bb61f1d4794b8affafb8957b151b6}{row\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1worksheet_a4893d07dfed96b4d6bc586793dce1d4c}{lowest\+\_\+row}} () const
 \begin{DoxyCompactList}\small\item\em Returns the row of the first non-\/empty cell in the worksheet. \end{DoxyCompactList}\item 
@@ -193,7 +193,7 @@ void \mbox{\hyperlink{classxlnt_1_1worksheet_a8ceeef08fc6fee74c61daf504be7a5ee}{
 \begin{DoxyCompactList}\small\item\em Clear the auto-\/filter from this sheet. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classxlnt_1_1worksheet_afc1035b43426f60a946bb61b3671e98a}{has\+\_\+auto\+\_\+filter}} () const
 \begin{DoxyCompactList}\small\item\em Returns true if this sheet has an auto-\/filter set. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classxlnt_1_1worksheet_ad914d72ec3dbc3458814f2680bc62854}{reserve}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} n)
+void \mbox{\hyperlink{classxlnt_1_1worksheet_ad914d72ec3dbc3458814f2680bc62854}{reserve}} (std\+::size\+\_\+t n)
 \begin{DoxyCompactList}\small\item\em Reserve n rows. This can be optionally called before adding many rows to improve performance. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classxlnt_1_1worksheet_a3d1c21b5dd1c29df57944e625dd9f7a3}{has\+\_\+phonetic\+\_\+properties}} () const
 \begin{DoxyCompactList}\small\item\em Returns true if this sheet has phonetic properties \end{DoxyCompactList}\item 
@@ -239,7 +239,7 @@ void \mbox{\hyperlink{classxlnt_1_1worksheet_a8acdd63570f0dc32734ef6fe5eb30919}{
 \begin{DoxyCompactList}\small\item\em Returns the print area defined for this sheet. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classxlnt_1_1worksheet_a786995df580eb382f86723c634c4ffe9}{has\+\_\+view}} () const
 \begin{DoxyCompactList}\small\item\em Returns true if this sheet has any number of views defined. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classxlnt_1_1sheet__view}{sheet\+\_\+view}} \& \mbox{\hyperlink{classxlnt_1_1worksheet_afd8b8426c2a74615000d7a30157b5520}{view}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} index=0) const
+\mbox{\hyperlink{classxlnt_1_1sheet__view}{sheet\+\_\+view}} \& \mbox{\hyperlink{classxlnt_1_1worksheet_afd8b8426c2a74615000d7a30157b5520}{view}} (std\+::size\+\_\+t index=0) const
 \begin{DoxyCompactList}\small\item\em Returns the view at the given index. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classxlnt_1_1worksheet_a17b07f13febfae1a31d728d2fa7eb377}{add\+\_\+view}} (const \mbox{\hyperlink{classxlnt_1_1sheet__view}{sheet\+\_\+view}} \&new\+\_\+view)
 \begin{DoxyCompactList}\small\item\em Adds new\+\_\+view to the set of available views for this sheet. \end{DoxyCompactList}\item 
@@ -964,7 +964,7 @@ Returns the row of the last non-\/empty cell or highest row with properties in t
 \index{xlnt::worksheet@{xlnt::worksheet}!id@{id}}
 \index{id@{id}!xlnt::worksheet@{xlnt::worksheet}}
 \doxysubsubsection{\texorpdfstring{id()}{id()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::worksheet\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily std\+::size\+\_\+t xlnt\+::worksheet\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -974,7 +974,7 @@ Returns the unique numeric identifier of this worksheet. This will sometimes but
 \index{xlnt::worksheet@{xlnt::worksheet}!id@{id}}
 \index{id@{id}!xlnt::worksheet@{xlnt::worksheet}}
 \doxysubsubsection{\texorpdfstring{id()}{id()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void xlnt\+::worksheet\+::id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::id (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -1424,7 +1424,7 @@ Removes a named range with the given name.
 \index{xlnt::worksheet@{xlnt::worksheet}!reserve@{reserve}}
 \index{reserve@{reserve}!xlnt::worksheet@{xlnt::worksheet}}
 \doxysubsubsection{\texorpdfstring{reserve()}{reserve()}}
-{\footnotesize\ttfamily void xlnt\+::worksheet\+::reserve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void xlnt\+::worksheet\+::reserve (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption})}
 
 
 
@@ -1554,7 +1554,7 @@ Removes the merging of the cells in the range represented by the given string.
 \index{xlnt::worksheet@{xlnt::worksheet}!view@{view}}
 \index{view@{view}!xlnt::worksheet@{xlnt::worksheet}}
 \doxysubsubsection{\texorpdfstring{view()}{view()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1sheet__view}{sheet\+\_\+view}} \& xlnt\+::worksheet\+::view (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1sheet__view}{sheet\+\_\+view}} \& xlnt\+::worksheet\+::view (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
 
 
 

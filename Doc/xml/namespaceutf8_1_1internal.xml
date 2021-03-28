@@ -1,0 +1,574 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="namespaceutf8_1_1internal" kind="namespace" language="C++">
+    <compoundname>utf8::internal</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceutf8_1_1internal_1a9e96c2bc98b37e336b787a281090392c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>utf_error</name>
+        <enumvalue id="namespaceutf8_1_1internal_1a9e96c2bc98b37e336b787a281090392cac4d854b29be6992e66c957cf4b957cca" prot="public">
+          <name>UTF8_OK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceutf8_1_1internal_1a9e96c2bc98b37e336b787a281090392ca86ebad67eed937cd0edbd5a9e5867476" prot="public">
+          <name>NOT_ENOUGH_ROOM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceutf8_1_1internal_1a9e96c2bc98b37e336b787a281090392ca316f29394dbc76011590cfe20e8ebc21" prot="public">
+          <name>INVALID_LEAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceutf8_1_1internal_1a9e96c2bc98b37e336b787a281090392ca0a7c549a77d50c327e177fafc3a8f537" prot="public">
+          <name>INCOMPLETE_SEQUENCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceutf8_1_1internal_1a9e96c2bc98b37e336b787a281090392ca74987a94eef8d6936f8d6475e6605373" prot="public">
+          <name>OVERLONG_SEQUENCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceutf8_1_1internal_1a9e96c2bc98b37e336b787a281090392ca8591209ee2d80f2d3728ffb82928c3fa" prot="public">
+          <name>INVALID_CODE_POINT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="134" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="134" bodyend="134"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceutf8_1_1internal_1aca9d84aa3b40e635b086c9ce843cc4a4" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceutf8_1ac23066b92c5a1d9d9ef177201f750936" kindref="member">uint16_t</ref></type>
+        <definition>const uint16_t utf8::internal::LEAD_SURROGATE_MIN</definition>
+        <argsstring></argsstring>
+        <name>LEAD_SURROGATE_MIN</name>
+        <initializer>= 0xd800u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="48" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceutf8_1_1internal_1af6038b4ebd9b71391eba050cc29720b8" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceutf8_1ac23066b92c5a1d9d9ef177201f750936" kindref="member">uint16_t</ref></type>
+        <definition>const uint16_t utf8::internal::LEAD_SURROGATE_MAX</definition>
+        <argsstring></argsstring>
+        <name>LEAD_SURROGATE_MAX</name>
+        <initializer>= 0xdbffu</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="49" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceutf8_1_1internal_1a836088cf3e5e29ac9a89b2ffbd91623e" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceutf8_1ac23066b92c5a1d9d9ef177201f750936" kindref="member">uint16_t</ref></type>
+        <definition>const uint16_t utf8::internal::TRAIL_SURROGATE_MIN</definition>
+        <argsstring></argsstring>
+        <name>TRAIL_SURROGATE_MIN</name>
+        <initializer>= 0xdc00u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="50" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceutf8_1_1internal_1a37212482f99986fc6aeaa95a9079c972" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceutf8_1ac23066b92c5a1d9d9ef177201f750936" kindref="member">uint16_t</ref></type>
+        <definition>const uint16_t utf8::internal::TRAIL_SURROGATE_MAX</definition>
+        <argsstring></argsstring>
+        <name>TRAIL_SURROGATE_MAX</name>
+        <initializer>= 0xdfffu</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="51" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceutf8_1_1internal_1a47b04bad75525ea9b01ff095c70fa081" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceutf8_1ac23066b92c5a1d9d9ef177201f750936" kindref="member">uint16_t</ref></type>
+        <definition>const uint16_t utf8::internal::LEAD_OFFSET</definition>
+        <argsstring></argsstring>
+        <name>LEAD_OFFSET</name>
+        <initializer>= 0xd7c0u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="52" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceutf8_1_1internal_1a31ff17e602e8e7e15db5ebfb5e93a3fb" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceutf8_1a846259d2f173d524282583fc9d825b00" kindref="member">uint32_t</ref></type>
+        <definition>const uint32_t utf8::internal::SURROGATE_OFFSET</definition>
+        <argsstring></argsstring>
+        <name>SURROGATE_OFFSET</name>
+        <initializer>= 0xfca02400u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="53" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceutf8_1_1internal_1a0a30055cabb6e5cefb5dafc8812cb123" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceutf8_1a846259d2f173d524282583fc9d825b00" kindref="member">uint32_t</ref></type>
+        <definition>const uint32_t utf8::internal::CODE_POINT_MAX</definition>
+        <argsstring></argsstring>
+        <name>CODE_POINT_MAX</name>
+        <initializer>= 0x0010ffffu</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="56" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceutf8_1_1internal_1adf6e0469e279b9562aa461b4c3c1e7e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename octet_type</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceutf8_1abe793b552fabe390d134b97ab81d2c7f" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t utf8::internal::mask8</definition>
+        <argsstring>(octet_type oc)</argsstring>
+        <name>mask8</name>
+        <param>
+          <type>octet_type</type>
+          <declname>oc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="59" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutf8_1_1internal_1ab1e3c2fe2296ac185993a183d1bd0678" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename u16_type</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceutf8_1ac23066b92c5a1d9d9ef177201f750936" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t utf8::internal::mask16</definition>
+        <argsstring>(u16_type oc)</argsstring>
+        <name>mask16</name>
+        <param>
+          <type>u16_type</type>
+          <declname>oc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="64" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutf8_1_1internal_1ab4820484159ba613b4901476ceb24516" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename octet_type</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool utf8::internal::is_trail</definition>
+        <argsstring>(octet_type oc)</argsstring>
+        <name>is_trail</name>
+        <param>
+          <type>octet_type</type>
+          <declname>oc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="69" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutf8_1_1internal_1a1a4095fb207096e04f94f21eb23d2723" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename u16</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool utf8::internal::is_lead_surrogate</definition>
+        <argsstring>(u16 cp)</argsstring>
+        <name>is_lead_surrogate</name>
+        <param>
+          <type>u16</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="75" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutf8_1_1internal_1a295b2873fce985213937e5f1193fcb13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename u16</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool utf8::internal::is_trail_surrogate</definition>
+        <argsstring>(u16 cp)</argsstring>
+        <name>is_trail_surrogate</name>
+        <param>
+          <type>u16</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="81" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutf8_1_1internal_1a31a185a6bc8b9bf454191a8a95a93595" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename u16</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool utf8::internal::is_surrogate</definition>
+        <argsstring>(u16 cp)</argsstring>
+        <name>is_surrogate</name>
+        <param>
+          <type>u16</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="87" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutf8_1_1internal_1a97b553137aaeda6e8ca6f8d46f78fd79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename u32</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool utf8::internal::is_code_point_valid</definition>
+        <argsstring>(u32 cp)</argsstring>
+        <name>is_code_point_valid</name>
+        <param>
+          <type>u32</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="93" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="93" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutf8_1_1internal_1aadbe437cba7bfcc4df2638f633e9787c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename octet_iterator</type>
+          </param>
+        </templateparamlist>
+        <type>std::iterator_traits&lt; octet_iterator &gt;::difference_type</type>
+        <definition>std::iterator_traits&lt;octet_iterator&gt;::difference_type utf8::internal::sequence_length</definition>
+        <argsstring>(octet_iterator lead_it)</argsstring>
+        <name>sequence_length</name>
+        <param>
+          <type>octet_iterator</type>
+          <declname>lead_it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="100" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="100" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutf8_1_1internal_1a3160f6f24dff465f64f83cb0e66995c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename octet_difference_type</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool utf8::internal::is_overlong_sequence</definition>
+        <argsstring>(uint32_t cp, octet_difference_type length)</argsstring>
+        <name>is_overlong_sequence</name>
+        <param>
+          <type><ref refid="namespaceutf8_1a846259d2f173d524282583fc9d825b00" kindref="member">uint32_t</ref></type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>octet_difference_type</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="116" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="116" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutf8_1_1internal_1a369641e705a3d7c91eb160868a6705f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename octet_iterator</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceutf8_1_1internal_1a9e96c2bc98b37e336b787a281090392c" kindref="member">utf_error</ref></type>
+        <definition>utf_error utf8::internal::increase_safely</definition>
+        <argsstring>(octet_iterator &amp;it, octet_iterator end)</argsstring>
+        <name>increase_safely</name>
+        <param>
+          <type>octet_iterator &amp;</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>octet_iterator</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Helper for get_sequence_x. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="138" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="138" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutf8_1_1internal_1a6e5df73716136aec55e8fcf3309038b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename octet_iterator</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceutf8_1_1internal_1a9e96c2bc98b37e336b787a281090392c" kindref="member">utf_error</ref></type>
+        <definition>utf_error utf8::internal::get_sequence_1</definition>
+        <argsstring>(octet_iterator &amp;it, octet_iterator end, uint32_t &amp;code_point)</argsstring>
+        <name>get_sequence_1</name>
+        <param>
+          <type>octet_iterator &amp;</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>octet_iterator</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceutf8_1a846259d2f173d524282583fc9d825b00" kindref="member">uint32_t</ref> &amp;</type>
+          <declname>code_point</declname>
+        </param>
+        <briefdescription>
+<para>get_sequence_x functions decode utf-8 sequences of the length x </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="153" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="153" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutf8_1_1internal_1a9d641b9546be985f9f0fd4955ac42a24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename octet_iterator</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceutf8_1_1internal_1a9e96c2bc98b37e336b787a281090392c" kindref="member">utf_error</ref></type>
+        <definition>utf_error utf8::internal::get_sequence_2</definition>
+        <argsstring>(octet_iterator &amp;it, octet_iterator end, uint32_t &amp;code_point)</argsstring>
+        <name>get_sequence_2</name>
+        <param>
+          <type>octet_iterator &amp;</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>octet_iterator</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceutf8_1a846259d2f173d524282583fc9d825b00" kindref="member">uint32_t</ref> &amp;</type>
+          <declname>code_point</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="164" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="164" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutf8_1_1internal_1ac1809a1fb3fa6983d64a0d3a39646008" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename octet_iterator</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceutf8_1_1internal_1a9e96c2bc98b37e336b787a281090392c" kindref="member">utf_error</ref></type>
+        <definition>utf_error utf8::internal::get_sequence_3</definition>
+        <argsstring>(octet_iterator &amp;it, octet_iterator end, uint32_t &amp;code_point)</argsstring>
+        <name>get_sequence_3</name>
+        <param>
+          <type>octet_iterator &amp;</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>octet_iterator</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceutf8_1a846259d2f173d524282583fc9d825b00" kindref="member">uint32_t</ref> &amp;</type>
+          <declname>code_point</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="179" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="179" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutf8_1_1internal_1ad1958e7c6746ba6b1fbb0d81b88b346c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename octet_iterator</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceutf8_1_1internal_1a9e96c2bc98b37e336b787a281090392c" kindref="member">utf_error</ref></type>
+        <definition>utf_error utf8::internal::get_sequence_4</definition>
+        <argsstring>(octet_iterator &amp;it, octet_iterator end, uint32_t &amp;code_point)</argsstring>
+        <name>get_sequence_4</name>
+        <param>
+          <type>octet_iterator &amp;</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>octet_iterator</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceutf8_1a846259d2f173d524282583fc9d825b00" kindref="member">uint32_t</ref> &amp;</type>
+          <declname>code_point</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="198" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="198" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutf8_1_1internal_1abe95547575fcc81911e381df03f8ebfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename octet_iterator</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceutf8_1_1internal_1a9e96c2bc98b37e336b787a281090392c" kindref="member">utf_error</ref></type>
+        <definition>utf_error utf8::internal::validate_next</definition>
+        <argsstring>(octet_iterator &amp;it, octet_iterator end, uint32_t &amp;code_point)</argsstring>
+        <name>validate_next</name>
+        <param>
+          <type>octet_iterator &amp;</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>octet_iterator</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceutf8_1a846259d2f173d524282583fc9d825b00" kindref="member">uint32_t</ref> &amp;</type>
+          <declname>code_point</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="223" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="223" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutf8_1_1internal_1afd41668f94ce9f60f8e314d05804cecc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename octet_iterator</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceutf8_1_1internal_1a9e96c2bc98b37e336b787a281090392c" kindref="member">utf_error</ref></type>
+        <definition>utf_error utf8::internal::validate_next</definition>
+        <argsstring>(octet_iterator &amp;it, octet_iterator end)</argsstring>
+        <name>validate_next</name>
+        <param>
+          <type>octet_iterator &amp;</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>octet_iterator</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="278" column="22" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" bodystart="278" bodyend="281"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/utfcpp/utf8/core.h" line="43" column="1"/>
+  </compounddef>
+</doxygen>

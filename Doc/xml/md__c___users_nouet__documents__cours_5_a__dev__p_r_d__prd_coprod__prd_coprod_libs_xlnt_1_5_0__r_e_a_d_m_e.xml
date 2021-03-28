@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0__r_e_a_d_m_e" kind="page">
+    <compoundname>md_C__Users_nouet_Documents_Cours_5A_Dev_PRD_PrdCoprod_PrdCoprod_libs_xlnt_1_5_0_README</compoundname>
+    <title>&lt;img height=&quot;100&quot; src=&quot;https://user-images.githubusercontent.com/1735211/29433390-f37fa28e-836c-11e7-8a60-f8df4c30b424.png&quot; alt=&quot;xlnt logo&quot;&gt;&lt;br/&gt;</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ulink url="https://travis-ci.org/tfussell/xlnt"><image type="html" name="https://travis-ci.org/tfussell/xlnt.svg?branch=master" alt="Travis Build Status" inline="yes"></image>
+</ulink> <ulink url="https://ci.appveyor.com/project/tfussell/xlnt"><image type="html" name="https://ci.appveyor.com/api/projects/status/2hs79a1xoxy16sol?svg=true" alt="AppVeyor Build status" inline="yes"></image>
+</ulink> <ulink url="https://coveralls.io/github/tfussell/xlnt?branch=master"><image type="html" name="https://coveralls.io/repos/github/tfussell/xlnt/badge.svg?branch=master" alt="Coverage Status" inline="yes"></image>
+</ulink> <ulink url="https://tfussell.gitbooks.io/xlnt/content/"><image type="html" name="https://legacy.gitbook.com/button/status/book/tfussell/xlnt" alt="Documentation Status" inline="yes"></image>
+</ulink> <ulink url="http://opensource.org/licenses/MIT"><image type="html" name="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License" inline="yes"></image>
+</ulink></para>
+<sect1 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0__r_e_a_d_m_e_1autotoc_md183">
+<title>Introduction</title>
+<para>xlnt is a modern C++ library for manipulating spreadsheets in memory and reading/writing them from/to XLSX files as described in <ulink url="http://www.ecma-international.org/publications/standards/Ecma-376.htm">ECMA 376 4th edition</ulink>. The first public release of xlnt version 1.0 was on May 10th, 2017. Current work is focused on increasing compatibility, improving performance, and brainstorming future development goals. For a high-level summary of what you can do with this library, see <ulink url="https://tfussell.gitbooks.io/xlnt/content/docs/introduction/Features.html">the feature list</ulink>. Contributions are welcome in the form of pull requests or discussions on <ulink url="https://github.com/tfussell/xlnt/issues">the repository&apos;s Issues page</ulink>.</para>
+</sect1>
+<sect1 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0__r_e_a_d_m_e_1autotoc_md184">
+<title>Example</title>
+<para>Including xlnt in your project, creating a new spreadsheet, and saving it as &quot;example.xlsx&quot;</para>
+<para><programlisting><codeline><highlight class="normal"><sp/>{c++}</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;xlnt/xlnt.hpp&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xlnt::workbook<sp/>wb;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xlnt::worksheet<sp/>ws<sp/>=<sp/>wb.active_sheet();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ws.cell(&quot;A1&quot;).value(5);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ws.cell(&quot;B2&quot;).value(&quot;string<sp/>data&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ws.cell(&quot;C3&quot;).formula(&quot;=RAND()&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ws.merge_cells(&quot;C3:C4&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ws.freeze_panes(&quot;B2&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wb.save(&quot;example.xlsx&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>compile<sp/>with<sp/>-std=c++14<sp/>-Ixlnt/include<sp/>-lxlnt</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0__r_e_a_d_m_e_1autotoc_md185">
+<title>Documentation</title>
+<para>Documentation for the current release of xlnt is available <ulink url="https://tfussell.gitbooks.io/xlnt/content/">here</ulink>.</para>
+</sect1>
+<sect1 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0__r_e_a_d_m_e_1autotoc_md186">
+<title>License</title>
+<para>xlnt is released to the public for free under the terms of the MIT License. See <ulink url="https://github.com/tfussell/xlnt/blob/master/LICENSE.md">LICENSE.md</ulink> for the full text of the license and the licenses of xlnt&apos;s third-party dependencies. <ulink url="https://github.com/tfussell/xlnt/blob/master/LICENSE.md">LICENSE.md</ulink> should be distributed alongside any assemblies that use xlnt in source or compiled form. </para>
+</sect1>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,263 @@
+\hypertarget{structpybind11_1_1detail_1_1function__record}{}\doxysection{pybind11\+::detail\+::function\+\_\+record Struct Reference}
+\label{structpybind11_1_1detail_1_1function__record}\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+
+
+Internal data structure which holds metadata about a bound function (signature, overloads, etc.)  
+
+
+
+
+{\ttfamily \#include $<$attr.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_aebe142a715fe0f607b9d9d043bb98553}{function\+\_\+record}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_ae046d832009087ff3c32c80eaf420ee3}{name}} = nullptr
+\begin{DoxyCompactList}\small\item\em Function name. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_ad7c22dbd6ae5aeab7daa0a0fed039e27}{doc}} = nullptr
+\item 
+char $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_aaa1fe3da00b2befbb4bf35d1391bcfb2}{signature}} = nullptr
+\begin{DoxyCompactList}\small\item\em Human-\/readable version of the function signature. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structpybind11_1_1detail_1_1argument__record}{argument\+\_\+record}} $>$ \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_a29bd23b885c7cc3caa965c2d285a8623}{args}}
+\begin{DoxyCompactList}\small\item\em List of registered keyword arguments. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpybind11_1_1handle}{handle}}($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_ae30b303a40c9bffa8366c7720deb08f6}{impl}} )(\mbox{\hyperlink{structpybind11_1_1detail_1_1function__call}{function\+\_\+call}} \&) = nullptr
+\begin{DoxyCompactList}\small\item\em Pointer to lambda function which converts arguments and performs the actual call. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_ae2a82ba212358736a59296a481252ca6}{data}} \mbox{[}3\mbox{]} = \{ \}
+\begin{DoxyCompactList}\small\item\em Storage for the wrapped function pointer and captured data, if any. \end{DoxyCompactList}\item 
+void($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_af46b038d5eeb07d018100a3768eff92d}{free\+\_\+data}} )(\mbox{\hyperlink{structpybind11_1_1detail_1_1function__record}{function\+\_\+record}} $\ast$ptr) = nullptr
+\begin{DoxyCompactList}\small\item\em Pointer to custom destructor for \textquotesingle{}data\textquotesingle{} (if needed) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}} \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_a1eebd7316737cc4fb4e4675cc37abc0b}{policy}} = \mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69ca2bd9c0ed00116be1258e0cc66617d7c8}{return\+\_\+value\+\_\+policy\+::automatic}}
+\begin{DoxyCompactList}\small\item\em Return value policy associated with this function. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_a902316a20e058d6a3751b57a6d707228}{is\+\_\+constructor}}\+: 1
+\begin{DoxyCompactList}\small\item\em True if name == \textquotesingle{}{\bfseries{init}}\textquotesingle{}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_a83976cb2b4de62a4af2774fad0bbc7df}{is\+\_\+stateless}}\+: 1
+\begin{DoxyCompactList}\small\item\em True if this is a stateless function pointer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_add71067ede64387a1c7e7ca52427c9bc}{is\+\_\+operator}}\+: 1
+\begin{DoxyCompactList}\small\item\em True if this is an operator ({\bfseries{add}}), etc. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_afd0c35491f9494315566e2486aa332d0}{has\+\_\+args}}\+: 1
+\begin{DoxyCompactList}\small\item\em True if the function has a \textquotesingle{}$\ast$args\textquotesingle{} argument. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_a88f2e51ffa99eb3e028fbda663f4d101}{has\+\_\+kwargs}}\+: 1
+\begin{DoxyCompactList}\small\item\em True if the function has a \textquotesingle{}$\ast$$\ast$kwargs\textquotesingle{} argument. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_a660316dea064e5ebb60602330c199f1d}{is\+\_\+method}}\+: 1
+\begin{DoxyCompactList}\small\item\em True if this is a method. \end{DoxyCompactList}\item 
+std\+::uint16\+\_\+t \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_a3711026f03324010de2e306f5a0bafa3}{nargs}}
+\begin{DoxyCompactList}\small\item\em Number of arguments (including py\+::args and/or py\+::kwargs, if present) \end{DoxyCompactList}\item 
+Py\+Method\+Def $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_a3b1ea13465575aee19c2852fc0ba43c4}{def}} = nullptr
+\begin{DoxyCompactList}\small\item\em Python method object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_a519099348f8dd2fc7607e6ba3b1a295a}{scope}}
+\begin{DoxyCompactList}\small\item\em Python handle to the parent scope (a class or a module) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_a78716efc5aea71e9c12c8aacd03e788f}{sibling}}
+\begin{DoxyCompactList}\small\item\em Python handle to the sibling function representing an overload chain. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1function__record}{function\+\_\+record}} $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record_ac2389deeb7061b9f922bcccf1436d65c}{next}} = nullptr
+\begin{DoxyCompactList}\small\item\em Pointer to next overload. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Internal data structure which holds metadata about a bound function (signature, overloads, etc.) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_aebe142a715fe0f607b9d9d043bb98553}\label{structpybind11_1_1detail_1_1function__record_aebe142a715fe0f607b9d9d043bb98553}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!function\_record@{function\_record}}
+\index{function\_record@{function\_record}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{function\_record()}{function\_record()}}
+{\footnotesize\ttfamily pybind11\+::detail\+::function\+\_\+record\+::function\+\_\+record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_a29bd23b885c7cc3caa965c2d285a8623}\label{structpybind11_1_1detail_1_1function__record_a29bd23b885c7cc3caa965c2d285a8623}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!args@{args}}
+\index{args@{args}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structpybind11_1_1detail_1_1argument__record}{argument\+\_\+record}}$>$ pybind11\+::detail\+::function\+\_\+record\+::args}
+
+
+
+List of registered keyword arguments. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_ae2a82ba212358736a59296a481252ca6}\label{structpybind11_1_1detail_1_1function__record_ae2a82ba212358736a59296a481252ca6}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!data@{data}}
+\index{data@{data}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily void$\ast$ pybind11\+::detail\+::function\+\_\+record\+::data\mbox{[}3\mbox{]} = \{ \}}
+
+
+
+Storage for the wrapped function pointer and captured data, if any. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_a3b1ea13465575aee19c2852fc0ba43c4}\label{structpybind11_1_1detail_1_1function__record_a3b1ea13465575aee19c2852fc0ba43c4}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!def@{def}}
+\index{def@{def}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{def}{def}}
+{\footnotesize\ttfamily Py\+Method\+Def$\ast$ pybind11\+::detail\+::function\+\_\+record\+::def = nullptr}
+
+
+
+Python method object. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_ad7c22dbd6ae5aeab7daa0a0fed039e27}\label{structpybind11_1_1detail_1_1function__record_ad7c22dbd6ae5aeab7daa0a0fed039e27}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!doc@{doc}}
+\index{doc@{doc}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{doc}{doc}}
+{\footnotesize\ttfamily char$\ast$ pybind11\+::detail\+::function\+\_\+record\+::doc = nullptr}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_af46b038d5eeb07d018100a3768eff92d}\label{structpybind11_1_1detail_1_1function__record_af46b038d5eeb07d018100a3768eff92d}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!free\_data@{free\_data}}
+\index{free\_data@{free\_data}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{free\_data}{free\_data}}
+{\footnotesize\ttfamily void($\ast$ pybind11\+::detail\+::function\+\_\+record\+::free\+\_\+data) (\mbox{\hyperlink{structpybind11_1_1detail_1_1function__record}{function\+\_\+record}} $\ast$ptr) = nullptr}
+
+
+
+Pointer to custom destructor for \textquotesingle{}data\textquotesingle{} (if needed) 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_afd0c35491f9494315566e2486aa332d0}\label{structpybind11_1_1detail_1_1function__record_afd0c35491f9494315566e2486aa332d0}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!has\_args@{has\_args}}
+\index{has\_args@{has\_args}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{has\_args}{has\_args}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::function\+\_\+record\+::has\+\_\+args}
+
+
+
+True if the function has a \textquotesingle{}$\ast$args\textquotesingle{} argument. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_a88f2e51ffa99eb3e028fbda663f4d101}\label{structpybind11_1_1detail_1_1function__record_a88f2e51ffa99eb3e028fbda663f4d101}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!has\_kwargs@{has\_kwargs}}
+\index{has\_kwargs@{has\_kwargs}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{has\_kwargs}{has\_kwargs}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::function\+\_\+record\+::has\+\_\+kwargs}
+
+
+
+True if the function has a \textquotesingle{}$\ast$$\ast$kwargs\textquotesingle{} argument. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_ae30b303a40c9bffa8366c7720deb08f6}\label{structpybind11_1_1detail_1_1function__record_ae30b303a40c9bffa8366c7720deb08f6}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!impl@{impl}}
+\index{impl@{impl}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{impl}{impl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpybind11_1_1handle}{handle}}($\ast$ pybind11\+::detail\+::function\+\_\+record\+::impl) (\mbox{\hyperlink{structpybind11_1_1detail_1_1function__call}{function\+\_\+call}} \&) = nullptr}
+
+
+
+Pointer to lambda function which converts arguments and performs the actual call. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_a902316a20e058d6a3751b57a6d707228}\label{structpybind11_1_1detail_1_1function__record_a902316a20e058d6a3751b57a6d707228}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!is\_constructor@{is\_constructor}}
+\index{is\_constructor@{is\_constructor}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{is\_constructor}{is\_constructor}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::function\+\_\+record\+::is\+\_\+constructor}
+
+
+
+True if name == \textquotesingle{}{\bfseries{init}}\textquotesingle{}. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_a660316dea064e5ebb60602330c199f1d}\label{structpybind11_1_1detail_1_1function__record_a660316dea064e5ebb60602330c199f1d}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!is\_method@{is\_method}}
+\index{is\_method@{is\_method}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{is\_method}{is\_method}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::function\+\_\+record\+::is\+\_\+method}
+
+
+
+True if this is a method. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_add71067ede64387a1c7e7ca52427c9bc}\label{structpybind11_1_1detail_1_1function__record_add71067ede64387a1c7e7ca52427c9bc}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!is\_operator@{is\_operator}}
+\index{is\_operator@{is\_operator}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{is\_operator}{is\_operator}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::function\+\_\+record\+::is\+\_\+operator}
+
+
+
+True if this is an operator ({\bfseries{add}}), etc. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_a83976cb2b4de62a4af2774fad0bbc7df}\label{structpybind11_1_1detail_1_1function__record_a83976cb2b4de62a4af2774fad0bbc7df}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!is\_stateless@{is\_stateless}}
+\index{is\_stateless@{is\_stateless}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{is\_stateless}{is\_stateless}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::function\+\_\+record\+::is\+\_\+stateless}
+
+
+
+True if this is a stateless function pointer. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_ae046d832009087ff3c32c80eaf420ee3}\label{structpybind11_1_1detail_1_1function__record_ae046d832009087ff3c32c80eaf420ee3}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!name@{name}}
+\index{name@{name}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char$\ast$ pybind11\+::detail\+::function\+\_\+record\+::name = nullptr}
+
+
+
+Function name. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_a3711026f03324010de2e306f5a0bafa3}\label{structpybind11_1_1detail_1_1function__record_a3711026f03324010de2e306f5a0bafa3}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!nargs@{nargs}}
+\index{nargs@{nargs}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{nargs}{nargs}}
+{\footnotesize\ttfamily std\+::uint16\+\_\+t pybind11\+::detail\+::function\+\_\+record\+::nargs}
+
+
+
+Number of arguments (including py\+::args and/or py\+::kwargs, if present) 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_ac2389deeb7061b9f922bcccf1436d65c}\label{structpybind11_1_1detail_1_1function__record_ac2389deeb7061b9f922bcccf1436d65c}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!next@{next}}
+\index{next@{next}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpybind11_1_1detail_1_1function__record}{function\+\_\+record}}$\ast$ pybind11\+::detail\+::function\+\_\+record\+::next = nullptr}
+
+
+
+Pointer to next overload. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_a1eebd7316737cc4fb4e4675cc37abc0b}\label{structpybind11_1_1detail_1_1function__record_a1eebd7316737cc4fb4e4675cc37abc0b}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!policy@{policy}}
+\index{policy@{policy}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{policy}{policy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}} pybind11\+::detail\+::function\+\_\+record\+::policy = \mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69ca2bd9c0ed00116be1258e0cc66617d7c8}{return\+\_\+value\+\_\+policy\+::automatic}}}
+
+
+
+Return value policy associated with this function. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_a519099348f8dd2fc7607e6ba3b1a295a}\label{structpybind11_1_1detail_1_1function__record_a519099348f8dd2fc7607e6ba3b1a295a}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!scope@{scope}}
+\index{scope@{scope}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{scope}{scope}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpybind11_1_1handle}{handle}} pybind11\+::detail\+::function\+\_\+record\+::scope}
+
+
+
+Python handle to the parent scope (a class or a module) 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_a78716efc5aea71e9c12c8aacd03e788f}\label{structpybind11_1_1detail_1_1function__record_a78716efc5aea71e9c12c8aacd03e788f}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!sibling@{sibling}}
+\index{sibling@{sibling}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{sibling}{sibling}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpybind11_1_1handle}{handle}} pybind11\+::detail\+::function\+\_\+record\+::sibling}
+
+
+
+Python handle to the sibling function representing an overload chain. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1function__record_aaa1fe3da00b2befbb4bf35d1391bcfb2}\label{structpybind11_1_1detail_1_1function__record_aaa1fe3da00b2befbb4bf35d1391bcfb2}} 
+\index{pybind11::detail::function\_record@{pybind11::detail::function\_record}!signature@{signature}}
+\index{signature@{signature}!pybind11::detail::function\_record@{pybind11::detail::function\_record}}
+\doxysubsubsection{\texorpdfstring{signature}{signature}}
+{\footnotesize\ttfamily char$\ast$ pybind11\+::detail\+::function\+\_\+record\+::signature = nullptr}
+
+
+
+Human-\/readable version of the function signature. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{attr_8h}{attr.\+h}}\end{DoxyCompactItemize}

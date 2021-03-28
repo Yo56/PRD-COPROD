@@ -1,0 +1,42 @@
+\hypertarget{structpybind11_1_1detail_1_1is__fmt__numeric_3_01_t_00_01enable__if__t_3_01std_1_1is__arithmetic_3_01_t_01_4_1_1value_01_4_01_4}{}\doxysection{pybind11\+::detail\+::is\+\_\+fmt\+\_\+numeric$<$ T, enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+arithmetic$<$ T $>$\+::value $>$ $>$ Struct Template Reference}
+\label{structpybind11_1_1detail_1_1is__fmt__numeric_3_01_t_00_01enable__if__t_3_01std_1_1is__arithmetic_3_01_t_01_4_1_1value_01_4_01_4}\index{pybind11::detail::is\_fmt\_numeric$<$ T, enable\_if\_t$<$ std::is\_arithmetic$<$ T $>$::value $>$ $>$@{pybind11::detail::is\_fmt\_numeric$<$ T, enable\_if\_t$<$ std::is\_arithmetic$<$ T $>$::value $>$ $>$}}
+
+
+{\ttfamily \#include $<$common.\+h$>$}
+
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1is__fmt__numeric_3_01_t_00_01enable__if__t_3_01std_1_1is__arithmetic_3_01_t_01_4_1_1value_01_4_01_4_a82e4179da801ba561192a573349ef388}{value}} = true
+\item 
+static constexpr int \mbox{\hyperlink{structpybind11_1_1detail_1_1is__fmt__numeric_3_01_t_00_01enable__if__t_3_01std_1_1is__arithmetic_3_01_t_01_4_1_1value_01_4_01_4_aed469c75ecd7cc49f8cff75edbc69289}{index}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1is__fmt__numeric_3_01_t_00_01enable__if__t_3_01std_1_1is__arithmetic_3_01_t_01_4_1_1value_01_4_01_4_aed469c75ecd7cc49f8cff75edbc69289}\label{structpybind11_1_1detail_1_1is__fmt__numeric_3_01_t_00_01enable__if__t_3_01std_1_1is__arithmetic_3_01_t_01_4_1_1value_01_4_01_4_aed469c75ecd7cc49f8cff75edbc69289}} 
+\index{pybind11::detail::is\_fmt\_numeric$<$ T, enable\_if\_t$<$ std::is\_arithmetic$<$ T $>$::value $>$ $>$@{pybind11::detail::is\_fmt\_numeric$<$ T, enable\_if\_t$<$ std::is\_arithmetic$<$ T $>$::value $>$ $>$}!index@{index}}
+\index{index@{index}!pybind11::detail::is\_fmt\_numeric$<$ T, enable\_if\_t$<$ std::is\_arithmetic$<$ T $>$::value $>$ $>$@{pybind11::detail::is\_fmt\_numeric$<$ T, enable\_if\_t$<$ std::is\_arithmetic$<$ T $>$::value $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr int \mbox{\hyperlink{structpybind11_1_1detail_1_1is__fmt__numeric}{pybind11\+::detail\+::is\+\_\+fmt\+\_\+numeric}}$<$ T, \mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ std\+::is\+\_\+arithmetic$<$ T $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1is__fmt__numeric_3_01_t_00_01enable__if__t_3_01std_1_1is__arithmetic_3_01_t_01_4_1_1value_01_4_01_4_a82e4179da801ba561192a573349ef388}{value}} $>$ $>$\+::index\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{structpybind11_1_1detail_1_1is__fmt__numeric_a2618d405bcf5edce3c72152f079cf161}{std::is\_same<T, bool>::value}} ? 0 : 1 + (}
+\DoxyCodeLine{        \mbox{\hyperlink{structpybind11_1_1detail_1_1is__fmt__numeric_a2618d405bcf5edce3c72152f079cf161}{std::is\_integral<T>::value}} ? detail::log2(\textcolor{keyword}{sizeof}(T))*2 + \mbox{\hyperlink{structpybind11_1_1detail_1_1is__fmt__numeric_a2618d405bcf5edce3c72152f079cf161}{std::is\_unsigned<T>::value}} : 8 + (}
+\DoxyCodeLine{        \mbox{\hyperlink{structpybind11_1_1detail_1_1is__fmt__numeric_a2618d405bcf5edce3c72152f079cf161}{std::is\_same<T, double>::value}} ? 1 : \mbox{\hyperlink{structpybind11_1_1detail_1_1is__fmt__numeric_a2618d405bcf5edce3c72152f079cf161}{std::is\_same<T, long double>::value}} ? 2 : 0))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1is__fmt__numeric_3_01_t_00_01enable__if__t_3_01std_1_1is__arithmetic_3_01_t_01_4_1_1value_01_4_01_4_a82e4179da801ba561192a573349ef388}\label{structpybind11_1_1detail_1_1is__fmt__numeric_3_01_t_00_01enable__if__t_3_01std_1_1is__arithmetic_3_01_t_01_4_1_1value_01_4_01_4_a82e4179da801ba561192a573349ef388}} 
+\index{pybind11::detail::is\_fmt\_numeric$<$ T, enable\_if\_t$<$ std::is\_arithmetic$<$ T $>$::value $>$ $>$@{pybind11::detail::is\_fmt\_numeric$<$ T, enable\_if\_t$<$ std::is\_arithmetic$<$ T $>$::value $>$ $>$}!value@{value}}
+\index{value@{value}!pybind11::detail::is\_fmt\_numeric$<$ T, enable\_if\_t$<$ std::is\_arithmetic$<$ T $>$::value $>$ $>$@{pybind11::detail::is\_fmt\_numeric$<$ T, enable\_if\_t$<$ std::is\_arithmetic$<$ T $>$::value $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1is__fmt__numeric}{pybind11\+::detail\+::is\+\_\+fmt\+\_\+numeric}}$<$ T, \mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ std\+::is\+\_\+arithmetic$<$ T $>$\+::value $>$ $>$\+::value = true\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{common_8h}{common.\+h}}\end{DoxyCompactItemize}

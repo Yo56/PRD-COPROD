@@ -31,9 +31,9 @@ using \mbox{\hyperlink{classxlnt_1_1range_aa68c98bfd385853a5de3439b8a3a9a4b}{con
 \begin{DoxyCompactList}\small\item\em Default copy constructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classxlnt_1_1range_a601865c497b77e5798131f6a3359c164}{clear\+\_\+cells}} ()
 \begin{DoxyCompactList}\small\item\em Erases all cell data from the worksheet for cells within this range. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} \mbox{\hyperlink{classxlnt_1_1range_a15708936d1c196e2025e5c31190e3fe9}{vector}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} n)
+\mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} \mbox{\hyperlink{classxlnt_1_1range_a15708936d1c196e2025e5c31190e3fe9}{vector}} (std\+::size\+\_\+t n)
 \begin{DoxyCompactList}\small\item\em Returns a vector pointing to the n-\/th row or column in this range (depending on major order). \end{DoxyCompactList}\item 
-const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} \mbox{\hyperlink{classxlnt_1_1range_a484604bfc32de74cb74662484a160d1e}{vector}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} n) const
+const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} \mbox{\hyperlink{classxlnt_1_1range_a484604bfc32de74cb74662484a160d1e}{vector}} (std\+::size\+\_\+t n) const
 \begin{DoxyCompactList}\small\item\em Returns a vector pointing to the n-\/th row or column in this range (depending on major order). \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classxlnt_1_1cell}{cell}} \mbox{\hyperlink{classxlnt_1_1range_ab0e8d49721f772b7168606197fe636b4}{cell}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&ref)
 \begin{DoxyCompactList}\small\item\em Returns a cell in the range relative to its top left cell. \end{DoxyCompactList}\item 
@@ -43,7 +43,7 @@ const \mbox{\hyperlink{classxlnt_1_1worksheet}{worksheet}} \& \mbox{\hyperlink{c
 \begin{DoxyCompactList}\small\item\em The worksheet this range targets \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classxlnt_1_1range__reference}{range\+\_\+reference}} \mbox{\hyperlink{classxlnt_1_1range_acfbd00b87a31b4401bd9af27133d38a9}{reference}} () const
 \begin{DoxyCompactList}\small\item\em Returns the reference defining the bounds of this range. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1range_a6d60789467622ed6758a92d6af0376b2}{length}} () const
+std\+::size\+\_\+t \mbox{\hyperlink{classxlnt_1_1range_a6d60789467622ed6758a92d6af0376b2}{length}} () const
 \begin{DoxyCompactList}\small\item\em Returns the number of rows or columns in this range (depending on major order). \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classxlnt_1_1range_a7c5cd7f0b363adf41275778a25969d18}{contains}} (const \mbox{\hyperlink{classxlnt_1_1cell__reference}{cell\+\_\+reference}} \&ref)
 \begin{DoxyCompactList}\small\item\em Returns true if the given cell exists in the parent worksheet of this range. \end{DoxyCompactList}\item 
@@ -99,9 +99,9 @@ const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} \mbox{\hype
 \begin{DoxyCompactList}\small\item\em Returns a reverse iterator to one past the last row or column in this range. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classxlnt_1_1range_a8df0f556f491fbd957d5ce8913f35b4d}{apply}} (std\+::function$<$ void(class \mbox{\hyperlink{classxlnt_1_1cell}{cell}})$>$ f)
 \begin{DoxyCompactList}\small\item\em Applies function f to all cells in the range \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} \mbox{\hyperlink{classxlnt_1_1range_ac95c1c2acfc08036f28da76c7fa5580f}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} n)
+\mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} \mbox{\hyperlink{classxlnt_1_1range_ac95c1c2acfc08036f28da76c7fa5580f}{operator\mbox{[}$\,$\mbox{]}}} (std\+::size\+\_\+t n)
 \begin{DoxyCompactList}\small\item\em Returns the n-\/th row or column in this range. \end{DoxyCompactList}\item 
-const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} \mbox{\hyperlink{classxlnt_1_1range_a24c99985773df7cc5fe177009f59cb88}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} n) const
+const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} \mbox{\hyperlink{classxlnt_1_1range_a24c99985773df7cc5fe177009f59cb88}{operator\mbox{[}$\,$\mbox{]}}} (std\+::size\+\_\+t n) const
 \begin{DoxyCompactList}\small\item\em Returns the n-\/th row or column in this range. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classxlnt_1_1range_ac6e68ab01c1cac4ffab41451d30ebae0}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1range}{range}} \&comparand) const
 \begin{DoxyCompactList}\small\item\em Returns true if this range is equivalent to comparand. \end{DoxyCompactList}\item 
@@ -415,7 +415,7 @@ Returns the first row or column in this range.
 \index{xlnt::range@{xlnt::range}!length@{length}}
 \index{length@{length}!xlnt::range@{xlnt::range}}
 \doxysubsubsection{\texorpdfstring{length()}{length()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::range\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily std\+::size\+\_\+t xlnt\+::range\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -455,7 +455,7 @@ Returns true if this range is equivalent to comparand.
 \index{xlnt::range@{xlnt::range}!operator\mbox{[}\mbox{]}@{operator[]}}
 \index{operator\mbox{[}\mbox{]}@{operator[]}!xlnt::range@{xlnt::range}}
 \doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} xlnt\+::range\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} xlnt\+::range\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption})}
 
 
 
@@ -465,7 +465,7 @@ Returns the n-\/th row or column in this range.
 \index{xlnt::range@{xlnt::range}!operator\mbox{[}\mbox{]}@{operator[]}}
 \index{operator\mbox{[}\mbox{]}@{operator[]}!xlnt::range@{xlnt::range}}
 \doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} xlnt\+::range\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{n }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} xlnt\+::range\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption}) const}
 
 
 
@@ -565,7 +565,7 @@ The worksheet this range targets
 \index{xlnt::range@{xlnt::range}!vector@{vector}}
 \index{vector@{vector}!xlnt::range@{xlnt::range}}
 \doxysubsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} xlnt\+::range\+::vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} xlnt\+::range\+::vector (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption})}
 
 
 
@@ -575,7 +575,7 @@ Returns a vector pointing to the n-\/th row or column in this range (depending o
 \index{xlnt::range@{xlnt::range}!vector@{vector}}
 \index{vector@{vector}!xlnt::range@{xlnt::range}}
 \doxysubsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} xlnt\+::range\+::vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{n }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1cell__vector}{cell\+\_\+vector}} xlnt\+::range\+::vector (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption}) const}
 
 
 

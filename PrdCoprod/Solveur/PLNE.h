@@ -22,21 +22,44 @@ using namespace std;
 class PLNE
 {
 private:
+	/*! variable d'environnement */
+	IloEnv env; 
 
-	IloEnv env; /*! variable d'environnement */
-	IloModel model; /*! variable representant le modele a resoudre (variables, contraintes) */
-	IloCplex cplex; /*! variable Cplex */
+	/*! variable representant le modele a resoudre (variables, contraintes) */
+	IloModel model; 
 
-	IloInt n; /*! nombre total d'operations*/
-	IloInt m; /*! nombre de voies*/
-	IloInt D; /*! Horizon de planification (en heures)*/
-	IloInt nInfra; /*! nombre de types d'infrastructures*/
-	IloInt nSite; /*!  nombre sites*/
-	IloInt nSlot; /*! Nombre de creneaux horaires de travail des sites sur l horizon*/
-	IloInt nTrain; /*! nombre rames*/
-	IloInt nAgent; /*! nombre agents*/
-	IloInt nSkill; /*! nombre competences*/
-	IloNum alpha; /*! taux d'avance maximum par rapport a la butee*/
+	/*! variable Cplex */
+	IloCplex cplex;
+
+	/*! nombre total d'operations*/
+	IloInt n; 
+
+	/*! nombre de voies*/
+	IloInt m;
+
+	/*! Horizon de planification (en heures)*/
+	IloInt D; 
+
+	/*! nombre de types d'infrastructures*/
+	IloInt nInfra;
+
+	/*!  nombre de sites*/
+	IloInt nSite; 
+
+	/*! Nombre de creneaux horaires de travail des sites sur l horizon*/
+	IloInt nSlot; 
+
+	/*! nombre rames*/
+	IloInt nTrain;
+
+	/*! nombre agents*/
+	IloInt nAgent;
+
+	/*! nombre competences*/
+	IloInt nSkill;
+
+	/*! taux d'avance maximum par rapport a la butee*/
+	IloNum alpha; 
 
 	// -------------------------- definition des donnees vectorielles --------------------------------------//
 

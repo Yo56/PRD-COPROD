@@ -12,7 +12,7 @@ Classe Input.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_c_input_a667e3c38bfc7460c3c5ea2b48baa7352}{CInput}} (int n, int m, int D, int n\+Infra, int n\+Site, int n\+Slot, int n\+Train, int n\+Agent, int n\+Skill, double alpha, std\+::vector$<$ double $>$ p, std\+::vector$<$ double $>$ p\+Delta, std\+::vector$<$ int $>$ r, std\+::vector$<$ int $>$ d, std\+::vector$<$ double $>$ w, std\+::vector$<$ double $>$ u, vector$<$ vector$<$ int $>$ $>$ NI\+\_\+ik, vector$<$ vector$<$ int $>$ $>$ IN\+\_\+jk, vector$<$ vector$<$ int $>$ $>$ r\+Max\+\_\+lh, vector$<$ int $>$ r\+Tot, vector$<$ vector$<$ int $>$ $>$ CO\+\_\+ii, vector$<$ vector$<$ int $>$ $>$NS\+\_\+is, vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$ SKL\+\_\+asl, vector$<$ vector$<$ int $>$ $>$ H, vector$<$ vector$<$ int $>$ $>$ L, vector$<$ vector$<$ int $>$ $>$ Oprev, vector$<$ vector$<$ int $>$ $>$ Ocorr, vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$ Ttrain, vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$ Ttrack, vector$<$ vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$ $>$ Tfj, vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$ Tagent)
+\mbox{\hyperlink{class_c_input_ae3473e25dcea29de5a211cd4a35c059a}{CInput}} (int n, int m, int D, int n\+Infra, int n\+Site, int n\+Slot, int n\+Train, int n\+Agent, int n\+Skill, double alpha, vector$<$ int $>$ p, vector$<$ int $>$ p\+Delta, vector$<$ int $>$ r, vector$<$ int $>$ d, vector$<$ double $>$ w, vector$<$ double $>$ u, vector$<$ vector$<$ int $>$ $>$ NI\+\_\+ik, vector$<$ vector$<$ int $>$ $>$ IN\+\_\+jk, vector$<$ vector$<$ int $>$ $>$ r\+Max\+\_\+lh, vector$<$ int $>$ r\+Tot, vector$<$ vector$<$ int $>$ $>$ CO\+\_\+ii, vector$<$ vector$<$ int $>$ $>$NS\+\_\+is, vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$ SKL\+\_\+asl, vector$<$ vector$<$ int $>$ $>$ H, vector$<$ vector$<$ int $>$ $>$ L, vector$<$ vector$<$ int $>$ $>$ Oprev, vector$<$ vector$<$ int $>$ $>$ Ocorr, vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$ Ttrain, vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$ Ttrack, vector$<$ vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$ $>$ Tfj, vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$ Tagent)
 \begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_c_input_a282370813c9dfe52799b1a1ec49e497e}{$\sim$\+CInput}} ()
 \begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
@@ -38,9 +38,9 @@ int \mbox{\hyperlink{class_c_input_a3bfeddac815cf0677fc1cdcbb632501c}{get\+NSkil
 \item 
 double \mbox{\hyperlink{class_c_input_a24304c5f68875ff88adc6dbe1f423053}{get\+Alpha}} ()
 \item 
-vector$<$ double $>$ \mbox{\hyperlink{class_c_input_a63b6d9ad7406b37c2c9c3712dbce243f}{getP}} ()
+vector$<$ int $>$ \mbox{\hyperlink{class_c_input_a422b594a091ea5341a2a6163c41f87d2}{getP}} ()
 \item 
-vector$<$ double $>$ \mbox{\hyperlink{class_c_input_aab9b36ff21b2f31b5aef9ed2f1115acc}{get\+PDelta}} ()
+vector$<$ int $>$ \mbox{\hyperlink{class_c_input_a2547832366ff515ea5009eac7846b3bf}{get\+PDelta}} ()
 \item 
 vector$<$ int $>$ \mbox{\hyperlink{class_c_input_ad4f51f932664fbbea027db2bd4e6c1ca}{getR}} ()
 \item 
@@ -108,11 +108,11 @@ Classe Input.
 La classe permet de creer une instance regroupant les donnees en vue de la resolution par le solveur. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_c_input_a667e3c38bfc7460c3c5ea2b48baa7352}\label{class_c_input_a667e3c38bfc7460c3c5ea2b48baa7352}} 
+\mbox{\Hypertarget{class_c_input_ae3473e25dcea29de5a211cd4a35c059a}\label{class_c_input_ae3473e25dcea29de5a211cd4a35c059a}} 
 \index{CInput@{CInput}!CInput@{CInput}}
 \index{CInput@{CInput}!CInput@{CInput}}
 \doxysubsubsection{\texorpdfstring{CInput()}{CInput()}}
-{\footnotesize\ttfamily CInput\+::\+CInput (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{D,  }\item[{int}]{n\+Infra,  }\item[{int}]{n\+Site,  }\item[{int}]{n\+Slot,  }\item[{int}]{n\+Train,  }\item[{int}]{n\+Agent,  }\item[{int}]{n\+Skill,  }\item[{double}]{alpha,  }\item[{std\+::vector$<$ double $>$}]{p,  }\item[{std\+::vector$<$ double $>$}]{p\+Delta,  }\item[{std\+::vector$<$ int $>$}]{r,  }\item[{std\+::vector$<$ int $>$}]{d,  }\item[{std\+::vector$<$ double $>$}]{w,  }\item[{std\+::vector$<$ double $>$}]{u,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{NI\+\_\+ik,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{IN\+\_\+jk,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{r\+Max\+\_\+lh,  }\item[{vector$<$ int $>$}]{r\+Tot,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{CO\+\_\+ii,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{NS\+\_\+is,  }\item[{vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$}]{SKL\+\_\+asl,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{H,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{L,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{Oprev,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{Ocorr,  }\item[{vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$}]{Ttrain,  }\item[{vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$}]{Ttrack,  }\item[{vector$<$ vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$ $>$}]{Tfj,  }\item[{vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$}]{Tagent }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily CInput\+::\+CInput (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{m,  }\item[{int}]{D,  }\item[{int}]{n\+Infra,  }\item[{int}]{n\+Site,  }\item[{int}]{n\+Slot,  }\item[{int}]{n\+Train,  }\item[{int}]{n\+Agent,  }\item[{int}]{n\+Skill,  }\item[{double}]{alpha,  }\item[{vector$<$ int $>$}]{p,  }\item[{vector$<$ int $>$}]{p\+Delta,  }\item[{vector$<$ int $>$}]{r,  }\item[{vector$<$ int $>$}]{d,  }\item[{vector$<$ double $>$}]{w,  }\item[{vector$<$ double $>$}]{u,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{NI\+\_\+ik,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{IN\+\_\+jk,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{r\+Max\+\_\+lh,  }\item[{vector$<$ int $>$}]{r\+Tot,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{CO\+\_\+ii,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{NS\+\_\+is,  }\item[{vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$}]{SKL\+\_\+asl,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{H,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{L,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{Oprev,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{Ocorr,  }\item[{vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$}]{Ttrain,  }\item[{vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$}]{Ttrack,  }\item[{vector$<$ vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$ $>$}]{Tfj,  }\item[{vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$}]{Tagent }\end{DoxyParamCaption})}
 
 
 
@@ -249,17 +249,17 @@ Destructeur de la classe \mbox{\hyperlink{class_c_input}{CInput}}
 \doxysubsubsection{\texorpdfstring{getOprev()}{getOprev()}}
 {\footnotesize\ttfamily vector$<$ vector$<$ int $>$ $>$ CInput\+::get\+Oprev (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_c_input_a63b6d9ad7406b37c2c9c3712dbce243f}\label{class_c_input_a63b6d9ad7406b37c2c9c3712dbce243f}} 
+\mbox{\Hypertarget{class_c_input_a422b594a091ea5341a2a6163c41f87d2}\label{class_c_input_a422b594a091ea5341a2a6163c41f87d2}} 
 \index{CInput@{CInput}!getP@{getP}}
 \index{getP@{getP}!CInput@{CInput}}
 \doxysubsubsection{\texorpdfstring{getP()}{getP()}}
-{\footnotesize\ttfamily vector$<$ double $>$ CInput\+::getP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily vector$<$ int $>$ CInput\+::getP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_c_input_aab9b36ff21b2f31b5aef9ed2f1115acc}\label{class_c_input_aab9b36ff21b2f31b5aef9ed2f1115acc}} 
+\mbox{\Hypertarget{class_c_input_a2547832366ff515ea5009eac7846b3bf}\label{class_c_input_a2547832366ff515ea5009eac7846b3bf}} 
 \index{CInput@{CInput}!getPDelta@{getPDelta}}
 \index{getPDelta@{getPDelta}!CInput@{CInput}}
 \doxysubsubsection{\texorpdfstring{getPDelta()}{getPDelta()}}
-{\footnotesize\ttfamily vector$<$ double $>$ CInput\+::get\+PDelta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily vector$<$ int $>$ CInput\+::get\+PDelta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_c_input_ad4f51f932664fbbea027db2bd4e6c1ca}\label{class_c_input_ad4f51f932664fbbea027db2bd4e6c1ca}} 
 \index{CInput@{CInput}!getR@{getR}}
@@ -395,5 +395,5 @@ Methode qui permet d\textquotesingle{}afficher les donnees d une instance \mbox{
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/\mbox{\hyperlink{_c_input_8h}{CInput.\+h}}\item 
-C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/\mbox{\hyperlink{_c_input_8cpp}{CInput.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/\+Donnees/\mbox{\hyperlink{_c_input_8h}{CInput.\+h}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/\+Donnees/\mbox{\hyperlink{_c_input_8cpp}{CInput.\+cpp}}\end{DoxyCompactItemize}

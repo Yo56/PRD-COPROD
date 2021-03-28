@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PR&amp;D COPROD: Référence du modèle de la classe pybind11::detail::argument_loader&lt; Args &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PR&amp;D COPROD
+   &#160;<span id="projectnumber">1</span>
+   </div>
+   <div id="projectbrief">Outil d&#39;aide a la planification des operations de maintenance preventive et corrective - Polytech Tours - Yohan Nouet</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacepybind11.html">pybind11</a></li><li class="navelem"><a class="el" href="namespacepybind11_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classpybind11_1_1detail_1_1argument__loader.html">argument_loader</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pub-static-methods">Fonctions membres publiques statiques</a> &#124;
+<a href="#pub-static-attribs">Attributs publics statiques</a> &#124;
+<a href="classpybind11_1_1detail_1_1argument__loader-members.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du modèle de la classe pybind11::detail::argument_loader&lt; Args &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Helper class which loads arguments for C++ functions called from Python.  
+ <a href="classpybind11_1_1detail_1_1argument__loader.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="cast_8h_source.html">cast.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a32be088badccd7cb7e2e9bbb424d1a1f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1argument__loader.html#a32be088badccd7cb7e2e9bbb424d1a1f">load_args</a> (<a class="el" href="structpybind11_1_1detail_1_1function__call.html">function_call</a> &amp;<a class="el" href="classpybind11_1_1detail_1_1argument__loader.html#a48c67a1e6bd71da946f488fc42c55b6d">call</a>)</td></tr>
+<tr class="separator:a32be088badccd7cb7e2e9bbb424d1a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48c67a1e6bd71da946f488fc42c55b6d"><td class="memTemplParams" colspan="2">template&lt;typename Return , typename Guard , typename Func &gt; </td></tr>
+<tr class="memitem:a48c67a1e6bd71da946f488fc42c55b6d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacepybind11_1_1detail.html#a492fb1fcf079a5bc67248b852bc73619">enable_if_t</a>&lt;!std::is_void&lt; Return &gt;::value, Return &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1argument__loader.html#a48c67a1e6bd71da946f488fc42c55b6d">call</a> (Func &amp;&amp;f) &amp;&amp;</td></tr>
+<tr class="separator:a48c67a1e6bd71da946f488fc42c55b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a528436efddd493a1e3e19bd811c8d637"><td class="memTemplParams" colspan="2">template&lt;typename Return , typename Guard , typename Func &gt; </td></tr>
+<tr class="memitem:a528436efddd493a1e3e19bd811c8d637"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacepybind11_1_1detail.html#a492fb1fcf079a5bc67248b852bc73619">enable_if_t</a>&lt; std::is_void&lt; Return &gt;::value, <a class="el" href="structpybind11_1_1detail_1_1void__type.html">void_type</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1argument__loader.html#a528436efddd493a1e3e19bd811c8d637">call</a> (Func &amp;&amp;f) &amp;&amp;</td></tr>
+<tr class="separator:a528436efddd493a1e3e19bd811c8d637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Fonctions membres publiques statiques</h2></td></tr>
+<tr class="memitem:af561fefc965b1269c43943a445eacf9b"><td class="memItemLeft" align="right" valign="top">::<a class="el" href="classpybind11_1_1detail_1_1descr.html">pybind11::detail::descr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1argument__loader.html#af561fefc965b1269c43943a445eacf9b">arg_names</a> ()</td></tr>
+<tr class="separator:af561fefc965b1269c43943a445eacf9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Attributs publics statiques</h2></td></tr>
+<tr class="memitem:ae049fe17713f83569b29f32b7d84707f"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1argument__loader.html#ae049fe17713f83569b29f32b7d84707f">has_kwargs</a> = kwargs_pos &lt; 0</td></tr>
+<tr class="separator:ae049fe17713f83569b29f32b7d84707f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5db3b0b97a5b4392d5f36b5c3135835"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1argument__loader.html#af5db3b0b97a5b4392d5f36b5c3135835">has_args</a> = args_pos &lt; 0</td></tr>
+<tr class="separator:af5db3b0b97a5b4392d5f36b5c3135835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><h3>template&lt;typename... Args&gt;<br />
+class pybind11::detail::argument_loader&lt; Args &gt;</h3>
+
+<p>Helper class which loads arguments for C++ functions called from Python. </p>
+</div><h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="af561fefc965b1269c43943a445eacf9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af561fefc965b1269c43943a445eacf9b">&#9670;&nbsp;</a></span>arg_names()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">::<a class="el" href="classpybind11_1_1detail_1_1descr.html">pybind11::detail::descr</a> <a class="el" href="classpybind11_1_1detail_1_1argument__loader.html">pybind11::detail::argument_loader</a>&lt; Args &gt;::arg_names </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48c67a1e6bd71da946f488fc42c55b6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48c67a1e6bd71da946f488fc42c55b6d">&#9670;&nbsp;</a></span>call() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename Return , typename Guard , typename Func &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacepybind11_1_1detail.html#a492fb1fcf079a5bc67248b852bc73619">enable_if_t</a>&lt;!std::is_void&lt;Return&gt;::value, Return&gt; <a class="el" href="classpybind11_1_1detail_1_1argument__loader.html">pybind11::detail::argument_loader</a>&lt; Args &gt;::call </td>
+          <td>(</td>
+          <td class="paramtype">Func &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td> &amp;&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a528436efddd493a1e3e19bd811c8d637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a528436efddd493a1e3e19bd811c8d637">&#9670;&nbsp;</a></span>call() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename Return , typename Guard , typename Func &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacepybind11_1_1detail.html#a492fb1fcf079a5bc67248b852bc73619">enable_if_t</a>&lt;std::is_void&lt;Return&gt;::value, <a class="el" href="structpybind11_1_1detail_1_1void__type.html">void_type</a>&gt; <a class="el" href="classpybind11_1_1detail_1_1argument__loader.html">pybind11::detail::argument_loader</a>&lt; Args &gt;::call </td>
+          <td>(</td>
+          <td class="paramtype">Func &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td> &amp;&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32be088badccd7cb7e2e9bbb424d1a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32be088badccd7cb7e2e9bbb424d1a1f">&#9670;&nbsp;</a></span>load_args()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classpybind11_1_1detail_1_1argument__loader.html">pybind11::detail::argument_loader</a>&lt; Args &gt;::load_args </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpybind11_1_1detail_1_1function__call.html">function_call</a> &amp;&#160;</td>
+          <td class="paramname"><em>call</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des données membres</h2>
+<a id="af5db3b0b97a5b4392d5f36b5c3135835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5db3b0b97a5b4392d5f36b5c3135835">&#9670;&nbsp;</a></span>has_args</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="classpybind11_1_1detail_1_1argument__loader.html">pybind11::detail::argument_loader</a>&lt; Args &gt;::has_args = args_pos &lt; 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae049fe17713f83569b29f32b7d84707f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae049fe17713f83569b29f32b7d84707f">&#9670;&nbsp;</a></span>has_kwargs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="classpybind11_1_1detail_1_1argument__loader.html">pybind11::detail::argument_loader</a>&lt; Args &gt;::has_kwargs = kwargs_pos &lt; 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+<li>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/<a class="el" href="cast_8h_source.html">cast.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

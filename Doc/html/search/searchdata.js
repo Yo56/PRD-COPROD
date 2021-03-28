@@ -1,10 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "bcdglmnoprstv~",
+  0: "abcdeglmnoprstv~",
   1: "cdlnpst",
   2: "r",
   3: "cmprt",
-  4: "bcdglmoprstv~",
+  4: "abcdeglmoprstv~",
   5: "m",
   6: "c"
 };
@@ -22,12 +22,12 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "All",
+  0: "Tout",
   1: "Classes",
-  2: "Namespaces",
-  3: "Files",
-  4: "Functions",
+  2: "Espaces de nommage",
+  3: "Fichiers",
+  4: "Fonctions",
   5: "Variables",
-  6: "Typedefs"
+  6: "Définitions de type"
 };
 

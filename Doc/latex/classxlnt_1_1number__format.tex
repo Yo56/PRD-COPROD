@@ -14,23 +14,23 @@ Describes the number formatting applied to text and numbers within a certain cel
 \item 
 \mbox{\hyperlink{classxlnt_1_1number__format_a2af3586d8f1d5156771562da790346d3}{number\+\_\+format}} ()
 \begin{DoxyCompactList}\small\item\em Constructs a default \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} equivalent to \char`\"{}\+General\char`\"{} \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classxlnt_1_1number__format_a325c0a9528a07762a6996c1dfe8edfcd}{number\+\_\+format}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} builtin\+\_\+id)
+\mbox{\hyperlink{classxlnt_1_1number__format_a325c0a9528a07762a6996c1dfe8edfcd}{number\+\_\+format}} (std\+::size\+\_\+t builtin\+\_\+id)
 \begin{DoxyCompactList}\small\item\em Constructs a number format equivalent to that returned from number\+\_\+format\+::from\+\_\+builtin\+\_\+id(builtin\+\_\+id). \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classxlnt_1_1number__format_a61b2937320e1957c7d9ff25b0f72cda6}{number\+\_\+format}} (const std\+::string \&code)
 \begin{DoxyCompactList}\small\item\em Constructs a number format from a code string. If the string matches a builtin ID, its ID will also be set to match the builtin ID. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classxlnt_1_1number__format_a84615e37d75fb43b1fc47c991134e351}{number\+\_\+format}} (const std\+::string \&code, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} custom\+\_\+id)
+\mbox{\hyperlink{classxlnt_1_1number__format_a84615e37d75fb43b1fc47c991134e351}{number\+\_\+format}} (const std\+::string \&code, std\+::size\+\_\+t custom\+\_\+id)
 \begin{DoxyCompactList}\small\item\em Constructs a number format from a code string and custom ID. Custom ID should generally be $>$= 164. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classxlnt_1_1number__format_a9a81df42719198e2693a214be89d2718}{format\+\_\+string}} (const std\+::string \&format\+\_\+code)
 \begin{DoxyCompactList}\small\item\em Sets the format code of this number format to format\+\_\+code. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classxlnt_1_1number__format_a3019523e5c92279ab303c351433e57d6}{format\+\_\+string}} (const std\+::string \&format\+\_\+code, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} custom\+\_\+id)
+void \mbox{\hyperlink{classxlnt_1_1number__format_a3019523e5c92279ab303c351433e57d6}{format\+\_\+string}} (const std\+::string \&format\+\_\+code, std\+::size\+\_\+t custom\+\_\+id)
 \begin{DoxyCompactList}\small\item\em Sets the format code of this number format to format\+\_\+code and the ID to custom\+\_\+id. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classxlnt_1_1number__format_a936df793569ba6833825d016c539b18a}{format\+\_\+string}} () const
 \begin{DoxyCompactList}\small\item\em Returns the format code this number format uses. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classxlnt_1_1number__format_a09ee801ca6589c36c08ea648ababce63}{has\+\_\+id}} () const
 \begin{DoxyCompactList}\small\item\em Returns true if this number format has an ID. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classxlnt_1_1number__format_ad2123a9cb95255606e56efcaf039b5a3}{id}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} id)
+void \mbox{\hyperlink{classxlnt_1_1number__format_ad2123a9cb95255606e56efcaf039b5a3}{id}} (std\+::size\+\_\+t id)
 \begin{DoxyCompactList}\small\item\em Sets the ID of this number format to id. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1number__format_aef03101e88db7c53159b6b17f51d4d78}{id}} () const
+std\+::size\+\_\+t \mbox{\hyperlink{classxlnt_1_1number__format_aef03101e88db7c53159b6b17f51d4d78}{id}} () const
 \begin{DoxyCompactList}\small\item\em Returns the ID of this format. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classxlnt_1_1number__format_a311c393ee708876673c3ada232a68b67}{format}} (const std\+::string \&\mbox{\hyperlink{classxlnt_1_1number__format_a57c7cda73f4d2dfd0009913360d50e81}{text}}) const
 \begin{DoxyCompactList}\small\item\em Returns text formatted according to this number format\textquotesingle{}s format code. \end{DoxyCompactList}\item 
@@ -97,9 +97,9 @@ static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} 
 \begin{DoxyCompactList}\small\item\em Number format \char`\"{}mm\+:ss\char`\"{} \end{DoxyCompactList}\item 
 static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \mbox{\hyperlink{classxlnt_1_1number__format_a0798a642d9a55168eea75f36f9acceab}{date\+\_\+time6}} ()
 \begin{DoxyCompactList}\small\item\em Number format \char`\"{}h\+:mm\+:ss\char`\"{} \end{DoxyCompactList}\item 
-static bool \mbox{\hyperlink{classxlnt_1_1number__format_af8f99f061ec62916951e85100d76497c}{is\+\_\+builtin\+\_\+format}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} builtin\+\_\+id)
+static bool \mbox{\hyperlink{classxlnt_1_1number__format_af8f99f061ec62916951e85100d76497c}{is\+\_\+builtin\+\_\+format}} (std\+::size\+\_\+t builtin\+\_\+id)
 \begin{DoxyCompactList}\small\item\em Returns true if the given format ID corresponds to a known builtin format. \end{DoxyCompactList}\item 
-static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \& \mbox{\hyperlink{classxlnt_1_1number__format_aee2d3b2bcf6257ca05616a7de2132649}{from\+\_\+builtin\+\_\+id}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} builtin\+\_\+id)
+static const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \& \mbox{\hyperlink{classxlnt_1_1number__format_aee2d3b2bcf6257ca05616a7de2132649}{from\+\_\+builtin\+\_\+id}} (std\+::size\+\_\+t builtin\+\_\+id)
 \begin{DoxyCompactList}\small\item\em Returns the format with the given ID. Thows an \mbox{\hyperlink{classxlnt_1_1invalid__parameter}{invalid\+\_\+parameter}} exception if builtin\+\_\+id is not a valid ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -123,7 +123,7 @@ Constructs a default \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+f
 \index{xlnt::number\_format@{xlnt::number\_format}!number\_format@{number\_format}}
 \index{number\_format@{number\_format}!xlnt::number\_format@{xlnt::number\_format}}
 \doxysubsubsection{\texorpdfstring{number\_format()}{number\_format()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
-{\footnotesize\ttfamily xlnt\+::number\+\_\+format\+::number\+\_\+format (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{builtin\+\_\+id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily xlnt\+::number\+\_\+format\+::number\+\_\+format (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{builtin\+\_\+id }\end{DoxyParamCaption})}
 
 
 
@@ -143,7 +143,7 @@ Constructs a number format from a code string. If the string matches a builtin I
 \index{xlnt::number\_format@{xlnt::number\_format}!number\_format@{number\_format}}
 \index{number\_format@{number\_format}!xlnt::number\_format@{xlnt::number\_format}}
 \doxysubsubsection{\texorpdfstring{number\_format()}{number\_format()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
-{\footnotesize\ttfamily xlnt\+::number\+\_\+format\+::number\+\_\+format (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{code,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{custom\+\_\+id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily xlnt\+::number\+\_\+format\+::number\+\_\+format (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{code,  }\item[{std\+::size\+\_\+t}]{custom\+\_\+id }\end{DoxyParamCaption})}
 
 
 
@@ -386,7 +386,7 @@ Sets the format code of this number format to format\+\_\+code.
 \index{xlnt::number\_format@{xlnt::number\_format}!format\_string@{format\_string}}
 \index{format\_string@{format\_string}!xlnt::number\_format@{xlnt::number\_format}}
 \doxysubsubsection{\texorpdfstring{format\_string()}{format\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily void xlnt\+::number\+\_\+format\+::format\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{format\+\_\+code,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{custom\+\_\+id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void xlnt\+::number\+\_\+format\+::format\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{format\+\_\+code,  }\item[{std\+::size\+\_\+t}]{custom\+\_\+id }\end{DoxyParamCaption})}
 
 
 
@@ -396,7 +396,7 @@ Sets the format code of this number format to format\+\_\+code and the ID to cus
 \index{xlnt::number\_format@{xlnt::number\_format}!from\_builtin\_id@{from\_builtin\_id}}
 \index{from\_builtin\_id@{from\_builtin\_id}!xlnt::number\_format@{xlnt::number\_format}}
 \doxysubsubsection{\texorpdfstring{from\_builtin\_id()}{from\_builtin\_id()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \& xlnt\+::number\+\_\+format\+::from\+\_\+builtin\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{builtin\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classxlnt_1_1number__format}{number\+\_\+format}} \& xlnt\+::number\+\_\+format\+::from\+\_\+builtin\+\_\+id (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{builtin\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -426,7 +426,7 @@ Returns true if this number format has an ID.
 \index{xlnt::number\_format@{xlnt::number\_format}!id@{id}}
 \index{id@{id}!xlnt::number\_format@{xlnt::number\_format}}
 \doxysubsubsection{\texorpdfstring{id()}{id()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::number\+\_\+format\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily std\+::size\+\_\+t xlnt\+::number\+\_\+format\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -436,7 +436,7 @@ Returns the ID of this format.
 \index{xlnt::number\_format@{xlnt::number\_format}!id@{id}}
 \index{id@{id}!xlnt::number\_format@{xlnt::number\_format}}
 \doxysubsubsection{\texorpdfstring{id()}{id()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void xlnt\+::number\+\_\+format\+::id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void xlnt\+::number\+\_\+format\+::id (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -446,7 +446,7 @@ Sets the ID of this number format to id.
 \index{xlnt::number\_format@{xlnt::number\_format}!is\_builtin\_format@{is\_builtin\_format}}
 \index{is\_builtin\_format@{is\_builtin\_format}!xlnt::number\_format@{xlnt::number\_format}}
 \doxysubsubsection{\texorpdfstring{is\_builtin\_format()}{is\_builtin\_format()}}
-{\footnotesize\ttfamily bool xlnt\+::number\+\_\+format\+::is\+\_\+builtin\+\_\+format (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{builtin\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily bool xlnt\+::number\+\_\+format\+::is\+\_\+builtin\+\_\+format (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{builtin\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 

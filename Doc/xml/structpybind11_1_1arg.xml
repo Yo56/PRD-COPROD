@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="structpybind11_1_1arg" kind="struct" language="C++" prot="public">
+    <compoundname>pybind11::arg</compoundname>
+    <derivedcompoundref refid="structpybind11_1_1arg__v" prot="public" virt="non-virtual">pybind11::arg_v</derivedcompoundref>
+    <includes refid="cast_8h" local="no">cast.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpybind11_1_1arg_1a3bad744daa662c35b22165819337787b" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* pybind11::arg::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+<para>If non-null, this is a named kwargs argument. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1688" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1688" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1arg_1a5a7c9ac34c9ef90f0c5aaa98a620d225" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pybind11::arg::flag_noconvert</definition>
+        <argsstring></argsstring>
+        <name>flag_noconvert</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+<para>If set, do not allow conversion (requires a supporting type caster!) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1689" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1689" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1arg_1a4a5e70906a33c9090be550fa3ea1137c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pybind11::arg::flag_none</definition>
+        <argsstring></argsstring>
+        <name>flag_none</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+<para>If set (the default), allow None to be passed to this argument. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1690" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1690" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structpybind11_1_1arg_1a4e7680725e9ed71188842ca15ac9c72f" prot="public" static="no" constexpr="yes" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr pybind11::arg::arg</definition>
+        <argsstring>(const char *name=nullptr)</argsstring>
+        <name>arg</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Constructs an argument with the name of the argument; if null or omitted, this is a positional argument. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1680" column="24" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1680" bodyend="1680"/>
+      </memberdef>
+      <memberdef kind="function" id="structpybind11_1_1arg_1ab8c74176180307470e9c42384cb38dff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structpybind11_1_1arg__v" kindref="compound">arg_v</ref></type>
+        <definition>arg_v pybind11::arg::operator=</definition>
+        <argsstring>(T &amp;&amp;value) const</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assign a value to this argument. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1682" column="23" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1737" bodyend="1737"/>
+      </memberdef>
+      <memberdef kind="function" id="structpybind11_1_1arg_1ac4fd4641a090ff65985db1ec6cc244df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpybind11_1_1arg" kindref="compound">arg</ref> &amp;</type>
+        <definition>arg&amp; pybind11::arg::noconvert</definition>
+        <argsstring>(bool flag=true)</argsstring>
+        <name>noconvert</name>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Indicate that the type should not be converted in the type caster. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1684" column="9" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1684" bodyend="1684"/>
+      </memberdef>
+      <memberdef kind="function" id="structpybind11_1_1arg_1a21b1ff05c2afb3d55e686edba37f0cfc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpybind11_1_1arg" kindref="compound">arg</ref> &amp;</type>
+        <definition>arg&amp; pybind11::arg::none</definition>
+        <argsstring>(bool flag=true)</argsstring>
+        <name>none</name>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Indicates that the argument should/shouldn&apos;t allow None (e.g. for nullable pointer args) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1686" column="9" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1686" bodyend="1686"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Annotation for arguments </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>pybind11::arg_v</label>
+        <link refid="structpybind11_1_1arg__v"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pybind11::arg</label>
+        <link refid="structpybind11_1_1arg"/>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1678" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1678" bodyend="1691"/>
+    <listofallmembers>
+      <member refid="structpybind11_1_1arg_1a4e7680725e9ed71188842ca15ac9c72f" prot="public" virt="non-virtual"><scope>pybind11::arg</scope><name>arg</name></member>
+      <member refid="structpybind11_1_1arg_1a5a7c9ac34c9ef90f0c5aaa98a620d225" prot="public" virt="non-virtual"><scope>pybind11::arg</scope><name>flag_noconvert</name></member>
+      <member refid="structpybind11_1_1arg_1a4a5e70906a33c9090be550fa3ea1137c" prot="public" virt="non-virtual"><scope>pybind11::arg</scope><name>flag_none</name></member>
+      <member refid="structpybind11_1_1arg_1a3bad744daa662c35b22165819337787b" prot="public" virt="non-virtual"><scope>pybind11::arg</scope><name>name</name></member>
+      <member refid="structpybind11_1_1arg_1ac4fd4641a090ff65985db1ec6cc244df" prot="public" virt="non-virtual"><scope>pybind11::arg</scope><name>noconvert</name></member>
+      <member refid="structpybind11_1_1arg_1a21b1ff05c2afb3d55e686edba37f0cfc" prot="public" virt="non-virtual"><scope>pybind11::arg</scope><name>none</name></member>
+      <member refid="structpybind11_1_1arg_1ab8c74176180307470e9c42384cb38dff" prot="public" virt="non-virtual"><scope>pybind11::arg</scope><name>operator=</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

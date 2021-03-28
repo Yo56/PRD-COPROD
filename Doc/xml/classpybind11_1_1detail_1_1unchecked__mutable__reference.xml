@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classpybind11_1_1detail_1_1unchecked__mutable__reference" kind="class" language="C++" prot="public">
+    <compoundname>pybind11::detail::unchecked_mutable_reference</compoundname>
+    <basecompoundref refid="classpybind11_1_1detail_1_1unchecked__reference" prot="public" virt="non-virtual">pybind11::detail::unchecked_reference&lt; T, Dims &gt;</basecompoundref>
+    <includes refid="numpy_8h" local="no">numpy.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+        <declname>Dims</declname>
+        <defname>Dims</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classpybind11_1_1detail_1_1unchecked__mutable__reference_1a6a5dcf4e280bcc75b64f6860683dc238" prot="private" static="no">
+        <type><ref refid="classpybind11_1_1detail_1_1unchecked__reference" kindref="compound">unchecked_reference</ref>&lt; T, Dims &gt;</type>
+        <definition>using pybind11::detail::unchecked_mutable_reference&lt; T, Dims &gt;::ConstBase =  unchecked_reference&lt;T, Dims&gt;</definition>
+        <argsstring></argsstring>
+        <name>ConstBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="388" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="388" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classpybind11_1_1detail_1_1unchecked__mutable__reference_1abcb10178a21ebe8e899ca951b2e68608" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class pybind11::array</definition>
+        <argsstring></argsstring>
+        <name>pybind11::array</name>
+        <param>
+          <type><ref refid="classpybind11_1_1array" kindref="compound">pybind11::array</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="387" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="387" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1unchecked__mutable__reference_1a0c4d71551d5deee697a2f50f58fab0da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Ix</declname>
+            <defname>Ix</defname>
+          </param>
+        </templateparamlist>
+        <type>T &amp;</type>
+        <definition>T&amp; pybind11::detail::unchecked_mutable_reference&lt; T, Dims &gt;::operator()</definition>
+        <argsstring>(Ix... index)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>Ix...</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Mutable, unchecked access to data at the given indices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="393" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="393" bodyend="397"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1unchecked__mutable__reference_1a7f201b6df8e1d02666e0fe721261bcf0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+            <declname>D</declname>
+            <defname>D</defname>
+            <defval>Dims</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval><ref refid="namespacepybind11_1_1detail_1a492fb1fcf079a5bc67248b852bc73619" kindref="member">enable_if_t</ref>&lt;D == 1 || Dynamic&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>T &amp;</type>
+        <definition>T&amp; pybind11::detail::unchecked_mutable_reference&lt; T, Dims &gt;::operator[]</definition>
+        <argsstring>(ssize_t index)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mutable, unchecked access data at the given index; this operator only participates if the reference is to a 1-dimensional array (or has runtime dimensions). When present, this is exactly equivalent to <computeroutput>obj(index)</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="404" column="7" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="404" bodyend="404"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1unchecked__mutable__reference_1aaa9d90c0a3a7551023ab3812da5c76cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Ix</declname>
+            <defname>Ix</defname>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T* pybind11::detail::unchecked_mutable_reference&lt; T, Dims &gt;::mutable_data</definition>
+        <argsstring>(Ix... ix)</argsstring>
+        <name>mutable_data</name>
+        <param>
+          <type>Ix...</type>
+          <declname>ix</declname>
+        </param>
+        <briefdescription>
+<para>Mutable pointer access to the data at the given indices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="407" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="407" bodyend="407"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classpybind11_1_1detail_1_1unchecked__mutable__reference_1a602375246b64493b78a4911479f8ed59" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr bool</type>
+        <definition>constexpr bool pybind11::detail::unchecked_reference&lt; T, Dims &gt;::Dynamic</definition>
+        <argsstring></argsstring>
+        <name>Dynamic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="390" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>pybind11::detail::unchecked_mutable_reference&lt; T, Dims &gt;</label>
+        <link refid="classpybind11_1_1detail_1_1unchecked__mutable__reference"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pybind11::detail::unchecked_reference&lt; T, Dims &gt;</label>
+        <link refid="classpybind11_1_1detail_1_1unchecked__reference"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>pybind11::detail::unchecked_mutable_reference&lt; T, Dims &gt;</label>
+        <link refid="classpybind11_1_1detail_1_1unchecked__mutable__reference"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pybind11::detail::unchecked_reference&lt; T, Dims &gt;</label>
+        <link refid="classpybind11_1_1detail_1_1unchecked__reference"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="386" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="386" bodyend="408"/>
+    <listofallmembers>
+      <member refid="classpybind11_1_1detail_1_1unchecked__mutable__reference_1a6a5dcf4e280bcc75b64f6860683dc238" prot="private" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>ConstBase</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__reference_1aa5b6aff1227b20055aa4fc9cf712f76d" prot="public" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>data</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__reference_1aec1f76e919a1c76894ea21b055092b51" prot="protected" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>data_</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__reference_1a211a097f84346148e1891bca1b751f23" prot="protected" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>dims_</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__mutable__reference_1a602375246b64493b78a4911479f8ed59" prot="private" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>Dynamic</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__reference_1a4850d6975946752c69ac9dda9e5aa15f" prot="public" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>itemsize</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__mutable__reference_1aaa9d90c0a3a7551023ab3812da5c76cf" prot="public" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>mutable_data</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__reference_1a93269897270343c933c93eafa24b94e6" prot="public" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>nbytes</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__reference_1abf5b9241bd9dd87045a50ab2366a8f24" prot="public" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>ndim</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__mutable__reference_1a0c4d71551d5deee697a2f50f58fab0da" prot="public" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>operator()</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__reference_1a59d3e140a42913ed4752b909383dbdad" prot="public" virt="non-virtual" ambiguityscope="pybind11::detail::unchecked_reference::"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>operator()</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__mutable__reference_1a7f201b6df8e1d02666e0fe721261bcf0" prot="public" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>operator[]</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__reference_1ab04777ebfeca92b9940a5174144d74b4" prot="public" virt="non-virtual" ambiguityscope="pybind11::detail::unchecked_reference::"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>operator[]</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__mutable__reference_1abcb10178a21ebe8e899ca951b2e68608" prot="public" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>pybind11::array</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__reference_1a9eb41b88c1f9d324d173bff84a2d9529" prot="public" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>shape</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__reference_1ab1a911b46d978a77b0b6b45958c25427" prot="protected" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>shape_</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__reference_1a9259e6deb28be48ff9b51622dae67481" prot="public" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>size</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__reference_1ae956fd9a7e6effa5e096ae8d549b4e11" prot="public" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>size</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__reference_1aa166b834226ad5215122bcfc2f43c237" prot="protected" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>strides_</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__reference_1ae1a239622a3fd6a7fc0e2c4d70e0eb16" prot="protected" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>unchecked_reference</name></member>
+      <member refid="classpybind11_1_1detail_1_1unchecked__reference_1a92f84d50016205af9be2d60e4c4d81cf" prot="protected" virt="non-virtual"><scope>pybind11::detail::unchecked_mutable_reference</scope><name>unchecked_reference</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1068 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classxlnt_1_1header__footer" kind="class" language="C++" prot="public">
+    <compoundname>xlnt::header_footer</compoundname>
+    <includes refid="header__footer_8hpp" local="no">header_footer.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>location</name>
+        <enumvalue id="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375a811882fecd5c7618d7099ebbd39ea254" prot="public">
+          <name>left</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375aadb115059e28d960fa8badfac5516667" prot="public">
+          <name>center</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375a7c4f29407893c334a6cb7a87bf045c0d" prot="public">
+          <name>right</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumerates the three possible locations of a header or footer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="46" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" bodystart="47" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classxlnt_1_1header__footer_1a30f8b64970bbe7c176d9c9acadcfaa0a" prot="private" static="no">
+        <type>std::unordered_map&lt; <ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref>, <ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref>, <ref refid="structxlnt_1_1scoped__enum__hash" kindref="compound">scoped_enum_hash</ref>&lt; <ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref> &gt; &gt;</type>
+        <definition>using xlnt::header_footer::container =  std::unordered_map&lt;location, rich_text, scoped_enum_hash&lt;location&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>container</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="319" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxlnt_1_1header__footer_1ad853e938a2a5f04a0fa13961cde18f95" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::align_with_margins_</definition>
+        <argsstring></argsstring>
+        <name>align_with_margins_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="315" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1header__footer_1ab21e83288482b8774769d707801dba16" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::different_odd_even_</definition>
+        <argsstring></argsstring>
+        <name>different_odd_even_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="316" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1header__footer_1accc8169cb62c99ca2963990f92f1de5a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::scale_with_doc_</definition>
+        <argsstring></argsstring>
+        <name>scale_with_doc_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="317" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1header__footer_1acbacbef0beb2f694005d94abb85da6f0" prot="private" static="no" mutable="no">
+        <type>container</type>
+        <definition>container xlnt::header_footer::odd_headers_</definition>
+        <argsstring></argsstring>
+        <name>odd_headers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="321" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1header__footer_1a69c5cc77a646a6c80dbd90f3548849ff" prot="private" static="no" mutable="no">
+        <type>container</type>
+        <definition>container xlnt::header_footer::even_headers_</definition>
+        <argsstring></argsstring>
+        <name>even_headers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="322" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" bodystart="322" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1header__footer_1a015d19299108f6f83d41d899555eeeca" prot="private" static="no" mutable="no">
+        <type>container</type>
+        <definition>container xlnt::header_footer::first_headers_</definition>
+        <argsstring></argsstring>
+        <name>first_headers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="323" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1header__footer_1ae942f6cdc21d990ceb54fa1682dfc560" prot="private" static="no" mutable="no">
+        <type>container</type>
+        <definition>container xlnt::header_footer::odd_footers_</definition>
+        <argsstring></argsstring>
+        <name>odd_footers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="324" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1header__footer_1ab15ddfb5deba9f19602c5bb0273ad96d" prot="private" static="no" mutable="no">
+        <type>container</type>
+        <definition>container xlnt::header_footer::even_footers_</definition>
+        <argsstring></argsstring>
+        <name>even_footers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="325" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" bodystart="325" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1header__footer_1a31d7ac02a696513b93152da66330dda7" prot="private" static="no" mutable="no">
+        <type>container</type>
+        <definition>container xlnt::header_footer::first_footers_</definition>
+        <argsstring></argsstring>
+        <name>first_footers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="326" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1ac8aef07b8c7915236779578d9dd56f95" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::has_header</definition>
+        <argsstring>() const</argsstring>
+        <name>has_header</name>
+        <briefdescription>
+<para>True if any text has been added for a header at any location on any page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="58" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1affb3fd26b73b730f38ff592c66cc276e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::has_footer</definition>
+        <argsstring>() const</argsstring>
+        <name>has_footer</name>
+        <briefdescription>
+<para>True if any text has been added for a footer at any location on any page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="63" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1ae9512dcb1d060bcc554930ab6ff3bc0d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::align_with_margins</definition>
+        <argsstring>() const</argsstring>
+        <name>align_with_margins</name>
+        <briefdescription>
+<para>True if headers and footers should align to the page margins. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="68" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a6cc6f38aad4532f560f0d21d3d319e25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1header__footer" kindref="compound">header_footer</ref> &amp;</type>
+        <definition>header_footer &amp; xlnt::header_footer::align_with_margins</definition>
+        <argsstring>(bool align)</argsstring>
+        <name>align_with_margins</name>
+        <param>
+          <type>bool</type>
+          <declname>align</declname>
+        </param>
+        <briefdescription>
+<para>Set to true if headers and footers should align to the page margins. Set to false if headers and footers should align to the edge of the page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="74" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a879194359f873c0687dc5d4933021b1e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::different_odd_even</definition>
+        <argsstring>() const</argsstring>
+        <name>different_odd_even</name>
+        <briefdescription>
+<para>True if headers and footers differ based on page number. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="79" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1ac05acf474f74a04498f3e51839a38716" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::different_first</definition>
+        <argsstring>() const</argsstring>
+        <name>different_first</name>
+        <briefdescription>
+<para>True if headers and footers are different on the first page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="84" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a81b33213b4b2f698e40c0a3ac36654c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::scale_with_doc</definition>
+        <argsstring>() const</argsstring>
+        <name>scale_with_doc</name>
+        <briefdescription>
+<para>True if headers and footers should scale to match the worksheet. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="89" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a5fff961df0e884c3f47b64cf28b5ae59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1header__footer" kindref="compound">header_footer</ref> &amp;</type>
+        <definition>header_footer &amp; xlnt::header_footer::scale_with_doc</definition>
+        <argsstring>(bool scale)</argsstring>
+        <name>scale_with_doc</name>
+        <param>
+          <type>bool</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+<para>Set to true if headers and footers should scale to match the worksheet. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="94" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="65" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1adcaa2803a8c3086ea0636a76d64a8d64" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::has_header</definition>
+        <argsstring>(location where) const</argsstring>
+        <name>has_header</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>True if any text has been added at the given location on any page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="101" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a41002cdb73670605ad06c82600fd43cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::header_footer::clear_header</definition>
+        <argsstring>()</argsstring>
+        <name>clear_header</name>
+        <briefdescription>
+<para>Remove all headers from all pages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="106" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="78" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1ab0ce2078d5282a5e644e2470b98912cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::header_footer::clear_header</definition>
+        <argsstring>(location where)</argsstring>
+        <name>clear_header</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>Remove header at the given location on any page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="111" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="85" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1ae1f7a4020f046ffcb1fe16ac4d92cdb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1header__footer" kindref="compound">header_footer</ref> &amp;</type>
+        <definition>header_footer &amp; xlnt::header_footer::header</definition>
+        <argsstring>(location where, const std::string &amp;text)</argsstring>
+        <name>header</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Add a header at the given location with the given text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="116" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a02e94c2e350ae5b339d355b9b1f2527b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1header__footer" kindref="compound">header_footer</ref> &amp;</type>
+        <definition>header_footer &amp; xlnt::header_footer::header</definition>
+        <argsstring>(location where, const rich_text &amp;text)</argsstring>
+        <name>header</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Add a header at the given location with the given text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="121" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="97" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1ad541a1b0d2810005aa0d0bf407db4e98" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref></type>
+        <definition>rich_text xlnt::header_footer::header</definition>
+        <argsstring>(location where) const</argsstring>
+        <name>header</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>Get the text of the header at the given location. If headers are different on odd and even pages, the odd header will be returned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="127" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1aa95192610cf92f0e896ce64558316f9a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::has_first_page_header</definition>
+        <argsstring>() const</argsstring>
+        <name>has_first_page_header</name>
+        <briefdescription>
+<para>True if a header has been set for the first page at any location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="134" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="110" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a4186945b77ac38eedb4d94f3a3c46df3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::has_first_page_header</definition>
+        <argsstring>(location where) const</argsstring>
+        <name>has_first_page_header</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>True if a header has been set for the first page at the given location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="139" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a4519ab33736f1813f1a860ee6604a5f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::header_footer::clear_first_page_header</definition>
+        <argsstring>()</argsstring>
+        <name>clear_first_page_header</name>
+        <briefdescription>
+<para>Remove all headers from the first page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="144" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1adcb3ec25392e6c9762b56bc229b0d39f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::header_footer::clear_first_page_header</definition>
+        <argsstring>(location where)</argsstring>
+        <name>clear_first_page_header</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>Remove header from the first page at the given location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="149" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a760c6e50ecc615c017d9120c0f20e2fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1header__footer" kindref="compound">header_footer</ref> &amp;</type>
+        <definition>header_footer &amp; xlnt::header_footer::first_page_header</definition>
+        <argsstring>(location where, const rich_text &amp;text)</argsstring>
+        <name>first_page_header</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Add a header on the first page at the given location with the given text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="154" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="130" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1ac274b86ed31857c21c86e490099d38f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref></type>
+        <definition>rich_text xlnt::header_footer::first_page_header</definition>
+        <argsstring>(location where) const</argsstring>
+        <name>first_page_header</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>Get the text of the first page header at the given location. If no first page header has been set, the general header for that location will be returned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="161" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a5676f12900493664e9945d5a7e242b84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::has_odd_even_header</definition>
+        <argsstring>() const</argsstring>
+        <name>has_odd_even_header</name>
+        <briefdescription>
+<para>True if different headers have been set for odd and even pages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="168" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="143" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1af09ec4a355964f7fa11eb19453c45aa4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::has_odd_even_header</definition>
+        <argsstring>(location where) const</argsstring>
+        <name>has_odd_even_header</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>True if different headers have been set for odd and even pages at the given location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="173" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="148" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a66d7813a65fafc42b31f5ba2ed7ebb3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::header_footer::clear_odd_even_header</definition>
+        <argsstring>()</argsstring>
+        <name>clear_odd_even_header</name>
+        <briefdescription>
+<para>Remove odd/even headers at all locations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="178" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="153" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a24ef1aefcd2f5a2c6ebd844396dcb17f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::header_footer::clear_odd_even_header</definition>
+        <argsstring>(location where)</argsstring>
+        <name>clear_odd_even_header</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>Remove odd/even headers at the given location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="183" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="160" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a05c03ee04d479cd9f511612f5058dba4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1header__footer" kindref="compound">header_footer</ref> &amp;</type>
+        <definition>header_footer &amp; xlnt::header_footer::odd_even_header</definition>
+        <argsstring>(location where, const rich_text &amp;odd, const rich_text &amp;even)</argsstring>
+        <name>odd_even_header</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref> &amp;</type>
+          <declname>odd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref> &amp;</type>
+          <declname>even</declname>
+        </param>
+        <briefdescription>
+<para>Add a header for odd pages at the given location with the given text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="188" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="166" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a353e598aeac4a22d6434af30b6e667b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref></type>
+        <definition>rich_text xlnt::header_footer::odd_header</definition>
+        <argsstring>(location where) const</argsstring>
+        <name>odd_header</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>Get the text of the odd page header at the given location. If no odd page header has been set, the general header for that location will be returned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="195" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="175" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1ad01896617b41dcb0ddc96e6cca3f9467" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref></type>
+        <definition>rich_text xlnt::header_footer::even_header</definition>
+        <argsstring>(location where) const</argsstring>
+        <name>even_header</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>Get the text of the even page header at the given location. If no even page header has been set, the general header for that location will be returned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="202" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="180" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1aa516fa91ca5c43b3e436ec954659eae2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::has_footer</definition>
+        <argsstring>(location where) const</argsstring>
+        <name>has_footer</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>True if any text has been added at the given location on any page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="209" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="187" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1ac20a33275e5077ceb6f0a4abbd91359c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::header_footer::clear_footer</definition>
+        <argsstring>()</argsstring>
+        <name>clear_footer</name>
+        <briefdescription>
+<para>Remove all footers from all pages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="214" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="192" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a26a3c587c950a2947806c8cbc340c57c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::header_footer::clear_footer</definition>
+        <argsstring>(location where)</argsstring>
+        <name>clear_footer</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>Remove footer at the given location on any page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="219" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="199" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a80c4c4499ac37deeec4575744c84a994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1header__footer" kindref="compound">header_footer</ref> &amp;</type>
+        <definition>header_footer &amp; xlnt::header_footer::footer</definition>
+        <argsstring>(location where, const std::string &amp;text)</argsstring>
+        <name>footer</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Add a footer at the given location with the given text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="224" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="206" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a0c1a5cdd4ed42fde21bd8d6c43cbb848" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1header__footer" kindref="compound">header_footer</ref> &amp;</type>
+        <definition>header_footer &amp; xlnt::header_footer::footer</definition>
+        <argsstring>(location where, const rich_text &amp;text)</argsstring>
+        <name>footer</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Add a footer at the given location with the given text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="229" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="211" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a06df4f7524c9d07f0c4ca4a3675b6a88" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref></type>
+        <definition>rich_text xlnt::header_footer::footer</definition>
+        <argsstring>(location where) const</argsstring>
+        <name>footer</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>Get the text of the footer at the given location. If footers are different on odd and even pages, the odd footer will be returned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="235" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="217" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a658caad044f3ec6ca5222d70fd1cdd80" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::has_first_page_footer</definition>
+        <argsstring>() const</argsstring>
+        <name>has_first_page_footer</name>
+        <briefdescription>
+<para>True if a footer has been set for the first page at any location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="242" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="224" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1aea7f53d22fb50050e1f73a69f043f61a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::has_first_page_footer</definition>
+        <argsstring>(location where) const</argsstring>
+        <name>has_first_page_footer</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>True if a footer has been set for the first page at the given location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="247" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="229" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a13a335f5008d6782e98e8752fd1b512a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::header_footer::clear_first_page_footer</definition>
+        <argsstring>()</argsstring>
+        <name>clear_first_page_footer</name>
+        <briefdescription>
+<para>Remove all footers from the first page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="252" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="234" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a21c0e1c953802e142cfbd73327f0083e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::header_footer::clear_first_page_footer</definition>
+        <argsstring>(location where)</argsstring>
+        <name>clear_first_page_footer</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>Remove footer from the first page at the given location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="257" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="239" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1aa58acd473e42d9c5724640b53f59e925" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1header__footer" kindref="compound">header_footer</ref> &amp;</type>
+        <definition>header_footer &amp; xlnt::header_footer::first_page_footer</definition>
+        <argsstring>(location where, const rich_text &amp;text)</argsstring>
+        <name>first_page_footer</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Add a footer on the first page at the given location with the given text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="262" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="244" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a98420e617f3e140acd17533efa57a0f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref></type>
+        <definition>rich_text xlnt::header_footer::first_page_footer</definition>
+        <argsstring>(location where) const</argsstring>
+        <name>first_page_footer</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>Get the text of the first page footer at the given location. If no first page footer has been set, the general footer for that location will be returned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="269" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="250" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a2e0bbda6e37523df9dad8ca092939687" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::has_odd_even_footer</definition>
+        <argsstring>() const</argsstring>
+        <name>has_odd_even_footer</name>
+        <briefdescription>
+<para>True if different footers have been set for odd and even pages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="276" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="257" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1affe46efef5ee2a61d5fe787a9ec8a5aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::has_odd_even_footer</definition>
+        <argsstring>(location where) const</argsstring>
+        <name>has_odd_even_footer</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>True if different footers have been set for odd and even pages at the given location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="281" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="262" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1abbc526ce7404ba7d013243a37ddd96da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::header_footer::clear_odd_even_footer</definition>
+        <argsstring>()</argsstring>
+        <name>clear_odd_even_footer</name>
+        <briefdescription>
+<para>Remove odd/even footers at all locations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="286" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="267" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1afaf54d62e51dcb37fa5dbcdae910239b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::header_footer::clear_odd_even_footer</definition>
+        <argsstring>(location where)</argsstring>
+        <name>clear_odd_even_footer</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>Remove odd/even footers at the given location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="291" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="273" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a5287d67a6c0827ebb53e5eb69e8bad8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1header__footer" kindref="compound">header_footer</ref> &amp;</type>
+        <definition>header_footer &amp; xlnt::header_footer::odd_even_footer</definition>
+        <argsstring>(location where, const rich_text &amp;odd, const rich_text &amp;even)</argsstring>
+        <name>odd_even_footer</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref> &amp;</type>
+          <declname>odd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref> &amp;</type>
+          <declname>even</declname>
+        </param>
+        <briefdescription>
+<para>Add a footer for odd pages at the given location with the given text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="296" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="279" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a33220525fd9d2a8aed42e9e0b7d42902" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref></type>
+        <definition>rich_text xlnt::header_footer::odd_footer</definition>
+        <argsstring>(location where) const</argsstring>
+        <name>odd_footer</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>Get the text of the odd page footer at the given location. If no odd page footer has been set, the general footer for that location will be returned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="303" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="288" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a6455d639ac9ec99a6cfd03065f61f9ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1rich__text" kindref="compound">rich_text</ref></type>
+        <definition>rich_text xlnt::header_footer::even_footer</definition>
+        <argsstring>(location where) const</argsstring>
+        <name>even_footer</name>
+        <param>
+          <type><ref refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" kindref="member">location</ref></type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>Get the text of the even page footer at the given location. If no even page footer has been set, the general footer for that location will be returned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="310" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="293" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1header__footer_1a1a6d9643c2d7bdcc6cb6210ee7f00731" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::header_footer::operator==</definition>
+        <argsstring>(const header_footer &amp;rhs) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1header__footer" kindref="compound">header_footer</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="312" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/header_footer.cpp" bodystart="298" bodyend="309"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents the header and footer of a sheet in a workbook. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" line="40" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/header_footer.hpp" bodystart="41" bodyend="327"/>
+    <listofallmembers>
+      <member refid="classxlnt_1_1header__footer_1ae9512dcb1d060bcc554930ab6ff3bc0d" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>align_with_margins</name></member>
+      <member refid="classxlnt_1_1header__footer_1a6cc6f38aad4532f560f0d21d3d319e25" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>align_with_margins</name></member>
+      <member refid="classxlnt_1_1header__footer_1ad853e938a2a5f04a0fa13961cde18f95" prot="private" virt="non-virtual"><scope>xlnt::header_footer</scope><name>align_with_margins_</name></member>
+      <member refid="classxlnt_1_1header__footer_1a13a335f5008d6782e98e8752fd1b512a" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>clear_first_page_footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1a21c0e1c953802e142cfbd73327f0083e" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>clear_first_page_footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1a4519ab33736f1813f1a860ee6604a5f9" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>clear_first_page_header</name></member>
+      <member refid="classxlnt_1_1header__footer_1adcb3ec25392e6c9762b56bc229b0d39f" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>clear_first_page_header</name></member>
+      <member refid="classxlnt_1_1header__footer_1ac20a33275e5077ceb6f0a4abbd91359c" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>clear_footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1a26a3c587c950a2947806c8cbc340c57c" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>clear_footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1a41002cdb73670605ad06c82600fd43cf" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>clear_header</name></member>
+      <member refid="classxlnt_1_1header__footer_1ab0ce2078d5282a5e644e2470b98912cd" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>clear_header</name></member>
+      <member refid="classxlnt_1_1header__footer_1abbc526ce7404ba7d013243a37ddd96da" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>clear_odd_even_footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1afaf54d62e51dcb37fa5dbcdae910239b" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>clear_odd_even_footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1a66d7813a65fafc42b31f5ba2ed7ebb3f" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>clear_odd_even_header</name></member>
+      <member refid="classxlnt_1_1header__footer_1a24ef1aefcd2f5a2c6ebd844396dcb17f" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>clear_odd_even_header</name></member>
+      <member refid="classxlnt_1_1header__footer_1a30f8b64970bbe7c176d9c9acadcfaa0a" prot="private" virt="non-virtual"><scope>xlnt::header_footer</scope><name>container</name></member>
+      <member refid="classxlnt_1_1header__footer_1ac05acf474f74a04498f3e51839a38716" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>different_first</name></member>
+      <member refid="classxlnt_1_1header__footer_1a879194359f873c0687dc5d4933021b1e" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>different_odd_even</name></member>
+      <member refid="classxlnt_1_1header__footer_1ab21e83288482b8774769d707801dba16" prot="private" virt="non-virtual"><scope>xlnt::header_footer</scope><name>different_odd_even_</name></member>
+      <member refid="classxlnt_1_1header__footer_1a6455d639ac9ec99a6cfd03065f61f9ee" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>even_footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1ab15ddfb5deba9f19602c5bb0273ad96d" prot="private" virt="non-virtual"><scope>xlnt::header_footer</scope><name>even_footers_</name></member>
+      <member refid="classxlnt_1_1header__footer_1ad01896617b41dcb0ddc96e6cca3f9467" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>even_header</name></member>
+      <member refid="classxlnt_1_1header__footer_1a69c5cc77a646a6c80dbd90f3548849ff" prot="private" virt="non-virtual"><scope>xlnt::header_footer</scope><name>even_headers_</name></member>
+      <member refid="classxlnt_1_1header__footer_1a31d7ac02a696513b93152da66330dda7" prot="private" virt="non-virtual"><scope>xlnt::header_footer</scope><name>first_footers_</name></member>
+      <member refid="classxlnt_1_1header__footer_1a015d19299108f6f83d41d899555eeeca" prot="private" virt="non-virtual"><scope>xlnt::header_footer</scope><name>first_headers_</name></member>
+      <member refid="classxlnt_1_1header__footer_1aa58acd473e42d9c5724640b53f59e925" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>first_page_footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1a98420e617f3e140acd17533efa57a0f2" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>first_page_footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1a760c6e50ecc615c017d9120c0f20e2fb" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>first_page_header</name></member>
+      <member refid="classxlnt_1_1header__footer_1ac274b86ed31857c21c86e490099d38f5" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>first_page_header</name></member>
+      <member refid="classxlnt_1_1header__footer_1a80c4c4499ac37deeec4575744c84a994" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1a0c1a5cdd4ed42fde21bd8d6c43cbb848" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1a06df4f7524c9d07f0c4ca4a3675b6a88" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1a658caad044f3ec6ca5222d70fd1cdd80" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>has_first_page_footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1aea7f53d22fb50050e1f73a69f043f61a" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>has_first_page_footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1aa95192610cf92f0e896ce64558316f9a" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>has_first_page_header</name></member>
+      <member refid="classxlnt_1_1header__footer_1a4186945b77ac38eedb4d94f3a3c46df3" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>has_first_page_header</name></member>
+      <member refid="classxlnt_1_1header__footer_1affb3fd26b73b730f38ff592c66cc276e" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>has_footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1aa516fa91ca5c43b3e436ec954659eae2" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>has_footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1ac8aef07b8c7915236779578d9dd56f95" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>has_header</name></member>
+      <member refid="classxlnt_1_1header__footer_1adcaa2803a8c3086ea0636a76d64a8d64" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>has_header</name></member>
+      <member refid="classxlnt_1_1header__footer_1a2e0bbda6e37523df9dad8ca092939687" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>has_odd_even_footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1affe46efef5ee2a61d5fe787a9ec8a5aa" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>has_odd_even_footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1a5676f12900493664e9945d5a7e242b84" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>has_odd_even_header</name></member>
+      <member refid="classxlnt_1_1header__footer_1af09ec4a355964f7fa11eb19453c45aa4" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>has_odd_even_header</name></member>
+      <member refid="classxlnt_1_1header__footer_1ae1f7a4020f046ffcb1fe16ac4d92cdb7" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>header</name></member>
+      <member refid="classxlnt_1_1header__footer_1a02e94c2e350ae5b339d355b9b1f2527b" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>header</name></member>
+      <member refid="classxlnt_1_1header__footer_1ad541a1b0d2810005aa0d0bf407db4e98" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>header</name></member>
+      <member refid="classxlnt_1_1header__footer_1a2e5dabd2d3465ee7f5738befffc43375" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>location</name></member>
+      <member refid="classxlnt_1_1header__footer_1a5287d67a6c0827ebb53e5eb69e8bad8f" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>odd_even_footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1a05c03ee04d479cd9f511612f5058dba4" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>odd_even_header</name></member>
+      <member refid="classxlnt_1_1header__footer_1a33220525fd9d2a8aed42e9e0b7d42902" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>odd_footer</name></member>
+      <member refid="classxlnt_1_1header__footer_1ae942f6cdc21d990ceb54fa1682dfc560" prot="private" virt="non-virtual"><scope>xlnt::header_footer</scope><name>odd_footers_</name></member>
+      <member refid="classxlnt_1_1header__footer_1a353e598aeac4a22d6434af30b6e667b3" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>odd_header</name></member>
+      <member refid="classxlnt_1_1header__footer_1acbacbef0beb2f694005d94abb85da6f0" prot="private" virt="non-virtual"><scope>xlnt::header_footer</scope><name>odd_headers_</name></member>
+      <member refid="classxlnt_1_1header__footer_1a1a6d9643c2d7bdcc6cb6210ee7f00731" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>operator==</name></member>
+      <member refid="classxlnt_1_1header__footer_1a81b33213b4b2f698e40c0a3ac36654c0" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>scale_with_doc</name></member>
+      <member refid="classxlnt_1_1header__footer_1a5fff961df0e884c3f47b64cf28b5ae59" prot="public" virt="non-virtual"><scope>xlnt::header_footer</scope><name>scale_with_doc</name></member>
+      <member refid="classxlnt_1_1header__footer_1accc8169cb62c99ca2963990f92f1de5a" prot="private" virt="non-virtual"><scope>xlnt::header_footer</scope><name>scale_with_doc_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

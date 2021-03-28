@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classxlnt_1_1rgb__color" kind="class" language="C++" prot="public">
+    <compoundname>xlnt::rgb_color</compoundname>
+    <includes refid="color_8hpp" local="no">color.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxlnt_1_1rgb__color_1afe534e1435b7a75b24ad04113f581beb" prot="private" static="no" mutable="no">
+        <type>std::array&lt; std::uint8_t, 4 &gt;</type>
+        <definition>std::array&lt;std::uint8_t, 4&gt; xlnt::rgb_color::rgba_</definition>
+        <argsstring></argsstring>
+        <name>rgba_</name>
+        <briefdescription>
+<para>The four bytes of this color </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/color.hpp" line="148" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/color.hpp" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxlnt_1_1rgb__color_1aa3d3c00b257a71b13fd9eef1333881ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::rgb_color::rgb_color</definition>
+        <argsstring>(const std::string &amp;hex_string)</argsstring>
+        <name>rgb_color</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>hex_string</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an RGB color from a string in the form #[aa]rrggbb </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/color.hpp" line="101" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/color.cpp" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rgb__color_1a271ada899b98fd0d9d1c957e2ac9d7bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::rgb_color::rgb_color</definition>
+        <argsstring>(std::uint8_t r, std::uint8_t g, std::uint8_t b, std::uint8_t a=255)</argsstring>
+        <name>rgb_color</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>a</declname>
+          <defval>255</defval>
+        </param>
+        <briefdescription>
+<para>Constructs an RGB color from red, green, and blue values in the range 0 to 255 plus an optional alpha which defaults to fully opaque. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/color.hpp" line="107" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/color.cpp" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rgb__color_1a46c222e8732f1a469d01b8bbfd6132ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xlnt::rgb_color::hex_string</definition>
+        <argsstring>() const</argsstring>
+        <name>hex_string</name>
+        <briefdescription>
+<para>Returns a string representation of this color in the form #aarrggbb </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/color.hpp" line="112" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/color.cpp" bodystart="85" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rgb__color_1a27143cbe0477c40f45c03ed603ad68a4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t xlnt::rgb_color::red</definition>
+        <argsstring>() const</argsstring>
+        <name>red</name>
+        <briefdescription>
+<para>Returns a byte representing the red component of this color </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/color.hpp" line="117" column="18" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/color.cpp" bodystart="113" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rgb__color_1a36b32757e047d16ff13403af19263c84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t xlnt::rgb_color::green</definition>
+        <argsstring>() const</argsstring>
+        <name>green</name>
+        <briefdescription>
+<para>Returns a byte representing the red component of this color </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/color.hpp" line="122" column="18" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/color.cpp" bodystart="118" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rgb__color_1a60ca3231f4c2b9d1d4d349608a737f46" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t xlnt::rgb_color::blue</definition>
+        <argsstring>() const</argsstring>
+        <name>blue</name>
+        <briefdescription>
+<para>Returns a byte representing the blue component of this color </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/color.hpp" line="127" column="18" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/color.cpp" bodystart="123" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rgb__color_1ab30c9e7dc50473e3eba768a9d9b6eff4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t xlnt::rgb_color::alpha</definition>
+        <argsstring>() const</argsstring>
+        <name>alpha</name>
+        <briefdescription>
+<para>Returns a byte representing the alpha component of this color </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/color.hpp" line="132" column="18" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/color.cpp" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rgb__color_1a82e8a9105c43bf06e8f2f8feb05b3143" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::array&lt; std::uint8_t, 3 &gt;</type>
+        <definition>std::array&lt; std::uint8_t, 3 &gt; xlnt::rgb_color::rgb</definition>
+        <argsstring>() const</argsstring>
+        <name>rgb</name>
+        <briefdescription>
+<para>Returns the red, green, and blue components of this color separately in an array in that order. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/color.hpp" line="137" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/color.cpp" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1rgb__color_1a06cfb8ffc8ad7e3ac5b151938c2c48a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::array&lt; std::uint8_t, 4 &gt;</type>
+        <definition>std::array&lt; std::uint8_t, 4 &gt; xlnt::rgb_color::rgba</definition>
+        <argsstring>() const</argsstring>
+        <name>rgba</name>
+        <briefdescription>
+<para>Returns the red, green, blue, and alpha components of this color separately in an array in that order. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/color.hpp" line="142" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/color.cpp" bodystart="138" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An RGB color describes a color in terms of its red, green, blue, and alpha components. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/color.hpp" line="95" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/color.hpp" bodystart="96" bodyend="149"/>
+    <listofallmembers>
+      <member refid="classxlnt_1_1rgb__color_1ab30c9e7dc50473e3eba768a9d9b6eff4" prot="public" virt="non-virtual"><scope>xlnt::rgb_color</scope><name>alpha</name></member>
+      <member refid="classxlnt_1_1rgb__color_1a60ca3231f4c2b9d1d4d349608a737f46" prot="public" virt="non-virtual"><scope>xlnt::rgb_color</scope><name>blue</name></member>
+      <member refid="classxlnt_1_1rgb__color_1a36b32757e047d16ff13403af19263c84" prot="public" virt="non-virtual"><scope>xlnt::rgb_color</scope><name>green</name></member>
+      <member refid="classxlnt_1_1rgb__color_1a46c222e8732f1a469d01b8bbfd6132ba" prot="public" virt="non-virtual"><scope>xlnt::rgb_color</scope><name>hex_string</name></member>
+      <member refid="classxlnt_1_1rgb__color_1a27143cbe0477c40f45c03ed603ad68a4" prot="public" virt="non-virtual"><scope>xlnt::rgb_color</scope><name>red</name></member>
+      <member refid="classxlnt_1_1rgb__color_1a82e8a9105c43bf06e8f2f8feb05b3143" prot="public" virt="non-virtual"><scope>xlnt::rgb_color</scope><name>rgb</name></member>
+      <member refid="classxlnt_1_1rgb__color_1aa3d3c00b257a71b13fd9eef1333881ae" prot="public" virt="non-virtual"><scope>xlnt::rgb_color</scope><name>rgb_color</name></member>
+      <member refid="classxlnt_1_1rgb__color_1a271ada899b98fd0d9d1c957e2ac9d7bf" prot="public" virt="non-virtual"><scope>xlnt::rgb_color</scope><name>rgb_color</name></member>
+      <member refid="classxlnt_1_1rgb__color_1a06cfb8ffc8ad7e3ac5b151938c2c48a9" prot="public" virt="non-virtual"><scope>xlnt::rgb_color</scope><name>rgba</name></member>
+      <member refid="classxlnt_1_1rgb__color_1afe534e1435b7a75b24ad04113f581beb" prot="private" virt="non-virtual"><scope>xlnt::rgb_color</scope><name>rgba_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

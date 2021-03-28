@@ -1,0 +1,13 @@
+\hypertarget{namespacepybind11_1_1detail_1_1iterator__policies}{}\doxysection{pybind11\+::detail\+::iterator\+\_\+policies Namespace Reference}
+\label{namespacepybind11_1_1detail_1_1iterator__policies}\index{pybind11::detail::iterator\_policies@{pybind11::detail::iterator\_policies}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpybind11_1_1detail_1_1iterator__policies_1_1arrow__proxy}{arrow\+\_\+proxy}}
+\begin{DoxyCompactList}\small\item\em Quick proxy class needed to implement {\ttfamily operator-\/$>$} for iterators which can\textquotesingle{}t return pointers. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly}{sequence\+\_\+fast\+\_\+readonly}}
+\begin{DoxyCompactList}\small\item\em Lightweight iterator policy using just a simple pointer\+: see {\ttfamily Py\+Sequence\+\_\+\+Fast\+\_\+\+ITEMS} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__slow__readwrite}{sequence\+\_\+slow\+\_\+readwrite}}
+\begin{DoxyCompactList}\small\item\em Full read and write access using the sequence protocol\+: see {\ttfamily \mbox{\hyperlink{namespacepybind11_1_1detail_a3b97805a9767c683b5b999a747e19428}{detail\+::sequence\+\_\+accessor}}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly}{dict\+\_\+readonly}}
+\begin{DoxyCompactList}\small\item\em Python\textquotesingle{}s dictionary protocol permits this to be a forward iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}

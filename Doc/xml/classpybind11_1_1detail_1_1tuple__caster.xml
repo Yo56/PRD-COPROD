@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classpybind11_1_1detail_1_1tuple__caster" kind="class" language="C++" prot="public">
+    <compoundname>pybind11::detail::tuple_caster</compoundname>
+    <includes refid="cast_8h" local="no">cast.h</includes>
+    <templateparamlist>
+      <param>
+        <type>template&lt; typename... &gt; class</type>
+        <declname>Tuple</declname>
+        <defname>Tuple</defname>
+      </param>
+      <param>
+        <type>typename...</type>
+        <declname>Ts</declname>
+        <defname>Ts</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classpybind11_1_1detail_1_1tuple__caster_1acf9ddf3e2c1f20bdc944bb76486090b2" prot="private" static="no">
+        <type>Tuple&lt; Ts... &gt;</type>
+        <definition>using pybind11::detail::tuple_caster&lt; Tuple, Ts &gt;::type =  Tuple&lt;Ts...&gt;</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1263" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classpybind11_1_1detail_1_1tuple__caster_1ac3e1a120979efa86eb76fcbc4c86f2b0" prot="private" static="no">
+        <type><ref refid="namespacepybind11_1_1detail_1a5a29a5241a00f2bb37c172b70f6c2a3c" kindref="member">make_index_sequence</ref>&lt; size &gt;</type>
+        <definition>using pybind11::detail::tuple_caster&lt; Tuple, Ts &gt;::indices =  make_index_sequence&lt;size&gt;</definition>
+        <argsstring></argsstring>
+        <name>indices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1265" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1265" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classpybind11_1_1detail_1_1tuple__caster_1ac229281f717e8e21415517ea4c4f2b67" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>type</type>
+        <definition>using pybind11::detail::tuple_caster&lt; Tuple, Ts &gt;::cast_op_type =  type</definition>
+        <argsstring></argsstring>
+        <name>cast_op_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1286" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1286" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classpybind11_1_1detail_1_1tuple__caster_1a3d7f41b220c6492fbc6b11d591d5de82" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto pybind11::detail::tuple_caster&lt; Tuple, Ts &gt;::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <initializer>= sizeof...(Ts)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1264" column="27" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1264" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classpybind11_1_1detail_1_1tuple__caster_1ad4fcaaeafba69fae759dc4b912007266" prot="protected" static="no" mutable="no">
+        <type>Tuple&lt; <ref refid="namespacepybind11_1_1detail_1a160181d61e7d73d29060503ffdf13e6f" kindref="member">make_caster</ref>&lt; Ts &gt;... &gt;</type>
+        <definition>Tuple&lt;make_caster&lt;Ts&gt;...&gt; pybind11::detail::tuple_caster&lt; Tuple, Ts &gt;::subcasters</definition>
+        <argsstring></argsstring>
+        <name>subcasters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1323" column="11" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1323" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1tuple__caster_1aacfc0faa03fa22c340bff6da14721728" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pybind11::detail::tuple_caster&lt; Tuple, Ts &gt;::load</definition>
+        <argsstring>(handle src, bool convert)</argsstring>
+        <name>load</name>
+        <param>
+          <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>convert</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1268" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1268" bodyend="1275"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1tuple__caster_1a26eafb09af38c581a07bab144753f3ea" prot="public" static="no" const="no" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <type></type>
+        <definition>pybind11::detail::tuple_caster&lt; Tuple, Ts &gt;::operator type</definition>
+        <argsstring>() &amp;</argsstring>
+        <name>operator type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1288" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1288" bodyend="1288"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1tuple__caster_1ace79723e539420ef681271c69b041ed6" prot="public" static="no" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <type></type>
+        <definition>pybind11::detail::tuple_caster&lt; Tuple, Ts &gt;::operator type</definition>
+        <argsstring>() &amp;&amp;</argsstring>
+        <name>operator type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1289" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1289" bodyend="1289"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1tuple__caster_1ae6cbdbf8a9f0bb216ebb5fbaf1aa2142" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+        <definition>static handle pybind11::detail::tuple_caster&lt; Tuple, Ts &gt;::cast</definition>
+        <argsstring>(T &amp;&amp;src, return_value_policy policy, handle parent)</argsstring>
+        <name>cast</name>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacepybind11_1a5f83e7a05cee9068927633ac47dbe69c" kindref="member">return_value_policy</ref></type>
+          <declname>policy</declname>
+        </param>
+        <param>
+          <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1278" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1278" bodyend="1280"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1tuple__caster_1add9ceea714b2c57ddd07b15b771cc26f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>::<ref refid="classpybind11_1_1detail_1_1descr" kindref="compound">pybind11::detail::descr</ref></type>
+        <definition>::pybind11::detail::descr pybind11::detail::tuple_caster&lt; Tuple, Ts &gt;::name</definition>
+        <argsstring>()</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1282" column="40" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1282" bodyend="1284"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1tuple__caster_1af93362ccde1207805bb8a0cfb2f41233" prot="protected" static="no" const="no" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t...</type>
+            <declname>Is</declname>
+            <defname>Is</defname>
+          </param>
+        </templateparamlist>
+        <type>type</type>
+        <definition>type pybind11::detail::tuple_caster&lt; Tuple, Ts &gt;::implicit_cast</definition>
+        <argsstring>(index_sequence&lt; Is... &gt;) &amp;</argsstring>
+        <name>implicit_cast</name>
+        <param>
+          <type><ref refid="structpybind11_1_1detail_1_1index__sequence" kindref="compound">index_sequence</ref>&lt; Is... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1293" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1293" bodyend="1293"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1tuple__caster_1a0d2fe45fc6cd3b46579185aba5abc4e6" prot="protected" static="no" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t...</type>
+            <declname>Is</declname>
+            <defname>Is</defname>
+          </param>
+        </templateparamlist>
+        <type>type</type>
+        <definition>type pybind11::detail::tuple_caster&lt; Tuple, Ts &gt;::implicit_cast</definition>
+        <argsstring>(index_sequence&lt; Is... &gt;) &amp;&amp;</argsstring>
+        <name>implicit_cast</name>
+        <param>
+          <type><ref refid="structpybind11_1_1detail_1_1index__sequence" kindref="compound">index_sequence</ref>&lt; Is... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1295" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1295" bodyend="1295"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1tuple__caster_1a8ed12d68fc7ca4922983fe86c4c98301" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t...</type>
+            <declname>Is</declname>
+            <defname>Is</defname>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool pybind11::detail::tuple_caster&lt; Tuple, Ts &gt;::load_impl</definition>
+        <argsstring>(const sequence &amp;seq, bool convert, index_sequence&lt; Is... &gt;)</argsstring>
+        <name>load_impl</name>
+        <param>
+          <type>const <ref refid="classpybind11_1_1sequence" kindref="compound">sequence</ref> &amp;</type>
+          <declname>seq</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>convert</declname>
+        </param>
+        <param>
+          <type><ref refid="structpybind11_1_1detail_1_1index__sequence" kindref="compound">index_sequence</ref>&lt; Is... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1300" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1300" bodyend="1305"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1tuple__caster_1a2dc0cbbe66d11d06a1c3eeb0b0ea9ef6" prot="protected" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>static constexpr bool pybind11::detail::tuple_caster&lt; Tuple, Ts &gt;::load_impl</definition>
+        <argsstring>(const sequence &amp;, bool, index_sequence&lt;&gt;)</argsstring>
+        <name>load_impl</name>
+        <param>
+          <type>const <ref refid="classpybind11_1_1sequence" kindref="compound">sequence</ref> &amp;</type>
+        </param>
+        <param>
+          <type>bool</type>
+        </param>
+        <param>
+          <type><ref refid="structpybind11_1_1detail_1_1index__sequence" kindref="compound">index_sequence</ref>&lt;&gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1297" column="27" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1297" bodyend="1297"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1tuple__caster_1a44ee7bbe7705e29e431c4870130af779" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>size_t...</type>
+            <declname>Is</declname>
+            <defname>Is</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+        <definition>static handle pybind11::detail::tuple_caster&lt; Tuple, Ts &gt;::cast_impl</definition>
+        <argsstring>(T &amp;&amp;src, return_value_policy policy, handle parent, index_sequence&lt; Is... &gt;)</argsstring>
+        <name>cast_impl</name>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacepybind11_1a5f83e7a05cee9068927633ac47dbe69c" kindref="member">return_value_policy</ref></type>
+          <declname>policy</declname>
+        </param>
+        <param>
+          <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type><ref refid="structpybind11_1_1detail_1_1index__sequence" kindref="compound">index_sequence</ref>&lt; Is... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1309" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1309" bodyend="1321"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1262" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1262" bodyend="1324"/>
+    <listofallmembers>
+      <member refid="classpybind11_1_1detail_1_1tuple__caster_1ae6cbdbf8a9f0bb216ebb5fbaf1aa2142" prot="public" virt="non-virtual"><scope>pybind11::detail::tuple_caster</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1detail_1_1tuple__caster_1a44ee7bbe7705e29e431c4870130af779" prot="protected" virt="non-virtual"><scope>pybind11::detail::tuple_caster</scope><name>cast_impl</name></member>
+      <member refid="classpybind11_1_1detail_1_1tuple__caster_1ac229281f717e8e21415517ea4c4f2b67" prot="public" virt="non-virtual"><scope>pybind11::detail::tuple_caster</scope><name>cast_op_type</name></member>
+      <member refid="classpybind11_1_1detail_1_1tuple__caster_1af93362ccde1207805bb8a0cfb2f41233" prot="protected" virt="non-virtual"><scope>pybind11::detail::tuple_caster</scope><name>implicit_cast</name></member>
+      <member refid="classpybind11_1_1detail_1_1tuple__caster_1a0d2fe45fc6cd3b46579185aba5abc4e6" prot="protected" virt="non-virtual"><scope>pybind11::detail::tuple_caster</scope><name>implicit_cast</name></member>
+      <member refid="classpybind11_1_1detail_1_1tuple__caster_1ac3e1a120979efa86eb76fcbc4c86f2b0" prot="private" virt="non-virtual"><scope>pybind11::detail::tuple_caster</scope><name>indices</name></member>
+      <member refid="classpybind11_1_1detail_1_1tuple__caster_1aacfc0faa03fa22c340bff6da14721728" prot="public" virt="non-virtual"><scope>pybind11::detail::tuple_caster</scope><name>load</name></member>
+      <member refid="classpybind11_1_1detail_1_1tuple__caster_1a2dc0cbbe66d11d06a1c3eeb0b0ea9ef6" prot="protected" virt="non-virtual"><scope>pybind11::detail::tuple_caster</scope><name>load_impl</name></member>
+      <member refid="classpybind11_1_1detail_1_1tuple__caster_1a8ed12d68fc7ca4922983fe86c4c98301" prot="protected" virt="non-virtual"><scope>pybind11::detail::tuple_caster</scope><name>load_impl</name></member>
+      <member refid="classpybind11_1_1detail_1_1tuple__caster_1add9ceea714b2c57ddd07b15b771cc26f" prot="public" virt="non-virtual"><scope>pybind11::detail::tuple_caster</scope><name>name</name></member>
+      <member refid="classpybind11_1_1detail_1_1tuple__caster_1a26eafb09af38c581a07bab144753f3ea" prot="public" virt="non-virtual"><scope>pybind11::detail::tuple_caster</scope><name>operator type</name></member>
+      <member refid="classpybind11_1_1detail_1_1tuple__caster_1ace79723e539420ef681271c69b041ed6" prot="public" virt="non-virtual"><scope>pybind11::detail::tuple_caster</scope><name>operator type</name></member>
+      <member refid="classpybind11_1_1detail_1_1tuple__caster_1a3d7f41b220c6492fbc6b11d591d5de82" prot="private" virt="non-virtual"><scope>pybind11::detail::tuple_caster</scope><name>size</name></member>
+      <member refid="classpybind11_1_1detail_1_1tuple__caster_1ad4fcaaeafba69fae759dc4b912007266" prot="protected" virt="non-virtual"><scope>pybind11::detail::tuple_caster</scope><name>subcasters</name></member>
+      <member refid="classpybind11_1_1detail_1_1tuple__caster_1acf9ddf3e2c1f20bdc944bb76486090b2" prot="private" virt="non-virtual"><scope>pybind11::detail::tuple_caster</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

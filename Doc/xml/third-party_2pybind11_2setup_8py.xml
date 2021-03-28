@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="third-party_2pybind11_2setup_8py" kind="file" language="Python">
+    <compoundname>setup.py</compoundname>
+    <innernamespace refid="namespacesetup">setup</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">#!/usr/bin/env<sp/>python</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Setup<sp/>script<sp/>for<sp/>PyPI;<sp/>use<sp/>CMakeFile.txt<sp/>to<sp/>build<sp/>extension<sp/>modules</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>setuptools<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>setup</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>pybind11<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>__version__</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>os</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Prevent<sp/>installation<sp/>of<sp/>pybind11<sp/>headers<sp/>by<sp/>setting</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">#<sp/>PYBIND11_USE_CMAKE.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>os.environ.get(</highlight><highlight class="stringliteral">&apos;PYBIND11_USE_CMAKE&apos;</highlight><highlight class="normal">):</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>headers<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>headers<sp/>=<sp/>[</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/attr.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/buffer_info.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/cast.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/chrono.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/class_support.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/common.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/complex.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/descr.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/eigen.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/embed.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/eval.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/functional.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/numpy.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/operators.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/options.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/pybind11.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/pytypes.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/stl.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/stl_bind.h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include/pybind11/typeid.h&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>]</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="namespacesetup" kindref="compound">setup</ref>(</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>name=</highlight><highlight class="stringliteral">&apos;pybind11&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>version=__version__,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>description=</highlight><highlight class="stringliteral">&apos;Seamless<sp/>operability<sp/>between<sp/>C++11<sp/>and<sp/>Python&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>author=</highlight><highlight class="stringliteral">&apos;Wenzel<sp/>Jakob&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>author_email=</highlight><highlight class="stringliteral">&apos;wenzel.jakob@epfl.ch&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>url=</highlight><highlight class="stringliteral">&apos;https://github.com/wjakob/pybind11&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>download_url=</highlight><highlight class="stringliteral">&apos;https://github.com/wjakob/pybind11/tarball/v&apos;</highlight><highlight class="normal"><sp/>+<sp/>__version__,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>packages=[</highlight><highlight class="stringliteral">&apos;pybind11&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>license=</highlight><highlight class="stringliteral">&apos;BSD&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>headers=headers,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>classifiers=[</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Development<sp/>Status<sp/>::<sp/>5<sp/>-<sp/>Production/Stable&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Intended<sp/>Audience<sp/>::<sp/>Developers&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Topic<sp/>::<sp/>Software<sp/>Development<sp/>::<sp/>Libraries<sp/>::<sp/>Python<sp/>Modules&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Topic<sp/>::<sp/>Utilities&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Programming<sp/>Language<sp/>::<sp/>C++&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Programming<sp/>Language<sp/>::<sp/>Python<sp/>::<sp/>2.7&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Programming<sp/>Language<sp/>::<sp/>Python<sp/>::<sp/>3&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Programming<sp/>Language<sp/>::<sp/>Python<sp/>::<sp/>3.2&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Programming<sp/>Language<sp/>::<sp/>Python<sp/>::<sp/>3.3&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Programming<sp/>Language<sp/>::<sp/>Python<sp/>::<sp/>3.4&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Programming<sp/>Language<sp/>::<sp/>Python<sp/>::<sp/>3.5&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Programming<sp/>Language<sp/>::<sp/>Python<sp/>::<sp/>3.6&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;License<sp/>::<sp/>OSI<sp/>Approved<sp/>::<sp/>BSD<sp/>License&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>],</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>keywords=</highlight><highlight class="stringliteral">&apos;C++11,<sp/>Python<sp/>bindings&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>long_description=</highlight><highlight class="stringliteral">&quot;&quot;&quot;pybind11<sp/>is<sp/>a<sp/>lightweight<sp/>header-only<sp/>library<sp/>that</highlight></codeline>
+<codeline lineno="65"><highlight class="stringliteral">exposes<sp/>C++<sp/>types<sp/>in<sp/>Python<sp/>and<sp/>vice<sp/>versa,<sp/>mainly<sp/>to<sp/>create<sp/>Python<sp/>bindings<sp/>of</highlight></codeline>
+<codeline lineno="66"><highlight class="stringliteral">existing<sp/>C++<sp/>code.<sp/>Its<sp/>goals<sp/>and<sp/>syntax<sp/>are<sp/>similar<sp/>to<sp/>the<sp/>excellent</highlight></codeline>
+<codeline lineno="67"><highlight class="stringliteral">Boost.Python<sp/>by<sp/>David<sp/>Abrahams:<sp/>to<sp/>minimize<sp/>boilerplate<sp/>code<sp/>in<sp/>traditional</highlight></codeline>
+<codeline lineno="68"><highlight class="stringliteral">extension<sp/>modules<sp/>by<sp/>inferring<sp/>type<sp/>information<sp/>using<sp/>compile-time</highlight></codeline>
+<codeline lineno="69"><highlight class="stringliteral">introspection.</highlight></codeline>
+<codeline lineno="70"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="71"><highlight class="stringliteral">The<sp/>main<sp/>issue<sp/>with<sp/>Boost.Python-and<sp/>the<sp/>reason<sp/>for<sp/>creating<sp/>such<sp/>a<sp/>similar</highlight></codeline>
+<codeline lineno="72"><highlight class="stringliteral">project-is<sp/>Boost.<sp/>Boost<sp/>is<sp/>an<sp/>enormously<sp/>large<sp/>and<sp/>complex<sp/>suite<sp/>of<sp/>utility</highlight></codeline>
+<codeline lineno="73"><highlight class="stringliteral">libraries<sp/>that<sp/>works<sp/>with<sp/>almost<sp/>every<sp/>C++<sp/>compiler<sp/>in<sp/>existence.<sp/>This</highlight></codeline>
+<codeline lineno="74"><highlight class="stringliteral">compatibility<sp/>has<sp/>its<sp/>cost:<sp/>arcane<sp/>template<sp/>tricks<sp/>and<sp/>workarounds<sp/>are</highlight></codeline>
+<codeline lineno="75"><highlight class="stringliteral">necessary<sp/>to<sp/>support<sp/>the<sp/>oldest<sp/>and<sp/>buggiest<sp/>of<sp/>compiler<sp/>specimens.<sp/>Now<sp/>that</highlight></codeline>
+<codeline lineno="76"><highlight class="stringliteral">C++11-compatible<sp/>compilers<sp/>are<sp/>widely<sp/>available,<sp/>this<sp/>heavy<sp/>machinery<sp/>has</highlight></codeline>
+<codeline lineno="77"><highlight class="stringliteral">become<sp/>an<sp/>excessively<sp/>large<sp/>and<sp/>unnecessary<sp/>dependency.</highlight></codeline>
+<codeline lineno="78"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="79"><highlight class="stringliteral">Think<sp/>of<sp/>this<sp/>library<sp/>as<sp/>a<sp/>tiny<sp/>self-contained<sp/>version<sp/>of<sp/>Boost.Python<sp/>with</highlight></codeline>
+<codeline lineno="80"><highlight class="stringliteral">everything<sp/>stripped<sp/>away<sp/>that<sp/>isn&apos;t<sp/>relevant<sp/>for<sp/>binding<sp/>generation.<sp/>Without</highlight></codeline>
+<codeline lineno="81"><highlight class="stringliteral">comments,<sp/>the<sp/>core<sp/>header<sp/>files<sp/>only<sp/>require<sp/>~4K<sp/>lines<sp/>of<sp/>code<sp/>and<sp/>depend<sp/>on</highlight></codeline>
+<codeline lineno="82"><highlight class="stringliteral">Python<sp/>(2.7<sp/>or<sp/>3.x,<sp/>or<sp/>PyPy2.7<sp/>&gt;=<sp/>5.7)<sp/>and<sp/>the<sp/>C++<sp/>standard<sp/>library.<sp/>This</highlight></codeline>
+<codeline lineno="83"><highlight class="stringliteral">compact<sp/>implementation<sp/>was<sp/>possible<sp/>thanks<sp/>to<sp/>some<sp/>of<sp/>the<sp/>new<sp/>C++11<sp/>language</highlight></codeline>
+<codeline lineno="84"><highlight class="stringliteral">features<sp/>(specifically:<sp/>tuples,<sp/>lambda<sp/>functions<sp/>and<sp/>variadic<sp/>templates).<sp/>Since</highlight></codeline>
+<codeline lineno="85"><highlight class="stringliteral">its<sp/>creation,<sp/>this<sp/>library<sp/>has<sp/>grown<sp/>beyond<sp/>Boost.Python<sp/>in<sp/>many<sp/>ways,<sp/>leading</highlight></codeline>
+<codeline lineno="86"><highlight class="stringliteral">to<sp/>dramatically<sp/>simpler<sp/>binding<sp/>code<sp/>in<sp/>many<sp/>common<sp/>situations.&quot;&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/setup.py"/>
+  </compounddef>
+</doxygen>

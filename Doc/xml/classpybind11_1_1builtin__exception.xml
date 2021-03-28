@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classpybind11_1_1builtin__exception" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>pybind11::builtin_exception</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::runtime_error</basecompoundref>
+    <derivedcompoundref refid="classpybind11_1_1cast__error" prot="public" virt="non-virtual">pybind11::cast_error</derivedcompoundref>
+    <derivedcompoundref refid="classpybind11_1_1index__error" prot="public" virt="non-virtual">pybind11::index_error</derivedcompoundref>
+    <derivedcompoundref refid="classpybind11_1_1key__error" prot="public" virt="non-virtual">pybind11::key_error</derivedcompoundref>
+    <derivedcompoundref refid="classpybind11_1_1reference__cast__error" prot="public" virt="non-virtual">pybind11::reference_cast_error</derivedcompoundref>
+    <derivedcompoundref refid="classpybind11_1_1stop__iteration" prot="public" virt="non-virtual">pybind11::stop_iteration</derivedcompoundref>
+    <derivedcompoundref refid="classpybind11_1_1type__error" prot="public" virt="non-virtual">pybind11::type_error</derivedcompoundref>
+    <derivedcompoundref refid="classpybind11_1_1value__error" prot="public" virt="non-virtual">pybind11::value_error</derivedcompoundref>
+    <includes refid="common_8h" local="no">common.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpybind11_1_1builtin__exception_1a6d752ae14042159c821fb362653ce5be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void pybind11::builtin_exception::set_error</definition>
+        <argsstring>() const =0</argsstring>
+        <name>set_error</name>
+        <reimplementedby refid="classpybind11_1_1stop__iteration_1a964fc357def1c565a3bdb67f52ab6e7e">set_error</reimplementedby>
+        <reimplementedby refid="classpybind11_1_1index__error_1aca091f6165d062e55154e046485e20bd">set_error</reimplementedby>
+        <reimplementedby refid="classpybind11_1_1key__error_1a38f36ef18ba59d2513dc2b0fddbe2344">set_error</reimplementedby>
+        <reimplementedby refid="classpybind11_1_1value__error_1ac38d0fc2fb3f7ff8423ab618eacb76bf">set_error</reimplementedby>
+        <reimplementedby refid="classpybind11_1_1type__error_1ad958c7cb4e85c4a2e459386082553393">set_error</reimplementedby>
+        <reimplementedby refid="classpybind11_1_1cast__error_1a7ac12816baea61b30db966484de779c6">set_error</reimplementedby>
+        <reimplementedby refid="classpybind11_1_1reference__cast__error_1a6353864caee5d2ac2167f63d6b05343d">set_error</reimplementedby>
+        <briefdescription>
+<para>Set the error using the Python C API. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/common.h" line="736" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>C++ bindings of builtin Python exceptions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>pybind11::stop_iteration</label>
+        <link refid="classpybind11_1_1stop__iteration"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>pybind11::value_error</label>
+        <link refid="classpybind11_1_1value__error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>pybind11::type_error</label>
+        <link refid="classpybind11_1_1type__error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::runtime_error</label>
+      </node>
+      <node id="1">
+        <label>pybind11::builtin_exception</label>
+        <link refid="classpybind11_1_1builtin__exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>pybind11::index_error</label>
+        <link refid="classpybind11_1_1index__error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pybind11::reference_cast_error</label>
+        <link refid="classpybind11_1_1reference__cast__error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>pybind11::key_error</label>
+        <link refid="classpybind11_1_1key__error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>pybind11::cast_error</label>
+        <link refid="classpybind11_1_1cast__error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::runtime_error</label>
+      </node>
+      <node id="1">
+        <label>pybind11::builtin_exception</label>
+        <link refid="classpybind11_1_1builtin__exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/common.h" line="732" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/common.h" bodystart="732" bodyend="737"/>
+    <listofallmembers>
+      <member refid="classpybind11_1_1builtin__exception_1a6d752ae14042159c821fb362653ce5be" prot="public" virt="pure-virtual"><scope>pybind11::builtin_exception</scope><name>set_error</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

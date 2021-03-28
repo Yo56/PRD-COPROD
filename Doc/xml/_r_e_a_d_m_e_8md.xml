@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;img<sp/>height=&quot;100&quot;<sp/>src=&quot;https://user-images.githubusercontent.com/1735211/29433390-f37fa28e-836c-11e7-8a60-f8df4c30b424.png&quot;<sp/>alt=&quot;xlnt<sp/>logo&quot;&gt;&lt;br/&gt;</highlight></codeline>
+<codeline><highlight class="normal">====</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![Travis<sp/>Build<sp/>Status](https://travis-ci.org/tfussell/xlnt.svg?branch=master)](https://travis-ci.org/tfussell/xlnt)</highlight></codeline>
+<codeline><highlight class="normal">[![AppVeyor<sp/>Build<sp/>status](https://ci.appveyor.com/api/projects/status/2hs79a1xoxy16sol?svg=true)](https://ci.appveyor.com/project/tfussell/xlnt)</highlight></codeline>
+<codeline><highlight class="normal">[![Coverage<sp/>Status](https://coveralls.io/repos/github/tfussell/xlnt/badge.svg?branch=master)](https://coveralls.io/github/tfussell/xlnt?branch=master)</highlight></codeline>
+<codeline><highlight class="normal">[![Documentation<sp/>Status](https://legacy.gitbook.com/button/status/book/tfussell/xlnt)](https://tfussell.gitbooks.io/xlnt/content/)</highlight></codeline>
+<codeline><highlight class="normal">[![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://opensource.org/licenses/MIT)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Introduction</highlight></codeline>
+<codeline><highlight class="normal">xlnt<sp/>is<sp/>a<sp/>modern<sp/>C++<sp/>library<sp/>for<sp/>manipulating<sp/>spreadsheets<sp/>in<sp/>memory<sp/>and<sp/>reading/writing<sp/>them<sp/>from/to<sp/>XLSX<sp/>files<sp/>as<sp/>described<sp/>in<sp/>[ECMA<sp/>376<sp/>4th<sp/>edition](http://www.ecma-international.org/publications/standards/Ecma-376.htm).<sp/>The<sp/>first<sp/>public<sp/>release<sp/>of<sp/>xlnt<sp/>version<sp/>1.0<sp/>was<sp/>on<sp/>May<sp/>10th,<sp/>2017.<sp/>Current<sp/>work<sp/>is<sp/>focused<sp/>on<sp/>increasing<sp/>compatibility,<sp/>improving<sp/>performance,<sp/>and<sp/>brainstorming<sp/>future<sp/>development<sp/>goals.<sp/>For<sp/>a<sp/>high-level<sp/>summary<sp/>of<sp/>what<sp/>you<sp/>can<sp/>do<sp/>with<sp/>this<sp/>library,<sp/>see<sp/>[the<sp/>feature<sp/>list](https://tfussell.gitbooks.io/xlnt/content/docs/introduction/Features.html).<sp/>Contributions<sp/>are<sp/>welcome<sp/>in<sp/>the<sp/>form<sp/>of<sp/>pull<sp/>requests<sp/>or<sp/>discussions<sp/>on<sp/>[the<sp/>repository&apos;s<sp/>Issues<sp/>page](https://github.com/tfussell/xlnt/issues).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Example</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Including<sp/>xlnt<sp/>in<sp/>your<sp/>project,<sp/>creating<sp/>a<sp/>new<sp/>spreadsheet,<sp/>and<sp/>saving<sp/>it<sp/>as<sp/>&quot;example.xlsx&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c++</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;xlnt/xlnt.hpp&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xlnt::workbook<sp/>wb;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xlnt::worksheet<sp/>ws<sp/>=<sp/>wb.active_sheet();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ws.cell(&quot;A1&quot;).value(5);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ws.cell(&quot;B2&quot;).value(&quot;string<sp/>data&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ws.cell(&quot;C3&quot;).formula(&quot;=RAND()&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ws.merge_cells(&quot;C3:C4&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ws.freeze_panes(&quot;B2&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wb.save(&quot;example.xlsx&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>compile<sp/>with<sp/>-std=c++14<sp/>-Ixlnt/include<sp/>-lxlnt</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Documentation<sp/>for<sp/>the<sp/>current<sp/>release<sp/>of<sp/>xlnt<sp/>is<sp/>available<sp/>[here](https://tfussell.gitbooks.io/xlnt/content/).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>License</highlight></codeline>
+<codeline><highlight class="normal">xlnt<sp/>is<sp/>released<sp/>to<sp/>the<sp/>public<sp/>for<sp/>free<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>MIT<sp/>License.<sp/>See<sp/>[LICENSE.md](https://github.com/tfussell/xlnt/blob/master/LICENSE.md)<sp/>for<sp/>the<sp/>full<sp/>text<sp/>of<sp/>the<sp/>license<sp/>and<sp/>the<sp/>licenses<sp/>of<sp/>xlnt&apos;s<sp/>third-party<sp/>dependencies.<sp/>[LICENSE.md](https://github.com/tfussell/xlnt/blob/master/LICENSE.md)<sp/>should<sp/>be<sp/>distributed<sp/>alongside<sp/>any<sp/>assemblies<sp/>that<sp/>use<sp/>xlnt<sp/>in<sp/>source<sp/>or<sp/>compiled<sp/>form.</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/README.md"/>
+  </compounddef>
+</doxygen>

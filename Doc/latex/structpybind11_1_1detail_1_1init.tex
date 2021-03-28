@@ -1,0 +1,48 @@
+\hypertarget{structpybind11_1_1detail_1_1init}{}\doxysection{pybind11\+::detail\+::init$<$ Args $>$ Struct Template Reference}
+\label{structpybind11_1_1detail_1_1init}\index{pybind11::detail::init$<$ Args $>$@{pybind11::detail::init$<$ Args $>$}}
+
+
+{\ttfamily \#include $<$pybind11.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Class , typename... Extra, enable\+\_\+if\+\_\+t$<$!\+Class\+::has\+\_\+alias, int $>$  = 0$>$ }\\static void \mbox{\hyperlink{structpybind11_1_1detail_1_1init_a84f1bb9f5b834abb93ce93bccf4d61b4}{execute}} (Class \&cl, const Extra \&... extra)
+\item 
+{\footnotesize template$<$typename Class , typename... Extra, enable\+\_\+if\+\_\+t$<$ Class\+::has\+\_\+alias \&\&std\+::is\+\_\+constructible$<$ typename Class\+::type, Args... $>$\+::value, int $>$  = 0$>$ }\\static void \mbox{\hyperlink{structpybind11_1_1detail_1_1init_a84f1bb9f5b834abb93ce93bccf4d61b4}{execute}} (Class \&cl, const Extra \&... extra)
+\item 
+{\footnotesize template$<$typename Class , typename... Extra, enable\+\_\+if\+\_\+t$<$ Class\+::has\+\_\+alias \&\&!std\+::is\+\_\+constructible$<$ typename Class\+::type, Args... $>$\+::value, int $>$  = 0$>$ }\\static void \mbox{\hyperlink{structpybind11_1_1detail_1_1init_a84f1bb9f5b834abb93ce93bccf4d61b4}{execute}} (Class \&cl, const Extra \&... extra)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1init_a84f1bb9f5b834abb93ce93bccf4d61b4}\label{structpybind11_1_1detail_1_1init_a84f1bb9f5b834abb93ce93bccf4d61b4}} 
+\index{pybind11::detail::init$<$ Args $>$@{pybind11::detail::init$<$ Args $>$}!execute@{execute}}
+\index{execute@{execute}!pybind11::detail::init$<$ Args $>$@{pybind11::detail::init$<$ Args $>$}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+template$<$typename Class , typename... Extra, enable\+\_\+if\+\_\+t$<$!\+Class\+::has\+\_\+alias, int $>$  = 0$>$ \\
+static void \mbox{\hyperlink{structpybind11_1_1detail_1_1init}{pybind11\+::detail\+::init}}$<$ Args $>$\+::execute (\begin{DoxyParamCaption}\item[{Class \&}]{cl,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Function which calls a specific C++ in-\/place constructor\mbox{\Hypertarget{structpybind11_1_1detail_1_1init_a84f1bb9f5b834abb93ce93bccf4d61b4}\label{structpybind11_1_1detail_1_1init_a84f1bb9f5b834abb93ce93bccf4d61b4}} 
+\index{pybind11::detail::init$<$ Args $>$@{pybind11::detail::init$<$ Args $>$}!execute@{execute}}
+\index{execute@{execute}!pybind11::detail::init$<$ Args $>$@{pybind11::detail::init$<$ Args $>$}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+template$<$typename Class , typename... Extra, enable\+\_\+if\+\_\+t$<$ Class\+::has\+\_\+alias \&\&std\+::is\+\_\+constructible$<$ typename Class\+::type, Args... $>$\+::value, int $>$  = 0$>$ \\
+static void \mbox{\hyperlink{structpybind11_1_1detail_1_1init}{pybind11\+::detail\+::init}}$<$ Args $>$\+::execute (\begin{DoxyParamCaption}\item[{Class \&}]{cl,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1init_a84f1bb9f5b834abb93ce93bccf4d61b4}\label{structpybind11_1_1detail_1_1init_a84f1bb9f5b834abb93ce93bccf4d61b4}} 
+\index{pybind11::detail::init$<$ Args $>$@{pybind11::detail::init$<$ Args $>$}!execute@{execute}}
+\index{execute@{execute}!pybind11::detail::init$<$ Args $>$@{pybind11::detail::init$<$ Args $>$}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+template$<$typename Class , typename... Extra, enable\+\_\+if\+\_\+t$<$ Class\+::has\+\_\+alias \&\&!std\+::is\+\_\+constructible$<$ typename Class\+::type, Args... $>$\+::value, int $>$  = 0$>$ \\
+static void \mbox{\hyperlink{structpybind11_1_1detail_1_1init}{pybind11\+::detail\+::init}}$<$ Args $>$\+::execute (\begin{DoxyParamCaption}\item[{Class \&}]{cl,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{attr_8h}{attr.\+h}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{pybind11_8h}{pybind11.\+h}}\end{DoxyCompactItemize}

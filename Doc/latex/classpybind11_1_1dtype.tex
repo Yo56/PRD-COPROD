@@ -1,0 +1,152 @@
+\hypertarget{classpybind11_1_1dtype}{}\doxysection{pybind11\+::dtype Class Reference}
+\label{classpybind11_1_1dtype}\index{pybind11::dtype@{pybind11::dtype}}
+
+
+{\ttfamily \#include $<$numpy.\+h$>$}
+
+Inheritance diagram for pybind11\+::dtype\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classpybind11_1_1dtype}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpybind11_1_1dtype_a80c27e90a8c3ed209a30cb15f409d4e8}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((deprecated(\char`\"{}Use \mbox{\hyperlink{classpybind11_1_1object_ac1ea1a4cbcf197d7c8096037633720d7}{reinterpret\+\_\+borrow}}$<$\char`\"{}\char`\"{}\mbox{\hyperlink{classpybind11_1_1dtype}{dtype}}\char`\"{}\char`\"{}$>$() or \mbox{\hyperlink{classpybind11_1_1object_ae1de2ab5a755c10582ac1e46071de5c5}{reinterpret\+\_\+steal}}$<$\char`\"{}\char`\"{}\mbox{\hyperlink{classpybind11_1_1dtype}{dtype}}\char`\"{}\char`\"{}$>$()\char`\"{}))) dtype(\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h
+\item 
+\mbox{\hyperlink{classpybind11_1_1dtype_ad53803f03d109db696836cd606ce5263}{dtype}} (const \mbox{\hyperlink{structpybind11_1_1buffer__info}{buffer\+\_\+info}} \&info)
+\item 
+\mbox{\hyperlink{classpybind11_1_1dtype_aa7145fdff7975ab31c33f89fb3612e64}{dtype}} (const std\+::string \&format)
+\item 
+\mbox{\hyperlink{classpybind11_1_1dtype_a790cfc317dcf1d419f1b71f7d1c92c95}{dtype}} (const char $\ast$format)
+\item 
+\mbox{\hyperlink{classpybind11_1_1dtype_acb9f72b49985a00c8343fabecda0cad8}{dtype}} (\mbox{\hyperlink{classpybind11_1_1list}{list}} names, \mbox{\hyperlink{classpybind11_1_1list}{list}} formats, \mbox{\hyperlink{classpybind11_1_1list}{list}} offsets, \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1dtype_a0b9e78608ec9c52d53e74af45a448612}{itemsize}})
+\item 
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1dtype_a0b9e78608ec9c52d53e74af45a448612}{itemsize}} () const
+\begin{DoxyCompactList}\small\item\em Size of the data type in bytes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpybind11_1_1dtype_a41b2518619accd92c1046c1815e2a4ca}{has\+\_\+fields}} () const
+\begin{DoxyCompactList}\small\item\em Returns true for structured data types. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classpybind11_1_1dtype_a3ab57c8ab9837424204f476cf2a48cb7}{kind}} () const
+\begin{DoxyCompactList}\small\item\em Single-\/character type code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classpybind11_1_1dtype}{dtype}} \mbox{\hyperlink{classpybind11_1_1dtype_a742c7f76781541777fbd34c0ad4e8f8f}{from\+\_\+args}} (\mbox{\hyperlink{classpybind11_1_1object}{object}} \mbox{\hyperlink{classpybind11_1_1args}{args}})
+\begin{DoxyCompactList}\small\item\em This is essentially the same as calling numpy.\+dtype(args) in Python. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{classpybind11_1_1dtype}{dtype}} \mbox{\hyperlink{classpybind11_1_1dtype_a31d7ba33e431c01d267a1f8b7e073bcb}{of}} ()
+\begin{DoxyCompactList}\small\item\em Return dtype associated with a C++ type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1dtype_ac94a0ca4858d5ddca32e5ff7950c1b58}{is\+\_\+borrowed}}\+: \mbox{\hyperlink{classpybind11_1_1object}{object}} (is\+\_\+borrowed ? \mbox{\hyperlink{classpybind11_1_1object}{object}} (h
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1dtype_a1e874d0be8a7a9ce52002e632f11de6a}{borrowed\+\_\+t}} \{\}) \+: \mbox{\hyperlink{classpybind11_1_1object}{object}} (h, \mbox{\hyperlink{structpybind11_1_1object_1_1stolen__t}{stolen\+\_\+t}}\{\})) \{ \} \mbox{\hyperlink{classpybind11_1_1dtype}{dtype}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h, \mbox{\hyperlink{structpybind11_1_1object_1_1borrowed__t}{borrowed\+\_\+t}}) \+: \mbox{\hyperlink{classpybind11_1_1object}{object}} (h, \mbox{\hyperlink{structpybind11_1_1object_1_1borrowed__t}{borrowed\+\_\+t}}\{\}) \{ \} \mbox{\hyperlink{classpybind11_1_1dtype}{dtype}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h, \mbox{\hyperlink{structpybind11_1_1object_1_1stolen__t}{stolen\+\_\+t}}) \+: \mbox{\hyperlink{classpybind11_1_1object}{object}} (h, \mbox{\hyperlink{structpybind11_1_1object_1_1stolen__t}{stolen\+\_\+t}}\{\}) \{ \} \mbox{\hyperlink{common_8h_ae4ba3bb24593b13133ae78407f466353}{PYBIND11\+\_\+\+DEPRECATED}}(\char`\"{}Use py\+::isinstance$<$py\+::python\+\_\+type$>$(obj) instead\char`\"{}) bool check() const \{ return m\+\_\+ptr != nullptr \&\& (bool) \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a6cbffe9763f89f63d3cfc8f94c90791f}{detail\+::npy\+\_\+api\+::get}}().Py\+Array\+Descr\+\_\+\+Check\+\_\+ (m\+\_\+ptr); \} static bool check\+\_\+(\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h) \{ return h.\+ptr() != nullptr \&\& \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a6cbffe9763f89f63d3cfc8f94c90791f}{detail\+::npy\+\_\+api\+::get}}().Py\+Array\+Descr\+\_\+\+Check\+\_\+ (h.\+ptr()); \} \mbox{\hyperlink{classpybind11_1_1dtype}{dtype}} (const \mbox{\hyperlink{classpybind11_1_1object}{object}} \&o) \+: \mbox{\hyperlink{classpybind11_1_1object}{object}} (o) \{ \} \mbox{\hyperlink{classpybind11_1_1dtype}{dtype}} (\mbox{\hyperlink{classpybind11_1_1object}{object}} \&\&o) \+: \mbox{\hyperlink{classpybind11_1_1object}{object}} (std\+::move(o)) \{ \} \mbox{\hyperlink{classpybind11_1_1dtype}{dtype}} () \+: \mbox{\hyperlink{classpybind11_1_1object}{object}} () \{ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpybind11_1_1dtype_ad53803f03d109db696836cd606ce5263}\label{classpybind11_1_1dtype_ad53803f03d109db696836cd606ce5263}} 
+\index{pybind11::dtype@{pybind11::dtype}!dtype@{dtype}}
+\index{dtype@{dtype}!pybind11::dtype@{pybind11::dtype}}
+\doxysubsubsection{\texorpdfstring{dtype()}{dtype()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily pybind11\+::dtype\+::dtype (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structpybind11_1_1buffer__info}{buffer\+\_\+info}} \&}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classpybind11_1_1dtype_aa7145fdff7975ab31c33f89fb3612e64}\label{classpybind11_1_1dtype_aa7145fdff7975ab31c33f89fb3612e64}} 
+\index{pybind11::dtype@{pybind11::dtype}!dtype@{dtype}}
+\index{dtype@{dtype}!pybind11::dtype@{pybind11::dtype}}
+\doxysubsubsection{\texorpdfstring{dtype()}{dtype()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily pybind11\+::dtype\+::dtype (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classpybind11_1_1dtype_a790cfc317dcf1d419f1b71f7d1c92c95}\label{classpybind11_1_1dtype_a790cfc317dcf1d419f1b71f7d1c92c95}} 
+\index{pybind11::dtype@{pybind11::dtype}!dtype@{dtype}}
+\index{dtype@{dtype}!pybind11::dtype@{pybind11::dtype}}
+\doxysubsubsection{\texorpdfstring{dtype()}{dtype()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily pybind11\+::dtype\+::dtype (\begin{DoxyParamCaption}\item[{const char $\ast$}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1dtype_acb9f72b49985a00c8343fabecda0cad8}\label{classpybind11_1_1dtype_acb9f72b49985a00c8343fabecda0cad8}} 
+\index{pybind11::dtype@{pybind11::dtype}!dtype@{dtype}}
+\index{dtype@{dtype}!pybind11::dtype@{pybind11::dtype}}
+\doxysubsubsection{\texorpdfstring{dtype()}{dtype()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily pybind11\+::dtype\+::dtype (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1list}{list}}}]{names,  }\item[{\mbox{\hyperlink{classpybind11_1_1list}{list}}}]{formats,  }\item[{\mbox{\hyperlink{classpybind11_1_1list}{list}}}]{offsets,  }\item[{\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}]{itemsize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1dtype_a80c27e90a8c3ed209a30cb15f409d4e8}\label{classpybind11_1_1dtype_a80c27e90a8c3ed209a30cb15f409d4e8}} 
+\index{pybind11::dtype@{pybind11::dtype}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!pybind11::dtype@{pybind11::dtype}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily pybind11\+::dtype\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(deprecated(\char`\"{}Use \mbox{\hyperlink{classpybind11_1_1object_ac1ea1a4cbcf197d7c8096037633720d7}{reinterpret\+\_\+borrow}}$<$\char`\"{}\char`\"{}\mbox{\hyperlink{classpybind11_1_1dtype}{dtype}}\char`\"{}\char`\"{}$>$() or \mbox{\hyperlink{classpybind11_1_1object_ae1de2ab5a755c10582ac1e46071de5c5}{reinterpret\+\_\+steal}}$<$\char`\"{}\char`\"{}\mbox{\hyperlink{classpybind11_1_1dtype}{dtype}}\char`\"{}\char`\"{}$>$()\char`\"{}))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpybind11_1_1dtype_a742c7f76781541777fbd34c0ad4e8f8f}\label{classpybind11_1_1dtype_a742c7f76781541777fbd34c0ad4e8f8f}} 
+\index{pybind11::dtype@{pybind11::dtype}!from\_args@{from\_args}}
+\index{from\_args@{from\_args}!pybind11::dtype@{pybind11::dtype}}
+\doxysubsubsection{\texorpdfstring{from\_args()}{from\_args()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classpybind11_1_1dtype}{dtype}} pybind11\+::dtype\+::from\+\_\+args (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1object}{object}}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+This is essentially the same as calling numpy.\+dtype(args) in Python. 
+
+\mbox{\Hypertarget{classpybind11_1_1dtype_a41b2518619accd92c1046c1815e2a4ca}\label{classpybind11_1_1dtype_a41b2518619accd92c1046c1815e2a4ca}} 
+\index{pybind11::dtype@{pybind11::dtype}!has\_fields@{has\_fields}}
+\index{has\_fields@{has\_fields}!pybind11::dtype@{pybind11::dtype}}
+\doxysubsubsection{\texorpdfstring{has\_fields()}{has\_fields()}}
+{\footnotesize\ttfamily bool pybind11\+::dtype\+::has\+\_\+fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true for structured data types. 
+
+\mbox{\Hypertarget{classpybind11_1_1dtype_a0b9e78608ec9c52d53e74af45a448612}\label{classpybind11_1_1dtype_a0b9e78608ec9c52d53e74af45a448612}} 
+\index{pybind11::dtype@{pybind11::dtype}!itemsize@{itemsize}}
+\index{itemsize@{itemsize}!pybind11::dtype@{pybind11::dtype}}
+\doxysubsubsection{\texorpdfstring{itemsize()}{itemsize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} pybind11\+::dtype\+::itemsize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Size of the data type in bytes. 
+
+\mbox{\Hypertarget{classpybind11_1_1dtype_a3ab57c8ab9837424204f476cf2a48cb7}\label{classpybind11_1_1dtype_a3ab57c8ab9837424204f476cf2a48cb7}} 
+\index{pybind11::dtype@{pybind11::dtype}!kind@{kind}}
+\index{kind@{kind}!pybind11::dtype@{pybind11::dtype}}
+\doxysubsubsection{\texorpdfstring{kind()}{kind()}}
+{\footnotesize\ttfamily char pybind11\+::dtype\+::kind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Single-\/character type code. 
+
+\mbox{\Hypertarget{classpybind11_1_1dtype_a31d7ba33e431c01d267a1f8b7e073bcb}\label{classpybind11_1_1dtype_a31d7ba33e431c01d267a1f8b7e073bcb}} 
+\index{pybind11::dtype@{pybind11::dtype}!of@{of}}
+\index{of@{of}!pybind11::dtype@{pybind11::dtype}}
+\doxysubsubsection{\texorpdfstring{of()}{of()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static \mbox{\hyperlink{classpybind11_1_1dtype}{dtype}} pybind11\+::dtype\+::of (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return dtype associated with a C++ type. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpybind11_1_1dtype_a1e874d0be8a7a9ce52002e632f11de6a}\label{classpybind11_1_1dtype_a1e874d0be8a7a9ce52002e632f11de6a}} 
+\index{pybind11::dtype@{pybind11::dtype}!borrowed\_t@{borrowed\_t}}
+\index{borrowed\_t@{borrowed\_t}!pybind11::dtype@{pybind11::dtype}}
+\doxysubsubsection{\texorpdfstring{borrowed\_t}{borrowed\_t}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{structpybind11_1_1object_1_1borrowed__t}{pybind11\+::dtype\+::borrowed\+\_\+t}} \{\}) \+: \mbox{\hyperlink{classpybind11_1_1object}{object}} (h, \mbox{\hyperlink{structpybind11_1_1object_1_1stolen__t}{stolen\+\_\+t}}\{\})) \{ \} \mbox{\hyperlink{classpybind11_1_1dtype}{dtype}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h, \mbox{\hyperlink{structpybind11_1_1object_1_1borrowed__t}{borrowed\+\_\+t}}) \+: \mbox{\hyperlink{classpybind11_1_1object}{object}} (h, \mbox{\hyperlink{structpybind11_1_1object_1_1borrowed__t}{borrowed\+\_\+t}}\{\}) \{ \} \mbox{\hyperlink{classpybind11_1_1dtype}{dtype}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h, \mbox{\hyperlink{structpybind11_1_1object_1_1stolen__t}{stolen\+\_\+t}}) \+: \mbox{\hyperlink{classpybind11_1_1object}{object}} (h, \mbox{\hyperlink{structpybind11_1_1object_1_1stolen__t}{stolen\+\_\+t}}\{\}) \{ \} \mbox{\hyperlink{common_8h_ae4ba3bb24593b13133ae78407f466353}{PYBIND11\+\_\+\+DEPRECATED}}(\char`\"{}Use py\+::isinstance$<$py\+::python\+\_\+type$>$(obj) instead\char`\"{}) bool check() const \{ return m\+\_\+ptr != nullptr \&\& (bool) \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a6cbffe9763f89f63d3cfc8f94c90791f}{detail\+::npy\+\_\+api\+::get}}().Py\+Array\+Descr\+\_\+\+Check\+\_\+ (m\+\_\+ptr); \} static bool check\+\_\+(\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h) \{ return h.\+ptr() != nullptr \&\& \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a6cbffe9763f89f63d3cfc8f94c90791f}{detail\+::npy\+\_\+api\+::get}}().Py\+Array\+Descr\+\_\+\+Check\+\_\+ (h.\+ptr()); \} \mbox{\hyperlink{classpybind11_1_1dtype}{dtype}} (const \mbox{\hyperlink{classpybind11_1_1object}{object}} \&o) \+: \mbox{\hyperlink{classpybind11_1_1object}{object}} (o) \{ \} \mbox{\hyperlink{classpybind11_1_1dtype}{dtype}} (\mbox{\hyperlink{classpybind11_1_1object}{object}} \&\&o) \+: \mbox{\hyperlink{classpybind11_1_1object}{object}} (std\+::move(o)) \{ \} \mbox{\hyperlink{classpybind11_1_1dtype}{dtype}} () \+: \mbox{\hyperlink{classpybind11_1_1object}{object}} () \{ \}}
+
+\mbox{\Hypertarget{classpybind11_1_1dtype_ac94a0ca4858d5ddca32e5ff7950c1b58}\label{classpybind11_1_1dtype_ac94a0ca4858d5ddca32e5ff7950c1b58}} 
+\index{pybind11::dtype@{pybind11::dtype}!is\_borrowed@{is\_borrowed}}
+\index{is\_borrowed@{is\_borrowed}!pybind11::dtype@{pybind11::dtype}}
+\doxysubsubsection{\texorpdfstring{is\_borrowed}{is\_borrowed}}
+{\footnotesize\ttfamily bool pybind11\+::dtype\+::is\+\_\+borrowed}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{numpy_8h}{numpy.\+h}}\end{DoxyCompactItemize}

@@ -72,12 +72,6 @@ public:
 		vector <vector<int> > Ocorr, vector <vector <vector<int> > > Ttrain, vector <vector <vector<int> > > Ttrack, vector < vector <vector <vector<int> > > > Tfj,
 		vector <vector <vector<int> > > Tagent);
 
-	/*!
-	 *  \brief Destructeur
-	 *
-	 *  Destructeur de la classe CInput
-	 */
-	~CInput();
 
 	/*!
 	 *  \brief fonction affichage

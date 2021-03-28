@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classxlnt_1_1fill" kind="class" language="C++" prot="public">
+    <compoundname>xlnt::fill</compoundname>
+    <includes refid="fill_8hpp" local="no">fill.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxlnt_1_1fill_1ae0c68430c3ef39ea408bb380c71e10da" prot="private" static="no" mutable="no">
+        <type>fill_type</type>
+        <definition>fill_type xlnt::fill::type_</definition>
+        <argsstring></argsstring>
+        <name>type_</name>
+        <initializer>= <ref refid="fill_8hpp_1a7eb778c471c5522fe3f4b7ebdc4c0760" kindref="member">fill_type::pattern</ref></initializer>
+        <briefdescription>
+<para>The type of this fill </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/fill.hpp" line="356" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/fill.hpp" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1fill_1a610c071861bbc4cf80f559ba3ec55c35" prot="private" static="no" mutable="no">
+        <type><ref refid="classxlnt_1_1gradient__fill" kindref="compound">xlnt::gradient_fill</ref></type>
+        <definition>xlnt::gradient_fill xlnt::fill::gradient_</definition>
+        <argsstring></argsstring>
+        <name>gradient_</name>
+        <briefdescription>
+<para>The internal gradient fill if this is a gradient fill type </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/fill.hpp" line="361" column="25" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/fill.hpp" bodystart="361" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1fill_1ae0fc0922b57dda59402c87fe1b8ca587" prot="private" static="no" mutable="no">
+        <type><ref refid="classxlnt_1_1pattern__fill" kindref="compound">xlnt::pattern_fill</ref></type>
+        <definition>xlnt::pattern_fill xlnt::fill::pattern_</definition>
+        <argsstring></argsstring>
+        <name>pattern_</name>
+        <briefdescription>
+<para>The internal pattern fill if this is a pattern fill type </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/fill.hpp" line="366" column="24" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/fill.hpp" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classxlnt_1_1fill_1aa2ba7b8c63f8f6d62de63c3df58cc456" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1fill" kindref="compound">fill</ref></type>
+        <definition>fill xlnt::fill::solid</definition>
+        <argsstring>(const color &amp;fill_color)</argsstring>
+        <name>solid</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1color" kindref="compound">color</ref> &amp;</type>
+          <declname>fill_color</declname>
+        </param>
+        <briefdescription>
+<para>Helper method for the most common use case, setting the fill color of a cell to a single solid color. The foreground and background colors of a fill are not the same as the foreground and background colors of a cell. When setting a fill color in Excel, a new fill is created with the given color as the fill&apos;s fgColor and index color number 64 as the bgColor. This method creates a fill in the same way. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/fill.hpp" line="307" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/fill.cpp" bodystart="254" bodyend="260"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxlnt_1_1fill_1a916bd9cad7ccc9b8fa42cfa4f9496ac7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::fill::fill</definition>
+        <argsstring>()</argsstring>
+        <name>fill</name>
+        <briefdescription>
+<para>Constructs a fill initialized as a none-type pattern fill with no foreground or background colors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/fill.hpp" line="313" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/fill.cpp" bodystart="262" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1fill_1a5d21db433471f0a3b13d4b2bc9b542ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::fill::fill</definition>
+        <argsstring>(const pattern_fill &amp;pattern)</argsstring>
+        <name>fill</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1pattern__fill" kindref="compound">pattern_fill</ref> &amp;</type>
+          <declname>pattern</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a fill initialized as a pattern fill based on the given pattern. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/fill.hpp" line="318" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/fill.cpp" bodystart="267" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1fill_1a9257ea1ca92cdbe32b7aa8d387e4f03b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::fill::fill</definition>
+        <argsstring>(const gradient_fill &amp;gradient)</argsstring>
+        <name>fill</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1gradient__fill" kindref="compound">gradient_fill</ref> &amp;</type>
+          <declname>gradient</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a fill initialized as a gradient fill based on the given gradient. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/fill.hpp" line="323" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/fill.cpp" bodystart="272" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1fill_1aedf565ce4bd1b7de16b1b6a153c8420d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>fill_type</type>
+        <definition>fill_type xlnt::fill::type</definition>
+        <argsstring>() const</argsstring>
+        <name>type</name>
+        <briefdescription>
+<para>Returns the fill_type of this fill depending on how it was constructed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/fill.hpp" line="328" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/fill.cpp" bodystart="277" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1fill_1a12780f09e2de0bbc36fa2e0782c16d2c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>class <ref refid="classxlnt_1_1gradient__fill" kindref="compound">gradient_fill</ref></type>
+        <definition>gradient_fill xlnt::fill::gradient_fill</definition>
+        <argsstring>() const</argsstring>
+        <name>gradient_fill</name>
+        <briefdescription>
+<para>Returns the gradient fill represented by this fill. Throws an <ref refid="classxlnt_1_1invalid__attribute" kindref="compound">invalid_attribute</ref> exception if this is not a gradient fill. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/fill.hpp" line="328" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/fill.cpp" bodystart="282" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1fill_1a53bf0c87b9d3788b379efe63db18e70b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>class <ref refid="classxlnt_1_1pattern__fill" kindref="compound">pattern_fill</ref></type>
+        <definition>pattern_fill xlnt::fill::pattern_fill</definition>
+        <argsstring>() const</argsstring>
+        <name>pattern_fill</name>
+        <briefdescription>
+<para>Returns the pattern fill represented by this fill. Throws an <ref refid="classxlnt_1_1invalid__attribute" kindref="compound">invalid_attribute</ref> exception if this is not a pattern fill. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/fill.hpp" line="328" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/fill.cpp" bodystart="292" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1fill_1a57f928a894ad6330cc1f21049b92d957" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::fill::operator==</definition>
+        <argsstring>(const fill &amp;other) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1fill" kindref="compound">fill</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if left is exactly equal to right. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/fill.hpp" line="345" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/fill.cpp" bodystart="302" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1fill_1a085877def0784b2a87cb8561c6dc0526" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::fill::operator!=</definition>
+        <argsstring>(const fill &amp;other) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1fill" kindref="compound">fill</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if left is not exactly equal to right. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/fill.hpp" line="350" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/styles/fill.cpp" bodystart="317" bodyend="320"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Describes the fill style of a particular cell. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/fill.hpp" line="298" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/styles/fill.hpp" bodystart="299" bodyend="367"/>
+    <listofallmembers>
+      <member refid="classxlnt_1_1fill_1a916bd9cad7ccc9b8fa42cfa4f9496ac7" prot="public" virt="non-virtual"><scope>xlnt::fill</scope><name>fill</name></member>
+      <member refid="classxlnt_1_1fill_1a5d21db433471f0a3b13d4b2bc9b542ac" prot="public" virt="non-virtual"><scope>xlnt::fill</scope><name>fill</name></member>
+      <member refid="classxlnt_1_1fill_1a9257ea1ca92cdbe32b7aa8d387e4f03b" prot="public" virt="non-virtual"><scope>xlnt::fill</scope><name>fill</name></member>
+      <member refid="classxlnt_1_1fill_1a610c071861bbc4cf80f559ba3ec55c35" prot="private" virt="non-virtual"><scope>xlnt::fill</scope><name>gradient_</name></member>
+      <member refid="classxlnt_1_1fill_1a12780f09e2de0bbc36fa2e0782c16d2c" prot="public" virt="non-virtual"><scope>xlnt::fill</scope><name>gradient_fill</name></member>
+      <member refid="classxlnt_1_1fill_1a085877def0784b2a87cb8561c6dc0526" prot="public" virt="non-virtual"><scope>xlnt::fill</scope><name>operator!=</name></member>
+      <member refid="classxlnt_1_1fill_1a57f928a894ad6330cc1f21049b92d957" prot="public" virt="non-virtual"><scope>xlnt::fill</scope><name>operator==</name></member>
+      <member refid="classxlnt_1_1fill_1ae0fc0922b57dda59402c87fe1b8ca587" prot="private" virt="non-virtual"><scope>xlnt::fill</scope><name>pattern_</name></member>
+      <member refid="classxlnt_1_1fill_1a53bf0c87b9d3788b379efe63db18e70b" prot="public" virt="non-virtual"><scope>xlnt::fill</scope><name>pattern_fill</name></member>
+      <member refid="classxlnt_1_1fill_1aa2ba7b8c63f8f6d62de63c3df58cc456" prot="public" virt="non-virtual"><scope>xlnt::fill</scope><name>solid</name></member>
+      <member refid="classxlnt_1_1fill_1aedf565ce4bd1b7de16b1b6a153c8420d" prot="public" virt="non-virtual"><scope>xlnt::fill</scope><name>type</name></member>
+      <member refid="classxlnt_1_1fill_1ae0c68430c3ef39ea408bb380c71e10da" prot="private" virt="non-virtual"><scope>xlnt::fill</scope><name>type_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

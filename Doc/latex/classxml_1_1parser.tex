@@ -39,7 +39,7 @@ typedef std\+::map$<$ \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078e
 \item 
 \mbox{\hyperlink{classxml_1_1parser_a3bd7f4d414073d420036e58a29c985dd}{parser}} (std\+::istream \&, const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_a51a3f23b79380c379c43850de15b0357}{input\+\_\+name}}, \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}}=\mbox{\hyperlink{classxml_1_1parser_a455a5d76cbc7bfa012bf103db493861d}{receive\+\_\+default}})
 \item 
-\mbox{\hyperlink{classxml_1_1parser_a2243b0d3df017e1e97228b163205da90}{parser}} (const void $\ast$data, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} size, const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_a51a3f23b79380c379c43850de15b0357}{input\+\_\+name}}, \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}}=\mbox{\hyperlink{classxml_1_1parser_a455a5d76cbc7bfa012bf103db493861d}{receive\+\_\+default}})
+\mbox{\hyperlink{classxml_1_1parser_a2243b0d3df017e1e97228b163205da90}{parser}} (const void $\ast$data, std\+::size\+\_\+t size, const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_a51a3f23b79380c379c43850de15b0357}{input\+\_\+name}}, \mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}}=\mbox{\hyperlink{classxml_1_1parser_a455a5d76cbc7bfa012bf103db493861d}{receive\+\_\+default}})
 \item 
 const std\+::string \& \mbox{\hyperlink{classxml_1_1parser_a51a3f23b79380c379c43850de15b0357}{input\+\_\+name}} () const
 \item 
@@ -49,11 +49,11 @@ const std\+::string \& \mbox{\hyperlink{classxml_1_1parser_a51a3f23b79380c379c43
 \item 
 void \mbox{\hyperlink{classxml_1_1parser_af64fca83498399287dfc1c861e65e86e}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}})
 \item 
-void \mbox{\hyperlink{classxml_1_1parser_a8fadbbbbcb0ee88741744755f9f40be1}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}, const std\+::string \&\mbox{\hyperlink{structname}{name}})
+void \mbox{\hyperlink{classxml_1_1parser_a8fadbbbbcb0ee88741744755f9f40be1}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}, const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_afefe3ab6e35551669cab25d9edc93b7c}{name}})
 \item 
 void \mbox{\hyperlink{classxml_1_1parser_a11039d50fcf5cbeb9c7dbe7c6285efc8}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}, const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}})
 \item 
-void \mbox{\hyperlink{classxml_1_1parser_aa97a548045fbd72f94b49e0d5d655f5e}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}, const std\+::string \&\mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}}, const std\+::string \&\mbox{\hyperlink{structname}{name}})
+void \mbox{\hyperlink{classxml_1_1parser_aa97a548045fbd72f94b49e0d5d655f5e}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}, const std\+::string \&\mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}}, const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_afefe3ab6e35551669cab25d9edc93b7c}{name}})
 \item 
 \mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}} \mbox{\hyperlink{classxml_1_1parser_a3be862cde468cae84bf774269e09d76c}{peek}} ()
 \item 
@@ -77,13 +77,13 @@ unsigned long long \mbox{\hyperlink{classxml_1_1parser_a7d38b12cf685c0b9a887a438
 \item 
 unsigned long long \mbox{\hyperlink{classxml_1_1parser_a2c4948bbbe3488742e906906fb2fd349}{column}} () const
 \item 
-const std\+::string \& \mbox{\hyperlink{classxml_1_1parser_a751b45a12b6657f8e2c2a189657c8135}{attribute}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}) const
+const std\+::string \& \mbox{\hyperlink{classxml_1_1parser_a751b45a12b6657f8e2c2a189657c8135}{attribute}} (const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_afefe3ab6e35551669cab25d9edc93b7c}{name}}) const
 \item 
-{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_a0d982c904f3cd0cf6b432fbbc5218032}{attribute}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}) const
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_a0d982c904f3cd0cf6b432fbbc5218032}{attribute}} (const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_afefe3ab6e35551669cab25d9edc93b7c}{name}}) const
 \item 
-std\+::string \mbox{\hyperlink{classxml_1_1parser_ab771cdda282ceaaa37de16f5cd8c6481}{attribute}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, const std\+::string \&default\+\_\+value) const
+std\+::string \mbox{\hyperlink{classxml_1_1parser_ab771cdda282ceaaa37de16f5cd8c6481}{attribute}} (const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_afefe3ab6e35551669cab25d9edc93b7c}{name}}, const std\+::string \&default\+\_\+value) const
 \item 
-{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_a39b3a2201c2d8256fdf0635393c6149a}{attribute}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, const T \&default\+\_\+value) const
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_a39b3a2201c2d8256fdf0635393c6149a}{attribute}} (const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_afefe3ab6e35551669cab25d9edc93b7c}{name}}, const T \&default\+\_\+value) const
 \item 
 const std\+::string \& \mbox{\hyperlink{classxml_1_1parser_a0925f34c8323bf677601ae381814c1f3}{attribute}} (const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}) const
 \item 
@@ -93,7 +93,7 @@ std\+::string \mbox{\hyperlink{classxml_1_1parser_abeb82c5f3f4a2698908827daae690
 \item 
 {\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_acf14f7f7ce5c39b5fc3262f9ddfe7148}{attribute}} (const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}, const T \&default\+\_\+value) const
 \item 
-bool \mbox{\hyperlink{classxml_1_1parser_ac051e14253dee4f2bd7282570992b7ea}{attribute\+\_\+present}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}) const
+bool \mbox{\hyperlink{classxml_1_1parser_ac051e14253dee4f2bd7282570992b7ea}{attribute\+\_\+present}} (const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_afefe3ab6e35551669cab25d9edc93b7c}{name}}) const
 \item 
 bool \mbox{\hyperlink{classxml_1_1parser_a3f5e3b79670a5c975a0e8dd0e7bfa910}{attribute\+\_\+present}} (const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}) const
 \item 
@@ -103,29 +103,29 @@ void \mbox{\hyperlink{classxml_1_1parser_a77ae1033d6e39507d812d1fd0d0213f2}{cont
 \item 
 \mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{content\+\_\+type}} \mbox{\hyperlink{classxml_1_1parser_a2800144e81e6c54ba649e09644a7fdd1}{content}} () const
 \item 
-void \mbox{\hyperlink{classxml_1_1parser_a10137642912737b9aa4a87b8760ef6b4}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}, const std\+::string \&\mbox{\hyperlink{structname}{name}}, \mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{content\+\_\+type}})
+void \mbox{\hyperlink{classxml_1_1parser_a10137642912737b9aa4a87b8760ef6b4}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}, const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_afefe3ab6e35551669cab25d9edc93b7c}{name}}, \mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{content\+\_\+type}})
 \item 
 void \mbox{\hyperlink{classxml_1_1parser_acd20c0c3e8fe3033264823da88e7d520}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}, const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}, \mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{content\+\_\+type}})
 \item 
-void \mbox{\hyperlink{classxml_1_1parser_aaeb05337fab625a2294890fe4f259eb1}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}, const std\+::string \&\mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}}, const std\+::string \&\mbox{\hyperlink{structname}{name}}, \mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{content\+\_\+type}})
+void \mbox{\hyperlink{classxml_1_1parser_aaeb05337fab625a2294890fe4f259eb1}{next\+\_\+expect}} (\mbox{\hyperlink{classxml_1_1parser_a94d70c82db32d10412148239cbb5d6a5}{event\+\_\+type}}, const std\+::string \&\mbox{\hyperlink{xmltok_8c_ab6aec1346fb6c7b2733f0f73c9536ad2}{ns}}, const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_afefe3ab6e35551669cab25d9edc93b7c}{name}}, \mbox{\hyperlink{classxml_1_1parser_a839697996e5c2ae224785ac439ba50f5}{content\+\_\+type}})
 \item 
 std\+::string \mbox{\hyperlink{classxml_1_1parser_ae3ae86548df6ed498b2a0ef6e10f87a5}{element}} ()
 \item 
 {\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_a06e8c6427cea2aeb29d4fd87a98a8b9d}{element}} ()
 \item 
-std\+::string \mbox{\hyperlink{classxml_1_1parser_a867b47e4dd9082e8b8edbb3b80280c6c}{element}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+std\+::string \mbox{\hyperlink{classxml_1_1parser_a867b47e4dd9082e8b8edbb3b80280c6c}{element}} (const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_afefe3ab6e35551669cab25d9edc93b7c}{name}})
 \item 
 std\+::string \mbox{\hyperlink{classxml_1_1parser_a34d9d8084f1bc2d82dee0ce002b6f5f4}{element}} (const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}})
 \item 
-{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_a20148e5af155d780efdc73dfddd6b919}{element}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_a20148e5af155d780efdc73dfddd6b919}{element}} (const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_afefe3ab6e35551669cab25d9edc93b7c}{name}})
 \item 
 {\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_af3bb1fb8398672e4e2706f700da03b08}{element}} (const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}})
 \item 
-std\+::string \mbox{\hyperlink{classxml_1_1parser_ae429391743c57c06b7e1528ec4ef74d3}{element}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, const std\+::string \&default\+\_\+value)
+std\+::string \mbox{\hyperlink{classxml_1_1parser_ae429391743c57c06b7e1528ec4ef74d3}{element}} (const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_afefe3ab6e35551669cab25d9edc93b7c}{name}}, const std\+::string \&default\+\_\+value)
 \item 
 std\+::string \mbox{\hyperlink{classxml_1_1parser_a1d1a165b8b300e1ff3faf1646095f2a2}{element}} (const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}, const std\+::string \&default\+\_\+value)
 \item 
-{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_a9a07c888bd695baf0e0d8053d83a57c1}{element}} (const std\+::string \&\mbox{\hyperlink{structname}{name}}, const T \&default\+\_\+value)
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_a9a07c888bd695baf0e0d8053d83a57c1}{element}} (const std\+::string \&\mbox{\hyperlink{classxml_1_1parser_afefe3ab6e35551669cab25d9edc93b7c}{name}}, const T \&default\+\_\+value)
 \item 
 {\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classxml_1_1parser_a1f5ee33432cd35fbbcce4eb19f92aba1}{element}} (const \mbox{\hyperlink{classxml_1_1parser_a9c05e9cf879a624cc078ec4df3b8687c}{qname\+\_\+type}} \&\mbox{\hyperlink{classxml_1_1qname}{qname}}, const T \&default\+\_\+value)
 \item 
@@ -231,7 +231,7 @@ eof&\\
 \index{xml::parser@{xml::parser}!parser@{parser}}
 \index{parser@{parser}!xml::parser@{xml::parser}}
 \doxysubsubsection{\texorpdfstring{parser()}{parser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily xml\+::parser\+::parser (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{size,  }\item[{const std\+::string \&}]{input\+\_\+name,  }\item[{\mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}}}]{f = {\ttfamily \mbox{\hyperlink{classxml_1_1parser_a455a5d76cbc7bfa012bf103db493861d}{receive\+\_\+default}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily xml\+::parser\+::parser (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{std\+::size\+\_\+t}]{size,  }\item[{const std\+::string \&}]{input\+\_\+name,  }\item[{\mbox{\hyperlink{classxml_1_1parser_ab41420dc3547dd4fd12cfad6aea9c4ab}{feature\+\_\+type}}}]{f = {\ttfamily \mbox{\hyperlink{classxml_1_1parser_a455a5d76cbc7bfa012bf103db493861d}{receive\+\_\+default}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{classxml_1_1parser_a18111e8ef5628993c79a464e51ed7e8b}\label{classxml_1_1parser_a18111e8ef5628993c79a464e51ed7e8b}} 
 \index{xml::parser@{xml::parser}!````~parser@{$\sim$parser}}

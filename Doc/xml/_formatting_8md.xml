@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="_formatting_8md" kind="file" language="Markdown">
+    <compoundname>Formatting.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Formatting</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Format<sp/>vs.<sp/>Style</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c++</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;iostream&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;xlnt/xlnt.hpp&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xlnt::workbook<sp/>wb;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>auto<sp/>cell<sp/>=<sp/>wb.active_sheet().cell(&quot;A1&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>the<sp/>context<sp/>of<sp/>xlnt,<sp/>format<sp/>and<sp/>style<sp/>have<sp/>specific<sp/>distinct<sp/>meanings.<sp/>A<sp/>style<sp/>in<sp/>xlnt<sp/>corresponds<sp/>to<sp/>a<sp/>named<sp/>style<sp/>created<sp/>in<sp/>the<sp/>&quot;Cell<sp/>styles&quot;<sp/>dropdown<sp/>in<sp/>Excel.<sp/>It<sp/>must<sp/>have<sp/>a<sp/>name<sp/>and<sp/>optionally<sp/>any<sp/>of:<sp/>alignment,<sp/>border,<sp/>fill,<sp/>font,<sp/>number<sp/>format,<sp/>protection.<sp/>A<sp/>format<sp/>in<sp/>xlnt<sp/>corresponds<sp/>to<sp/>the<sp/>alignment,<sp/>border,<sp/>fill,<sp/>font,<sp/>number<sp/>format,<sp/>and<sp/>protection<sp/>settings<sp/>applied<sp/>to<sp/>a<sp/>cell<sp/>via<sp/>right-click-&gt;&quot;Format<sp/>Cells&quot;.<sp/>A<sp/>cell<sp/>can<sp/>have<sp/>both<sp/>a<sp/>format<sp/>and<sp/>a<sp/>style.<sp/>The<sp/>style<sp/>properties<sp/>will<sp/>generally<sp/>override<sp/>the<sp/>format<sp/>properties.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Number<sp/>Formatting</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c++</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;iostream&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;xlnt/xlnt.hpp&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xlnt::workbook<sp/>wb;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>auto<sp/>cell<sp/>=<sp/>wb.active_sheet().cell(&quot;A1&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cell.number_format(xlnt::number_format::percentage());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cell.value(0.513);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>cell.to_string()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">An<sp/>xlnt::number_format<sp/>is<sp/>the<sp/>format<sp/>code<sp/>used<sp/>when<sp/>displaying<sp/>a<sp/>value<sp/>in<sp/>a<sp/>cell.<sp/>For<sp/>example,<sp/>a<sp/>number_format<sp/>of<sp/>&quot;0.00&quot;<sp/>implies<sp/>that<sp/>the<sp/>number<sp/>13.726<sp/>should<sp/>be<sp/>displayed<sp/>as<sp/>&quot;13.73&quot;.<sp/>Many<sp/>number<sp/>formats<sp/>are<sp/>built-in<sp/>to<sp/>Excel<sp/>and<sp/>can<sp/>be<sp/>access<sp/>with<sp/>xlnt::number_format<sp/>static<sp/>constructors.<sp/>Other<sp/>custom<sp/>number<sp/>formats<sp/>can<sp/>be<sp/>created<sp/>by<sp/>passing<sp/>a<sp/>string<sp/>to<sp/>the<sp/>[xlnt::number_format<sp/>constructor](#cell-const-cell-amp).</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/docs/advanced/Formatting.md"/>
+  </compounddef>
+</doxygen>

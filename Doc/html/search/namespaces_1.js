@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['libsize_6183',['libsize',['../namespacelibsize.html',1,'']]],
-  ['literals_6184',['literals',['../namespaceliterals.html',1,'']]]
+  ['mkdoc_6449',['mkdoc',['../namespacemkdoc.html',1,'']]]
 ];

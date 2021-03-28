@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="structgenx_element__rec" kind="struct" language="C++" prot="public">
+    <compoundname>genxElement_rec</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgenx_element__rec_1a360a3d23217f462dd0dc971ce217f41c" prot="public" static="no" mutable="no">
+        <type><ref refid="genx_8h_1ae93789287148c95be402de1911ac3d19" kindref="member">genxWriter</ref></type>
+        <definition>genxWriter genxElement_rec::writer</definition>
+        <argsstring></argsstring>
+        <name>writer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/genx/genx.c" line="82" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/genx/genx.c" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgenx_element__rec_1a36039ad9c1f7bd373b0d4e0bae909593" prot="public" static="no" mutable="no">
+        <type><ref refid="genx_8h_1a01e6d3532a502d1cada677440674e4c4" kindref="member">utf8</ref></type>
+        <definition>utf8 genxElement_rec::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/genx/genx.c" line="83" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/genx/genx.c" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgenx_element__rec_1a36413216e8301940627da4211baf708b" prot="public" static="no" mutable="no">
+        <type><ref refid="genx_8h_1a2f71bdfb25c233ade286db132f15fc66" kindref="member">genxNamespace</ref></type>
+        <definition>genxNamespace genxElement_rec::ns</definition>
+        <argsstring></argsstring>
+        <name>ns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/genx/genx.c" line="84" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/genx/genx.c" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>genxNamespace_rec</label>
+        <link refid="structgenx_namespace__rec"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>writer</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>declaration</edgelabel>
+          <edgelabel>defaultDecl</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>genxAttribute_rec</label>
+        <link refid="structgenx_attribute__rec"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>ns</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>value</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>writer</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>genxElement_rec</label>
+        <link refid="structgenx_element__rec"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>ns</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>writer</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>genxWriter_rec</label>
+        <link refid="structgenx_writer__rec"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>nowStarting</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>attributes</edgelabel>
+          <edgelabel>elements</edgelabel>
+          <edgelabel>namespaces</edgelabel>
+          <edgelabel>prefixes</edgelabel>
+          <edgelabel>stack</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>sender</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>arec</edgelabel>
+          <edgelabel>firstAttribute</edgelabel>
+          <edgelabel>lastAttribute</edgelabel>
+          <edgelabel>nowStartingAttr</edgelabel>
+          <edgelabel>xmlnsEquals</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>plist</label>
+        <link refid="structplist"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>writer</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>collector</label>
+        <link refid="structcollector"/>
+      </node>
+      <node id="5">
+        <label>genxSender</label>
+        <link refid="structgenx_sender"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/genx/genx.c" line="80" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/genx/genx.c" bodystart="81" bodyend="85"/>
+    <listofallmembers>
+      <member refid="structgenx_element__rec_1a36039ad9c1f7bd373b0d4e0bae909593" prot="public" virt="non-virtual"><scope>genxElement_rec</scope><name>name</name></member>
+      <member refid="structgenx_element__rec_1a36413216e8301940627da4211baf708b" prot="public" virt="non-virtual"><scope>genxElement_rec</scope><name>ns</name></member>
+      <member refid="structgenx_element__rec_1a360a3d23217f462dd0dc971ce217f41c" prot="public" virt="non-virtual"><scope>genxElement_rec</scope><name>writer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

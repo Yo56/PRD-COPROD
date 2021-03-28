@@ -1,0 +1,158 @@
+\hypertarget{classpybind11_1_1array__t}{}\doxysection{pybind11\+::array\+\_\+t$<$ T, Extra\+Flags $>$ Class Template Reference}
+\label{classpybind11_1_1array__t}\index{pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}}
+
+
+{\ttfamily \#include $<$numpy.\+h$>$}
+
+Inheritance diagram for pybind11\+::array\+\_\+t$<$ T, Extra\+Flags $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.000000cm]{classpybind11_1_1array__t}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classpybind11_1_1array__t_a6c77d7dff7e7d7dad9abe386501ef71c}{value\+\_\+type}} = T
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpybind11_1_1array__t_a7fdde7a7a65033109c13ca3b1de21a23}{array\+\_\+t}} ()
+\item 
+\mbox{\hyperlink{classpybind11_1_1array__t_a315767aec0a6dae58f26e98ffe26ce11}{array\+\_\+t}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h, \mbox{\hyperlink{structpybind11_1_1object_1_1borrowed__t}{borrowed\+\_\+t}})
+\item 
+\mbox{\hyperlink{classpybind11_1_1array__t_af1dd78cbffa1d4a44e1fa4e488722e35}{array\+\_\+t}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h, \mbox{\hyperlink{structpybind11_1_1object_1_1stolen__t}{stolen\+\_\+t}})
+\item 
+\mbox{\hyperlink{classpybind11_1_1array__t_abc1806f2a7b8ab70eff4df4cd5ba9912}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((deprecated(\char`\"{}Use \mbox{\hyperlink{classpybind11_1_1array__t}{array\+\_\+t}}$<$T$>$\+::\mbox{\hyperlink{classpybind11_1_1array__t_a797040d736c5ac32ecd3210c1ee0d2da}{ensure}}() instead\char`\"{}))) array\+\_\+t(\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h
+\item 
+bool Dims \mbox{\hyperlink{classpybind11_1_1array__t_a79e7401fb58571eedd104afd30dc334f}{mutable\+\_\+unchecked}} ()
+\item 
+{\footnotesize template$<$ssize\+\_\+t Dims = -\/1$>$ }\\\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$ \mbox{\hyperlink{classpybind11_1_1array__t_a685c7851285c37b2d6f669cbf7df3eed}{unchecked}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classpybind11_1_1array__t}{array\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1array__t_a797040d736c5ac32ecd3210c1ee0d2da}{ensure}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h)
+\item 
+static bool \mbox{\hyperlink{classpybind11_1_1array__t_aa4dbec7371a6004f03970f7e43dd5b49}{check\+\_\+}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} h)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1array__t_ada2bd1484b0567c0f39786937fdb605f}{is\+\_\+borrowed}}\+: \mbox{\hyperlink{classpybind11_1_1array}{array}}(\mbox{\hyperlink{classpybind11_1_1array__t_ae2761c4d634a2c31c19d9c221e069c0a}{raw\+\_\+array\+\_\+t}}(h.\+ptr())
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1array__t_a484c93ef9d0f7546167b5ff2a9e8a88c}{stolen\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Py\+Object $\ast$ \mbox{\hyperlink{classpybind11_1_1array__t_ae2761c4d634a2c31c19d9c221e069c0a}{raw\+\_\+array\+\_\+t}} (Py\+Object $\ast$\mbox{\hyperlink{classpybind11_1_1handle_a6f7e2e6beecb8c59c5192ea9bae7eaa5}{ptr}})
+\begin{DoxyCompactList}\small\item\em Create array from any object -- always returns a new reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classpybind11_1_1array__t_a6c77d7dff7e7d7dad9abe386501ef71c}\label{classpybind11_1_1array__t_a6c77d7dff7e7d7dad9abe386501ef71c}} 
+\index{pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename T , int Extra\+Flags = array\+::forcecast$>$ \\
+using \mbox{\hyperlink{classpybind11_1_1array__t}{pybind11\+::array\+\_\+t}}$<$ T, Extra\+Flags $>$\+::\mbox{\hyperlink{classpybind11_1_1array__t_a6c77d7dff7e7d7dad9abe386501ef71c}{value\+\_\+type}} =  T}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpybind11_1_1array__t_a7fdde7a7a65033109c13ca3b1de21a23}\label{classpybind11_1_1array__t_a7fdde7a7a65033109c13ca3b1de21a23}} 
+\index{pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}!array\_t@{array\_t}}
+\index{array\_t@{array\_t}!pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}}
+\doxysubsubsection{\texorpdfstring{array\_t()}{array\_t()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T , int Extra\+Flags = array\+::forcecast$>$ \\
+\mbox{\hyperlink{classpybind11_1_1array__t}{pybind11\+::array\+\_\+t}}$<$ T, Extra\+Flags $>$\+::\mbox{\hyperlink{classpybind11_1_1array__t}{array\+\_\+t}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array__t_a315767aec0a6dae58f26e98ffe26ce11}\label{classpybind11_1_1array__t_a315767aec0a6dae58f26e98ffe26ce11}} 
+\index{pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}!array\_t@{array\_t}}
+\index{array\_t@{array\_t}!pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}}
+\doxysubsubsection{\texorpdfstring{array\_t()}{array\_t()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T , int Extra\+Flags = array\+::forcecast$>$ \\
+\mbox{\hyperlink{classpybind11_1_1array__t}{pybind11\+::array\+\_\+t}}$<$ T, Extra\+Flags $>$\+::\mbox{\hyperlink{classpybind11_1_1array__t}{array\+\_\+t}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{h,  }\item[{\mbox{\hyperlink{structpybind11_1_1object_1_1borrowed__t}{borrowed\+\_\+t}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array__t_af1dd78cbffa1d4a44e1fa4e488722e35}\label{classpybind11_1_1array__t_af1dd78cbffa1d4a44e1fa4e488722e35}} 
+\index{pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}!array\_t@{array\_t}}
+\index{array\_t@{array\_t}!pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}}
+\doxysubsubsection{\texorpdfstring{array\_t()}{array\_t()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T , int Extra\+Flags = array\+::forcecast$>$ \\
+\mbox{\hyperlink{classpybind11_1_1array__t}{pybind11\+::array\+\_\+t}}$<$ T, Extra\+Flags $>$\+::\mbox{\hyperlink{classpybind11_1_1array__t}{array\+\_\+t}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{h,  }\item[{\mbox{\hyperlink{structpybind11_1_1object_1_1stolen__t}{stolen\+\_\+t}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1array__t_abc1806f2a7b8ab70eff4df4cd5ba9912}\label{classpybind11_1_1array__t_abc1806f2a7b8ab70eff4df4cd5ba9912}} 
+\index{pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily template$<$typename T , int Extra\+Flags = array\+::forcecast$>$ \\
+\mbox{\hyperlink{classpybind11_1_1array__t}{pybind11\+::array\+\_\+t}}$<$ T, Extra\+Flags $>$\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(deprecated(\char`\"{}Use \mbox{\hyperlink{classpybind11_1_1array__t}{array\+\_\+t}}$<$T$>$\+::\mbox{\hyperlink{classpybind11_1_1array__t_a797040d736c5ac32ecd3210c1ee0d2da}{ensure}}() instead\char`\"{}))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpybind11_1_1array__t_aa4dbec7371a6004f03970f7e43dd5b49}\label{classpybind11_1_1array__t_aa4dbec7371a6004f03970f7e43dd5b49}} 
+\index{pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}!check\_@{check\_}}
+\index{check\_@{check\_}!pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}}
+\doxysubsubsection{\texorpdfstring{check\_()}{check\_()}}
+{\footnotesize\ttfamily template$<$typename T , int Extra\+Flags = array\+::forcecast$>$ \\
+static bool \mbox{\hyperlink{classpybind11_1_1array__t}{pybind11\+::array\+\_\+t}}$<$ T, Extra\+Flags $>$\+::check\+\_\+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array__t_a797040d736c5ac32ecd3210c1ee0d2da}\label{classpybind11_1_1array__t_a797040d736c5ac32ecd3210c1ee0d2da}} 
+\index{pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}!ensure@{ensure}}
+\index{ensure@{ensure}!pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}}
+\doxysubsubsection{\texorpdfstring{ensure()}{ensure()}}
+{\footnotesize\ttfamily template$<$typename T , int Extra\+Flags = array\+::forcecast$>$ \\
+static \mbox{\hyperlink{classpybind11_1_1array__t}{array\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1array__t}{pybind11\+::array\+\_\+t}}$<$ T, Extra\+Flags $>$\+::ensure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Ensure that the argument is a Num\+Py array of the correct dtype (and if not, try to convert it). In case of an error, nullptr is returned and the Python error is cleared. \mbox{\Hypertarget{classpybind11_1_1array__t_a79e7401fb58571eedd104afd30dc334f}\label{classpybind11_1_1array__t_a79e7401fb58571eedd104afd30dc334f}} 
+\index{pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}!mutable\_unchecked@{mutable\_unchecked}}
+\index{mutable\_unchecked@{mutable\_unchecked}!pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}}
+\doxysubsubsection{\texorpdfstring{mutable\_unchecked()}{mutable\_unchecked()}}
+{\footnotesize\ttfamily template$<$typename T , int Extra\+Flags = array\+::forcecast$>$ \\
+bool Dims \mbox{\hyperlink{classpybind11_1_1array__t}{pybind11\+::array\+\_\+t}}$<$ T, Extra\+Flags $>$\+::mutable\+\_\+unchecked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1array__t_ae2761c4d634a2c31c19d9c221e069c0a}\label{classpybind11_1_1array__t_ae2761c4d634a2c31c19d9c221e069c0a}} 
+\index{pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}!raw\_array\_t@{raw\_array\_t}}
+\index{raw\_array\_t@{raw\_array\_t}!pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}}
+\doxysubsubsection{\texorpdfstring{raw\_array\_t()}{raw\_array\_t()}}
+{\footnotesize\ttfamily template$<$typename T , int Extra\+Flags = array\+::forcecast$>$ \\
+static Py\+Object$\ast$ \mbox{\hyperlink{classpybind11_1_1array__t}{pybind11\+::array\+\_\+t}}$<$ T, Extra\+Flags $>$\+::raw\+\_\+array\+\_\+t (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Create array from any object -- always returns a new reference. 
+
+\mbox{\Hypertarget{classpybind11_1_1array__t_a685c7851285c37b2d6f669cbf7df3eed}\label{classpybind11_1_1array__t_a685c7851285c37b2d6f669cbf7df3eed}} 
+\index{pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}!unchecked@{unchecked}}
+\index{unchecked@{unchecked}!pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}}
+\doxysubsubsection{\texorpdfstring{unchecked()}{unchecked()}}
+{\footnotesize\ttfamily template$<$typename T , int Extra\+Flags = array\+::forcecast$>$ \\
+template$<$ssize\+\_\+t Dims = -\/1$>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{detail\+::unchecked\+\_\+reference}}$<$T, Dims$>$ \mbox{\hyperlink{classpybind11_1_1array__t}{pybind11\+::array\+\_\+t}}$<$ T, Extra\+Flags $>$\+::unchecked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a proxy object that provides const access to the array\textquotesingle{}s data without bounds or dimensionality checking. Unlike {\ttfamily \mbox{\hyperlink{classpybind11_1_1array__t_a685c7851285c37b2d6f669cbf7df3eed}{unchecked()}}}, this does not require that the underlying array have the {\ttfamily writable} flag. Use with care\+: the array must not be destroyed or reshaped for the duration of the returned object, and the caller must take care not to access invalid dimensions or dimension indices. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpybind11_1_1array__t_ada2bd1484b0567c0f39786937fdb605f}\label{classpybind11_1_1array__t_ada2bd1484b0567c0f39786937fdb605f}} 
+\index{pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}!is\_borrowed@{is\_borrowed}}
+\index{is\_borrowed@{is\_borrowed}!pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}}
+\doxysubsubsection{\texorpdfstring{is\_borrowed}{is\_borrowed}}
+{\footnotesize\ttfamily template$<$typename T , int Extra\+Flags = array\+::forcecast$>$ \\
+bool \mbox{\hyperlink{classpybind11_1_1array__t}{pybind11\+::array\+\_\+t}}$<$ T, Extra\+Flags $>$\+::is\+\_\+borrowed}
+
+\mbox{\Hypertarget{classpybind11_1_1array__t_a484c93ef9d0f7546167b5ff2a9e8a88c}\label{classpybind11_1_1array__t_a484c93ef9d0f7546167b5ff2a9e8a88c}} 
+\index{pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}!stolen\_t@{stolen\_t}}
+\index{stolen\_t@{stolen\_t}!pybind11::array\_t$<$ T, ExtraFlags $>$@{pybind11::array\_t$<$ T, ExtraFlags $>$}}
+\doxysubsubsection{\texorpdfstring{stolen\_t}{stolen\_t}}
+{\footnotesize\ttfamily template$<$typename T , int Extra\+Flags = array\+::forcecast$>$ \\
+bool \mbox{\hyperlink{classpybind11_1_1array__t}{pybind11\+::array\+\_\+t}}$<$ T, Extra\+Flags $>$\+::\mbox{\hyperlink{structpybind11_1_1object_1_1stolen__t}{stolen\+\_\+t}}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{numpy_8h}{numpy.\+h}}\end{DoxyCompactItemize}

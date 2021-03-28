@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="libsize_8py" kind="file" language="Python">
+    <compoundname>libsize.py</compoundname>
+    <innernamespace refid="namespacelibsize">libsize</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacelibsize" refkind="compound"><highlight class="keyword">from</highlight><highlight class="normal"><sp/>__future__<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>print_function,<sp/>division</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>os</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sys</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Internal<sp/>build<sp/>script<sp/>for<sp/>generating<sp/>debugging<sp/>test<sp/>.so<sp/>size.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Usage:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>python<sp/>libsize.py<sp/>file.so<sp/>save.txt<sp/>--<sp/>displays<sp/>the<sp/>size<sp/>of<sp/>file.so<sp/>and,<sp/>if<sp/>save.txt<sp/>exists,<sp/>compares<sp/>it<sp/>to<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>in<sp/>it,<sp/>then<sp/>overwrites<sp/>save.txt<sp/>with<sp/>the<sp/>new<sp/>size<sp/>for<sp/>future<sp/>runs.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/><ref refid="group__python__builtins_1ga443ea89aee29c1a3b9d57324d4d089b6" kindref="member">len</ref>(sys.argv)<sp/>!=<sp/>3:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>sys.exit(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>arguments:<sp/>usage:<sp/>python<sp/>libsize.py<sp/>file.so<sp/>save.txt&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">lib<sp/>=<sp/>sys.argv[1]</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">save<sp/>=<sp/>sys.argv[2]</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/>os.path.exists(lib):</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>sys.exit(</highlight><highlight class="stringliteral">&quot;Error:<sp/>requested<sp/>file<sp/>({})<sp/>does<sp/>not<sp/>exist&quot;</highlight><highlight class="normal">.format(lib))</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">libsize<sp/>=<sp/>os.path.getsize(lib)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><ref refid="namespacepybind11_1a913a30079a57934b1bfda83ba4080da4" kindref="member">print</ref>(</highlight><highlight class="stringliteral">&quot;------&quot;</highlight><highlight class="normal">,<sp/>os.path.basename(lib),<sp/></highlight><highlight class="stringliteral">&quot;file<sp/>size:&quot;</highlight><highlight class="normal">,<sp/>libsize,<sp/>end=</highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>os.path.exists(save):</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>open(save)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>sf:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oldsize<sp/>=<sp/>int(sf.readline())</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>oldsize<sp/>&gt;<sp/>0:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>change<sp/>=<sp/>libsize<sp/>-<sp/>oldsize</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>change<sp/>==<sp/>0:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1a913a30079a57934b1bfda83ba4080da4" kindref="member">print</ref>(</highlight><highlight class="stringliteral">&quot;<sp/>(no<sp/>change)&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1a913a30079a57934b1bfda83ba4080da4" kindref="member">print</ref>(</highlight><highlight class="stringliteral">&quot;<sp/>(change<sp/>of<sp/>{:+}<sp/>bytes<sp/>=<sp/>{:+.2%})&quot;</highlight><highlight class="normal">.format(change,<sp/>change<sp/>/<sp/>oldsize))</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepybind11_1a913a30079a57934b1bfda83ba4080da4" kindref="member">print</ref>()</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>open(save,<sp/></highlight><highlight class="stringliteral">&apos;w&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>sf:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>sf.write(str(libsize))</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/tools/libsize.py"/>
+  </compounddef>
+</doxygen>

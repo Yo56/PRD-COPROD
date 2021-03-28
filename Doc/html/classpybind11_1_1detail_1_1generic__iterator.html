@@ -1,0 +1,943 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PR&amp;D COPROD: Référence du modèle de la classe pybind11::detail::generic_iterator&lt; Policy &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PR&amp;D COPROD
+   &#160;<span id="projectnumber">1</span>
+   </div>
+   <div id="projectbrief">Outil d&#39;aide a la planification des operations de maintenance preventive et corrective - Polytech Tours - Yohan Nouet</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacepybind11.html">pybind11</a></li><li class="navelem"><a class="el" href="namespacepybind11_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">generic_iterator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Types publics</a> &#124;
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#friends">Amis</a> &#124;
+<a href="classpybind11_1_1detail_1_1generic__iterator-members.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du modèle de la classe pybind11::detail::generic_iterator&lt; Policy &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>STL iterator template used for tuple, list, sequence and dict.  
+ <a href="classpybind11_1_1detail_1_1generic__iterator.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="pytypes_8h_source.html">pytypes.h</a>&gt;</code></p>
+<div class="dynheader">
+Graphe d'héritage de pybind11::detail::generic_iterator&lt; Policy &gt;:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classpybind11_1_1detail_1_1generic__iterator.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Types publics</h2></td></tr>
+<tr class="memitem:a1161259f074a40e65cde08f0b0876151"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1161259f074a40e65cde08f0b0876151">difference_type</a> = <a class="el" href="namespacepybind11.html#a51e3d317b399f8925c3b9f1980018481">ssize_t</a></td></tr>
+<tr class="separator:a1161259f074a40e65cde08f0b0876151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6364472bdd2de461622fea3bee21329e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a6364472bdd2de461622fea3bee21329e">iterator_category</a> = typename Policy::iterator_category</td></tr>
+<tr class="separator:a6364472bdd2de461622fea3bee21329e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa43185a5e68cd6be7612c7549c20db05"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#aa43185a5e68cd6be7612c7549c20db05">value_type</a> = typename Policy::value_type</td></tr>
+<tr class="separator:aa43185a5e68cd6be7612c7549c20db05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c2390404e4ce1093acca8061a524897"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1c2390404e4ce1093acca8061a524897">reference</a> = typename Policy::reference</td></tr>
+<tr class="separator:a1c2390404e4ce1093acca8061a524897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b95ff694acebd71b281cf56bd678a2f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a3b95ff694acebd71b281cf56bd678a2f">pointer</a> = typename Policy::pointer</td></tr>
+<tr class="separator:a3b95ff694acebd71b281cf56bd678a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a98494fb4cff15cb8e58afa0ca184276c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a98494fb4cff15cb8e58afa0ca184276c">generic_iterator</a> ()=default</td></tr>
+<tr class="separator:a98494fb4cff15cb8e58afa0ca184276c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a780b8b680f6f4503b473f25e41ee72ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a780b8b680f6f4503b473f25e41ee72ae">generic_iterator</a> (<a class="el" href="classpybind11_1_1handle.html">handle</a> seq, <a class="el" href="namespacepybind11.html#a51e3d317b399f8925c3b9f1980018481">ssize_t</a> index)</td></tr>
+<tr class="separator:a780b8b680f6f4503b473f25e41ee72ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb9f86efa4b5e199fd9e3fbea5dfcd66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1c2390404e4ce1093acca8061a524897">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#afb9f86efa4b5e199fd9e3fbea5dfcd66">operator*</a> () const</td></tr>
+<tr class="separator:afb9f86efa4b5e199fd9e3fbea5dfcd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c6a04a587796e6ff2fbcc5e446f8f7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1c2390404e4ce1093acca8061a524897">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a2c6a04a587796e6ff2fbcc5e446f8f7a">operator[]</a> (<a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1161259f074a40e65cde08f0b0876151">difference_type</a> n) const</td></tr>
+<tr class="separator:a2c6a04a587796e6ff2fbcc5e446f8f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee3781a590f28f8ce7d0a8a9f392c0c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a3b95ff694acebd71b281cf56bd678a2f">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#aee3781a590f28f8ce7d0a8a9f392c0c7">operator-&gt;</a> () const</td></tr>
+<tr class="separator:aee3781a590f28f8ce7d0a8a9f392c0c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6625d0bade092a4ba8ddfa49162ade95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a6625d0bade092a4ba8ddfa49162ade95">operator++</a> ()</td></tr>
+<tr class="separator:a6625d0bade092a4ba8ddfa49162ade95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a602f5357684c658c9c1a29997d3365a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a602f5357684c658c9c1a29997d3365a6">operator++</a> (int)</td></tr>
+<tr class="separator:a602f5357684c658c9c1a29997d3365a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728e881ad33ed7f3b0db4d2901b7a493"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a728e881ad33ed7f3b0db4d2901b7a493">operator--</a> ()</td></tr>
+<tr class="separator:a728e881ad33ed7f3b0db4d2901b7a493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a40de3fc2b8ad09a708bcb6216be832"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a3a40de3fc2b8ad09a708bcb6216be832">operator--</a> (int)</td></tr>
+<tr class="separator:a3a40de3fc2b8ad09a708bcb6216be832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34c230cbc6e77f03b1b10f84e1e55799"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a34c230cbc6e77f03b1b10f84e1e55799">operator+=</a> (<a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1161259f074a40e65cde08f0b0876151">difference_type</a> n)</td></tr>
+<tr class="separator:a34c230cbc6e77f03b1b10f84e1e55799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6821edf1ef4b47549c1076ec2efd6f3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a6821edf1ef4b47549c1076ec2efd6f3b">operator-=</a> (<a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1161259f074a40e65cde08f0b0876151">difference_type</a> n)</td></tr>
+<tr class="separator:a6821edf1ef4b47549c1076ec2efd6f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Amis</h2></td></tr>
+<tr class="memitem:a33b5fcd097d1dcc87426b4f085094d30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a33b5fcd097d1dcc87426b4f085094d30">operator+</a> (const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;a, <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1161259f074a40e65cde08f0b0876151">difference_type</a> n)</td></tr>
+<tr class="separator:a33b5fcd097d1dcc87426b4f085094d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f7c67731fffe592d503faa2ac6929e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a7f7c67731fffe592d503faa2ac6929e9">operator+</a> (<a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1161259f074a40e65cde08f0b0876151">difference_type</a> n, const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;b)</td></tr>
+<tr class="separator:a7f7c67731fffe592d503faa2ac6929e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a040063b4d21cbdf70abffd52563067da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a040063b4d21cbdf70abffd52563067da">operator-</a> (const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;a, <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1161259f074a40e65cde08f0b0876151">difference_type</a> n)</td></tr>
+<tr class="separator:a040063b4d21cbdf70abffd52563067da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a970506dfb104f24039493a495ff45a2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1161259f074a40e65cde08f0b0876151">difference_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a970506dfb104f24039493a495ff45a2e">operator-</a> (const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;a, const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;b)</td></tr>
+<tr class="separator:a970506dfb104f24039493a495ff45a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c3a003f1490fd5ac1289f8b7c63565c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a4c3a003f1490fd5ac1289f8b7c63565c">operator==</a> (const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;a, const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;b)</td></tr>
+<tr class="separator:a4c3a003f1490fd5ac1289f8b7c63565c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00afb6c7a0f23ae65ef61656fa48dbc3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a00afb6c7a0f23ae65ef61656fa48dbc3">operator!=</a> (const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;a, const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;b)</td></tr>
+<tr class="separator:a00afb6c7a0f23ae65ef61656fa48dbc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba57b963ed90488609924525018c0ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1ba57b963ed90488609924525018c0ba">operator&lt;</a> (const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;a, const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;b)</td></tr>
+<tr class="separator:a1ba57b963ed90488609924525018c0ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86651101e3caeb262109b10e9393a6c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a86651101e3caeb262109b10e9393a6c6">operator&gt;</a> (const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;a, const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;b)</td></tr>
+<tr class="separator:a86651101e3caeb262109b10e9393a6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a089329cd2b3273776dcdd13b8cd1e396"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a089329cd2b3273776dcdd13b8cd1e396">operator&gt;=</a> (const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;a, const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;b)</td></tr>
+<tr class="separator:a089329cd2b3273776dcdd13b8cd1e396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fb0728d300b006b90032e11e3aafe76"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1fb0728d300b006b90032e11e3aafe76">operator&lt;=</a> (const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;a, const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;b)</td></tr>
+<tr class="separator:a1fb0728d300b006b90032e11e3aafe76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><h3>template&lt;typename Policy&gt;<br />
+class pybind11::detail::generic_iterator&lt; Policy &gt;</h3>
+
+<p>STL iterator template used for tuple, list, sequence and dict. </p>
+</div><h2 class="groupheader">Documentation des définitions de type membres</h2>
+<a id="a1161259f074a40e65cde08f0b0876151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1161259f074a40e65cde08f0b0876151">&#9670;&nbsp;</a></span>difference_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">pybind11::detail::generic_iterator</a>&lt; Policy &gt;::<a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1161259f074a40e65cde08f0b0876151">difference_type</a> =  <a class="el" href="namespacepybind11.html#a51e3d317b399f8925c3b9f1980018481">ssize_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6364472bdd2de461622fea3bee21329e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6364472bdd2de461622fea3bee21329e">&#9670;&nbsp;</a></span>iterator_category</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">pybind11::detail::generic_iterator</a>&lt; Policy &gt;::<a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a6364472bdd2de461622fea3bee21329e">iterator_category</a> =  typename Policy::iterator_category</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b95ff694acebd71b281cf56bd678a2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b95ff694acebd71b281cf56bd678a2f">&#9670;&nbsp;</a></span>pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">pybind11::detail::generic_iterator</a>&lt; Policy &gt;::<a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a3b95ff694acebd71b281cf56bd678a2f">pointer</a> =  typename Policy::pointer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c2390404e4ce1093acca8061a524897"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c2390404e4ce1093acca8061a524897">&#9670;&nbsp;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">pybind11::detail::generic_iterator</a>&lt; Policy &gt;::<a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1c2390404e4ce1093acca8061a524897">reference</a> =  typename Policy::reference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa43185a5e68cd6be7612c7549c20db05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa43185a5e68cd6be7612c7549c20db05">&#9670;&nbsp;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">pybind11::detail::generic_iterator</a>&lt; Policy &gt;::<a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#aa43185a5e68cd6be7612c7549c20db05">value_type</a> =  typename Policy::value_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="a98494fb4cff15cb8e58afa0ca184276c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98494fb4cff15cb8e58afa0ca184276c">&#9670;&nbsp;</a></span>generic_iterator() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">pybind11::detail::generic_iterator</a>&lt; Policy &gt;::<a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">generic_iterator</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a780b8b680f6f4503b473f25e41ee72ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a780b8b680f6f4503b473f25e41ee72ae">&#9670;&nbsp;</a></span>generic_iterator() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">pybind11::detail::generic_iterator</a>&lt; Policy &gt;::<a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">generic_iterator</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classpybind11_1_1handle.html">handle</a>&#160;</td>
+          <td class="paramname"><em>seq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacepybind11.html#a51e3d317b399f8925c3b9f1980018481">ssize_t</a>&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="afb9f86efa4b5e199fd9e3fbea5dfcd66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb9f86efa4b5e199fd9e3fbea5dfcd66">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1c2390404e4ce1093acca8061a524897">reference</a> <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">pybind11::detail::generic_iterator</a>&lt; Policy &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6625d0bade092a4ba8ddfa49162ade95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6625d0bade092a4ba8ddfa49162ade95">&#9670;&nbsp;</a></span>operator++() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a>&amp; <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">pybind11::detail::generic_iterator</a>&lt; Policy &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a602f5357684c658c9c1a29997d3365a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a602f5357684c658c9c1a29997d3365a6">&#9670;&nbsp;</a></span>operator++() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">pybind11::detail::generic_iterator</a>&lt; Policy &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34c230cbc6e77f03b1b10f84e1e55799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34c230cbc6e77f03b1b10f84e1e55799">&#9670;&nbsp;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a>&amp; <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">pybind11::detail::generic_iterator</a>&lt; Policy &gt;::operator+= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1161259f074a40e65cde08f0b0876151">difference_type</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a728e881ad33ed7f3b0db4d2901b7a493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a728e881ad33ed7f3b0db4d2901b7a493">&#9670;&nbsp;</a></span>operator--() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a>&amp; <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">pybind11::detail::generic_iterator</a>&lt; Policy &gt;::operator-- </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a40de3fc2b8ad09a708bcb6216be832"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a40de3fc2b8ad09a708bcb6216be832">&#9670;&nbsp;</a></span>operator--() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">pybind11::detail::generic_iterator</a>&lt; Policy &gt;::operator-- </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6821edf1ef4b47549c1076ec2efd6f3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6821edf1ef4b47549c1076ec2efd6f3b">&#9670;&nbsp;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a>&amp; <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">pybind11::detail::generic_iterator</a>&lt; Policy &gt;::operator-= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1161259f074a40e65cde08f0b0876151">difference_type</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee3781a590f28f8ce7d0a8a9f392c0c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee3781a590f28f8ce7d0a8a9f392c0c7">&#9670;&nbsp;</a></span>operator-&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a3b95ff694acebd71b281cf56bd678a2f">pointer</a> <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">pybind11::detail::generic_iterator</a>&lt; Policy &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c6a04a587796e6ff2fbcc5e446f8f7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c6a04a587796e6ff2fbcc5e446f8f7a">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1c2390404e4ce1093acca8061a524897">reference</a> <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">pybind11::detail::generic_iterator</a>&lt; Policy &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1161259f074a40e65cde08f0b0876151">difference_type</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions amies et associées</h2>
+<a id="a00afb6c7a0f23ae65ef61656fa48dbc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00afb6c7a0f23ae65ef61656fa48dbc3">&#9670;&nbsp;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="namespacepybind11_1_1detail.html#aa9ce215a92db60737fd2f016b1922b4c">operator!</a>= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33b5fcd097d1dcc87426b4f085094d30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b5fcd097d1dcc87426b4f085094d30">&#9670;&nbsp;</a></span>operator+ <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1161259f074a40e65cde08f0b0876151">difference_type</a>&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f7c67731fffe592d503faa2ac6929e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f7c67731fffe592d503faa2ac6929e9">&#9670;&nbsp;</a></span>operator+ <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> operator+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1161259f074a40e65cde08f0b0876151">difference_type</a>&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a970506dfb104f24039493a495ff45a2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a970506dfb104f24039493a495ff45a2e">&#9670;&nbsp;</a></span>operator- <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1161259f074a40e65cde08f0b0876151">difference_type</a> operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a040063b4d21cbdf70abffd52563067da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a040063b4d21cbdf70abffd52563067da">&#9670;&nbsp;</a></span>operator- <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html#a1161259f074a40e65cde08f0b0876151">difference_type</a>&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ba57b963ed90488609924525018c0ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba57b963ed90488609924525018c0ba">&#9670;&nbsp;</a></span>operator&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1fb0728d300b006b90032e11e3aafe76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fb0728d300b006b90032e11e3aafe76">&#9670;&nbsp;</a></span>operator&lt;=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c3a003f1490fd5ac1289f8b7c63565c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c3a003f1490fd5ac1289f8b7c63565c">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86651101e3caeb262109b10e9393a6c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86651101e3caeb262109b10e9393a6c6">&#9670;&nbsp;</a></span>operator&gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a089329cd2b3273776dcdd13b8cd1e396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a089329cd2b3273776dcdd13b8cd1e396">&#9670;&nbsp;</a></span>operator&gt;=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Policy &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classpybind11_1_1detail_1_1generic__iterator.html">It</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+<li>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/<a class="el" href="pytypes_8h_source.html">pytypes.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,354 @@
+\hypertarget{structpybind11_1_1detail_1_1npy__api}{}\doxysection{pybind11\+::detail\+::npy\+\_\+api Struct Reference}
+\label{structpybind11_1_1detail_1_1npy__api}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+
+
+{\ttfamily \#include $<$numpy.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_1_1_py_array___dims}{Py\+Array\+\_\+\+Dims}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112c}{constants}} \{ \newline
+\mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cad3a6eac781c5323bfe42db2d538df452}{NPY\+\_\+\+ARRAY\+\_\+\+C\+\_\+\+CONTIGUOUS\+\_\+}} = 0x0001
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cac87d7818b597c4b1c58f280c3da771b3}{NPY\+\_\+\+ARRAY\+\_\+\+F\+\_\+\+CONTIGUOUS\+\_\+}} = 0x0002
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca695feb6996e1d44c5ee8045782235ac3}{NPY\+\_\+\+ARRAY\+\_\+\+OWNDATA\+\_\+}} = 0x0004
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca0e95362a8e700112aa6115831179a42c}{NPY\+\_\+\+ARRAY\+\_\+\+FORCECAST\+\_\+}} = 0x0010
+, \newline
+\mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cab27561a8a29ea129e2cb5097ffb2f1f8}{NPY\+\_\+\+ARRAY\+\_\+\+ENSUREARRAY\+\_\+}} = 0x0040
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca7d9863b8a14af246f25784acedcbe6c6}{NPY\+\_\+\+ARRAY\+\_\+\+ALIGNED\+\_\+}} = 0x0100
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca21b7cdad413429dc3a83a89b8af4901d}{NPY\+\_\+\+ARRAY\+\_\+\+WRITEABLE\+\_\+}} = 0x0400
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca7d302c4a12211247fa69e53d1b998a9d}{NPY\+\_\+\+BOOL\+\_\+}} = 0
+, \newline
+\mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca52719c39dbb4eb8b79863663b3cc5701}{NPY\+\_\+\+BYTE\+\_\+}}
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca57d90288b184bd087f8f8f566334c6a8}{NPY\+\_\+\+UBYTE\+\_\+}}
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca580c3bfb23b9176b38ea28b1a6e5f865}{NPY\+\_\+\+SHORT\+\_\+}}
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca9c5edde20ca933e79221207ad6fa4e97}{NPY\+\_\+\+USHORT\+\_\+}}
+, \newline
+\mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca23a145b093eed79ff6cb7b52ad5720dd}{NPY\+\_\+\+INT\+\_\+}}
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112caac714da0621a3d22747f4ecd7a186d40}{NPY\+\_\+\+UINT\+\_\+}}
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca7f8647b6090747613ea17b488a739257}{NPY\+\_\+\+LONG\+\_\+}}
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca00d3ebdedb4ad932669b1e79d3c08dff}{NPY\+\_\+\+ULONG\+\_\+}}
+, \newline
+\mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca3c09d2993df8772f10aa4340c5e843f4}{NPY\+\_\+\+LONGLONG\+\_\+}}
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112caa506c2548fe658ced4409f24f5a309ca}{NPY\+\_\+\+ULONGLONG\+\_\+}}
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca5a5a3227ff7a03775cd8993b86fada8c}{NPY\+\_\+\+FLOAT\+\_\+}}
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cab9372fc2103d33187fea1a5cffdc8b32}{NPY\+\_\+\+DOUBLE\+\_\+}}
+, \newline
+\mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca43b45c358c7a79c995e7600417e366d8}{NPY\+\_\+\+LONGDOUBLE\+\_\+}}
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cafd5218c8fe6dff67e67f5f4fa4e92ead}{NPY\+\_\+\+CFLOAT\+\_\+}}
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112caad3f975a13494b7ffec67a68fa47a35d}{NPY\+\_\+\+CDOUBLE\+\_\+}}
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca940ef81bf07477b0182658a844c4bfed}{NPY\+\_\+\+CLONGDOUBLE\+\_\+}}
+, \newline
+\mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca952d7810702e22375f1fc3c7bfb6e60d}{NPY\+\_\+\+OBJECT\+\_\+}} = 17
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112caa32df5df352161e32381272bdf1d2315}{NPY\+\_\+\+STRING\+\_\+}}
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cac07114c14ff0df7fb01131277a65d2d4}{NPY\+\_\+\+UNICODE\+\_\+}}
+, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca803a43d93cc7eb31d66185a8cb7d42f2}{NPY\+\_\+\+VOID\+\_\+}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_add491ff97b037c3f8343d052d71a9c32}{Py\+Array\+\_\+\+Check\+\_\+}} (Py\+Object $\ast$obj) const
+\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a8d384a57bb0c1cad8a5724e9efb1eb69}{Py\+Array\+Descr\+\_\+\+Check\+\_\+}} (Py\+Object $\ast$obj) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api}{npy\+\_\+api}} \& \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a6cbffe9763f89f63d3cfc8f94c90791f}{get}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a09419de0de5604d07eeb01aedd78f423}{Py\+Array\+\_\+\+Get\+NDArray\+CFeature\+Version\+\_\+}} )()
+\item 
+Py\+Object $\ast$($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a9b86dc6387e6baa0f5a938dbd0849ef8}{Py\+Array\+\_\+\+Descr\+From\+Type\+\_\+}} )(int)
+\item 
+Py\+Object $\ast$($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a7d396aa34e1fb90dd1932969c1ee9f05}{Py\+Array\+\_\+\+New\+From\+Descr\+\_\+}} )(Py\+Type\+Object $\ast$, Py\+Object $\ast$, int, Py\+\_\+intptr\+\_\+t $\ast$, Py\+\_\+intptr\+\_\+t $\ast$, void $\ast$, int, Py\+Object $\ast$)
+\item 
+Py\+Object $\ast$($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a175e05ec2024f59f44dd453d33207287}{Py\+Array\+\_\+\+Descr\+New\+From\+Type\+\_\+}} )(int)
+\item 
+int($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_adac7f4a6780442adcbe441f1b40ff86d}{Py\+Array\+\_\+\+Copy\+Into\+\_\+}} )(Py\+Object $\ast$, Py\+Object $\ast$)
+\item 
+Py\+Object $\ast$($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_acb5a929718249f0c9b595259cd79209c}{Py\+Array\+\_\+\+New\+Copy\+\_\+}} )(Py\+Object $\ast$, int)
+\item 
+Py\+Type\+Object $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a7a2145a7b58a7574573ad490f0f3179f}{Py\+Array\+\_\+\+Type\+\_\+}}
+\item 
+Py\+Type\+Object $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a684266fde65465770c665d5884491d16}{Py\+Void\+Arr\+Type\+\_\+\+Type\+\_\+}}
+\item 
+Py\+Type\+Object $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a4ac4caf00e252e21cd15e888e29d64ea}{Py\+Array\+Descr\+\_\+\+Type\+\_\+}}
+\item 
+Py\+Object $\ast$($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_aced4a700c7b4be7c75f524938d9f7297}{Py\+Array\+\_\+\+Descr\+From\+Scalar\+\_\+}} )(Py\+Object $\ast$)
+\item 
+Py\+Object $\ast$($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a901e0e478c3c31edf728b93cfdae1cb8}{Py\+Array\+\_\+\+From\+Any\+\_\+}} )(Py\+Object $\ast$, Py\+Object $\ast$, int, int, int, Py\+Object $\ast$)
+\item 
+int($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_ab36ace55b57cfdf8ee4495aa36ac91df}{Py\+Array\+\_\+\+Descr\+Converter\+\_\+}} )(Py\+Object $\ast$, Py\+Object $\ast$$\ast$)
+\item 
+bool($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a186f600d4739c60d69f7817cab171c03}{Py\+Array\+\_\+\+Equiv\+Types\+\_\+}} )(Py\+Object $\ast$, Py\+Object $\ast$)
+\item 
+int($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a6be80b612675334ca802509fe79e29fc}{Py\+Array\+\_\+\+Get\+Array\+Params\+From\+Object\+\_\+}} )(Py\+Object $\ast$, Py\+Object $\ast$, char, Py\+Object $\ast$$\ast$, int $\ast$, Py\+\_\+ssize\+\_\+t $\ast$, Py\+Object $\ast$$\ast$, Py\+Object $\ast$)
+\item 
+Py\+Object $\ast$($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_a4f9013c8e87997d95bba80b6bf4834be}{Py\+Array\+\_\+\+Squeeze\+\_\+}} )(Py\+Object $\ast$)
+\item 
+int($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_adac6769af31fb0ebea2900da18ddce06}{Py\+Array\+\_\+\+Set\+Base\+Object\+\_\+}} )(Py\+Object $\ast$, Py\+Object $\ast$)
+\item 
+Py\+Object $\ast$($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_aaf8aac1fb0bb341664fa55fa6151c649}{Py\+Array\+\_\+\+Resize\+\_\+}} )(Py\+Object $\ast$, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_1_1_py_array___dims}{Py\+Array\+\_\+\+Dims}} $\ast$, int, int)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112c}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112c}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!constants@{constants}}
+\index{constants@{constants}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{constants}{constants}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112c}{pybind11\+::detail\+::npy\+\_\+api\+::constants}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ARRAY\_C\_CONTIGUOUS\_@{NPY\_ARRAY\_C\_CONTIGUOUS\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_ARRAY\_C\_CONTIGUOUS\_@{NPY\_ARRAY\_C\_CONTIGUOUS\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cad3a6eac781c5323bfe42db2d538df452}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cad3a6eac781c5323bfe42db2d538df452}} 
+NPY\+\_\+\+ARRAY\+\_\+\+C\+\_\+\+CONTIGUOUS\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ARRAY\_F\_CONTIGUOUS\_@{NPY\_ARRAY\_F\_CONTIGUOUS\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_ARRAY\_F\_CONTIGUOUS\_@{NPY\_ARRAY\_F\_CONTIGUOUS\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cac87d7818b597c4b1c58f280c3da771b3}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cac87d7818b597c4b1c58f280c3da771b3}} 
+NPY\+\_\+\+ARRAY\+\_\+\+F\+\_\+\+CONTIGUOUS\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ARRAY\_OWNDATA\_@{NPY\_ARRAY\_OWNDATA\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_ARRAY\_OWNDATA\_@{NPY\_ARRAY\_OWNDATA\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca695feb6996e1d44c5ee8045782235ac3}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca695feb6996e1d44c5ee8045782235ac3}} 
+NPY\+\_\+\+ARRAY\+\_\+\+OWNDATA\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ARRAY\_FORCECAST\_@{NPY\_ARRAY\_FORCECAST\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_ARRAY\_FORCECAST\_@{NPY\_ARRAY\_FORCECAST\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca0e95362a8e700112aa6115831179a42c}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca0e95362a8e700112aa6115831179a42c}} 
+NPY\+\_\+\+ARRAY\+\_\+\+FORCECAST\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ARRAY\_ENSUREARRAY\_@{NPY\_ARRAY\_ENSUREARRAY\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_ARRAY\_ENSUREARRAY\_@{NPY\_ARRAY\_ENSUREARRAY\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cab27561a8a29ea129e2cb5097ffb2f1f8}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cab27561a8a29ea129e2cb5097ffb2f1f8}} 
+NPY\+\_\+\+ARRAY\+\_\+\+ENSUREARRAY\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ARRAY\_ALIGNED\_@{NPY\_ARRAY\_ALIGNED\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_ARRAY\_ALIGNED\_@{NPY\_ARRAY\_ALIGNED\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca7d9863b8a14af246f25784acedcbe6c6}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca7d9863b8a14af246f25784acedcbe6c6}} 
+NPY\+\_\+\+ARRAY\+\_\+\+ALIGNED\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ARRAY\_WRITEABLE\_@{NPY\_ARRAY\_WRITEABLE\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_ARRAY\_WRITEABLE\_@{NPY\_ARRAY\_WRITEABLE\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca21b7cdad413429dc3a83a89b8af4901d}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca21b7cdad413429dc3a83a89b8af4901d}} 
+NPY\+\_\+\+ARRAY\+\_\+\+WRITEABLE\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_BOOL\_@{NPY\_BOOL\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_BOOL\_@{NPY\_BOOL\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca7d302c4a12211247fa69e53d1b998a9d}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca7d302c4a12211247fa69e53d1b998a9d}} 
+NPY\+\_\+\+BOOL\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_BYTE\_@{NPY\_BYTE\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_BYTE\_@{NPY\_BYTE\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca52719c39dbb4eb8b79863663b3cc5701}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca52719c39dbb4eb8b79863663b3cc5701}} 
+NPY\+\_\+\+BYTE\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_UBYTE\_@{NPY\_UBYTE\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_UBYTE\_@{NPY\_UBYTE\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca57d90288b184bd087f8f8f566334c6a8}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca57d90288b184bd087f8f8f566334c6a8}} 
+NPY\+\_\+\+UBYTE\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_SHORT\_@{NPY\_SHORT\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_SHORT\_@{NPY\_SHORT\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca580c3bfb23b9176b38ea28b1a6e5f865}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca580c3bfb23b9176b38ea28b1a6e5f865}} 
+NPY\+\_\+\+SHORT\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_USHORT\_@{NPY\_USHORT\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_USHORT\_@{NPY\_USHORT\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca9c5edde20ca933e79221207ad6fa4e97}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca9c5edde20ca933e79221207ad6fa4e97}} 
+NPY\+\_\+\+USHORT\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_INT\_@{NPY\_INT\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_INT\_@{NPY\_INT\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca23a145b093eed79ff6cb7b52ad5720dd}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca23a145b093eed79ff6cb7b52ad5720dd}} 
+NPY\+\_\+\+INT\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_UINT\_@{NPY\_UINT\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_UINT\_@{NPY\_UINT\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112caac714da0621a3d22747f4ecd7a186d40}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112caac714da0621a3d22747f4ecd7a186d40}} 
+NPY\+\_\+\+UINT\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_LONG\_@{NPY\_LONG\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_LONG\_@{NPY\_LONG\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca7f8647b6090747613ea17b488a739257}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca7f8647b6090747613ea17b488a739257}} 
+NPY\+\_\+\+LONG\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ULONG\_@{NPY\_ULONG\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_ULONG\_@{NPY\_ULONG\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca00d3ebdedb4ad932669b1e79d3c08dff}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca00d3ebdedb4ad932669b1e79d3c08dff}} 
+NPY\+\_\+\+ULONG\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_LONGLONG\_@{NPY\_LONGLONG\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_LONGLONG\_@{NPY\_LONGLONG\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca3c09d2993df8772f10aa4340c5e843f4}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca3c09d2993df8772f10aa4340c5e843f4}} 
+NPY\+\_\+\+LONGLONG\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_ULONGLONG\_@{NPY\_ULONGLONG\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_ULONGLONG\_@{NPY\_ULONGLONG\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112caa506c2548fe658ced4409f24f5a309ca}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112caa506c2548fe658ced4409f24f5a309ca}} 
+NPY\+\_\+\+ULONGLONG\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_FLOAT\_@{NPY\_FLOAT\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_FLOAT\_@{NPY\_FLOAT\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca5a5a3227ff7a03775cd8993b86fada8c}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca5a5a3227ff7a03775cd8993b86fada8c}} 
+NPY\+\_\+\+FLOAT\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_DOUBLE\_@{NPY\_DOUBLE\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_DOUBLE\_@{NPY\_DOUBLE\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cab9372fc2103d33187fea1a5cffdc8b32}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cab9372fc2103d33187fea1a5cffdc8b32}} 
+NPY\+\_\+\+DOUBLE\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_LONGDOUBLE\_@{NPY\_LONGDOUBLE\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_LONGDOUBLE\_@{NPY\_LONGDOUBLE\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca43b45c358c7a79c995e7600417e366d8}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca43b45c358c7a79c995e7600417e366d8}} 
+NPY\+\_\+\+LONGDOUBLE\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_CFLOAT\_@{NPY\_CFLOAT\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_CFLOAT\_@{NPY\_CFLOAT\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cafd5218c8fe6dff67e67f5f4fa4e92ead}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cafd5218c8fe6dff67e67f5f4fa4e92ead}} 
+NPY\+\_\+\+CFLOAT\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_CDOUBLE\_@{NPY\_CDOUBLE\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_CDOUBLE\_@{NPY\_CDOUBLE\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112caad3f975a13494b7ffec67a68fa47a35d}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112caad3f975a13494b7ffec67a68fa47a35d}} 
+NPY\+\_\+\+CDOUBLE\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_CLONGDOUBLE\_@{NPY\_CLONGDOUBLE\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_CLONGDOUBLE\_@{NPY\_CLONGDOUBLE\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca940ef81bf07477b0182658a844c4bfed}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca940ef81bf07477b0182658a844c4bfed}} 
+NPY\+\_\+\+CLONGDOUBLE\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_OBJECT\_@{NPY\_OBJECT\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_OBJECT\_@{NPY\_OBJECT\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca952d7810702e22375f1fc3c7bfb6e60d}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca952d7810702e22375f1fc3c7bfb6e60d}} 
+NPY\+\_\+\+OBJECT\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_STRING\_@{NPY\_STRING\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_STRING\_@{NPY\_STRING\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112caa32df5df352161e32381272bdf1d2315}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112caa32df5df352161e32381272bdf1d2315}} 
+NPY\+\_\+\+STRING\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_UNICODE\_@{NPY\_UNICODE\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_UNICODE\_@{NPY\_UNICODE\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cac07114c14ff0df7fb01131277a65d2d4}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112cac07114c14ff0df7fb01131277a65d2d4}} 
+NPY\+\_\+\+UNICODE\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NPY\_VOID\_@{NPY\_VOID\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!NPY\_VOID\_@{NPY\_VOID\_}}}\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca803a43d93cc7eb31d66185a8cb7d42f2}\label{structpybind11_1_1detail_1_1npy__api_abd526a7e3dabfa5fa2e4b76c6aca112ca803a43d93cc7eb31d66185a8cb7d42f2}} 
+NPY\+\_\+\+VOID\+\_\+&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_a6cbffe9763f89f63d3cfc8f94c90791f}\label{structpybind11_1_1detail_1_1npy__api_a6cbffe9763f89f63d3cfc8f94c90791f}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!get@{get}}
+\index{get@{get}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api}{npy\+\_\+api}}\& pybind11\+::detail\+::npy\+\_\+api\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_add491ff97b037c3f8343d052d71a9c32}\label{structpybind11_1_1detail_1_1npy__api_add491ff97b037c3f8343d052d71a9c32}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArray\_Check\_@{PyArray\_Check\_}}
+\index{PyArray\_Check\_@{PyArray\_Check\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_Check\_()}{PyArray\_Check\_()}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+\_\+\+Check\+\_\+ (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{obj }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_a8d384a57bb0c1cad8a5724e9efb1eb69}\label{structpybind11_1_1detail_1_1npy__api_a8d384a57bb0c1cad8a5724e9efb1eb69}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArrayDescr\_Check\_@{PyArrayDescr\_Check\_}}
+\index{PyArrayDescr\_Check\_@{PyArrayDescr\_Check\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArrayDescr\_Check\_()}{PyArrayDescr\_Check\_()}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+Descr\+\_\+\+Check\+\_\+ (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{obj }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_adac7f4a6780442adcbe441f1b40ff86d}\label{structpybind11_1_1detail_1_1npy__api_adac7f4a6780442adcbe441f1b40ff86d}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArray\_CopyInto\_@{PyArray\_CopyInto\_}}
+\index{PyArray\_CopyInto\_@{PyArray\_CopyInto\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_CopyInto\_}{PyArray\_CopyInto\_}}
+{\footnotesize\ttfamily int($\ast$ pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+\_\+\+Copy\+Into\+\_\+) (Py\+Object $\ast$, Py\+Object $\ast$)}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_ab36ace55b57cfdf8ee4495aa36ac91df}\label{structpybind11_1_1detail_1_1npy__api_ab36ace55b57cfdf8ee4495aa36ac91df}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArray\_DescrConverter\_@{PyArray\_DescrConverter\_}}
+\index{PyArray\_DescrConverter\_@{PyArray\_DescrConverter\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_DescrConverter\_}{PyArray\_DescrConverter\_}}
+{\footnotesize\ttfamily int($\ast$ pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+\_\+\+Descr\+Converter\+\_\+) (Py\+Object $\ast$, Py\+Object $\ast$$\ast$)}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_aced4a700c7b4be7c75f524938d9f7297}\label{structpybind11_1_1detail_1_1npy__api_aced4a700c7b4be7c75f524938d9f7297}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArray\_DescrFromScalar\_@{PyArray\_DescrFromScalar\_}}
+\index{PyArray\_DescrFromScalar\_@{PyArray\_DescrFromScalar\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_DescrFromScalar\_}{PyArray\_DescrFromScalar\_}}
+{\footnotesize\ttfamily Py\+Object$\ast$($\ast$ pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+\_\+\+Descr\+From\+Scalar\+\_\+) (Py\+Object $\ast$)}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_a9b86dc6387e6baa0f5a938dbd0849ef8}\label{structpybind11_1_1detail_1_1npy__api_a9b86dc6387e6baa0f5a938dbd0849ef8}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArray\_DescrFromType\_@{PyArray\_DescrFromType\_}}
+\index{PyArray\_DescrFromType\_@{PyArray\_DescrFromType\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_DescrFromType\_}{PyArray\_DescrFromType\_}}
+{\footnotesize\ttfamily Py\+Object$\ast$($\ast$ pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+\_\+\+Descr\+From\+Type\+\_\+) (int)}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_a175e05ec2024f59f44dd453d33207287}\label{structpybind11_1_1detail_1_1npy__api_a175e05ec2024f59f44dd453d33207287}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArray\_DescrNewFromType\_@{PyArray\_DescrNewFromType\_}}
+\index{PyArray\_DescrNewFromType\_@{PyArray\_DescrNewFromType\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_DescrNewFromType\_}{PyArray\_DescrNewFromType\_}}
+{\footnotesize\ttfamily Py\+Object$\ast$($\ast$ pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+\_\+\+Descr\+New\+From\+Type\+\_\+) (int)}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_a186f600d4739c60d69f7817cab171c03}\label{structpybind11_1_1detail_1_1npy__api_a186f600d4739c60d69f7817cab171c03}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArray\_EquivTypes\_@{PyArray\_EquivTypes\_}}
+\index{PyArray\_EquivTypes\_@{PyArray\_EquivTypes\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_EquivTypes\_}{PyArray\_EquivTypes\_}}
+{\footnotesize\ttfamily bool($\ast$ pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+\_\+\+Equiv\+Types\+\_\+) (Py\+Object $\ast$, Py\+Object $\ast$)}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_a901e0e478c3c31edf728b93cfdae1cb8}\label{structpybind11_1_1detail_1_1npy__api_a901e0e478c3c31edf728b93cfdae1cb8}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArray\_FromAny\_@{PyArray\_FromAny\_}}
+\index{PyArray\_FromAny\_@{PyArray\_FromAny\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_FromAny\_}{PyArray\_FromAny\_}}
+{\footnotesize\ttfamily Py\+Object$\ast$($\ast$ pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+\_\+\+From\+Any\+\_\+) (Py\+Object $\ast$, Py\+Object $\ast$, int, int, int, Py\+Object $\ast$)}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_a6be80b612675334ca802509fe79e29fc}\label{structpybind11_1_1detail_1_1npy__api_a6be80b612675334ca802509fe79e29fc}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArray\_GetArrayParamsFromObject\_@{PyArray\_GetArrayParamsFromObject\_}}
+\index{PyArray\_GetArrayParamsFromObject\_@{PyArray\_GetArrayParamsFromObject\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_GetArrayParamsFromObject\_}{PyArray\_GetArrayParamsFromObject\_}}
+{\footnotesize\ttfamily int($\ast$ pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+\_\+\+Get\+Array\+Params\+From\+Object\+\_\+) (Py\+Object $\ast$, Py\+Object $\ast$, char, Py\+Object $\ast$$\ast$, int $\ast$, Py\+\_\+ssize\+\_\+t $\ast$, Py\+Object $\ast$$\ast$, Py\+Object $\ast$)}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_a09419de0de5604d07eeb01aedd78f423}\label{structpybind11_1_1detail_1_1npy__api_a09419de0de5604d07eeb01aedd78f423}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArray\_GetNDArrayCFeatureVersion\_@{PyArray\_GetNDArrayCFeatureVersion\_}}
+\index{PyArray\_GetNDArrayCFeatureVersion\_@{PyArray\_GetNDArrayCFeatureVersion\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_GetNDArrayCFeatureVersion\_}{PyArray\_GetNDArrayCFeatureVersion\_}}
+{\footnotesize\ttfamily unsigned int($\ast$ pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+\_\+\+Get\+NDArray\+CFeature\+Version\+\_\+) ()}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_acb5a929718249f0c9b595259cd79209c}\label{structpybind11_1_1detail_1_1npy__api_acb5a929718249f0c9b595259cd79209c}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArray\_NewCopy\_@{PyArray\_NewCopy\_}}
+\index{PyArray\_NewCopy\_@{PyArray\_NewCopy\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_NewCopy\_}{PyArray\_NewCopy\_}}
+{\footnotesize\ttfamily Py\+Object$\ast$($\ast$ pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+\_\+\+New\+Copy\+\_\+) (Py\+Object $\ast$, int)}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_a7d396aa34e1fb90dd1932969c1ee9f05}\label{structpybind11_1_1detail_1_1npy__api_a7d396aa34e1fb90dd1932969c1ee9f05}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArray\_NewFromDescr\_@{PyArray\_NewFromDescr\_}}
+\index{PyArray\_NewFromDescr\_@{PyArray\_NewFromDescr\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_NewFromDescr\_}{PyArray\_NewFromDescr\_}}
+{\footnotesize\ttfamily Py\+Object$\ast$($\ast$ pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+\_\+\+New\+From\+Descr\+\_\+) (Py\+Type\+Object $\ast$, Py\+Object $\ast$, int, Py\+\_\+intptr\+\_\+t $\ast$, Py\+\_\+intptr\+\_\+t $\ast$, void $\ast$, int, Py\+Object $\ast$)}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_aaf8aac1fb0bb341664fa55fa6151c649}\label{structpybind11_1_1detail_1_1npy__api_aaf8aac1fb0bb341664fa55fa6151c649}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArray\_Resize\_@{PyArray\_Resize\_}}
+\index{PyArray\_Resize\_@{PyArray\_Resize\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_Resize\_}{PyArray\_Resize\_}}
+{\footnotesize\ttfamily Py\+Object$\ast$($\ast$ pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+\_\+\+Resize\+\_\+) (Py\+Object $\ast$, \mbox{\hyperlink{structpybind11_1_1detail_1_1npy__api_1_1_py_array___dims}{Py\+Array\+\_\+\+Dims}} $\ast$, int, int)}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_adac6769af31fb0ebea2900da18ddce06}\label{structpybind11_1_1detail_1_1npy__api_adac6769af31fb0ebea2900da18ddce06}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArray\_SetBaseObject\_@{PyArray\_SetBaseObject\_}}
+\index{PyArray\_SetBaseObject\_@{PyArray\_SetBaseObject\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_SetBaseObject\_}{PyArray\_SetBaseObject\_}}
+{\footnotesize\ttfamily int($\ast$ pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+\_\+\+Set\+Base\+Object\+\_\+) (Py\+Object $\ast$, Py\+Object $\ast$)}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_a4f9013c8e87997d95bba80b6bf4834be}\label{structpybind11_1_1detail_1_1npy__api_a4f9013c8e87997d95bba80b6bf4834be}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArray\_Squeeze\_@{PyArray\_Squeeze\_}}
+\index{PyArray\_Squeeze\_@{PyArray\_Squeeze\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_Squeeze\_}{PyArray\_Squeeze\_}}
+{\footnotesize\ttfamily Py\+Object$\ast$($\ast$ pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+\_\+\+Squeeze\+\_\+) (Py\+Object $\ast$)}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_a7a2145a7b58a7574573ad490f0f3179f}\label{structpybind11_1_1detail_1_1npy__api_a7a2145a7b58a7574573ad490f0f3179f}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArray\_Type\_@{PyArray\_Type\_}}
+\index{PyArray\_Type\_@{PyArray\_Type\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArray\_Type\_}{PyArray\_Type\_}}
+{\footnotesize\ttfamily Py\+Type\+Object$\ast$ pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+\_\+\+Type\+\_\+}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_a4ac4caf00e252e21cd15e888e29d64ea}\label{structpybind11_1_1detail_1_1npy__api_a4ac4caf00e252e21cd15e888e29d64ea}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyArrayDescr\_Type\_@{PyArrayDescr\_Type\_}}
+\index{PyArrayDescr\_Type\_@{PyArrayDescr\_Type\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyArrayDescr\_Type\_}{PyArrayDescr\_Type\_}}
+{\footnotesize\ttfamily Py\+Type\+Object$\ast$ pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Array\+Descr\+\_\+\+Type\+\_\+}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1npy__api_a684266fde65465770c665d5884491d16}\label{structpybind11_1_1detail_1_1npy__api_a684266fde65465770c665d5884491d16}} 
+\index{pybind11::detail::npy\_api@{pybind11::detail::npy\_api}!PyVoidArrType\_Type\_@{PyVoidArrType\_Type\_}}
+\index{PyVoidArrType\_Type\_@{PyVoidArrType\_Type\_}!pybind11::detail::npy\_api@{pybind11::detail::npy\_api}}
+\doxysubsubsection{\texorpdfstring{PyVoidArrType\_Type\_}{PyVoidArrType\_Type\_}}
+{\footnotesize\ttfamily Py\+Type\+Object$\ast$ pybind11\+::detail\+::npy\+\_\+api\+::\+Py\+Void\+Arr\+Type\+\_\+\+Type\+\_\+}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{numpy_8h}{numpy.\+h}}\end{DoxyCompactItemize}

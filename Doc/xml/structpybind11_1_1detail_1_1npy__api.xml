@@ -1,0 +1,739 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="structpybind11_1_1detail_1_1npy__api" kind="struct" language="C++" prot="public">
+    <compoundname>pybind11::detail::npy_api</compoundname>
+    <includes refid="numpy_8h" local="no">numpy.h</includes>
+    <innerclass refid="structpybind11_1_1detail_1_1npy__api_1_1_py_array___dims" prot="public">pybind11::detail::npy_api::PyArray_Dims</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>constants</name>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112cad3a6eac781c5323bfe42db2d538df452" prot="public">
+          <name>NPY_ARRAY_C_CONTIGUOUS_</name>
+          <initializer>= 0x0001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112cac87d7818b597c4b1c58f280c3da771b3" prot="public">
+          <name>NPY_ARRAY_F_CONTIGUOUS_</name>
+          <initializer>= 0x0002</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca695feb6996e1d44c5ee8045782235ac3" prot="public">
+          <name>NPY_ARRAY_OWNDATA_</name>
+          <initializer>= 0x0004</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca0e95362a8e700112aa6115831179a42c" prot="public">
+          <name>NPY_ARRAY_FORCECAST_</name>
+          <initializer>= 0x0010</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112cab27561a8a29ea129e2cb5097ffb2f1f8" prot="public">
+          <name>NPY_ARRAY_ENSUREARRAY_</name>
+          <initializer>= 0x0040</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca7d9863b8a14af246f25784acedcbe6c6" prot="public">
+          <name>NPY_ARRAY_ALIGNED_</name>
+          <initializer>= 0x0100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca21b7cdad413429dc3a83a89b8af4901d" prot="public">
+          <name>NPY_ARRAY_WRITEABLE_</name>
+          <initializer>= 0x0400</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca7d302c4a12211247fa69e53d1b998a9d" prot="public">
+          <name>NPY_BOOL_</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca52719c39dbb4eb8b79863663b3cc5701" prot="public">
+          <name>NPY_BYTE_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca57d90288b184bd087f8f8f566334c6a8" prot="public">
+          <name>NPY_UBYTE_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca580c3bfb23b9176b38ea28b1a6e5f865" prot="public">
+          <name>NPY_SHORT_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca9c5edde20ca933e79221207ad6fa4e97" prot="public">
+          <name>NPY_USHORT_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca23a145b093eed79ff6cb7b52ad5720dd" prot="public">
+          <name>NPY_INT_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112caac714da0621a3d22747f4ecd7a186d40" prot="public">
+          <name>NPY_UINT_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca7f8647b6090747613ea17b488a739257" prot="public">
+          <name>NPY_LONG_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca00d3ebdedb4ad932669b1e79d3c08dff" prot="public">
+          <name>NPY_ULONG_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca3c09d2993df8772f10aa4340c5e843f4" prot="public">
+          <name>NPY_LONGLONG_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112caa506c2548fe658ced4409f24f5a309ca" prot="public">
+          <name>NPY_ULONGLONG_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca5a5a3227ff7a03775cd8993b86fada8c" prot="public">
+          <name>NPY_FLOAT_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112cab9372fc2103d33187fea1a5cffdc8b32" prot="public">
+          <name>NPY_DOUBLE_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca43b45c358c7a79c995e7600417e366d8" prot="public">
+          <name>NPY_LONGDOUBLE_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112cafd5218c8fe6dff67e67f5f4fa4e92ead" prot="public">
+          <name>NPY_CFLOAT_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112caad3f975a13494b7ffec67a68fa47a35d" prot="public">
+          <name>NPY_CDOUBLE_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca940ef81bf07477b0182658a844c4bfed" prot="public">
+          <name>NPY_CLONGDOUBLE_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca952d7810702e22375f1fc3c7bfb6e60d" prot="public">
+          <name>NPY_OBJECT_</name>
+          <initializer>= 17</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112caa32df5df352161e32381272bdf1d2315" prot="public">
+          <name>NPY_STRING_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112cac07114c14ff0df7fb01131277a65d2d4" prot="public">
+          <name>NPY_UNICODE_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca803a43d93cc7eb31d66185a8cb7d42f2" prot="public">
+          <name>NPY_VOID_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="112" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="112" bodyend="130"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ad" prot="private" static="no" strong="no">
+        <type></type>
+        <name>functions</name>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada22cc7434aa520c64d79a25dd88e25d03" prot="private">
+          <name>API_PyArray_GetNDArrayCFeatureVersion</name>
+          <initializer>= 211</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199adaa621ae53a1cd5bdc3571a79890252ce0" prot="private">
+          <name>API_PyArray_Type</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada6f5f09134d49128add2dd3dd5afa3e71" prot="private">
+          <name>API_PyArrayDescr_Type</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada3b5850c442196b20d57fbe989574706f" prot="private">
+          <name>API_PyVoidArrType_Type</name>
+          <initializer>= 39</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada41147fbae4e566d6081104d5867a8d6f" prot="private">
+          <name>API_PyArray_DescrFromType</name>
+          <initializer>= 45</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada1e568579195774d9450d4570d93d1c84" prot="private">
+          <name>API_PyArray_DescrFromScalar</name>
+          <initializer>= 57</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada0f5943d6c65a219c53728e92b9431948" prot="private">
+          <name>API_PyArray_FromAny</name>
+          <initializer>= 69</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada48e677f38104bdc5d221de39407e4509" prot="private">
+          <name>API_PyArray_Resize</name>
+          <initializer>= 80</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada600507b69552c503e39d3077f8847d41" prot="private">
+          <name>API_PyArray_CopyInto</name>
+          <initializer>= 82</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada0710232419efbad6f8941c776fda3652" prot="private">
+          <name>API_PyArray_NewCopy</name>
+          <initializer>= 85</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada15a0a6d1e3cb5dd7a364b286097a7461" prot="private">
+          <name>API_PyArray_NewFromDescr</name>
+          <initializer>= 94</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199adae19b80ac2e2f3c8f1f37c6b3781f47be" prot="private">
+          <name>API_PyArray_DescrNewFromType</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada8c029b22ea749290e091aaf40471373e" prot="private">
+          <name>API_PyArray_DescrConverter</name>
+          <initializer>= 174</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada6dcade3f2857ca62f7277607ac8c08fd" prot="private">
+          <name>API_PyArray_EquivTypes</name>
+          <initializer>= 182</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada677e61079536d89dd1a6e345fb84726a" prot="private">
+          <name>API_PyArray_GetArrayParamsFromObject</name>
+          <initializer>= 278</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada752ec44ae8178c8eff51f580279ff903" prot="private">
+          <name>API_PyArray_Squeeze</name>
+          <initializer>= 136</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199adae82f1809d45b97763c85c6b17753fda5" prot="private">
+          <name>API_PyArray_SetBaseObject</name>
+          <initializer>= 282</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="170" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="170" bodyend="188"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1npy__api_1a09419de0de5604d07eeb01aedd78f423" prot="public" static="no" mutable="no">
+        <type>unsigned int(*</type>
+        <definition>unsigned int(* pybind11::detail::npy_api::PyArray_GetNDArrayCFeatureVersion_) ()</definition>
+        <argsstring>)()</argsstring>
+        <name>PyArray_GetNDArrayCFeatureVersion_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="149" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1npy__api_1a9b86dc6387e6baa0f5a938dbd0849ef8" prot="public" static="no" mutable="no">
+        <type>PyObject *(*</type>
+        <definition>PyObject*(* pybind11::detail::npy_api::PyArray_DescrFromType_) (int)</definition>
+        <argsstring>)(int)</argsstring>
+        <name>PyArray_DescrFromType_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="150" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1npy__api_1a7d396aa34e1fb90dd1932969c1ee9f05" prot="public" static="no" mutable="no">
+        <type>PyObject *(*</type>
+        <definition>PyObject*(* pybind11::detail::npy_api::PyArray_NewFromDescr_) (PyTypeObject *, PyObject *, int, Py_intptr_t *, Py_intptr_t *, void *, int, PyObject *)</definition>
+        <argsstring>)(PyTypeObject *, PyObject *, int, Py_intptr_t *, Py_intptr_t *, void *, int, PyObject *)</argsstring>
+        <name>PyArray_NewFromDescr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="151" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1npy__api_1a175e05ec2024f59f44dd453d33207287" prot="public" static="no" mutable="no">
+        <type>PyObject *(*</type>
+        <definition>PyObject*(* pybind11::detail::npy_api::PyArray_DescrNewFromType_) (int)</definition>
+        <argsstring>)(int)</argsstring>
+        <name>PyArray_DescrNewFromType_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="154" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1npy__api_1adac7f4a6780442adcbe441f1b40ff86d" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* pybind11::detail::npy_api::PyArray_CopyInto_) (PyObject *, PyObject *)</definition>
+        <argsstring>)(PyObject *, PyObject *)</argsstring>
+        <name>PyArray_CopyInto_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="155" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1npy__api_1acb5a929718249f0c9b595259cd79209c" prot="public" static="no" mutable="no">
+        <type>PyObject *(*</type>
+        <definition>PyObject*(* pybind11::detail::npy_api::PyArray_NewCopy_) (PyObject *, int)</definition>
+        <argsstring>)(PyObject *, int)</argsstring>
+        <name>PyArray_NewCopy_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="156" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1npy__api_1a7a2145a7b58a7574573ad490f0f3179f" prot="public" static="no" mutable="no">
+        <type>PyTypeObject *</type>
+        <definition>PyTypeObject* pybind11::detail::npy_api::PyArray_Type_</definition>
+        <argsstring></argsstring>
+        <name>PyArray_Type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="157" column="18" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1npy__api_1a684266fde65465770c665d5884491d16" prot="public" static="no" mutable="no">
+        <type>PyTypeObject *</type>
+        <definition>PyTypeObject* pybind11::detail::npy_api::PyVoidArrType_Type_</definition>
+        <argsstring></argsstring>
+        <name>PyVoidArrType_Type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="158" column="18" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1npy__api_1a4ac4caf00e252e21cd15e888e29d64ea" prot="public" static="no" mutable="no">
+        <type>PyTypeObject *</type>
+        <definition>PyTypeObject* pybind11::detail::npy_api::PyArrayDescr_Type_</definition>
+        <argsstring></argsstring>
+        <name>PyArrayDescr_Type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="159" column="18" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1npy__api_1aced4a700c7b4be7c75f524938d9f7297" prot="public" static="no" mutable="no">
+        <type>PyObject *(*</type>
+        <definition>PyObject*(* pybind11::detail::npy_api::PyArray_DescrFromScalar_) (PyObject *)</definition>
+        <argsstring>)(PyObject *)</argsstring>
+        <name>PyArray_DescrFromScalar_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="160" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1npy__api_1a901e0e478c3c31edf728b93cfdae1cb8" prot="public" static="no" mutable="no">
+        <type>PyObject *(*</type>
+        <definition>PyObject*(* pybind11::detail::npy_api::PyArray_FromAny_) (PyObject *, PyObject *, int, int, int, PyObject *)</definition>
+        <argsstring>)(PyObject *, PyObject *, int, int, int, PyObject *)</argsstring>
+        <name>PyArray_FromAny_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="161" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1npy__api_1ab36ace55b57cfdf8ee4495aa36ac91df" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* pybind11::detail::npy_api::PyArray_DescrConverter_) (PyObject *, PyObject **)</definition>
+        <argsstring>)(PyObject *, PyObject **)</argsstring>
+        <name>PyArray_DescrConverter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="162" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1npy__api_1a186f600d4739c60d69f7817cab171c03" prot="public" static="no" mutable="no">
+        <type>bool(*</type>
+        <definition>bool(* pybind11::detail::npy_api::PyArray_EquivTypes_) (PyObject *, PyObject *)</definition>
+        <argsstring>)(PyObject *, PyObject *)</argsstring>
+        <name>PyArray_EquivTypes_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="163" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1npy__api_1a6be80b612675334ca802509fe79e29fc" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* pybind11::detail::npy_api::PyArray_GetArrayParamsFromObject_) (PyObject *, PyObject *, char, PyObject **, int *, Py_ssize_t *, PyObject **, PyObject *)</definition>
+        <argsstring>)(PyObject *, PyObject *, char, PyObject **, int *, Py_ssize_t *, PyObject **, PyObject *)</argsstring>
+        <name>PyArray_GetArrayParamsFromObject_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="164" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1npy__api_1a4f9013c8e87997d95bba80b6bf4834be" prot="public" static="no" mutable="no">
+        <type>PyObject *(*</type>
+        <definition>PyObject*(* pybind11::detail::npy_api::PyArray_Squeeze_) (PyObject *)</definition>
+        <argsstring>)(PyObject *)</argsstring>
+        <name>PyArray_Squeeze_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="166" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1npy__api_1adac6769af31fb0ebea2900da18ddce06" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* pybind11::detail::npy_api::PyArray_SetBaseObject_) (PyObject *, PyObject *)</definition>
+        <argsstring>)(PyObject *, PyObject *)</argsstring>
+        <name>PyArray_SetBaseObject_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="167" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1npy__api_1aaf8aac1fb0bb341664fa55fa6151c649" prot="public" static="no" mutable="no">
+        <type>PyObject *(*</type>
+        <definition>PyObject*(* pybind11::detail::npy_api::PyArray_Resize_) (PyObject *, PyArray_Dims *, int, int)</definition>
+        <argsstring>)(PyObject *, PyArray_Dims *, int, int)</argsstring>
+        <name>PyArray_Resize_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="168" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1npy__api_1a6cbffe9763f89f63d3cfc8f94c90791f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpybind11_1_1detail_1_1npy__api" kindref="compound">npy_api</ref> &amp;</type>
+        <definition>static npy_api&amp; pybind11::detail::npy_api::get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="137" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="137" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1npy__api_1add491ff97b037c3f8343d052d71a9c32" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pybind11::detail::npy_api::PyArray_Check_</definition>
+        <argsstring>(PyObject *obj) const</argsstring>
+        <name>PyArray_Check_</name>
+        <param>
+          <type>PyObject *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="142" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="142" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1npy__api_1a8d384a57bb0c1cad8a5724e9efb1eb69" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pybind11::detail::npy_api::PyArrayDescr_Check_</definition>
+        <argsstring>(PyObject *obj) const</argsstring>
+        <name>PyArrayDescr_Check_</name>
+        <param>
+          <type>PyObject *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="145" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="145" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1npy__api_1a1a10c0db63d7312ebd8d803841638c96" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpybind11_1_1detail_1_1npy__api" kindref="compound">npy_api</ref></type>
+        <definition>static npy_api pybind11::detail::npy_api::lookup</definition>
+        <argsstring>()</argsstring>
+        <name>lookup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="190" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="190" bodyend="221"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="111" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="111" bodyend="222"/>
+    <listofallmembers>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada600507b69552c503e39d3077f8847d41" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>API_PyArray_CopyInto</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada8c029b22ea749290e091aaf40471373e" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>API_PyArray_DescrConverter</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada1e568579195774d9450d4570d93d1c84" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>API_PyArray_DescrFromScalar</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada41147fbae4e566d6081104d5867a8d6f" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>API_PyArray_DescrFromType</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199adae19b80ac2e2f3c8f1f37c6b3781f47be" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>API_PyArray_DescrNewFromType</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada6dcade3f2857ca62f7277607ac8c08fd" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>API_PyArray_EquivTypes</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada0f5943d6c65a219c53728e92b9431948" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>API_PyArray_FromAny</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada677e61079536d89dd1a6e345fb84726a" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>API_PyArray_GetArrayParamsFromObject</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada22cc7434aa520c64d79a25dd88e25d03" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>API_PyArray_GetNDArrayCFeatureVersion</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada0710232419efbad6f8941c776fda3652" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>API_PyArray_NewCopy</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada15a0a6d1e3cb5dd7a364b286097a7461" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>API_PyArray_NewFromDescr</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada48e677f38104bdc5d221de39407e4509" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>API_PyArray_Resize</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199adae82f1809d45b97763c85c6b17753fda5" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>API_PyArray_SetBaseObject</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada752ec44ae8178c8eff51f580279ff903" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>API_PyArray_Squeeze</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199adaa621ae53a1cd5bdc3571a79890252ce0" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>API_PyArray_Type</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada6f5f09134d49128add2dd3dd5afa3e71" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>API_PyArrayDescr_Type</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ada3b5850c442196b20d57fbe989574706f" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>API_PyVoidArrType_Type</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112c" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>constants</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a45ccf1a8beaed6be1e316a3104e199ad" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>functions</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a6cbffe9763f89f63d3cfc8f94c90791f" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>get</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a1a10c0db63d7312ebd8d803841638c96" prot="private" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>lookup</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca7d9863b8a14af246f25784acedcbe6c6" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_ARRAY_ALIGNED_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112cad3a6eac781c5323bfe42db2d538df452" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_ARRAY_C_CONTIGUOUS_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112cab27561a8a29ea129e2cb5097ffb2f1f8" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_ARRAY_ENSUREARRAY_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112cac87d7818b597c4b1c58f280c3da771b3" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_ARRAY_F_CONTIGUOUS_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca0e95362a8e700112aa6115831179a42c" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_ARRAY_FORCECAST_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca695feb6996e1d44c5ee8045782235ac3" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_ARRAY_OWNDATA_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca21b7cdad413429dc3a83a89b8af4901d" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_ARRAY_WRITEABLE_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca7d302c4a12211247fa69e53d1b998a9d" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_BOOL_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca52719c39dbb4eb8b79863663b3cc5701" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_BYTE_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112caad3f975a13494b7ffec67a68fa47a35d" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_CDOUBLE_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112cafd5218c8fe6dff67e67f5f4fa4e92ead" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_CFLOAT_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca940ef81bf07477b0182658a844c4bfed" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_CLONGDOUBLE_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112cab9372fc2103d33187fea1a5cffdc8b32" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_DOUBLE_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca5a5a3227ff7a03775cd8993b86fada8c" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_FLOAT_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca23a145b093eed79ff6cb7b52ad5720dd" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_INT_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca7f8647b6090747613ea17b488a739257" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_LONG_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca43b45c358c7a79c995e7600417e366d8" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_LONGDOUBLE_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca3c09d2993df8772f10aa4340c5e843f4" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_LONGLONG_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca952d7810702e22375f1fc3c7bfb6e60d" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_OBJECT_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca580c3bfb23b9176b38ea28b1a6e5f865" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_SHORT_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112caa32df5df352161e32381272bdf1d2315" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_STRING_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca57d90288b184bd087f8f8f566334c6a8" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_UBYTE_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112caac714da0621a3d22747f4ecd7a186d40" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_UINT_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca00d3ebdedb4ad932669b1e79d3c08dff" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_ULONG_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112caa506c2548fe658ced4409f24f5a309ca" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_ULONGLONG_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112cac07114c14ff0df7fb01131277a65d2d4" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_UNICODE_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca9c5edde20ca933e79221207ad6fa4e97" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_USHORT_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca803a43d93cc7eb31d66185a8cb7d42f2" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>NPY_VOID_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1add491ff97b037c3f8343d052d71a9c32" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArray_Check_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1adac7f4a6780442adcbe441f1b40ff86d" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArray_CopyInto_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1ab36ace55b57cfdf8ee4495aa36ac91df" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArray_DescrConverter_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1aced4a700c7b4be7c75f524938d9f7297" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArray_DescrFromScalar_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a9b86dc6387e6baa0f5a938dbd0849ef8" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArray_DescrFromType_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a175e05ec2024f59f44dd453d33207287" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArray_DescrNewFromType_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a186f600d4739c60d69f7817cab171c03" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArray_EquivTypes_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a901e0e478c3c31edf728b93cfdae1cb8" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArray_FromAny_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a6be80b612675334ca802509fe79e29fc" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArray_GetArrayParamsFromObject_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a09419de0de5604d07eeb01aedd78f423" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArray_GetNDArrayCFeatureVersion_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1acb5a929718249f0c9b595259cd79209c" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArray_NewCopy_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a7d396aa34e1fb90dd1932969c1ee9f05" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArray_NewFromDescr_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1aaf8aac1fb0bb341664fa55fa6151c649" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArray_Resize_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1adac6769af31fb0ebea2900da18ddce06" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArray_SetBaseObject_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a4f9013c8e87997d95bba80b6bf4834be" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArray_Squeeze_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a7a2145a7b58a7574573ad490f0f3179f" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArray_Type_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a8d384a57bb0c1cad8a5724e9efb1eb69" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArrayDescr_Check_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a4ac4caf00e252e21cd15e888e29d64ea" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyArrayDescr_Type_</name></member>
+      <member refid="structpybind11_1_1detail_1_1npy__api_1a684266fde65465770c665d5884491d16" prot="public" virt="non-virtual"><scope>pybind11::detail::npy_api</scope><name>PyVoidArrType_Type_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

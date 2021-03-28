@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tostr_334',['ToStr',['../classrapidcsv_1_1_converter.html#a114b87c39563c7777ad79fa8eb50c8e5',1,'rapidcsv::Converter::ToStr(const T &amp;pVal, std::string &amp;pStr) const'],['../classrapidcsv_1_1_converter.html#adf81e6cf6b80e5b2c0ab2a0451d30956',1,'rapidcsv::Converter::ToStr(const std::string &amp;pVal, std::string &amp;pStr) const']]],
-  ['toval_335',['ToVal',['../classrapidcsv_1_1_converter.html#a827c54e8cbe86cdb8e315d3382dfcbba',1,'rapidcsv::Converter::ToVal(const std::string &amp;pStr, T &amp;pVal) const'],['../classrapidcsv_1_1_converter.html#ab4e8303734d3231d742e68ae0087a670',1,'rapidcsv::Converter::ToVal(const std::string &amp;pStr, std::string &amp;pVal) const']]]
+  ['removecolumn_329',['RemoveColumn',['../classrapidcsv_1_1_document.html#a1e736e932b9162f74ce6188937099c7d',1,'rapidcsv::Document::RemoveColumn(const size_t pColumnIdx)'],['../classrapidcsv_1_1_document.html#acf7432447c7fd1308c3b30ebabea6440',1,'rapidcsv::Document::RemoveColumn(const std::string &amp;pColumnName)']]],
+  ['removerow_330',['RemoveRow',['../classrapidcsv_1_1_document.html#adbcc87ce353137b900b135c42213b78e',1,'rapidcsv::Document::RemoveRow(const size_t pRowIdx)'],['../classrapidcsv_1_1_document.html#a43504afd4fc6e2912e0d004bc841425b',1,'rapidcsv::Document::RemoveRow(const std::string &amp;pRowName)']]]
 ];

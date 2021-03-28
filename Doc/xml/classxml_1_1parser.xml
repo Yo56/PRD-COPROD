@@ -1,0 +1,1880 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classxml_1_1parser" kind="class" language="C++" prot="public">
+    <compoundname>xml::parser</compoundname>
+    <includes refid="parser_8hxx" local="no">parser.hxx</includes>
+    <innerclass refid="structxml_1_1parser_1_1attribute__type" prot="private">xml::parser::attribute_type</innerclass>
+    <innerclass refid="structxml_1_1parser_1_1attribute__value__type" prot="public">xml::parser::attribute_value_type</innerclass>
+    <innerclass refid="structxml_1_1parser_1_1element__entry" prot="private">xml::parser::element_entry</innerclass>
+    <innerclass refid="structxml_1_1parser_1_1iterator" prot="public">xml::parser::iterator</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5" prot="public" static="no" strong="no">
+        <type></type>
+        <name>event_type</name>
+        <enumvalue id="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5a558387ef6c638f8e533dbbaf9747a4ba" prot="public">
+          <name>start_element</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5a7c58ce8e5f9b2d5d17593351063fb04a" prot="public">
+          <name>end_element</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5afcefa36b13ff596b93de7f734e3dda04" prot="public">
+          <name>start_attribute</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5a5bbd798ae603e9e7fef1c2eb5dd233e2" prot="public">
+          <name>end_attribute</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5ac08181e48cd3edc8213ff865914bcf59" prot="public">
+          <name>characters</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5afdf7fee170872444b58f3b8e6ab2ef5a" prot="public">
+          <name>start_namespace_decl</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5a12d5ff4eaaad00a471c2ad26dfeebe0b" prot="public">
+          <name>end_namespace_decl</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5a3f9e596032a95c527b24cd79d66107d0" prot="public">
+          <name>eof</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="132" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="133" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" prot="public" static="no">
+        <type><ref refid="classxml_1_1qname" kindref="compound">xml::qname</ref></type>
+        <definition>typedef xml::qname xml::parser::qname_type</definition>
+        <argsstring></argsstring>
+        <name>qname_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="83" column="24" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxml_1_1parser_1a839697996e5c2ae224785ac439ba50f5" prot="public" static="no">
+        <type><ref refid="structxml_1_1content" kindref="compound">xml::content</ref></type>
+        <definition>typedef xml::content xml::parser::content_type</definition>
+        <argsstring></argsstring>
+        <name>content_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="84" column="26" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxml_1_1parser_1ab41420dc3547dd4fd12cfad6aea9c4ab" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short xml::parser::feature_type</definition>
+        <argsstring></argsstring>
+        <name>feature_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="86" column="28" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxml_1_1parser_1a6a2a8397b1444eef164a7cf1dc6d8036" prot="public" static="no">
+        <type>std::map&lt; <ref refid="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" kindref="member">qname_type</ref>, <ref refid="structxml_1_1parser_1_1attribute__value__type" kindref="compound">attribute_value_type</ref> &gt;</type>
+        <definition>typedef std::map&lt;qname_type, attribute_value_type&gt; xml::parser::attribute_map_type</definition>
+        <argsstring></argsstring>
+        <name>attribute_map_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="247" column="22" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classxml_1_1parser_1aedd99180d249acc5d2c8eac15b39221b" prot="private" static="no" strong="no">
+        <type></type>
+        <name>@9</name>
+        <enumvalue id="classxml_1_1parser_1aedd99180d249acc5d2c8eac15b39221baf4bc415f705756ef580a6aa7de2f3491" prot="private">
+          <name>state_next</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classxml_1_1parser_1aedd99180d249acc5d2c8eac15b39221ba6052e08d2ff7e7dfe46790c8fad97459" prot="private">
+          <name>state_peek</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="391" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="391" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxml_1_1parser_1a1f354361a130d5244329650974c08722" prot="private" static="no">
+        <type>std::vector&lt; attribute_type &gt;</type>
+        <definition>typedef std::vector&lt;attribute_type&gt; xml::parser::attributes</definition>
+        <argsstring></argsstring>
+        <name>attributes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="415" column="25" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxml_1_1parser_1a7754cb17cdcc578df4868cfd5ff5c789" prot="private" static="no">
+        <type>std::vector&lt; <ref refid="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" kindref="member">qname_type</ref> &gt;</type>
+        <definition>typedef std::vector&lt;qname_type&gt; xml::parser::namespace_decls</definition>
+        <argsstring></argsstring>
+        <name>namespace_decls</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="422" column="25" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxml_1_1parser_1a8a8ddf558377c38da6c57ad00b8cd9b6" prot="private" static="no">
+        <type>std::vector&lt; element_entry &gt;</type>
+        <definition>typedef std::vector&lt;element_entry&gt; xml::parser::element_state</definition>
+        <argsstring></argsstring>
+        <name>element_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="443" column="25" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="443" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classxml_1_1parser_1aab00bbf1ff2a96452f1b9264fb1c1bc6" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classxml_1_1parser_1ab41420dc3547dd4fd12cfad6aea9c4ab" kindref="member">feature_type</ref></type>
+        <definition>const feature_type xml::parser::receive_elements</definition>
+        <argsstring></argsstring>
+        <name>receive_elements</name>
+        <initializer>= 0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="91" column="31" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1afa50c85ad19e0204dfa24cf425d110b2" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classxml_1_1parser_1ab41420dc3547dd4fd12cfad6aea9c4ab" kindref="member">feature_type</ref></type>
+        <definition>const feature_type xml::parser::receive_characters</definition>
+        <argsstring></argsstring>
+        <name>receive_characters</name>
+        <initializer>= 0x0002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="92" column="31" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1a54c0d11b01d1ec1cd539cf848255497c" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classxml_1_1parser_1ab41420dc3547dd4fd12cfad6aea9c4ab" kindref="member">feature_type</ref></type>
+        <definition>const feature_type xml::parser::receive_attributes_map</definition>
+        <argsstring></argsstring>
+        <name>receive_attributes_map</name>
+        <initializer>= 0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="93" column="31" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1a970f56d0a84e523f8d54539918b541cc" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classxml_1_1parser_1ab41420dc3547dd4fd12cfad6aea9c4ab" kindref="member">feature_type</ref></type>
+        <definition>const feature_type xml::parser::receive_attributes_event</definition>
+        <argsstring></argsstring>
+        <name>receive_attributes_event</name>
+        <initializer>= 0x0008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="94" column="31" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1a498d8cf3e1b7b6db26e5bb06ddbe9cee" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classxml_1_1parser_1ab41420dc3547dd4fd12cfad6aea9c4ab" kindref="member">feature_type</ref></type>
+        <definition>const feature_type xml::parser::receive_namespace_decls</definition>
+        <argsstring></argsstring>
+        <name>receive_namespace_decls</name>
+        <initializer>= 0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="95" column="31" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1a455a5d76cbc7bfa012bf103db493861d" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classxml_1_1parser_1ab41420dc3547dd4fd12cfad6aea9c4ab" kindref="member">feature_type</ref></type>
+        <definition>const feature_type xml::parser::receive_default</definition>
+        <argsstring></argsstring>
+        <name>receive_default</name>
+        <initializer>= <ref refid="classxml_1_1parser_1aab00bbf1ff2a96452f1b9264fb1c1bc6" kindref="member">receive_elements</ref> |
+                                                <ref refid="classxml_1_1parser_1afa50c85ad19e0204dfa24cf425d110b2" kindref="member">receive_characters</ref> |
+                                                <ref refid="classxml_1_1parser_1a54c0d11b01d1ec1cd539cf848255497c" kindref="member">receive_attributes_map</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="97" column="31" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classxml_1_1parser_1accfc3ad9524574af26e7d47b51f59e69" prot="public" static="no" mutable="no">
+        <type>std::istream *</type>
+        <definition>std::istream* xml::parser::is</definition>
+        <argsstring></argsstring>
+        <name>is</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="379" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="379" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1af44dc74301afe0d6f637c4d06a99bb3e" prot="public" static="no" mutable="no">
+        <type>const void *</type>
+        <definition>const void* xml::parser::buf</definition>
+        <argsstring></argsstring>
+        <name>buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="380" column="18" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="380" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxml_1_1parser_1ad9df1574b1d0aebb2e39707a22f1d2b2" prot="private" static="no" mutable="no">
+        <type>union xml::parser::@8</type>
+        <definition>union xml::parser::@8 xml::parser::data_</definition>
+        <argsstring></argsstring>
+        <name>data_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="381" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1a142a717a8bcd3c88c54d901af8c512c9" prot="private" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t xml::parser::size_</definition>
+        <argsstring></argsstring>
+        <name>size_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="383" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1a0ea3c66b81adf4f83037550a6da78a69" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string xml::parser::iname_</definition>
+        <argsstring></argsstring>
+        <name>iname_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="385" column="23" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1ad662aa58889606abbfb0205f859887d1" prot="private" static="no" mutable="no">
+        <type><ref refid="classxml_1_1parser_1ab41420dc3547dd4fd12cfad6aea9c4ab" kindref="member">feature_type</ref></type>
+        <definition>feature_type xml::parser::feature_</definition>
+        <argsstring></argsstring>
+        <name>feature_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="386" column="18" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="386" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1afe5009d8175090fa8020b52ff28fbd0e" prot="private" static="no" mutable="no">
+        <type><ref refid="expat_8h_1a9dc0003156857c67b3a60b3993846013" kindref="member">XML_Parser</ref></type>
+        <definition>XML_Parser xml::parser::p_</definition>
+        <argsstring></argsstring>
+        <name>p_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="388" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="388" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1afbe49182013d3aae569e13f185637274" prot="private" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t xml::parser::depth_</definition>
+        <argsstring></argsstring>
+        <name>depth_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="389" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1ae8cb2c7d28189f4f940b8f114b4a697c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xml::parser::accumulate_</definition>
+        <argsstring></argsstring>
+        <name>accumulate_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="390" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1aa5f37d3322992caa057506185c4002b9" prot="private" static="no" mutable="no">
+        <type>enum xml::parser::@9</type>
+        <definition>enum xml::parser::@9 xml::parser::state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="391" column="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1ab0cad9e52f2e3657a3dc29fad62d177b" prot="private" static="no" mutable="no">
+        <type><ref refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5" kindref="member">event_type</ref></type>
+        <definition>event_type xml::parser::event_</definition>
+        <argsstring></argsstring>
+        <name>event_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="392" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="392" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1a4b5f749c349cb4095353b478d9420bde" prot="private" static="no" mutable="no">
+        <type><ref refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5" kindref="member">event_type</ref></type>
+        <definition>event_type xml::parser::queue_</definition>
+        <argsstring></argsstring>
+        <name>queue_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="393" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="393" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1a634fa83b9a352480199c8f976d090b39" prot="private" static="no" mutable="no">
+        <type><ref refid="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" kindref="member">qname_type</ref></type>
+        <definition>qname_type xml::parser::qname_</definition>
+        <argsstring></argsstring>
+        <name>qname_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="395" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="395" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1ad67681b506fa214eca26c5570ec7baaa" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string xml::parser::value_</definition>
+        <argsstring></argsstring>
+        <name>value_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="396" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="396" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1a6c5e4a2e5d24c8399849b8e0e9553c6f" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" kindref="member">qname_type</ref> *</type>
+        <definition>const qname_type* xml::parser::pqname_</definition>
+        <argsstring></argsstring>
+        <name>pqname_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="401" column="22" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1a81709853eed930a7130ec5c859a395f5" prot="private" static="no" mutable="no">
+        <type>std::string *</type>
+        <definition>std::string* xml::parser::pvalue_</definition>
+        <argsstring></argsstring>
+        <name>pvalue_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="402" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1a6347a00111ed3f6f44b26b162f8cdf54" prot="private" static="no" mutable="no">
+        <type>unsigned long long</type>
+        <definition>unsigned long long xml::parser::line_</definition>
+        <argsstring></argsstring>
+        <name>line_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="404" column="24" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1ac2add1719c8c9149bfc1ac375791183a" prot="private" static="no" mutable="no">
+        <type>unsigned long long</type>
+        <definition>unsigned long long xml::parser::column_</definition>
+        <argsstring></argsstring>
+        <name>column_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="405" column="24" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1a827d6e76778934ca80a9a8877fba815c" prot="private" static="no" mutable="no">
+        <type>attributes</type>
+        <definition>attributes xml::parser::attr_</definition>
+        <argsstring></argsstring>
+        <name>attr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="417" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1a1bb7cec4fcdbaa258c5fb941b517b35b" prot="private" static="no" mutable="no">
+        <type>attributes::size_type</type>
+        <definition>attributes::size_type xml::parser::attr_i_</definition>
+        <argsstring></argsstring>
+        <name>attr_i_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="418" column="27" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1a9328147ab6dc0cf5809352522bc02d11" prot="private" static="no" mutable="no">
+        <type>namespace_decls</type>
+        <definition>namespace_decls xml::parser::start_ns_</definition>
+        <argsstring></argsstring>
+        <name>start_ns_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="424" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1ad9065d6ecd09d07f20aa2b5f7b683639" prot="private" static="no" mutable="no">
+        <type>namespace_decls::size_type</type>
+        <definition>namespace_decls::size_type xml::parser::start_ns_i_</definition>
+        <argsstring></argsstring>
+        <name>start_ns_i_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="425" column="32" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1a759684da7cbc31288194433a48215e0f" prot="private" static="no" mutable="no">
+        <type>namespace_decls</type>
+        <definition>namespace_decls xml::parser::end_ns_</definition>
+        <argsstring></argsstring>
+        <name>end_ns_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="427" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="427" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1afb9552b353c3e0095148cc296b02c2fd" prot="private" static="no" mutable="no">
+        <type>namespace_decls::size_type</type>
+        <definition>namespace_decls::size_type xml::parser::end_ns_i_</definition>
+        <argsstring></argsstring>
+        <name>end_ns_i_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="428" column="32" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1a2973713a94f534569a05afa6ed4bff14" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; element_entry &gt;</type>
+        <definition>std::vector&lt;element_entry&gt; xml::parser::element_state_</definition>
+        <argsstring></argsstring>
+        <name>element_state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="444" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="444" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxml_1_1parser_1a1c32895f4d1dec15d211498df920a93e" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classxml_1_1parser_1a6a2a8397b1444eef164a7cf1dc6d8036" kindref="member">attribute_map_type</ref></type>
+        <definition>const attribute_map_type xml::parser::empty_attr_map_</definition>
+        <argsstring></argsstring>
+        <name>empty_attr_map_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="448" column="30" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="448" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxml_1_1parser_1a3bd7f4d414073d420036e58a29c985dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xml::parser::parser</definition>
+        <argsstring>(std::istream &amp;, const std::string &amp;input_name, feature_type=receive_default)</argsstring>
+        <name>parser</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <defname>is</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>input_name</declname>
+        </param>
+        <param>
+          <type><ref refid="classxml_1_1parser_1ab41420dc3547dd4fd12cfad6aea9c4ab" kindref="member">feature_type</ref></type>
+          <defname>f</defname>
+          <defval><ref refid="classxml_1_1parser_1a455a5d76cbc7bfa012bf103db493861d" kindref="member">receive_default</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="108" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="36" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a2243b0d3df017e1e97228b163205da90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xml::parser::parser</definition>
+        <argsstring>(const void *data, std::size_t size, const std::string &amp;input_name, feature_type=receive_default)</argsstring>
+        <name>parser</name>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>input_name</declname>
+        </param>
+        <param>
+          <type><ref refid="classxml_1_1parser_1ab41420dc3547dd4fd12cfad6aea9c4ab" kindref="member">feature_type</ref></type>
+          <defname>f</defname>
+          <defval><ref refid="classxml_1_1parser_1a455a5d76cbc7bfa012bf103db493861d" kindref="member">receive_default</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="115" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="44" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a51a3f23b79380c379c43850de15b0357" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; xml::parser::input_name</definition>
+        <argsstring>() const</argsstring>
+        <name>input_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="121" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="121" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a18111e8ef5628993c79a464e51ed7e8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xml::parser::~parser</definition>
+        <argsstring>()</argsstring>
+        <name>~parser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="123" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.cxx" bodystart="53" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a93a3697833038f017f99f9402b8c029b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5" kindref="member">event_type</ref></type>
+        <definition>parser::event_type xml::parser::next</definition>
+        <argsstring>()</argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="147" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.cxx" bodystart="182" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1af64fca83498399287dfc1c861e65e86e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xml::parser::next_expect</definition>
+        <argsstring>(event_type)</argsstring>
+        <name>next_expect</name>
+        <param>
+          <type><ref refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5" kindref="member">event_type</ref></type>
+          <defname>e</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="153" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.cxx" bodystart="280" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a8fadbbbbcb0ee88741744755f9f40be1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xml::parser::next_expect</definition>
+        <argsstring>(event_type, const std::string &amp;name)</argsstring>
+        <name>next_expect</name>
+        <param>
+          <type><ref refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5" kindref="member">event_type</ref></type>
+          <defname>e</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="156" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="140" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a11039d50fcf5cbeb9c7dbe7c6285efc8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xml::parser::next_expect</definition>
+        <argsstring>(event_type, const qname_type &amp;qname)</argsstring>
+        <name>next_expect</name>
+        <param>
+          <type><ref refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5" kindref="member">event_type</ref></type>
+          <defname>e</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" kindref="member">qname_type</ref> &amp;</type>
+          <declname>qname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="159" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="134" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1aa97a548045fbd72f94b49e0d5d655f5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xml::parser::next_expect</definition>
+        <argsstring>(event_type, const std::string &amp;ns, const std::string &amp;name)</argsstring>
+        <name>next_expect</name>
+        <param>
+          <type><ref refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5" kindref="member">event_type</ref></type>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ns</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="162" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a3be862cde468cae84bf774269e09d76c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5" kindref="member">event_type</ref></type>
+        <definition>parser::event_type xml::parser::peek</definition>
+        <argsstring>()</argsstring>
+        <name>peek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="165" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="57" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1ac063f967f6ed5d5e28a0141d73a1384f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5" kindref="member">event_type</ref></type>
+        <definition>event_type xml::parser::event</definition>
+        <argsstring>()</argsstring>
+        <name>event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="171" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="171" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a3b2459b1ee0d2b6199e54b130cb8aae9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" kindref="member">qname_type</ref> &amp;</type>
+        <definition>const qname_type&amp; xml::parser::qname</definition>
+        <argsstring>() const</argsstring>
+        <name>qname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="176" column="22" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="176" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a1f5ad07226d4a1f2cf76c5013c00f7a4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; xml::parser::namespace_</definition>
+        <argsstring>() const</argsstring>
+        <name>namespace_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="178" column="23" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="178" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1afefe3ab6e35551669cab25d9edc93b7c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; xml::parser::name</definition>
+        <argsstring>() const</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="179" column="23" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="179" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1af6c62e42abe385bc137e7a356b152b76" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; xml::parser::prefix</definition>
+        <argsstring>() const</argsstring>
+        <name>prefix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="180" column="23" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="180" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1adb9411d0548e5dd44e28d98a0e4673d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string &amp;</type>
+        <definition>std::string&amp; xml::parser::value</definition>
+        <argsstring>()</argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="182" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="182" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1aecfedbed12028cf50bd909a0a696b2fe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; xml::parser::value</definition>
+        <argsstring>() const</argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="183" column="23" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="183" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1aec89f21f76f2fa2b3c470df3c5b6faba" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T xml::parser::value</definition>
+        <argsstring>() const</argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="184" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a7d38b12cf685c0b9a887a438747ad0a9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned long long</type>
+        <definition>unsigned long long xml::parser::line</definition>
+        <argsstring>() const</argsstring>
+        <name>line</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="186" column="24" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="186" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a2c4948bbbe3488742e906906fb2fd349" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned long long</type>
+        <definition>unsigned long long xml::parser::column</definition>
+        <argsstring>() const</argsstring>
+        <name>column</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="187" column="24" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="187" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a751b45a12b6657f8e2c2a189657c8135" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; xml::parser::attribute</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>attribute</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="203" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a0d982c904f3cd0cf6b432fbbc5218032" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T xml::parser::attribute</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>attribute</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="207" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1ab771cdda282ceaaa37de16f5cd8c6481" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xml::parser::attribute</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;default_value) const</argsstring>
+        <name>attribute</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="210" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a39b3a2201c2d8256fdf0635393c6149a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T xml::parser::attribute</definition>
+        <argsstring>(const std::string &amp;name, const T &amp;default_value) const</argsstring>
+        <name>attribute</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="215" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a0925f34c8323bf677601ae381814c1f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const string &amp; xml::parser::attribute</definition>
+        <argsstring>(const qname_type &amp;qname) const</argsstring>
+        <name>attribute</name>
+        <param>
+          <type>const <ref refid="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" kindref="member">qname_type</ref> &amp;</type>
+          <declname>qname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="218" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.cxx" bodystart="217" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a3e95a53d6695a13030b6985d653561ca" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T xml::parser::attribute</definition>
+        <argsstring>(const qname_type &amp;qname) const</argsstring>
+        <name>attribute</name>
+        <param>
+          <type>const <ref refid="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" kindref="member">qname_type</ref> &amp;</type>
+          <declname>qname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="222" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="110" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1abeb82c5f3f4a2698908827daae6908ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xml::parser::attribute</definition>
+        <argsstring>(const qname_type &amp;qname, const std::string &amp;default_value) const</argsstring>
+        <name>attribute</name>
+        <param>
+          <type>const <ref refid="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" kindref="member">qname_type</ref> &amp;</type>
+          <declname>qname</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="225" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1acf14f7f7ce5c39b5fc3262f9ddfe7148" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T xml::parser::attribute</definition>
+        <argsstring>(const qname_type &amp;qname, const T &amp;default_value) const</argsstring>
+        <name>attribute</name>
+        <param>
+          <type>const <ref refid="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" kindref="member">qname_type</ref> &amp;</type>
+          <declname>qname</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="230" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1ac051e14253dee4f2bd7282570992b7ea" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xml::parser::attribute_present</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>attribute_present</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="233" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a3f5e3b79670a5c975a0e8dd0e7bfa910" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xml::parser::attribute_present</definition>
+        <argsstring>(const qname_type &amp;qname) const</argsstring>
+        <name>attribute_present</name>
+        <param>
+          <type>const <ref refid="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" kindref="member">qname_type</ref> &amp;</type>
+          <declname>qname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="236" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.cxx" bodystart="259" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1ac6d71f6036e0fe59478749ba798256fd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classxml_1_1parser_1a6a2a8397b1444eef164a7cf1dc6d8036" kindref="member">attribute_map_type</ref> &amp;</type>
+        <definition>const parser::attribute_map_type &amp; xml::parser::attribute_map</definition>
+        <argsstring>() const</argsstring>
+        <name>attribute_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="250" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="122" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a77ae1033d6e39507d812d1fd0d0213f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xml::parser::content</definition>
+        <argsstring>(content_type)</argsstring>
+        <name>content</name>
+        <param>
+          <type><ref refid="classxml_1_1parser_1a839697996e5c2ae224785ac439ba50f5" kindref="member">content_type</ref></type>
+          <defname>c</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="258" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="194" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a2800144e81e6c54ba649e09644a7fdd1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classxml_1_1parser_1a839697996e5c2ae224785ac439ba50f5" kindref="member">content_type</ref></type>
+        <definition>parser::content_type xml::parser::content</definition>
+        <argsstring>() const</argsstring>
+        <name>content</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="261" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="205" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a10137642912737b9aa4a87b8760ef6b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xml::parser::next_expect</definition>
+        <argsstring>(event_type, const std::string &amp;name, content_type)</argsstring>
+        <name>next_expect</name>
+        <param>
+          <type><ref refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5" kindref="member">event_type</ref></type>
+          <defname>e</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classxml_1_1parser_1a839697996e5c2ae224785ac439ba50f5" kindref="member">content_type</ref></type>
+          <defname>c</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="266" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="224" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1acd20c0c3e8fe3033264823da88e7d520" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xml::parser::next_expect</definition>
+        <argsstring>(event_type, const qname_type &amp;qname, content_type)</argsstring>
+        <name>next_expect</name>
+        <param>
+          <type><ref refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5" kindref="member">event_type</ref></type>
+          <defname>e</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" kindref="member">qname_type</ref> &amp;</type>
+          <declname>qname</declname>
+        </param>
+        <param>
+          <type><ref refid="classxml_1_1parser_1a839697996e5c2ae224785ac439ba50f5" kindref="member">content_type</ref></type>
+          <defname>c</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="269" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="216" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1aaeb05337fab625a2294890fe4f259eb1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void xml::parser::next_expect</definition>
+        <argsstring>(event_type, const std::string &amp;ns, const std::string &amp;name, content_type)</argsstring>
+        <name>next_expect</name>
+        <param>
+          <type><ref refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5" kindref="member">event_type</ref></type>
+          <defname>e</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ns</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classxml_1_1parser_1a839697996e5c2ae224785ac439ba50f5" kindref="member">content_type</ref></type>
+          <defname>c</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="272" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="232" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1ae3ae86548df6ed498b2a0ef6e10f87a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>string xml::parser::element</definition>
+        <argsstring>()</argsstring>
+        <name>element</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="285" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.cxx" bodystart="296" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a06e8c6427cea2aeb29d4fd87a98a8b9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T xml::parser::element</definition>
+        <argsstring>()</argsstring>
+        <name>element</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="289" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="147" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a867b47e4dd9082e8b8edbb3b80280c6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xml::parser::element</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>element</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="292" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="153" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a34d9d8084f1bc2d82dee0ce002b6f5f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xml::parser::element</definition>
+        <argsstring>(const qname_type &amp;qname)</argsstring>
+        <name>element</name>
+        <param>
+          <type>const <ref refid="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" kindref="member">qname_type</ref> &amp;</type>
+          <declname>qname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="295" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="160" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a20148e5af155d780efdc73dfddd6b919" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T xml::parser::element</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>element</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="299" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="168" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1af3bb1fb8398672e4e2706f700da03b08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T xml::parser::element</definition>
+        <argsstring>(const qname_type &amp;qname)</argsstring>
+        <name>element</name>
+        <param>
+          <type>const <ref refid="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" kindref="member">qname_type</ref> &amp;</type>
+          <declname>qname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="303" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="175" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1ae429391743c57c06b7e1528ec4ef74d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xml::parser::element</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;default_value)</argsstring>
+        <name>element</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="306" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="181" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a1d1a165b8b300e1ff3faf1646095f2a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xml::parser::element</definition>
+        <argsstring>(const qname_type &amp;qname, const std::string &amp;default_value)</argsstring>
+        <name>element</name>
+        <param>
+          <type>const <ref refid="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" kindref="member">qname_type</ref> &amp;</type>
+          <declname>qname</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="309" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a9a07c888bd695baf0e0d8053d83a57c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T xml::parser::element</definition>
+        <argsstring>(const std::string &amp;name, const T &amp;default_value)</argsstring>
+        <name>element</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="313" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="188" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a1f5ee33432cd35fbbcce4eb19f92aba1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T xml::parser::element</definition>
+        <argsstring>(const qname_type &amp;qname, const T &amp;default_value)</argsstring>
+        <name>element</name>
+        <param>
+          <type>const <ref refid="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" kindref="member">qname_type</ref> &amp;</type>
+          <declname>qname</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="317" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1ac0aafa5696d60f1a3357e63712db3ef2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structxml_1_1parser_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>iterator xml::parser::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="342" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="342" bodyend="342"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a271de5b60207a3a5b1f892e32bf9264e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structxml_1_1parser_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>iterator xml::parser::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="343" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="343" bodyend="343"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classxml_1_1parser_1a83ade080ccfd943189897137514e6088" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xml::parser::parser</definition>
+        <argsstring>(const parser &amp;)</argsstring>
+        <name>parser</name>
+        <param>
+          <type>const <ref refid="classxml_1_1parser" kindref="compound">parser</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="126" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1ab92f40c434c72cf22bfef2a55fbb85af" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxml_1_1parser" kindref="compound">parser</ref> &amp;</type>
+        <definition>parser&amp; xml::parser::operator=</definition>
+        <argsstring>(const parser &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classxml_1_1parser" kindref="compound">parser</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="127" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a4890954c7c10e3ff48a67934b565a162" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xml::parser::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="363" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.cxx" bodystart="60" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a30ca9933004f410b2eed8c0b295e5bea" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5" kindref="member">event_type</ref></type>
+        <definition>parser::event_type xml::parser::next_</definition>
+        <argsstring>(bool peek)</argsstring>
+        <name>next_</name>
+        <param>
+          <type>bool</type>
+          <declname>peek</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="366" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.cxx" bodystart="377" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1aef9cbbc85a2a4526c93b4b57974c9ac7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5" kindref="member">event_type</ref></type>
+        <definition>parser::event_type xml::parser::next_body</definition>
+        <argsstring>()</argsstring>
+        <name>next_body</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="369" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.cxx" bodystart="436" bodyend="670"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a376062bfe65ac3fdbb302cd488572b42" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xml::parser::handle_error</definition>
+        <argsstring>()</argsstring>
+        <name>handle_error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="372" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.cxx" bodystart="113" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a4a1b7e4131b62b200ba0406c66d513ef" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const element_entry *</type>
+        <definition>const parser::element_entry * xml::parser::get_element</definition>
+        <argsstring>() const</argsstring>
+        <name>get_element</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="454" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.ixx" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a224349a8a21367aec4ae78d637f163ed" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const element_entry *</type>
+        <definition>const parser::element_entry * xml::parser::get_element_</definition>
+        <argsstring>() const</argsstring>
+        <name>get_element_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="457" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.cxx" bodystart="332" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a8ebd0fe5f9156f033df167a4feaa683b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xml::parser::pop_element</definition>
+        <argsstring>()</argsstring>
+        <name>pop_element</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="460" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.cxx" bodystart="354" bodyend="374"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classxml_1_1parser_1a1f4ca996d550daed303ad1f04a6705fa" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void <ref refid="expat__external_8h_1aad85d290912c3ffed7a2ec0b6173dad3" kindref="member">XMLCALL</ref></type>
+        <definition>void XMLCALL xml::parser::start_element_</definition>
+        <argsstring>(void *, const XML_Char *, const XML_Char **)</argsstring>
+        <name>start_element_</name>
+        <param>
+          <type>void *</type>
+          <defname>v</defname>
+        </param>
+        <param>
+          <type>const <ref refid="expat__external_8h_1a63da96463e775e1ec3a7d1f076208127" kindref="member">XML_Char</ref> *</type>
+          <defname>name</defname>
+        </param>
+        <param>
+          <type>const <ref refid="expat__external_8h_1a63da96463e775e1ec3a7d1f076208127" kindref="member">XML_Char</ref> **</type>
+          <defname>atts</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="347" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.cxx" bodystart="708" bodyend="789"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a4ad8c7d3a0e6dd2f0596a5cf04ec3af2" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void <ref refid="expat__external_8h_1aad85d290912c3ffed7a2ec0b6173dad3" kindref="member">XMLCALL</ref></type>
+        <definition>void XMLCALL xml::parser::end_element_</definition>
+        <argsstring>(void *, const XML_Char *)</argsstring>
+        <name>end_element_</name>
+        <param>
+          <type>void *</type>
+          <defname>v</defname>
+        </param>
+        <param>
+          <type>const <ref refid="expat__external_8h_1a63da96463e775e1ec3a7d1f076208127" kindref="member">XML_Char</ref> *</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="350" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.cxx" bodystart="792" bodyend="828"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a6eb583840a6c65607512ea640e796c83" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void <ref refid="expat__external_8h_1aad85d290912c3ffed7a2ec0b6173dad3" kindref="member">XMLCALL</ref></type>
+        <definition>void XMLCALL xml::parser::characters_</definition>
+        <argsstring>(void *, const XML_Char *, int)</argsstring>
+        <name>characters_</name>
+        <param>
+          <type>void *</type>
+          <defname>v</defname>
+        </param>
+        <param>
+          <type>const <ref refid="expat__external_8h_1a63da96463e775e1ec3a7d1f076208127" kindref="member">XML_Char</ref> *</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="353" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.cxx" bodystart="831" bodyend="899"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1a107cb82b16d8cf1548e3da341f7ae8ee" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void <ref refid="expat__external_8h_1aad85d290912c3ffed7a2ec0b6173dad3" kindref="member">XMLCALL</ref></type>
+        <definition>void XMLCALL xml::parser::start_namespace_decl_</definition>
+        <argsstring>(void *, const XML_Char *, const XML_Char *)</argsstring>
+        <name>start_namespace_decl_</name>
+        <param>
+          <type>void *</type>
+          <defname>v</defname>
+        </param>
+        <param>
+          <type>const <ref refid="expat__external_8h_1a63da96463e775e1ec3a7d1f076208127" kindref="member">XML_Char</ref> *</type>
+          <defname>prefix</defname>
+        </param>
+        <param>
+          <type>const <ref refid="expat__external_8h_1a63da96463e775e1ec3a7d1f076208127" kindref="member">XML_Char</ref> *</type>
+          <defname>ns</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="356" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.cxx" bodystart="902" bodyend="918"/>
+      </memberdef>
+      <memberdef kind="function" id="classxml_1_1parser_1ad6576ebd0257df00385d1eae9c14608c" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void <ref refid="expat__external_8h_1aad85d290912c3ffed7a2ec0b6173dad3" kindref="member">XMLCALL</ref></type>
+        <definition>void XMLCALL xml::parser::end_namespace_decl_</definition>
+        <argsstring>(void *, const XML_Char *)</argsstring>
+        <name>end_namespace_decl_</name>
+        <param>
+          <type>void *</type>
+          <defname>v</defname>
+        </param>
+        <param>
+          <type>const <ref refid="expat__external_8h_1a63da96463e775e1ec3a7d1f076208127" kindref="member">XML_Char</ref> *</type>
+          <defname>prefix</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="359" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.cxx" bodystart="921" bodyend="936"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" line="80" column="3" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/parser.hxx" bodystart="81" bodyend="461"/>
+    <listofallmembers>
+      <member refid="classxml_1_1parser_1ae8cb2c7d28189f4f940b8f114b4a697c" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>accumulate_</name></member>
+      <member refid="classxml_1_1parser_1a827d6e76778934ca80a9a8877fba815c" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>attr_</name></member>
+      <member refid="classxml_1_1parser_1a1bb7cec4fcdbaa258c5fb941b517b35b" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>attr_i_</name></member>
+      <member refid="classxml_1_1parser_1a751b45a12b6657f8e2c2a189657c8135" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>attribute</name></member>
+      <member refid="classxml_1_1parser_1a0d982c904f3cd0cf6b432fbbc5218032" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>attribute</name></member>
+      <member refid="classxml_1_1parser_1ab771cdda282ceaaa37de16f5cd8c6481" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>attribute</name></member>
+      <member refid="classxml_1_1parser_1a39b3a2201c2d8256fdf0635393c6149a" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>attribute</name></member>
+      <member refid="classxml_1_1parser_1a0925f34c8323bf677601ae381814c1f3" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>attribute</name></member>
+      <member refid="classxml_1_1parser_1a3e95a53d6695a13030b6985d653561ca" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>attribute</name></member>
+      <member refid="classxml_1_1parser_1abeb82c5f3f4a2698908827daae6908ed" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>attribute</name></member>
+      <member refid="classxml_1_1parser_1acf14f7f7ce5c39b5fc3262f9ddfe7148" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>attribute</name></member>
+      <member refid="classxml_1_1parser_1ac6d71f6036e0fe59478749ba798256fd" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>attribute_map</name></member>
+      <member refid="classxml_1_1parser_1a6a2a8397b1444eef164a7cf1dc6d8036" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>attribute_map_type</name></member>
+      <member refid="classxml_1_1parser_1ac051e14253dee4f2bd7282570992b7ea" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>attribute_present</name></member>
+      <member refid="classxml_1_1parser_1a3f5e3b79670a5c975a0e8dd0e7bfa910" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>attribute_present</name></member>
+      <member refid="classxml_1_1parser_1a1f354361a130d5244329650974c08722" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>attributes</name></member>
+      <member refid="classxml_1_1parser_1ac0aafa5696d60f1a3357e63712db3ef2" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>begin</name></member>
+      <member refid="classxml_1_1parser_1af44dc74301afe0d6f637c4d06a99bb3e" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>buf</name></member>
+      <member refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5ac08181e48cd3edc8213ff865914bcf59" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>characters</name></member>
+      <member refid="classxml_1_1parser_1a6eb583840a6c65607512ea640e796c83" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>characters_</name></member>
+      <member refid="classxml_1_1parser_1a2c4948bbbe3488742e906906fb2fd349" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>column</name></member>
+      <member refid="classxml_1_1parser_1ac2add1719c8c9149bfc1ac375791183a" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>column_</name></member>
+      <member refid="classxml_1_1parser_1a77ae1033d6e39507d812d1fd0d0213f2" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>content</name></member>
+      <member refid="classxml_1_1parser_1a2800144e81e6c54ba649e09644a7fdd1" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>content</name></member>
+      <member refid="classxml_1_1parser_1a839697996e5c2ae224785ac439ba50f5" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>content_type</name></member>
+      <member refid="classxml_1_1parser_1ad9df1574b1d0aebb2e39707a22f1d2b2" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>data_</name></member>
+      <member refid="classxml_1_1parser_1afbe49182013d3aae569e13f185637274" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>depth_</name></member>
+      <member refid="classxml_1_1parser_1ae3ae86548df6ed498b2a0ef6e10f87a5" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>element</name></member>
+      <member refid="classxml_1_1parser_1a06e8c6427cea2aeb29d4fd87a98a8b9d" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>element</name></member>
+      <member refid="classxml_1_1parser_1a867b47e4dd9082e8b8edbb3b80280c6c" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>element</name></member>
+      <member refid="classxml_1_1parser_1a34d9d8084f1bc2d82dee0ce002b6f5f4" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>element</name></member>
+      <member refid="classxml_1_1parser_1a20148e5af155d780efdc73dfddd6b919" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>element</name></member>
+      <member refid="classxml_1_1parser_1af3bb1fb8398672e4e2706f700da03b08" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>element</name></member>
+      <member refid="classxml_1_1parser_1ae429391743c57c06b7e1528ec4ef74d3" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>element</name></member>
+      <member refid="classxml_1_1parser_1a1d1a165b8b300e1ff3faf1646095f2a2" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>element</name></member>
+      <member refid="classxml_1_1parser_1a9a07c888bd695baf0e0d8053d83a57c1" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>element</name></member>
+      <member refid="classxml_1_1parser_1a1f5ee33432cd35fbbcce4eb19f92aba1" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>element</name></member>
+      <member refid="classxml_1_1parser_1a8a8ddf558377c38da6c57ad00b8cd9b6" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>element_state</name></member>
+      <member refid="classxml_1_1parser_1a2973713a94f534569a05afa6ed4bff14" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>element_state_</name></member>
+      <member refid="classxml_1_1parser_1a1c32895f4d1dec15d211498df920a93e" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>empty_attr_map_</name></member>
+      <member refid="classxml_1_1parser_1a271de5b60207a3a5b1f892e32bf9264e" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>end</name></member>
+      <member refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5a5bbd798ae603e9e7fef1c2eb5dd233e2" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>end_attribute</name></member>
+      <member refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5a7c58ce8e5f9b2d5d17593351063fb04a" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>end_element</name></member>
+      <member refid="classxml_1_1parser_1a4ad8c7d3a0e6dd2f0596a5cf04ec3af2" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>end_element_</name></member>
+      <member refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5a12d5ff4eaaad00a471c2ad26dfeebe0b" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>end_namespace_decl</name></member>
+      <member refid="classxml_1_1parser_1ad6576ebd0257df00385d1eae9c14608c" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>end_namespace_decl_</name></member>
+      <member refid="classxml_1_1parser_1a759684da7cbc31288194433a48215e0f" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>end_ns_</name></member>
+      <member refid="classxml_1_1parser_1afb9552b353c3e0095148cc296b02c2fd" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>end_ns_i_</name></member>
+      <member refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5a3f9e596032a95c527b24cd79d66107d0" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>eof</name></member>
+      <member refid="classxml_1_1parser_1ac063f967f6ed5d5e28a0141d73a1384f" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>event</name></member>
+      <member refid="classxml_1_1parser_1ab0cad9e52f2e3657a3dc29fad62d177b" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>event_</name></member>
+      <member refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>event_type</name></member>
+      <member refid="classxml_1_1parser_1ad662aa58889606abbfb0205f859887d1" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>feature_</name></member>
+      <member refid="classxml_1_1parser_1ab41420dc3547dd4fd12cfad6aea9c4ab" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>feature_type</name></member>
+      <member refid="classxml_1_1parser_1a4a1b7e4131b62b200ba0406c66d513ef" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>get_element</name></member>
+      <member refid="classxml_1_1parser_1a224349a8a21367aec4ae78d637f163ed" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>get_element_</name></member>
+      <member refid="classxml_1_1parser_1a376062bfe65ac3fdbb302cd488572b42" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>handle_error</name></member>
+      <member refid="classxml_1_1parser_1a0ea3c66b81adf4f83037550a6da78a69" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>iname_</name></member>
+      <member refid="classxml_1_1parser_1a4890954c7c10e3ff48a67934b565a162" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>init</name></member>
+      <member refid="classxml_1_1parser_1a51a3f23b79380c379c43850de15b0357" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>input_name</name></member>
+      <member refid="classxml_1_1parser_1accfc3ad9524574af26e7d47b51f59e69" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>is</name></member>
+      <member refid="classxml_1_1parser_1a7d38b12cf685c0b9a887a438747ad0a9" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>line</name></member>
+      <member refid="classxml_1_1parser_1a6347a00111ed3f6f44b26b162f8cdf54" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>line_</name></member>
+      <member refid="classxml_1_1parser_1afefe3ab6e35551669cab25d9edc93b7c" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>name</name></member>
+      <member refid="classxml_1_1parser_1a1f5ad07226d4a1f2cf76c5013c00f7a4" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>namespace_</name></member>
+      <member refid="classxml_1_1parser_1a7754cb17cdcc578df4868cfd5ff5c789" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>namespace_decls</name></member>
+      <member refid="classxml_1_1parser_1a93a3697833038f017f99f9402b8c029b" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>next</name></member>
+      <member refid="classxml_1_1parser_1a30ca9933004f410b2eed8c0b295e5bea" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>next_</name></member>
+      <member refid="classxml_1_1parser_1aef9cbbc85a2a4526c93b4b57974c9ac7" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>next_body</name></member>
+      <member refid="classxml_1_1parser_1af64fca83498399287dfc1c861e65e86e" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>next_expect</name></member>
+      <member refid="classxml_1_1parser_1a8fadbbbbcb0ee88741744755f9f40be1" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>next_expect</name></member>
+      <member refid="classxml_1_1parser_1a11039d50fcf5cbeb9c7dbe7c6285efc8" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>next_expect</name></member>
+      <member refid="classxml_1_1parser_1aa97a548045fbd72f94b49e0d5d655f5e" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>next_expect</name></member>
+      <member refid="classxml_1_1parser_1a10137642912737b9aa4a87b8760ef6b4" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>next_expect</name></member>
+      <member refid="classxml_1_1parser_1acd20c0c3e8fe3033264823da88e7d520" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>next_expect</name></member>
+      <member refid="classxml_1_1parser_1aaeb05337fab625a2294890fe4f259eb1" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>next_expect</name></member>
+      <member refid="classxml_1_1parser_1ab92f40c434c72cf22bfef2a55fbb85af" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>operator=</name></member>
+      <member refid="classxml_1_1parser_1afe5009d8175090fa8020b52ff28fbd0e" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>p_</name></member>
+      <member refid="classxml_1_1parser_1a3bd7f4d414073d420036e58a29c985dd" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>parser</name></member>
+      <member refid="classxml_1_1parser_1a2243b0d3df017e1e97228b163205da90" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>parser</name></member>
+      <member refid="classxml_1_1parser_1a83ade080ccfd943189897137514e6088" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>parser</name></member>
+      <member refid="classxml_1_1parser_1a3be862cde468cae84bf774269e09d76c" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>peek</name></member>
+      <member refid="classxml_1_1parser_1a8ebd0fe5f9156f033df167a4feaa683b" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>pop_element</name></member>
+      <member refid="classxml_1_1parser_1a6c5e4a2e5d24c8399849b8e0e9553c6f" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>pqname_</name></member>
+      <member refid="classxml_1_1parser_1af6c62e42abe385bc137e7a356b152b76" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>prefix</name></member>
+      <member refid="classxml_1_1parser_1a81709853eed930a7130ec5c859a395f5" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>pvalue_</name></member>
+      <member refid="classxml_1_1parser_1a3b2459b1ee0d2b6199e54b130cb8aae9" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>qname</name></member>
+      <member refid="classxml_1_1parser_1a634fa83b9a352480199c8f976d090b39" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>qname_</name></member>
+      <member refid="classxml_1_1parser_1a9c05e9cf879a624cc078ec4df3b8687c" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>qname_type</name></member>
+      <member refid="classxml_1_1parser_1a4b5f749c349cb4095353b478d9420bde" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>queue_</name></member>
+      <member refid="classxml_1_1parser_1a970f56d0a84e523f8d54539918b541cc" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>receive_attributes_event</name></member>
+      <member refid="classxml_1_1parser_1a54c0d11b01d1ec1cd539cf848255497c" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>receive_attributes_map</name></member>
+      <member refid="classxml_1_1parser_1afa50c85ad19e0204dfa24cf425d110b2" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>receive_characters</name></member>
+      <member refid="classxml_1_1parser_1a455a5d76cbc7bfa012bf103db493861d" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>receive_default</name></member>
+      <member refid="classxml_1_1parser_1aab00bbf1ff2a96452f1b9264fb1c1bc6" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>receive_elements</name></member>
+      <member refid="classxml_1_1parser_1a498d8cf3e1b7b6db26e5bb06ddbe9cee" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>receive_namespace_decls</name></member>
+      <member refid="classxml_1_1parser_1a142a717a8bcd3c88c54d901af8c512c9" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>size_</name></member>
+      <member refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5afcefa36b13ff596b93de7f734e3dda04" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>start_attribute</name></member>
+      <member refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5a558387ef6c638f8e533dbbaf9747a4ba" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>start_element</name></member>
+      <member refid="classxml_1_1parser_1a1f4ca996d550daed303ad1f04a6705fa" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>start_element_</name></member>
+      <member refid="classxml_1_1parser_1a94d70c82db32d10412148239cbb5d6a5afdf7fee170872444b58f3b8e6ab2ef5a" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>start_namespace_decl</name></member>
+      <member refid="classxml_1_1parser_1a107cb82b16d8cf1548e3da341f7ae8ee" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>start_namespace_decl_</name></member>
+      <member refid="classxml_1_1parser_1a9328147ab6dc0cf5809352522bc02d11" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>start_ns_</name></member>
+      <member refid="classxml_1_1parser_1ad9065d6ecd09d07f20aa2b5f7b683639" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>start_ns_i_</name></member>
+      <member refid="classxml_1_1parser_1aa5f37d3322992caa057506185c4002b9" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>state_</name></member>
+      <member refid="classxml_1_1parser_1aedd99180d249acc5d2c8eac15b39221baf4bc415f705756ef580a6aa7de2f3491" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>state_next</name></member>
+      <member refid="classxml_1_1parser_1aedd99180d249acc5d2c8eac15b39221ba6052e08d2ff7e7dfe46790c8fad97459" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>state_peek</name></member>
+      <member refid="classxml_1_1parser_1adb9411d0548e5dd44e28d98a0e4673d0" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>value</name></member>
+      <member refid="classxml_1_1parser_1aecfedbed12028cf50bd909a0a696b2fe" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>value</name></member>
+      <member refid="classxml_1_1parser_1aec89f21f76f2fa2b3c470df3c5b6faba" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>value</name></member>
+      <member refid="classxml_1_1parser_1ad67681b506fa214eca26c5570ec7baaa" prot="private" virt="non-virtual"><scope>xml::parser</scope><name>value_</name></member>
+      <member refid="classxml_1_1parser_1a18111e8ef5628993c79a464e51ed7e8b" prot="public" virt="non-virtual"><scope>xml::parser</scope><name>~parser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

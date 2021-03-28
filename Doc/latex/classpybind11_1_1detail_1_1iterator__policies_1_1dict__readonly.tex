@@ -1,0 +1,106 @@
+\hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly}{}\doxysection{pybind11\+::detail\+::iterator\+\_\+policies\+::dict\+\_\+readonly Class Reference}
+\label{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly}\index{pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}}
+
+
+Python\textquotesingle{}s dictionary protocol permits this to be a forward iterator.  
+
+
+
+
+{\ttfamily \#include $<$pytypes.\+h$>$}
+
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a809263757d5146b03b6a45fa411980d4}{iterator\+\_\+category}} = std\+::forward\+\_\+iterator\+\_\+tag
+\item 
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_aa0f6d931b385b48abc8fd344e63904e6}{value\+\_\+type}} = std\+::pair$<$ \mbox{\hyperlink{classpybind11_1_1handle}{handle}}, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} $>$
+\item 
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a1df0bec483aef4201782460fe0372547}{reference}} = const \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_aa0f6d931b385b48abc8fd344e63904e6}{value\+\_\+type}}
+\item 
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a38e040a85f4a40efe427ede173c20018}{pointer}} = \mbox{\hyperlink{structpybind11_1_1detail_1_1iterator__policies_1_1arrow__proxy}{arrow\+\_\+proxy}}$<$ const \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_aa0f6d931b385b48abc8fd344e63904e6}{value\+\_\+type}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a290ac0dc919a1ff56f99bd8bc3202773}{dict\+\_\+readonly}} ()=default
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a8873fedbdc5faa946d2d2ad204e2e7d9}{dict\+\_\+readonly}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} obj, \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} pos)
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a1df0bec483aef4201782460fe0372547}{reference}} \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a4bb99dde4e7a9a60260357016744fcf8}{dereference}} () const
+\item 
+void \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a64ca660b9c50bf94a55773c8b9bd35ae}{increment}} ()
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a0d24c9d9903c7123eab733ba1d4a5fcd}{equal}} (const \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly}{dict\+\_\+readonly}} \&b) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Python\textquotesingle{}s dictionary protocol permits this to be a forward iterator. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a809263757d5146b03b6a45fa411980d4}\label{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a809263757d5146b03b6a45fa411980d4}} 
+\index{pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}!iterator\_category@{iterator\_category}}
+\index{iterator\_category@{iterator\_category}!pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}}
+\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a809263757d5146b03b6a45fa411980d4}{pybind11\+::detail\+::iterator\+\_\+policies\+::dict\+\_\+readonly\+::iterator\+\_\+category}} =  std\+::forward\+\_\+iterator\+\_\+tag\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a38e040a85f4a40efe427ede173c20018}\label{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a38e040a85f4a40efe427ede173c20018}} 
+\index{pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}!pointer@{pointer}}
+\index{pointer@{pointer}!pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a38e040a85f4a40efe427ede173c20018}{pybind11\+::detail\+::iterator\+\_\+policies\+::dict\+\_\+readonly\+::pointer}} =  \mbox{\hyperlink{structpybind11_1_1detail_1_1iterator__policies_1_1arrow__proxy}{arrow\+\_\+proxy}}$<$const \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_aa0f6d931b385b48abc8fd344e63904e6}{value\+\_\+type}}$>$\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a1df0bec483aef4201782460fe0372547}\label{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a1df0bec483aef4201782460fe0372547}} 
+\index{pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}!reference@{reference}}
+\index{reference@{reference}!pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a1df0bec483aef4201782460fe0372547}{pybind11\+::detail\+::iterator\+\_\+policies\+::dict\+\_\+readonly\+::reference}} =  const \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_aa0f6d931b385b48abc8fd344e63904e6}{value\+\_\+type}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_aa0f6d931b385b48abc8fd344e63904e6}\label{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_aa0f6d931b385b48abc8fd344e63904e6}} 
+\index{pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_aa0f6d931b385b48abc8fd344e63904e6}{pybind11\+::detail\+::iterator\+\_\+policies\+::dict\+\_\+readonly\+::value\+\_\+type}} =  std\+::pair$<$\mbox{\hyperlink{classpybind11_1_1handle}{handle}}, \mbox{\hyperlink{classpybind11_1_1handle}{handle}}$>$\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a290ac0dc919a1ff56f99bd8bc3202773}\label{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a290ac0dc919a1ff56f99bd8bc3202773}} 
+\index{pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}!dict\_readonly@{dict\_readonly}}
+\index{dict\_readonly@{dict\_readonly}!pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}}
+\doxysubsubsection{\texorpdfstring{dict\_readonly()}{dict\_readonly()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily pybind11\+::detail\+::iterator\+\_\+policies\+::dict\+\_\+readonly\+::dict\+\_\+readonly (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a8873fedbdc5faa946d2d2ad204e2e7d9}\label{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a8873fedbdc5faa946d2d2ad204e2e7d9}} 
+\index{pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}!dict\_readonly@{dict\_readonly}}
+\index{dict\_readonly@{dict\_readonly}!pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}}
+\doxysubsubsection{\texorpdfstring{dict\_readonly()}{dict\_readonly()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily pybind11\+::detail\+::iterator\+\_\+policies\+::dict\+\_\+readonly\+::dict\+\_\+readonly (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{obj,  }\item[{\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a4bb99dde4e7a9a60260357016744fcf8}\label{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a4bb99dde4e7a9a60260357016744fcf8}} 
+\index{pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}!dereference@{dereference}}
+\index{dereference@{dereference}!pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}}
+\doxysubsubsection{\texorpdfstring{dereference()}{dereference()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a1df0bec483aef4201782460fe0372547}{reference}} pybind11\+::detail\+::iterator\+\_\+policies\+::dict\+\_\+readonly\+::dereference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a0d24c9d9903c7123eab733ba1d4a5fcd}\label{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a0d24c9d9903c7123eab733ba1d4a5fcd}} 
+\index{pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}!equal@{equal}}
+\index{equal@{equal}!pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::iterator\+\_\+policies\+::dict\+\_\+readonly\+::equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly}{dict\+\_\+readonly}} \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a64ca660b9c50bf94a55773c8b9bd35ae}\label{classpybind11_1_1detail_1_1iterator__policies_1_1dict__readonly_a64ca660b9c50bf94a55773c8b9bd35ae}} 
+\index{pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}!increment@{increment}}
+\index{increment@{increment}!pybind11::detail::iterator\_policies::dict\_readonly@{pybind11::detail::iterator\_policies::dict\_readonly}}
+\doxysubsubsection{\texorpdfstring{increment()}{increment()}}
+{\footnotesize\ttfamily void pybind11\+::detail\+::iterator\+\_\+policies\+::dict\+\_\+readonly\+::increment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{pytypes_8h}{pytypes.\+h}}\end{DoxyCompactItemize}

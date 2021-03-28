@@ -1,0 +1,197 @@
+\hypertarget{classpybind11_1_1detail_1_1object__api}{}\doxysection{pybind11\+::detail\+::object\+\_\+api$<$ Derived $>$ Class Template Reference}
+\label{classpybind11_1_1detail_1_1object__api}\index{pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}}
+
+
+{\ttfamily \#include $<$pytypes.\+h$>$}
+
+Inheritance diagram for pybind11\+::detail\+::object\+\_\+api$<$ Derived $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpybind11_1_1detail_1_1object__api}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpybind11_1_1iterator}{iterator}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api_a186bda3e95a07f59f9449ce0d050ae5e}{begin}} () const
+\item 
+\mbox{\hyperlink{classpybind11_1_1iterator}{iterator}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api_a011483f62a9bd3c0fb60bfc7749fc28f}{end}} () const
+\begin{DoxyCompactList}\small\item\em Return a sentinel which ends iteration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacepybind11_1_1detail_acd690ad872191cefa9a070cee0362cda}{item\+\_\+accessor}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api_ae10abab736d193f170eaa6cfbdab6d01}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} key) const
+\item 
+\mbox{\hyperlink{namespacepybind11_1_1detail_acd690ad872191cefa9a070cee0362cda}{item\+\_\+accessor}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api_a579d2eeebff07ddab98814ccbfbe2728}{operator\mbox{[}$\,$\mbox{]}}} (const char $\ast$key) const
+\begin{DoxyCompactList}\small\item\em See above (the only difference is that they key is provided as a string literal) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacepybind11_1_1detail_aba3678fbd1185c3e875ec436b012bd5f}{obj\+\_\+attr\+\_\+accessor}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api_a1515b5309996f3109e3e73ea6c1ab8df}{attr}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} key) const
+\item 
+\mbox{\hyperlink{namespacepybind11_1_1detail_afe653288f3797c8a5626446af6656895}{str\+\_\+attr\+\_\+accessor}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api_a1ed2f42e544637c80b31c05c88cb916e}{attr}} (const char $\ast$key) const
+\begin{DoxyCompactList}\small\item\em See above (the only difference is that they key is provided as a string literal) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1args__proxy}{args\+\_\+proxy}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api_a5babe5939b794c3408711be7fde14ee0}{operator$\ast$}} () const
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api_a18a4dd49680420a502a89d6d75e07748}{contains}} (T \&\&item) const
+\begin{DoxyCompactList}\small\item\em Check if the given item is contained within this object, i.\+e. {\ttfamily item in obj}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$return\+\_\+value\+\_\+policy policy = return\+\_\+value\+\_\+policy\+::automatic\+\_\+reference, typename... Args$>$ }\\\mbox{\hyperlink{classpybind11_1_1object}{object}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api_ad5605908755b3a6ad07bbfa63f398ab8}{operator()}} (Args \&\&...\mbox{\hyperlink{classpybind11_1_1args}{args}}) const
+\item 
+{\footnotesize template$<$return\+\_\+value\+\_\+policy policy = return\+\_\+value\+\_\+policy\+::automatic\+\_\+reference, typename... Args$>$ }\\\mbox{\hyperlink{classpybind11_1_1detail_1_1object__api_a9e40315e3b89ae491c4ff308048550ba}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((deprecated(\char`\"{}call(...) was deprecated in favor of operator()(...)\char`\"{}))) object \mbox{\hyperlink{namespacepybind11_1_1detail_ad8c72601e9b3b2dadd0a5cf35b5a9fd8}{call}}(Args \&\&... \mbox{\hyperlink{classpybind11_1_1args}{args}}) const
+\begin{DoxyCompactList}\small\item\em Get or set the object\textquotesingle{}s docstring, i.\+e. {\ttfamily obj.\+\_\+\+\_\+doc\+\_\+\+\_\+}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api_a5107835e7630a10868373383c003100b}{is}} (\mbox{\hyperlink{classpybind11_1_1detail_1_1object__api}{object\+\_\+api}} const \&other) const
+\begin{DoxyCompactList}\small\item\em Equivalent to {\ttfamily obj is other} in Python. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api_a1e0426c7b1cc45d3b56574aaaa38ff06}{is\+\_\+none}} () const
+\begin{DoxyCompactList}\small\item\em Equivalent to {\ttfamily obj is None} in Python. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api_aa1e808c7d0773561b3c552cf93d13368}{ref\+\_\+count}} () const
+\begin{DoxyCompactList}\small\item\em Return the object\textquotesingle{}s current reference count. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api_ab2bf58fa4e77779d723142a1a51a9033}{get\+\_\+type}} () const
+\begin{DoxyCompactList}\small\item\em Return a handle to the Python type object underlying the instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Derived$>$\newline
+class pybind11\+::detail\+::object\+\_\+api$<$ Derived $>$}
+
+\textbackslash{}rst A mixin class which adds common functions to {\ttfamily handle}, {\ttfamily object} and various accessors. The only requirement for {\ttfamily Derived} is to implement {\ttfamily Py\+Object $\ast$\+Derived\+::ptr() const}. \textbackslash{}endrst 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1object__api_a9e40315e3b89ae491c4ff308048550ba}\label{classpybind11_1_1detail_1_1object__api_a9e40315e3b89ae491c4ff308048550ba}} 
+\index{pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+template$<$return\+\_\+value\+\_\+policy policy = return\+\_\+value\+\_\+policy\+::automatic\+\_\+reference, typename... Args$>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1object__api}{pybind11\+::detail\+::object\+\_\+api}}$<$ Derived $>$\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(deprecated(\char`\"{}call(...) was deprecated in favor of operator()(...)\char`\"{}))}]{ }\end{DoxyParamCaption}) const \&\&}
+
+
+
+Get or set the object\textquotesingle{}s docstring, i.\+e. {\ttfamily obj.\+\_\+\+\_\+doc\+\_\+\+\_\+}. 
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1object__api_a1ed2f42e544637c80b31c05c88cb916e}\label{classpybind11_1_1detail_1_1object__api_a1ed2f42e544637c80b31c05c88cb916e}} 
+\index{pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}!attr@{attr}}
+\index{attr@{attr}!pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{attr()}{attr()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+\mbox{\hyperlink{namespacepybind11_1_1detail_afe653288f3797c8a5626446af6656895}{str\+\_\+attr\+\_\+accessor}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api}{pybind11\+::detail\+::object\+\_\+api}}$<$ D $>$\+::attr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{key }\end{DoxyParamCaption}) const}
+
+
+
+See above (the only difference is that they key is provided as a string literal) 
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1object__api_a1515b5309996f3109e3e73ea6c1ab8df}\label{classpybind11_1_1detail_1_1object__api_a1515b5309996f3109e3e73ea6c1ab8df}} 
+\index{pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}!attr@{attr}}
+\index{attr@{attr}!pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{attr()}{attr()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+\mbox{\hyperlink{namespacepybind11_1_1detail_aba3678fbd1185c3e875ec436b012bd5f}{obj\+\_\+attr\+\_\+accessor}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api}{pybind11\+::detail\+::object\+\_\+api}}$<$ D $>$\+::attr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{key }\end{DoxyParamCaption}) const}
+
+\textbackslash{}rst Return an internal functor to access the object\textquotesingle{}s attributes. Casting the returned {\ttfamily \mbox{\hyperlink{namespacepybind11_1_1detail_aba3678fbd1185c3e875ec436b012bd5f}{detail\+::obj\+\_\+attr\+\_\+accessor}}} instance to a {\ttfamily handle} or {\ttfamily object} subclass causes a corresponding call to {\ttfamily getattr}. Assigning a {\ttfamily handle} or {\ttfamily object} subclass causes a call to {\ttfamily setattr}. \textbackslash{}endrst \mbox{\Hypertarget{classpybind11_1_1detail_1_1object__api_a186bda3e95a07f59f9449ce0d050ae5e}\label{classpybind11_1_1detail_1_1object__api_a186bda3e95a07f59f9449ce0d050ae5e}} 
+\index{pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}!begin@{begin}}
+\index{begin@{begin}!pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+\mbox{\hyperlink{classpybind11_1_1iterator}{iterator}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api}{pybind11\+::detail\+::object\+\_\+api}}$<$ D $>$\+::begin}
+
+\textbackslash{}rst Return an iterator equivalent to calling {\ttfamily \mbox{\hyperlink{group__python__builtins_gab4e8cc0cdd5b04fd00f4ba1f2d0f5b8d}{iter()}}} in Python. The object must be a collection which supports the iteration protocol. \textbackslash{}endrst \mbox{\Hypertarget{classpybind11_1_1detail_1_1object__api_a18a4dd49680420a502a89d6d75e07748}\label{classpybind11_1_1detail_1_1object__api_a18a4dd49680420a502a89d6d75e07748}} 
+\index{pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}!contains@{contains}}
+\index{contains@{contains}!pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api}{pybind11\+::detail\+::object\+\_\+api}}$<$ D $>$\+::contains (\begin{DoxyParamCaption}\item[{T \&\&}]{item }\end{DoxyParamCaption}) const}
+
+
+
+Check if the given item is contained within this object, i.\+e. {\ttfamily item in obj}. 
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1object__api_a011483f62a9bd3c0fb60bfc7749fc28f}\label{classpybind11_1_1detail_1_1object__api_a011483f62a9bd3c0fb60bfc7749fc28f}} 
+\index{pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}!end@{end}}
+\index{end@{end}!pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+\mbox{\hyperlink{classpybind11_1_1iterator}{iterator}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api}{pybind11\+::detail\+::object\+\_\+api}}$<$ D $>$\+::end}
+
+
+
+Return a sentinel which ends iteration. 
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1object__api_ab2bf58fa4e77779d723142a1a51a9033}\label{classpybind11_1_1detail_1_1object__api_ab2bf58fa4e77779d723142a1a51a9033}} 
+\index{pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+\mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api}{pybind11\+::detail\+::object\+\_\+api}}$<$ D $>$\+::get\+\_\+type}
+
+
+
+Return a handle to the Python type object underlying the instance. 
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1object__api_a5107835e7630a10868373383c003100b}\label{classpybind11_1_1detail_1_1object__api_a5107835e7630a10868373383c003100b}} 
+\index{pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}!is@{is}}
+\index{is@{is}!pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{is()}{is()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api}{pybind11\+::detail\+::object\+\_\+api}}$<$ Derived $>$\+::is (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1detail_1_1object__api}{object\+\_\+api}}$<$ Derived $>$ const \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Equivalent to {\ttfamily obj is other} in Python. 
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1object__api_a1e0426c7b1cc45d3b56574aaaa38ff06}\label{classpybind11_1_1detail_1_1object__api_a1e0426c7b1cc45d3b56574aaaa38ff06}} 
+\index{pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}!is\_none@{is\_none}}
+\index{is\_none@{is\_none}!pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{is\_none()}{is\_none()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api}{pybind11\+::detail\+::object\+\_\+api}}$<$ Derived $>$\+::is\+\_\+none (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Equivalent to {\ttfamily obj is None} in Python. 
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1object__api_ad5605908755b3a6ad07bbfa63f398ab8}\label{classpybind11_1_1detail_1_1object__api_ad5605908755b3a6ad07bbfa63f398ab8}} 
+\index{pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+template$<$return\+\_\+value\+\_\+policy policy, typename... Args$>$ \\
+\mbox{\hyperlink{classpybind11_1_1object}{object}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api}{pybind11\+::detail\+::object\+\_\+api}}$<$ Derived $>$\+::operator() (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption}) const}
+
+\textbackslash{}rst Assuming the Python object is a function or implements the {\ttfamily \+\_\+\+\_\+call\+\_\+\+\_\+} protocol, {\ttfamily operator()} invokes the underlying function, passing an arbitrary set of parameters. The result is returned as a {\ttfamily object} and may need to be converted back into a Python object using {\ttfamily \mbox{\hyperlink{classpybind11_1_1handle_a010389458d06cdacb08f1e0e62f66dfc}{handle\+::cast()}}}.
+
+When some of the arguments cannot be converted to Python objects, the function will throw a {\ttfamily \mbox{\hyperlink{classpybind11_1_1cast__error}{cast\+\_\+error}}} exception. When the Python function call fails, a {\ttfamily \mbox{\hyperlink{classpybind11_1_1error__already__set}{error\+\_\+already\+\_\+set}}} exception is thrown. \textbackslash{}endrst \mbox{\Hypertarget{classpybind11_1_1detail_1_1object__api_a5babe5939b794c3408711be7fde14ee0}\label{classpybind11_1_1detail_1_1object__api_a5babe5939b794c3408711be7fde14ee0}} 
+\index{pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1args__proxy}{args\+\_\+proxy}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api}{pybind11\+::detail\+::object\+\_\+api}}$<$ D $>$\+::operator$\ast$}
+
+\textbackslash{}rst Matches $\ast$ unpacking in Python, e.\+g. to unpack arguments out of a {\ttfamily tuple} or {\ttfamily list} for a function call. Applying another $\ast$ to the result yields unpacking, e.\+g. to unpack a dict as function keyword arguments. See \+:ref\+:{\ttfamily calling\+\_\+python\+\_\+functions}. \textbackslash{}endrst \mbox{\Hypertarget{classpybind11_1_1detail_1_1object__api_a579d2eeebff07ddab98814ccbfbe2728}\label{classpybind11_1_1detail_1_1object__api_a579d2eeebff07ddab98814ccbfbe2728}} 
+\index{pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+\mbox{\hyperlink{namespacepybind11_1_1detail_acd690ad872191cefa9a070cee0362cda}{item\+\_\+accessor}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api}{pybind11\+::detail\+::object\+\_\+api}}$<$ D $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const char $\ast$}]{key }\end{DoxyParamCaption}) const}
+
+
+
+See above (the only difference is that they key is provided as a string literal) 
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1object__api_ae10abab736d193f170eaa6cfbdab6d01}\label{classpybind11_1_1detail_1_1object__api_ae10abab736d193f170eaa6cfbdab6d01}} 
+\index{pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+\mbox{\hyperlink{namespacepybind11_1_1detail_acd690ad872191cefa9a070cee0362cda}{item\+\_\+accessor}} \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api}{pybind11\+::detail\+::object\+\_\+api}}$<$ D $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{key }\end{DoxyParamCaption}) const}
+
+\textbackslash{}rst Return an internal functor to invoke the object\textquotesingle{}s sequence protocol. Casting the returned {\ttfamily \mbox{\hyperlink{namespacepybind11_1_1detail_acd690ad872191cefa9a070cee0362cda}{detail\+::item\+\_\+accessor}}} instance to a {\ttfamily handle} or {\ttfamily object} subclass causes a corresponding call to {\ttfamily \+\_\+\+\_\+getitem\+\_\+\+\_\+}. Assigning a {\ttfamily handle} or {\ttfamily object} subclass causes a call to {\ttfamily \+\_\+\+\_\+setitem\+\_\+\+\_\+}. \textbackslash{}endrst \mbox{\Hypertarget{classpybind11_1_1detail_1_1object__api_aa1e808c7d0773561b3c552cf93d13368}\label{classpybind11_1_1detail_1_1object__api_aa1e808c7d0773561b3c552cf93d13368}} 
+\index{pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}!ref\_count@{ref\_count}}
+\index{ref\_count@{ref\_count}!pybind11::detail::object\_api$<$ Derived $>$@{pybind11::detail::object\_api$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{ref\_count()}{ref\_count()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+int \mbox{\hyperlink{classpybind11_1_1detail_1_1object__api}{pybind11\+::detail\+::object\+\_\+api}}$<$ Derived $>$\+::ref\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the object\textquotesingle{}s current reference count. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{pytypes_8h}{pytypes.\+h}}\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{cast_8h}{cast.\+h}}\end{DoxyCompactItemize}

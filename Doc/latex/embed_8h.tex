@@ -5,23 +5,30 @@
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structembedded__module}{embedded\+\_\+module}}
+struct \mbox{\hyperlink{structpybind11_1_1detail_1_1embedded__module}{pybind11\+::detail\+::embedded\+\_\+module}}
 \begin{DoxyCompactList}\small\item\em Python 2.\+7/3.x compatible version of {\ttfamily Py\+Import\+\_\+\+Append\+Inittab} and error checks. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classscoped__interpreter}{scoped\+\_\+interpreter}}
+class \mbox{\hyperlink{classpybind11_1_1scoped__interpreter}{pybind11\+::scoped\+\_\+interpreter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacepybind11}{pybind11}}
+\begin{DoxyCompactList}\small\item\em glibc defines I as a macro which breaks things, e.\+g., boost template names \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacepybind11_1_1detail}{pybind11\+::detail}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{embed_8h_aae815ca26ea2c075b0339ea1742e62b1}{PYBIND11\+\_\+\+EMBEDDED\+\_\+\+MODULE\+\_\+\+IMPL}}(\mbox{\hyperlink{structname}{name}})
+\#define \mbox{\hyperlink{embed_8h_aae815ca26ea2c075b0339ea1742e62b1}{PYBIND11\+\_\+\+EMBEDDED\+\_\+\+MODULE\+\_\+\+IMPL}}(name)
 \item 
-\#define \mbox{\hyperlink{embed_8h_a0cc46b0d63035aa7a7026c05ee9daa24}{PYBIND11\+\_\+\+EMBEDDED\+\_\+\+MODULE}}(\mbox{\hyperlink{structname}{name}},  variable)
+\#define \mbox{\hyperlink{embed_8h_a0cc46b0d63035aa7a7026c05ee9daa24}{PYBIND11\+\_\+\+EMBEDDED\+\_\+\+MODULE}}(name,  variable)
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{embed_8h_adf4788e07fa707f87427a91d6819c42c}{initialize\+\_\+interpreter}} (bool init\+\_\+signal\+\_\+handlers=true)
+void \mbox{\hyperlink{namespacepybind11_a4a37202a545a53e60d9722b5712b9171}{pybind11\+::initialize\+\_\+interpreter}} (bool init\+\_\+signal\+\_\+handlers=true)
 \item 
-void \mbox{\hyperlink{embed_8h_a0d80adcba8be5d0e73692b177cbf7d9b}{finalize\+\_\+interpreter}} ()
+void \mbox{\hyperlink{namespacepybind11_a2f49a19c03be57ee8ff8427a5f30dc20}{pybind11\+::finalize\+\_\+interpreter}} ()
 \end{DoxyCompactItemize}
 
 
@@ -30,17 +37,17 @@ void \mbox{\hyperlink{embed_8h_a0d80adcba8be5d0e73692b177cbf7d9b}{finalize\+\_\+
 \index{embed.h@{embed.h}!PYBIND11\_EMBEDDED\_MODULE@{PYBIND11\_EMBEDDED\_MODULE}}
 \index{PYBIND11\_EMBEDDED\_MODULE@{PYBIND11\_EMBEDDED\_MODULE}!embed.h@{embed.h}}
 \doxysubsubsection{\texorpdfstring{PYBIND11\_EMBEDDED\_MODULE}{PYBIND11\_EMBEDDED\_MODULE}}
-{\footnotesize\ttfamily \#define PYBIND11\+\_\+\+EMBEDDED\+\_\+\+MODULE(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{structname}{name}},  }\item[{}]{variable }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \#define PYBIND11\+\_\+\+EMBEDDED\+\_\+\+MODULE(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{variable }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{    \textcolor{keyword}{static} \textcolor{keywordtype}{void} pybind11\_init\_\#\#\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}}(pybind11::module \&);                     \(\backslash\)}
+\DoxyCodeLine{    \textcolor{keyword}{static} \textcolor{keywordtype}{void} pybind11\_init\_\#\#\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}}(\mbox{\hyperlink{classpybind11_1_1module}{pybind11::module}} \&);                     \(\backslash\)}
 \DoxyCodeLine{    static PyObject *pybind11\_init\_wrapper\_\#\#\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}}() \{                         \(\backslash\)}
-\DoxyCodeLine{        auto m = pybind11::module(\#\mbox{\hyperlink{structname}{name}});                                     \(\backslash\)}
+\DoxyCodeLine{        auto m = \mbox{\hyperlink{classpybind11_1_1module}{pybind11::module}}(\#\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}});                                     \(\backslash\)}
 \DoxyCodeLine{        try \{                                                                 \(\backslash\)}
 \DoxyCodeLine{            pybind11\_init\_\#\#\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}}(m);                                          \(\backslash\)}
 \DoxyCodeLine{            return m.ptr();                                                   \(\backslash\)}
-\DoxyCodeLine{        \} \textcolor{keywordflow}{catch} (pybind11::error\_already\_set \&e) \{                            \(\backslash\)}
+\DoxyCodeLine{        \} \textcolor{keywordflow}{catch} (\mbox{\hyperlink{classpybind11_1_1error__already__set}{pybind11::error\_already\_set}} \&e) \{                            \(\backslash\)}
 \DoxyCodeLine{            e.clear();                                                        \(\backslash\)}
 \DoxyCodeLine{            PyErr\_SetString(PyExc\_ImportError, e.what());                     \(\backslash\)}
 \DoxyCodeLine{            return \textcolor{keyword}{nullptr};                                                   \(\backslash\)}
@@ -49,9 +56,9 @@ void \mbox{\hyperlink{embed_8h_a0d80adcba8be5d0e73692b177cbf7d9b}{finalize\+\_\+
 \DoxyCodeLine{            return \textcolor{keyword}{nullptr};                                                   \(\backslash\)}
 \DoxyCodeLine{        \}                                                                     \(\backslash\)}
 \DoxyCodeLine{    \}                                                                         \(\backslash\)}
-\DoxyCodeLine{    PYBIND11\_EMBEDDED\_MODULE\_IMPL(\mbox{\hyperlink{structname}{name}})                                       \(\backslash\)}
-\DoxyCodeLine{    pybind11::detail::embedded\_module \mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}}(\#\mbox{\hyperlink{structname}{name}}, pybind11\_init\_impl\_\#\#\mbox{\hyperlink{structname}{name}}); \(\backslash\)}
-\DoxyCodeLine{    void pybind11\_init\_\#\#\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}}(pybind11::module \&variable)}
+\DoxyCodeLine{    PYBIND11\_EMBEDDED\_MODULE\_IMPL(\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}})                                       \(\backslash\)}
+\DoxyCodeLine{    pybind11::detail::embedded\_module \mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}}(\#\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}}, pybind11\_init\_impl\_\#\#\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}}); \(\backslash\)}
+\DoxyCodeLine{    void pybind11\_init\_\#\#\mbox{\hyperlink{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}{name}}(\mbox{\hyperlink{classpybind11_1_1module}{pybind11::module}} \&variable)}
 
 \end{DoxyCode}
 \textbackslash{}rst Add a new module to the table of builtins for the interpreter. Must be defined in global scope. The first macro parameter is the name of the module (without quotes). The second parameter is the variable which will be used as the interface to add functions and classes to the module.
@@ -62,7 +69,7 @@ void \mbox{\hyperlink{embed_8h_a0d80adcba8be5d0e73692b177cbf7d9b}{finalize\+\_\+
 \index{embed.h@{embed.h}!PYBIND11\_EMBEDDED\_MODULE\_IMPL@{PYBIND11\_EMBEDDED\_MODULE\_IMPL}}
 \index{PYBIND11\_EMBEDDED\_MODULE\_IMPL@{PYBIND11\_EMBEDDED\_MODULE\_IMPL}!embed.h@{embed.h}}
 \doxysubsubsection{\texorpdfstring{PYBIND11\_EMBEDDED\_MODULE\_IMPL}{PYBIND11\_EMBEDDED\_MODULE\_IMPL}}
-{\footnotesize\ttfamily \#define PYBIND11\+\_\+\+EMBEDDED\+\_\+\+MODULE\+\_\+\+IMPL(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{structname}{name}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \#define PYBIND11\+\_\+\+EMBEDDED\+\_\+\+MODULE\+\_\+\+IMPL(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
@@ -71,47 +78,3 @@ void \mbox{\hyperlink{embed_8h_a0d80adcba8be5d0e73692b177cbf7d9b}{finalize\+\_\+
 \DoxyCodeLine{      \}}
 
 \end{DoxyCode}
-
-
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{embed_8h_a0d80adcba8be5d0e73692b177cbf7d9b}\label{embed_8h_a0d80adcba8be5d0e73692b177cbf7d9b}} 
-\index{embed.h@{embed.h}!finalize\_interpreter@{finalize\_interpreter}}
-\index{finalize\_interpreter@{finalize\_interpreter}!embed.h@{embed.h}}
-\doxysubsubsection{\texorpdfstring{finalize\_interpreter()}{finalize\_interpreter()}}
-{\footnotesize\ttfamily void finalize\+\_\+interpreter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\textbackslash{}rst Shut down the Python interpreter. No \mbox{\hyperlink{namespacepybind11}{pybind11}} or CPython API functions can be called after this. In addition, \mbox{\hyperlink{namespacepybind11}{pybind11}} objects must not outlive the interpreter\+:
-
-.. code-\/block\+:: cpp \begin{DoxyVerb}{ // BAD
-    py::initialize_interpreter();
-    auto hello = py::str("Hello, World!");
-    py::finalize_interpreter();
-} // <-- BOOM, hello's destructor is called after interpreter shutdown
-
-{ // GOOD
-    py::initialize_interpreter();
-    { // scoped
-        auto hello = py::str("Hello, World!");
-    } // <-- OK, hello is cleaned up properly
-    py::finalize_interpreter();
-}
-
-{ // BETTER
-    py::scoped_interpreter guard{};
-    auto hello = py::str("Hello, World!");
-}
-\end{DoxyVerb}
- .. warning\+:\+: \begin{DoxyVerb}The interpreter can be restarted by calling `initialize_interpreter` again.
-Modules created using pybind11 can be safely re-initialized. However, Python
-itself cannot completely unload binary extension modules and there are several
-caveats with regard to interpreter restarting. All the details can be found
-in the CPython documentation. In short, not all interpreter memory may be
-freed, either due to reference cycles or user-created global data.
-\end{DoxyVerb}
- \textbackslash{}endrst \mbox{\Hypertarget{embed_8h_adf4788e07fa707f87427a91d6819c42c}\label{embed_8h_adf4788e07fa707f87427a91d6819c42c}} 
-\index{embed.h@{embed.h}!initialize\_interpreter@{initialize\_interpreter}}
-\index{initialize\_interpreter@{initialize\_interpreter}!embed.h@{embed.h}}
-\doxysubsubsection{\texorpdfstring{initialize\_interpreter()}{initialize\_interpreter()}}
-{\footnotesize\ttfamily void initialize\+\_\+interpreter (\begin{DoxyParamCaption}\item[{bool}]{init\+\_\+signal\+\_\+handlers = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\textbackslash{}rst Initialize the Python interpreter. No other \mbox{\hyperlink{namespacepybind11}{pybind11}} or CPython API functions can be called before this is done; with the exception of {\ttfamily PYBIND11\+\_\+\+EMBEDDED\+\_\+\+MODULE}. The optional parameter can be used to skip the registration of signal handlers (see the Python documentation for details). Calling this function again after the interpreter has already been initialized is a fatal error. \textbackslash{}endrst 

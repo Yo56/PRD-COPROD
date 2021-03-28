@@ -1,0 +1,434 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classxlnt_1_1range__reference" kind="class" language="C++" prot="public">
+    <compoundname>xlnt::range_reference</compoundname>
+    <includes refid="range__reference_8hpp" local="no">range_reference.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxlnt_1_1range__reference_1add1fb25f2e40f5e874ea9d7405d7dba6" prot="private" static="no" mutable="no">
+        <type><ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref></type>
+        <definition>cell_reference xlnt::range_reference::top_left_</definition>
+        <argsstring></argsstring>
+        <name>top_left_</name>
+        <briefdescription>
+<para>The top left cell in the range </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="156" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1range__reference_1aa29716e06247cea4d481a158f1bd6881" prot="private" static="no" mutable="no">
+        <type><ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref></type>
+        <definition>cell_reference xlnt::range_reference::bottom_right_</definition>
+        <argsstring></argsstring>
+        <name>bottom_right_</name>
+        <briefdescription>
+<para>The bottom right cell in the range </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="161" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1ab3f7b778da3bc452f86b06da14fde850" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1range__reference" kindref="compound">range_reference</ref></type>
+        <definition>range_reference xlnt::range_reference::make_absolute</definition>
+        <argsstring>(const range_reference &amp;relative_reference)</argsstring>
+        <name>make_absolute</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1range__reference" kindref="compound">range_reference</ref> &amp;</type>
+          <declname>relative_reference</declname>
+        </param>
+        <briefdescription>
+<para>Converts relative reference coordinates to absolute coordinates (B12 -&gt; $B$12) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="41" column="28" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="29" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1a1df89d2956cd56e7d264440d1281afdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::range_reference::range_reference</definition>
+        <argsstring>()</argsstring>
+        <name>range_reference</name>
+        <briefdescription>
+<para>Constructs a range reference equal to A1:A1 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="46" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1af736f6f508a877cabcb9df5e188e629d" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::range_reference::range_reference</definition>
+        <argsstring>(const std::string &amp;range_string)</argsstring>
+        <name>range_reference</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>range_string</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a range reference equivalent to the provided range_string in the form top_left:bottom_right. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="52" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="49" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1a2975b3c6fc54fa41fdc46ec91ec6ced3" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::range_reference::range_reference</definition>
+        <argsstring>(const char *range_string)</argsstring>
+        <name>range_reference</name>
+        <param>
+          <type>const char *</type>
+          <declname>range_string</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a range reference equivalent to the provided range_string in the form top_left:bottom_right. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="58" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1abbe8b6fb3270ce69c28a7493402779f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::range_reference::range_reference</definition>
+        <argsstring>(const cell_reference &amp;start, const cell_reference &amp;end)</argsstring>
+        <name>range_reference</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a range reference from cell references indicating top left and bottom right coordinates of the range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="64" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="66" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1ac8814d29894b22dcb01647827084173d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::range_reference::range_reference</definition>
+        <argsstring>(column_t column_index_start, row_t row_index_start, column_t column_index_end, row_t row_index_end)</argsstring>
+        <name>range_reference</name>
+        <param>
+          <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref></type>
+          <declname>column_index_start</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexlnt_1abd2bb61f1d4794b8affafb8957b151b6" kindref="member">row_t</ref></type>
+          <declname>row_index_start</declname>
+        </param>
+        <param>
+          <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref></type>
+          <declname>column_index_end</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexlnt_1abd2bb61f1d4794b8affafb8957b151b6" kindref="member">row_t</ref></type>
+          <declname>row_index_end</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a range reference from column and row indices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="69" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="73" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1abdab4eb2d5129364eb08abc0059b9d74" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::range_reference::is_single_cell</definition>
+        <argsstring>() const</argsstring>
+        <name>is_single_cell</name>
+        <briefdescription>
+<para>Returns true if the range has a width and height of 1 cell. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="75" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1a68976f33102e4c28ec6089bc9887ba65" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t xlnt::range_reference::width</definition>
+        <argsstring>() const</argsstring>
+        <name>width</name>
+        <briefdescription>
+<para>Returns the number of columns encompassed by this range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="80" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1af5e5413527659c6781ff0a010761b71e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t xlnt::range_reference::height</definition>
+        <argsstring>() const</argsstring>
+        <name>height</name>
+        <briefdescription>
+<para>Returns the number of rows encompassed by this range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="85" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1aa94c37f786825b5ba1ebf7a0b30df366" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref></type>
+        <definition>cell_reference xlnt::range_reference::top_left</definition>
+        <argsstring>() const</argsstring>
+        <name>top_left</name>
+        <briefdescription>
+<para>Returns the coordinate of the top left cell of this range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="90" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1aab1221d502d60f740a206c408525df82" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref></type>
+        <definition>cell_reference xlnt::range_reference::top_right</definition>
+        <argsstring>() const</argsstring>
+        <name>top_right</name>
+        <briefdescription>
+<para>Returns the coordinate of the top right cell of this range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="95" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1a16f2be6ef84230e87f7ee956febd13c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref></type>
+        <definition>cell_reference xlnt::range_reference::bottom_left</definition>
+        <argsstring>() const</argsstring>
+        <name>bottom_left</name>
+        <briefdescription>
+<para>Returns the coordinate of the bottom left cell of this range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="100" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="130" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1a6099aaaa9919de8e37ec3dc4721a95d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref></type>
+        <definition>cell_reference xlnt::range_reference::bottom_right</definition>
+        <argsstring>() const</argsstring>
+        <name>bottom_right</name>
+        <briefdescription>
+<para>Returns the coordinate of the bottom right cell of this range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="105" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1a115ae0c475643fcfb52204feb9b1654a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1range__reference" kindref="compound">range_reference</ref></type>
+        <definition>range_reference xlnt::range_reference::make_offset</definition>
+        <argsstring>(int column_offset, int row_offset) const</argsstring>
+        <name>make_offset</name>
+        <param>
+          <type>int</type>
+          <declname>column_offset</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row_offset</declname>
+        </param>
+        <briefdescription>
+<para>Returns a new range reference with the same width and height as this range but shifted by the given number of columns and rows. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="111" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="82" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1affa8b84b395b54992604404d6c529f37" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xlnt::range_reference::to_string</definition>
+        <argsstring>() const</argsstring>
+        <name>to_string</name>
+        <briefdescription>
+<para>Returns a string representation of this range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="116" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1a952ab86af6a5a88ee0e8d152a19014b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::range_reference::operator==</definition>
+        <argsstring>(const range_reference &amp;comparand) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1range__reference" kindref="compound">range_reference</ref> &amp;</type>
+          <declname>comparand</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this range is equivalent to the other range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="121" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="110" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1acbd26fb68712b86b39f157865f06612a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::range_reference::operator==</definition>
+        <argsstring>(const std::string &amp;reference_string) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reference_string</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this range is equivalent to the string representation of the other range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="127" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="140" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1a422c3ba4d177f81e3939cbf057252ac7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::range_reference::operator==</definition>
+        <argsstring>(const char *reference_string) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const char *</type>
+          <declname>reference_string</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this range is equivalent to the string representation of the other range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="133" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="145" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1a8a6c296ada23bfde1a8c3fde75ee4de1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::range_reference::operator!=</definition>
+        <argsstring>(const range_reference &amp;comparand) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1range__reference" kindref="compound">range_reference</ref> &amp;</type>
+          <declname>comparand</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this range is not equivalent to the other range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="138" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1a8e66cd79ffb8b7d97719e9357f2d023d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::range_reference::operator!=</definition>
+        <argsstring>(const std::string &amp;reference_string) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reference_string</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this range is not equivalent to the string representation of the other range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="144" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="150" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1range__reference_1ac4e1437994254e2e6d53e6357503965f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::range_reference::operator!=</definition>
+        <argsstring>(const char *reference_string) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const char *</type>
+          <declname>reference_string</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this range is not equivalent to the string representation of the other range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="150" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/range_reference.cpp" bodystart="155" bodyend="158"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classxlnt_1_1range__reference" kindref="compound">range_reference</ref> describes a rectangular area of a worksheet with positive width and height defined by a top-left and bottom-right corner. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" line="35" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/range_reference.hpp" bodystart="36" bodyend="162"/>
+    <listofallmembers>
+      <member refid="classxlnt_1_1range__reference_1a16f2be6ef84230e87f7ee956febd13c8" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>bottom_left</name></member>
+      <member refid="classxlnt_1_1range__reference_1a6099aaaa9919de8e37ec3dc4721a95d1" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>bottom_right</name></member>
+      <member refid="classxlnt_1_1range__reference_1aa29716e06247cea4d481a158f1bd6881" prot="private" virt="non-virtual"><scope>xlnt::range_reference</scope><name>bottom_right_</name></member>
+      <member refid="classxlnt_1_1range__reference_1af5e5413527659c6781ff0a010761b71e" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>height</name></member>
+      <member refid="classxlnt_1_1range__reference_1abdab4eb2d5129364eb08abc0059b9d74" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>is_single_cell</name></member>
+      <member refid="classxlnt_1_1range__reference_1ab3f7b778da3bc452f86b06da14fde850" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>make_absolute</name></member>
+      <member refid="classxlnt_1_1range__reference_1a115ae0c475643fcfb52204feb9b1654a" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>make_offset</name></member>
+      <member refid="classxlnt_1_1range__reference_1a8a6c296ada23bfde1a8c3fde75ee4de1" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>operator!=</name></member>
+      <member refid="classxlnt_1_1range__reference_1a8e66cd79ffb8b7d97719e9357f2d023d" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>operator!=</name></member>
+      <member refid="classxlnt_1_1range__reference_1ac4e1437994254e2e6d53e6357503965f" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>operator!=</name></member>
+      <member refid="classxlnt_1_1range__reference_1a952ab86af6a5a88ee0e8d152a19014b8" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>operator==</name></member>
+      <member refid="classxlnt_1_1range__reference_1acbd26fb68712b86b39f157865f06612a" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>operator==</name></member>
+      <member refid="classxlnt_1_1range__reference_1a422c3ba4d177f81e3939cbf057252ac7" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>operator==</name></member>
+      <member refid="classxlnt_1_1range__reference_1a1df89d2956cd56e7d264440d1281afdc" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>range_reference</name></member>
+      <member refid="classxlnt_1_1range__reference_1af736f6f508a877cabcb9df5e188e629d" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>range_reference</name></member>
+      <member refid="classxlnt_1_1range__reference_1a2975b3c6fc54fa41fdc46ec91ec6ced3" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>range_reference</name></member>
+      <member refid="classxlnt_1_1range__reference_1abbe8b6fb3270ce69c28a7493402779f5" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>range_reference</name></member>
+      <member refid="classxlnt_1_1range__reference_1ac8814d29894b22dcb01647827084173d" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>range_reference</name></member>
+      <member refid="classxlnt_1_1range__reference_1affa8b84b395b54992604404d6c529f37" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>to_string</name></member>
+      <member refid="classxlnt_1_1range__reference_1aa94c37f786825b5ba1ebf7a0b30df366" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>top_left</name></member>
+      <member refid="classxlnt_1_1range__reference_1add1fb25f2e40f5e874ea9d7405d7dba6" prot="private" virt="non-virtual"><scope>xlnt::range_reference</scope><name>top_left_</name></member>
+      <member refid="classxlnt_1_1range__reference_1aab1221d502d60f740a206c408525df82" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>top_right</name></member>
+      <member refid="classxlnt_1_1range__reference_1a68976f33102e4c28ec6089bc9887ba65" prot="public" virt="non-virtual"><scope>xlnt::range_reference</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

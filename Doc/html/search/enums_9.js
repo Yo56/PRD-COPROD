@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['op_5fid_9660',['op_id',['../operators_8h.html#af7a0dcf3b52966a31277a5e8e18bacb5',1,'operators.h']]],
-  ['op_5ftype_9661',['op_type',['../operators_8h.html#ae1bc65aa25538fc2163cdc822a45a71d',1,'operators.h']]]
+  ['op_5fid_10076',['op_id',['../namespacepybind11_1_1detail.html#a60eaefc77d8e336f21b31425d79e0111',1,'pybind11::detail']]],
+  ['op_5ftype_10077',['op_type',['../namespacepybind11_1_1detail.html#aab1046200267d81fe97a73f1c99bca53',1,'pybind11::detail']]]
 ];

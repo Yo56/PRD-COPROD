@@ -1,0 +1,585 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classxlnt_1_1cell__reference" kind="class" language="C++" prot="public">
+    <compoundname>xlnt::cell_reference</compoundname>
+    <includes refid="cell__reference_8hpp" local="no">cell_reference.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxlnt_1_1cell__reference_1afe704222c17f056b4748fe4775cd5b4d" prot="private" static="no" mutable="no">
+        <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref></type>
+        <definition>column_t xlnt::cell_reference::column_</definition>
+        <argsstring></argsstring>
+        <name>column_</name>
+        <briefdescription>
+<para>Index of the column. Important: this is one-indexed to conform with Excel. Column &quot;A&quot;, the first column, would have an index of 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="238" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1cell__reference_1af55c9dfda2baac8d5fa6ebf724f4316e" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacexlnt_1abd2bb61f1d4794b8affafb8957b151b6" kindref="member">row_t</ref></type>
+        <definition>row_t xlnt::cell_reference::row_</definition>
+        <argsstring></argsstring>
+        <name>row_</name>
+        <briefdescription>
+<para>Index of the column. Important: this is one-indexed to conform with Excel. Column &quot;A&quot;, the first column, would have an index of 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="244" column="11" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1cell__reference_1aaa092cfb41a4b2cea153ce0975eedf4b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xlnt::cell_reference::absolute_row_</definition>
+        <argsstring></argsstring>
+        <name>absolute_row_</name>
+        <briefdescription>
+<para>True if the reference&apos;s row is absolute. This looks like &quot;A$1&quot; in Excel. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="249" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1cell__reference_1acf24f8e09c27341ff175cfa00757e086" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xlnt::cell_reference::absolute_column_</definition>
+        <argsstring></argsstring>
+        <name>absolute_column_</name>
+        <briefdescription>
+<para>True if the reference&apos;s column is absolute. This looks like &quot;$A1&quot; in Excel. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="254" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1a3260bc058ab33f60f58feeb7e3248c9d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; std::string, <ref refid="namespacexlnt_1abd2bb61f1d4794b8affafb8957b151b6" kindref="member">row_t</ref> &gt;</type>
+        <definition>std::pair&lt; std::string, row_t &gt; xlnt::cell_reference::split_reference</definition>
+        <argsstring>(const std::string &amp;reference_string)</argsstring>
+        <name>split_reference</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reference_string</declname>
+        </param>
+        <briefdescription>
+<para>Splits a coordinate string like &quot;A1&quot; into an equivalent pair like {&quot;A&quot;, 1}. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="63" column="22" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="109" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1ac0f49128777ef44de66d34cd184ccc01" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; std::string, <ref refid="namespacexlnt_1abd2bb61f1d4794b8affafb8957b151b6" kindref="member">row_t</ref> &gt;</type>
+        <definition>std::pair&lt; std::string, row_t &gt; xlnt::cell_reference::split_reference</definition>
+        <argsstring>(const std::string &amp;reference_string, bool &amp;absolute_column, bool &amp;absolute_row)</argsstring>
+        <name>split_reference</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reference_string</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>absolute_column</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>absolute_row</declname>
+        </param>
+        <briefdescription>
+<para>Splits a coordinate string like &quot;A1&quot; into an equivalent pair like {&quot;A&quot;, 1}. Reference parameters absolute_column and absolute_row will be set to true if column part or row part are prefixed by a dollar-sign indicating they are absolute, otherwise false. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="71" column="22" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="115" bodyend="188"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1a887456e0d0eac9992095e326a5972d0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::cell_reference::cell_reference</definition>
+        <argsstring>()</argsstring>
+        <name>cell_reference</name>
+        <briefdescription>
+<para>Default constructor makes a reference to the top-left-most cell, &quot;A1&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="79" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1a77280366f25fb056007f79ee48067ca3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::cell_reference::cell_reference</definition>
+        <argsstring>(const char *reference_string)</argsstring>
+        <name>cell_reference</name>
+        <param>
+          <type>const char *</type>
+          <declname>reference_string</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> from a string reprenting a cell coordinate (e.g. $B14). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="86" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1a37bf13621245efe44c222c126d0625a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::cell_reference::cell_reference</definition>
+        <argsstring>(const std::string &amp;reference_string)</argsstring>
+        <name>cell_reference</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reference_string</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> from a string reprenting a cell coordinate (e.g. $B14). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="91" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="53" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1af575675cd87ad091308df383845d1163" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::cell_reference::cell_reference</definition>
+        <argsstring>(column_t column, row_t row)</argsstring>
+        <name>cell_reference</name>
+        <param>
+          <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref></type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacexlnt_1abd2bb61f1d4794b8affafb8957b151b6" kindref="member">row_t</ref></type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> from a 1-indexed column index and row index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="96" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="66" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1ad7316e80383467c30d98cb8ac9a5c1e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> &amp;</type>
+        <definition>cell_reference &amp; xlnt::cell_reference::make_absolute</definition>
+        <argsstring>(bool absolute_column=true, bool absolute_row=true)</argsstring>
+        <name>make_absolute</name>
+        <param>
+          <type>bool</type>
+          <declname>absolute_column</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>absolute_row</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Converts a coordinate to an absolute coordinate string (e.g. B12 -&gt; $B$12) Defaulting to true, absolute_column and absolute_row can optionally control whether the resulting <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> has an absolute column (e.g. B12 -&gt; $B12) and absolute row (e.g. B12 -&gt; B$12) respectively. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is functionally equivalent to: <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> copy(*this); copy.column_absolute(absolute_column); copy.row_absolute(absolute_row); return copy; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="113" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="40" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1a702e0aabcf69bfe4ddb564a387c3fcce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::cell_reference::column_absolute</definition>
+        <argsstring>() const</argsstring>
+        <name>column_absolute</name>
+        <briefdescription>
+<para>Returns true if the reference refers to an absolute column, otherwise false. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="118" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="190" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1aec14906310ae29cae94e34b776bf859d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::cell_reference::column_absolute</definition>
+        <argsstring>(bool absolute_column)</argsstring>
+        <name>column_absolute</name>
+        <param>
+          <type>bool</type>
+          <declname>absolute_column</declname>
+        </param>
+        <briefdescription>
+<para>Makes this reference have an absolute column if absolute_column is true, otherwise not absolute. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="124" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="195" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1ab2be2ba25bded757a81bd54b5787cc3b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::cell_reference::row_absolute</definition>
+        <argsstring>() const</argsstring>
+        <name>row_absolute</name>
+        <briefdescription>
+<para>Returns true if the reference refers to an absolute row, otherwise false. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="129" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="200" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1a0d0434387768bd31f543122800478dd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::cell_reference::row_absolute</definition>
+        <argsstring>(bool absolute_row)</argsstring>
+        <name>row_absolute</name>
+        <param>
+          <type>bool</type>
+          <declname>absolute_row</declname>
+        </param>
+        <briefdescription>
+<para>Makes this reference have an absolute row if absolute_row is true, otherwise not absolute. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="135" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="205" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1a124bb06ee3aff3b1e3faa9e4f2c8dcf7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref></type>
+        <definition>column_t xlnt::cell_reference::column</definition>
+        <argsstring>() const</argsstring>
+        <name>column</name>
+        <briefdescription>
+<para>Returns a string that identifies the column of this reference (e.g. second column from left is &quot;B&quot;) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="143" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="210" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1a21d29399cf443da4e42ba6996de8f518" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::cell_reference::column</definition>
+        <argsstring>(const std::string &amp;column_string)</argsstring>
+        <name>column</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>column_string</declname>
+        </param>
+        <briefdescription>
+<para>Sets the column of this reference from a string that identifies a particular column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="148" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="215" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1ad0d42653dcc3ed6daf69e6a273c48191" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1column__t_1ab514d159582ca03315e0f020dc8efedd" kindref="member">column_t::index_t</ref></type>
+        <definition>column_t::index_t xlnt::cell_reference::column_index</definition>
+        <argsstring>() const</argsstring>
+        <name>column_index</name>
+        <briefdescription>
+<para>Returns a 1-indexed numeric index of the column of this reference. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="153" column="23" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="220" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1aa9ceac8c2d33418ad365211addd1bdac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::cell_reference::column_index</definition>
+        <argsstring>(column_t column)</argsstring>
+        <name>column_index</name>
+        <param>
+          <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref></type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+<para>Sets the column of this reference from a 1-indexed number that identifies a particular column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="158" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="225" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1acce80520bdd12d5a6dd8b1d1d1b3f942" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacexlnt_1abd2bb61f1d4794b8affafb8957b151b6" kindref="member">row_t</ref></type>
+        <definition>row_t xlnt::cell_reference::row</definition>
+        <argsstring>() const</argsstring>
+        <name>row</name>
+        <briefdescription>
+<para>Returns a 1-indexed numeric index of the row of this reference. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="163" column="11" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="230" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1afc31295202956ff6e654b02b5acf0930" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xlnt::cell_reference::row</definition>
+        <argsstring>(row_t row)</argsstring>
+        <name>row</name>
+        <param>
+          <type><ref refid="namespacexlnt_1abd2bb61f1d4794b8affafb8957b151b6" kindref="member">row_t</ref></type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+<para>Sets the row of this reference from a 1-indexed number that identifies a particular row. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="168" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="235" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1a5ff2b47947164dc7cad3a289e84c1b4e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref></type>
+        <definition>cell_reference xlnt::cell_reference::make_offset</definition>
+        <argsstring>(int column_offset, int row_offset) const</argsstring>
+        <name>make_offset</name>
+        <param>
+          <type>int</type>
+          <declname>column_offset</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row_offset</declname>
+        </param>
+        <briefdescription>
+<para>Returns a <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> offset from this <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> by the number of columns and rows specified by the parameters. A negative value for column_offset or row_offset results in a reference above or left of this <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref>, respectively. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="176" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="265" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1ac79e961a120faa927fb6d1e7827886ff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xlnt::cell_reference::to_string</definition>
+        <argsstring>() const</argsstring>
+        <name>to_string</name>
+        <briefdescription>
+<para>Returns a string like &quot;A1&quot; for cell_reference(1, 1). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="181" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="83" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1a4612bcfb2c51d44c529d50ab3bb0ffcb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1range__reference" kindref="compound">range_reference</ref></type>
+        <definition>range_reference xlnt::cell_reference::to_range</definition>
+        <argsstring>() const</argsstring>
+        <name>to_range</name>
+        <briefdescription>
+<para>Returns a 1x1 <ref refid="classxlnt_1_1range__reference" kindref="compound">range_reference</ref> containing only this <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="186" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1a00cd26ea0b1cbb1a38eb4cfda429701f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1range__reference" kindref="compound">range_reference</ref></type>
+        <definition>range_reference xlnt::cell_reference::operator,</definition>
+        <argsstring>(const cell_reference &amp;other) const</argsstring>
+        <name>operator,</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>I&apos;ve always wanted to overload the comma operator. <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref>(&quot;A&quot;, 1), <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref>(&quot;B&quot;, 1) will return <ref refid="classxlnt_1_1range__reference" kindref="compound">range_reference</ref>(<ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref>(&quot;A&quot;, 1), <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref>(&quot;B&quot;, 1)) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="195" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1a17ddbe3794cf7cf369c09d5f99e4902e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::cell_reference::operator==</definition>
+        <argsstring>(const cell_reference &amp;comparand) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> &amp;</type>
+          <declname>comparand</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this reference is identical to comparand including in absoluteness of column and row. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="201" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="274" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1a3427504ddd1ca620a50a9b44577803f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::cell_reference::operator==</definition>
+        <argsstring>(const std::string &amp;reference_string) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reference_string</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> from reference_string and return the result of their comparison. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="207" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="240" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1ac07803daf0556fd094735f74f9a233c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::cell_reference::operator==</definition>
+        <argsstring>(const char *reference_string) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const char *</type>
+          <declname>reference_string</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> from reference_string and return the result of their comparison. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="213" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="245" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1a88240ac3674452940493a129480c9482" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::cell_reference::operator!=</definition>
+        <argsstring>(const cell_reference &amp;comparand) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> &amp;</type>
+          <declname>comparand</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this reference is not identical to comparand including in absoluteness of column and row. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="219" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="250" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1ae8d7a76a6e52c73b7cd1389bd20f0170" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::cell_reference::operator!=</definition>
+        <argsstring>(const std::string &amp;reference_string) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reference_string</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> from reference_string and return the result of their comparison. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="225" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="255" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__reference_1a06d27875051ebfe747afb71b51fd9b3a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::cell_reference::operator!=</definition>
+        <argsstring>(const char *reference_string) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const char *</type>
+          <declname>reference_string</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> from reference_string and return the result of their comparison. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="231" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/cell_reference.cpp" bodystart="260" bodyend="263"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An object used to refer to a cell. References have two parts, the column and the row. In Excel, the reference string A1 refers to the top-left-most cell. A <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> can be initialized from a string of this form or a 1-indexed ordered pair of the form column, row. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" line="57" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/cell_reference.hpp" bodystart="58" bodyend="255"/>
+    <listofallmembers>
+      <member refid="classxlnt_1_1cell__reference_1acf24f8e09c27341ff175cfa00757e086" prot="private" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>absolute_column_</name></member>
+      <member refid="classxlnt_1_1cell__reference_1aaa092cfb41a4b2cea153ce0975eedf4b" prot="private" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>absolute_row_</name></member>
+      <member refid="classxlnt_1_1cell__reference_1a887456e0d0eac9992095e326a5972d0e" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>cell_reference</name></member>
+      <member refid="classxlnt_1_1cell__reference_1a77280366f25fb056007f79ee48067ca3" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>cell_reference</name></member>
+      <member refid="classxlnt_1_1cell__reference_1a37bf13621245efe44c222c126d0625a3" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>cell_reference</name></member>
+      <member refid="classxlnt_1_1cell__reference_1af575675cd87ad091308df383845d1163" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>cell_reference</name></member>
+      <member refid="classxlnt_1_1cell__reference_1a124bb06ee3aff3b1e3faa9e4f2c8dcf7" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>column</name></member>
+      <member refid="classxlnt_1_1cell__reference_1a21d29399cf443da4e42ba6996de8f518" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>column</name></member>
+      <member refid="classxlnt_1_1cell__reference_1afe704222c17f056b4748fe4775cd5b4d" prot="private" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>column_</name></member>
+      <member refid="classxlnt_1_1cell__reference_1a702e0aabcf69bfe4ddb564a387c3fcce" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>column_absolute</name></member>
+      <member refid="classxlnt_1_1cell__reference_1aec14906310ae29cae94e34b776bf859d" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>column_absolute</name></member>
+      <member refid="classxlnt_1_1cell__reference_1ad0d42653dcc3ed6daf69e6a273c48191" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>column_index</name></member>
+      <member refid="classxlnt_1_1cell__reference_1aa9ceac8c2d33418ad365211addd1bdac" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>column_index</name></member>
+      <member refid="classxlnt_1_1cell__reference_1ad7316e80383467c30d98cb8ac9a5c1e6" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>make_absolute</name></member>
+      <member refid="classxlnt_1_1cell__reference_1a5ff2b47947164dc7cad3a289e84c1b4e" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>make_offset</name></member>
+      <member refid="classxlnt_1_1cell__reference_1a88240ac3674452940493a129480c9482" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>operator!=</name></member>
+      <member refid="classxlnt_1_1cell__reference_1ae8d7a76a6e52c73b7cd1389bd20f0170" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>operator!=</name></member>
+      <member refid="classxlnt_1_1cell__reference_1a06d27875051ebfe747afb71b51fd9b3a" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>operator!=</name></member>
+      <member refid="classxlnt_1_1cell__reference_1a00cd26ea0b1cbb1a38eb4cfda429701f" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>operator,</name></member>
+      <member refid="classxlnt_1_1cell__reference_1a17ddbe3794cf7cf369c09d5f99e4902e" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>operator==</name></member>
+      <member refid="classxlnt_1_1cell__reference_1a3427504ddd1ca620a50a9b44577803f3" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>operator==</name></member>
+      <member refid="classxlnt_1_1cell__reference_1ac07803daf0556fd094735f74f9a233c3" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>operator==</name></member>
+      <member refid="classxlnt_1_1cell__reference_1acce80520bdd12d5a6dd8b1d1d1b3f942" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>row</name></member>
+      <member refid="classxlnt_1_1cell__reference_1afc31295202956ff6e654b02b5acf0930" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>row</name></member>
+      <member refid="classxlnt_1_1cell__reference_1af55c9dfda2baac8d5fa6ebf724f4316e" prot="private" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>row_</name></member>
+      <member refid="classxlnt_1_1cell__reference_1ab2be2ba25bded757a81bd54b5787cc3b" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>row_absolute</name></member>
+      <member refid="classxlnt_1_1cell__reference_1a0d0434387768bd31f543122800478dd2" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>row_absolute</name></member>
+      <member refid="classxlnt_1_1cell__reference_1a3260bc058ab33f60f58feeb7e3248c9d" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>split_reference</name></member>
+      <member refid="classxlnt_1_1cell__reference_1ac0f49128777ef44de66d34cd184ccc01" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>split_reference</name></member>
+      <member refid="classxlnt_1_1cell__reference_1a4612bcfb2c51d44c529d50ab3bb0ffcb" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>to_range</name></member>
+      <member refid="classxlnt_1_1cell__reference_1ac79e961a120faa927fb6d1e7827886ff" prot="public" virt="non-virtual"><scope>xlnt::cell_reference</scope><name>to_string</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

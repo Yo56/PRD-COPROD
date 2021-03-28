@@ -1,0 +1,216 @@
+\hypertarget{structpybind11_1_1detail_1_1_eigen_props}{}\doxysection{pybind11\+::detail\+::Eigen\+Props$<$ Type\+\_\+ $>$ Struct Template Reference}
+\label{structpybind11_1_1detail_1_1_eigen_props}\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+
+
+{\ttfamily \#include $<$eigen.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a893ce18099621ac27d5610e919376e55}{Type}} = Type\+\_\+
+\item 
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_ad1aae9a5a8ab868b29819d302211166b}{Scalar}} = typename Type\+::\+Scalar
+\item 
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a2ba20b2aa808e3924089b2113d158546}{Stride\+Type}} = typename \mbox{\hyperlink{structpybind11_1_1detail_1_1eigen__extract__stride}{eigen\+\_\+extract\+\_\+stride}}$<$ \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a893ce18099621ac27d5610e919376e55}{Type}} $>$\+::\mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}}
+\item 
+{\footnotesize template$<$Eigen\+Index i, Eigen\+Index ifzero$>$ }\\using \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_afba7f0f27649a085aa93a9836719018d}{if\+\_\+zero}} = std\+::integral\+\_\+constant$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a4dd09e9738bcaaf171d987fc201dc92c}{Eigen\+Index}}, i==0 ? ifzero \+:i $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_conformable}{Eigen\+Conformable}}$<$ \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a42a93eb1792440f84da8a1883339c7f2}{row\+\_\+major}} $>$ \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_ab023f98019435ca890533c88564d95e3}{conformable}} (const \mbox{\hyperlink{classpybind11_1_1array}{array}} \&a)
+\item 
+\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1descr}{pybind11\+::detail\+::descr}} \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_ad1b8d5bf4afb27d6f529020967c92940}{descriptor}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{namespacepybind11_1_1detail_a4dd09e9738bcaaf171d987fc201dc92c}{Eigen\+Index}} \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_aa2c36beb0880f4d575c74be81cefd8c3}{rows}} = Type\+::\+Rows\+At\+Compile\+Time
+\item 
+static constexpr \mbox{\hyperlink{namespacepybind11_1_1detail_a4dd09e9738bcaaf171d987fc201dc92c}{Eigen\+Index}} \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a8933a1c37cedd6ff7fb8891ca58cad33}{cols}} = Type\+::\+Cols\+At\+Compile\+Time
+\item 
+static constexpr \mbox{\hyperlink{namespacepybind11_1_1detail_a4dd09e9738bcaaf171d987fc201dc92c}{Eigen\+Index}} \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a73d87e4860b78e75c44fba49e98ac87d}{size}} = Type\+::\+Size\+At\+Compile\+Time
+\item 
+static constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a42a93eb1792440f84da8a1883339c7f2}{row\+\_\+major}} = Type\+::\+Is\+Row\+Major
+\item 
+static constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a54b1d2a6f1280eaa0bb1170ea5ad4338}{vector}} = Type\+::\+Is\+Vector\+At\+Compile\+Time
+\item 
+static constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a633618a1121bbad9fc6a75d9d0cf178c}{fixed\+\_\+rows}} = \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_aa2c36beb0880f4d575c74be81cefd8c3}{rows}} != Eigen\+::\+Dynamic
+\item 
+static constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_adc5590ddbeac2edb8934a002f8842388}{fixed\+\_\+cols}} = \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a8933a1c37cedd6ff7fb8891ca58cad33}{cols}} != Eigen\+::\+Dynamic
+\item 
+static constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a5df9ffd3465a7cf633eb7e4689788c87}{fixed}} = \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a73d87e4860b78e75c44fba49e98ac87d}{size}} != Eigen\+::\+Dynamic
+\item 
+static constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_ab95b5917f9f3ddf4a41bc3ca6c08af6e}{dynamic}} = !\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a633618a1121bbad9fc6a75d9d0cf178c}{fixed\+\_\+rows}} \&\& !\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_adc5590ddbeac2edb8934a002f8842388}{fixed\+\_\+cols}}
+\item 
+static constexpr \mbox{\hyperlink{namespacepybind11_1_1detail_a4dd09e9738bcaaf171d987fc201dc92c}{Eigen\+Index}} \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a2d09d2b48bb988e908fc2f91a46a77fa}{inner\+\_\+stride}} = \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_afba7f0f27649a085aa93a9836719018d}{if\+\_\+zero}}$<$Stride\+Type\+::\+Inner\+Stride\+At\+Compile\+Time, 1$>$\+::value
+\item 
+static constexpr \mbox{\hyperlink{namespacepybind11_1_1detail_a4dd09e9738bcaaf171d987fc201dc92c}{Eigen\+Index}} \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a6a18b5d741de9b0486b087cde0a05dd6}{outer\+\_\+stride}}
+\item 
+static constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a99d9581b1f7c0c877cbb39540bfc19a7}{dynamic\+\_\+stride}} = \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a2d09d2b48bb988e908fc2f91a46a77fa}{inner\+\_\+stride}} == Eigen\+::\+Dynamic \&\& \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a6a18b5d741de9b0486b087cde0a05dd6}{outer\+\_\+stride}} == Eigen\+::\+Dynamic
+\item 
+static constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a006fa9281b46036bcabaa8fd8a3c7aa5}{requires\+\_\+row\+\_\+major}} = !\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a99d9581b1f7c0c877cbb39540bfc19a7}{dynamic\+\_\+stride}} \&\& !\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a54b1d2a6f1280eaa0bb1170ea5ad4338}{vector}} \&\& (\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a42a93eb1792440f84da8a1883339c7f2}{row\+\_\+major}} ? \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a2d09d2b48bb988e908fc2f91a46a77fa}{inner\+\_\+stride}} \+: \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a6a18b5d741de9b0486b087cde0a05dd6}{outer\+\_\+stride}}) == 1
+\item 
+static constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_afc61bd7801ec035592c8f0a044218286}{requires\+\_\+col\+\_\+major}} = !\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a99d9581b1f7c0c877cbb39540bfc19a7}{dynamic\+\_\+stride}} \&\& !\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a54b1d2a6f1280eaa0bb1170ea5ad4338}{vector}} \&\& (\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a42a93eb1792440f84da8a1883339c7f2}{row\+\_\+major}} ? \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a6a18b5d741de9b0486b087cde0a05dd6}{outer\+\_\+stride}} \+: \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a2d09d2b48bb988e908fc2f91a46a77fa}{inner\+\_\+stride}}) == 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_afba7f0f27649a085aa93a9836719018d}\label{structpybind11_1_1detail_1_1_eigen_props_afba7f0f27649a085aa93a9836719018d}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!if\_zero@{if\_zero}}
+\index{if\_zero@{if\_zero}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{if\_zero}{if\_zero}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+template$<$Eigen\+Index i, Eigen\+Index ifzero$>$ \\
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_afba7f0f27649a085aa93a9836719018d}{if\+\_\+zero}} =  std\+::integral\+\_\+constant$<$\mbox{\hyperlink{namespacepybind11_1_1detail_a4dd09e9738bcaaf171d987fc201dc92c}{Eigen\+Index}}, i == 0 ? ifzero \+: i$>$}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_ad1aae9a5a8ab868b29819d302211166b}\label{structpybind11_1_1detail_1_1_eigen_props_ad1aae9a5a8ab868b29819d302211166b}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_ad1aae9a5a8ab868b29819d302211166b}{Scalar}} =  typename Type\+::\+Scalar}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_a2ba20b2aa808e3924089b2113d158546}\label{structpybind11_1_1detail_1_1_eigen_props_a2ba20b2aa808e3924089b2113d158546}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!StrideType@{StrideType}}
+\index{StrideType@{StrideType}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{StrideType}{StrideType}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a2ba20b2aa808e3924089b2113d158546}{Stride\+Type}} =  typename \mbox{\hyperlink{structpybind11_1_1detail_1_1eigen__extract__stride}{eigen\+\_\+extract\+\_\+stride}}$<$\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a893ce18099621ac27d5610e919376e55}{Type}}$>$\+::\mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_a893ce18099621ac27d5610e919376e55}\label{structpybind11_1_1detail_1_1_eigen_props_a893ce18099621ac27d5610e919376e55}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!Type@{Type}}
+\index{Type@{Type}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a893ce18099621ac27d5610e919376e55}{Type}} =  Type\+\_\+}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_ab023f98019435ca890533c88564d95e3}\label{structpybind11_1_1detail_1_1_eigen_props_ab023f98019435ca890533c88564d95e3}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!conformable@{conformable}}
+\index{conformable@{conformable}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{conformable()}{conformable()}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+static \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_conformable}{Eigen\+Conformable}}$<$\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a42a93eb1792440f84da8a1883339c7f2}{row\+\_\+major}}$>$ \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::conformable (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1array}{array}} \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_ad1b8d5bf4afb27d6f529020967c92940}\label{structpybind11_1_1detail_1_1_eigen_props_ad1b8d5bf4afb27d6f529020967c92940}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!descriptor@{descriptor}}
+\index{descriptor@{descriptor}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{descriptor()}{descriptor()}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1descr}{pybind11\+::detail\+::descr}} \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::descriptor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_a8933a1c37cedd6ff7fb8891ca58cad33}\label{structpybind11_1_1detail_1_1_eigen_props_a8933a1c37cedd6ff7fb8891ca58cad33}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!cols@{cols}}
+\index{cols@{cols}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{cols}{cols}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+constexpr \mbox{\hyperlink{namespacepybind11_1_1detail_a4dd09e9738bcaaf171d987fc201dc92c}{Eigen\+Index}} \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::cols = Type\+::\+Cols\+At\+Compile\+Time\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_ab95b5917f9f3ddf4a41bc3ca6c08af6e}\label{structpybind11_1_1detail_1_1_eigen_props_ab95b5917f9f3ddf4a41bc3ca6c08af6e}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!dynamic@{dynamic}}
+\index{dynamic@{dynamic}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{dynamic}{dynamic}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::dynamic = !\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a633618a1121bbad9fc6a75d9d0cf178c}{fixed\+\_\+rows}} \&\& !\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_adc5590ddbeac2edb8934a002f8842388}{fixed\+\_\+cols}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_a99d9581b1f7c0c877cbb39540bfc19a7}\label{structpybind11_1_1detail_1_1_eigen_props_a99d9581b1f7c0c877cbb39540bfc19a7}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!dynamic\_stride@{dynamic\_stride}}
+\index{dynamic\_stride@{dynamic\_stride}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{dynamic\_stride}{dynamic\_stride}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::dynamic\+\_\+stride = \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a2d09d2b48bb988e908fc2f91a46a77fa}{inner\+\_\+stride}} == Eigen\+::\+Dynamic \&\& \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a6a18b5d741de9b0486b087cde0a05dd6}{outer\+\_\+stride}} == Eigen\+::\+Dynamic\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_a5df9ffd3465a7cf633eb7e4689788c87}\label{structpybind11_1_1detail_1_1_eigen_props_a5df9ffd3465a7cf633eb7e4689788c87}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!fixed@{fixed}}
+\index{fixed@{fixed}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{fixed}{fixed}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::fixed = \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a73d87e4860b78e75c44fba49e98ac87d}{size}} != Eigen\+::\+Dynamic\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_adc5590ddbeac2edb8934a002f8842388}\label{structpybind11_1_1detail_1_1_eigen_props_adc5590ddbeac2edb8934a002f8842388}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!fixed\_cols@{fixed\_cols}}
+\index{fixed\_cols@{fixed\_cols}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{fixed\_cols}{fixed\_cols}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::fixed\+\_\+cols = \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a8933a1c37cedd6ff7fb8891ca58cad33}{cols}} != Eigen\+::\+Dynamic\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_a633618a1121bbad9fc6a75d9d0cf178c}\label{structpybind11_1_1detail_1_1_eigen_props_a633618a1121bbad9fc6a75d9d0cf178c}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!fixed\_rows@{fixed\_rows}}
+\index{fixed\_rows@{fixed\_rows}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{fixed\_rows}{fixed\_rows}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::fixed\+\_\+rows = \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_aa2c36beb0880f4d575c74be81cefd8c3}{rows}} != Eigen\+::\+Dynamic\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_a2d09d2b48bb988e908fc2f91a46a77fa}\label{structpybind11_1_1detail_1_1_eigen_props_a2d09d2b48bb988e908fc2f91a46a77fa}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!inner\_stride@{inner\_stride}}
+\index{inner\_stride@{inner\_stride}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{inner\_stride}{inner\_stride}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+constexpr \mbox{\hyperlink{namespacepybind11_1_1detail_a4dd09e9738bcaaf171d987fc201dc92c}{Eigen\+Index}} \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::inner\+\_\+stride = \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_afba7f0f27649a085aa93a9836719018d}{if\+\_\+zero}}$<$Stride\+Type\+::\+Inner\+Stride\+At\+Compile\+Time, 1$>$\+::value\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_a6a18b5d741de9b0486b087cde0a05dd6}\label{structpybind11_1_1detail_1_1_eigen_props_a6a18b5d741de9b0486b087cde0a05dd6}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!outer\_stride@{outer\_stride}}
+\index{outer\_stride@{outer\_stride}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{outer\_stride}{outer\_stride}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+constexpr \mbox{\hyperlink{namespacepybind11_1_1detail_a4dd09e9738bcaaf171d987fc201dc92c}{Eigen\+Index}} \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::outer\+\_\+stride\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_afba7f0f27649a085aa93a9836719018d}{if\_zero}}<StrideType::OuterStrideAtCompileTime,}
+\DoxyCodeLine{                                                       \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a54b1d2a6f1280eaa0bb1170ea5ad4338}{vector}} ? \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a73d87e4860b78e75c44fba49e98ac87d}{size}} : \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a42a93eb1792440f84da8a1883339c7f2}{row\_major}} ? \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a8933a1c37cedd6ff7fb8891ca58cad33}{cols}} : \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_aa2c36beb0880f4d575c74be81cefd8c3}{rows}}>::value}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_afc61bd7801ec035592c8f0a044218286}\label{structpybind11_1_1detail_1_1_eigen_props_afc61bd7801ec035592c8f0a044218286}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!requires\_col\_major@{requires\_col\_major}}
+\index{requires\_col\_major@{requires\_col\_major}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{requires\_col\_major}{requires\_col\_major}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::requires\+\_\+col\+\_\+major = !\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a99d9581b1f7c0c877cbb39540bfc19a7}{dynamic\+\_\+stride}} \&\& !\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a54b1d2a6f1280eaa0bb1170ea5ad4338}{vector}} \&\& (\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a42a93eb1792440f84da8a1883339c7f2}{row\+\_\+major}} ? \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a6a18b5d741de9b0486b087cde0a05dd6}{outer\+\_\+stride}} \+: \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a2d09d2b48bb988e908fc2f91a46a77fa}{inner\+\_\+stride}}) == 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_a006fa9281b46036bcabaa8fd8a3c7aa5}\label{structpybind11_1_1detail_1_1_eigen_props_a006fa9281b46036bcabaa8fd8a3c7aa5}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!requires\_row\_major@{requires\_row\_major}}
+\index{requires\_row\_major@{requires\_row\_major}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{requires\_row\_major}{requires\_row\_major}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::requires\+\_\+row\+\_\+major = !\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a99d9581b1f7c0c877cbb39540bfc19a7}{dynamic\+\_\+stride}} \&\& !\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a54b1d2a6f1280eaa0bb1170ea5ad4338}{vector}} \&\& (\mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a42a93eb1792440f84da8a1883339c7f2}{row\+\_\+major}} ? \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a2d09d2b48bb988e908fc2f91a46a77fa}{inner\+\_\+stride}} \+: \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props_a6a18b5d741de9b0486b087cde0a05dd6}{outer\+\_\+stride}}) == 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_a42a93eb1792440f84da8a1883339c7f2}\label{structpybind11_1_1detail_1_1_eigen_props_a42a93eb1792440f84da8a1883339c7f2}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!row\_major@{row\_major}}
+\index{row\_major@{row\_major}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{row\_major}{row\_major}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::row\+\_\+major = Type\+::\+Is\+Row\+Major\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_aa2c36beb0880f4d575c74be81cefd8c3}\label{structpybind11_1_1detail_1_1_eigen_props_aa2c36beb0880f4d575c74be81cefd8c3}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!rows@{rows}}
+\index{rows@{rows}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{rows}{rows}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+constexpr \mbox{\hyperlink{namespacepybind11_1_1detail_a4dd09e9738bcaaf171d987fc201dc92c}{Eigen\+Index}} \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::rows = Type\+::\+Rows\+At\+Compile\+Time\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_a73d87e4860b78e75c44fba49e98ac87d}\label{structpybind11_1_1detail_1_1_eigen_props_a73d87e4860b78e75c44fba49e98ac87d}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!size@{size}}
+\index{size@{size}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+constexpr \mbox{\hyperlink{namespacepybind11_1_1detail_a4dd09e9738bcaaf171d987fc201dc92c}{Eigen\+Index}} \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::size = Type\+::\+Size\+At\+Compile\+Time\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1_eigen_props_a54b1d2a6f1280eaa0bb1170ea5ad4338}\label{structpybind11_1_1detail_1_1_eigen_props_a54b1d2a6f1280eaa0bb1170ea5ad4338}} 
+\index{pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}!vector@{vector}}
+\index{vector@{vector}!pybind11::detail::EigenProps$<$ Type\_ $>$@{pybind11::detail::EigenProps$<$ Type\_ $>$}}
+\doxysubsubsection{\texorpdfstring{vector}{vector}}
+{\footnotesize\ttfamily template$<$typename Type\+\_\+ $>$ \\
+constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1_eigen_props}{pybind11\+::detail\+::\+Eigen\+Props}}$<$ Type\+\_\+ $>$\+::vector = Type\+::\+Is\+Vector\+At\+Compile\+Time\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{eigen_8h}{eigen.\+h}}\end{DoxyCompactItemize}

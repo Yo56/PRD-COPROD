@@ -1,0 +1,154 @@
+\hypertarget{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4}{}\doxysection{pybind11\+::detail\+::type\+\_\+caster$<$ Type, enable\+\_\+if\+\_\+t$<$ is\+\_\+eigen\+\_\+sparse$<$ Type $>$\+::value $>$ $>$ Struct Template Reference}
+\label{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4}\index{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}}
+
+
+{\ttfamily \#include $<$eigen.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Type\+::\+Scalar \mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a46f9a6901cbe138bd77b2874d91ff88e}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{namespacepybind11_1_1detail_a6c207068b00c8f12378fe4e8f02eaa73}{remove\+\_\+reference\+\_\+t}}$<$ decltype($\ast$std\+::declval$<$ Type $>$).outer\+Index\+Ptr())$>$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a05cec2d27d1f31c6d3aad950c68c2863}{Storage\+Index}}
+\item 
+typedef Type\+::\+Index \mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a574f098b81284e4a1e3357ed5a9439c2}{Index}}
+\item 
+{\footnotesize template$<$typename T\+\_\+ $>$ }\\using \mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a515ad12f94c9a2fb3bf74deb4c01c1f4}{cast\+\_\+op\+\_\+type}} = \mbox{\hyperlink{namespacepybind11_1_1detail_a3e4f52c827f0391c3ca8166590c559c9}{pybind11\+::detail\+::movable\+\_\+cast\+\_\+op\+\_\+type}}$<$ T\+\_\+ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a4e8095750292a3e7c5cc2ba121de81c2}{load}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} src, bool)
+\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a4f06dfa97aa1c9c29347bc261abe9043}{operator Type $\ast$}} ()
+\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a2fad36ae571d24af7882bbeb6c9d3998}{operator Type \&}} ()
+\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a324948ceff6a63b961ea15d71d6f9c03}{operator Type \&\&}} () \&\&
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_afbeeed2fbd91dcf8c9674232b5ad6bb6}{cast}} (const Type \&src, \mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}}, \mbox{\hyperlink{classpybind11_1_1handle}{handle}})
+\item 
+\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1descr}{pybind11\+::detail\+::descr}} \mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a84da859a5e63582b1d8fd1cbbfe6aee0}{name}} ()
+\item 
+{\footnotesize template$<$typename T\+\_\+ , enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same$<$ Type, remove\+\_\+cv\+\_\+t$<$ T\+\_\+ $>$$>$\+::value, int $>$  = 0$>$ }\\static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_acd814b4da8f26dab25d036f9873e6dab}{cast}} (T\+\_\+ $\ast$src, \mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}} \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster__generic_a2ec264c8440447e927d4ce605f278984}{policy}}, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster__generic_aa1455e47a864e1487370527cd1a91634}{parent}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a8f46ffc552cc498be7c9a7a694ebe788}{row\+Major}} = Type\+::\+Is\+Row\+Major
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Type \mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a0b98a23e15cfb8d9a43e6f8354c91603}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a515ad12f94c9a2fb3bf74deb4c01c1f4}\label{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a515ad12f94c9a2fb3bf74deb4c01c1f4}} 
+\index{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}!cast\_op\_type@{cast\_op\_type}}
+\index{cast\_op\_type@{cast\_op\_type}!pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{cast\_op\_type}{cast\_op\_type}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+template$<$typename T\+\_\+ $>$ \\
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster}{pybind11\+::detail\+::type\+\_\+caster}}$<$ Type, \mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_aede2f7fd875e4a0813a90270d9c3c625}{is\+\_\+eigen\+\_\+sparse}}$<$ Type $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a0b98a23e15cfb8d9a43e6f8354c91603}{value}} $>$ $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a515ad12f94c9a2fb3bf74deb4c01c1f4}{cast\+\_\+op\+\_\+type}} =  \mbox{\hyperlink{namespacepybind11_1_1detail_a3e4f52c827f0391c3ca8166590c559c9}{pybind11\+::detail\+::movable\+\_\+cast\+\_\+op\+\_\+type}}$<$T\+\_\+$>$}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a574f098b81284e4a1e3357ed5a9439c2}\label{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a574f098b81284e4a1e3357ed5a9439c2}} 
+\index{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}!Index@{Index}}
+\index{Index@{Index}!pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+typedef Type\+::\+Index \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster}{pybind11\+::detail\+::type\+\_\+caster}}$<$ Type, \mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_aede2f7fd875e4a0813a90270d9c3c625}{is\+\_\+eigen\+\_\+sparse}}$<$ Type $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a0b98a23e15cfb8d9a43e6f8354c91603}{value}} $>$ $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a574f098b81284e4a1e3357ed5a9439c2}{Index}}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a46f9a6901cbe138bd77b2874d91ff88e}\label{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a46f9a6901cbe138bd77b2874d91ff88e}} 
+\index{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+typedef Type\+::\+Scalar \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster}{pybind11\+::detail\+::type\+\_\+caster}}$<$ Type, \mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_aede2f7fd875e4a0813a90270d9c3c625}{is\+\_\+eigen\+\_\+sparse}}$<$ Type $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a0b98a23e15cfb8d9a43e6f8354c91603}{value}} $>$ $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a46f9a6901cbe138bd77b2874d91ff88e}{Scalar}}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a05cec2d27d1f31c6d3aad950c68c2863}\label{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a05cec2d27d1f31c6d3aad950c68c2863}} 
+\index{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}!StorageIndex@{StorageIndex}}
+\index{StorageIndex@{StorageIndex}!pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{StorageIndex}{StorageIndex}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+typedef \mbox{\hyperlink{namespacepybind11_1_1detail_a6c207068b00c8f12378fe4e8f02eaa73}{remove\+\_\+reference\+\_\+t}}$<$decltype($\ast$std\+::declval$<$Type$>$).outer\+Index\+Ptr())$>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster}{pybind11\+::detail\+::type\+\_\+caster}}$<$ Type, \mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_aede2f7fd875e4a0813a90270d9c3c625}{is\+\_\+eigen\+\_\+sparse}}$<$ Type $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a0b98a23e15cfb8d9a43e6f8354c91603}{value}} $>$ $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a05cec2d27d1f31c6d3aad950c68c2863}{Storage\+Index}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_afbeeed2fbd91dcf8c9674232b5ad6bb6}\label{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_afbeeed2fbd91dcf8c9674232b5ad6bb6}} 
+\index{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}!cast@{cast}}
+\index{cast@{cast}!pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster}{pybind11\+::detail\+::type\+\_\+caster}}$<$ Type, \mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_aede2f7fd875e4a0813a90270d9c3c625}{is\+\_\+eigen\+\_\+sparse}}$<$ Type $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a0b98a23e15cfb8d9a43e6f8354c91603}{value}} $>$ $>$\+::cast (\begin{DoxyParamCaption}\item[{const Type \&}]{src,  }\item[{\mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}}}]{,  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_acd814b4da8f26dab25d036f9873e6dab}\label{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_acd814b4da8f26dab25d036f9873e6dab}} 
+\index{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}!cast@{cast}}
+\index{cast@{cast}!pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+template$<$typename T\+\_\+ , enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same$<$ Type, remove\+\_\+cv\+\_\+t$<$ T\+\_\+ $>$$>$\+::value, int $>$  = 0$>$ \\
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster}{pybind11\+::detail\+::type\+\_\+caster}}$<$ Type, \mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_aede2f7fd875e4a0813a90270d9c3c625}{is\+\_\+eigen\+\_\+sparse}}$<$ Type $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a0b98a23e15cfb8d9a43e6f8354c91603}{value}} $>$ $>$\+::cast (\begin{DoxyParamCaption}\item[{T\+\_\+ $\ast$}]{src,  }\item[{\mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}}}]{policy,  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a4e8095750292a3e7c5cc2ba121de81c2}\label{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a4e8095750292a3e7c5cc2ba121de81c2}} 
+\index{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}!load@{load}}
+\index{load@{load}!pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster}{pybind11\+::detail\+::type\+\_\+caster}}$<$ Type, \mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_aede2f7fd875e4a0813a90270d9c3c625}{is\+\_\+eigen\+\_\+sparse}}$<$ Type $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a0b98a23e15cfb8d9a43e6f8354c91603}{value}} $>$ $>$\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{src,  }\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a84da859a5e63582b1d8fd1cbbfe6aee0}\label{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a84da859a5e63582b1d8fd1cbbfe6aee0}} 
+\index{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}!name@{name}}
+\index{name@{name}!pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1descr}{pybind11\+::detail\+::descr}} \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster}{pybind11\+::detail\+::type\+\_\+caster}}$<$ Type, \mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_aede2f7fd875e4a0813a90270d9c3c625}{is\+\_\+eigen\+\_\+sparse}}$<$ Type $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a0b98a23e15cfb8d9a43e6f8354c91603}{value}} $>$ $>$\+::\mbox{\hyperlink{structpybind11_1_1name}{name}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a2fad36ae571d24af7882bbeb6c9d3998}\label{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a2fad36ae571d24af7882bbeb6c9d3998}} 
+\index{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}!operator Type \&@{operator Type \&}}
+\index{operator Type \&@{operator Type \&}!pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{operator Type \&()}{operator Type \&()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster}{pybind11\+::detail\+::type\+\_\+caster}}$<$ Type, \mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_aede2f7fd875e4a0813a90270d9c3c625}{is\+\_\+eigen\+\_\+sparse}}$<$ Type $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a0b98a23e15cfb8d9a43e6f8354c91603}{value}} $>$ $>$\+::operator Type \& (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a324948ceff6a63b961ea15d71d6f9c03}\label{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a324948ceff6a63b961ea15d71d6f9c03}} 
+\index{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}!operator Type \&\&@{operator Type \&\&}}
+\index{operator Type \&\&@{operator Type \&\&}!pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{operator Type \&\&()}{operator Type \&\&()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster}{pybind11\+::detail\+::type\+\_\+caster}}$<$ Type, \mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_aede2f7fd875e4a0813a90270d9c3c625}{is\+\_\+eigen\+\_\+sparse}}$<$ Type $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a0b98a23e15cfb8d9a43e6f8354c91603}{value}} $>$ $>$\+::operator Type \&\& (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a4f06dfa97aa1c9c29347bc261abe9043}\label{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a4f06dfa97aa1c9c29347bc261abe9043}} 
+\index{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}!operator Type $\ast$@{operator Type $\ast$}}
+\index{operator Type $\ast$@{operator Type $\ast$}!pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{operator Type $\ast$()}{operator Type *()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster}{pybind11\+::detail\+::type\+\_\+caster}}$<$ Type, \mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_aede2f7fd875e4a0813a90270d9c3c625}{is\+\_\+eigen\+\_\+sparse}}$<$ Type $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a0b98a23e15cfb8d9a43e6f8354c91603}{value}} $>$ $>$\+::operator Type $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a8f46ffc552cc498be7c9a7a694ebe788}\label{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a8f46ffc552cc498be7c9a7a694ebe788}} 
+\index{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}!rowMajor@{rowMajor}}
+\index{rowMajor@{rowMajor}!pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{rowMajor}{rowMajor}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+constexpr bool \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster}{pybind11\+::detail\+::type\+\_\+caster}}$<$ Type, \mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_aede2f7fd875e4a0813a90270d9c3c625}{is\+\_\+eigen\+\_\+sparse}}$<$ Type $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a0b98a23e15cfb8d9a43e6f8354c91603}{value}} $>$ $>$\+::row\+Major = Type\+::\+Is\+Row\+Major\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a0b98a23e15cfb8d9a43e6f8354c91603}\label{structpybind11_1_1detail_1_1type__caster_3_01_type_00_01enable__if__t_3_01is__eigen__sparse_3_01_type_01_4_1_1value_01_4_01_4_a0b98a23e15cfb8d9a43e6f8354c91603}} 
+\index{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}!value@{value}}
+\index{value@{value}!pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$@{pybind11::detail::type\_caster$<$ Type, enable\_if\_t$<$ is\_eigen\_sparse$<$ Type $>$::value $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+Type \mbox{\hyperlink{classpybind11_1_1detail_1_1type__caster}{pybind11\+::detail\+::type\+\_\+caster}}$<$ Type, \mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_aede2f7fd875e4a0813a90270d9c3c625}{is\+\_\+eigen\+\_\+sparse}}$<$ Type $>$\+::value $>$ $>$\+::value\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{eigen_8h}{eigen.\+h}}\end{DoxyCompactItemize}

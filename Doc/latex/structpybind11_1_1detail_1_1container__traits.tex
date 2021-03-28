@@ -1,0 +1,119 @@
+\hypertarget{structpybind11_1_1detail_1_1container__traits}{}\doxysection{pybind11\+::detail\+::container\+\_\+traits$<$ T $>$ Struct Template Reference}
+\label{structpybind11_1_1detail_1_1container__traits}\index{pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}}
+
+
+{\ttfamily \#include $<$stl\+\_\+bind.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T2 $>$ }\\static std\+::true\+\_\+type \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_ad35d9ae6cc4e6cf9fa6ad4dadf8a6816}{test\+\_\+comparable}} (decltype(std\+::declval$<$ const T2 \& $>$()==std\+::declval$<$ const T2 \& $>$()) $\ast$)
+\item 
+{\footnotesize template$<$typename T2 $>$ }\\static std\+::false\+\_\+type \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_acc3315cc15e0374d9c64edce8d0bfcfc}{test\+\_\+comparable}} (...)
+\item 
+{\footnotesize template$<$typename T2 $>$ }\\static std\+::true\+\_\+type \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_a1a583f1b25cb680b86e396ba0a8a33c9}{test\+\_\+value}} (typename T2\+::value\+\_\+type $\ast$)
+\item 
+{\footnotesize template$<$typename T2 $>$ }\\static std\+::false\+\_\+type \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_a77fa596363821128b4ba91a510651cba}{test\+\_\+value}} (...)
+\item 
+{\footnotesize template$<$typename T2 $>$ }\\static std\+::true\+\_\+type \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_a6707174a66bbae53314ddbe47ef3c8e6}{test\+\_\+pair}} (typename T2\+::first\+\_\+type $\ast$, typename T2\+::second\+\_\+type $\ast$)
+\item 
+{\footnotesize template$<$typename T2 $>$ }\\static std\+::false\+\_\+type \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_a2075898ff25355886df7cac08c2f449c}{test\+\_\+pair}} (...)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr const bool \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_ab1a6873700778f1d12ffd9f35c494607}{is\+\_\+comparable}} = std\+::is\+\_\+same$<$std\+::true\+\_\+type, decltype(\mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_ad35d9ae6cc4e6cf9fa6ad4dadf8a6816}{test\+\_\+comparable}}$<$T$>$(nullptr))$>$\+::value
+\item 
+static constexpr const bool \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_a9ccb49122782782236b5d1f925d45ab0}{is\+\_\+pair}} = std\+::is\+\_\+same$<$std\+::true\+\_\+type, decltype(\mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_a6707174a66bbae53314ddbe47ef3c8e6}{test\+\_\+pair}}$<$T$>$(nullptr, nullptr))$>$\+::value
+\item 
+static constexpr const bool \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_a15d3bd5e381888c46ee0ec47a09ea4cb}{is\+\_\+vector}} = std\+::is\+\_\+same$<$std\+::true\+\_\+type, decltype(\mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_a1a583f1b25cb680b86e396ba0a8a33c9}{test\+\_\+value}}$<$T$>$(nullptr))$>$\+::value
+\item 
+static constexpr const bool \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_ac52fccec45b02d8201f7e3625c1fb7ed}{is\+\_\+element}} = !\mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_a9ccb49122782782236b5d1f925d45ab0}{is\+\_\+pair}} \&\& !\mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_a15d3bd5e381888c46ee0ec47a09ea4cb}{is\+\_\+vector}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1container__traits_acc3315cc15e0374d9c64edce8d0bfcfc}\label{structpybind11_1_1detail_1_1container__traits_acc3315cc15e0374d9c64edce8d0bfcfc}} 
+\index{pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}!test\_comparable@{test\_comparable}}
+\index{test\_comparable@{test\_comparable}!pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{test\_comparable()}{test\_comparable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename T2 $>$ \\
+static std\+::false\+\_\+type \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits}{pybind11\+::detail\+::container\+\_\+traits}}$<$ T $>$\+::test\+\_\+comparable (\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1container__traits_ad35d9ae6cc4e6cf9fa6ad4dadf8a6816}\label{structpybind11_1_1detail_1_1container__traits_ad35d9ae6cc4e6cf9fa6ad4dadf8a6816}} 
+\index{pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}!test\_comparable@{test\_comparable}}
+\index{test\_comparable@{test\_comparable}!pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{test\_comparable()}{test\_comparable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename T2 $>$ \\
+static std\+::true\+\_\+type \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits}{pybind11\+::detail\+::container\+\_\+traits}}$<$ T $>$\+::test\+\_\+comparable (\begin{DoxyParamCaption}\item[{decltype(std\+::declval$<$ const T2 \& $>$()==std\+::declval$<$ const T2 \& $>$()) $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1container__traits_a2075898ff25355886df7cac08c2f449c}\label{structpybind11_1_1detail_1_1container__traits_a2075898ff25355886df7cac08c2f449c}} 
+\index{pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}!test\_pair@{test\_pair}}
+\index{test\_pair@{test\_pair}!pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{test\_pair()}{test\_pair()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename T2 $>$ \\
+static std\+::false\+\_\+type \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits}{pybind11\+::detail\+::container\+\_\+traits}}$<$ T $>$\+::test\+\_\+pair (\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1container__traits_a6707174a66bbae53314ddbe47ef3c8e6}\label{structpybind11_1_1detail_1_1container__traits_a6707174a66bbae53314ddbe47ef3c8e6}} 
+\index{pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}!test\_pair@{test\_pair}}
+\index{test\_pair@{test\_pair}!pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{test\_pair()}{test\_pair()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename T2 $>$ \\
+static std\+::true\+\_\+type \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits}{pybind11\+::detail\+::container\+\_\+traits}}$<$ T $>$\+::test\+\_\+pair (\begin{DoxyParamCaption}\item[{typename T2\+::first\+\_\+type $\ast$}]{,  }\item[{typename T2\+::second\+\_\+type $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1container__traits_a77fa596363821128b4ba91a510651cba}\label{structpybind11_1_1detail_1_1container__traits_a77fa596363821128b4ba91a510651cba}} 
+\index{pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}!test\_value@{test\_value}}
+\index{test\_value@{test\_value}!pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{test\_value()}{test\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename T2 $>$ \\
+static std\+::false\+\_\+type \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits}{pybind11\+::detail\+::container\+\_\+traits}}$<$ T $>$\+::test\+\_\+value (\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1container__traits_a1a583f1b25cb680b86e396ba0a8a33c9}\label{structpybind11_1_1detail_1_1container__traits_a1a583f1b25cb680b86e396ba0a8a33c9}} 
+\index{pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}!test\_value@{test\_value}}
+\index{test\_value@{test\_value}!pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{test\_value()}{test\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename T2 $>$ \\
+static std\+::true\+\_\+type \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits}{pybind11\+::detail\+::container\+\_\+traits}}$<$ T $>$\+::test\+\_\+value (\begin{DoxyParamCaption}\item[{typename T2\+::value\+\_\+type $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1container__traits_ab1a6873700778f1d12ffd9f35c494607}\label{structpybind11_1_1detail_1_1container__traits_ab1a6873700778f1d12ffd9f35c494607}} 
+\index{pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}!is\_comparable@{is\_comparable}}
+\index{is\_comparable@{is\_comparable}!pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{is\_comparable}{is\_comparable}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr const bool \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits}{pybind11\+::detail\+::container\+\_\+traits}}$<$ T $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1is__comparable}{is\+\_\+comparable}} = std\+::is\+\_\+same$<$std\+::true\+\_\+type, decltype(\mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_ad35d9ae6cc4e6cf9fa6ad4dadf8a6816}{test\+\_\+comparable}}$<$T$>$(nullptr))$>$\+::value\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1container__traits_ac52fccec45b02d8201f7e3625c1fb7ed}\label{structpybind11_1_1detail_1_1container__traits_ac52fccec45b02d8201f7e3625c1fb7ed}} 
+\index{pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}!is\_element@{is\_element}}
+\index{is\_element@{is\_element}!pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{is\_element}{is\_element}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr const bool \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits}{pybind11\+::detail\+::container\+\_\+traits}}$<$ T $>$\+::is\+\_\+element = !\mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_a9ccb49122782782236b5d1f925d45ab0}{is\+\_\+pair}} \&\& !\mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_a15d3bd5e381888c46ee0ec47a09ea4cb}{is\+\_\+vector}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1container__traits_a9ccb49122782782236b5d1f925d45ab0}\label{structpybind11_1_1detail_1_1container__traits_a9ccb49122782782236b5d1f925d45ab0}} 
+\index{pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}!is\_pair@{is\_pair}}
+\index{is\_pair@{is\_pair}!pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{is\_pair}{is\_pair}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr const bool \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits}{pybind11\+::detail\+::container\+\_\+traits}}$<$ T $>$\+::is\+\_\+pair = std\+::is\+\_\+same$<$std\+::true\+\_\+type, decltype(\mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_a6707174a66bbae53314ddbe47ef3c8e6}{test\+\_\+pair}}$<$T$>$(nullptr, nullptr))$>$\+::value\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1container__traits_a15d3bd5e381888c46ee0ec47a09ea4cb}\label{structpybind11_1_1detail_1_1container__traits_a15d3bd5e381888c46ee0ec47a09ea4cb}} 
+\index{pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}!is\_vector@{is\_vector}}
+\index{is\_vector@{is\_vector}!pybind11::detail::container\_traits$<$ T $>$@{pybind11::detail::container\_traits$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{is\_vector}{is\_vector}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr const bool \mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits}{pybind11\+::detail\+::container\+\_\+traits}}$<$ T $>$\+::is\+\_\+vector = std\+::is\+\_\+same$<$std\+::true\+\_\+type, decltype(\mbox{\hyperlink{structpybind11_1_1detail_1_1container__traits_a1a583f1b25cb680b86e396ba0a8a33c9}{test\+\_\+value}}$<$T$>$(nullptr))$>$\+::value\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{stl__bind_8h}{stl\+\_\+bind.\+h}}\end{DoxyCompactItemize}

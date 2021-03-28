@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="_installation_8md" kind="file" language="Markdown">
+    <compoundname>Installation.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Getting<sp/>xlnt</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Binaries</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Homebrew</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Arch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>vcpkg</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Compiling<sp/>xlnt<sp/>1.x.x<sp/>from<sp/>Source<sp/>on<sp/>Ubuntu<sp/>16.04<sp/>LTS<sp/>(Xenial<sp/>Xerus)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Time<sp/>required:<sp/>Approximately<sp/>5<sp/>minutes<sp/>(depending<sp/>on<sp/>your<sp/>internet<sp/>speed)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt-get<sp/>update</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt-get<sp/>upgrade</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>cmake</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>zlibc</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>following<sp/>steps<sp/>update<sp/>the<sp/>compiler<sp/>and<sp/>set<sp/>the<sp/>appropriate<sp/>environment<sp/>variables<sp/>-<sp/>see<sp/>note<sp/>[1]<sp/>below<sp/>for<sp/>the<sp/>reason<sp/>why<sp/>we<sp/>need<sp/>to<sp/>update<sp/>the<sp/>standard<sp/>available<sp/>compiler</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>add-apt-repository<sp/>ppa:ubuntu-toolchain-r/test</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt<sp/>update</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt-get<sp/>upgrade</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>gcc-6<sp/>g++-6</highlight></codeline>
+<codeline><highlight class="normal">export<sp/>CC=/usr/bin/gcc-6<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">export<sp/>CXX=/usr/bin/g++-6</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>following<sp/>steps<sp/>will<sp/>intall<sp/>xlnt</highlight></codeline>
+<codeline><highlight class="normal">Download<sp/>the<sp/>zip<sp/>file<sp/>from<sp/>the<sp/>xlnt<sp/>repository</highlight></codeline>
+<codeline><highlight class="normal">https://github.com/tfussell/xlnt/archive/master.zip</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>~</highlight></codeline>
+<codeline><highlight class="normal">unzip<sp/>Downloads/xlnt-master.zip</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>xlnt-master</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>.</highlight></codeline>
+<codeline><highlight class="normal">make<sp/>-j<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>make<sp/>install</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>following<sp/>step<sp/>will<sp/>map<sp/>the<sp/>shared<sp/>library<sp/>names<sp/>to<sp/>the<sp/>location<sp/>of<sp/>the<sp/>corresponding<sp/>shared<sp/>library<sp/>files</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>ldconfig</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">xlnt<sp/>will<sp/>now<sp/>be<sp/>ready<sp/>to<sp/>use<sp/>on<sp/>your<sp/>Ubuntu<sp/>instance.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[1]<sp/></highlight></codeline>
+<codeline><highlight class="normal">Xlnt<sp/>requires<sp/>a<sp/>minimum<sp/>of<sp/>gcc<sp/>6.2.0</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>most<sp/>recent<sp/>gcc<sp/>version<sp/>available<sp/>using<sp/>the<sp/>standard<sp/>APT<sp/>repositories<sp/>is<sp/>gcc<sp/>5.4.0<sp/>(obtained<sp/>through<sp/>build-essential<sp/>12.1ubuntu2).<sp/>If<sp/>these<sp/>older<sp/>versions<sp/>of<sp/>gcc<sp/>are<sp/>used<sp/>an<sp/>error<sp/>&quot;workbook.cpp<sp/>error<sp/>1502:31<sp/>&apos;extended_property&apos;<sp/>is<sp/>not<sp/>a<sp/>class,<sp/>namespace<sp/>or<sp/>enumeration&quot;<sp/>will<sp/>occur<sp/>during<sp/>the<sp/>xlnt<sp/>make<sp/>command.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Compiling<sp/>from<sp/>Source</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Build<sp/>configurations<sp/>for<sp/>Visual<sp/>Studio,<sp/>GNU<sp/>Make,<sp/>Ninja,<sp/>and<sp/>Xcode<sp/>can<sp/>be<sp/>created<sp/>using<sp/>[cmake](https://cmake.org/)<sp/>v3.2+.<sp/>A<sp/>full<sp/>list<sp/>of<sp/>cmake<sp/>generators<sp/>can<sp/>be<sp/>found<sp/>[here](https://cmake.org/cmake/help/v3.0/manual/cmake-generators.7.html).<sp/>A<sp/>basic<sp/>build<sp/>would<sp/>look<sp/>like<sp/>(starting<sp/>in<sp/>the<sp/>root<sp/>xlnt<sp/>directory):</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">mkdir<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>..</highlight></codeline>
+<codeline><highlight class="normal">make<sp/>-j8</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>resulting<sp/>shared<sp/>(e.g.<sp/>libxlnt.dylib)<sp/>library<sp/>would<sp/>be<sp/>found<sp/>in<sp/>the<sp/>build/lib<sp/>directory.<sp/>Other<sp/>cmake<sp/>configuration<sp/>options<sp/>for<sp/>xlnt<sp/>can<sp/>be<sp/>found<sp/>using<sp/>&quot;cmake<sp/>-LH&quot;.<sp/>These<sp/>options<sp/>include<sp/>building<sp/>a<sp/>static<sp/>library<sp/>instead<sp/>of<sp/>shared<sp/>and<sp/>whether<sp/>to<sp/>build<sp/>sample<sp/>executables<sp/>or<sp/>not.<sp/>An<sp/>example<sp/>of<sp/>building<sp/>a<sp/>static<sp/>library<sp/>with<sp/>an<sp/>Xcode<sp/>project:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">mkdir<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>-D<sp/>STATIC=ON<sp/>-G<sp/>Xcode<sp/>..</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>--build<sp/>.</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>bin<sp/>&amp;&amp;<sp/>./xlnt.test</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">*Note<sp/>for<sp/>Windows:<sp/>cmake<sp/>defaults<sp/>to<sp/>building<sp/>a<sp/>32-bit<sp/>library<sp/>project.<sp/>To<sp/>build<sp/>a<sp/>64-bit<sp/>library,<sp/>use<sp/>the<sp/>Win64<sp/>generator*</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>-G<sp/>&quot;Visual<sp/>Studio<sp/>14<sp/>2015<sp/>Win64&quot;<sp/>..</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/docs/introduction/Installation.md"/>
+  </compounddef>
+</doxygen>

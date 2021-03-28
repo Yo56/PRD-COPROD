@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="_memory_model_8md" kind="file" language="Markdown">
+    <compoundname>MemoryModel.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Memory<sp/>Model</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c++</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;iostream&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;xlnt/xlnt.hpp&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>set_cell(xlnt::cell<sp/>cell,<sp/>int<sp/>value)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cell.value(value);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">xlnt::workbook<sp/>create_wb()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xlnt::workbook<sp/>wb;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>auto<sp/>ws<sp/>=<sp/>wb.active_sheet();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>set_cell(wb.cell(&quot;A1&quot;),<sp/>2);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>wb;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>auto<sp/>wb<sp/>=<sp/>create_wb();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>wb.value&lt;int&gt;()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>0;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">xlnt<sp/>uses<sp/>the<sp/>pimpl<sp/>idiom<sp/>for<sp/>most<sp/>of<sp/>its<sp/>core<sp/>data<sp/>structures.<sp/>This<sp/>primary<sp/>reason<sp/>for<sp/>choosing<sp/>this<sp/>technique<sp/>was<sp/>simplifying<sp/>usage<sp/>of<sp/>the<sp/>library.<sp/>Instead<sp/>of<sp/>using<sp/>pointers<sp/>or<sp/>references,<sp/>classes<sp/>can<sp/>be<sp/>passed<sp/>around<sp/>by<sp/>value.<sp/>Internally<sp/>they<sp/>hold<sp/>a<sp/>pointer<sp/>to<sp/>memory<sp/>which<sp/>is<sp/>within<sp/>the<sp/>primary<sp/>workbook<sp/>implementation<sp/>struct.<sp/>Methods<sp/>called<sp/>on<sp/>the<sp/>wrapper<sp/>object<sp/>dereference<sp/>the<sp/>opaque<sp/>pointer<sp/>and<sp/>manipulate<sp/>its<sp/>data<sp/>directly.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>the<sp/>user,<sp/>this<sp/>means<sp/>that<sp/>workbooks,<sp/>worksheets,<sp/>cells,<sp/>formats,<sp/>and<sp/>styles<sp/>can<sp/>be<sp/>passed<sp/>and<sp/>stored<sp/>by<sp/>value.</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/docs/basics/MemoryModel.md"/>
+  </compounddef>
+</doxygen>

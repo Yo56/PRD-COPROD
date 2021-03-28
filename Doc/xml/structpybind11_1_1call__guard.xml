@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="structpybind11_1_1call__guard" kind="struct" language="C++" prot="public">
+    <compoundname>pybind11::call_guard</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename...</type>
+        <declname>Ts</declname>
+        <defname>Ts</defname>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>\rst A call policy which places one or more guard variables (<computeroutput>Ts...</computeroutput>) around the function call.</para>
+<para>For example, this definition:</para>
+<para>.. code-block:: cpp <verbatim>m.def(&quot;foo&quot;, foo, py::call_guard&lt;T&gt;());
+</verbatim> is equivalent to the following pseudocode:</para>
+<para>.. code-block:: cpp <verbatim>m.def(&quot;foo&quot;, [](args...) {
+    T scope_guard;
+    return foo(args...); // forwarded arguments
+});
+</verbatim> \endrst </para>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/attr.h" line="88" column="12" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/attr.h" bodystart="88" bodyend="-1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,33 @@
+\hypertarget{structpybind11_1_1detail_1_1visit__helper}{}\doxysection{pybind11\+::detail\+::visit\+\_\+helper$<$ Variant $>$ Struct Template Reference}
+\label{structpybind11_1_1detail_1_1visit__helper}\index{pybind11::detail::visit\_helper$<$ Variant $>$@{pybind11::detail::visit\_helper$<$ Variant $>$}}
+
+
+{\ttfamily \#include $<$stl.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\static auto \mbox{\hyperlink{structpybind11_1_1detail_1_1visit__helper_ae044094aed0336079441403dc9e81620}{call}} (Args \&\&...\mbox{\hyperlink{classpybind11_1_1args}{args}}) -\/$>$ decltype(visit(std\+::forward$<$ Args $>$(\mbox{\hyperlink{classpybind11_1_1args}{args}})...))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$template$<$ typename... $>$ class Variant$>$\newline
+struct pybind11\+::detail\+::visit\+\_\+helper$<$ Variant $>$}
+
+Helper class which abstracts away variant\textquotesingle{}s {\ttfamily visit} function. {\ttfamily std\+::variant} and similar {\ttfamily namespace\+::variant} types which provide a {\ttfamily namespace\+::visit()} function are handled here automatically using argument-\/dependent lookup. Users can provide specializations for other variant-\/like classes, e.\+g. {\ttfamily boost\+::variant} and {\ttfamily boost\+::apply\+\_\+visitor}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1visit__helper_ae044094aed0336079441403dc9e81620}\label{structpybind11_1_1detail_1_1visit__helper_ae044094aed0336079441403dc9e81620}} 
+\index{pybind11::detail::visit\_helper$<$ Variant $>$@{pybind11::detail::visit\_helper$<$ Variant $>$}!call@{call}}
+\index{call@{call}!pybind11::detail::visit\_helper$<$ Variant $>$@{pybind11::detail::visit\_helper$<$ Variant $>$}}
+\doxysubsubsection{\texorpdfstring{call()}{call()}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Variant$>$ \\
+template$<$typename... Args$>$ \\
+static auto \mbox{\hyperlink{structpybind11_1_1detail_1_1visit__helper}{pybind11\+::detail\+::visit\+\_\+helper}}$<$ Variant $>$\+::call (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption}) -\/$>$ decltype(visit(std\+::forward$<$Args$>$(\mbox{\hyperlink{classpybind11_1_1args}{args}})...)) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{stl_8h}{stl.\+h}}\end{DoxyCompactItemize}

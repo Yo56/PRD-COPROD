@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="structpybind11_1_1detail_1_1vectorize__arg" kind="struct" language="C++" prot="public">
+    <compoundname>pybind11::detail::vectorize_arg</compoundname>
+    <includes refid="numpy_8h" local="no">numpy.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structpybind11_1_1detail_1_1vectorize__arg_1ad0e803cb5a58e5e2bbf1775832e05d4e" prot="public" static="no">
+        <type><ref refid="namespacepybind11_1_1detail_1a6c207068b00c8f12378fe4e8f02eaa73" kindref="member">remove_reference_t</ref>&lt; T &gt;</type>
+        <definition>using pybind11::detail::vectorize_arg&lt; T &gt;::call_type =  remove_reference_t&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>call_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="1425" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="1425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structpybind11_1_1detail_1_1vectorize__arg_1aafc506aa905e8e3e2ccbfbe5a1b4aa3a" prot="public" static="no">
+        <type><ref refid="namespacepybind11_1_1detail_1aef2d4be22c22106ff1a07aeb9394fb60" kindref="member">conditional_t</ref>&lt; <ref refid="structpybind11_1_1detail_1_1vectorize__arg_1ac664e915da6381e5e03c7a827c887141" kindref="member">vectorize</ref>, <ref refid="classpybind11_1_1array__t" kindref="compound">array_t</ref>&lt; <ref refid="namespacepybind11_1_1detail_1ada18e66a8c736bd49e83f6dad6b39af5" kindref="member">remove_cv_t</ref>&lt; <ref refid="structpybind11_1_1detail_1_1vectorize__arg_1ad0e803cb5a58e5e2bbf1775832e05d4e" kindref="member">call_type</ref> &gt;, array::forcecast &gt;, T &gt;</type>
+        <definition>using pybind11::detail::vectorize_arg&lt; T &gt;::type =  conditional_t&lt;vectorize, array_t&lt;remove_cv_t&lt;call_type&gt;, array::forcecast&gt;, T&gt;</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="1433" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="1433" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structpybind11_1_1detail_1_1vectorize__arg_1ac664e915da6381e5e03c7a827c887141" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr bool</type>
+        <definition>constexpr bool pybind11::detail::vectorize_arg&lt; T &gt;::vectorize</definition>
+        <argsstring></argsstring>
+        <name>vectorize</name>
+        <initializer>=
+        <ref refid="namespacepybind11_1_1detail_1ad8177bd79cbc1e71965deb6716eb209a" kindref="member">satisfies_any_of</ref>&lt;<ref refid="structpybind11_1_1detail_1_1vectorize__arg_1ad0e803cb5a58e5e2bbf1775832e05d4e" kindref="member">call_type</ref>, std::is_arithmetic, <ref refid="structpybind11_1_1detail_1_1is__complex" kindref="compound">is_complex</ref>, std::is_pod&gt;::value &amp;&amp;
+        <ref refid="namespacepybind11_1_1detail_1ad2bf911ee252ecbcf52d2ddec897ed0a" kindref="member">satisfies_none_of</ref>&lt;<ref refid="structpybind11_1_1detail_1_1vectorize__arg_1ad0e803cb5a58e5e2bbf1775832e05d4e" kindref="member">call_type</ref>, std::is_pointer, std::is_array, <ref refid="structpybind11_1_1detail_1_1is__std__array" kindref="compound">is_std_array</ref>, std::is_enum&gt;::value &amp;&amp;
+        (!std::is_reference&lt;T&gt;::value ||
+         (std::is_lvalue_reference&lt;T&gt;::value &amp;&amp; std::is_const&lt;<ref refid="structpybind11_1_1detail_1_1vectorize__arg_1ad0e803cb5a58e5e2bbf1775832e05d4e" kindref="member">call_type</ref>&gt;::value))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="1427" column="27" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="1427" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="1422" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="1422" bodyend="1434"/>
+    <listofallmembers>
+      <member refid="structpybind11_1_1detail_1_1vectorize__arg_1ad0e803cb5a58e5e2bbf1775832e05d4e" prot="public" virt="non-virtual"><scope>pybind11::detail::vectorize_arg</scope><name>call_type</name></member>
+      <member refid="structpybind11_1_1detail_1_1vectorize__arg_1aafc506aa905e8e3e2ccbfbe5a1b4aa3a" prot="public" virt="non-virtual"><scope>pybind11::detail::vectorize_arg</scope><name>type</name></member>
+      <member refid="structpybind11_1_1detail_1_1vectorize__arg_1ac664e915da6381e5e03c7a827c887141" prot="public" virt="non-virtual"><scope>pybind11::detail::vectorize_arg</scope><name>vectorize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

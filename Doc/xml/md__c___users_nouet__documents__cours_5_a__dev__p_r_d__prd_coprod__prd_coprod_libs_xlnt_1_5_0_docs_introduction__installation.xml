@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation" kind="page">
+    <compoundname>md_C__Users_nouet_Documents_Cours_5A_Dev_PRD_PrdCoprod_PrdCoprod_libs_xlnt_1_5_0_docs_introduction_Installation</compoundname>
+    <title>Getting xlnt</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_1autotoc_md159">
+<title>Binaries</title>
+</sect1>
+<sect1 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_1autotoc_md160">
+<title>Homebrew</title>
+</sect1>
+<sect1 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_1autotoc_md161">
+<title>Arch</title>
+</sect1>
+<sect1 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_1autotoc_md162">
+<title>vcpkg</title>
+</sect1>
+<sect1 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_1autotoc_md163">
+<title>Compiling xlnt 1.x.x from Source on Ubuntu 16.04 LTS (Xenial Xerus)</title>
+<para>Time required: Approximately 5 minutes (depending on your internet speed) <programlisting><codeline><highlight class="normal">sudo<sp/>apt-get<sp/>update</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt-get<sp/>upgrade</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>cmake</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>zlibc</highlight></codeline>
+</programlisting> The following steps update the compiler and set the appropriate environment variables - see note [1] below for the reason why we need to update the standard available compiler <programlisting><codeline><highlight class="normal">sudo<sp/>add-apt-repository<sp/>ppa:ubuntu-toolchain-r/test</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt<sp/>update</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt-get<sp/>upgrade</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>gcc-6<sp/>g++-6</highlight></codeline>
+<codeline><highlight class="normal">export<sp/>CC=/usr/bin/gcc-6<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">export<sp/>CXX=/usr/bin/g++-6</highlight></codeline>
+</programlisting> The following steps will intall xlnt Download the zip file from the xlnt repository <ulink url="https://github.com/tfussell/xlnt/archive/master.zip">https://github.com/tfussell/xlnt/archive/master.zip</ulink> <programlisting><codeline><highlight class="normal">cd<sp/>~</highlight></codeline>
+<codeline><highlight class="normal">unzip<sp/>Downloads/xlnt-master.zip</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>xlnt-master</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>.</highlight></codeline>
+<codeline><highlight class="normal">make<sp/>-j<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>make<sp/>install</highlight></codeline>
+</programlisting> The following step will map the shared library names to the location of the corresponding shared library files <programlisting><codeline><highlight class="normal">sudo<sp/>ldconfig</highlight></codeline>
+</programlisting> xlnt will now be ready to use on your Ubuntu instance.</para>
+<para>[1] Xlnt requires a minimum of gcc 6.2.0 The most recent gcc version available using the standard APT repositories is gcc 5.4.0 (obtained through build-essential 12.1ubuntu2). If these older versions of gcc are used an error &quot;workbook.cpp error 1502:31 &apos;extended_property&apos; is not a class, namespace or enumeration&quot; will occur during the xlnt make command.</para>
+</sect1>
+<sect1 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__installation_1autotoc_md164">
+<title>Compiling from Source</title>
+<para>Build configurations for Visual Studio, GNU Make, Ninja, and Xcode can be created using <ulink url="https://cmake.org/">cmake</ulink> v3.2+. A full list of cmake generators can be found <ulink url="https://cmake.org/cmake/help/v3.0/manual/cmake-generators.7.html">here</ulink>. A basic build would look like (starting in the root xlnt directory):</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">mkdir<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>..</highlight></codeline>
+<codeline><highlight class="normal">make<sp/>-j8</highlight></codeline>
+</programlisting></para>
+<para>The resulting shared (e.g. libxlnt.dylib) library would be found in the build/lib directory. Other cmake configuration options for xlnt can be found using &quot;cmake -LH&quot;. These options include building a static library instead of shared and whether to build sample executables or not. An example of building a static library with an Xcode project:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">mkdir<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>-D<sp/>STATIC=ON<sp/>-G<sp/>Xcode<sp/>..</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>--build<sp/>.</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>bin<sp/>&amp;&amp;<sp/>./xlnt.test</highlight></codeline>
+</programlisting> <emphasis>Note for Windows: cmake defaults to building a 32-bit library project. To build a 64-bit library, use the Win64 generator</emphasis> <programlisting filename=".bash"><codeline><highlight class="normal">cmake<sp/>-G<sp/>&quot;Visual<sp/>Studio<sp/>14<sp/>2015<sp/>Win64&quot;<sp/>..</highlight></codeline>
+</programlisting> </para>
+</sect1>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/docs/introduction/Installation.md"/>
+  </compounddef>
+</doxygen>

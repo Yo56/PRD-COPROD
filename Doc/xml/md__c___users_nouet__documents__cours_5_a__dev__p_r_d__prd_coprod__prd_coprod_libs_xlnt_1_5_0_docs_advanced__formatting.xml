@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_advanced__formatting" kind="page">
+    <compoundname>md_C__Users_nouet_Documents_Cours_5A_Dev_PRD_PrdCoprod_PrdCoprod_libs_xlnt_1_5_0_docs_advanced_Formatting</compoundname>
+    <title>Formatting</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_advanced__formatting_1autotoc_md16">
+<title>Format vs. Style</title>
+<para><programlisting><codeline><highlight class="normal"><sp/>{c++}</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;iostream&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;xlnt/xlnt.hpp&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xlnt::workbook<sp/>wb;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>auto<sp/>cell<sp/>=<sp/>wb.active_sheet().cell(&quot;A1&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+<para>In the context of xlnt, format and style have specific distinct meanings. A style in xlnt corresponds to a named style created in the &quot;Cell styles&quot; dropdown in Excel. It must have a name and optionally any of: alignment, border, fill, font, number format, protection. A format in xlnt corresponds to the alignment, border, fill, font, number format, and protection settings applied to a cell via right-click-&gt;&quot;Format Cells&quot;. A cell can have both a format and a style. The style properties will generally override the format properties.</para>
+</sect1>
+<sect1 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_advanced__formatting_1autotoc_md17">
+<title>Number Formatting</title>
+<para><programlisting><codeline><highlight class="normal"><sp/>{c++}</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;iostream&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;xlnt/xlnt.hpp&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xlnt::workbook<sp/>wb;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>auto<sp/>cell<sp/>=<sp/>wb.active_sheet().cell(&quot;A1&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cell.number_format(xlnt::number_format::percentage());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cell.value(0.513);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>cell.to_string()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+<para>An <ref refid="classxlnt_1_1number__format" kindref="compound">xlnt::number_format</ref> is the format code used when displaying a value in a cell. For example, a number_format of &quot;0.00&quot; implies that the number 13.726 should be displayed as &quot;13.73&quot;. Many number formats are built-in to Excel and can be access with <ref refid="classxlnt_1_1number__format" kindref="compound">xlnt::number_format</ref> static constructors. Other custom number formats can be created by passing a string to the <ulink url="#cell-const-cell-amp">xlnt::number_format constructor</ulink>. </para>
+</sect1>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/docs/advanced/Formatting.md"/>
+  </compounddef>
+</doxygen>

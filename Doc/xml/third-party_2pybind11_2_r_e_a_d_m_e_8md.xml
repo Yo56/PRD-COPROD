@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="third-party_2pybind11_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">![pybind11<sp/>logo](https://github.com/pybind/pybind11/raw/master/docs/pybind11-logo.png)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>pybind11<sp/>—<sp/>Seamless<sp/>operability<sp/>between<sp/>C++11<sp/>and<sp/>Python</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![Documentation<sp/>Status](https://readthedocs.org/projects/pybind11/badge/?version=master)](http://pybind11.readthedocs.org/en/master/?badge=master)</highlight></codeline>
+<codeline><highlight class="normal">[![Documentation<sp/>Status](https://readthedocs.org/projects/pybind11/badge/?version=stable)](http://pybind11.readthedocs.org/en/stable/?badge=stable)</highlight></codeline>
+<codeline><highlight class="normal">[![Gitter<sp/>chat](https://img.shields.io/gitter/room/gitterHQ/gitter.svg)](https://gitter.im/pybind/Lobby)</highlight></codeline>
+<codeline><highlight class="normal">[![Build<sp/>Status](https://travis-ci.org/pybind/pybind11.svg?branch=master)](https://travis-ci.org/pybind/pybind11)</highlight></codeline>
+<codeline><highlight class="normal">[![Build<sp/>status](https://ci.appveyor.com/api/projects/status/riaj54pn4h08xy40?svg=true)](https://ci.appveyor.com/project/wjakob/pybind11)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**pybind11**<sp/>is<sp/>a<sp/>lightweight<sp/>header-only<sp/>library<sp/>that<sp/>exposes<sp/>C++<sp/>types<sp/>in<sp/>Python</highlight></codeline>
+<codeline><highlight class="normal">and<sp/>vice<sp/>versa,<sp/>mainly<sp/>to<sp/>create<sp/>Python<sp/>bindings<sp/>of<sp/>existing<sp/>C++<sp/>code.<sp/>Its</highlight></codeline>
+<codeline><highlight class="normal">goals<sp/>and<sp/>syntax<sp/>are<sp/>similar<sp/>to<sp/>the<sp/>excellent</highlight></codeline>
+<codeline><highlight class="normal">[Boost.Python](http://www.boost.org/doc/libs/1_58_0/libs/python/doc/)<sp/>library</highlight></codeline>
+<codeline><highlight class="normal">by<sp/>David<sp/>Abrahams:<sp/>to<sp/>minimize<sp/>boilerplate<sp/>code<sp/>in<sp/>traditional<sp/>extension</highlight></codeline>
+<codeline><highlight class="normal">modules<sp/>by<sp/>inferring<sp/>type<sp/>information<sp/>using<sp/>compile-time<sp/>introspection.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>main<sp/>issue<sp/>with<sp/>Boost.Python—and<sp/>the<sp/>reason<sp/>for<sp/>creating<sp/>such<sp/>a<sp/>similar</highlight></codeline>
+<codeline><highlight class="normal">project—is<sp/>Boost.<sp/>Boost<sp/>is<sp/>an<sp/>enormously<sp/>large<sp/>and<sp/>complex<sp/>suite<sp/>of<sp/>utility</highlight></codeline>
+<codeline><highlight class="normal">libraries<sp/>that<sp/>works<sp/>with<sp/>almost<sp/>every<sp/>C++<sp/>compiler<sp/>in<sp/>existence.<sp/>This</highlight></codeline>
+<codeline><highlight class="normal">compatibility<sp/>has<sp/>its<sp/>cost:<sp/>arcane<sp/>template<sp/>tricks<sp/>and<sp/>workarounds<sp/>are</highlight></codeline>
+<codeline><highlight class="normal">necessary<sp/>to<sp/>support<sp/>the<sp/>oldest<sp/>and<sp/>buggiest<sp/>of<sp/>compiler<sp/>specimens.<sp/>Now<sp/>that</highlight></codeline>
+<codeline><highlight class="normal">C++11-compatible<sp/>compilers<sp/>are<sp/>widely<sp/>available,<sp/>this<sp/>heavy<sp/>machinery<sp/>has</highlight></codeline>
+<codeline><highlight class="normal">become<sp/>an<sp/>excessively<sp/>large<sp/>and<sp/>unnecessary<sp/>dependency.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Think<sp/>of<sp/>this<sp/>library<sp/>as<sp/>a<sp/>tiny<sp/>self-contained<sp/>version<sp/>of<sp/>Boost.Python<sp/>with</highlight></codeline>
+<codeline><highlight class="normal">everything<sp/>stripped<sp/>away<sp/>that<sp/>isn&apos;t<sp/>relevant<sp/>for<sp/>binding<sp/>generation.<sp/>Without</highlight></codeline>
+<codeline><highlight class="normal">comments,<sp/>the<sp/>core<sp/>header<sp/>files<sp/>only<sp/>require<sp/>~4K<sp/>lines<sp/>of<sp/>code<sp/>and<sp/>depend<sp/>on</highlight></codeline>
+<codeline><highlight class="normal">Python<sp/>(2.7<sp/>or<sp/>3.x,<sp/>or<sp/>PyPy2.7<sp/>&gt;=<sp/>5.7)<sp/>and<sp/>the<sp/>C++<sp/>standard<sp/>library.<sp/>This</highlight></codeline>
+<codeline><highlight class="normal">compact<sp/>implementation<sp/>was<sp/>possible<sp/>thanks<sp/>to<sp/>some<sp/>of<sp/>the<sp/>new<sp/>C++11<sp/>language</highlight></codeline>
+<codeline><highlight class="normal">features<sp/>(specifically:<sp/>tuples,<sp/>lambda<sp/>functions<sp/>and<sp/>variadic<sp/>templates).<sp/>Since</highlight></codeline>
+<codeline><highlight class="normal">its<sp/>creation,<sp/>this<sp/>library<sp/>has<sp/>grown<sp/>beyond<sp/>Boost.Python<sp/>in<sp/>many<sp/>ways,<sp/>leading</highlight></codeline>
+<codeline><highlight class="normal">to<sp/>dramatically<sp/>simpler<sp/>binding<sp/>code<sp/>in<sp/>many<sp/>common<sp/>situations.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Tutorial<sp/>and<sp/>reference<sp/>documentation<sp/>is<sp/>provided<sp/>at</highlight></codeline>
+<codeline><highlight class="normal">[http://pybind11.readthedocs.org/en/master](http://pybind11.readthedocs.org/en/master).</highlight></codeline>
+<codeline><highlight class="normal">A<sp/>PDF<sp/>version<sp/>of<sp/>the<sp/>manual<sp/>is<sp/>available</highlight></codeline>
+<codeline><highlight class="normal">[here](https://media.readthedocs.org/pdf/pybind11/master/pybind11.pdf).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Core<sp/>features</highlight></codeline>
+<codeline><highlight class="normal">pybind11<sp/>can<sp/>map<sp/>the<sp/>following<sp/>core<sp/>C++<sp/>features<sp/>to<sp/>Python</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Functions<sp/>accepting<sp/>and<sp/>returning<sp/>custom<sp/>data<sp/>structures<sp/>per<sp/>value,<sp/>reference,<sp/>or<sp/>pointer</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Instance<sp/>methods<sp/>and<sp/>static<sp/>methods</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Overloaded<sp/>functions</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Instance<sp/>attributes<sp/>and<sp/>static<sp/>attributes</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Arbitrary<sp/>exception<sp/>types</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Enumerations</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Callbacks</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Iterators<sp/>and<sp/>ranges</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Custom<sp/>operators</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Single<sp/>and<sp/>multiple<sp/>inheritance</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>STL<sp/>data<sp/>structures</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Iterators<sp/>and<sp/>ranges</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Smart<sp/>pointers<sp/>with<sp/>reference<sp/>counting<sp/>like<sp/>``std::shared_ptr``</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Internal<sp/>references<sp/>with<sp/>correct<sp/>reference<sp/>counting</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>C++<sp/>classes<sp/>with<sp/>virtual<sp/>(and<sp/>pure<sp/>virtual)<sp/>methods<sp/>can<sp/>be<sp/>extended<sp/>in<sp/>Python</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Goodies</highlight></codeline>
+<codeline><highlight class="normal">In<sp/>addition<sp/>to<sp/>the<sp/>core<sp/>functionality,<sp/>pybind11<sp/>provides<sp/>some<sp/>extra<sp/>goodies:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Python<sp/>2.7,<sp/>3.x,<sp/>and<sp/>PyPy<sp/>(PyPy2.7<sp/>&gt;=<sp/>5.7)<sp/>are<sp/>supported<sp/>with<sp/>an</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>implementation-agnostic<sp/>interface.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>It<sp/>is<sp/>possible<sp/>to<sp/>bind<sp/>C++11<sp/>lambda<sp/>functions<sp/>with<sp/>captured<sp/>variables.<sp/>The</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>lambda<sp/>capture<sp/>data<sp/>is<sp/>stored<sp/>inside<sp/>the<sp/>resulting<sp/>Python<sp/>function<sp/>object.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>pybind11<sp/>uses<sp/>C++11<sp/>move<sp/>constructors<sp/>and<sp/>move<sp/>assignment<sp/>operators<sp/>whenever</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>possible<sp/>to<sp/>efficiently<sp/>transfer<sp/>custom<sp/>data<sp/>types.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>It&apos;s<sp/>easy<sp/>to<sp/>expose<sp/>the<sp/>internal<sp/>storage<sp/>of<sp/>custom<sp/>data<sp/>types<sp/>through</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Pythons&apos;<sp/>buffer<sp/>protocols.<sp/>This<sp/>is<sp/>handy<sp/>e.g.<sp/>for<sp/>fast<sp/>conversion<sp/>between</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>C++<sp/>matrix<sp/>classes<sp/>like<sp/>Eigen<sp/>and<sp/>NumPy<sp/>without<sp/>expensive<sp/>copy<sp/>operations.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>pybind11<sp/>can<sp/>automatically<sp/>vectorize<sp/>functions<sp/>so<sp/>that<sp/>they<sp/>are<sp/>transparently</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>applied<sp/>to<sp/>all<sp/>entries<sp/>of<sp/>one<sp/>or<sp/>more<sp/>NumPy<sp/>array<sp/>arguments.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Python&apos;s<sp/>slice-based<sp/>access<sp/>and<sp/>assignment<sp/>operations<sp/>can<sp/>be<sp/>supported<sp/>with</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>just<sp/>a<sp/>few<sp/>lines<sp/>of<sp/>code.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Everything<sp/>is<sp/>contained<sp/>in<sp/>just<sp/>a<sp/>few<sp/>header<sp/>files;<sp/>there<sp/>is<sp/>no<sp/>need<sp/>to<sp/>link</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>against<sp/>any<sp/>additional<sp/>libraries.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Binaries<sp/>are<sp/>generally<sp/>smaller<sp/>by<sp/>a<sp/>factor<sp/>of<sp/>at<sp/>least<sp/>2<sp/>compared<sp/>to</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>equivalent<sp/>bindings<sp/>generated<sp/>by<sp/>Boost.Python.<sp/>A<sp/>recent<sp/>pybind11<sp/>conversion</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>of<sp/>PyRosetta,<sp/>an<sp/>enormous<sp/>Boost.Python<sp/>binding<sp/>project,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>[reported](http://graylab.jhu.edu/RosettaCon2016/PyRosetta-4.pdf)<sp/>a<sp/>binary</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>size<sp/>reduction<sp/>of<sp/>**5.4x**<sp/>and<sp/>compile<sp/>time<sp/>reduction<sp/>by<sp/>**5.8x**.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>When<sp/>supported<sp/>by<sp/>the<sp/>compiler,<sp/>two<sp/>new<sp/>C++14<sp/>features<sp/>(relaxed<sp/>constexpr<sp/>and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>value<sp/>deduction)<sp/>are<sp/>used<sp/>to<sp/>precompute<sp/>function<sp/>signatures<sp/>at<sp/>compile</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>time,<sp/>leading<sp/>to<sp/>smaller<sp/>binaries.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>With<sp/>little<sp/>extra<sp/>effort,<sp/>C++<sp/>types<sp/>can<sp/>be<sp/>pickled<sp/>and<sp/>unpickled<sp/>similar<sp/>to</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>regular<sp/>Python<sp/>objects.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Supported<sp/>compilers</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Clang/LLVM<sp/>3.3<sp/>or<sp/>newer<sp/>(for<sp/>Apple<sp/>Xcode&apos;s<sp/>clang,<sp/>this<sp/>is<sp/>5.0.0<sp/>or<sp/>newer)</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>GCC<sp/>4.8<sp/>or<sp/>newer</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Microsoft<sp/>Visual<sp/>Studio<sp/>2015<sp/>Update<sp/>3<sp/>or<sp/>newer</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Intel<sp/>C++<sp/>compiler<sp/>16<sp/>or<sp/>newer<sp/>(15<sp/>with<sp/>a<sp/>[workaround](https://github.com/pybind/pybind11/issues/276))</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>Cygwin/GCC<sp/>(tested<sp/>on<sp/>2.5.1)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>About</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>project<sp/>was<sp/>created<sp/>by<sp/>[Wenzel<sp/>Jakob](http://rgl.epfl.ch/people/wjakob).</highlight></codeline>
+<codeline><highlight class="normal">Significant<sp/>features<sp/>and/or<sp/>improvements<sp/>to<sp/>the<sp/>code<sp/>were<sp/>contributed<sp/>by</highlight></codeline>
+<codeline><highlight class="normal">Jonas<sp/>Adler,</highlight></codeline>
+<codeline><highlight class="normal">Sylvain<sp/>Corlay,</highlight></codeline>
+<codeline><highlight class="normal">Trent<sp/>Houliston,</highlight></codeline>
+<codeline><highlight class="normal">Axel<sp/>Huebl,</highlight></codeline>
+<codeline><highlight class="normal">@hulucc,</highlight></codeline>
+<codeline><highlight class="normal">Sergey<sp/>Lyskov</highlight></codeline>
+<codeline><highlight class="normal">Johan<sp/>Mabille,</highlight></codeline>
+<codeline><highlight class="normal">Tomasz<sp/>Miąsko,</highlight></codeline>
+<codeline><highlight class="normal">Dean<sp/>Moldovan,</highlight></codeline>
+<codeline><highlight class="normal">Ben<sp/>Pritchard,</highlight></codeline>
+<codeline><highlight class="normal">Jason<sp/>Rhinelander,</highlight></codeline>
+<codeline><highlight class="normal">Boris<sp/>Schäling,</highlight></codeline>
+<codeline><highlight class="normal">Pim<sp/>Schellart,</highlight></codeline>
+<codeline><highlight class="normal">Ivan<sp/>Smirnov,<sp/>and</highlight></codeline>
+<codeline><highlight class="normal">Patrick<sp/>Stewart.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>License</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">pybind11<sp/>is<sp/>provided<sp/>under<sp/>a<sp/>BSD-style<sp/>license<sp/>that<sp/>can<sp/>be<sp/>found<sp/>in<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">``LICENSE``<sp/>file.<sp/>By<sp/>using,<sp/>distributing,<sp/>or<sp/>contributing<sp/>to<sp/>this<sp/>project,</highlight></codeline>
+<codeline><highlight class="normal">you<sp/>agree<sp/>to<sp/>the<sp/>terms<sp/>and<sp/>conditions<sp/>of<sp/>this<sp/>license.</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/README.md"/>
+  </compounddef>
+</doxygen>

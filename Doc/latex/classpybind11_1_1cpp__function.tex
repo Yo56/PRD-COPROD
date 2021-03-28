@@ -1,0 +1,174 @@
+\hypertarget{classpybind11_1_1cpp__function}{}\doxysection{pybind11\+::cpp\+\_\+function Class Reference}
+\label{classpybind11_1_1cpp__function}\index{pybind11::cpp\_function@{pybind11::cpp\_function}}
+
+
+Wraps an arbitrary C++ function/method/lambda function/.. into a callable Python object.  
+
+
+
+
+{\ttfamily \#include $<$pybind11.\+h$>$}
+
+Inheritance diagram for pybind11\+::cpp\+\_\+function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classpybind11_1_1cpp__function}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpybind11_1_1cpp__function_a132747c2ceb48f66e31a2a0a8cdbcd04}{cpp\+\_\+function}} ()
+\item 
+{\footnotesize template$<$typename Return , typename... Args, typename... Extra$>$ }\\\mbox{\hyperlink{classpybind11_1_1cpp__function_a6876ca7fb5a6747ae0828d6c0335e487}{cpp\+\_\+function}} (Return($\ast$f)(Args...), const Extra \&... extra)
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classpybind11_1_1cpp__function}{cpp\+\_\+function}} from a vanilla function pointer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Func , typename... Extra, typename  = detail\+::enable\+\_\+if\+\_\+t$<$        detail\+::satisfies\+\_\+none\+\_\+of$<$            detail\+::remove\+\_\+reference\+\_\+t$<$\+Func$>$,            std\+::is\+\_\+function, std\+::is\+\_\+pointer, std\+::is\+\_\+member\+\_\+pointer        $>$\+::value$>$$>$ }\\\mbox{\hyperlink{classpybind11_1_1cpp__function_acfe302e5e16cb06b35def528437ee8d4}{cpp\+\_\+function}} (Func \&\&f, const Extra \&... extra)
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classpybind11_1_1cpp__function}{cpp\+\_\+function}} from a lambda function (possibly with internal state) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Return , typename Class , typename... Arg, typename... Extra$>$ }\\\mbox{\hyperlink{classpybind11_1_1cpp__function_afbea329616cf693374fc35be7e79fbf3}{cpp\+\_\+function}} (Return(Class\+::$\ast$f)(Arg...), const Extra \&... extra)
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classpybind11_1_1cpp__function}{cpp\+\_\+function}} from a class method (non-\/const) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Return , typename Class , typename... Arg, typename... Extra$>$ }\\\mbox{\hyperlink{classpybind11_1_1cpp__function_ae1f23749635c15b72ce0d5c5ae264481}{cpp\+\_\+function}} (Return(Class\+::$\ast$f)(Arg...) const, const Extra \&... extra)
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classpybind11_1_1cpp__function}{cpp\+\_\+function}} from a class method (const) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpybind11_1_1object}{object}} \mbox{\hyperlink{classpybind11_1_1cpp__function_a58dd2ab6841454f51331f2cc5c6dc235}{name}} () const
+\begin{DoxyCompactList}\small\item\em Return the function name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpybind11_1_1cpp__function_ac0311553831b32c5b398c9bd106c793b}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((noinline)) detail
+\begin{DoxyCompactList}\small\item\em Space optimization\+: don\textquotesingle{}t inline this frequently instantiated fragment. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Func , typename Return , typename... Args, typename... Extra$>$ }\\void \mbox{\hyperlink{classpybind11_1_1cpp__function_ac0e6b6560c065900ca0412037a9fab0e}{initialize}} (Func \&\&f, Return($\ast$)(Args...), const Extra \&... extra)
+\begin{DoxyCompactList}\small\item\em Special internal constructor for functors, lambda functions, etc. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpybind11_1_1cpp__function_af14b1ca8e2485667b160a54c910e120f}{initialize\+\_\+generic}} (\mbox{\hyperlink{structpybind11_1_1detail_1_1function__record}{detail\+::function\+\_\+record}} $\ast$rec, const char $\ast$text, const std\+::type\+\_\+info $\ast$const $\ast$types, \mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1args}{args}})
+\begin{DoxyCompactList}\small\item\em Register a function call with Python (generic non-\/templated code goes here) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classpybind11_1_1cpp__function_aa3131b605539b3ba16529f85b6204e1a}{destruct}} (\mbox{\hyperlink{structpybind11_1_1detail_1_1function__record}{detail\+::function\+\_\+record}} $\ast$rec)
+\begin{DoxyCompactList}\small\item\em When a \mbox{\hyperlink{classpybind11_1_1cpp__function}{cpp\+\_\+function}} is GCed, release any memory allocated by \mbox{\hyperlink{namespacepybind11}{pybind11}}. \end{DoxyCompactList}\item 
+static Py\+Object $\ast$ \mbox{\hyperlink{classpybind11_1_1cpp__function_a8395a7e859aab590c33653e2817d0f56}{dispatcher}} (Py\+Object $\ast$self, Py\+Object $\ast$args\+\_\+in, Py\+Object $\ast$kwargs\+\_\+in)
+\begin{DoxyCompactList}\small\item\em Main dispatch logic for calls to functions bound using \mbox{\hyperlink{namespacepybind11}{pybind11}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Wraps an arbitrary C++ function/method/lambda function/.. into a callable Python object. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpybind11_1_1cpp__function_a132747c2ceb48f66e31a2a0a8cdbcd04}\label{classpybind11_1_1cpp__function_a132747c2ceb48f66e31a2a0a8cdbcd04}} 
+\index{pybind11::cpp\_function@{pybind11::cpp\_function}!cpp\_function@{cpp\_function}}
+\index{cpp\_function@{cpp\_function}!pybind11::cpp\_function@{pybind11::cpp\_function}}
+\doxysubsubsection{\texorpdfstring{cpp\_function()}{cpp\_function()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily pybind11\+::cpp\+\_\+function\+::cpp\+\_\+function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1cpp__function_a6876ca7fb5a6747ae0828d6c0335e487}\label{classpybind11_1_1cpp__function_a6876ca7fb5a6747ae0828d6c0335e487}} 
+\index{pybind11::cpp\_function@{pybind11::cpp\_function}!cpp\_function@{cpp\_function}}
+\index{cpp\_function@{cpp\_function}!pybind11::cpp\_function@{pybind11::cpp\_function}}
+\doxysubsubsection{\texorpdfstring{cpp\_function()}{cpp\_function()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename Return , typename... Args, typename... Extra$>$ \\
+pybind11\+::cpp\+\_\+function\+::cpp\+\_\+function (\begin{DoxyParamCaption}\item[{Return($\ast$)(Args...)}]{f,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a \mbox{\hyperlink{classpybind11_1_1cpp__function}{cpp\+\_\+function}} from a vanilla function pointer. 
+
+\mbox{\Hypertarget{classpybind11_1_1cpp__function_acfe302e5e16cb06b35def528437ee8d4}\label{classpybind11_1_1cpp__function_acfe302e5e16cb06b35def528437ee8d4}} 
+\index{pybind11::cpp\_function@{pybind11::cpp\_function}!cpp\_function@{cpp\_function}}
+\index{cpp\_function@{cpp\_function}!pybind11::cpp\_function@{pybind11::cpp\_function}}
+\doxysubsubsection{\texorpdfstring{cpp\_function()}{cpp\_function()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename Func , typename... Extra, typename  = detail\+::enable\+\_\+if\+\_\+t$<$        detail\+::satisfies\+\_\+none\+\_\+of$<$            detail\+::remove\+\_\+reference\+\_\+t$<$\+Func$>$,            std\+::is\+\_\+function, std\+::is\+\_\+pointer, std\+::is\+\_\+member\+\_\+pointer        $>$\+::value$>$$>$ \\
+pybind11\+::cpp\+\_\+function\+::cpp\+\_\+function (\begin{DoxyParamCaption}\item[{Func \&\&}]{f,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a \mbox{\hyperlink{classpybind11_1_1cpp__function}{cpp\+\_\+function}} from a lambda function (possibly with internal state) 
+
+\mbox{\Hypertarget{classpybind11_1_1cpp__function_afbea329616cf693374fc35be7e79fbf3}\label{classpybind11_1_1cpp__function_afbea329616cf693374fc35be7e79fbf3}} 
+\index{pybind11::cpp\_function@{pybind11::cpp\_function}!cpp\_function@{cpp\_function}}
+\index{cpp\_function@{cpp\_function}!pybind11::cpp\_function@{pybind11::cpp\_function}}
+\doxysubsubsection{\texorpdfstring{cpp\_function()}{cpp\_function()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename Return , typename Class , typename... Arg, typename... Extra$>$ \\
+pybind11\+::cpp\+\_\+function\+::cpp\+\_\+function (\begin{DoxyParamCaption}\item[{Return(Class\+::$\ast$)(Arg...)}]{f,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a \mbox{\hyperlink{classpybind11_1_1cpp__function}{cpp\+\_\+function}} from a class method (non-\/const) 
+
+\mbox{\Hypertarget{classpybind11_1_1cpp__function_ae1f23749635c15b72ce0d5c5ae264481}\label{classpybind11_1_1cpp__function_ae1f23749635c15b72ce0d5c5ae264481}} 
+\index{pybind11::cpp\_function@{pybind11::cpp\_function}!cpp\_function@{cpp\_function}}
+\index{cpp\_function@{cpp\_function}!pybind11::cpp\_function@{pybind11::cpp\_function}}
+\doxysubsubsection{\texorpdfstring{cpp\_function()}{cpp\_function()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename Return , typename Class , typename... Arg, typename... Extra$>$ \\
+pybind11\+::cpp\+\_\+function\+::cpp\+\_\+function (\begin{DoxyParamCaption}\item[{Return(Class\+::$\ast$)(Arg...) const}]{f,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a \mbox{\hyperlink{classpybind11_1_1cpp__function}{cpp\+\_\+function}} from a class method (const) 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1cpp__function_ac0311553831b32c5b398c9bd106c793b}\label{classpybind11_1_1cpp__function_ac0311553831b32c5b398c9bd106c793b}} 
+\index{pybind11::cpp\_function@{pybind11::cpp\_function}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!pybind11::cpp\_function@{pybind11::cpp\_function}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily pybind11\+::cpp\+\_\+function\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(noinline)}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Space optimization\+: don\textquotesingle{}t inline this frequently instantiated fragment. 
+
+\mbox{\Hypertarget{classpybind11_1_1cpp__function_aa3131b605539b3ba16529f85b6204e1a}\label{classpybind11_1_1cpp__function_aa3131b605539b3ba16529f85b6204e1a}} 
+\index{pybind11::cpp\_function@{pybind11::cpp\_function}!destruct@{destruct}}
+\index{destruct@{destruct}!pybind11::cpp\_function@{pybind11::cpp\_function}}
+\doxysubsubsection{\texorpdfstring{destruct()}{destruct()}}
+{\footnotesize\ttfamily static void pybind11\+::cpp\+\_\+function\+::destruct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpybind11_1_1detail_1_1function__record}{detail\+::function\+\_\+record}} $\ast$}]{rec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+When a \mbox{\hyperlink{classpybind11_1_1cpp__function}{cpp\+\_\+function}} is GCed, release any memory allocated by \mbox{\hyperlink{namespacepybind11}{pybind11}}. 
+
+\mbox{\Hypertarget{classpybind11_1_1cpp__function_a8395a7e859aab590c33653e2817d0f56}\label{classpybind11_1_1cpp__function_a8395a7e859aab590c33653e2817d0f56}} 
+\index{pybind11::cpp\_function@{pybind11::cpp\_function}!dispatcher@{dispatcher}}
+\index{dispatcher@{dispatcher}!pybind11::cpp\_function@{pybind11::cpp\_function}}
+\doxysubsubsection{\texorpdfstring{dispatcher()}{dispatcher()}}
+{\footnotesize\ttfamily static Py\+Object$\ast$ pybind11\+::cpp\+\_\+function\+::dispatcher (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{self,  }\item[{Py\+Object $\ast$}]{args\+\_\+in,  }\item[{Py\+Object $\ast$}]{kwargs\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Main dispatch logic for calls to functions bound using \mbox{\hyperlink{namespacepybind11}{pybind11}}. 
+
+\mbox{\Hypertarget{classpybind11_1_1cpp__function_ac0e6b6560c065900ca0412037a9fab0e}\label{classpybind11_1_1cpp__function_ac0e6b6560c065900ca0412037a9fab0e}} 
+\index{pybind11::cpp\_function@{pybind11::cpp\_function}!initialize@{initialize}}
+\index{initialize@{initialize}!pybind11::cpp\_function@{pybind11::cpp\_function}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily template$<$typename Func , typename Return , typename... Args, typename... Extra$>$ \\
+void pybind11\+::cpp\+\_\+function\+::initialize (\begin{DoxyParamCaption}\item[{Func \&\&}]{f,  }\item[{Return($\ast$)(Args...)}]{,  }\item[{const Extra \&...}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Special internal constructor for functors, lambda functions, etc. 
+
+\mbox{\Hypertarget{classpybind11_1_1cpp__function_af14b1ca8e2485667b160a54c910e120f}\label{classpybind11_1_1cpp__function_af14b1ca8e2485667b160a54c910e120f}} 
+\index{pybind11::cpp\_function@{pybind11::cpp\_function}!initialize\_generic@{initialize\_generic}}
+\index{initialize\_generic@{initialize\_generic}!pybind11::cpp\_function@{pybind11::cpp\_function}}
+\doxysubsubsection{\texorpdfstring{initialize\_generic()}{initialize\_generic()}}
+{\footnotesize\ttfamily void pybind11\+::cpp\+\_\+function\+::initialize\+\_\+generic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpybind11_1_1detail_1_1function__record}{detail\+::function\+\_\+record}} $\ast$}]{rec,  }\item[{const char $\ast$}]{text,  }\item[{const std\+::type\+\_\+info $\ast$const $\ast$}]{types,  }\item[{\mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Register a function call with Python (generic non-\/templated code goes here) 
+
+\mbox{\Hypertarget{classpybind11_1_1cpp__function_a58dd2ab6841454f51331f2cc5c6dc235}\label{classpybind11_1_1cpp__function_a58dd2ab6841454f51331f2cc5c6dc235}} 
+\index{pybind11::cpp\_function@{pybind11::cpp\_function}!name@{name}}
+\index{name@{name}!pybind11::cpp\_function@{pybind11::cpp\_function}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpybind11_1_1object}{object}} pybind11\+::cpp\+\_\+function\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the function name. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{pybind11_8h}{pybind11.\+h}}\end{DoxyCompactItemize}

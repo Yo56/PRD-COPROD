@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
   <compounddef id="_tuto_8cpp" kind="file" language="C++">
     <compoundname>Tuto.cpp</compoundname>
     <includes refid="_tuto_8h" local="yes">Tuto.h</includes>
@@ -15,14 +15,14 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
       <node id="1">
-        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/Tuto.cpp</label>
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/Solveur/Tuto.cpp</label>
         <link refid="_tuto_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>iostream</label>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -39,8 +39,8 @@
 <codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>IloEnv<sp/>env;<sp/></highlight><highlight class="comment">//variable<sp/>d&apos;environnement</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IloModel<sp/>model(env);<sp/></highlight><highlight class="comment">//modèle,<sp/>on<sp/>l&apos;associe<sp/>directement<sp/>à l&apos;environnement</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IloCplex<sp/>cplex(model);<sp/></highlight><highlight class="comment">//solveur,<sp/>on<sp/>l&apos;associe<sp/>directement<sp/>au<sp/>modèle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IloModel<sp/>model(env);<sp/></highlight><highlight class="comment">//modele,<sp/>on<sp/>l&apos;associe<sp/>directement<sp/>a<sp/>l&apos;environnement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IloCplex<sp/>cplex(model);<sp/></highlight><highlight class="comment">//solveur,<sp/>on<sp/>l&apos;associe<sp/>directement<sp/>au<sp/>modele</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>----------<sp/>Variables<sp/>--------------</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
@@ -68,7 +68,7 @@
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cplex.solve();</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cplex.writeSolution(</highlight><highlight class="stringliteral">&quot;sol.txt&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>récupère<sp/>la<sp/>solution<sp/>et<sp/>l&apos;affiche<sp/>à l&apos;écran</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>recupere<sp/>la<sp/>solution<sp/>et<sp/>l&apos;affiche<sp/>a<sp/>l&apos;ecran</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>status<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>cplex.getStatus()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>objectif<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>cplex.getObjValue()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>X1<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>cplex.getValue(x1)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
@@ -82,9 +82,9 @@
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>env.end();<sp/></highlight><highlight class="comment">//libération<sp/>de<sp/>l&apos;environnement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>env.end();<sp/></highlight><highlight class="comment">//liberation<sp/>de<sp/>l&apos;environnement</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/Tuto.cpp"/>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/Solveur/Tuto.cpp"/>
   </compounddef>
 </doxygen>

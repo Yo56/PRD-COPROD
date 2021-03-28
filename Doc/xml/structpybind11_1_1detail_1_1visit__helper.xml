@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="structpybind11_1_1detail_1_1visit__helper" kind="struct" language="C++" prot="public">
+    <compoundname>pybind11::detail::visit_helper</compoundname>
+    <includes refid="stl_8h" local="no">stl.h</includes>
+    <templateparamlist>
+      <param>
+        <type>template&lt; typename... &gt; class</type>
+        <declname>Variant</declname>
+        <defname>Variant</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1visit__helper_1ae044094aed0336079441403dc9e81620" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>static auto pybind11::detail::visit_helper&lt; Variant &gt;::call</definition>
+        <argsstring>(Args &amp;&amp;...args) -&gt; decltype(visit(std::forward&lt; Args &gt;(args)...))</argsstring>
+        <name>call</name>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl.h" line="308" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl.h" bodystart="308" bodyend="310"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Helper class which abstracts away variant&apos;s <computeroutput>visit</computeroutput> function. <computeroutput>std::variant</computeroutput> and similar <computeroutput>namespace::variant</computeroutput> types which provide a <computeroutput>namespace::visit()</computeroutput> function are handled here automatically using argument-dependent lookup. Users can provide specializations for other variant-like classes, e.g. <computeroutput>boost::variant</computeroutput> and <computeroutput>boost::apply_visitor</computeroutput>. </para>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl.h" line="306" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/stl.h" bodystart="306" bodyend="311"/>
+    <listofallmembers>
+      <member refid="structpybind11_1_1detail_1_1visit__helper_1ae044094aed0336079441403dc9e81620" prot="public" virt="non-virtual"><scope>pybind11::detail::visit_helper</scope><name>call</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

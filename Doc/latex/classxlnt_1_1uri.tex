@@ -14,9 +14,9 @@ Encapsulates a uniform resource identifier (URI) as described by RFC 3986.
 \item 
 \mbox{\hyperlink{classxlnt_1_1uri_a7ba67292d42fc962ea9b6abfb47bd888}{uri}} ()
 \begin{DoxyCompactList}\small\item\em Constructs an empty URI. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classxlnt_1_1uri_a3c9f471bd8e5e6771fcb397f6257964d}{uri}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&\mbox{\hyperlink{structbase}{base}}, const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&relative)
+\mbox{\hyperlink{classxlnt_1_1uri_a3c9f471bd8e5e6771fcb397f6257964d}{uri}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&base, const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&relative)
 \begin{DoxyCompactList}\small\item\em Constructs a URI by combining base with relative. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classxlnt_1_1uri_a8a0b10a6e47633510e8cfbb9ceff3da6}{uri}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&\mbox{\hyperlink{structbase}{base}}, const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&relative)
+\mbox{\hyperlink{classxlnt_1_1uri_a8a0b10a6e47633510e8cfbb9ceff3da6}{uri}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&base, const \mbox{\hyperlink{classxlnt_1_1path}{path}} \&relative)
 \begin{DoxyCompactList}\small\item\em Constructs a URI by combining base with relative path. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classxlnt_1_1uri_a56d19e26e1ba6d01516155b2e607925f}{uri}} (const std\+::string \&uri\+\_\+string)
 \begin{DoxyCompactList}\small\item\em Constructs a URI by parsing the given uri\+\_\+string. \end{DoxyCompactList}\item 
@@ -40,7 +40,7 @@ std\+::string \mbox{\hyperlink{classxlnt_1_1uri_a40ffb288aa571cd2cb52f5a4772a4c4
 \begin{DoxyCompactList}\small\item\em Returns the host of this URI. E.\+g. the host of \href{http://example.com:80/document}{\texttt{ http\+://example.\+com\+:80/document}} is \char`\"{}example.\+com\char`\"{} \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classxlnt_1_1uri_a0c22164dc18ee484c78060226fb91b3c}{has\+\_\+port}} () const
 \begin{DoxyCompactList}\small\item\em Returns true if a non-\/default port is specified for this URI. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1uri_ad280752472ad85129fc22f9b5ef502ed}{port}} () const
+std\+::size\+\_\+t \mbox{\hyperlink{classxlnt_1_1uri_ad280752472ad85129fc22f9b5ef502ed}{port}} () const
 \begin{DoxyCompactList}\small\item\em Returns the port of this URI. E.\+g. the port of \href{https://example.com:443/document}{\texttt{ https\+://example.\+com\+:443/document}} is \char`\"{}443\char`\"{} \end{DoxyCompactList}\item 
 const class \mbox{\hyperlink{classxlnt_1_1path}{path}} \& \mbox{\hyperlink{classxlnt_1_1uri_ac5eed7c4d96f7dabd0919c2d540b7754}{path}} () const
 \begin{DoxyCompactList}\small\item\em Returns the path of this URI. E.\+g. the path of \href{http://example.com/document}{\texttt{ http\+://example.\+com/document}} is \char`\"{}/document\char`\"{} \end{DoxyCompactList}\item 
@@ -54,9 +54,9 @@ std\+::string \mbox{\hyperlink{classxlnt_1_1uri_af84f58e570ff04a96a12d0c428a60be
 \begin{DoxyCompactList}\small\item\em Returns the fragment section of this URI. E.\+g. the fragment of \href{http://example.com/document\#abc}{\texttt{ http\+://example.\+com/document\#abc}} is \char`\"{}abc\char`\"{} \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classxlnt_1_1uri_a6ccfabb6971665c571bad03b2d52ce56}{to\+\_\+string}} () const
 \begin{DoxyCompactList}\small\item\em Returns a string representation of this URI. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classxlnt_1_1uri}{uri}} \mbox{\hyperlink{classxlnt_1_1uri_aefe10f91bdb0b6f78c7ba38d26774ffb}{make\+\_\+absolute}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&\mbox{\hyperlink{structbase}{base}})
+\mbox{\hyperlink{classxlnt_1_1uri}{uri}} \mbox{\hyperlink{classxlnt_1_1uri_aefe10f91bdb0b6f78c7ba38d26774ffb}{make\+\_\+absolute}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&base)
 \begin{DoxyCompactList}\small\item\em If this URI is relative, an absolute URI will be returned by appending the path to the given absolute base URI. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classxlnt_1_1uri}{uri}} \mbox{\hyperlink{classxlnt_1_1uri_a247dd17de4a6f8fc871799e14eabe7e7}{make\+\_\+reference}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&\mbox{\hyperlink{structbase}{base}})
+\mbox{\hyperlink{classxlnt_1_1uri}{uri}} \mbox{\hyperlink{classxlnt_1_1uri_a247dd17de4a6f8fc871799e14eabe7e7}{make\+\_\+reference}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&base)
 \begin{DoxyCompactList}\small\item\em If this URI is absolute, a relative URI will be returned by removing the common base path from the given absolute base URI. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classxlnt_1_1uri_ad72be3cd127e732aca2d5e3db8a63d2e}{operator==}} (const \mbox{\hyperlink{classxlnt_1_1uri}{uri}} \&other) const
 \begin{DoxyCompactList}\small\item\em Returns true if this URI is equivalent to other. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -265,7 +265,7 @@ Returns the path of this URI. E.\+g. the path of \href{http://example.com/docume
 \index{xlnt::uri@{xlnt::uri}!port@{port}}
 \index{port@{port}!xlnt::uri@{xlnt::uri}}
 \doxysubsubsection{\texorpdfstring{port()}{port()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::uri\+::port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily std\+::size\+\_\+t xlnt\+::uri\+::port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 

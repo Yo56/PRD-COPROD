@@ -18,7 +18,7 @@ Describes a style which has a name and can be applied to multiple individual for
 \begin{DoxyCompactList}\small\item\em Default copy constructor. Constructs a style using the same PIMPL as other. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classxlnt_1_1style_af8d322ba8cd29a536c54e80472577198}{name}} () const
 \begin{DoxyCompactList}\small\item\em Returns the name of this style. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classxlnt_1_1style}{style}} \mbox{\hyperlink{classxlnt_1_1style_aad924e4d2430322fdfdc7fab5921d4dc}{name}} (const std\+::string \&\mbox{\hyperlink{structname}{name}})
+\mbox{\hyperlink{classxlnt_1_1style}{style}} \mbox{\hyperlink{classxlnt_1_1style_aad924e4d2430322fdfdc7fab5921d4dc}{name}} (const std\+::string \&name)
 \begin{DoxyCompactList}\small\item\em Sets the name of this style to name. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classxlnt_1_1style_a6a384abfdeb437705184c32317084a96}{hidden}} () const
 \begin{DoxyCompactList}\small\item\em Returns true if this style is hidden. \end{DoxyCompactList}\item 
@@ -26,7 +26,7 @@ bool \mbox{\hyperlink{classxlnt_1_1style_a6a384abfdeb437705184c32317084a96}{hidd
 \begin{DoxyCompactList}\small\item\em Sets the hidden state of this style to value. A hidden style will not be shown in the list of selectable styles in the UI, but will still apply its formatting to cells using it. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classxlnt_1_1style_aa2c294a5b51f93fa1ebc7fbfe41c72cd}{custom\+\_\+builtin}} () const
 \begin{DoxyCompactList}\small\item\em Returns true if this is a builtin style that has been customized and should therefore be persisted in the workbook. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1style_ad18be2affc80439670daae02a90a7d6d}{builtin\+\_\+id}} () const
+std\+::size\+\_\+t \mbox{\hyperlink{classxlnt_1_1style_ad18be2affc80439670daae02a90a7d6d}{builtin\+\_\+id}} () const
 \begin{DoxyCompactList}\small\item\em Returns the index of the builtin style that this style is an instance of or is a customized version thereof. If \mbox{\hyperlink{classxlnt_1_1style_a7a6abdea098d68174527b94a70c8381a}{style\+::builtin()}} is false, this will throw an \mbox{\hyperlink{classxlnt_1_1invalid__attribute}{invalid\+\_\+attribute}} exception. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classxlnt_1_1style_a7a6abdea098d68174527b94a70c8381a}{builtin}} () const
 \begin{DoxyCompactList}\small\item\em Returns true if this is a builtin style. \end{DoxyCompactList}\item 
@@ -190,7 +190,7 @@ Returns true if this is a builtin style.
 \index{xlnt::style@{xlnt::style}!builtin\_id@{builtin\_id}}
 \index{builtin\_id@{builtin\_id}!xlnt::style@{xlnt::style}}
 \doxysubsubsection{\texorpdfstring{builtin\_id()}{builtin\_id()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} xlnt\+::style\+::builtin\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily std\+::size\+\_\+t xlnt\+::style\+::builtin\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 

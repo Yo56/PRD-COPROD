@@ -1,0 +1,134 @@
+\hypertarget{structpybind11_1_1detail_1_1set__caster}{}\doxysection{pybind11\+::detail\+::set\+\_\+caster$<$ Type, Key $>$ Struct Template Reference}
+\label{structpybind11_1_1detail_1_1set__caster}\index{pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}}
+
+
+{\ttfamily \#include $<$stl.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_ad4346bf2e707342a85f693fa2bacd36f}{type}} = Type
+\item 
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_a8a99f3363a1c5601c93ba40319d6fef8}{key\+\_\+conv}} = \mbox{\hyperlink{namespacepybind11_1_1detail_a160181d61e7d73d29060503ffdf13e6f}{make\+\_\+caster}}$<$ Key $>$
+\item 
+{\footnotesize template$<$typename T\+\_\+ $>$ }\\using \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_a245fdf3b634c232ebaffa1d1ad80aa3c}{cast\+\_\+op\+\_\+type}} = \mbox{\hyperlink{namespacepybind11_1_1detail_a3e4f52c827f0391c3ca8166590c559c9}{pybind11\+::detail\+::movable\+\_\+cast\+\_\+op\+\_\+type}}$<$ T\+\_\+ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_a6cbe87df5411e14d8bb84978b295de5e}{load}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} src, bool convert)
+\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_a6e46884db18ce3c0a4d25449c925cc77}{operator type $\ast$}} ()
+\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_a15c38d080e4d74c1c2e5ef1a7cc980e9}{operator type \&}} ()
+\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_ab903e9ac406798131de20d8c1bc31824}{operator type \&\&}} () \&\&
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_a0e9a412d3a7184c4a0ccc9dfd888dcd2}{cast}} (T \&\&src, \mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}} policy, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} parent)
+\item 
+\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1descr}{pybind11\+::detail\+::descr}} \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_a0c574390ba98783e59039273488fdba5}{name}} ()
+\item 
+{\footnotesize template$<$typename T\+\_\+ , enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same$<$ type, remove\+\_\+cv\+\_\+t$<$ T\+\_\+ $>$$>$\+::value, int $>$  = 0$>$ }\\static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_a54284de80a48602de1b09acad1ba2623}{cast}} (T\+\_\+ $\ast$src, \mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}} policy, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} parent)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_ad4346bf2e707342a85f693fa2bacd36f}{type}} \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_a00a7b88983923f3802a1f7994930d288}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1set__caster_a245fdf3b634c232ebaffa1d1ad80aa3c}\label{structpybind11_1_1detail_1_1set__caster_a245fdf3b634c232ebaffa1d1ad80aa3c}} 
+\index{pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}!cast\_op\_type@{cast\_op\_type}}
+\index{cast\_op\_type@{cast\_op\_type}!pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}}
+\doxysubsubsection{\texorpdfstring{cast\_op\_type}{cast\_op\_type}}
+{\footnotesize\ttfamily template$<$typename Type , typename Key $>$ \\
+template$<$typename T\+\_\+ $>$ \\
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster}{pybind11\+::detail\+::set\+\_\+caster}}$<$ Type, Key $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_a245fdf3b634c232ebaffa1d1ad80aa3c}{cast\+\_\+op\+\_\+type}} =  \mbox{\hyperlink{namespacepybind11_1_1detail_a3e4f52c827f0391c3ca8166590c559c9}{pybind11\+::detail\+::movable\+\_\+cast\+\_\+op\+\_\+type}}$<$T\+\_\+$>$}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1set__caster_a8a99f3363a1c5601c93ba40319d6fef8}\label{structpybind11_1_1detail_1_1set__caster_a8a99f3363a1c5601c93ba40319d6fef8}} 
+\index{pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}!key\_conv@{key\_conv}}
+\index{key\_conv@{key\_conv}!pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}}
+\doxysubsubsection{\texorpdfstring{key\_conv}{key\_conv}}
+{\footnotesize\ttfamily template$<$typename Type , typename Key $>$ \\
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster}{pybind11\+::detail\+::set\+\_\+caster}}$<$ Type, Key $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_a8a99f3363a1c5601c93ba40319d6fef8}{key\+\_\+conv}} =  \mbox{\hyperlink{namespacepybind11_1_1detail_a160181d61e7d73d29060503ffdf13e6f}{make\+\_\+caster}}$<$Key$>$}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1set__caster_ad4346bf2e707342a85f693fa2bacd36f}\label{structpybind11_1_1detail_1_1set__caster_ad4346bf2e707342a85f693fa2bacd36f}} 
+\index{pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}!type@{type}}
+\index{type@{type}!pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily template$<$typename Type , typename Key $>$ \\
+using \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster}{pybind11\+::detail\+::set\+\_\+caster}}$<$ Type, Key $>$\+::\mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_ad4346bf2e707342a85f693fa2bacd36f}{type}} =  Type}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1set__caster_a0e9a412d3a7184c4a0ccc9dfd888dcd2}\label{structpybind11_1_1detail_1_1set__caster_a0e9a412d3a7184c4a0ccc9dfd888dcd2}} 
+\index{pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}!cast@{cast}}
+\index{cast@{cast}!pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type , typename Key $>$ \\
+template$<$typename T $>$ \\
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster}{pybind11\+::detail\+::set\+\_\+caster}}$<$ Type, Key $>$\+::cast (\begin{DoxyParamCaption}\item[{T \&\&}]{src,  }\item[{\mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}}}]{policy,  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1set__caster_a54284de80a48602de1b09acad1ba2623}\label{structpybind11_1_1detail_1_1set__caster_a54284de80a48602de1b09acad1ba2623}} 
+\index{pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}!cast@{cast}}
+\index{cast@{cast}!pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type , typename Key $>$ \\
+template$<$typename T\+\_\+ , enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same$<$ type, remove\+\_\+cv\+\_\+t$<$ T\+\_\+ $>$$>$\+::value, int $>$  = 0$>$ \\
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster}{pybind11\+::detail\+::set\+\_\+caster}}$<$ Type, Key $>$\+::cast (\begin{DoxyParamCaption}\item[{T\+\_\+ $\ast$}]{src,  }\item[{\mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}}}]{policy,  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1set__caster_a6cbe87df5411e14d8bb84978b295de5e}\label{structpybind11_1_1detail_1_1set__caster_a6cbe87df5411e14d8bb84978b295de5e}} 
+\index{pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}!load@{load}}
+\index{load@{load}!pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$typename Type , typename Key $>$ \\
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster}{pybind11\+::detail\+::set\+\_\+caster}}$<$ Type, Key $>$\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{src,  }\item[{bool}]{convert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1set__caster_a0c574390ba98783e59039273488fdba5}\label{structpybind11_1_1detail_1_1set__caster_a0c574390ba98783e59039273488fdba5}} 
+\index{pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}!name@{name}}
+\index{name@{name}!pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily template$<$typename Type , typename Key $>$ \\
+\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1descr}{pybind11\+::detail\+::descr}} \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster}{pybind11\+::detail\+::set\+\_\+caster}}$<$ Type, Key $>$\+::\mbox{\hyperlink{structpybind11_1_1name}{name}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1set__caster_a15c38d080e4d74c1c2e5ef1a7cc980e9}\label{structpybind11_1_1detail_1_1set__caster_a15c38d080e4d74c1c2e5ef1a7cc980e9}} 
+\index{pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}!operator type \&@{operator type \&}}
+\index{operator type \&@{operator type \&}!pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}}
+\doxysubsubsection{\texorpdfstring{operator type \&()}{operator type \&()}}
+{\footnotesize\ttfamily template$<$typename Type , typename Key $>$ \\
+\mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster}{pybind11\+::detail\+::set\+\_\+caster}}$<$ Type, Key $>$\+::operator \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_ad4346bf2e707342a85f693fa2bacd36f}{type}} \& (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1set__caster_ab903e9ac406798131de20d8c1bc31824}\label{structpybind11_1_1detail_1_1set__caster_ab903e9ac406798131de20d8c1bc31824}} 
+\index{pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}!operator type \&\&@{operator type \&\&}}
+\index{operator type \&\&@{operator type \&\&}!pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}}
+\doxysubsubsection{\texorpdfstring{operator type \&\&()}{operator type \&\&()}}
+{\footnotesize\ttfamily template$<$typename Type , typename Key $>$ \\
+\mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster}{pybind11\+::detail\+::set\+\_\+caster}}$<$ Type, Key $>$\+::operator \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_ad4346bf2e707342a85f693fa2bacd36f}{type}} \&\& (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1set__caster_a6e46884db18ce3c0a4d25449c925cc77}\label{structpybind11_1_1detail_1_1set__caster_a6e46884db18ce3c0a4d25449c925cc77}} 
+\index{pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}!operator type $\ast$@{operator type $\ast$}}
+\index{operator type $\ast$@{operator type $\ast$}!pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}}
+\doxysubsubsection{\texorpdfstring{operator type $\ast$()}{operator type *()}}
+{\footnotesize\ttfamily template$<$typename Type , typename Key $>$ \\
+\mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster}{pybind11\+::detail\+::set\+\_\+caster}}$<$ Type, Key $>$\+::operator \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_ad4346bf2e707342a85f693fa2bacd36f}{type}} $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1set__caster_a00a7b88983923f3802a1f7994930d288}\label{structpybind11_1_1detail_1_1set__caster_a00a7b88983923f3802a1f7994930d288}} 
+\index{pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}!value@{value}}
+\index{value@{value}!pybind11::detail::set\_caster$<$ Type, Key $>$@{pybind11::detail::set\_caster$<$ Type, Key $>$}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily template$<$typename Type , typename Key $>$ \\
+\mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster_ad4346bf2e707342a85f693fa2bacd36f}{type}} \mbox{\hyperlink{structpybind11_1_1detail_1_1set__caster}{pybind11\+::detail\+::set\+\_\+caster}}$<$ Type, Key $>$\+::value\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{stl_8h}{stl.\+h}}\end{DoxyCompactItemize}

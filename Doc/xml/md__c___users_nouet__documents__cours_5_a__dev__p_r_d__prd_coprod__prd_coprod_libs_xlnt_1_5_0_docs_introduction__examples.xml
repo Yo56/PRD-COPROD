@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__examples" kind="page">
+    <compoundname>md_C__Users_nouet_Documents_Cours_5A_Dev_PRD_PrdCoprod_PrdCoprod_libs_xlnt_1_5_0_docs_introduction_Examples</compoundname>
+    <title>Examples</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect2 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__examples_1autotoc_md154">
+<title>Simple - reading from an existing xlsx spread sheet.</title>
+<para>The following C plus plus code will read the values from an xlsx file and print the string values to the screen. This is a very simple example to get you started.</para>
+<para><programlisting><codeline><highlight class="normal">#include<sp/>&lt;iostream&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;xlnt/xlnt.hpp&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xlnt::workbook<sp/>wb;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wb.load(&quot;/home/timothymccallum/test.xlsx&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>auto<sp/>ws<sp/>=<sp/>wb.active_sheet();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::clog<sp/>&lt;&lt;<sp/>&quot;Processing<sp/>spread<sp/>sheet&quot;<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>row<sp/>:<sp/>ws.rows(false))<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>cell<sp/>:<sp/>row)<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::clog<sp/>&lt;&lt;<sp/>cell.to_string()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::clog<sp/>&lt;&lt;<sp/>&quot;Processing<sp/>complete&quot;<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> Save the contents of the above file <programlisting><codeline><highlight class="normal">/home/timothymccallum/process.cpp</highlight></codeline>
+</programlisting> Compile by typing the following command <programlisting><codeline><highlight class="normal">g++<sp/>-std=c++14<sp/>-lxlnt<sp/>process.cpp<sp/>-o<sp/>process</highlight></codeline>
+</programlisting> Excecute by typing the following command <programlisting><codeline><highlight class="normal">./process</highlight></codeline>
+</programlisting> The output of the program, in my case, is as follows <programlisting><codeline><highlight class="normal">Processing<sp/>spread<sp/>sheet</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>cell<sp/>A1.</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>cell<sp/>B1</highlight></codeline>
+<codeline><highlight class="normal">…<sp/>and<sp/>this<sp/>is<sp/>cell<sp/>C1</highlight></codeline>
+<codeline><highlight class="normal">We<sp/>are<sp/>now<sp/>on<sp/>the<sp/>second<sp/>row<sp/>at<sp/>cell<sp/>A2</highlight></codeline>
+<codeline><highlight class="normal">B2</highlight></codeline>
+<codeline><highlight class="normal">C2</highlight></codeline>
+<codeline><highlight class="normal">Processing<sp/>complete</highlight></codeline>
+</programlisting> As you can see the process.cpp file simply walks through the spread sheet values row by row and column by column (A1, B1, C1, A2, B2, C2 and so on).</para>
+</sect2>
+<sect2 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__examples_1autotoc_md155">
+<title>Simple - storing a spread sheet in a 2 dimensional C++ Vector for further processing</title>
+<para>Loading a spread sheet into a Vector provides oppourtunities for you to perform high performance processing. There will be more examples on performing fast look-ups, merging data, performing deduplication and more. For now, let&apos;s just learn how to get the spread sheet loaded into memory. <programlisting><codeline><highlight class="normal">#include<sp/>&lt;iostream&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;xlnt/xlnt.hpp&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;vector&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xlnt::workbook<sp/>wb;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wb.load(&quot;/home/timothymccallum/test.xlsx&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>auto<sp/>ws<sp/>=<sp/>wb.active_sheet();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::clog<sp/>&lt;&lt;<sp/>&quot;Processing<sp/>spread<sp/>sheet&quot;<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::clog<sp/>&lt;&lt;<sp/>&quot;Creating<sp/>a<sp/>single<sp/>vector<sp/>which<sp/>stores<sp/>the<sp/>whole<sp/>spread<sp/>sheet&quot;<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;<sp/>std::vector&lt;std::string&gt;<sp/>&gt;<sp/>theWholeSpreadSheet;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>row<sp/>:<sp/>ws.rows(false))<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::clog<sp/>&lt;&lt;<sp/>&quot;Creating<sp/>a<sp/>fresh<sp/>vector<sp/>for<sp/>just<sp/>this<sp/>row<sp/>in<sp/>the<sp/>spread<sp/>sheet&quot;<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>aSingleRow;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>cell<sp/>:<sp/>row)<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::clog<sp/>&lt;&lt;<sp/>&quot;Adding<sp/>this<sp/>cell<sp/>to<sp/>the<sp/>row&quot;<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aSingleRow.push_back(cell.to_string());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::clog<sp/>&lt;&lt;<sp/>&quot;Adding<sp/>this<sp/>entire<sp/>row<sp/>to<sp/>the<sp/>vector<sp/>which<sp/>stores<sp/>the<sp/>whole<sp/>spread<sp/>sheet&quot;<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>theWholeSpreadSheet.push_back(aSingleRow);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::clog<sp/>&lt;&lt;<sp/>&quot;Processing<sp/>complete&quot;<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::clog<sp/>&lt;&lt;<sp/>&quot;Reading<sp/>the<sp/>vector<sp/>and<sp/>printing<sp/>output<sp/>to<sp/>the<sp/>screen&quot;<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>rowInt<sp/>=<sp/>0;<sp/>rowInt<sp/>&lt;<sp/>theWholeSpreadSheet.size();<sp/>rowInt++)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>colInt<sp/>=<sp/>0;<sp/>colInt<sp/>&lt;<sp/>theWholeSpreadSheet.at(rowInt).size();<sp/>colInt++)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>theWholeSpreadSheet.at(rowInt).at(colInt)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> Save the contents of the above file <programlisting><codeline><highlight class="normal">/home/timothymccallum/process.cpp</highlight></codeline>
+</programlisting> Compile by typing the following command <programlisting><codeline><highlight class="normal">g++<sp/>-std=c++14<sp/>-lxlnt<sp/>process.cpp<sp/>-o<sp/>process</highlight></codeline>
+</programlisting> Excecute by typing the following command <programlisting><codeline><highlight class="normal">./process</highlight></codeline>
+</programlisting> The output of the program, in my case, is as follows <programlisting><codeline><highlight class="normal">Processing<sp/>spread<sp/>sheet</highlight></codeline>
+<codeline><highlight class="normal">Creating<sp/>a<sp/>single<sp/>vector<sp/>which<sp/>stores<sp/>the<sp/>whole<sp/>spread<sp/>sheet</highlight></codeline>
+<codeline><highlight class="normal">Creating<sp/>a<sp/>fresh<sp/>vector<sp/>for<sp/>just<sp/>this<sp/>row<sp/>in<sp/>the<sp/>spread<sp/>sheet</highlight></codeline>
+<codeline><highlight class="normal">Adding<sp/>this<sp/>cell<sp/>to<sp/>the<sp/>row</highlight></codeline>
+<codeline><highlight class="normal">Adding<sp/>this<sp/>cell<sp/>to<sp/>the<sp/>row</highlight></codeline>
+<codeline><highlight class="normal">Adding<sp/>this<sp/>cell<sp/>to<sp/>the<sp/>row</highlight></codeline>
+<codeline><highlight class="normal">Adding<sp/>this<sp/>entire<sp/>row<sp/>to<sp/>the<sp/>vector<sp/>which<sp/>stores<sp/>the<sp/>whole<sp/>spread<sp/>sheet</highlight></codeline>
+<codeline><highlight class="normal">Creating<sp/>a<sp/>fresh<sp/>vector<sp/>for<sp/>just<sp/>this<sp/>row<sp/>in<sp/>the<sp/>spread<sp/>sheet</highlight></codeline>
+<codeline><highlight class="normal">Adding<sp/>this<sp/>cell<sp/>to<sp/>the<sp/>row</highlight></codeline>
+<codeline><highlight class="normal">Adding<sp/>this<sp/>cell<sp/>to<sp/>the<sp/>row</highlight></codeline>
+<codeline><highlight class="normal">Adding<sp/>this<sp/>cell<sp/>to<sp/>the<sp/>row</highlight></codeline>
+<codeline><highlight class="normal">Adding<sp/>this<sp/>entire<sp/>row<sp/>to<sp/>the<sp/>vector<sp/>which<sp/>stores<sp/>the<sp/>whole<sp/>spread<sp/>sheet</highlight></codeline>
+<codeline><highlight class="normal">Processing<sp/>complete</highlight></codeline>
+<codeline><highlight class="normal">Reading<sp/>the<sp/>vector<sp/>and<sp/>printing<sp/>output<sp/>to<sp/>the<sp/>screen</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>cell<sp/>A1.</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>cell<sp/>B1</highlight></codeline>
+<codeline><highlight class="normal">…<sp/>and<sp/>this<sp/>is<sp/>cell<sp/>C1</highlight></codeline>
+<codeline><highlight class="normal">We<sp/>are<sp/>now<sp/>on<sp/>the<sp/>second<sp/>row<sp/>at<sp/>cell<sp/>A2</highlight></codeline>
+<codeline><highlight class="normal">B2</highlight></codeline>
+<codeline><highlight class="normal">C2</highlight></codeline>
+</programlisting> You will have noticed that this process is very fast. If you type the &quot;time&quot; as shown below, you can measure just how fast loading and retrieving your spread sheet is, using xlnt; In this case only a fraction of a second. More on this later. <programlisting><codeline><highlight class="normal">time<sp/>./process<sp/></highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal">real<sp/><sp/><sp/><sp/>0m0.044s</highlight></codeline>
+</programlisting> </para>
+</sect2>
+<sect2 id="md__c___users_nouet__documents__cours_5_a__dev__p_r_d__prd_coprod__prd_coprod_libs_xlnt_1_5_0_docs_introduction__examples_1autotoc_md156">
+<title>Simple - writing values to a new xlsx spread sheet.</title>
+<para><programlisting><codeline><highlight class="normal">#include<sp/>&lt;iostream&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;xlnt/xlnt.hpp&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;vector&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;string&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//Creating<sp/>a<sp/>2<sp/>dimensional<sp/>vector<sp/>which<sp/>we<sp/>will<sp/>write<sp/>values<sp/>to</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;<sp/>std::vector&lt;std::string&gt;<sp/>&gt;<sp/>wholeWorksheet;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//Looping<sp/>through<sp/>each<sp/>row<sp/>(100<sp/>rows<sp/>as<sp/>per<sp/>the<sp/>second<sp/>argument<sp/>in<sp/>the<sp/>for<sp/>loop)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>outer<sp/>=<sp/>0;<sp/>outer<sp/>&lt;<sp/>100;<sp/>outer++)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//Creating<sp/>a<sp/>fresh<sp/>vector<sp/>for<sp/>a<sp/>fresh<sp/>row</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>singleRow;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//Looping<sp/>through<sp/>each<sp/>of<sp/>the<sp/>columns<sp/>(100<sp/>as<sp/>per<sp/>the<sp/>second<sp/>argument<sp/>in<sp/>the<sp/>for<sp/>loop)<sp/>in<sp/>this<sp/>particular<sp/>row</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for(int<sp/>inner<sp/>=<sp/>0;<sp/>inner<sp/>&lt;<sp/>100;<sp/>inner++)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//Adding<sp/>a<sp/>single<sp/>value<sp/>in<sp/>each<sp/>cell<sp/>of<sp/>the<sp/>row<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>val<sp/>=<sp/>std::to_string(inner<sp/>+<sp/>1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>singleRow.push_back(val);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//Adding<sp/>the<sp/>single<sp/>row<sp/>to<sp/>the<sp/>2<sp/>dimensional<sp/>vector</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wholeWorksheet.push_back(singleRow);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::clog<sp/>&lt;&lt;<sp/>&quot;Writing<sp/>to<sp/>row<sp/>&quot;<sp/>&lt;&lt;<sp/>outer<sp/>&lt;&lt;<sp/>&quot;<sp/>in<sp/>the<sp/>vector<sp/>&quot;<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//Writing<sp/>to<sp/>the<sp/>spread<sp/>sheet</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//Creating<sp/>the<sp/>output<sp/>workbook<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::clog<sp/>&lt;&lt;<sp/>&quot;Creating<sp/>workbook&quot;<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xlnt::workbook<sp/>wbOut;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//Setting<sp/>the<sp/>destination<sp/>output<sp/>file<sp/>name</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>dest_filename<sp/>=<sp/>&quot;output.xlsx&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//Creating<sp/>the<sp/>output<sp/>worksheet</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>xlnt::worksheet<sp/>wsOut<sp/>=<sp/>wbOut.active_sheet();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//Giving<sp/>the<sp/>output<sp/>worksheet<sp/>a<sp/>title/name</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wsOut.title(&quot;data&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//We<sp/>will<sp/>now<sp/>be<sp/>looping<sp/>through<sp/>the<sp/>2<sp/>dimensional<sp/>vector<sp/>which<sp/>we<sp/>created<sp/>above</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//In<sp/>this<sp/>case<sp/>we<sp/>have<sp/>two<sp/>iterators<sp/>one<sp/>for<sp/>the<sp/>outer<sp/>loop<sp/>(row)<sp/>and<sp/>one<sp/>for<sp/>the<sp/>inner<sp/>loop<sp/>(column)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::clog<sp/>&lt;&lt;<sp/>&quot;Looping<sp/>through<sp/>vector<sp/>and<sp/>writing<sp/>to<sp/>spread<sp/>sheet&quot;<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>fOut<sp/>=<sp/>0;<sp/>fOut<sp/>&lt;<sp/>wholeWorksheet.size();<sp/>fOut++)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::clog<sp/>&lt;&lt;<sp/>&quot;Row&quot;<sp/>&lt;&lt;<sp/>fOut<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>fIn<sp/>=<sp/>0;<sp/>fIn<sp/>&lt;<sp/>wholeWorksheet.at(fOut).size();<sp/>fIn++)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//Take<sp/>notice<sp/>of<sp/>the<sp/>difference<sp/>between<sp/>accessing<sp/>the<sp/>vector<sp/>and<sp/>accessing<sp/>the<sp/>work<sp/>sheet</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//As<sp/>you<sp/>may<sp/>already<sp/>know<sp/>Excel<sp/>spread<sp/>sheets<sp/>start<sp/>at<sp/>row<sp/>1<sp/>and<sp/>column<sp/>1<sp/>(not<sp/>row<sp/>0<sp/>and<sp/>column<sp/>0<sp/>like<sp/>you<sp/>would<sp/>expect<sp/>from<sp/>a<sp/>C++<sp/>vector)<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//In<sp/>short<sp/>the<sp/>xlnt<sp/>cell<sp/>reference<sp/>starts<sp/>at<sp/>column<sp/>1<sp/>row<sp/>1<sp/>(hence<sp/>the<sp/>+<sp/>1s<sp/>below)<sp/>and<sp/>the<sp/>vector<sp/>reference<sp/>starts<sp/>at<sp/>row<sp/>0<sp/>and<sp/>column<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wsOut.cell(xlnt::cell_reference(fIn<sp/>+<sp/>1,<sp/>fOut<sp/>+<sp/>1)).value(wholeWorksheet.at(fOut).at(fIn));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//Further<sp/>clarification<sp/>to<sp/>avoid<sp/>confusion</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//Cell<sp/>reference<sp/>arguments<sp/>are<sp/>(column<sp/>number,<sp/>row<sp/>number);<sp/>e.g.<sp/>cell_reference(fIn<sp/>+<sp/>1,<sp/>fOut<sp/>+<sp/>1)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//Vector<sp/>arguments<sp/>are<sp/>(row<sp/>number,<sp/>column<sp/>number);<sp/>e.g.<sp/>wholeWorksheet.at(fOut).at(fIn)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::clog<sp/>&lt;&lt;<sp/>&quot;Finished<sp/>writing<sp/>spread<sp/>sheet&quot;<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wbOut.save(dest_filename);<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> This process is also quite quick; a time command showed that xlnt was able to create and write 10, 000 values to the output spread sheet in 0.582 seconds. </para>
+</sect2>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/docs/introduction/Examples.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,120 @@
+\hypertarget{structpybind11_1_1arg}{}\doxysection{pybind11\+::arg Struct Reference}
+\label{structpybind11_1_1arg}\index{pybind11::arg@{pybind11::arg}}
+
+
+{\ttfamily \#include $<$cast.\+h$>$}
+
+Inheritance diagram for pybind11\+::arg\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structpybind11_1_1arg}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{structpybind11_1_1arg_a4e7680725e9ed71188842ca15ac9c72f}{arg}} (const char $\ast$\mbox{\hyperlink{structpybind11_1_1name}{name}}=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs an argument with the name of the argument; if null or omitted, this is a positional argument. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structpybind11_1_1arg__v}{arg\+\_\+v}} \mbox{\hyperlink{structpybind11_1_1arg_ab8c74176180307470e9c42384cb38dff}{operator=}} (T \&\&value) const
+\begin{DoxyCompactList}\small\item\em Assign a value to this argument. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpybind11_1_1arg}{arg}} \& \mbox{\hyperlink{structpybind11_1_1arg_ac4fd4641a090ff65985db1ec6cc244df}{noconvert}} (bool flag=true)
+\begin{DoxyCompactList}\small\item\em Indicate that the type should not be converted in the type caster. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpybind11_1_1arg}{arg}} \& \mbox{\hyperlink{structpybind11_1_1arg_a21b1ff05c2afb3d55e686edba37f0cfc}{none}} (bool flag=true)
+\begin{DoxyCompactList}\small\item\em Indicates that the argument should/shouldn\textquotesingle{}t allow None (e.\+g. for nullable pointer args) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{structpybind11_1_1arg_a3bad744daa662c35b22165819337787b}{name}}
+\begin{DoxyCompactList}\small\item\em If non-\/null, this is a named kwargs argument. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structpybind11_1_1arg_a5a7c9ac34c9ef90f0c5aaa98a620d225}{flag\+\_\+noconvert}}\+: 1
+\begin{DoxyCompactList}\small\item\em If set, do not allow conversion (requires a supporting type caster!) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structpybind11_1_1arg_a4a5e70906a33c9090be550fa3ea1137c}{flag\+\_\+none}}\+: 1
+\begin{DoxyCompactList}\small\item\em If set (the default), allow None to be passed to this argument. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Annotation for arguments 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structpybind11_1_1arg_a4e7680725e9ed71188842ca15ac9c72f}\label{structpybind11_1_1arg_a4e7680725e9ed71188842ca15ac9c72f}} 
+\index{pybind11::arg@{pybind11::arg}!arg@{arg}}
+\index{arg@{arg}!pybind11::arg@{pybind11::arg}}
+\doxysubsubsection{\texorpdfstring{arg()}{arg()}}
+{\footnotesize\ttfamily constexpr pybind11\+::arg\+::arg (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}}
+
+
+
+Constructs an argument with the name of the argument; if null or omitted, this is a positional argument. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpybind11_1_1arg_ac4fd4641a090ff65985db1ec6cc244df}\label{structpybind11_1_1arg_ac4fd4641a090ff65985db1ec6cc244df}} 
+\index{pybind11::arg@{pybind11::arg}!noconvert@{noconvert}}
+\index{noconvert@{noconvert}!pybind11::arg@{pybind11::arg}}
+\doxysubsubsection{\texorpdfstring{noconvert()}{noconvert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpybind11_1_1arg}{arg}}\& pybind11\+::arg\+::noconvert (\begin{DoxyParamCaption}\item[{bool}]{flag = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Indicate that the type should not be converted in the type caster. 
+
+\mbox{\Hypertarget{structpybind11_1_1arg_a21b1ff05c2afb3d55e686edba37f0cfc}\label{structpybind11_1_1arg_a21b1ff05c2afb3d55e686edba37f0cfc}} 
+\index{pybind11::arg@{pybind11::arg}!none@{none}}
+\index{none@{none}!pybind11::arg@{pybind11::arg}}
+\doxysubsubsection{\texorpdfstring{none()}{none()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpybind11_1_1arg}{arg}}\& pybind11\+::arg\+::none (\begin{DoxyParamCaption}\item[{bool}]{flag = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Indicates that the argument should/shouldn\textquotesingle{}t allow None (e.\+g. for nullable pointer args) 
+
+\mbox{\Hypertarget{structpybind11_1_1arg_ab8c74176180307470e9c42384cb38dff}\label{structpybind11_1_1arg_ab8c74176180307470e9c42384cb38dff}} 
+\index{pybind11::arg@{pybind11::arg}!operator=@{operator=}}
+\index{operator=@{operator=}!pybind11::arg@{pybind11::arg}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structpybind11_1_1arg__v}{arg\+\_\+v}} pybind11\+::arg\+::operator= (\begin{DoxyParamCaption}\item[{T \&\&}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Assign a value to this argument. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpybind11_1_1arg_a5a7c9ac34c9ef90f0c5aaa98a620d225}\label{structpybind11_1_1arg_a5a7c9ac34c9ef90f0c5aaa98a620d225}} 
+\index{pybind11::arg@{pybind11::arg}!flag\_noconvert@{flag\_noconvert}}
+\index{flag\_noconvert@{flag\_noconvert}!pybind11::arg@{pybind11::arg}}
+\doxysubsubsection{\texorpdfstring{flag\_noconvert}{flag\_noconvert}}
+{\footnotesize\ttfamily bool pybind11\+::arg\+::flag\+\_\+noconvert}
+
+
+
+If set, do not allow conversion (requires a supporting type caster!) 
+
+\mbox{\Hypertarget{structpybind11_1_1arg_a4a5e70906a33c9090be550fa3ea1137c}\label{structpybind11_1_1arg_a4a5e70906a33c9090be550fa3ea1137c}} 
+\index{pybind11::arg@{pybind11::arg}!flag\_none@{flag\_none}}
+\index{flag\_none@{flag\_none}!pybind11::arg@{pybind11::arg}}
+\doxysubsubsection{\texorpdfstring{flag\_none}{flag\_none}}
+{\footnotesize\ttfamily bool pybind11\+::arg\+::flag\+\_\+none}
+
+
+
+If set (the default), allow None to be passed to this argument. 
+
+\mbox{\Hypertarget{structpybind11_1_1arg_a3bad744daa662c35b22165819337787b}\label{structpybind11_1_1arg_a3bad744daa662c35b22165819337787b}} 
+\index{pybind11::arg@{pybind11::arg}!name@{name}}
+\index{name@{name}!pybind11::arg@{pybind11::arg}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily const char$\ast$ pybind11\+::arg\+::name}
+
+
+
+If non-\/null, this is a named kwargs argument. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{cast_8h}{cast.\+h}}\end{DoxyCompactItemize}

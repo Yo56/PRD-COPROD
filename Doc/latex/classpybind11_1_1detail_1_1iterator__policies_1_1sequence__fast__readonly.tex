@@ -1,0 +1,122 @@
+\hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly}{}\doxysection{pybind11\+::detail\+::iterator\+\_\+policies\+::sequence\+\_\+fast\+\_\+readonly Class Reference}
+\label{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly}\index{pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}}
+
+
+Lightweight iterator policy using just a simple pointer\+: see {\ttfamily Py\+Sequence\+\_\+\+Fast\+\_\+\+ITEMS}  
+
+
+
+
+{\ttfamily \#include $<$pytypes.\+h$>$}
+
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a98bb5940695e98b7ab0276234e16635e}{iterator\+\_\+category}} = std\+::random\+\_\+access\+\_\+iterator\+\_\+tag
+\item 
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a9b078445929fa67dcfd412201449c462}{value\+\_\+type}} = \mbox{\hyperlink{classpybind11_1_1handle}{handle}}
+\item 
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_ae1d3c85f56dec6c28598dbf8f8936d43}{reference}} = const \mbox{\hyperlink{classpybind11_1_1handle}{handle}}
+\item 
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_ac63f13e57e891b4ce322276fc8c984f2}{pointer}} = \mbox{\hyperlink{structpybind11_1_1detail_1_1iterator__policies_1_1arrow__proxy}{arrow\+\_\+proxy}}$<$ const \mbox{\hyperlink{classpybind11_1_1handle}{handle}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_aa6ce2a40fc210f81aa6e2215f4cb7bb7}{sequence\+\_\+fast\+\_\+readonly}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} obj, \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} n)
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_ae1d3c85f56dec6c28598dbf8f8936d43}{reference}} \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a9fdb19bedef79afd818c1722e4ce5881}{dereference}} () const
+\item 
+void \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a0119e5d5f4b4bfc1cd29a9401c5e9bf6}{increment}} ()
+\item 
+void \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a7e84806e4bf9fc8cc60a8456b611b7bf}{decrement}} ()
+\item 
+void \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a406aba7c37e01e82eefc30afd25141d7}{advance}} (\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} n)
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a3a915ab44b44e0f581c542fb446b70c9}{equal}} (const \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly}{sequence\+\_\+fast\+\_\+readonly}} \&b) const
+\item 
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a8498e7ca48bf1f42f30adb4dbf068f26}{distance\+\_\+to}} (const \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly}{sequence\+\_\+fast\+\_\+readonly}} \&b) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Lightweight iterator policy using just a simple pointer\+: see {\ttfamily Py\+Sequence\+\_\+\+Fast\+\_\+\+ITEMS} 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a98bb5940695e98b7ab0276234e16635e}\label{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a98bb5940695e98b7ab0276234e16635e}} 
+\index{pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}!iterator\_category@{iterator\_category}}
+\index{iterator\_category@{iterator\_category}!pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}}
+\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a98bb5940695e98b7ab0276234e16635e}{pybind11\+::detail\+::iterator\+\_\+policies\+::sequence\+\_\+fast\+\_\+readonly\+::iterator\+\_\+category}} =  std\+::random\+\_\+access\+\_\+iterator\+\_\+tag\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_ac63f13e57e891b4ce322276fc8c984f2}\label{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_ac63f13e57e891b4ce322276fc8c984f2}} 
+\index{pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}!pointer@{pointer}}
+\index{pointer@{pointer}!pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_ac63f13e57e891b4ce322276fc8c984f2}{pybind11\+::detail\+::iterator\+\_\+policies\+::sequence\+\_\+fast\+\_\+readonly\+::pointer}} =  \mbox{\hyperlink{structpybind11_1_1detail_1_1iterator__policies_1_1arrow__proxy}{arrow\+\_\+proxy}}$<$const \mbox{\hyperlink{classpybind11_1_1handle}{handle}}$>$\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_ae1d3c85f56dec6c28598dbf8f8936d43}\label{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_ae1d3c85f56dec6c28598dbf8f8936d43}} 
+\index{pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}!reference@{reference}}
+\index{reference@{reference}!pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_ae1d3c85f56dec6c28598dbf8f8936d43}{pybind11\+::detail\+::iterator\+\_\+policies\+::sequence\+\_\+fast\+\_\+readonly\+::reference}} =  const \mbox{\hyperlink{classpybind11_1_1handle}{handle}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a9b078445929fa67dcfd412201449c462}\label{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a9b078445929fa67dcfd412201449c462}} 
+\index{pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a9b078445929fa67dcfd412201449c462}{pybind11\+::detail\+::iterator\+\_\+policies\+::sequence\+\_\+fast\+\_\+readonly\+::value\+\_\+type}} =  \mbox{\hyperlink{classpybind11_1_1handle}{handle}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_aa6ce2a40fc210f81aa6e2215f4cb7bb7}\label{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_aa6ce2a40fc210f81aa6e2215f4cb7bb7}} 
+\index{pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}!sequence\_fast\_readonly@{sequence\_fast\_readonly}}
+\index{sequence\_fast\_readonly@{sequence\_fast\_readonly}!pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}}
+\doxysubsubsection{\texorpdfstring{sequence\_fast\_readonly()}{sequence\_fast\_readonly()}}
+{\footnotesize\ttfamily pybind11\+::detail\+::iterator\+\_\+policies\+::sequence\+\_\+fast\+\_\+readonly\+::sequence\+\_\+fast\+\_\+readonly (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{obj,  }\item[{\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a406aba7c37e01e82eefc30afd25141d7}\label{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a406aba7c37e01e82eefc30afd25141d7}} 
+\index{pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}!advance@{advance}}
+\index{advance@{advance}!pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}}
+\doxysubsubsection{\texorpdfstring{advance()}{advance()}}
+{\footnotesize\ttfamily void pybind11\+::detail\+::iterator\+\_\+policies\+::sequence\+\_\+fast\+\_\+readonly\+::advance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a7e84806e4bf9fc8cc60a8456b611b7bf}\label{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a7e84806e4bf9fc8cc60a8456b611b7bf}} 
+\index{pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}!decrement@{decrement}}
+\index{decrement@{decrement}!pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}}
+\doxysubsubsection{\texorpdfstring{decrement()}{decrement()}}
+{\footnotesize\ttfamily void pybind11\+::detail\+::iterator\+\_\+policies\+::sequence\+\_\+fast\+\_\+readonly\+::decrement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a9fdb19bedef79afd818c1722e4ce5881}\label{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a9fdb19bedef79afd818c1722e4ce5881}} 
+\index{pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}!dereference@{dereference}}
+\index{dereference@{dereference}!pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}}
+\doxysubsubsection{\texorpdfstring{dereference()}{dereference()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_ae1d3c85f56dec6c28598dbf8f8936d43}{reference}} pybind11\+::detail\+::iterator\+\_\+policies\+::sequence\+\_\+fast\+\_\+readonly\+::dereference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a8498e7ca48bf1f42f30adb4dbf068f26}\label{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a8498e7ca48bf1f42f30adb4dbf068f26}} 
+\index{pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}!distance\_to@{distance\_to}}
+\index{distance\_to@{distance\_to}!pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}}
+\doxysubsubsection{\texorpdfstring{distance\_to()}{distance\_to()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} pybind11\+::detail\+::iterator\+\_\+policies\+::sequence\+\_\+fast\+\_\+readonly\+::distance\+\_\+to (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly}{sequence\+\_\+fast\+\_\+readonly}} \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a3a915ab44b44e0f581c542fb446b70c9}\label{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a3a915ab44b44e0f581c542fb446b70c9}} 
+\index{pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}!equal@{equal}}
+\index{equal@{equal}!pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::iterator\+\_\+policies\+::sequence\+\_\+fast\+\_\+readonly\+::equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly}{sequence\+\_\+fast\+\_\+readonly}} \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a0119e5d5f4b4bfc1cd29a9401c5e9bf6}\label{classpybind11_1_1detail_1_1iterator__policies_1_1sequence__fast__readonly_a0119e5d5f4b4bfc1cd29a9401c5e9bf6}} 
+\index{pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}!increment@{increment}}
+\index{increment@{increment}!pybind11::detail::iterator\_policies::sequence\_fast\_readonly@{pybind11::detail::iterator\_policies::sequence\_fast\_readonly}}
+\doxysubsubsection{\texorpdfstring{increment()}{increment()}}
+{\footnotesize\ttfamily void pybind11\+::detail\+::iterator\+\_\+policies\+::sequence\+\_\+fast\+\_\+readonly\+::increment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{pytypes_8h}{pytypes.\+h}}\end{DoxyCompactItemize}

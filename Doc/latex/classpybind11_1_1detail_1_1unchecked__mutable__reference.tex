@@ -1,0 +1,77 @@
+\hypertarget{classpybind11_1_1detail_1_1unchecked__mutable__reference}{}\doxysection{pybind11\+::detail\+::unchecked\+\_\+mutable\+\_\+reference$<$ T, Dims $>$ Class Template Reference}
+\label{classpybind11_1_1detail_1_1unchecked__mutable__reference}\index{pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$}}
+
+
+{\ttfamily \#include $<$numpy.\+h$>$}
+
+Inheritance diagram for pybind11\+::detail\+::unchecked\+\_\+mutable\+\_\+reference$<$ T, Dims $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpybind11_1_1detail_1_1unchecked__mutable__reference}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Ix$>$ }\\T \& \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__mutable__reference_a0c4d71551d5deee697a2f50f58fab0da}{operator()}} (Ix... index)
+\begin{DoxyCompactList}\small\item\em Mutable, unchecked access to data at the given indices. \end{DoxyCompactList}\item 
+{\footnotesize template$<$ssize\+\_\+t D = Dims, typename  = enable\+\_\+if\+\_\+t$<$\+D == 1 $\vert$$\vert$ Dynamic$>$$>$ }\\T \& \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__mutable__reference_a7f201b6df8e1d02666e0fe721261bcf0}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} index)
+\item 
+{\footnotesize template$<$typename... Ix$>$ }\\T $\ast$ \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__mutable__reference_aaa9d90c0a3a7551023ab3812da5c76cf}{mutable\+\_\+data}} (Ix... ix)
+\begin{DoxyCompactList}\small\item\em Mutable pointer access to the data at the given indices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__mutable__reference_abcb10178a21ebe8e899ca951b2e68608}{pybind11\+::array}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__mutable__reference_aaa9d90c0a3a7551023ab3812da5c76cf}\label{classpybind11_1_1detail_1_1unchecked__mutable__reference_aaa9d90c0a3a7551023ab3812da5c76cf}} 
+\index{pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$}!mutable\_data@{mutable\_data}}
+\index{mutable\_data@{mutable\_data}!pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{mutable\_data()}{mutable\_data()}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+template$<$typename... Ix$>$ \\
+T$\ast$ \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__mutable__reference}{pybind11\+::detail\+::unchecked\+\_\+mutable\+\_\+reference}}$<$ T, Dims $>$\+::mutable\+\_\+data (\begin{DoxyParamCaption}\item[{Ix...}]{ix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mutable pointer access to the data at the given indices. 
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__mutable__reference_a0c4d71551d5deee697a2f50f58fab0da}\label{classpybind11_1_1detail_1_1unchecked__mutable__reference_a0c4d71551d5deee697a2f50f58fab0da}} 
+\index{pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+template$<$typename... Ix$>$ \\
+T\& \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__mutable__reference}{pybind11\+::detail\+::unchecked\+\_\+mutable\+\_\+reference}}$<$ T, Dims $>$\+::operator() (\begin{DoxyParamCaption}\item[{Ix...}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mutable, unchecked access to data at the given indices. 
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__mutable__reference_a7f201b6df8e1d02666e0fe721261bcf0}\label{classpybind11_1_1detail_1_1unchecked__mutable__reference_a7f201b6df8e1d02666e0fe721261bcf0}} 
+\index{pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+template$<$ssize\+\_\+t D = Dims, typename  = enable\+\_\+if\+\_\+t$<$\+D == 1 $\vert$$\vert$ Dynamic$>$$>$ \\
+T\& \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__mutable__reference}{pybind11\+::detail\+::unchecked\+\_\+mutable\+\_\+reference}}$<$ T, Dims $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Mutable, unchecked access data at the given index; this operator only participates if the reference is to a 1-\/dimensional array (or has runtime dimensions). When present, this is exactly equivalent to {\ttfamily obj(index)}. 
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__mutable__reference_abcb10178a21ebe8e899ca951b2e68608}\label{classpybind11_1_1detail_1_1unchecked__mutable__reference_abcb10178a21ebe8e899ca951b2e68608}} 
+\index{pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$}!pybind11::array@{pybind11::array}}
+\index{pybind11::array@{pybind11::array}!pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_mutable\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{pybind11::array}{pybind11::array}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+friend class \mbox{\hyperlink{classpybind11_1_1array}{pybind11\+::array}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{numpy_8h}{numpy.\+h}}\end{DoxyCompactItemize}

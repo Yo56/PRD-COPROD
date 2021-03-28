@@ -1,0 +1,233 @@
+\hypertarget{classpybind11_1_1detail_1_1unchecked__reference}{}\doxysection{pybind11\+::detail\+::unchecked\+\_\+reference$<$ T, Dims $>$ Class Template Reference}
+\label{classpybind11_1_1detail_1_1unchecked__reference}\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+
+
+{\ttfamily \#include $<$numpy.\+h$>$}
+
+Inheritance diagram for pybind11\+::detail\+::unchecked\+\_\+reference$<$ T, Dims $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpybind11_1_1detail_1_1unchecked__reference}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Ix$>$ }\\const T \& \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_a59d3e140a42913ed4752b909383dbdad}{operator()}} (Ix... index) const
+\item 
+{\footnotesize template$<$ssize\+\_\+t D = Dims, typename  = enable\+\_\+if\+\_\+t$<$\+D == 1 $\vert$$\vert$ Dynamic$>$$>$ }\\const T \& \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_ab04777ebfeca92b9940a5174144d74b4}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} index) const
+\item 
+{\footnotesize template$<$typename... Ix$>$ }\\const T $\ast$ \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_aa5b6aff1227b20055aa4fc9cf712f76d}{data}} (Ix... ix) const
+\begin{DoxyCompactList}\small\item\em Pointer access to the data at the given indices. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_a9eb41b88c1f9d324d173bff84a2d9529}{shape}} (\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} dim) const
+\begin{DoxyCompactList}\small\item\em Returns the shape (i.\+e. size) of dimension {\ttfamily dim} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_abf5b9241bd9dd87045a50ab2366a8f24}{ndim}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of dimensions of the array. \end{DoxyCompactList}\item 
+{\footnotesize template$<$bool Dyn = Dynamic$>$ }\\\mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$!Dyn, \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_a9259e6deb28be48ff9b51622dae67481}{size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the total number of elements in the referenced array, i.\+e. the product of the shapes. \end{DoxyCompactList}\item 
+{\footnotesize template$<$bool Dyn = Dynamic$>$ }\\\mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ Dyn, \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_ae956fd9a7e6effa5e096ae8d549b4e11}{size}} () const
+\item 
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_a93269897270343c933c93eafa24b94e6}{nbytes}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr static \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_a4850d6975946752c69ac9dda9e5aa15f}{itemsize}} ()
+\begin{DoxyCompactList}\small\item\em Returns the item size, i.\+e. sizeof(\+T) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$bool Dyn = Dynamic$>$ }\\\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_ae1a239622a3fd6a7fc0e2c4d70e0eb16}{unchecked\+\_\+reference}} (const void $\ast$\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_aa5b6aff1227b20055aa4fc9cf712f76d}{data}}, const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_a9eb41b88c1f9d324d173bff84a2d9529}{shape}}, const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$strides, \mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$!Dyn, \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $>$)
+\item 
+{\footnotesize template$<$bool Dyn = Dynamic$>$ }\\\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_a92f84d50016205af9be2d60e4c4d81cf}{unchecked\+\_\+reference}} (const void $\ast$\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_aa5b6aff1227b20055aa4fc9cf712f76d}{data}}, const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_a9eb41b88c1f9d324d173bff84a2d9529}{shape}}, const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$strides, \mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ Dyn, \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $>$ dims)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned char $\ast$ \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_aec1f76e919a1c76894ea21b055092b51}{data\+\_\+}}
+\item 
+\mbox{\hyperlink{namespacepybind11_1_1detail_aef2d4be22c22106ff1a07aeb9394fb60}{conditional\+\_\+t}}$<$ \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_a602375246b64493b78a4911479f8ed59}{Dynamic}}, const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$, std\+::array$<$ \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}},(\mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}}) Dims $>$ $>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_ab1a911b46d978a77b0b6b45958c25427}{shape\+\_\+}}
+\item 
+\mbox{\hyperlink{namespacepybind11_1_1detail_aef2d4be22c22106ff1a07aeb9394fb60}{conditional\+\_\+t}}$<$ \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_a602375246b64493b78a4911479f8ed59}{Dynamic}}, const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$, std\+::array$<$ \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}},(\mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}}) Dims $>$ $>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_aa166b834226ad5215122bcfc2f43c237}{strides\+\_\+}}
+\item 
+const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_a211a097f84346148e1891bca1b751f23}{dims\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_a602375246b64493b78a4911479f8ed59}{Dynamic}} = Dims $<$ 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_abcb10178a21ebe8e899ca951b2e68608}{pybind11\+::array}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, ssize\+\_\+t Dims$>$\newline
+class pybind11\+::detail\+::unchecked\+\_\+reference$<$ T, Dims $>$}
+
+Proxy class providing unsafe, unchecked const access to array data. This is constructed through the {\ttfamily unchecked$<$T, N$>$()} method of {\ttfamily array} or the {\ttfamily unchecked$<$N$>$()} method of {\ttfamily \mbox{\hyperlink{classpybind11_1_1array__t}{array\+\_\+t}}$<$T$>$}. {\ttfamily Dims} will be -\/1 for dimensions determined at runtime. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__reference_ae1a239622a3fd6a7fc0e2c4d70e0eb16}\label{classpybind11_1_1detail_1_1unchecked__reference_ae1a239622a3fd6a7fc0e2c4d70e0eb16}} 
+\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}!unchecked\_reference@{unchecked\_reference}}
+\index{unchecked\_reference@{unchecked\_reference}!pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{unchecked\_reference()}{unchecked\_reference()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+template$<$bool Dyn = Dynamic$>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{pybind11\+::detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{unchecked\+\_\+reference}} (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$}]{shape,  }\item[{const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$}]{strides,  }\item[{\mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$!Dyn, \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__reference_a92f84d50016205af9be2d60e4c4d81cf}\label{classpybind11_1_1detail_1_1unchecked__reference_a92f84d50016205af9be2d60e4c4d81cf}} 
+\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}!unchecked\_reference@{unchecked\_reference}}
+\index{unchecked\_reference@{unchecked\_reference}!pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{unchecked\_reference()}{unchecked\_reference()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+template$<$bool Dyn = Dynamic$>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{pybind11\+::detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{unchecked\+\_\+reference}} (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$}]{shape,  }\item[{const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$}]{strides,  }\item[{\mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ Dyn, \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $>$}]{dims }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__reference_aa5b6aff1227b20055aa4fc9cf712f76d}\label{classpybind11_1_1detail_1_1unchecked__reference_aa5b6aff1227b20055aa4fc9cf712f76d}} 
+\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}!data@{data}}
+\index{data@{data}!pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+template$<$typename... Ix$>$ \\
+const T$\ast$ \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{pybind11\+::detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$\+::data (\begin{DoxyParamCaption}\item[{Ix...}]{ix }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pointer access to the data at the given indices. 
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__reference_a4850d6975946752c69ac9dda9e5aa15f}\label{classpybind11_1_1detail_1_1unchecked__reference_a4850d6975946752c69ac9dda9e5aa15f}} 
+\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}!itemsize@{itemsize}}
+\index{itemsize@{itemsize}!pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{itemsize()}{itemsize()}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+constexpr static \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{pybind11\+::detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$\+::itemsize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Returns the item size, i.\+e. sizeof(\+T) 
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__reference_a93269897270343c933c93eafa24b94e6}\label{classpybind11_1_1detail_1_1unchecked__reference_a93269897270343c933c93eafa24b94e6}} 
+\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}!nbytes@{nbytes}}
+\index{nbytes@{nbytes}!pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{nbytes()}{nbytes()}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{pybind11\+::detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$\+::nbytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the total number of bytes used by the referenced data. Note that the actual span in memory may be larger if the referenced array has non-\/contiguous strides (e.\+g. for a slice). \mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__reference_abf5b9241bd9dd87045a50ab2366a8f24}\label{classpybind11_1_1detail_1_1unchecked__reference_abf5b9241bd9dd87045a50ab2366a8f24}} 
+\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}!ndim@{ndim}}
+\index{ndim@{ndim}!pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{ndim()}{ndim()}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{pybind11\+::detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$\+::ndim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of dimensions of the array. 
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__reference_a59d3e140a42913ed4752b909383dbdad}\label{classpybind11_1_1detail_1_1unchecked__reference_a59d3e140a42913ed4752b909383dbdad}} 
+\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+template$<$typename... Ix$>$ \\
+const T\& \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{pybind11\+::detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$\+::operator() (\begin{DoxyParamCaption}\item[{Ix...}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Unchecked const reference access to data at the given indices. For a compile-\/time known number of dimensions, this requires the correct number of arguments; for run-\/time dimensionality, this is not checked (and so is up to the caller to use safely). \mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__reference_ab04777ebfeca92b9940a5174144d74b4}\label{classpybind11_1_1detail_1_1unchecked__reference_ab04777ebfeca92b9940a5174144d74b4}} 
+\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+template$<$ssize\+\_\+t D = Dims, typename  = enable\+\_\+if\+\_\+t$<$\+D == 1 $\vert$$\vert$ Dynamic$>$$>$ \\
+const T\& \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{pybind11\+::detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Unchecked const reference access to data; this operator only participates if the reference is to a 1-\/dimensional array. When present, this is exactly equivalent to {\ttfamily obj(index)}. \mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__reference_a9eb41b88c1f9d324d173bff84a2d9529}\label{classpybind11_1_1detail_1_1unchecked__reference_a9eb41b88c1f9d324d173bff84a2d9529}} 
+\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}!shape@{shape}}
+\index{shape@{shape}!pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{shape()}{shape()}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{pybind11\+::detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$\+::shape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}}]{dim }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the shape (i.\+e. size) of dimension {\ttfamily dim} 
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__reference_a9259e6deb28be48ff9b51622dae67481}\label{classpybind11_1_1detail_1_1unchecked__reference_a9259e6deb28be48ff9b51622dae67481}} 
+\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}!size@{size}}
+\index{size@{size}!pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+template$<$bool Dyn = Dynamic$>$ \\
+\mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$!Dyn, \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}$>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{pybind11\+::detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the total number of elements in the referenced array, i.\+e. the product of the shapes. 
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__reference_ae956fd9a7e6effa5e096ae8d549b4e11}\label{classpybind11_1_1detail_1_1unchecked__reference_ae956fd9a7e6effa5e096ae8d549b4e11}} 
+\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}!size@{size}}
+\index{size@{size}!pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+template$<$bool Dyn = Dynamic$>$ \\
+\mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$Dyn, \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}$>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{pybind11\+::detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__reference_abcb10178a21ebe8e899ca951b2e68608}\label{classpybind11_1_1detail_1_1unchecked__reference_abcb10178a21ebe8e899ca951b2e68608}} 
+\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}!pybind11::array@{pybind11::array}}
+\index{pybind11::array@{pybind11::array}!pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{pybind11::array}{pybind11::array}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+friend class \mbox{\hyperlink{classpybind11_1_1array}{pybind11\+::array}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__reference_aec1f76e919a1c76894ea21b055092b51}\label{classpybind11_1_1detail_1_1unchecked__reference_aec1f76e919a1c76894ea21b055092b51}} 
+\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}!data\_@{data\_}}
+\index{data\_@{data\_}!pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{data\_}{data\_}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+const unsigned char$\ast$ \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{pybind11\+::detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$\+::data\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__reference_a211a097f84346148e1891bca1b751f23}\label{classpybind11_1_1detail_1_1unchecked__reference_a211a097f84346148e1891bca1b751f23}} 
+\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}!dims\_@{dims\_}}
+\index{dims\_@{dims\_}!pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{dims\_}{dims\_}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{pybind11\+::detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$\+::dims\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__reference_a602375246b64493b78a4911479f8ed59}\label{classpybind11_1_1detail_1_1unchecked__reference_a602375246b64493b78a4911479f8ed59}} 
+\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}!Dynamic@{Dynamic}}
+\index{Dynamic@{Dynamic}!pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{Dynamic}{Dynamic}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+constexpr bool \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{pybind11\+::detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$\+::Dynamic = Dims $<$ 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__reference_ab1a911b46d978a77b0b6b45958c25427}\label{classpybind11_1_1detail_1_1unchecked__reference_ab1a911b46d978a77b0b6b45958c25427}} 
+\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}!shape\_@{shape\_}}
+\index{shape\_@{shape\_}!pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{shape\_}{shape\_}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+\mbox{\hyperlink{namespacepybind11_1_1detail_aef2d4be22c22106ff1a07aeb9394fb60}{conditional\+\_\+t}}$<$\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_a602375246b64493b78a4911479f8ed59}{Dynamic}}, const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$, std\+::array$<$\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}, (\mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}}) Dims$>$ $>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{pybind11\+::detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$\+::shape\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1unchecked__reference_aa166b834226ad5215122bcfc2f43c237}\label{classpybind11_1_1detail_1_1unchecked__reference_aa166b834226ad5215122bcfc2f43c237}} 
+\index{pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}!strides\_@{strides\_}}
+\index{strides\_@{strides\_}!pybind11::detail::unchecked\_reference$<$ T, Dims $>$@{pybind11::detail::unchecked\_reference$<$ T, Dims $>$}}
+\doxysubsubsection{\texorpdfstring{strides\_}{strides\_}}
+{\footnotesize\ttfamily template$<$typename T , ssize\+\_\+t Dims$>$ \\
+\mbox{\hyperlink{namespacepybind11_1_1detail_aef2d4be22c22106ff1a07aeb9394fb60}{conditional\+\_\+t}}$<$\mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference_a602375246b64493b78a4911479f8ed59}{Dynamic}}, const \mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}} $\ast$, std\+::array$<$\mbox{\hyperlink{namespacepybind11_a51e3d317b399f8925c3b9f1980018481}{ssize\+\_\+t}}, (\mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}}) Dims$>$ $>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1unchecked__reference}{pybind11\+::detail\+::unchecked\+\_\+reference}}$<$ T, Dims $>$\+::strides\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{numpy_8h}{numpy.\+h}}\end{DoxyCompactItemize}

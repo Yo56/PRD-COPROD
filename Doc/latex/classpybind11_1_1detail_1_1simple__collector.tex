@@ -1,0 +1,76 @@
+\hypertarget{classpybind11_1_1detail_1_1simple__collector}{}\doxysection{pybind11\+::detail\+::simple\+\_\+collector$<$ policy $>$ Class Template Reference}
+\label{classpybind11_1_1detail_1_1simple__collector}\index{pybind11::detail::simple\_collector$<$ policy $>$@{pybind11::detail::simple\_collector$<$ policy $>$}}
+
+
+{\ttfamily \#include $<$cast.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Ts$>$ }\\\mbox{\hyperlink{classpybind11_1_1detail_1_1simple__collector_acce1ff3f1d7685e282f723e98beaa70b}{simple\+\_\+collector}} (Ts \&\&...values)
+\item 
+const \mbox{\hyperlink{classpybind11_1_1tuple}{tuple}} \& \mbox{\hyperlink{classpybind11_1_1detail_1_1simple__collector_ab0c1b16950c259798bc255f29f1e8039}{args}} () const \&
+\item 
+\mbox{\hyperlink{classpybind11_1_1dict}{dict}} \mbox{\hyperlink{classpybind11_1_1detail_1_1simple__collector_a01c19e24ed196c737cd4bed7ccc38bc6}{kwargs}} () const
+\item 
+\mbox{\hyperlink{classpybind11_1_1tuple}{tuple}} \mbox{\hyperlink{classpybind11_1_1detail_1_1simple__collector_a774be3e82e1272159aad59569c951a0d}{args}} () \&\&
+\item 
+\mbox{\hyperlink{classpybind11_1_1object}{object}} \mbox{\hyperlink{classpybind11_1_1detail_1_1simple__collector_a8b9348928311dc1aac59a57e2eb7b814}{call}} (Py\+Object $\ast$ptr) const
+\begin{DoxyCompactList}\small\item\em Call a Python function and pass the collected arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$return\+\_\+value\+\_\+policy policy$>$\newline
+class pybind11\+::detail\+::simple\+\_\+collector$<$ policy $>$}
+
+Helper class which collects only positional arguments for a Python function call. A fancier version below can collect any argument, but this one is optimal for simple calls. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1simple__collector_acce1ff3f1d7685e282f723e98beaa70b}\label{classpybind11_1_1detail_1_1simple__collector_acce1ff3f1d7685e282f723e98beaa70b}} 
+\index{pybind11::detail::simple\_collector$<$ policy $>$@{pybind11::detail::simple\_collector$<$ policy $>$}!simple\_collector@{simple\_collector}}
+\index{simple\_collector@{simple\_collector}!pybind11::detail::simple\_collector$<$ policy $>$@{pybind11::detail::simple\_collector$<$ policy $>$}}
+\doxysubsubsection{\texorpdfstring{simple\_collector()}{simple\_collector()}}
+{\footnotesize\ttfamily template$<$return\+\_\+value\+\_\+policy policy$>$ \\
+template$<$typename... Ts$>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1simple__collector}{pybind11\+::detail\+::simple\+\_\+collector}}$<$ policy $>$\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1simple__collector}{simple\+\_\+collector}} (\begin{DoxyParamCaption}\item[{Ts \&\&...}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1simple__collector_a774be3e82e1272159aad59569c951a0d}\label{classpybind11_1_1detail_1_1simple__collector_a774be3e82e1272159aad59569c951a0d}} 
+\index{pybind11::detail::simple\_collector$<$ policy $>$@{pybind11::detail::simple\_collector$<$ policy $>$}!args@{args}}
+\index{args@{args}!pybind11::detail::simple\_collector$<$ policy $>$@{pybind11::detail::simple\_collector$<$ policy $>$}}
+\doxysubsubsection{\texorpdfstring{args()}{args()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$return\+\_\+value\+\_\+policy policy$>$ \\
+\mbox{\hyperlink{classpybind11_1_1tuple}{tuple}} \mbox{\hyperlink{classpybind11_1_1detail_1_1simple__collector}{pybind11\+::detail\+::simple\+\_\+collector}}$<$ policy $>$\+::\mbox{\hyperlink{classpybind11_1_1args}{args}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1simple__collector_ab0c1b16950c259798bc255f29f1e8039}\label{classpybind11_1_1detail_1_1simple__collector_ab0c1b16950c259798bc255f29f1e8039}} 
+\index{pybind11::detail::simple\_collector$<$ policy $>$@{pybind11::detail::simple\_collector$<$ policy $>$}!args@{args}}
+\index{args@{args}!pybind11::detail::simple\_collector$<$ policy $>$@{pybind11::detail::simple\_collector$<$ policy $>$}}
+\doxysubsubsection{\texorpdfstring{args()}{args()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$return\+\_\+value\+\_\+policy policy$>$ \\
+const \mbox{\hyperlink{classpybind11_1_1tuple}{tuple}}\& \mbox{\hyperlink{classpybind11_1_1detail_1_1simple__collector}{pybind11\+::detail\+::simple\+\_\+collector}}$<$ policy $>$\+::\mbox{\hyperlink{classpybind11_1_1args}{args}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1simple__collector_a8b9348928311dc1aac59a57e2eb7b814}\label{classpybind11_1_1detail_1_1simple__collector_a8b9348928311dc1aac59a57e2eb7b814}} 
+\index{pybind11::detail::simple\_collector$<$ policy $>$@{pybind11::detail::simple\_collector$<$ policy $>$}!call@{call}}
+\index{call@{call}!pybind11::detail::simple\_collector$<$ policy $>$@{pybind11::detail::simple\_collector$<$ policy $>$}}
+\doxysubsubsection{\texorpdfstring{call()}{call()}}
+{\footnotesize\ttfamily template$<$return\+\_\+value\+\_\+policy policy$>$ \\
+\mbox{\hyperlink{classpybind11_1_1object}{object}} \mbox{\hyperlink{classpybind11_1_1detail_1_1simple__collector}{pybind11\+::detail\+::simple\+\_\+collector}}$<$ policy $>$\+::call (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{ptr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Call a Python function and pass the collected arguments. 
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1simple__collector_a01c19e24ed196c737cd4bed7ccc38bc6}\label{classpybind11_1_1detail_1_1simple__collector_a01c19e24ed196c737cd4bed7ccc38bc6}} 
+\index{pybind11::detail::simple\_collector$<$ policy $>$@{pybind11::detail::simple\_collector$<$ policy $>$}!kwargs@{kwargs}}
+\index{kwargs@{kwargs}!pybind11::detail::simple\_collector$<$ policy $>$@{pybind11::detail::simple\_collector$<$ policy $>$}}
+\doxysubsubsection{\texorpdfstring{kwargs()}{kwargs()}}
+{\footnotesize\ttfamily template$<$return\+\_\+value\+\_\+policy policy$>$ \\
+\mbox{\hyperlink{classpybind11_1_1dict}{dict}} \mbox{\hyperlink{classpybind11_1_1detail_1_1simple__collector}{pybind11\+::detail\+::simple\+\_\+collector}}$<$ policy $>$\+::\mbox{\hyperlink{classpybind11_1_1kwargs}{kwargs}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{cast_8h}{cast.\+h}}\end{DoxyCompactItemize}

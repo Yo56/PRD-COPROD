@@ -1,0 +1,223 @@
+\hypertarget{structpybind11_1_1detail_1_1type__record}{}\doxysection{pybind11\+::detail\+::type\+\_\+record Struct Reference}
+\label{structpybind11_1_1detail_1_1type__record}\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+
+
+Special data structure which (temporarily) holds metadata about a bound class.  
+
+
+
+
+{\ttfamily \#include $<$attr.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1type__record_a354346eb753a3e908c0ed7129258093f}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((noinline)) \mbox{\hyperlink{structpybind11_1_1detail_1_1type__record}{type\+\_\+record}}()
+\item 
+\mbox{\hyperlink{structpybind11_1_1detail_1_1type__record_ae6a589df1f201ae2cc37bc121a59778b}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((noinline)) void add\+\_\+base(const std
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1type__record_a6c4503c61a07fa061449ab05cbdd0f5c}{scope}}
+\begin{DoxyCompactList}\small\item\em Handle to the parent scope. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__record_a0e71b10e072574879dccefb62eb0f64c}{name}} = nullptr
+\begin{DoxyCompactList}\small\item\em Name of the class. \end{DoxyCompactList}\item 
+const std\+::type\+\_\+info $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__record_ac18e11ee7889259b66d26097845c7df0}{type}} = nullptr
+\item 
+\mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}} \mbox{\hyperlink{structpybind11_1_1detail_1_1type__record_a45dfb538fb8a9cfc6e65be9d6c64fb49}{type\+\_\+size}} = 0
+\begin{DoxyCompactList}\small\item\em How large is the underlying C++ type? \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}} \mbox{\hyperlink{structpybind11_1_1detail_1_1type__record_abeb7a353d1c5fd8310e0433bf72f62ad}{holder\+\_\+size}} = 0
+\begin{DoxyCompactList}\small\item\em How large is the type\textquotesingle{}s holder? \end{DoxyCompactList}\item 
+void $\ast$($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__record_a57a7e0f37a3c11d3af9687b6d7883370}{operator\+\_\+new}} )(\mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}}) = \+::operator new
+\begin{DoxyCompactList}\small\item\em The global operator new can be overridden with a class-\/specific variant. \end{DoxyCompactList}\item 
+void($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__record_a917c8082a82329411e06fe1a47437d58}{init\+\_\+holder}} )(\mbox{\hyperlink{structpybind11_1_1detail_1_1instance}{instance}} $\ast$, const void $\ast$) = nullptr
+\begin{DoxyCompactList}\small\item\em Function pointer to class\+\_\+$<$..$>$\+::init\+\_\+holder. \end{DoxyCompactList}\item 
+void($\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__record_a41f8e7d23a3a40b121ba2810d168032d}{dealloc}} )(const \mbox{\hyperlink{structpybind11_1_1detail_1_1value__and__holder}{detail\+::value\+\_\+and\+\_\+holder}} \&) = nullptr
+\begin{DoxyCompactList}\small\item\em Function pointer to class\+\_\+$<$..$>$\+::dealloc. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpybind11_1_1list}{list}} \mbox{\hyperlink{structpybind11_1_1detail_1_1type__record_a961fdfc91d2234dabf4c9acf57fa1f0f}{bases}}
+\begin{DoxyCompactList}\small\item\em List of base classes of the newly created type. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{structpybind11_1_1detail_1_1type__record_a82e62ebf6ec2badff17153978df3246a}{doc}} = nullptr
+\begin{DoxyCompactList}\small\item\em Optional docstring. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{structpybind11_1_1detail_1_1type__record_a03ae24d0710f032320ced931d4c24f36}{metaclass}}
+\begin{DoxyCompactList}\small\item\em Custom metaclass (optional) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1type__record_abb633b84d38f7cb2d451ad16fd517ebd}{multiple\+\_\+inheritance}}\+: 1
+\begin{DoxyCompactList}\small\item\em Multiple inheritance marker. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1type__record_a08e6c124c7fe801c694043e89754ca92}{dynamic\+\_\+attr}}\+: 1
+\begin{DoxyCompactList}\small\item\em Does the class manage a {\bfseries{dict}}? \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1type__record_acb78e74ccee4b381b6b47e0d6778c80d}{buffer\+\_\+protocol}}\+: 1
+\begin{DoxyCompactList}\small\item\em Does the class implement the buffer protocol? \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structpybind11_1_1detail_1_1type__record_a83cba57945d3c34b7e6bc980b10ce5cd}{default\+\_\+holder}}\+: 1
+\begin{DoxyCompactList}\small\item\em Is the default (unique\+\_\+ptr) holder type used? \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Special data structure which (temporarily) holds metadata about a bound class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__record_a354346eb753a3e908c0ed7129258093f}\label{structpybind11_1_1detail_1_1type__record_a354346eb753a3e908c0ed7129258093f}} 
+\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily pybind11\+::detail\+::type\+\_\+record\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(noinline)}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__record_ae6a589df1f201ae2cc37bc121a59778b}\label{structpybind11_1_1detail_1_1type__record_ae6a589df1f201ae2cc37bc121a59778b}} 
+\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily pybind11\+::detail\+::type\+\_\+record\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(noinline)}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__record_a961fdfc91d2234dabf4c9acf57fa1f0f}\label{structpybind11_1_1detail_1_1type__record_a961fdfc91d2234dabf4c9acf57fa1f0f}} 
+\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}!bases@{bases}}
+\index{bases@{bases}!pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+\doxysubsubsection{\texorpdfstring{bases}{bases}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpybind11_1_1list}{list}} pybind11\+::detail\+::type\+\_\+record\+::bases}
+
+
+
+List of base classes of the newly created type. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__record_acb78e74ccee4b381b6b47e0d6778c80d}\label{structpybind11_1_1detail_1_1type__record_acb78e74ccee4b381b6b47e0d6778c80d}} 
+\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}!buffer\_protocol@{buffer\_protocol}}
+\index{buffer\_protocol@{buffer\_protocol}!pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+\doxysubsubsection{\texorpdfstring{buffer\_protocol}{buffer\_protocol}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::type\+\_\+record\+::buffer\+\_\+protocol}
+
+
+
+Does the class implement the buffer protocol? 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__record_a41f8e7d23a3a40b121ba2810d168032d}\label{structpybind11_1_1detail_1_1type__record_a41f8e7d23a3a40b121ba2810d168032d}} 
+\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+\doxysubsubsection{\texorpdfstring{dealloc}{dealloc}}
+{\footnotesize\ttfamily void($\ast$ pybind11\+::detail\+::type\+\_\+record\+::dealloc) (const \mbox{\hyperlink{structpybind11_1_1detail_1_1value__and__holder}{detail\+::value\+\_\+and\+\_\+holder}} \&) = nullptr}
+
+
+
+Function pointer to class\+\_\+$<$..$>$\+::dealloc. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__record_a83cba57945d3c34b7e6bc980b10ce5cd}\label{structpybind11_1_1detail_1_1type__record_a83cba57945d3c34b7e6bc980b10ce5cd}} 
+\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}!default\_holder@{default\_holder}}
+\index{default\_holder@{default\_holder}!pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+\doxysubsubsection{\texorpdfstring{default\_holder}{default\_holder}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::type\+\_\+record\+::default\+\_\+holder}
+
+
+
+Is the default (unique\+\_\+ptr) holder type used? 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__record_a82e62ebf6ec2badff17153978df3246a}\label{structpybind11_1_1detail_1_1type__record_a82e62ebf6ec2badff17153978df3246a}} 
+\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}!doc@{doc}}
+\index{doc@{doc}!pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+\doxysubsubsection{\texorpdfstring{doc}{doc}}
+{\footnotesize\ttfamily const char$\ast$ pybind11\+::detail\+::type\+\_\+record\+::doc = nullptr}
+
+
+
+Optional docstring. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__record_a08e6c124c7fe801c694043e89754ca92}\label{structpybind11_1_1detail_1_1type__record_a08e6c124c7fe801c694043e89754ca92}} 
+\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}!dynamic\_attr@{dynamic\_attr}}
+\index{dynamic\_attr@{dynamic\_attr}!pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+\doxysubsubsection{\texorpdfstring{dynamic\_attr}{dynamic\_attr}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::type\+\_\+record\+::dynamic\+\_\+attr}
+
+
+
+Does the class manage a {\bfseries{dict}}? 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__record_abeb7a353d1c5fd8310e0433bf72f62ad}\label{structpybind11_1_1detail_1_1type__record_abeb7a353d1c5fd8310e0433bf72f62ad}} 
+\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}!holder\_size@{holder\_size}}
+\index{holder\_size@{holder\_size}!pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+\doxysubsubsection{\texorpdfstring{holder\_size}{holder\_size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}} pybind11\+::detail\+::type\+\_\+record\+::holder\+\_\+size = 0}
+
+
+
+How large is the type\textquotesingle{}s holder? 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__record_a917c8082a82329411e06fe1a47437d58}\label{structpybind11_1_1detail_1_1type__record_a917c8082a82329411e06fe1a47437d58}} 
+\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}!init\_holder@{init\_holder}}
+\index{init\_holder@{init\_holder}!pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+\doxysubsubsection{\texorpdfstring{init\_holder}{init\_holder}}
+{\footnotesize\ttfamily void($\ast$ pybind11\+::detail\+::type\+\_\+record\+::init\+\_\+holder) (\mbox{\hyperlink{structpybind11_1_1detail_1_1instance}{instance}} $\ast$, const void $\ast$) = nullptr}
+
+
+
+Function pointer to class\+\_\+$<$..$>$\+::init\+\_\+holder. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__record_a03ae24d0710f032320ced931d4c24f36}\label{structpybind11_1_1detail_1_1type__record_a03ae24d0710f032320ced931d4c24f36}} 
+\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}!metaclass@{metaclass}}
+\index{metaclass@{metaclass}!pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+\doxysubsubsection{\texorpdfstring{metaclass}{metaclass}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpybind11_1_1handle}{handle}} pybind11\+::detail\+::type\+\_\+record\+::metaclass}
+
+
+
+Custom metaclass (optional) 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__record_abb633b84d38f7cb2d451ad16fd517ebd}\label{structpybind11_1_1detail_1_1type__record_abb633b84d38f7cb2d451ad16fd517ebd}} 
+\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}!multiple\_inheritance@{multiple\_inheritance}}
+\index{multiple\_inheritance@{multiple\_inheritance}!pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+\doxysubsubsection{\texorpdfstring{multiple\_inheritance}{multiple\_inheritance}}
+{\footnotesize\ttfamily bool pybind11\+::detail\+::type\+\_\+record\+::multiple\+\_\+inheritance}
+
+
+
+Multiple inheritance marker. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__record_a0e71b10e072574879dccefb62eb0f64c}\label{structpybind11_1_1detail_1_1type__record_a0e71b10e072574879dccefb62eb0f64c}} 
+\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}!name@{name}}
+\index{name@{name}!pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily const char$\ast$ pybind11\+::detail\+::type\+\_\+record\+::name = nullptr}
+
+
+
+Name of the class. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__record_a57a7e0f37a3c11d3af9687b6d7883370}\label{structpybind11_1_1detail_1_1type__record_a57a7e0f37a3c11d3af9687b6d7883370}} 
+\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}!operator\_new@{operator\_new}}
+\index{operator\_new@{operator\_new}!pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+\doxysubsubsection{\texorpdfstring{operator\_new}{operator\_new}}
+{\footnotesize\ttfamily void$\ast$($\ast$ pybind11\+::detail\+::type\+\_\+record\+::operator\+\_\+new) (\mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}}) = \+::operator new}
+
+
+
+The global operator new can be overridden with a class-\/specific variant. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__record_a6c4503c61a07fa061449ab05cbdd0f5c}\label{structpybind11_1_1detail_1_1type__record_a6c4503c61a07fa061449ab05cbdd0f5c}} 
+\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}!scope@{scope}}
+\index{scope@{scope}!pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+\doxysubsubsection{\texorpdfstring{scope}{scope}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpybind11_1_1handle}{handle}} pybind11\+::detail\+::type\+\_\+record\+::scope}
+
+
+
+Handle to the parent scope. 
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__record_ac18e11ee7889259b66d26097845c7df0}\label{structpybind11_1_1detail_1_1type__record_ac18e11ee7889259b66d26097845c7df0}} 
+\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}!type@{type}}
+\index{type@{type}!pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily const std\+::type\+\_\+info$\ast$ pybind11\+::detail\+::type\+\_\+record\+::type = nullptr}
+
+\mbox{\Hypertarget{structpybind11_1_1detail_1_1type__record_a45dfb538fb8a9cfc6e65be9d6c64fb49}\label{structpybind11_1_1detail_1_1type__record_a45dfb538fb8a9cfc6e65be9d6c64fb49}} 
+\index{pybind11::detail::type\_record@{pybind11::detail::type\_record}!type\_size@{type\_size}}
+\index{type\_size@{type\_size}!pybind11::detail::type\_record@{pybind11::detail::type\_record}}
+\doxysubsubsection{\texorpdfstring{type\_size}{type\_size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepybind11_a74292751b6fc8fe14d7c6772ae2fd0fc}{size\+\_\+t}} pybind11\+::detail\+::type\+\_\+record\+::type\+\_\+size = 0}
+
+
+
+How large is the underlying C++ type? 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{attr_8h}{attr.\+h}}\end{DoxyCompactItemize}

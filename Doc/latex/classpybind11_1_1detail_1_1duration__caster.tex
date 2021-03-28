@@ -1,0 +1,161 @@
+\hypertarget{classpybind11_1_1detail_1_1duration__caster}{}\doxysection{pybind11\+::detail\+::duration\+\_\+caster$<$ type $>$ Class Template Reference}
+\label{classpybind11_1_1detail_1_1duration__caster}\index{pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}}
+
+
+{\ttfamily \#include $<$chrono.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef type\+::rep \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a909d703afc44d140233b3f4599ceb663}{rep}}
+\item 
+typedef type\+::period \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a98b1a7bb5a19458ed7568bc6daf4d654}{period}}
+\item 
+typedef std\+::chrono\+::duration$<$ uint\+\_\+fast32\+\_\+t, std\+::ratio$<$ 86400 $>$ $>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a2dab1b4f250542945cb41328fd2567ae}{days}}
+\item 
+{\footnotesize template$<$typename T\+\_\+ $>$ }\\using \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a720e4ccb63402dc28c9322cff765fe2c}{cast\+\_\+op\+\_\+type}} = \mbox{\hyperlink{namespacepybind11_1_1detail_a3e4f52c827f0391c3ca8166590c559c9}{pybind11\+::detail\+::movable\+\_\+cast\+\_\+op\+\_\+type}}$<$ T\+\_\+ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a35480a38a51990afe6e2a5be833b2f38}{load}} (\mbox{\hyperlink{classpybind11_1_1handle}{handle}} src, bool)
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a61a8bee9b9879a781a8fe61ba8171f49}{operator type $\ast$}} ()
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a800893fc0b295c3a3dd50f3078a3f19e}{operator type \&}} ()
+\item 
+\mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_afebe38e5b617c9e63ea5a4cf171f313a}{operator type \&\&}} () \&\&
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::chrono\+::duration$<$ \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a909d703afc44d140233b3f4599ceb663}{rep}}, \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a98b1a7bb5a19458ed7568bc6daf4d654}{period}} $>$ \& \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a6a81b0526ce8458647022eee8df845ac}{get\+\_\+duration}} (const std\+::chrono\+::duration$<$ \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a909d703afc44d140233b3f4599ceb663}{rep}}, \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a98b1a7bb5a19458ed7568bc6daf4d654}{period}} $>$ \&src)
+\item 
+{\footnotesize template$<$typename Clock $>$ }\\static std\+::chrono\+::duration$<$ \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a909d703afc44d140233b3f4599ceb663}{rep}}, \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a98b1a7bb5a19458ed7568bc6daf4d654}{period}} $>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a0c5567978a037e8bd6611608dfbe68b6}{get\+\_\+duration}} (const std\+::chrono\+::time\+\_\+point$<$ Clock, std\+::chrono\+::duration$<$ \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a909d703afc44d140233b3f4599ceb663}{rep}}, \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a98b1a7bb5a19458ed7568bc6daf4d654}{period}} $>$$>$ \&src)
+\item 
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a478e1edf78cb4de77cbf37e74923e483}{cast}} (const \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} \&src, \mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}}, \mbox{\hyperlink{classpybind11_1_1handle}{handle}})
+\item 
+\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1descr}{pybind11\+::detail\+::descr}} \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a3c401eca5e96ec4f4655713451d6b197}{name}} ()
+\item 
+{\footnotesize template$<$typename T\+\_\+ , enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same$<$ type, remove\+\_\+cv\+\_\+t$<$ T\+\_\+ $>$$>$\+::value, int $>$  = 0$>$ }\\static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_ac4698bd333fbab55f3e75c81c703ac09}{cast}} (T\+\_\+ $\ast$src, \mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}} policy, \mbox{\hyperlink{classpybind11_1_1handle}{handle}} parent)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a71b9c68ce3a06bb783aecdf92aea11fb}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1duration__caster_a720e4ccb63402dc28c9322cff765fe2c}\label{classpybind11_1_1detail_1_1duration__caster_a720e4ccb63402dc28c9322cff765fe2c}} 
+\index{pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}!cast\_op\_type@{cast\_op\_type}}
+\index{cast\_op\_type@{cast\_op\_type}!pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{cast\_op\_type}{cast\_op\_type}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+template$<$typename T\+\_\+ $>$ \\
+using \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster}{pybind11\+::detail\+::duration\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a720e4ccb63402dc28c9322cff765fe2c}{cast\+\_\+op\+\_\+type}} =  \mbox{\hyperlink{namespacepybind11_1_1detail_a3e4f52c827f0391c3ca8166590c559c9}{pybind11\+::detail\+::movable\+\_\+cast\+\_\+op\+\_\+type}}$<$T\+\_\+$>$}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1duration__caster_a2dab1b4f250542945cb41328fd2567ae}\label{classpybind11_1_1detail_1_1duration__caster_a2dab1b4f250542945cb41328fd2567ae}} 
+\index{pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}!days@{days}}
+\index{days@{days}!pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{days}{days}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+typedef std\+::chrono\+::duration$<$uint\+\_\+fast32\+\_\+t, std\+::ratio$<$86400$>$ $>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster}{pybind11\+::detail\+::duration\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a2dab1b4f250542945cb41328fd2567ae}{days}}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1duration__caster_a98b1a7bb5a19458ed7568bc6daf4d654}\label{classpybind11_1_1detail_1_1duration__caster_a98b1a7bb5a19458ed7568bc6daf4d654}} 
+\index{pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}!period@{period}}
+\index{period@{period}!pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{period}{period}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+typedef type\+::period \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster}{pybind11\+::detail\+::duration\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a98b1a7bb5a19458ed7568bc6daf4d654}{period}}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1duration__caster_a909d703afc44d140233b3f4599ceb663}\label{classpybind11_1_1detail_1_1duration__caster_a909d703afc44d140233b3f4599ceb663}} 
+\index{pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}!rep@{rep}}
+\index{rep@{rep}!pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{rep}{rep}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+typedef type\+::rep \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster}{pybind11\+::detail\+::duration\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a909d703afc44d140233b3f4599ceb663}{rep}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1duration__caster_a478e1edf78cb4de77cbf37e74923e483}\label{classpybind11_1_1detail_1_1duration__caster_a478e1edf78cb4de77cbf37e74923e483}} 
+\index{pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}!cast@{cast}}
+\index{cast@{cast}!pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster}{pybind11\+::detail\+::duration\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$\+::cast (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} \&}]{src,  }\item[{\mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}}}]{,  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1duration__caster_ac4698bd333fbab55f3e75c81c703ac09}\label{classpybind11_1_1detail_1_1duration__caster_ac4698bd333fbab55f3e75c81c703ac09}} 
+\index{pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}!cast@{cast}}
+\index{cast@{cast}!pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+template$<$typename T\+\_\+ , enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same$<$ type, remove\+\_\+cv\+\_\+t$<$ T\+\_\+ $>$$>$\+::value, int $>$  = 0$>$ \\
+static \mbox{\hyperlink{classpybind11_1_1handle}{handle}} \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster}{pybind11\+::detail\+::duration\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$\+::cast (\begin{DoxyParamCaption}\item[{T\+\_\+ $\ast$}]{src,  }\item[{\mbox{\hyperlink{namespacepybind11_a5f83e7a05cee9068927633ac47dbe69c}{return\+\_\+value\+\_\+policy}}}]{policy,  }\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1duration__caster_a6a81b0526ce8458647022eee8df845ac}\label{classpybind11_1_1detail_1_1duration__caster_a6a81b0526ce8458647022eee8df845ac}} 
+\index{pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}!get\_duration@{get\_duration}}
+\index{get\_duration@{get\_duration}!pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{get\_duration()}{get\_duration()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+static const std\+::chrono\+::duration$<$\mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a909d703afc44d140233b3f4599ceb663}{rep}}, \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a98b1a7bb5a19458ed7568bc6daf4d654}{period}}$>$\& \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster}{pybind11\+::detail\+::duration\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$\+::get\+\_\+duration (\begin{DoxyParamCaption}\item[{const std\+::chrono\+::duration$<$ \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a909d703afc44d140233b3f4599ceb663}{rep}}, \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a98b1a7bb5a19458ed7568bc6daf4d654}{period}} $>$ \&}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1duration__caster_a0c5567978a037e8bd6611608dfbe68b6}\label{classpybind11_1_1detail_1_1duration__caster_a0c5567978a037e8bd6611608dfbe68b6}} 
+\index{pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}!get\_duration@{get\_duration}}
+\index{get\_duration@{get\_duration}!pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{get\_duration()}{get\_duration()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+template$<$typename Clock $>$ \\
+static std\+::chrono\+::duration$<$\mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a909d703afc44d140233b3f4599ceb663}{rep}}, \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a98b1a7bb5a19458ed7568bc6daf4d654}{period}}$>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster}{pybind11\+::detail\+::duration\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$\+::get\+\_\+duration (\begin{DoxyParamCaption}\item[{const std\+::chrono\+::time\+\_\+point$<$ Clock, std\+::chrono\+::duration$<$ \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a909d703afc44d140233b3f4599ceb663}{rep}}, \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster_a98b1a7bb5a19458ed7568bc6daf4d654}{period}} $>$$>$ \&}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1duration__caster_a35480a38a51990afe6e2a5be833b2f38}\label{classpybind11_1_1detail_1_1duration__caster_a35480a38a51990afe6e2a5be833b2f38}} 
+\index{pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}!load@{load}}
+\index{load@{load}!pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster}{pybind11\+::detail\+::duration\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpybind11_1_1handle}{handle}}}]{src,  }\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1duration__caster_a3c401eca5e96ec4f4655713451d6b197}\label{classpybind11_1_1detail_1_1duration__caster_a3c401eca5e96ec4f4655713451d6b197}} 
+\index{pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}!name@{name}}
+\index{name@{name}!pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1descr}{pybind11\+::detail\+::descr}} \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster}{pybind11\+::detail\+::duration\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$\+::\mbox{\hyperlink{structpybind11_1_1name}{name}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1duration__caster_a800893fc0b295c3a3dd50f3078a3f19e}\label{classpybind11_1_1detail_1_1duration__caster_a800893fc0b295c3a3dd50f3078a3f19e}} 
+\index{pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}!operator type \&@{operator type \&}}
+\index{operator type \&@{operator type \&}!pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{operator type \&()}{operator type \&()}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster}{pybind11\+::detail\+::duration\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$\+::operator \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} \& (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1duration__caster_afebe38e5b617c9e63ea5a4cf171f313a}\label{classpybind11_1_1detail_1_1duration__caster_afebe38e5b617c9e63ea5a4cf171f313a}} 
+\index{pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}!operator type \&\&@{operator type \&\&}}
+\index{operator type \&\&@{operator type \&\&}!pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{operator type \&\&()}{operator type \&\&()}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster}{pybind11\+::detail\+::duration\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$\+::operator \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} \&\& (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1duration__caster_a61a8bee9b9879a781a8fe61ba8171f49}\label{classpybind11_1_1detail_1_1duration__caster_a61a8bee9b9879a781a8fe61ba8171f49}} 
+\index{pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}!operator type $\ast$@{operator type $\ast$}}
+\index{operator type $\ast$@{operator type $\ast$}!pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{operator type $\ast$()}{operator type *()}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+\mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster}{pybind11\+::detail\+::duration\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$\+::operator \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1duration__caster_a71b9c68ce3a06bb783aecdf92aea11fb}\label{classpybind11_1_1detail_1_1duration__caster_a71b9c68ce3a06bb783aecdf92aea11fb}} 
+\index{pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}!value@{value}}
+\index{value@{value}!pybind11::detail::duration\_caster$<$ type $>$@{pybind11::detail::duration\_caster$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily template$<$typename type $>$ \\
+\mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} \mbox{\hyperlink{classpybind11_1_1detail_1_1duration__caster}{pybind11\+::detail\+::duration\+\_\+caster}}$<$ \mbox{\hyperlink{namespacepybind11_1_1detail_a2e27b6b0496dbceae6708f0526822bba}{type}} $>$\+::value\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{chrono_8h}{chrono.\+h}}\end{DoxyCompactItemize}

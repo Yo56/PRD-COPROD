@@ -1,0 +1,827 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classxlnt_1_1column__t" kind="class" language="C++" prot="public">
+    <compoundname>xlnt::column_t</compoundname>
+    <includes refid="index__types_8hpp" local="no">index_types.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classxlnt_1_1column__t_1ab514d159582ca03315e0f020dc8efedd" prot="public" static="no">
+        <type>std::uint32_t</type>
+        <definition>using xlnt::column_t::index_t =  std::uint32_t</definition>
+        <argsstring></argsstring>
+        <name>index_t</name>
+        <briefdescription>
+<para>Alias declaration for the internal numeric type of this column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="53" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classxlnt_1_1column__t_1a9e53ff3b0e9037c56561bc5e3a5d2f57" prot="public" static="no" mutable="no">
+        <type><ref refid="classxlnt_1_1column__t_1ab514d159582ca03315e0f020dc8efedd" kindref="member">index_t</ref></type>
+        <definition>index_t xlnt::column_t::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+<para>Internal numeric value of this column index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="268" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a0d279f6bb1c3f6fbe4a1b9ea8a73f182" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1column__t_1ab514d159582ca03315e0f020dc8efedd" kindref="member">index_t</ref></type>
+        <definition>column_t::index_t xlnt::column_t::column_index_from_string</definition>
+        <argsstring>(const std::string &amp;column_string)</argsstring>
+        <name>column_index_from_string</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>column_string</declname>
+        </param>
+        <briefdescription>
+<para>Convert a column letter into a column number (e.g. B -&gt; 2) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Excel only supports 1 - 3 letter column names from A-&gt;ZZZ, so we restrict our column names to 1 - 3 characters, each in the range A - Z. Strings outside this range and malformed strings will throw column_string_index_exception. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="63" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="32" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a23c8985b1f2b91f2ba5b722a7fb053e0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xlnt::column_t::column_string_from_index</definition>
+        <argsstring>(index_t column_index)</argsstring>
+        <name>column_string_from_index</name>
+        <param>
+          <type><ref refid="classxlnt_1_1column__t_1ab514d159582ca03315e0f020dc8efedd" kindref="member">index_t</ref></type>
+          <declname>column_index</declname>
+        </param>
+        <briefdescription>
+<para>Convert a column number into a column letter (3 -&gt; &apos;C&apos;) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Right shift the column, column_index, by 26 to find column letters in reverse order. These indices are 1-based, and can be converted to ASCII ordinals by adding 64. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="73" column="24" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="62" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a17ecf0149815f0e8cfbf3d6fb9181966" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::column_t::column_t</definition>
+        <argsstring>()</argsstring>
+        <name>column_t</name>
+        <briefdescription>
+<para>Default constructor. The column points to the &quot;A&quot; column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="78" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a8ef4798c933f535e5c344d15b730dea1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::column_t::column_t</definition>
+        <argsstring>(index_t column_index)</argsstring>
+        <name>column_t</name>
+        <param>
+          <type><ref refid="classxlnt_1_1column__t_1ab514d159582ca03315e0f020dc8efedd" kindref="member">index_t</ref></type>
+          <declname>column_index</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a column from a number. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="83" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a51223789791f8bac595c1f7d68d94d2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::column_t::column_t</definition>
+        <argsstring>(const std::string &amp;column_string)</argsstring>
+        <name>column_t</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>column_string</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a column from a string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="88" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1abe9a7724fafffc29ca8fdf428469cf4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::column_t::column_t</definition>
+        <argsstring>(const char *column_string)</argsstring>
+        <name>column_t</name>
+        <param>
+          <type>const char *</type>
+          <declname>column_string</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a column from a string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="93" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="107" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1acf34c7f03d070a3bfa9dabed88411f1c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xlnt::column_t::column_string</definition>
+        <argsstring>() const</argsstring>
+        <name>column_string</name>
+        <briefdescription>
+<para>Returns a string representation of this column index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="98" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a9a0be009adb1029f5f268d3f75cbc910" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+        <definition>column_t &amp; xlnt::column_t::operator=</definition>
+        <argsstring>(const std::string &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Sets this column to be equal to rhs and return reference to self. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="103" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="117" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a985aeb3675905115dddddde860807106" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+        <definition>column_t &amp; xlnt::column_t::operator=</definition>
+        <argsstring>(const char *rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const char *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Sets this column to be equal to rhs and return reference to self. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="108" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1ab774eea0973b113268cd8ba1997138be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator==</definition>
+        <argsstring>(const column_t &amp;other) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this column refers to the same column as other. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="113" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="127" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a3730c4854888b300fbdabec3ec155cc8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator!=</definition>
+        <argsstring>(const column_t &amp;other) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this column doesn&apos;t refer to the same column as other. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="118" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="132" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1aa6cafc9b777354926bc174ee4819272f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator==</definition>
+        <argsstring>(int other) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>int</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this column refers to the same column as other. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="123" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1af2aba5ed49ce6847c20ff02b0a83e4b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator==</definition>
+        <argsstring>(index_t other) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="classxlnt_1_1column__t_1ab514d159582ca03315e0f020dc8efedd" kindref="member">index_t</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this column refers to the same column as other. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="128" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="142" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1aed5d29ebaee2f9601f5484e9e8d37959" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator==</definition>
+        <argsstring>(const std::string &amp;other) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this column refers to the same column as other. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="133" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="147" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a0023091df60cb803860be673020ffbdd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator==</definition>
+        <argsstring>(const char *other) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const char *</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this column refers to the same column as other. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="138" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="152" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a418e399217a40e8f03b614f887883264" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator!=</definition>
+        <argsstring>(int other) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>int</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this column doesn&apos;t refer to the same column as other. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="143" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="157" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1ab782517542e3aeee0ea6b85fdba3b01c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator!=</definition>
+        <argsstring>(index_t other) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type><ref refid="classxlnt_1_1column__t_1ab514d159582ca03315e0f020dc8efedd" kindref="member">index_t</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this column doesn&apos;t refer to the same column as other. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="148" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="162" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a991bd23bb10ae22b3f14678f3ff09c5a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator!=</definition>
+        <argsstring>(const std::string &amp;other) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this column doesn&apos;t refer to the same column as other. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="153" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="167" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1aa24681170b8d44da29b63abb98759060" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator!=</definition>
+        <argsstring>(const char *other) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const char *</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this column doesn&apos;t refer to the same column as other. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="158" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="172" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a85a0899a221e2365ca88a649abcb6745" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator&gt;</definition>
+        <argsstring>(const column_t &amp;other) const</argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if other is to the right of this column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="163" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="177" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1aafb675ccfb46a0a83669b70d1b9cefa3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator&gt;=</definition>
+        <argsstring>(const column_t &amp;other) const</argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if other is to the right of or equal to this column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="168" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="182" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1afb01a98fd3f8240cd81ef7a82f9b74d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator&lt;</definition>
+        <argsstring>(const column_t &amp;other) const</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if other is to the left of this column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="173" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="187" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1aa4595bf9721fc9a9a1d6e33bcf7f6b4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator&lt;=</definition>
+        <argsstring>(const column_t &amp;other) const</argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if other is to the left of or equal to this column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="178" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="192" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a80bc6e33cb95e0433a5c9eba5bf156d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator&gt;</definition>
+        <argsstring>(const column_t::index_t &amp;other) const</argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t_1ab514d159582ca03315e0f020dc8efedd" kindref="member">column_t::index_t</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if other is to the right of this column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="183" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="197" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1ad655c2a45d3dc7a27b1c1661b7008888" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator&gt;=</definition>
+        <argsstring>(const column_t::index_t &amp;other) const</argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t_1ab514d159582ca03315e0f020dc8efedd" kindref="member">column_t::index_t</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if other is to the right of or equal to this column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="188" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="202" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a038c96bf0eac7e441e65f47b831f52bf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator&lt;</definition>
+        <argsstring>(const column_t::index_t &amp;other) const</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t_1ab514d159582ca03315e0f020dc8efedd" kindref="member">column_t::index_t</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if other is to the left of this column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="193" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="207" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a3893f4ecfad908bb62201032c03ab556" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::column_t::operator&lt;=</definition>
+        <argsstring>(const column_t::index_t &amp;other) const</argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t_1ab514d159582ca03315e0f020dc8efedd" kindref="member">column_t::index_t</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if other is to the left of or equal to this column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="198" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="212" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a48f04341aed247967de08522bda4ebda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+        <definition>column_t &amp; xlnt::column_t::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <briefdescription>
+<para>Pre-increments this column, making it point to the column one to the right and returning a reference to it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="203" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="217" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1ad560a60d876273dc3b2d7882cae68f14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+        <definition>column_t &amp; xlnt::column_t::operator--</definition>
+        <argsstring>()</argsstring>
+        <name>operator--</name>
+        <briefdescription>
+<para>Pre-deccrements this column, making it point to the column one to the left and returning a reference to it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="208" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="223" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a94dd3c5ea72f056276c2daaa03c08757" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref></type>
+        <definition>column_t xlnt::column_t::operator++</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator++</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>Post-increments this column, making it point to the column one to the right and returning the old column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="213" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="229" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1aff101d876632bc5ce93bbae6941bc3d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref></type>
+        <definition>column_t xlnt::column_t::operator--</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator--</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>Post-decrements this column, making it point to the column one to the left and returning the old column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="218" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="236" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1acc47a7f652c287d179c51859360a99b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+        <definition>column_t &amp; xlnt::column_t::operator+=</definition>
+        <argsstring>(const column_t &amp;rhs)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Adds rhs to this column and returns a reference to this column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="233" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="255" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1column__t_1a07c3be09e7f446ebaa3876aa2bb13bad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+        <definition>column_t &amp; xlnt::column_t::operator-=</definition>
+        <argsstring>(const column_t &amp;rhs)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Subtracts rhs from this column and returns a reference to this column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="238" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="261" bodyend="265"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classxlnt_1_1column__t_1a7b3aad4ebc633a0face07b276e6e8ad7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="xlnt__config_8hpp_1ad97fc05b85eba23053616e2fc11f8267" kindref="member">XLNT_API</ref> <ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref></type>
+        <definition>XLNT_API column_t operator+</definition>
+        <argsstring>(column_t lhs, const column_t &amp;rhs)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref></type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Returns the result of adding rhs to this column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="223" column="30" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="243" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxlnt_1_1column__t_1a69295fd4f41af2cbfc5ebbf64cae8b93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="xlnt__config_8hpp_1ad97fc05b85eba23053616e2fc11f8267" kindref="member">XLNT_API</ref> <ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref></type>
+        <definition>XLNT_API column_t operator-</definition>
+        <argsstring>(column_t lhs, const column_t &amp;rhs)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref></type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Returns the result of subtracing lhs by rhs column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="228" column="30" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="249" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxlnt_1_1column__t_1a3ec5e3db3a78b50af9729bf887bd865d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="xlnt__config_8hpp_1ad97fc05b85eba23053616e2fc11f8267" kindref="member">XLNT_API</ref> bool</type>
+        <definition>XLNT_API bool operator&gt;</definition>
+        <argsstring>(const column_t::index_t &amp;left, const column_t &amp;right)</argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t_1ab514d159582ca03315e0f020dc8efedd" kindref="member">column_t::index_t</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if other is to the right of this column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="243" column="26" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="267" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxlnt_1_1column__t_1a13a9ec17fe04c332716907de96c0d909" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="xlnt__config_8hpp_1ad97fc05b85eba23053616e2fc11f8267" kindref="member">XLNT_API</ref> bool</type>
+        <definition>XLNT_API bool operator&gt;=</definition>
+        <argsstring>(const column_t::index_t &amp;left, const column_t &amp;right)</argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t_1ab514d159582ca03315e0f020dc8efedd" kindref="member">column_t::index_t</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if other is to the right of or equal to this column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="248" column="26" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="272" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxlnt_1_1column__t_1a7615b1e028e3438734b4901d58efce7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="xlnt__config_8hpp_1ad97fc05b85eba23053616e2fc11f8267" kindref="member">XLNT_API</ref> bool</type>
+        <definition>XLNT_API bool operator&lt;</definition>
+        <argsstring>(const column_t::index_t &amp;left, const column_t &amp;right)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t_1ab514d159582ca03315e0f020dc8efedd" kindref="member">column_t::index_t</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if other is to the left of this column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="253" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="277" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxlnt_1_1column__t_1a1d1dbc28260dd8f41ca2de30911d1554" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="xlnt__config_8hpp_1ad97fc05b85eba23053616e2fc11f8267" kindref="member">XLNT_API</ref> bool</type>
+        <definition>XLNT_API bool operator&lt;=</definition>
+        <argsstring>(const column_t::index_t &amp;left, const column_t &amp;right)</argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t_1ab514d159582ca03315e0f020dc8efedd" kindref="member">column_t::index_t</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if other is to the left of or equal to this column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="258" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="282" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="friend" id="classxlnt_1_1column__t_1a85fb8e50c16ccecffd055a3947905215" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="xlnt__config_8hpp_1ad97fc05b85eba23053616e2fc11f8267" kindref="member">XLNT_API</ref> void</type>
+        <definition>XLNT_API void swap</definition>
+        <argsstring>(column_t &amp;left, column_t &amp;right)</argsstring>
+        <name>swap</name>
+        <param>
+          <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="classxlnt_1_1column__t" kindref="compound">column_t</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Swaps the columns that left and right refer to. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="263" column="26" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/cell/index_types.cpp" bodystart="287" bodyend="291"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Columns can be referred to as a string A,B,...Z,AA,AB,..,ZZ,AAA,...,ZZZ or as a 1-indexed index. This class encapsulates both of these forms of column referencing and allows for conversions between them. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" line="47" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/cell/index_types.hpp" bodystart="48" bodyend="269"/>
+    <listofallmembers>
+      <member refid="classxlnt_1_1column__t_1a0d279f6bb1c3f6fbe4a1b9ea8a73f182" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>column_index_from_string</name></member>
+      <member refid="classxlnt_1_1column__t_1acf34c7f03d070a3bfa9dabed88411f1c" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>column_string</name></member>
+      <member refid="classxlnt_1_1column__t_1a23c8985b1f2b91f2ba5b722a7fb053e0" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>column_string_from_index</name></member>
+      <member refid="classxlnt_1_1column__t_1a17ecf0149815f0e8cfbf3d6fb9181966" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>column_t</name></member>
+      <member refid="classxlnt_1_1column__t_1a8ef4798c933f535e5c344d15b730dea1" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>column_t</name></member>
+      <member refid="classxlnt_1_1column__t_1a51223789791f8bac595c1f7d68d94d2b" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>column_t</name></member>
+      <member refid="classxlnt_1_1column__t_1abe9a7724fafffc29ca8fdf428469cf4a" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>column_t</name></member>
+      <member refid="classxlnt_1_1column__t_1a9e53ff3b0e9037c56561bc5e3a5d2f57" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>index</name></member>
+      <member refid="classxlnt_1_1column__t_1ab514d159582ca03315e0f020dc8efedd" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>index_t</name></member>
+      <member refid="classxlnt_1_1column__t_1a3730c4854888b300fbdabec3ec155cc8" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator!=</name></member>
+      <member refid="classxlnt_1_1column__t_1a418e399217a40e8f03b614f887883264" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator!=</name></member>
+      <member refid="classxlnt_1_1column__t_1ab782517542e3aeee0ea6b85fdba3b01c" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator!=</name></member>
+      <member refid="classxlnt_1_1column__t_1a991bd23bb10ae22b3f14678f3ff09c5a" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator!=</name></member>
+      <member refid="classxlnt_1_1column__t_1aa24681170b8d44da29b63abb98759060" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator!=</name></member>
+      <member refid="classxlnt_1_1column__t_1a7b3aad4ebc633a0face07b276e6e8ad7" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator+</name></member>
+      <member refid="classxlnt_1_1column__t_1a48f04341aed247967de08522bda4ebda" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator++</name></member>
+      <member refid="classxlnt_1_1column__t_1a94dd3c5ea72f056276c2daaa03c08757" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator++</name></member>
+      <member refid="classxlnt_1_1column__t_1acc47a7f652c287d179c51859360a99b5" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator+=</name></member>
+      <member refid="classxlnt_1_1column__t_1a69295fd4f41af2cbfc5ebbf64cae8b93" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator-</name></member>
+      <member refid="classxlnt_1_1column__t_1ad560a60d876273dc3b2d7882cae68f14" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator--</name></member>
+      <member refid="classxlnt_1_1column__t_1aff101d876632bc5ce93bbae6941bc3d6" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator--</name></member>
+      <member refid="classxlnt_1_1column__t_1a07c3be09e7f446ebaa3876aa2bb13bad" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator-=</name></member>
+      <member refid="classxlnt_1_1column__t_1afb01a98fd3f8240cd81ef7a82f9b74d5" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator&lt;</name></member>
+      <member refid="classxlnt_1_1column__t_1a038c96bf0eac7e441e65f47b831f52bf" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator&lt;</name></member>
+      <member refid="classxlnt_1_1column__t_1a7615b1e028e3438734b4901d58efce7a" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator&lt;</name></member>
+      <member refid="classxlnt_1_1column__t_1aa4595bf9721fc9a9a1d6e33bcf7f6b4a" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator&lt;=</name></member>
+      <member refid="classxlnt_1_1column__t_1a3893f4ecfad908bb62201032c03ab556" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator&lt;=</name></member>
+      <member refid="classxlnt_1_1column__t_1a1d1dbc28260dd8f41ca2de30911d1554" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator&lt;=</name></member>
+      <member refid="classxlnt_1_1column__t_1a9a0be009adb1029f5f268d3f75cbc910" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator=</name></member>
+      <member refid="classxlnt_1_1column__t_1a985aeb3675905115dddddde860807106" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator=</name></member>
+      <member refid="classxlnt_1_1column__t_1ab774eea0973b113268cd8ba1997138be" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator==</name></member>
+      <member refid="classxlnt_1_1column__t_1aa6cafc9b777354926bc174ee4819272f" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator==</name></member>
+      <member refid="classxlnt_1_1column__t_1af2aba5ed49ce6847c20ff02b0a83e4b5" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator==</name></member>
+      <member refid="classxlnt_1_1column__t_1aed5d29ebaee2f9601f5484e9e8d37959" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator==</name></member>
+      <member refid="classxlnt_1_1column__t_1a0023091df60cb803860be673020ffbdd" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator==</name></member>
+      <member refid="classxlnt_1_1column__t_1a85a0899a221e2365ca88a649abcb6745" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator&gt;</name></member>
+      <member refid="classxlnt_1_1column__t_1a80bc6e33cb95e0433a5c9eba5bf156d7" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator&gt;</name></member>
+      <member refid="classxlnt_1_1column__t_1a3ec5e3db3a78b50af9729bf887bd865d" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator&gt;</name></member>
+      <member refid="classxlnt_1_1column__t_1aafb675ccfb46a0a83669b70d1b9cefa3" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator&gt;=</name></member>
+      <member refid="classxlnt_1_1column__t_1ad655c2a45d3dc7a27b1c1661b7008888" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator&gt;=</name></member>
+      <member refid="classxlnt_1_1column__t_1a13a9ec17fe04c332716907de96c0d909" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>operator&gt;=</name></member>
+      <member refid="classxlnt_1_1column__t_1a85fb8e50c16ccecffd055a3947905215" prot="public" virt="non-virtual"><scope>xlnt::column_t</scope><name>swap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classpybind11_1_1detail_1_1object__api" kind="class" language="C++" prot="public">
+    <compoundname>pybind11::detail::object_api</compoundname>
+    <basecompoundref refid="classpybind11_1_1detail_1_1pyobject__tag" prot="public" virt="non-virtual">pybind11::detail::pyobject_tag</basecompoundref>
+    <includes refid="pytypes_8h" local="no">pytypes.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Derived</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1object__api_1a764486ce233aa9d850a7b18d5227ea08" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Derived &amp;</type>
+        <definition>const Derived&amp; pybind11::detail::object_api&lt; Derived &gt;::derived</definition>
+        <argsstring>() const</argsstring>
+        <name>derived</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="55" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1object__api_1a186bda3e95a07f59f9449ce0d050ae5e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classpybind11_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>iterator pybind11::detail::object_api&lt; D &gt;::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>\rst Return an iterator equivalent to calling <computeroutput><ref refid="group__python__builtins_1gab4e8cc0cdd5b04fd00f4ba1f2d0f5b8d" kindref="member">iter()</ref></computeroutput> in Python. The object must be a collection which supports the iteration protocol. \endrst </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="62" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="1250" bodyend="1250"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1object__api_1a011483f62a9bd3c0fb60bfc7749fc28f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classpybind11_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>iterator pybind11::detail::object_api&lt; D &gt;::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <briefdescription>
+<para>Return a sentinel which ends iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="64" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="1251" bodyend="1251"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1object__api_1ae10abab736d193f170eaa6cfbdab6d01" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacepybind11_1_1detail_1acd690ad872191cefa9a070cee0362cda" kindref="member">item_accessor</ref></type>
+        <definition>item_accessor pybind11::detail::object_api&lt; D &gt;::operator[]</definition>
+        <argsstring>(handle key) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>\rst Return an internal functor to invoke the object&apos;s sequence protocol. Casting the returned <computeroutput><ref refid="namespacepybind11_1_1detail_1acd690ad872191cefa9a070cee0362cda" kindref="member">detail::item_accessor</ref></computeroutput> instance to a <computeroutput>handle</computeroutput> or <computeroutput>object</computeroutput> subclass causes a corresponding call to <computeroutput>__getitem__</computeroutput>. Assigning a <computeroutput>handle</computeroutput> or <computeroutput>object</computeroutput> subclass causes a call to <computeroutput>__setitem__</computeroutput>. \endrst </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="72" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="1252" bodyend="1254"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1object__api_1a579d2eeebff07ddab98814ccbfbe2728" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacepybind11_1_1detail_1acd690ad872191cefa9a070cee0362cda" kindref="member">item_accessor</ref></type>
+        <definition>item_accessor pybind11::detail::object_api&lt; D &gt;::operator[]</definition>
+        <argsstring>(const char *key) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>See above (the only difference is that they key is provided as a string literal) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="74" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="1255" bodyend="1257"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1object__api_1a1515b5309996f3109e3e73ea6c1ab8df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacepybind11_1_1detail_1aba3678fbd1185c3e875ec436b012bd5f" kindref="member">obj_attr_accessor</ref></type>
+        <definition>obj_attr_accessor pybind11::detail::object_api&lt; D &gt;::attr</definition>
+        <argsstring>(handle key) const</argsstring>
+        <name>attr</name>
+        <param>
+          <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>\rst Return an internal functor to access the object&apos;s attributes. Casting the returned <computeroutput><ref refid="namespacepybind11_1_1detail_1aba3678fbd1185c3e875ec436b012bd5f" kindref="member">detail::obj_attr_accessor</ref></computeroutput> instance to a <computeroutput>handle</computeroutput> or <computeroutput>object</computeroutput> subclass causes a corresponding call to <computeroutput>getattr</computeroutput>. Assigning a <computeroutput>handle</computeroutput> or <computeroutput>object</computeroutput> subclass causes a call to <computeroutput>setattr</computeroutput>. \endrst </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="82" column="23" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="1258" bodyend="1260"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1object__api_1a1ed2f42e544637c80b31c05c88cb916e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacepybind11_1_1detail_1afe653288f3797c8a5626446af6656895" kindref="member">str_attr_accessor</ref></type>
+        <definition>str_attr_accessor pybind11::detail::object_api&lt; D &gt;::attr</definition>
+        <argsstring>(const char *key) const</argsstring>
+        <name>attr</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>See above (the only difference is that they key is provided as a string literal) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="84" column="23" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="1261" bodyend="1263"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1object__api_1a5babe5939b794c3408711be7fde14ee0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classpybind11_1_1detail_1_1args__proxy" kindref="compound">args_proxy</ref></type>
+        <definition>args_proxy pybind11::detail::object_api&lt; D &gt;::operator*</definition>
+        <argsstring>() const</argsstring>
+        <name>operator*</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>\rst Matches * unpacking in Python, e.g. to unpack arguments out of a <computeroutput>tuple</computeroutput> or <computeroutput>list</computeroutput> for a function call. Applying another * to the result yields unpacking, e.g. to unpack a dict as function keyword arguments. See :ref:<computeroutput>calling_python_functions</computeroutput>. \endrst </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="92" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="1264" bodyend="1266"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1object__api_1a18a4dd49680420a502a89d6d75e07748" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool pybind11::detail::object_api&lt; D &gt;::contains</definition>
+        <argsstring>(T &amp;&amp;item) const</argsstring>
+        <name>contains</name>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Check if the given item is contained within this object, i.e. <computeroutput>item in obj</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="95" column="22" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="1267" bodyend="1269"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1object__api_1ad5605908755b3a6ad07bbfa63f398ab8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type><ref refid="namespacepybind11_1a5f83e7a05cee9068927633ac47dbe69c" kindref="member">return_value_policy</ref></type>
+            <declname>policy</declname>
+            <defname>policy</defname>
+            <defval><ref refid="namespacepybind11_1a5f83e7a05cee9068927633ac47dbe69ca1c1628c22d69b3b9bac4b5c3674852e3" kindref="member">return_value_policy::automatic_reference</ref></defval>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classpybind11_1_1object" kindref="compound">object</ref></type>
+        <definition>object pybind11::detail::object_api&lt; Derived &gt;::operator()</definition>
+        <argsstring>(Args &amp;&amp;...args) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>\rst Assuming the Python object is a function or implements the <computeroutput>__call__</computeroutput> protocol, <computeroutput>operator()</computeroutput> invokes the underlying function, passing an arbitrary set of parameters. The result is returned as a <computeroutput>object</computeroutput> and may need to be converted back into a Python object using <computeroutput><ref refid="classpybind11_1_1handle_1a010389458d06cdacb08f1e0e62f66dfc" kindref="member">handle::cast()</ref></computeroutput>.</para>
+<para>When some of the arguments cannot be converted to Python objects, the function will throw a <computeroutput><ref refid="classpybind11_1_1cast__error" kindref="compound">cast_error</ref></computeroutput> exception. When the Python function call fails, a <computeroutput><ref refid="classpybind11_1_1error__already__set" kindref="compound">error_already_set</ref></computeroutput> exception is thrown. \endrst </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="108" column="12" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1998" bodyend="2000"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1object__api_1a9e40315e3b89ae491c4ff308048550ba" prot="public" static="no" const="yes" explicit="no" inline="no" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type><ref refid="namespacepybind11_1a5f83e7a05cee9068927633ac47dbe69c" kindref="member">return_value_policy</ref></type>
+            <declname>policy</declname>
+            <defname>policy</defname>
+            <defval><ref refid="namespacepybind11_1a5f83e7a05cee9068927633ac47dbe69ca1c1628c22d69b3b9bac4b5c3674852e3" kindref="member">return_value_policy::automatic_reference</ref></defval>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>pybind11::detail::object_api&lt; Derived &gt;::__attribute__</definition>
+        <argsstring>((deprecated(&quot;call(...) was deprecated in favor of operator()(...)&quot;))) object call(Args &amp;&amp;... args) const</argsstring>
+        <name>__attribute__</name>
+        <param>
+          <type>(deprecated(&quot;call(...) was deprecated in favor of operator()(...)&quot;))</type>
+        </param>
+        <briefdescription>
+<para>Get or set the object&apos;s docstring, i.e. <computeroutput>obj.__doc__</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="110" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1object__api_1a5107835e7630a10868373383c003100b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pybind11::detail::object_api&lt; Derived &gt;::is</definition>
+        <argsstring>(object_api const &amp;other) const</argsstring>
+        <name>is</name>
+        <param>
+          <type><ref refid="classpybind11_1_1detail_1_1object__api" kindref="compound">object_api</ref> const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Equivalent to <computeroutput>obj is other</computeroutput> in Python. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="114" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="114" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1object__api_1a1e0426c7b1cc45d3b56574aaaa38ff06" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pybind11::detail::object_api&lt; Derived &gt;::is_none</definition>
+        <argsstring>() const</argsstring>
+        <name>is_none</name>
+        <briefdescription>
+<para>Equivalent to <computeroutput>obj is None</computeroutput> in Python. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="116" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="116" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1object__api_1aa1e808c7d0773561b3c552cf93d13368" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int pybind11::detail::object_api&lt; Derived &gt;::ref_count</definition>
+        <argsstring>() const</argsstring>
+        <name>ref_count</name>
+        <briefdescription>
+<para>Return the object&apos;s current reference count. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="124" column="9" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="124" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1detail_1_1object__api_1ab2bf58fa4e77779d723142a1a51a9033" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+        <definition>handle pybind11::detail::object_api&lt; D &gt;::get_type</definition>
+        <argsstring>() const</argsstring>
+        <name>get_type</name>
+        <briefdescription>
+<para>Return a handle to the Python type object underlying the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="126" column="12" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="1278" bodyend="1278"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>\rst A mixin class which adds common functions to <computeroutput>handle</computeroutput>, <computeroutput>object</computeroutput> and various accessors. The only requirement for <computeroutput>Derived</computeroutput> is to implement <computeroutput>PyObject *Derived::ptr() const</computeroutput>. \endrst </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>pybind11::detail::pyobject_tag</label>
+        <link refid="classpybind11_1_1detail_1_1pyobject__tag"/>
+      </node>
+      <node id="1">
+        <label>pybind11::detail::object_api&lt; Derived &gt;</label>
+        <link refid="classpybind11_1_1detail_1_1object__api"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>pybind11::detail::pyobject_tag</label>
+        <link refid="classpybind11_1_1detail_1_1pyobject__tag"/>
+      </node>
+      <node id="1">
+        <label>pybind11::detail::object_api&lt; Derived &gt;</label>
+        <link refid="classpybind11_1_1detail_1_1object__api"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="54" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="54" bodyend="127"/>
+    <listofallmembers>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a9e40315e3b89ae491c4ff308048550ba" prot="public" virt="non-virtual"><scope>pybind11::detail::object_api</scope><name>__attribute__</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a1515b5309996f3109e3e73ea6c1ab8df" prot="public" virt="non-virtual"><scope>pybind11::detail::object_api</scope><name>attr</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a1ed2f42e544637c80b31c05c88cb916e" prot="public" virt="non-virtual"><scope>pybind11::detail::object_api</scope><name>attr</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a186bda3e95a07f59f9449ce0d050ae5e" prot="public" virt="non-virtual"><scope>pybind11::detail::object_api</scope><name>begin</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a18a4dd49680420a502a89d6d75e07748" prot="public" virt="non-virtual"><scope>pybind11::detail::object_api</scope><name>contains</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a764486ce233aa9d850a7b18d5227ea08" prot="private" virt="non-virtual"><scope>pybind11::detail::object_api</scope><name>derived</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a011483f62a9bd3c0fb60bfc7749fc28f" prot="public" virt="non-virtual"><scope>pybind11::detail::object_api</scope><name>end</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1ab2bf58fa4e77779d723142a1a51a9033" prot="public" virt="non-virtual"><scope>pybind11::detail::object_api</scope><name>get_type</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a5107835e7630a10868373383c003100b" prot="public" virt="non-virtual"><scope>pybind11::detail::object_api</scope><name>is</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a1e0426c7b1cc45d3b56574aaaa38ff06" prot="public" virt="non-virtual"><scope>pybind11::detail::object_api</scope><name>is_none</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1ad5605908755b3a6ad07bbfa63f398ab8" prot="public" virt="non-virtual"><scope>pybind11::detail::object_api</scope><name>operator()</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a5babe5939b794c3408711be7fde14ee0" prot="public" virt="non-virtual"><scope>pybind11::detail::object_api</scope><name>operator*</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1ae10abab736d193f170eaa6cfbdab6d01" prot="public" virt="non-virtual"><scope>pybind11::detail::object_api</scope><name>operator[]</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a579d2eeebff07ddab98814ccbfbe2728" prot="public" virt="non-virtual"><scope>pybind11::detail::object_api</scope><name>operator[]</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1aa1e808c7d0773561b3c552cf93d13368" prot="public" virt="non-virtual"><scope>pybind11::detail::object_api</scope><name>ref_count</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

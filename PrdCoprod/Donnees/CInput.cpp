@@ -52,10 +52,6 @@ CInput::CInput(int n, int m, int D, int nInfra, int nSite, int nSlot, int nTrain
 }
 
 
-CInput::~CInput()
-{
-}
-
 void CInput::print() {
 	cout << "== Input ==" << endl;
 	cout << "n : " << n << endl;

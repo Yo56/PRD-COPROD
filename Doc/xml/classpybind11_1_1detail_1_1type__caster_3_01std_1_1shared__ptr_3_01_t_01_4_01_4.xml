@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classpybind11_1_1detail_1_1type__caster_3_01std_1_1shared__ptr_3_01_t_01_4_01_4" kind="class" language="C++" prot="public">
+    <compoundname>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</compoundname>
+    <basecompoundref refid="structpybind11_1_1detail_1_1copyable__holder__caster" prot="public" virt="non-virtual">pybind11::detail::copyable_holder_caster&lt; T, std::shared_ptr&lt; T &gt; &gt;</basecompoundref>
+    <includes refid="cast_8h" local="no">cast.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+<para>Specialize for the common std::shared_ptr, so users don&apos;t need to. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>pybind11::detail::copyable_holder_caster&lt; T, std::shared_ptr&lt; T &gt; &gt;</label>
+        <link refid="structpybind11_1_1detail_1_1copyable__holder__caster"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>pybind11::detail::type_caster_base&lt; type &gt;</label>
+        <link refid="classpybind11_1_1detail_1_1type__caster__base"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>pybind11::detail::type_caster_generic</label>
+        <link refid="classpybind11_1_1detail_1_1type__caster__generic"/>
+      </node>
+      <node id="1">
+        <label>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</label>
+        <link refid="classpybind11_1_1detail_1_1type__caster_3_01std_1_1shared__ptr_3_01_t_01_4_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8">
+        <label>pybind11::detail::type_info</label>
+        <link refid="structpybind11_1_1detail_1_1type__info"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>get_buffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pybind11::detail::object_api&lt; handle &gt;</label>
+        <link refid="classpybind11_1_1detail_1_1object__api"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pybind11::detail::copyable_holder_caster&lt; T, std::shared_ptr&lt; T &gt; &gt;</label>
+        <link refid="structpybind11_1_1detail_1_1copyable__holder__caster"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>pybind11::detail::type_caster_base&lt; type &gt;</label>
+        <link refid="classpybind11_1_1detail_1_1type__caster__base"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>pybind11::detail::pyobject_tag</label>
+        <link refid="classpybind11_1_1detail_1_1pyobject__tag"/>
+      </node>
+      <node id="9">
+        <label>pybind11::buffer_info</label>
+        <link refid="structpybind11_1_1buffer__info"/>
+      </node>
+      <node id="4">
+        <label>pybind11::detail::type_caster_generic</label>
+        <link refid="classpybind11_1_1detail_1_1type__caster__generic"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>copy_constructor</edgelabel>
+          <edgelabel>existing_holder</edgelabel>
+          <edgelabel>move_constructor</edgelabel>
+          <edgelabel>parent</edgelabel>
+          <edgelabel>src_and_type</edgelabel>
+          <edgelabel>tinfo</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>typeinfo</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>pybind11::handle</label>
+        <link refid="classpybind11_1_1handle"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</label>
+        <link refid="classpybind11_1_1detail_1_1type__caster_3_01std_1_1shared__ptr_3_01_t_01_4_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" line="1418" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/cast.h" bodystart="1418" bodyend="1418"/>
+    <listofallmembers>
+      <member refid="classpybind11_1_1detail_1_1type__caster__generic_1a10796f8999edcdb3d6e4a658c2cca73e" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>__attribute__</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__generic_1a89236503bc93c9d9cadda35831f6af36" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>__attribute__</name></member>
+      <member refid="structpybind11_1_1detail_1_1copyable__holder__caster_1a5c28bafc94c53278095dc869dc5c5737" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>base</name></member>
+      <member refid="structpybind11_1_1detail_1_1copyable__holder__caster_1a431e797b8089d2f55c2968221c030aad" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>cast</name></member>
+      <member refid="structpybind11_1_1detail_1_1copyable__holder__caster_1afb028f5da33ba373d8aad123f0cd3c23" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>cast</name></member>
+      <member refid="structpybind11_1_1detail_1_1copyable__holder__caster_1ab8c449a3210c553469f620b5222cae06" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>cast</name></member>
+      <member refid="structpybind11_1_1detail_1_1copyable__holder__caster_1a0ad42918189a055ae43bae3ab241656e" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__base_1afb028f5da33ba373d8aad123f0cd3c23" prot="public" virt="non-virtual" ambiguityscope="pybind11::detail::type_caster_base::"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__base_1ab8c449a3210c553469f620b5222cae06" prot="public" virt="non-virtual" ambiguityscope="pybind11::detail::type_caster_base::"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__base_1a0ad42918189a055ae43bae3ab241656e" prot="public" virt="non-virtual" ambiguityscope="pybind11::detail::type_caster_base::"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__base_1afa96c23ff449675cd59ad0a2473e479f" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>cast_holder</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__base_1a0ef64bca1f10a1bd64538dfb2cdf59c5" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>cast_op_type</name></member>
+      <member refid="structpybind11_1_1detail_1_1copyable__holder__caster_1a8d0ce2632f3447894486ed9e783bf8b5" prot="protected" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>check_holder_compat</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__base_1a655313b9d5c1dd93be1fe7417250536e" prot="protected" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>Constructor</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__generic_1a655767dd596ec032eec7740328f3fe84" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>copy_constructor</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__generic_1a8c3a1017a1539f916dc2b0b65231a88f" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>existing_holder</name></member>
+      <member refid="structpybind11_1_1detail_1_1copyable__holder__caster_1a2557f2aa3c9bfe451f57cb5d075d84a6" prot="protected" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>holder</name></member>
+      <member refid="structpybind11_1_1detail_1_1copyable__holder__caster_1a3fa88695191222da1021e31eace02bfa" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>load</name></member>
+      <member refid="structpybind11_1_1detail_1_1copyable__holder__caster_1ad8302676538b44cb69c5e3409eb08c58" prot="protected" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>load_value</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__base_1a8cafb31a1ae7071ad68fbbeaa9d1683e" prot="protected" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>make_copy_constructor</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__base_1ab3e91d3fe97cf4046028868b62c0bcf5" prot="protected" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>make_copy_constructor</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__base_1aeaaa042b328e011e8f083f7da5122dad" prot="protected" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>make_move_constructor</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__base_1a547d0587565ba34f964a3377f8edfb4f" prot="protected" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>make_move_constructor</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__generic_1a951ed06cb81e22e3b106b3e23cecfd05" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>move_constructor</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__base_1adf01f1ae6a0c005e359cff94a2ebfe57" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>name</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__base_1add9ee28ad6357017fb31db73de19a14b" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>operator itype &amp;</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__base_1ab53e652ad5fe47bd19795e788e0c6252" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>operator itype *</name></member>
+      <member refid="structpybind11_1_1detail_1_1copyable__holder__caster_1af03bdcbb00577d0d0bcfc326505b6c3c" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>operator std::shared_ptr&lt; T &gt; &amp;</name></member>
+      <member refid="structpybind11_1_1detail_1_1copyable__holder__caster_1aacc88af505b2ab84c49ac713dc05274f" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>operator std::shared_ptr&lt; T &gt; *</name></member>
+      <member refid="structpybind11_1_1detail_1_1copyable__holder__caster_1a69305fcd964a19cab862a80708a79f71" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>operator T &amp;</name></member>
+      <member refid="structpybind11_1_1detail_1_1copyable__holder__caster_1a78c58c36ffbc469b84031257ae7a12e1" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>operator T *</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__generic_1aa1455e47a864e1487370527cd1a91634" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>parent</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__generic_1a2ec264c8440447e927d4ce605f278984" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>policy</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__base_1a4e519ebdcc3da1b918d7265a9e87d794" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>src_and_type</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__base_1a4e519ebdcc3da1b918d7265a9e87d794" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>src_and_type</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__generic_1a8416df5db92073a3eb985d37189b0573" prot="public" virt="non-virtual" ambiguityscope="pybind11::detail::type_caster_generic::"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>src_and_type</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__generic_1a647882c53b3120f6e031d8657d6c4c11" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>tinfo</name></member>
+      <member refid="structpybind11_1_1detail_1_1copyable__holder__caster_1a627986c69d192a8dc2ee9470ae2c9c9d" prot="protected" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>try_direct_conversions</name></member>
+      <member refid="structpybind11_1_1detail_1_1copyable__holder__caster_1a8645db3783f38479dfc2b58aff3477c0" prot="protected" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>try_implicit_casts</name></member>
+      <member refid="structpybind11_1_1detail_1_1copyable__holder__caster_1a6390c778768ca0ccda1ede71ccefe237" prot="protected" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>try_implicit_casts</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__base_1a5205c10684e7768216562163515c31e8" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>type_caster_base</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__base_1a1c928d670cfa4926fd4893436339be51" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>type_caster_base</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__generic_1a860d37bda0e4b2cbf26be541e059dbeb" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>typeinfo</name></member>
+      <member refid="classpybind11_1_1detail_1_1type__caster__generic_1a9209746eb23e540a3a48ec3e4e18a8ea" prot="public" virt="non-virtual"><scope>pybind11::detail::type_caster&lt; std::shared_ptr&lt; T &gt; &gt;</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

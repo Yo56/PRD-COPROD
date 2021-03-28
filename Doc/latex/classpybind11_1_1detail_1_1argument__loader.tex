@@ -1,0 +1,93 @@
+\hypertarget{classpybind11_1_1detail_1_1argument__loader}{}\doxysection{pybind11\+::detail\+::argument\+\_\+loader$<$ Args $>$ Class Template Reference}
+\label{classpybind11_1_1detail_1_1argument__loader}\index{pybind11::detail::argument\_loader$<$ Args $>$@{pybind11::detail::argument\_loader$<$ Args $>$}}
+
+
+Helper class which loads arguments for C++ functions called from Python.  
+
+
+
+
+{\ttfamily \#include $<$cast.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1argument__loader_a32be088badccd7cb7e2e9bbb424d1a1f}{load\+\_\+args}} (\mbox{\hyperlink{structpybind11_1_1detail_1_1function__call}{function\+\_\+call}} \&\mbox{\hyperlink{classpybind11_1_1detail_1_1argument__loader_a48c67a1e6bd71da946f488fc42c55b6d}{call}})
+\item 
+{\footnotesize template$<$typename Return , typename Guard , typename Func $>$ }\\\mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$!std\+::is\+\_\+void$<$ Return $>$\+::value, Return $>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1argument__loader_a48c67a1e6bd71da946f488fc42c55b6d}{call}} (Func \&\&f) \&\&
+\item 
+{\footnotesize template$<$typename Return , typename Guard , typename Func $>$ }\\\mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$ std\+::is\+\_\+void$<$ Return $>$\+::value, \mbox{\hyperlink{structpybind11_1_1detail_1_1void__type}{void\+\_\+type}} $>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1argument__loader_a528436efddd493a1e3e19bd811c8d637}{call}} (Func \&\&f) \&\&
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1descr}{pybind11\+::detail\+::descr}} \mbox{\hyperlink{classpybind11_1_1detail_1_1argument__loader_af561fefc965b1269c43943a445eacf9b}{arg\+\_\+names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{classpybind11_1_1detail_1_1argument__loader_ae049fe17713f83569b29f32b7d84707f}{has\+\_\+kwargs}} = kwargs\+\_\+pos $<$ 0
+\item 
+static constexpr bool \mbox{\hyperlink{classpybind11_1_1detail_1_1argument__loader_af5db3b0b97a5b4392d5f36b5c3135835}{has\+\_\+args}} = args\+\_\+pos $<$ 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename... Args$>$\newline
+class pybind11\+::detail\+::argument\+\_\+loader$<$ Args $>$}
+
+Helper class which loads arguments for C++ functions called from Python. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1argument__loader_af561fefc965b1269c43943a445eacf9b}\label{classpybind11_1_1detail_1_1argument__loader_af561fefc965b1269c43943a445eacf9b}} 
+\index{pybind11::detail::argument\_loader$<$ Args $>$@{pybind11::detail::argument\_loader$<$ Args $>$}!arg\_names@{arg\_names}}
+\index{arg\_names@{arg\_names}!pybind11::detail::argument\_loader$<$ Args $>$@{pybind11::detail::argument\_loader$<$ Args $>$}}
+\doxysubsubsection{\texorpdfstring{arg\_names()}{arg\_names()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+\+::\mbox{\hyperlink{classpybind11_1_1detail_1_1descr}{pybind11\+::detail\+::descr}} \mbox{\hyperlink{classpybind11_1_1detail_1_1argument__loader}{pybind11\+::detail\+::argument\+\_\+loader}}$<$ Args $>$\+::arg\+\_\+names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1argument__loader_a48c67a1e6bd71da946f488fc42c55b6d}\label{classpybind11_1_1detail_1_1argument__loader_a48c67a1e6bd71da946f488fc42c55b6d}} 
+\index{pybind11::detail::argument\_loader$<$ Args $>$@{pybind11::detail::argument\_loader$<$ Args $>$}!call@{call}}
+\index{call@{call}!pybind11::detail::argument\_loader$<$ Args $>$@{pybind11::detail::argument\_loader$<$ Args $>$}}
+\doxysubsubsection{\texorpdfstring{call()}{call()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+template$<$typename Return , typename Guard , typename Func $>$ \\
+\mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$!std\+::is\+\_\+void$<$Return$>$\+::value, Return$>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1argument__loader}{pybind11\+::detail\+::argument\+\_\+loader}}$<$ Args $>$\+::call (\begin{DoxyParamCaption}\item[{Func \&\&}]{f }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1argument__loader_a528436efddd493a1e3e19bd811c8d637}\label{classpybind11_1_1detail_1_1argument__loader_a528436efddd493a1e3e19bd811c8d637}} 
+\index{pybind11::detail::argument\_loader$<$ Args $>$@{pybind11::detail::argument\_loader$<$ Args $>$}!call@{call}}
+\index{call@{call}!pybind11::detail::argument\_loader$<$ Args $>$@{pybind11::detail::argument\_loader$<$ Args $>$}}
+\doxysubsubsection{\texorpdfstring{call()}{call()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+template$<$typename Return , typename Guard , typename Func $>$ \\
+\mbox{\hyperlink{namespacepybind11_1_1detail_a492fb1fcf079a5bc67248b852bc73619}{enable\+\_\+if\+\_\+t}}$<$std\+::is\+\_\+void$<$Return$>$\+::value, \mbox{\hyperlink{structpybind11_1_1detail_1_1void__type}{void\+\_\+type}}$>$ \mbox{\hyperlink{classpybind11_1_1detail_1_1argument__loader}{pybind11\+::detail\+::argument\+\_\+loader}}$<$ Args $>$\+::call (\begin{DoxyParamCaption}\item[{Func \&\&}]{f }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1argument__loader_a32be088badccd7cb7e2e9bbb424d1a1f}\label{classpybind11_1_1detail_1_1argument__loader_a32be088badccd7cb7e2e9bbb424d1a1f}} 
+\index{pybind11::detail::argument\_loader$<$ Args $>$@{pybind11::detail::argument\_loader$<$ Args $>$}!load\_args@{load\_args}}
+\index{load\_args@{load\_args}!pybind11::detail::argument\_loader$<$ Args $>$@{pybind11::detail::argument\_loader$<$ Args $>$}}
+\doxysubsubsection{\texorpdfstring{load\_args()}{load\_args()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+bool \mbox{\hyperlink{classpybind11_1_1detail_1_1argument__loader}{pybind11\+::detail\+::argument\+\_\+loader}}$<$ Args $>$\+::load\+\_\+args (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpybind11_1_1detail_1_1function__call}{function\+\_\+call}} \&}]{call }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1argument__loader_af5db3b0b97a5b4392d5f36b5c3135835}\label{classpybind11_1_1detail_1_1argument__loader_af5db3b0b97a5b4392d5f36b5c3135835}} 
+\index{pybind11::detail::argument\_loader$<$ Args $>$@{pybind11::detail::argument\_loader$<$ Args $>$}!has\_args@{has\_args}}
+\index{has\_args@{has\_args}!pybind11::detail::argument\_loader$<$ Args $>$@{pybind11::detail::argument\_loader$<$ Args $>$}}
+\doxysubsubsection{\texorpdfstring{has\_args}{has\_args}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+constexpr bool \mbox{\hyperlink{classpybind11_1_1detail_1_1argument__loader}{pybind11\+::detail\+::argument\+\_\+loader}}$<$ Args $>$\+::has\+\_\+args = args\+\_\+pos $<$ 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classpybind11_1_1detail_1_1argument__loader_ae049fe17713f83569b29f32b7d84707f}\label{classpybind11_1_1detail_1_1argument__loader_ae049fe17713f83569b29f32b7d84707f}} 
+\index{pybind11::detail::argument\_loader$<$ Args $>$@{pybind11::detail::argument\_loader$<$ Args $>$}!has\_kwargs@{has\_kwargs}}
+\index{has\_kwargs@{has\_kwargs}!pybind11::detail::argument\_loader$<$ Args $>$@{pybind11::detail::argument\_loader$<$ Args $>$}}
+\doxysubsubsection{\texorpdfstring{has\_kwargs}{has\_kwargs}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+constexpr bool \mbox{\hyperlink{classpybind11_1_1detail_1_1argument__loader}{pybind11\+::detail\+::argument\+\_\+loader}}$<$ Args $>$\+::has\+\_\+kwargs = kwargs\+\_\+pos $<$ 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nouet/\+Documents/\+Cours/5\+A/\+Dev PRD/\+Prd\+Coprod/\+Prd\+Coprod/libs/xlnt-\/1.\+5.\+0/third-\/party/pybind11/include/pybind11/\mbox{\hyperlink{cast_8h}{cast.\+h}}\end{DoxyCompactItemize}

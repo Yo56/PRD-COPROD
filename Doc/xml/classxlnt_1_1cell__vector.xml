@@ -1,0 +1,518 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classxlnt_1_1cell__vector" kind="class" language="C++" prot="public">
+    <compoundname>xlnt::cell_vector</compoundname>
+    <includes refid="cell__vector_8hpp" local="no">cell_vector.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classxlnt_1_1cell__vector_1a62994a96700c3b99e27e92b1d60d4656" prot="public" static="no">
+        <type><ref refid="classxlnt_1_1cell__iterator" kindref="compound">cell_iterator</ref></type>
+        <definition>using xlnt::cell_vector::iterator =  cell_iterator</definition>
+        <argsstring></argsstring>
+        <name>iterator</name>
+        <briefdescription>
+<para>Iterate over cells in a <ref refid="classxlnt_1_1cell__vector" kindref="compound">cell_vector</ref> with an iterator of this type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="52" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxlnt_1_1cell__vector_1ac1a9772a2570df64c9ae2c80e2e868e6" prot="public" static="no">
+        <type><ref refid="classxlnt_1_1const__cell__iterator" kindref="compound">const_cell_iterator</ref></type>
+        <definition>using xlnt::cell_vector::const_iterator =  const_cell_iterator</definition>
+        <argsstring></argsstring>
+        <name>const_iterator</name>
+        <briefdescription>
+<para>Iterate over const cells in a const <ref refid="classxlnt_1_1cell__vector" kindref="compound">cell_vector</ref> with an iterator of this type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="57" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxlnt_1_1cell__vector_1aa3058cd55363a569135c110065f2edc3" prot="public" static="no">
+        <type>std::reverse_iterator&lt; <ref refid="classxlnt_1_1cell__vector_1a62994a96700c3b99e27e92b1d60d4656" kindref="member">iterator</ref> &gt;</type>
+        <definition>using xlnt::cell_vector::reverse_iterator =  std::reverse_iterator&lt;iterator&gt;</definition>
+        <argsstring></argsstring>
+        <name>reverse_iterator</name>
+        <briefdescription>
+<para>Iterate over cells in a <ref refid="classxlnt_1_1cell__vector" kindref="compound">cell_vector</ref> in reverse oreder with an iterator of this type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="63" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classxlnt_1_1cell__vector_1aaf877a061c1149d41e77131c0025e5b2" prot="public" static="no">
+        <type>std::reverse_iterator&lt; <ref refid="classxlnt_1_1cell__vector_1ac1a9772a2570df64c9ae2c80e2e868e6" kindref="member">const_iterator</ref> &gt;</type>
+        <definition>using xlnt::cell_vector::const_reverse_iterator =  std::reverse_iterator&lt;const_iterator&gt;</definition>
+        <argsstring></argsstring>
+        <name>const_reverse_iterator</name>
+        <briefdescription>
+<para>Iterate over const cells in a const <ref refid="classxlnt_1_1cell__vector" kindref="compound">cell_vector</ref> in reverse order with an iterator of this type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="69" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classxlnt_1_1cell__vector_1a2742fd95fe339b6aa03564298498c49c" prot="private" static="no" mutable="no">
+        <type><ref refid="classxlnt_1_1worksheet" kindref="compound">worksheet</ref></type>
+        <definition>worksheet xlnt::cell_vector::ws_</definition>
+        <argsstring></argsstring>
+        <name>ws_</name>
+        <briefdescription>
+<para>The worksheet this vector points to cells from </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="183" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1cell__vector_1a6f649177bf72d9ba109be73aad7c6a73" prot="private" static="no" mutable="no">
+        <type><ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref></type>
+        <definition>cell_reference xlnt::cell_vector::cursor_</definition>
+        <argsstring></argsstring>
+        <name>cursor_</name>
+        <briefdescription>
+<para>The reference of the first cell in this vector </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="188" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1cell__vector_1a7a84d3a2501e922d64d29255cb937b33" prot="private" static="no" mutable="no">
+        <type><ref refid="classxlnt_1_1range__reference" kindref="compound">range_reference</ref></type>
+        <definition>range_reference xlnt::cell_vector::bounds_</definition>
+        <argsstring></argsstring>
+        <name>bounds_</name>
+        <briefdescription>
+<para>The range of cells this vector can point to </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="193" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1cell__vector_1a8545e533ee3d954ab3ffc533e806dbf6" prot="private" static="no" mutable="no">
+        <type>major_order</type>
+        <definition>major_order xlnt::cell_vector::order_</definition>
+        <argsstring></argsstring>
+        <name>order_</name>
+        <briefdescription>
+<para>The direction that iteration over this vector will move. Note that this has the opposite meaning as in a <ref refid="classxlnt_1_1range__iterator" kindref="compound">range_iterator</ref> because after getting a row-major <ref refid="classxlnt_1_1range__iterator" kindref="compound">range_iterator</ref>, the row-major <ref refid="classxlnt_1_1cell__iterator" kindref="compound">cell_iterator</ref> will iterate over a column and vice versa. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="201" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1cell__vector_1a331e1416dfb440afee7e6f460d96437e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xlnt::cell_vector::skip_null_</definition>
+        <argsstring></argsstring>
+        <name>skip_null_</name>
+        <briefdescription>
+<para>If true, cells that don&apos;t exist in the worksheet will be skipped during iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="206" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxlnt_1_1cell__vector_1a20e992143502f819c6422302e6396f8a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xlnt::cell_vector::wrap_</definition>
+        <argsstring></argsstring>
+        <name>wrap_</name>
+        <briefdescription>
+<para>If true, when on the last column, the cursor will continue to the next row (and vice versa when iterating in column-major order) until reaching the bottom right corner of the range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="213" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1a330bf13297eee224ff1a029a505d858c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlnt::cell_vector::cell_vector</definition>
+        <argsstring>(worksheet ws, const cell_reference &amp;cursor, const range_reference &amp;ref, major_order order, bool skip_null, bool wrap)</argsstring>
+        <name>cell_vector</name>
+        <param>
+          <type><ref refid="classxlnt_1_1worksheet" kindref="compound">worksheet</ref></type>
+          <declname>ws</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1cell__reference" kindref="compound">cell_reference</ref> &amp;</type>
+          <declname>cursor</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classxlnt_1_1range__reference" kindref="compound">range_reference</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <param>
+          <type>major_order</type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>skip_null</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>wrap</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a cell vector pointing to a given range in a given worksheet. order determines whether this vector is a row or a column. If skip_null is true, iterating over this vector will skip empty cells. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="76" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="32" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1aef86c32af642960ca17713745b104e16" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xlnt::cell_vector::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+<para>Returns true if every cell in this vector is null (i.e. the cell doesn&apos;t exist in the worksheet). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="82" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1a5d3e98894b06080420e9d3c694890375" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell" kindref="compound">cell</ref></type>
+        <definition>cell xlnt::cell_vector::front</definition>
+        <argsstring>()</argsstring>
+        <name>front</name>
+        <briefdescription>
+<para>Returns the first cell in this vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="87" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1aeb4d823c35883d01551e177d175a14b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classxlnt_1_1cell" kindref="compound">cell</ref></type>
+        <definition>const cell xlnt::cell_vector::front</definition>
+        <argsstring>() const</argsstring>
+        <name>front</name>
+        <briefdescription>
+<para>Returns the first cell in this vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="92" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1ae791afda0c2adbe472b3755b35a4f0ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell" kindref="compound">cell</ref></type>
+        <definition>cell xlnt::cell_vector::back</definition>
+        <argsstring>()</argsstring>
+        <name>back</name>
+        <briefdescription>
+<para>Returns the last cell in this vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="97" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1acc0b57e777f94bc9f26cc181532c51d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classxlnt_1_1cell" kindref="compound">cell</ref></type>
+        <definition>const cell xlnt::cell_vector::back</definition>
+        <argsstring>() const</argsstring>
+        <name>back</name>
+        <briefdescription>
+<para>Returns the last cell in this vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="102" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1ab5315ce95388d3e6c40db6af026259f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t xlnt::cell_vector::length</definition>
+        <argsstring>() const</argsstring>
+        <name>length</name>
+        <briefdescription>
+<para>Returns the distance between the first and last cells in this vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="107" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="110" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1acf0574d59067645d6b037c72f0a6ac60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__vector_1a62994a96700c3b99e27e92b1d60d4656" kindref="member">iterator</ref></type>
+        <definition>cell_vector::iterator xlnt::cell_vector::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>Returns an iterator to the first cell in this vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="112" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1a7aadd50ffe0f5db191df7be85b9d7ca1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__vector_1a62994a96700c3b99e27e92b1d60d4656" kindref="member">iterator</ref></type>
+        <definition>cell_vector::iterator xlnt::cell_vector::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+<para>Returns an iterator to a cell one-past-the-end of this vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="117" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="48" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1a2b10381fe58f290e0058c83ee89e1466" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__vector_1ac1a9772a2570df64c9ae2c80e2e868e6" kindref="member">const_iterator</ref></type>
+        <definition>cell_vector::const_iterator xlnt::cell_vector::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>Returns an iterator to the first cell in this vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="122" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1a81d3df3db8553fc00825758c4c324906" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__vector_1ac1a9772a2570df64c9ae2c80e2e868e6" kindref="member">const_iterator</ref></type>
+        <definition>cell_vector::const_iterator xlnt::cell_vector::cbegin</definition>
+        <argsstring>() const</argsstring>
+        <name>cbegin</name>
+        <briefdescription>
+<para>Returns an iterator to the first cell in this vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="127" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1a23aad17918997305e1d10e08aa5cb71c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__vector_1ac1a9772a2570df64c9ae2c80e2e868e6" kindref="member">const_iterator</ref></type>
+        <definition>cell_vector::const_iterator xlnt::cell_vector::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <briefdescription>
+<para>Returns an iterator to a cell one-past-the-end of this vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="132" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="119" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1a729df3ac1c403663e4bfecc7c0307cb4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__vector_1ac1a9772a2570df64c9ae2c80e2e868e6" kindref="member">const_iterator</ref></type>
+        <definition>cell_vector::const_iterator xlnt::cell_vector::cend</definition>
+        <argsstring>() const</argsstring>
+        <name>cend</name>
+        <briefdescription>
+<para>Returns an iterator to a cell one-past-the-end of this vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="137" column="20" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="69" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1a3db0818abf1dc23c386db1a43c70967a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__vector_1aa3058cd55363a569135c110065f2edc3" kindref="member">reverse_iterator</ref></type>
+        <definition>cell_vector::reverse_iterator xlnt::cell_vector::rbegin</definition>
+        <argsstring>()</argsstring>
+        <name>rbegin</name>
+        <briefdescription>
+<para>Returns a reverse iterator to the first cell of this reversed vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="142" column="22" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1a4b75c5e9d031b701159432157635a75d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__vector_1aa3058cd55363a569135c110065f2edc3" kindref="member">reverse_iterator</ref></type>
+        <definition>cell_vector::reverse_iterator xlnt::cell_vector::rend</definition>
+        <argsstring>()</argsstring>
+        <name>rend</name>
+        <briefdescription>
+<para>Returns a reverse iterator to to a cell one-past-the-end of this reversed vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="147" column="22" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1af7881112b27c0b0434003bf77b313a57" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__vector_1aaf877a061c1149d41e77131c0025e5b2" kindref="member">const_reverse_iterator</ref></type>
+        <definition>cell_vector::const_reverse_iterator xlnt::cell_vector::rbegin</definition>
+        <argsstring>() const</argsstring>
+        <name>rbegin</name>
+        <briefdescription>
+<para>Returns a reverse iterator to the first cell of this reversed vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="152" column="28" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="139" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1a72095fc04380d017ae4524bed660f1fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__vector_1aaf877a061c1149d41e77131c0025e5b2" kindref="member">const_reverse_iterator</ref></type>
+        <definition>cell_vector::const_reverse_iterator xlnt::cell_vector::rend</definition>
+        <argsstring>() const</argsstring>
+        <name>rend</name>
+        <briefdescription>
+<para>Returns a reverse iterator to to a cell one-past-the-end of this reversed vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="157" column="28" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="149" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1af9d72065632911f218a7cfaa98fbf422" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__vector_1aaf877a061c1149d41e77131c0025e5b2" kindref="member">const_reverse_iterator</ref></type>
+        <definition>cell_vector::const_reverse_iterator xlnt::cell_vector::crbegin</definition>
+        <argsstring>() const</argsstring>
+        <name>crbegin</name>
+        <briefdescription>
+<para>Returns a reverse iterator to the first cell of this reversed vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="162" column="28" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="134" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1a01f03f2be4bfbf5daa42f68484e0d3c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell__vector_1aaf877a061c1149d41e77131c0025e5b2" kindref="member">const_reverse_iterator</ref></type>
+        <definition>cell_vector::const_reverse_iterator xlnt::cell_vector::crend</definition>
+        <argsstring>() const</argsstring>
+        <name>crend</name>
+        <briefdescription>
+<para>Returns a reverse iterator to to a cell one-past-the-end of this reversed vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="167" column="28" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="144" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1a694a0a481d1d905ffaca02f22e77366b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classxlnt_1_1cell" kindref="compound">cell</ref></type>
+        <definition>cell xlnt::cell_vector::operator[]</definition>
+        <argsstring>(std::size_t column_index)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>column_index</declname>
+        </param>
+        <briefdescription>
+<para>Returns the cell column_index distance away from the first cell in this vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="172" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="154" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classxlnt_1_1cell__vector_1a88298b5187b93ae2d27892f7728ee76e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classxlnt_1_1cell" kindref="compound">cell</ref></type>
+        <definition>const cell xlnt::cell_vector::operator[]</definition>
+        <argsstring>(std::size_t column_index) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>column_index</declname>
+        </param>
+        <briefdescription>
+<para>Returns the cell column_index distance away from the first cell in this vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="177" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/source/worksheet/cell_vector.cpp" bodystart="164" bodyend="172"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A cell vector is a linear (1D) range of cells, either vertical or horizontal depending on the major order specified in the constructor. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" line="46" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/include/xlnt/worksheet/cell_vector.hpp" bodystart="47" bodyend="214"/>
+    <listofallmembers>
+      <member refid="classxlnt_1_1cell__vector_1ae791afda0c2adbe472b3755b35a4f0ed" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>back</name></member>
+      <member refid="classxlnt_1_1cell__vector_1acc0b57e777f94bc9f26cc181532c51d5" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>back</name></member>
+      <member refid="classxlnt_1_1cell__vector_1acf0574d59067645d6b037c72f0a6ac60" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>begin</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a2b10381fe58f290e0058c83ee89e1466" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>begin</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a7a84d3a2501e922d64d29255cb937b33" prot="private" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>bounds_</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a81d3df3db8553fc00825758c4c324906" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>cbegin</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a330bf13297eee224ff1a029a505d858c" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>cell_vector</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a729df3ac1c403663e4bfecc7c0307cb4" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>cend</name></member>
+      <member refid="classxlnt_1_1cell__vector_1ac1a9772a2570df64c9ae2c80e2e868e6" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>const_iterator</name></member>
+      <member refid="classxlnt_1_1cell__vector_1aaf877a061c1149d41e77131c0025e5b2" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>const_reverse_iterator</name></member>
+      <member refid="classxlnt_1_1cell__vector_1af9d72065632911f218a7cfaa98fbf422" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>crbegin</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a01f03f2be4bfbf5daa42f68484e0d3c0" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>crend</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a6f649177bf72d9ba109be73aad7c6a73" prot="private" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>cursor_</name></member>
+      <member refid="classxlnt_1_1cell__vector_1aef86c32af642960ca17713745b104e16" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>empty</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a7aadd50ffe0f5db191df7be85b9d7ca1" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>end</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a23aad17918997305e1d10e08aa5cb71c" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>end</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a5d3e98894b06080420e9d3c694890375" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>front</name></member>
+      <member refid="classxlnt_1_1cell__vector_1aeb4d823c35883d01551e177d175a14b8" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>front</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a62994a96700c3b99e27e92b1d60d4656" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>iterator</name></member>
+      <member refid="classxlnt_1_1cell__vector_1ab5315ce95388d3e6c40db6af026259f6" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>length</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a694a0a481d1d905ffaca02f22e77366b" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>operator[]</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a88298b5187b93ae2d27892f7728ee76e" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>operator[]</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a8545e533ee3d954ab3ffc533e806dbf6" prot="private" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>order_</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a3db0818abf1dc23c386db1a43c70967a" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>rbegin</name></member>
+      <member refid="classxlnt_1_1cell__vector_1af7881112b27c0b0434003bf77b313a57" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>rbegin</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a4b75c5e9d031b701159432157635a75d" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>rend</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a72095fc04380d017ae4524bed660f1fa" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>rend</name></member>
+      <member refid="classxlnt_1_1cell__vector_1aa3058cd55363a569135c110065f2edc3" prot="public" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>reverse_iterator</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a331e1416dfb440afee7e6f460d96437e" prot="private" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>skip_null_</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a20e992143502f819c6422302e6396f8a" prot="private" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>wrap_</name></member>
+      <member refid="classxlnt_1_1cell__vector_1a2742fd95fe339b6aa03564298498c49c" prot="private" virt="non-virtual"><scope>xlnt::cell_vector</scope><name>ws_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,641 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="xmlrole_8h" kind="file" language="C++">
+    <compoundname>xmlrole.h</compoundname>
+    <includes refid="xmltok_8h" local="no">libstudxml/details/expat/xmltok.h</includes>
+    <includedby refid="xmlparse_8c" local="no">C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/expat/xmlparse.c</includedby>
+    <includedby refid="xmlrole_8c" local="no">C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/expat/xmlrole.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/expat/xmlrole.h</label>
+        <link refid="xmlrole_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libstudxml/details/expat/xmltok.h</label>
+        <link refid="xmltok_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/expat/xmlrole.c</label>
+        <link refid="xmlrole_8c"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/expat/xmlrole.h</label>
+        <link refid="xmlrole_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/expat/xmlparse.c</label>
+        <link refid="xmlparse_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structprolog__state" prot="public">prolog_state</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="xmlrole_8h_1a0a4f3d87e091406f2a2df9cd51d49324" prot="public" static="no">
+        <name>XmlTokenRole</name>
+        <param><defname>state</defname></param>
+        <param><defname>tok</defname></param>
+        <param><defname>ptr</defname></param>
+        <param><defname>end</defname></param>
+        <param><defname>enc</defname></param>
+        <initializer> (((<ref refid="string__to__double_8cpp_1af63a1df0d582366f7a03c46143e3ae0e" kindref="member">state</ref>)-&gt;handler)(<ref refid="string__to__double_8cpp_1af63a1df0d582366f7a03c46143e3ae0e" kindref="member">state</ref>, tok, ptr, <ref refid="border_8hpp_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref>, enc))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/expat/xmlrole.h" line="107" column="9" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/expat/xmlrole.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@4</name>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca0b9dedf112d095b71e8562e21c639348" prot="public">
+          <name>XML_ROLE_ERROR</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca8372e087fddd26267b09123bc48ac018" prot="public">
+          <name>XML_ROLE_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06caad666adf8b80ac7ced3393e683aeceea" prot="public">
+          <name>XML_ROLE_XML_DECL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca8bd6cf5213a025c2c2fffaaaec9c0bfb" prot="public">
+          <name>XML_ROLE_INSTANCE_START</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca2f7c6010cd325a463676f6b30abc970f" prot="public">
+          <name>XML_ROLE_DOCTYPE_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca92f7b335f72ea4ffcf84a8b1aab0f9ac" prot="public">
+          <name>XML_ROLE_DOCTYPE_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca598ef6eae91a56f74afe7956ecf0da20" prot="public">
+          <name>XML_ROLE_DOCTYPE_SYSTEM_ID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cad76268d6c961bf625fc854144d909a61" prot="public">
+          <name>XML_ROLE_DOCTYPE_PUBLIC_ID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca1a469027da44c3a6e081696f737733ef" prot="public">
+          <name>XML_ROLE_DOCTYPE_INTERNAL_SUBSET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca3d7daa30cf8f4b3004bae1c1ae21b437" prot="public">
+          <name>XML_ROLE_DOCTYPE_CLOSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca9c0d57b51506aea11cefe61f5483052a" prot="public">
+          <name>XML_ROLE_GENERAL_ENTITY_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca9e98f0efb4cd71a84b4ce0ebecd91793" prot="public">
+          <name>XML_ROLE_PARAM_ENTITY_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca7bcca88b29b6ccee2ef0df13f985543c" prot="public">
+          <name>XML_ROLE_ENTITY_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06caf657c8085194f409b1ffcdbf92d7f655" prot="public">
+          <name>XML_ROLE_ENTITY_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca537f0b204f45596fdddbe6b405851c44" prot="public">
+          <name>XML_ROLE_ENTITY_SYSTEM_ID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca87d321e63be3a8369909291855d6115b" prot="public">
+          <name>XML_ROLE_ENTITY_PUBLIC_ID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca198b24754d68b10b5f9c791536450f10" prot="public">
+          <name>XML_ROLE_ENTITY_COMPLETE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca467719e66ae7926a59087069b9368a5e" prot="public">
+          <name>XML_ROLE_ENTITY_NOTATION_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06caab49a093623d772bb0e9297892872908" prot="public">
+          <name>XML_ROLE_NOTATION_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca94a48a00021d5fcb4851de51643f9cec" prot="public">
+          <name>XML_ROLE_NOTATION_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca61fdf71b5297d9c7626013df65527621" prot="public">
+          <name>XML_ROLE_NOTATION_SYSTEM_ID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca253e9486c71a037493f38b415f52d86f" prot="public">
+          <name>XML_ROLE_NOTATION_NO_SYSTEM_ID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca0a76a66a8eb59d664a859e22d8666367" prot="public">
+          <name>XML_ROLE_NOTATION_PUBLIC_ID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca6f9234f811735fc7da516df8a75df7cb" prot="public">
+          <name>XML_ROLE_ATTRIBUTE_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4d7d02fadac8b54a7dbf53504dfb2f63" prot="public">
+          <name>XML_ROLE_ATTRIBUTE_TYPE_CDATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca797a890e203e57bc7f4616246d57ef51" prot="public">
+          <name>XML_ROLE_ATTRIBUTE_TYPE_ID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cadbf028aa4880d7a39738b112031edb32" prot="public">
+          <name>XML_ROLE_ATTRIBUTE_TYPE_IDREF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cad26277a98149ffa6156352d62a6f573a" prot="public">
+          <name>XML_ROLE_ATTRIBUTE_TYPE_IDREFS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca1dad3a5b304f818f3f5994a1c4be3b79" prot="public">
+          <name>XML_ROLE_ATTRIBUTE_TYPE_ENTITY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca32d49a10d836ee44276255b20fbea0c9" prot="public">
+          <name>XML_ROLE_ATTRIBUTE_TYPE_ENTITIES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca7554c6e26e5b831654f84a4990e544a5" prot="public">
+          <name>XML_ROLE_ATTRIBUTE_TYPE_NMTOKEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4ac1086cddb4424df95d55c7db46e644" prot="public">
+          <name>XML_ROLE_ATTRIBUTE_TYPE_NMTOKENS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca5274f5e42f274dcf10fdca662648d76a" prot="public">
+          <name>XML_ROLE_ATTRIBUTE_ENUM_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca586deb38ba44682edcf55d7d329a02ab" prot="public">
+          <name>XML_ROLE_ATTRIBUTE_NOTATION_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca575bfda0453729777866196f1cd9065b" prot="public">
+          <name>XML_ROLE_ATTLIST_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4c6f52beffa0e7deb4efc763fbac11f6" prot="public">
+          <name>XML_ROLE_ATTLIST_ELEMENT_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4d087af7ede5e37e16f451a083edeab1" prot="public">
+          <name>XML_ROLE_IMPLIED_ATTRIBUTE_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cabdeeacffd32f1927597eefc859a83bcd" prot="public">
+          <name>XML_ROLE_REQUIRED_ATTRIBUTE_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06caaa84b7cf4ec95131fa51f9a786ec4feb" prot="public">
+          <name>XML_ROLE_DEFAULT_ATTRIBUTE_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cac51ebb351510cbafb77e4cc73be8357e" prot="public">
+          <name>XML_ROLE_FIXED_ATTRIBUTE_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca840a41180e9805d0960c516a8906fe2d" prot="public">
+          <name>XML_ROLE_ELEMENT_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cae45617bcc35ffdee7bcf1e055dca53d2" prot="public">
+          <name>XML_ROLE_ELEMENT_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca6fc6423b893a7dfabb31be51a18ddff8" prot="public">
+          <name>XML_ROLE_CONTENT_ANY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cac3ccb9853fce364a2d237780f31ee0f3" prot="public">
+          <name>XML_ROLE_CONTENT_EMPTY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca119d4c922966d4179e145380cd267aba" prot="public">
+          <name>XML_ROLE_CONTENT_PCDATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cac037042e06312eacaebdd188c1e7e3c8" prot="public">
+          <name>XML_ROLE_GROUP_OPEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca3429913bc1074f0cd2996878e123ef0e" prot="public">
+          <name>XML_ROLE_GROUP_CLOSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca0fb8d95436dc0e9972bd922b8351a85a" prot="public">
+          <name>XML_ROLE_GROUP_CLOSE_REP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4cd65f84a948c6e8cfb8d36cd0583a00" prot="public">
+          <name>XML_ROLE_GROUP_CLOSE_OPT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cab9162094a0ea8ff600befe000eaa1e98" prot="public">
+          <name>XML_ROLE_GROUP_CLOSE_PLUS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca0393cd5d6a472443bd483ef6956d28ca" prot="public">
+          <name>XML_ROLE_GROUP_CHOICE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca485bd6c78a06a2afcba6c4672157801d" prot="public">
+          <name>XML_ROLE_GROUP_SEQUENCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca54c7177a93ed4d5d2e7ddbbc49d9c04c" prot="public">
+          <name>XML_ROLE_CONTENT_ELEMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca15ddc192a1200a956947c59ce88530a7" prot="public">
+          <name>XML_ROLE_CONTENT_ELEMENT_REP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cad0f0fa7dea1913ef271f04140495a63f" prot="public">
+          <name>XML_ROLE_CONTENT_ELEMENT_OPT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca9821ba5cf191151ecda0499662fa8bb9" prot="public">
+          <name>XML_ROLE_CONTENT_ELEMENT_PLUS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca662ff9e2ba52e02533dddf560916a383" prot="public">
+          <name>XML_ROLE_PI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4da16b7d440ed775ada91c1f496ccc49" prot="public">
+          <name>XML_ROLE_COMMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca323b0cf7a07a6ceb034f2a2b6c0db71e" prot="public">
+          <name>XML_ROLE_PARAM_ENTITY_REF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/expat/xmlrole.h" line="20" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/expat/xmlrole.h" bodystart="20" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="xmlrole_8h_1a5831a1391b0ce8d742d9481c7526d065" prot="public" static="no">
+        <type>struct <ref refid="structprolog__state" kindref="compound">prolog_state</ref></type>
+        <definition>typedef struct prolog_state PROLOG_STATE</definition>
+        <argsstring></argsstring>
+        <name>PROLOG_STATE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/expat/xmlrole.h" line="100" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="xmlrole_8h_1a5466b47f4c4beeca9c3019913c8402e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void XmlPrologStateInit</definition>
+        <argsstring>(PROLOG_STATE *)</argsstring>
+        <name>XmlPrologStateInit</name>
+        <param>
+          <type><ref refid="xmlrole_8h_1a5831a1391b0ce8d742d9481c7526d065" kindref="member">PROLOG_STATE</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/expat/xmlrole.h" line="102" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/expat/xmlrole.c" bodystart="1450" bodyend="1458" declfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/expat/xmlrole.h" declline="102" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>(c)<sp/>1998,<sp/>1999<sp/>Thai<sp/>Open<sp/>Source<sp/>Software<sp/>Center<sp/>Ltd</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/>See<sp/>the<sp/>file<sp/>COPYING<sp/>for<sp/>copying<sp/>permission.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>XmlRole_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XmlRole_INCLUDED<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__VMS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3<sp/><sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1234567890123456789012345678901<sp/><sp/><sp/><sp/><sp/>1234567890123456789012345678901<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XmlPrologStateInitExternalEntity<sp/><sp/><sp/><sp/>XmlPrologStateInitExternalEnt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="xmltok_8h" kindref="compound">libstudxml/details/expat/xmltok.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="21" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca0b9dedf112d095b71e8562e21c639348" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca0b9dedf112d095b71e8562e21c639348" kindref="member">XML_ROLE_ERROR</ref><sp/>=<sp/>-1,</highlight></codeline>
+<codeline lineno="22" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca8372e087fddd26267b09123bc48ac018" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca8372e087fddd26267b09123bc48ac018" kindref="member">XML_ROLE_NONE</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="23" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06caad666adf8b80ac7ced3393e683aeceea" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06caad666adf8b80ac7ced3393e683aeceea" kindref="member">XML_ROLE_XML_DECL</ref>,</highlight></codeline>
+<codeline lineno="24" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca8bd6cf5213a025c2c2fffaaaec9c0bfb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca8bd6cf5213a025c2c2fffaaaec9c0bfb" kindref="member">XML_ROLE_INSTANCE_START</ref>,</highlight></codeline>
+<codeline lineno="25" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca2f7c6010cd325a463676f6b30abc970f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca2f7c6010cd325a463676f6b30abc970f" kindref="member">XML_ROLE_DOCTYPE_NONE</ref>,</highlight></codeline>
+<codeline lineno="26" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca92f7b335f72ea4ffcf84a8b1aab0f9ac" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca92f7b335f72ea4ffcf84a8b1aab0f9ac" kindref="member">XML_ROLE_DOCTYPE_NAME</ref>,</highlight></codeline>
+<codeline lineno="27" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca598ef6eae91a56f74afe7956ecf0da20" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca598ef6eae91a56f74afe7956ecf0da20" kindref="member">XML_ROLE_DOCTYPE_SYSTEM_ID</ref>,</highlight></codeline>
+<codeline lineno="28" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cad76268d6c961bf625fc854144d909a61" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cad76268d6c961bf625fc854144d909a61" kindref="member">XML_ROLE_DOCTYPE_PUBLIC_ID</ref>,</highlight></codeline>
+<codeline lineno="29" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca1a469027da44c3a6e081696f737733ef" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca1a469027da44c3a6e081696f737733ef" kindref="member">XML_ROLE_DOCTYPE_INTERNAL_SUBSET</ref>,</highlight></codeline>
+<codeline lineno="30" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca3d7daa30cf8f4b3004bae1c1ae21b437" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca3d7daa30cf8f4b3004bae1c1ae21b437" kindref="member">XML_ROLE_DOCTYPE_CLOSE</ref>,</highlight></codeline>
+<codeline lineno="31" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca9c0d57b51506aea11cefe61f5483052a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca9c0d57b51506aea11cefe61f5483052a" kindref="member">XML_ROLE_GENERAL_ENTITY_NAME</ref>,</highlight></codeline>
+<codeline lineno="32" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca9e98f0efb4cd71a84b4ce0ebecd91793" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca9e98f0efb4cd71a84b4ce0ebecd91793" kindref="member">XML_ROLE_PARAM_ENTITY_NAME</ref>,</highlight></codeline>
+<codeline lineno="33" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca7bcca88b29b6ccee2ef0df13f985543c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca7bcca88b29b6ccee2ef0df13f985543c" kindref="member">XML_ROLE_ENTITY_NONE</ref>,</highlight></codeline>
+<codeline lineno="34" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06caf657c8085194f409b1ffcdbf92d7f655" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06caf657c8085194f409b1ffcdbf92d7f655" kindref="member">XML_ROLE_ENTITY_VALUE</ref>,</highlight></codeline>
+<codeline lineno="35" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca537f0b204f45596fdddbe6b405851c44" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca537f0b204f45596fdddbe6b405851c44" kindref="member">XML_ROLE_ENTITY_SYSTEM_ID</ref>,</highlight></codeline>
+<codeline lineno="36" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca87d321e63be3a8369909291855d6115b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca87d321e63be3a8369909291855d6115b" kindref="member">XML_ROLE_ENTITY_PUBLIC_ID</ref>,</highlight></codeline>
+<codeline lineno="37" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca198b24754d68b10b5f9c791536450f10" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca198b24754d68b10b5f9c791536450f10" kindref="member">XML_ROLE_ENTITY_COMPLETE</ref>,</highlight></codeline>
+<codeline lineno="38" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca467719e66ae7926a59087069b9368a5e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca467719e66ae7926a59087069b9368a5e" kindref="member">XML_ROLE_ENTITY_NOTATION_NAME</ref>,</highlight></codeline>
+<codeline lineno="39" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06caab49a093623d772bb0e9297892872908" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06caab49a093623d772bb0e9297892872908" kindref="member">XML_ROLE_NOTATION_NONE</ref>,</highlight></codeline>
+<codeline lineno="40" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca94a48a00021d5fcb4851de51643f9cec" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca94a48a00021d5fcb4851de51643f9cec" kindref="member">XML_ROLE_NOTATION_NAME</ref>,</highlight></codeline>
+<codeline lineno="41" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca61fdf71b5297d9c7626013df65527621" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca61fdf71b5297d9c7626013df65527621" kindref="member">XML_ROLE_NOTATION_SYSTEM_ID</ref>,</highlight></codeline>
+<codeline lineno="42" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca253e9486c71a037493f38b415f52d86f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca253e9486c71a037493f38b415f52d86f" kindref="member">XML_ROLE_NOTATION_NO_SYSTEM_ID</ref>,</highlight></codeline>
+<codeline lineno="43" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca0a76a66a8eb59d664a859e22d8666367" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca0a76a66a8eb59d664a859e22d8666367" kindref="member">XML_ROLE_NOTATION_PUBLIC_ID</ref>,</highlight></codeline>
+<codeline lineno="44" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca6f9234f811735fc7da516df8a75df7cb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca6f9234f811735fc7da516df8a75df7cb" kindref="member">XML_ROLE_ATTRIBUTE_NAME</ref>,</highlight></codeline>
+<codeline lineno="45" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4d7d02fadac8b54a7dbf53504dfb2f63" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4d7d02fadac8b54a7dbf53504dfb2f63" kindref="member">XML_ROLE_ATTRIBUTE_TYPE_CDATA</ref>,</highlight></codeline>
+<codeline lineno="46" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca797a890e203e57bc7f4616246d57ef51" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca797a890e203e57bc7f4616246d57ef51" kindref="member">XML_ROLE_ATTRIBUTE_TYPE_ID</ref>,</highlight></codeline>
+<codeline lineno="47" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cadbf028aa4880d7a39738b112031edb32" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cadbf028aa4880d7a39738b112031edb32" kindref="member">XML_ROLE_ATTRIBUTE_TYPE_IDREF</ref>,</highlight></codeline>
+<codeline lineno="48" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cad26277a98149ffa6156352d62a6f573a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cad26277a98149ffa6156352d62a6f573a" kindref="member">XML_ROLE_ATTRIBUTE_TYPE_IDREFS</ref>,</highlight></codeline>
+<codeline lineno="49" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca1dad3a5b304f818f3f5994a1c4be3b79" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca1dad3a5b304f818f3f5994a1c4be3b79" kindref="member">XML_ROLE_ATTRIBUTE_TYPE_ENTITY</ref>,</highlight></codeline>
+<codeline lineno="50" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca32d49a10d836ee44276255b20fbea0c9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca32d49a10d836ee44276255b20fbea0c9" kindref="member">XML_ROLE_ATTRIBUTE_TYPE_ENTITIES</ref>,</highlight></codeline>
+<codeline lineno="51" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca7554c6e26e5b831654f84a4990e544a5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca7554c6e26e5b831654f84a4990e544a5" kindref="member">XML_ROLE_ATTRIBUTE_TYPE_NMTOKEN</ref>,</highlight></codeline>
+<codeline lineno="52" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4ac1086cddb4424df95d55c7db46e644" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4ac1086cddb4424df95d55c7db46e644" kindref="member">XML_ROLE_ATTRIBUTE_TYPE_NMTOKENS</ref>,</highlight></codeline>
+<codeline lineno="53" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca5274f5e42f274dcf10fdca662648d76a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca5274f5e42f274dcf10fdca662648d76a" kindref="member">XML_ROLE_ATTRIBUTE_ENUM_VALUE</ref>,</highlight></codeline>
+<codeline lineno="54" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca586deb38ba44682edcf55d7d329a02ab" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca586deb38ba44682edcf55d7d329a02ab" kindref="member">XML_ROLE_ATTRIBUTE_NOTATION_VALUE</ref>,</highlight></codeline>
+<codeline lineno="55" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca575bfda0453729777866196f1cd9065b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca575bfda0453729777866196f1cd9065b" kindref="member">XML_ROLE_ATTLIST_NONE</ref>,</highlight></codeline>
+<codeline lineno="56" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4c6f52beffa0e7deb4efc763fbac11f6" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4c6f52beffa0e7deb4efc763fbac11f6" kindref="member">XML_ROLE_ATTLIST_ELEMENT_NAME</ref>,</highlight></codeline>
+<codeline lineno="57" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4d087af7ede5e37e16f451a083edeab1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4d087af7ede5e37e16f451a083edeab1" kindref="member">XML_ROLE_IMPLIED_ATTRIBUTE_VALUE</ref>,</highlight></codeline>
+<codeline lineno="58" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cabdeeacffd32f1927597eefc859a83bcd" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cabdeeacffd32f1927597eefc859a83bcd" kindref="member">XML_ROLE_REQUIRED_ATTRIBUTE_VALUE</ref>,</highlight></codeline>
+<codeline lineno="59" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06caaa84b7cf4ec95131fa51f9a786ec4feb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06caaa84b7cf4ec95131fa51f9a786ec4feb" kindref="member">XML_ROLE_DEFAULT_ATTRIBUTE_VALUE</ref>,</highlight></codeline>
+<codeline lineno="60" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cac51ebb351510cbafb77e4cc73be8357e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cac51ebb351510cbafb77e4cc73be8357e" kindref="member">XML_ROLE_FIXED_ATTRIBUTE_VALUE</ref>,</highlight></codeline>
+<codeline lineno="61" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca840a41180e9805d0960c516a8906fe2d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca840a41180e9805d0960c516a8906fe2d" kindref="member">XML_ROLE_ELEMENT_NONE</ref>,</highlight></codeline>
+<codeline lineno="62" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cae45617bcc35ffdee7bcf1e055dca53d2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cae45617bcc35ffdee7bcf1e055dca53d2" kindref="member">XML_ROLE_ELEMENT_NAME</ref>,</highlight></codeline>
+<codeline lineno="63" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca6fc6423b893a7dfabb31be51a18ddff8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca6fc6423b893a7dfabb31be51a18ddff8" kindref="member">XML_ROLE_CONTENT_ANY</ref>,</highlight></codeline>
+<codeline lineno="64" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cac3ccb9853fce364a2d237780f31ee0f3" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cac3ccb9853fce364a2d237780f31ee0f3" kindref="member">XML_ROLE_CONTENT_EMPTY</ref>,</highlight></codeline>
+<codeline lineno="65" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca119d4c922966d4179e145380cd267aba" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca119d4c922966d4179e145380cd267aba" kindref="member">XML_ROLE_CONTENT_PCDATA</ref>,</highlight></codeline>
+<codeline lineno="66" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cac037042e06312eacaebdd188c1e7e3c8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cac037042e06312eacaebdd188c1e7e3c8" kindref="member">XML_ROLE_GROUP_OPEN</ref>,</highlight></codeline>
+<codeline lineno="67" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca3429913bc1074f0cd2996878e123ef0e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca3429913bc1074f0cd2996878e123ef0e" kindref="member">XML_ROLE_GROUP_CLOSE</ref>,</highlight></codeline>
+<codeline lineno="68" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca0fb8d95436dc0e9972bd922b8351a85a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca0fb8d95436dc0e9972bd922b8351a85a" kindref="member">XML_ROLE_GROUP_CLOSE_REP</ref>,</highlight></codeline>
+<codeline lineno="69" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4cd65f84a948c6e8cfb8d36cd0583a00" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4cd65f84a948c6e8cfb8d36cd0583a00" kindref="member">XML_ROLE_GROUP_CLOSE_OPT</ref>,</highlight></codeline>
+<codeline lineno="70" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cab9162094a0ea8ff600befe000eaa1e98" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cab9162094a0ea8ff600befe000eaa1e98" kindref="member">XML_ROLE_GROUP_CLOSE_PLUS</ref>,</highlight></codeline>
+<codeline lineno="71" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca0393cd5d6a472443bd483ef6956d28ca" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca0393cd5d6a472443bd483ef6956d28ca" kindref="member">XML_ROLE_GROUP_CHOICE</ref>,</highlight></codeline>
+<codeline lineno="72" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca485bd6c78a06a2afcba6c4672157801d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca485bd6c78a06a2afcba6c4672157801d" kindref="member">XML_ROLE_GROUP_SEQUENCE</ref>,</highlight></codeline>
+<codeline lineno="73" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca54c7177a93ed4d5d2e7ddbbc49d9c04c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca54c7177a93ed4d5d2e7ddbbc49d9c04c" kindref="member">XML_ROLE_CONTENT_ELEMENT</ref>,</highlight></codeline>
+<codeline lineno="74" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca15ddc192a1200a956947c59ce88530a7" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca15ddc192a1200a956947c59ce88530a7" kindref="member">XML_ROLE_CONTENT_ELEMENT_REP</ref>,</highlight></codeline>
+<codeline lineno="75" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cad0f0fa7dea1913ef271f04140495a63f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06cad0f0fa7dea1913ef271f04140495a63f" kindref="member">XML_ROLE_CONTENT_ELEMENT_OPT</ref>,</highlight></codeline>
+<codeline lineno="76" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca9821ba5cf191151ecda0499662fa8bb9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca9821ba5cf191151ecda0499662fa8bb9" kindref="member">XML_ROLE_CONTENT_ELEMENT_PLUS</ref>,</highlight></codeline>
+<codeline lineno="77" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca662ff9e2ba52e02533dddf560916a383" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca662ff9e2ba52e02533dddf560916a383" kindref="member">XML_ROLE_PI</ref>,</highlight></codeline>
+<codeline lineno="78" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4da16b7d440ed775ada91c1f496ccc49" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca4da16b7d440ed775ada91c1f496ccc49" kindref="member">XML_ROLE_COMMENT</ref>,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>XML_DTD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>XML_ROLE_TEXT_DECL,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>XML_ROLE_IGNORE_SECT,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>XML_ROLE_INNER_PARAM_ENTITY_REF,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>XML_DTD<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><ref refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca323b0cf7a07a6ceb034f2a2b6c0db71e" kindref="member">XML_ROLE_PARAM_ENTITY_REF</ref></highlight></codeline>
+<codeline lineno="85" refid="xmlrole_8h_1adc29c2ff13d900c2f185ee95427fb06ca323b0cf7a07a6ceb034f2a2b6c0db71e" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="structprolog__state" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structprolog__state" kindref="compound">prolog_state</ref><sp/>{</highlight></codeline>
+<codeline lineno="88" refid="structprolog__state_1aa5eb5916251da455f404f6acff21225a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structprolog__state_1aa5eb5916251da455f404f6acff21225a" kindref="member">int</ref><sp/>(<ref refid="internal_8h_1af44f68911377fd55f6e1588b0c89b3e5" kindref="member">PTRCALL</ref><sp/>*handler)<sp/>(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structprolog__state" kindref="compound">prolog_state</ref><sp/>*<ref refid="string__to__double_8cpp_1af63a1df0d582366f7a03c46143e3ae0e" kindref="member">state</ref>,</highlight></codeline>
+<codeline lineno="89" refid="structprolog__state_1ac4af903bc6d08bf5945abf850aee2a67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structprolog__state_1ac4af903bc6d08bf5945abf850aee2a67" kindref="member">tok</ref>,</highlight></codeline>
+<codeline lineno="90" refid="structprolog__state_1acc32115fc74ba5f3fd3e721670466a15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structprolog__state_1acc32115fc74ba5f3fd3e721670466a15" kindref="member">ptr</ref>,</highlight></codeline>
+<codeline lineno="91" refid="structprolog__state_1a038b72ee34bd681594ee9ecc3e2263b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structprolog__state_1a038b72ee34bd681594ee9ecc3e2263b8" kindref="member">end</ref>,</highlight></codeline>
+<codeline lineno="92" refid="structprolog__state_1a7e8562ff36e1a1051fa703ca6f80228e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structencoding" kindref="compound">ENCODING</ref><sp/>*<ref refid="structprolog__state_1a7e8562ff36e1a1051fa703ca6f80228e" kindref="member">enc</ref>);</highlight></codeline>
+<codeline lineno="93" refid="structprolog__state_1a9bc6e108c8efd3bc37d42feb18eb8c6b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structprolog__state_1a9bc6e108c8efd3bc37d42feb18eb8c6b" kindref="member">level</ref>;</highlight></codeline>
+<codeline lineno="94" refid="structprolog__state_1aeba13f636dda0ee3f274a81fd865e223" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structprolog__state_1aeba13f636dda0ee3f274a81fd865e223" kindref="member">role_none</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>XML_DTD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>includeLevel;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>documentEntity;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>inEntityValue;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>XML_DTD<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="xmlrole_8h_1a5831a1391b0ce8d742d9481c7526d065" refkind="member"><highlight class="normal">}<sp/><ref refid="xmlrole_8h_1a5831a1391b0ce8d742d9481c7526d065" kindref="member">PROLOG_STATE</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="xmlrole_8h_1a5466b47f4c4beeca9c3019913c8402e0" kindref="member">XmlPrologStateInit</ref>(<ref refid="structprolog__state" kindref="compound">PROLOG_STATE</ref><sp/>*);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>XML_DTD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>XmlPrologStateInitExternalEntity(<ref refid="structprolog__state" kindref="compound">PROLOG_STATE</ref><sp/>*);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>XML_DTD<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="xmlrole_8h_1a0a4f3d87e091406f2a2df9cd51d49324" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XmlTokenRole(state,<sp/>tok,<sp/>ptr,<sp/>end,<sp/>enc)<sp/>\</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"><sp/>(((state)-&gt;handler)(state,<sp/>tok,<sp/>ptr,<sp/>end,<sp/>enc))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>not<sp/>XmlRole_INCLUDED<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/libstudxml/libstudxml/details/expat/xmlrole.h"/>
+  </compounddef>
+</doxygen>

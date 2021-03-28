@@ -1,0 +1,1152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="classpybind11_1_1array" kind="class" language="C++" prot="public">
+    <compoundname>pybind11::array</compoundname>
+    <basecompoundref refid="classpybind11_1_1buffer" prot="public" virt="non-virtual">pybind11::buffer</basecompoundref>
+    <derivedcompoundref refid="classpybind11_1_1array__t" prot="public" virt="non-virtual">pybind11::array_t&lt; T, ExtraFlags &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classpybind11_1_1array__t" prot="public" virt="non-virtual">pybind11::array_t&lt; Scalar, array::forcecast|((props::row_major ? props::inner_stride :props::outer_stride)==1 ? array::c_style :(props::row_major ? props::outer_stride :props::inner_stride)==1 ? array::f_style :0)&gt;</derivedcompoundref>
+    <derivedcompoundref refid="classpybind11_1_1array__t" prot="public" virt="non-virtual">pybind11::array_t&lt; T, ExtraFlags &gt;</derivedcompoundref>
+    <includes refid="numpy_8h" local="no">numpy.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classpybind11_1_1array_1aac2f71721e5b612933b0a7d2cdc53349" prot="public" static="no">
+        <type><ref refid="classpybind11_1_1detail_1_1any__container" kindref="compound">detail::any_container</ref>&lt; <ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref> &gt;</type>
+        <definition>using pybind11::array::ShapeContainer =  detail::any_container&lt;ssize_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>ShapeContainer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="525" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="525" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classpybind11_1_1array_1a9fe6f45309595710451472fbf16e89c1" prot="public" static="no">
+        <type><ref refid="classpybind11_1_1detail_1_1any__container" kindref="compound">detail::any_container</ref>&lt; <ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref> &gt;</type>
+        <definition>using pybind11::array::StridesContainer =  detail::any_container&lt;ssize_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>StridesContainer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="526" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="526" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classpybind11_1_1array_1ae30c0d8e4d1041b7020c8ae48ea78b2b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pybind11::array::is_borrowed</definition>
+        <argsstring></argsstring>
+        <name>is_borrowed</name>
+        <bitfield> buffer (is_borrowed ? buffer (h</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="515" column="40" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="515" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpybind11_1_1array_1a0facc4bb58356f1022fd6c7477e7e1af" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pybind11::array::borrowed_t</definition>
+        <argsstring></argsstring>
+        <name>borrowed_t</name>
+        <initializer>{}) :  <ref refid="classpybind11_1_1buffer" kindref="compound">buffer</ref> (h, <ref refid="structpybind11_1_1object_1_1stolen__t" kindref="compound">stolen_t</ref>{})) { }    <ref refid="classpybind11_1_1array" kindref="compound">array</ref> (<ref refid="classpybind11_1_1handle" kindref="compound">handle</ref> h, <ref refid="structpybind11_1_1object_1_1borrowed__t" kindref="compound">borrowed_t</ref>) :  <ref refid="classpybind11_1_1buffer" kindref="compound">buffer</ref> (h, <ref refid="structpybind11_1_1object_1_1borrowed__t" kindref="compound">borrowed_t</ref>{}) { }    <ref refid="classpybind11_1_1array" kindref="compound">array</ref> (<ref refid="classpybind11_1_1handle" kindref="compound">handle</ref> h, <ref refid="structpybind11_1_1object_1_1stolen__t" kindref="compound">stolen_t</ref>) :  <ref refid="classpybind11_1_1buffer" kindref="compound">buffer</ref> (h, <ref refid="structpybind11_1_1object_1_1stolen__t" kindref="compound">stolen_t</ref>{}) { }   <ref refid="common_8h_1ae4ba3bb24593b13133ae78407f466353" kindref="member">PYBIND11_DEPRECATED</ref>(&quot;Use py::isinstance&lt;py::python_type&gt;(obj) instead&quot;)   bool check() const { return m_ptr != nullptr &amp;&amp; (bool)  <ref refid="structpybind11_1_1detail_1_1npy__api_1a6cbffe9763f89f63d3cfc8f94c90791f" kindref="member">detail::npy_api::get</ref>().PyArray_Check_ (m_ptr); }   static bool check_(<ref refid="classpybind11_1_1handle" kindref="compound">handle</ref> h) { return h.ptr() != nullptr &amp;&amp;  <ref refid="structpybind11_1_1detail_1_1npy__api_1a6cbffe9763f89f63d3cfc8f94c90791f" kindref="member">detail::npy_api::get</ref>().PyArray_Check_ (h.ptr()); }       <ref refid="classpybind11_1_1array" kindref="compound">array</ref> (const <ref refid="classpybind11_1_1object" kindref="compound">object</ref> &amp;o) :  <ref refid="classpybind11_1_1buffer" kindref="compound">buffer</ref> ( <ref refid="classpybind11_1_1array_1a8c106da762d14abf1b52f8eefb6cd41e" kindref="member">raw_array</ref> (o.ptr()), <ref refid="structpybind11_1_1object_1_1stolen__t" kindref="compound">stolen_t</ref>{}) { if (!m_ptr) throw <ref refid="classpybind11_1_1error__already__set" kindref="compound">error_already_set</ref>(); }
+
+    enum {
+        c_style = <ref refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112cad3a6eac781c5323bfe42db2d538df452" kindref="member">detail::npy_api::NPY_ARRAY_C_CONTIGUOUS_</ref>,
+        f_style = <ref refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112cac87d7818b597c4b1c58f280c3da771b3" kindref="member">detail::npy_api::NPY_ARRAY_F_CONTIGUOUS_</ref>,
+        forcecast = <ref refid="structpybind11_1_1detail_1_1npy__api_1abd526a7e3dabfa5fa2e4b76c6aca112ca0e95362a8e700112aa6115831179a42c" kindref="member">detail::npy_api::NPY_ARRAY_FORCECAST_</ref>
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="515" column="53" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="515" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classpybind11_1_1array_1a2d7124af4924ef006d3b7bfd42b05085" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename</type>
+          </param>
+          <param>
+            <type>typename</type>
+          </param>
+        </templateparamlist>
+        <type>struct</type>
+        <definition>friend struct detail::npy_format_descriptor</definition>
+        <argsstring></argsstring>
+        <name>detail::npy_format_descriptor</name>
+        <param>
+          <type><ref refid="structpybind11_1_1detail_1_1npy__format__descriptor" kindref="compound">detail::npy_format_descriptor</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="744" column="16" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="744" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpybind11_1_1array_1a917457eea05ecc0d8568c49e87495aab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>pybind11::array::__attribute__</definition>
+        <argsstring>((deprecated(&quot;Use reinterpret_borrow&lt;&quot;&quot;array&quot;&quot;&gt;() or reinterpret_steal&lt;&quot;&quot;array&quot;&quot;&gt;()&quot;))) array(handle h</argsstring>
+        <name>__attribute__</name>
+        <param>
+          <type>(deprecated(&quot;Use <ref refid="classpybind11_1_1object_1ac1ea1a4cbcf197d7c8096037633720d7" kindref="member">reinterpret_borrow</ref>&lt;&quot;&quot;<ref refid="classpybind11_1_1array" kindref="compound">array</ref>&quot;&quot;&gt;() or <ref refid="classpybind11_1_1object_1ae1de2ab5a755c10582ac1e46071de5c5" kindref="member">reinterpret_steal</ref>&lt;&quot;&quot;<ref refid="classpybind11_1_1array" kindref="compound">array</ref>&quot;&quot;&gt;()&quot;))</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="515" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a1627f32955fb284f23093d51faba300c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pybind11::array::array</definition>
+        <argsstring>()</argsstring>
+        <name>array</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="523" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="523" bodyend="523"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a87b716fffe8b8099513be5dae61ced16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pybind11::array::array</definition>
+        <argsstring>(const pybind11::dtype &amp;dt, ShapeContainer shape, StridesContainer strides, const void *ptr=nullptr, handle base=handle())</argsstring>
+        <name>array</name>
+        <param>
+          <type>const <ref refid="classpybind11_1_1dtype" kindref="compound">pybind11::dtype</ref> &amp;</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type><ref refid="classpybind11_1_1array_1aac2f71721e5b612933b0a7d2cdc53349" kindref="member">ShapeContainer</ref></type>
+          <declname>shape</declname>
+        </param>
+        <param>
+          <type><ref refid="classpybind11_1_1array_1a9fe6f45309595710451472fbf16e89c1" kindref="member">StridesContainer</ref></type>
+          <declname>strides</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>ptr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+          <declname>base</declname>
+          <defval><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="529" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="529" bodyend="564"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a100ac01194d9e1f8fa8e429a68ca1ff1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pybind11::array::array</definition>
+        <argsstring>(const pybind11::dtype &amp;dt, ShapeContainer shape, const void *ptr=nullptr, handle base=handle())</argsstring>
+        <name>array</name>
+        <param>
+          <type>const <ref refid="classpybind11_1_1dtype" kindref="compound">pybind11::dtype</ref> &amp;</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type><ref refid="classpybind11_1_1array_1aac2f71721e5b612933b0a7d2cdc53349" kindref="member">ShapeContainer</ref></type>
+          <declname>shape</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>ptr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+          <declname>base</declname>
+          <defval><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="566" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="566" bodyend="567"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a58419b2fe82f698eef80dbb632c99a0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval><ref refid="namespacepybind11_1_1detail_1a492fb1fcf079a5bc67248b852bc73619" kindref="member">detail::enable_if_t</ref>&lt;std::is_integral&lt;T&gt;::value &amp;&amp; !std::is_same&lt;bool, T&gt;::value&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>pybind11::array::array</definition>
+        <argsstring>(const pybind11::dtype &amp;dt, T count, const void *ptr=nullptr, handle base=handle())</argsstring>
+        <name>array</name>
+        <param>
+          <type>const <ref refid="classpybind11_1_1dtype" kindref="compound">pybind11::dtype</ref> &amp;</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>ptr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+          <declname>base</declname>
+          <defval><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="570" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="570" bodyend="571"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a1df48786687418251b7dd029c03b06d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>pybind11::array::array</definition>
+        <argsstring>(ShapeContainer shape, StridesContainer strides, const T *ptr, handle base=handle())</argsstring>
+        <name>array</name>
+        <param>
+          <type><ref refid="classpybind11_1_1array_1aac2f71721e5b612933b0a7d2cdc53349" kindref="member">ShapeContainer</ref></type>
+          <declname>shape</declname>
+        </param>
+        <param>
+          <type><ref refid="classpybind11_1_1array_1a9fe6f45309595710451472fbf16e89c1" kindref="member">StridesContainer</ref></type>
+          <declname>strides</declname>
+        </param>
+        <param>
+          <type>const T *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+          <declname>base</declname>
+          <defval><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="574" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="574" bodyend="575"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1ac42023abe1ecb65e89de6eff7e14e91d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>pybind11::array::array</definition>
+        <argsstring>(ShapeContainer shape, const T *ptr, handle base=handle())</argsstring>
+        <name>array</name>
+        <param>
+          <type><ref refid="classpybind11_1_1array_1aac2f71721e5b612933b0a7d2cdc53349" kindref="member">ShapeContainer</ref></type>
+          <declname>shape</declname>
+        </param>
+        <param>
+          <type>const T *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+          <declname>base</declname>
+          <defval><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="578" column="5" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="578" bodyend="579"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a3dbfc46aac2ceb9758d4d953ac8bdfa8" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>pybind11::array::array</definition>
+        <argsstring>(ssize_t count, const T *ptr, handle base=handle())</argsstring>
+        <name>array</name>
+        <param>
+          <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>const T *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+          <declname>base</declname>
+          <defval><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="582" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="582" bodyend="582"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a1a95b42e29a9e407e81b1da49dcf6c4e" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pybind11::array::array</definition>
+        <argsstring>(const buffer_info &amp;info)</argsstring>
+        <name>array</name>
+        <param>
+          <type>const <ref refid="structpybind11_1_1buffer__info" kindref="compound">buffer_info</ref> &amp;</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="584" column="14" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="584" bodyend="585"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a7f0f5c84c5de37740fc6edc943c65b2b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classpybind11_1_1dtype" kindref="compound">pybind11::dtype</ref></type>
+        <definition>pybind11::dtype pybind11::array::dtype</definition>
+        <argsstring>() const</argsstring>
+        <name>dtype</name>
+        <briefdescription>
+<para>Array descriptor (dtype) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="588" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="588" bodyend="590"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1afca19b0c0896314a48ba4bd1d8015924" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+        <definition>ssize_t pybind11::array::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>Total number of elements. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="593" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="593" bodyend="595"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a10340a5561983400712a61483f9f478f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+        <definition>ssize_t pybind11::array::itemsize</definition>
+        <argsstring>() const</argsstring>
+        <name>itemsize</name>
+        <briefdescription>
+<para>Byte size of a single element. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="598" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="598" bodyend="600"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a38c15f5e8b761232e1ba84aca95ae18c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+        <definition>ssize_t pybind11::array::nbytes</definition>
+        <argsstring>() const</argsstring>
+        <name>nbytes</name>
+        <briefdescription>
+<para>Total number of bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="603" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="603" bodyend="605"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a1f347b49d01c2f35ad5fadc7e620d8ad" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+        <definition>ssize_t pybind11::array::ndim</definition>
+        <argsstring>() const</argsstring>
+        <name>ndim</name>
+        <briefdescription>
+<para>Number of dimensions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="608" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="608" bodyend="610"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a246d06d1ca129a526b7c5efdeee48652" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classpybind11_1_1object" kindref="compound">object</ref></type>
+        <definition>object pybind11::array::base</definition>
+        <argsstring>() const</argsstring>
+        <name>base</name>
+        <briefdescription>
+<para>Base object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="613" column="12" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="613" bodyend="615"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a1babc40ac1727b89010bc9617d2221dd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref> *</type>
+        <definition>const ssize_t* pybind11::array::shape</definition>
+        <argsstring>() const</argsstring>
+        <name>shape</name>
+        <briefdescription>
+<para>Dimensions of the array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="618" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="618" bodyend="620"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1ac7bb2da511133347b3a1b5deaf3686dd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+        <definition>ssize_t pybind11::array::shape</definition>
+        <argsstring>(ssize_t dim) const</argsstring>
+        <name>shape</name>
+        <param>
+          <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+          <declname>dim</declname>
+        </param>
+        <briefdescription>
+<para>Dimension along a given axis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="623" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="623" bodyend="627"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a313b0d36b25a7dd0eb134b57406b257b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref> *</type>
+        <definition>const ssize_t* pybind11::array::strides</definition>
+        <argsstring>() const</argsstring>
+        <name>strides</name>
+        <briefdescription>
+<para>Strides of the array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="630" column="19" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="630" bodyend="632"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a78085e31576480cc5d1d303ab17f9eef" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+        <definition>ssize_t pybind11::array::strides</definition>
+        <argsstring>(ssize_t dim) const</argsstring>
+        <name>strides</name>
+        <param>
+          <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+          <declname>dim</declname>
+        </param>
+        <briefdescription>
+<para>Stride along a given axis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="635" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="635" bodyend="639"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a6f4666d560c848144be4761ee630d957" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int pybind11::array::flags</definition>
+        <argsstring>() const</argsstring>
+        <name>flags</name>
+        <briefdescription>
+<para>Return the NumPy array flags. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="642" column="9" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="642" bodyend="644"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a3e0d57570e47aa5e1637b3d7f872197a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pybind11::array::writeable</definition>
+        <argsstring>() const</argsstring>
+        <name>writeable</name>
+        <briefdescription>
+<para>If set, the array is writeable (otherwise the buffer is read-only) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="647" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="647" bodyend="649"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a803f1928e8d7ccf259c28797461a2880" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pybind11::array::owndata</definition>
+        <argsstring>() const</argsstring>
+        <name>owndata</name>
+        <briefdescription>
+<para>If set, the array owns the data (will be freed when the array is deleted) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="652" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="652" bodyend="654"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a89cb34c10b4e3cea34bd5d5534623986" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Ix</declname>
+            <defname>Ix</defname>
+          </param>
+        </templateparamlist>
+        <type>const void *</type>
+        <definition>const void* pybind11::array::data</definition>
+        <argsstring>(Ix... index) const</argsstring>
+        <name>data</name>
+        <param>
+          <type>Ix...</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to the contained data. If index is not provided, points to the beginning of the buffer. May throw if the index would lead to out of bounds access. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="658" column="27" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="658" bodyend="660"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1ac07e441b9918ff66a74537bc0bb39f40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Ix</declname>
+            <defname>Ix</defname>
+          </param>
+        </templateparamlist>
+        <type>void *</type>
+        <definition>void* pybind11::array::mutable_data</definition>
+        <argsstring>(Ix... index)</argsstring>
+        <name>mutable_data</name>
+        <param>
+          <type>Ix...</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mutable pointer to the contained data. If index is not provided, points to the beginning of the buffer. May throw if the index would lead to out of bounds access. May throw if the array is not writeable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="665" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="665" bodyend="668"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a8856b8f237145987a62c19e61c9c26ba" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Ix</declname>
+            <defname>Ix</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+        <definition>ssize_t pybind11::array::offset_at</definition>
+        <argsstring>(Ix... index) const</argsstring>
+        <name>offset_at</name>
+        <param>
+          <type>Ix...</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Byte offset from beginning of the array to a given index (full or partial). May throw if the index would lead to out of bounds access. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="672" column="24" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="672" bodyend="676"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a94678462afc88cbb99a8b04dbf1127bc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+        <definition>ssize_t pybind11::array::offset_at</definition>
+        <argsstring>() const</argsstring>
+        <name>offset_at</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="678" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="678" bodyend="678"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a726f25422313b8cc0e57a5604813ffc5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Ix</declname>
+            <defname>Ix</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+        <definition>ssize_t pybind11::array::index_at</definition>
+        <argsstring>(Ix... index) const</argsstring>
+        <name>index_at</name>
+        <param>
+          <type>Ix...</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Item count from beginning of the array to a given index (full or partial). May throw if the index would lead to out of bounds access. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="682" column="24" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="682" bodyend="684"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a1fddd41f99198ff3b1a4f8b6b11df693" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+            <declname>Dims</declname>
+            <defname>Dims</defname>
+            <defval>-1</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classpybind11_1_1detail_1_1unchecked__mutable__reference" kindref="compound">detail::unchecked_mutable_reference</ref>&lt; T, Dims &gt;</type>
+        <definition>detail::unchecked_mutable_reference&lt;T, Dims&gt; pybind11::array::mutable_unchecked</definition>
+        <argsstring>()</argsstring>
+        <name>mutable_unchecked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a proxy object that provides access to the array&apos;s data without bounds or dimensionality checking. Will throw if the array is missing the <computeroutput>writeable</computeroutput> flag. Use with care: the array must not be destroyed or reshaped for the duration of the returned object, and the caller must take care not to access invalid dimensions or dimension indices. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="692" column="57" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="692" bodyend="697"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a95704d8136f515bbac57fe0e32560787" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+            <declname>Dims</declname>
+            <defname>Dims</defname>
+            <defval>-1</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classpybind11_1_1detail_1_1unchecked__reference" kindref="compound">detail::unchecked_reference</ref>&lt; T, Dims &gt;</type>
+        <definition>detail::unchecked_reference&lt;T, Dims&gt; pybind11::array::unchecked</definition>
+        <argsstring>() const</argsstring>
+        <name>unchecked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a proxy object that provides const access to the array&apos;s data without bounds or dimensionality checking. Unlike <computeroutput><ref refid="classpybind11_1_1array_1a1fddd41f99198ff3b1a4f8b6b11df693" kindref="member">mutable_unchecked()</ref></computeroutput>, this does not require that the underlying array have the <computeroutput>writable</computeroutput> flag. Use with care: the array must not be destroyed or reshaped for the duration of the returned object, and the caller must take care not to access invalid dimensions or dimension indices. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="706" column="49" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="706" bodyend="711"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1ac25411005216cb5f14b7aff7c68ef111" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classpybind11_1_1array" kindref="compound">array</ref></type>
+        <definition>array pybind11::array::squeeze</definition>
+        <argsstring>()</argsstring>
+        <name>squeeze</name>
+        <briefdescription>
+<para>Return a new view with all of the dimensions of length 1 removed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="714" column="11" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="714" bodyend="717"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a33b1bd4c889fbaf108fa0352be379ef1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pybind11::array::resize</definition>
+        <argsstring>(ShapeContainer new_shape, bool refcheck=true)</argsstring>
+        <name>resize</name>
+        <param>
+          <type><ref refid="classpybind11_1_1array_1aac2f71721e5b612933b0a7d2cdc53349" kindref="member">ShapeContainer</ref></type>
+          <declname>new_shape</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>refcheck</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resize array to given shape If refcheck is true and more that one reference exist to this array then resize will succeed only if it makes a reshape, i.e. original size doesn&apos;t change </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="722" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="722" bodyend="732"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classpybind11_1_1array_1a816d966ca405344a5b2b60a2630154c8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classpybind11_1_1array" kindref="compound">array</ref></type>
+        <definition>static array pybind11::array::ensure</definition>
+        <argsstring>(handle h, int ExtraFlags=0)</argsstring>
+        <name>ensure</name>
+        <param>
+          <type><ref refid="classpybind11_1_1handle" kindref="compound">handle</ref></type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ExtraFlags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ensure that the argument is a NumPy array In case of an error, nullptr is returned and the Python error is cleared. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="736" column="18" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="736" bodyend="741"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classpybind11_1_1array_1a0101c3b28ac7ad0900c4f69882343f97" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pybind11::array::fail_dim_check</definition>
+        <argsstring>(ssize_t dim, const std::string &amp;msg) const</argsstring>
+        <name>fail_dim_check</name>
+        <param>
+          <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+          <declname>dim</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="746" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="746" bodyend="749"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1aa7f2aa4ebce00e7130e119960055b55b" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Ix</declname>
+            <defname>Ix</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+        <definition>ssize_t pybind11::array::byte_offset</definition>
+        <argsstring>(Ix... index) const</argsstring>
+        <name>byte_offset</name>
+        <param>
+          <type>Ix...</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="751" column="24" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="751" bodyend="754"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1aa5c88e5779838efe8829c8bb7bc96509" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pybind11::array::check_writeable</definition>
+        <argsstring>() const</argsstring>
+        <name>check_writeable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="756" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="756" bodyend="759"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1ae2219067fcf2c35d05bb83fd997ac8e2" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Ix</declname>
+            <defname>Ix</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pybind11::array::check_dimensions</definition>
+        <argsstring>(Ix... index) const</argsstring>
+        <name>check_dimensions</name>
+        <param>
+          <type>Ix...</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="779" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="779" bodyend="781"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a8d15f04f8b31149ed7e13c88e8cfbfcd" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pybind11::array::check_dimensions_impl</definition>
+        <argsstring>(ssize_t, const ssize_t *) const</argsstring>
+        <name>check_dimensions_impl</name>
+        <param>
+          <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="783" column="10" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="783" bodyend="783"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1aea4957e16ef5e288ffa8e5d87c1381fb" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Ix</declname>
+            <defname>Ix</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pybind11::array::check_dimensions_impl</definition>
+        <argsstring>(ssize_t axis, const ssize_t *shape, ssize_t i, Ix... index) const</argsstring>
+        <name>check_dimensions_impl</name>
+        <param>
+          <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+          <declname>axis</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref> *</type>
+          <declname>shape</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>Ix...</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="785" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="785" bodyend="792"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classpybind11_1_1array_1aa361b6020a1c147f62d3ffab1082cfd9" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref> &gt;</type>
+        <definition>static std::vector&lt;ssize_t&gt; pybind11::array::c_strides</definition>
+        <argsstring>(const std::vector&lt; ssize_t &gt; &amp;shape, ssize_t itemsize)</argsstring>
+        <name>c_strides</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref> &gt; &amp;</type>
+          <declname>shape</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+          <declname>itemsize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="762" column="24" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="762" bodyend="768"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a7eb28e9f937babc09e85124c080ec3d0" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref> &gt;</type>
+        <definition>static std::vector&lt;ssize_t&gt; pybind11::array::f_strides</definition>
+        <argsstring>(const std::vector&lt; ssize_t &gt; &amp;shape, ssize_t itemsize)</argsstring>
+        <name>f_strides</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref> &gt; &amp;</type>
+          <declname>shape</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacepybind11_1a51e3d317b399f8925c3b9f1980018481" kindref="member">ssize_t</ref></type>
+          <declname>itemsize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="771" column="24" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="771" bodyend="777"/>
+      </memberdef>
+      <memberdef kind="function" id="classpybind11_1_1array_1a8c106da762d14abf1b52f8eefb6cd41e" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>static PyObject* pybind11::array::raw_array</definition>
+        <argsstring>(PyObject *ptr, int ExtraFlags=0)</argsstring>
+        <name>raw_array</name>
+        <param>
+          <type>PyObject *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ExtraFlags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Create array from any object <ndash/> always returns a new reference. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="795" column="21" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="795" bodyend="802"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>pybind11::detail::object_api&lt; handle &gt;</label>
+        <link refid="classpybind11_1_1detail_1_1object__api"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pybind11::buffer</label>
+        <link refid="classpybind11_1_1buffer"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>pybind11::array_t&lt; Scalar, array::forcecast|((props::row_major ? props::inner_stride :props::outer_stride)==1 ? array::c_style :(props::row_major ? props::outer_stride :props::inner_stride)==1 ? array::f_style :0)&gt;</label>
+        <link refid="classpybind11_1_1array__t"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pybind11::array</label>
+        <link refid="classpybind11_1_1array"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>pybind11::array_t&lt; T, ExtraFlags &gt;</label>
+        <link refid="classpybind11_1_1array__t"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pybind11::detail::pyobject_tag</label>
+        <link refid="classpybind11_1_1detail_1_1pyobject__tag"/>
+      </node>
+      <node id="3">
+        <label>pybind11::object</label>
+        <link refid="classpybind11_1_1object"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>pybind11::handle</label>
+        <link refid="classpybind11_1_1handle"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>pybind11::detail::object_api&lt; handle &gt;</label>
+        <link refid="classpybind11_1_1detail_1_1object__api"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pybind11::buffer</label>
+        <link refid="classpybind11_1_1buffer"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pybind11::array</label>
+        <link refid="classpybind11_1_1array"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pybind11::detail::pyobject_tag</label>
+        <link refid="classpybind11_1_1detail_1_1pyobject__tag"/>
+      </node>
+      <node id="3">
+        <label>pybind11::object</label>
+        <link refid="classpybind11_1_1object"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>pybind11::handle</label>
+        <link refid="classpybind11_1_1handle"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" line="513" column="1" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/numpy.h" bodystart="513" bodyend="803"/>
+    <listofallmembers>
+      <member refid="classpybind11_1_1array_1a917457eea05ecc0d8568c49e87495aab" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>__attribute__</name></member>
+      <member refid="classpybind11_1_1buffer_1aedc3881a04149ee1095f22ce454a0eaa" prot="public" virt="non-virtual" ambiguityscope="pybind11::buffer::"><scope>pybind11::array</scope><name>__attribute__</name></member>
+      <member refid="classpybind11_1_1object_1af0de297f50a8c4db0b6712f4b990f8aa" prot="public" virt="non-virtual" ambiguityscope="pybind11::object::"><scope>pybind11::array</scope><name>__attribute__</name></member>
+      <member refid="classpybind11_1_1handle_1aae1e3eb62dbe66c97c161da1dc408abd" prot="public" virt="non-virtual" ambiguityscope="pybind11::handle::"><scope>pybind11::array</scope><name>__attribute__</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a9e40315e3b89ae491c4ff308048550ba" prot="public" virt="non-virtual" ambiguityscope="object_api&lt; handle &gt;::"><scope>pybind11::array</scope><name>__attribute__</name></member>
+      <member refid="classpybind11_1_1array_1a1627f32955fb284f23093d51faba300c" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>array</name></member>
+      <member refid="classpybind11_1_1array_1a87b716fffe8b8099513be5dae61ced16" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>array</name></member>
+      <member refid="classpybind11_1_1array_1a100ac01194d9e1f8fa8e429a68ca1ff1" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>array</name></member>
+      <member refid="classpybind11_1_1array_1a58419b2fe82f698eef80dbb632c99a0e" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>array</name></member>
+      <member refid="classpybind11_1_1array_1a1df48786687418251b7dd029c03b06d3" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>array</name></member>
+      <member refid="classpybind11_1_1array_1ac42023abe1ecb65e89de6eff7e14e91d" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>array</name></member>
+      <member refid="classpybind11_1_1array_1a3dbfc46aac2ceb9758d4d953ac8bdfa8" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>array</name></member>
+      <member refid="classpybind11_1_1array_1a1a95b42e29a9e407e81b1da49dcf6c4e" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>array</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a1515b5309996f3109e3e73ea6c1ab8df" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>attr</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a1ed2f42e544637c80b31c05c88cb916e" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>attr</name></member>
+      <member refid="classpybind11_1_1array_1a246d06d1ca129a526b7c5efdeee48652" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>base</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a186bda3e95a07f59f9449ce0d050ae5e" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>begin</name></member>
+      <member refid="classpybind11_1_1array_1a0facc4bb58356f1022fd6c7477e7e1af" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>borrowed_t</name></member>
+      <member refid="classpybind11_1_1array_1aa7f2aa4ebce00e7130e119960055b55b" prot="protected" virt="non-virtual"><scope>pybind11::array</scope><name>byte_offset</name></member>
+      <member refid="classpybind11_1_1array_1aa361b6020a1c147f62d3ffab1082cfd9" prot="protected" virt="non-virtual"><scope>pybind11::array</scope><name>c_strides</name></member>
+      <member refid="classpybind11_1_1object_1aece18ff0957cbd093908369dd7800519" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1object_1a1d5a34290705e5124f352346563bf83d" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1object_1aece18ff0957cbd093908369dd7800519" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1object_1a1d5a34290705e5124f352346563bf83d" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1object_1a764785e72f3f451c198c9d09c9ff0fe2" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1object_1a8bc02531431d381c27343568a60d641e" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1handle_1a010389458d06cdacb08f1e0e62f66dfc" prot="public" virt="non-virtual" ambiguityscope="pybind11::handle::"><scope>pybind11::array</scope><name>cast</name></member>
+      <member refid="classpybind11_1_1array_1ae2219067fcf2c35d05bb83fd997ac8e2" prot="protected" virt="non-virtual"><scope>pybind11::array</scope><name>check_dimensions</name></member>
+      <member refid="classpybind11_1_1array_1a8d15f04f8b31149ed7e13c88e8cfbfcd" prot="protected" virt="non-virtual"><scope>pybind11::array</scope><name>check_dimensions_impl</name></member>
+      <member refid="classpybind11_1_1array_1aea4957e16ef5e288ffa8e5d87c1381fb" prot="protected" virt="non-virtual"><scope>pybind11::array</scope><name>check_dimensions_impl</name></member>
+      <member refid="classpybind11_1_1array_1aa5c88e5779838efe8829c8bb7bc96509" prot="protected" virt="non-virtual"><scope>pybind11::array</scope><name>check_writeable</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a18a4dd49680420a502a89d6d75e07748" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>contains</name></member>
+      <member refid="classpybind11_1_1array_1a89cb34c10b4e3cea34bd5d5534623986" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>data</name></member>
+      <member refid="classpybind11_1_1handle_1aa5bf7731654070d8a6834183a3c63132" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>dec_ref</name></member>
+      <member refid="classpybind11_1_1array_1a2d7124af4924ef006d3b7bfd42b05085" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>detail::npy_format_descriptor</name></member>
+      <member refid="classpybind11_1_1array_1a7f0f5c84c5de37740fc6edc943c65b2b" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>dtype</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a011483f62a9bd3c0fb60bfc7749fc28f" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>end</name></member>
+      <member refid="classpybind11_1_1array_1a816d966ca405344a5b2b60a2630154c8" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>ensure</name></member>
+      <member refid="classpybind11_1_1array_1a7eb28e9f937babc09e85124c080ec3d0" prot="protected" virt="non-virtual"><scope>pybind11::array</scope><name>f_strides</name></member>
+      <member refid="classpybind11_1_1array_1a0101c3b28ac7ad0900c4f69882343f97" prot="protected" virt="non-virtual"><scope>pybind11::array</scope><name>fail_dim_check</name></member>
+      <member refid="classpybind11_1_1array_1a6f4666d560c848144be4761ee630d957" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>flags</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1ab2bf58fa4e77779d723142a1a51a9033" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>get_type</name></member>
+      <member refid="classpybind11_1_1handle_1a4ba87579a3fba33e8e35e7a7884fe998" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>handle</name></member>
+      <member refid="classpybind11_1_1handle_1aa8016278dbe2e4534cfa09f688ea17ee" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>handle</name></member>
+      <member refid="classpybind11_1_1handle_1acc6d5c07da91466b4ebe6e5f8f7a1b58" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>inc_ref</name></member>
+      <member refid="classpybind11_1_1array_1a726f25422313b8cc0e57a5604813ffc5" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>index_at</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a5107835e7630a10868373383c003100b" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>is</name></member>
+      <member refid="classpybind11_1_1array_1ae30c0d8e4d1041b7020c8ae48ea78b2b" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>is_borrowed</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a1e0426c7b1cc45d3b56574aaaa38ff06" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>is_none</name></member>
+      <member refid="classpybind11_1_1array_1a10340a5561983400712a61483f9f478f" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>itemsize</name></member>
+      <member refid="classpybind11_1_1array_1ac07e441b9918ff66a74537bc0bb39f40" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>mutable_data</name></member>
+      <member refid="classpybind11_1_1array_1a1fddd41f99198ff3b1a4f8b6b11df693" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>mutable_unchecked</name></member>
+      <member refid="classpybind11_1_1array_1a38c15f5e8b761232e1ba84aca95ae18c" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>nbytes</name></member>
+      <member refid="classpybind11_1_1array_1a1f347b49d01c2f35ad5fadc7e620d8ad" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>ndim</name></member>
+      <member refid="classpybind11_1_1object_1a05110f45918e73ad56f66cc713fd1d21" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>object</name></member>
+      <member refid="classpybind11_1_1object_1acd1e392727b7870b82404c6077fd7da3" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>object</name></member>
+      <member refid="classpybind11_1_1object_1a8b3e38884a2467c88b61ad8b0f7b0469" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>object</name></member>
+      <member refid="classpybind11_1_1object_1af43aa8511d39ad9fa3aae093962ca471" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>object</name></member>
+      <member refid="classpybind11_1_1object_1a03cf406a7bee2cde9264d89f5c321e95" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>object</name></member>
+      <member refid="classpybind11_1_1array_1a8856b8f237145987a62c19e61c9c26ba" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>offset_at</name></member>
+      <member refid="classpybind11_1_1array_1a94678462afc88cbb99a8b04dbf1127bc" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>offset_at</name></member>
+      <member refid="classpybind11_1_1handle_1ac487a4afc7fb27d01ce4216813c7a91c" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>operator bool</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1ad5605908755b3a6ad07bbfa63f398ab8" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>operator()</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a5babe5939b794c3408711be7fde14ee0" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>operator*</name></member>
+      <member refid="classpybind11_1_1object_1aa02e0b7ba3182ecea17911e5fdc631dd" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>operator=</name></member>
+      <member refid="classpybind11_1_1object_1a1f45b12a97cf4b93915fd9145747cd9b" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>operator=</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1ae10abab736d193f170eaa6cfbdab6d01" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>operator[]</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1a579d2eeebff07ddab98814ccbfbe2728" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>operator[]</name></member>
+      <member refid="classpybind11_1_1array_1a803f1928e8d7ccf259c28797461a2880" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>owndata</name></member>
+      <member refid="classpybind11_1_1handle_1a6f7e2e6beecb8c59c5192ea9bae7eaa5" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>ptr</name></member>
+      <member refid="classpybind11_1_1handle_1ae837f0f5edde0818cd37e92f5664ebf2" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>ptr</name></member>
+      <member refid="classpybind11_1_1array_1a8c106da762d14abf1b52f8eefb6cd41e" prot="protected" virt="non-virtual"><scope>pybind11::array</scope><name>raw_array</name></member>
+      <member refid="classpybind11_1_1detail_1_1object__api_1aa1e808c7d0773561b3c552cf93d13368" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>ref_count</name></member>
+      <member refid="classpybind11_1_1object_1a6db3ef1f8b39f2038ecf578a7f07b59d" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>release</name></member>
+      <member refid="classpybind11_1_1array_1a33b1bd4c889fbaf108fa0352be379ef1" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>resize</name></member>
+      <member refid="classpybind11_1_1array_1a1babc40ac1727b89010bc9617d2221dd" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>shape</name></member>
+      <member refid="classpybind11_1_1array_1ac7bb2da511133347b3a1b5deaf3686dd" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>shape</name></member>
+      <member refid="classpybind11_1_1array_1aac2f71721e5b612933b0a7d2cdc53349" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>ShapeContainer</name></member>
+      <member refid="classpybind11_1_1array_1afca19b0c0896314a48ba4bd1d8015924" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>size</name></member>
+      <member refid="classpybind11_1_1array_1ac25411005216cb5f14b7aff7c68ef111" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>squeeze</name></member>
+      <member refid="classpybind11_1_1array_1a313b0d36b25a7dd0eb134b57406b257b" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>strides</name></member>
+      <member refid="classpybind11_1_1array_1a78085e31576480cc5d1d303ab17f9eef" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>strides</name></member>
+      <member refid="classpybind11_1_1array_1a9fe6f45309595710451472fbf16e89c1" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>StridesContainer</name></member>
+      <member refid="classpybind11_1_1array_1a95704d8136f515bbac57fe0e32560787" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>unchecked</name></member>
+      <member refid="classpybind11_1_1array_1a3e0d57570e47aa5e1637b3d7f872197a" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>writeable</name></member>
+      <member refid="classpybind11_1_1object_1a18a870a490c34d5a7775e90dc799d2f4" prot="public" virt="non-virtual"><scope>pybind11::array</scope><name>~object</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -11,7 +11,7 @@
 \item 
 \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_a0b63ec2af519ce615be68d5e87a2826e}{binary\+\_\+reader}} (const std\+::vector$<$ T $>$ \&vector)
 \item 
-\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_ad0e9323fe685de40a2f1cec154c51351}{binary\+\_\+reader}} (const T $\ast$source\+\_\+data, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} size)
+\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_ad0e9323fe685de40a2f1cec154c51351}{binary\+\_\+reader}} (const T $\ast$source\+\_\+data, std\+::size\+\_\+t size)
 \item 
 \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_abedc3dcf8adddff0004df7a2ebdcccc4}{binary\+\_\+reader}} (const \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{binary\+\_\+reader}} \&other)=default
 \item 
@@ -21,9 +21,9 @@
 \item 
 const T $\ast$ \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_a90e9a9cf6ae5497e853ba25910b9f8b3}{data}} () const
 \item 
-void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_af4eb95836af317913b6e9e1c45c6fad0}{offset}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} offset)
+void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_af4eb95836af317913b6e9e1c45c6fad0}{offset}} (std\+::size\+\_\+t offset)
 \item 
-\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_ae4149a6fbc63c560128d1b0301e86b88}{offset}} () const
+std\+::size\+\_\+t \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_ae4149a6fbc63c560128d1b0301e86b88}{offset}} () const
 \item 
 void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_a8cbe1de822e6c201bf1b9d90814b9082}{reset}} ()
 \item 
@@ -35,11 +35,11 @@ void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_a8cbe1de822e6c201bf1
 \item 
 {\footnotesize template$<$typename U $>$ }\\std\+::vector$<$ U $>$ \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_a01243124ecf78897bf47421252b7e8b1}{as\+\_\+vector}} () const
 \item 
-{\footnotesize template$<$typename U $>$ }\\std\+::vector$<$ U $>$ \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_a381b98493a9e9814af6af12fb180d5ad}{read\+\_\+vector}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_ae6024940e92fe2693474abe51f3b1499}{count}})
+{\footnotesize template$<$typename U $>$ }\\std\+::vector$<$ U $>$ \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_a381b98493a9e9814af6af12fb180d5ad}{read\+\_\+vector}} (std\+::size\+\_\+t \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_ae6024940e92fe2693474abe51f3b1499}{count}})
 \item 
-\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_ae6024940e92fe2693474abe51f3b1499}{count}} () const
+std\+::size\+\_\+t \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_ae6024940e92fe2693474abe51f3b1499}{count}} () const
 \item 
-\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_a58264e94e6a531bf98bd43367a5550f0}{bytes}} () const
+std\+::size\+\_\+t \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_a58264e94e6a531bf98bd43367a5550f0}{bytes}} () const
 \end{DoxyCompactItemize}
 
 
@@ -63,7 +63,7 @@ void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader_a8cbe1de822e6c201bf1
 \index{binary\_reader@{binary\_reader}!xlnt::detail::binary\_reader$<$ T $>$@{xlnt::detail::binary\_reader$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{binary\_reader()}{binary\_reader()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{xlnt\+::detail\+::binary\+\_\+reader}}$<$ T $>$\+::\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{binary\+\_\+reader}} (\begin{DoxyParamCaption}\item[{const T $\ast$}]{source\+\_\+data,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{xlnt\+::detail\+::binary\+\_\+reader}}$<$ T $>$\+::\mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{binary\+\_\+reader}} (\begin{DoxyParamCaption}\item[{const T $\ast$}]{source\+\_\+data,  }\item[{std\+::size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__reader_abedc3dcf8adddff0004df7a2ebdcccc4}\label{classxlnt_1_1detail_1_1binary__reader_abedc3dcf8adddff0004df7a2ebdcccc4}} 
 \index{xlnt::detail::binary\_reader$<$ T $>$@{xlnt::detail::binary\_reader$<$ T $>$}!binary\_reader@{binary\_reader}}
@@ -95,14 +95,14 @@ std\+::vector$<$U$>$ \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{xln
 \index{bytes@{bytes}!xlnt::detail::binary\_reader$<$ T $>$@{xlnt::detail::binary\_reader$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{bytes()}{bytes()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{xlnt\+::detail\+::binary\+\_\+reader}}$<$ T $>$\+::\mbox{\hyperlink{classbytes}{bytes}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+std\+::size\+\_\+t \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{xlnt\+::detail\+::binary\+\_\+reader}}$<$ T $>$\+::bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__reader_ae6024940e92fe2693474abe51f3b1499}\label{classxlnt_1_1detail_1_1binary__reader_ae6024940e92fe2693474abe51f3b1499}} 
 \index{xlnt::detail::binary\_reader$<$ T $>$@{xlnt::detail::binary\_reader$<$ T $>$}!count@{count}}
 \index{count@{count}!xlnt::detail::binary\_reader$<$ T $>$@{xlnt::detail::binary\_reader$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{count()}{count()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{xlnt\+::detail\+::binary\+\_\+reader}}$<$ T $>$\+::count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+std\+::size\+\_\+t \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{xlnt\+::detail\+::binary\+\_\+reader}}$<$ T $>$\+::count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__reader_a90e9a9cf6ae5497e853ba25910b9f8b3}\label{classxlnt_1_1detail_1_1binary__reader_a90e9a9cf6ae5497e853ba25910b9f8b3}} 
 \index{xlnt::detail::binary\_reader$<$ T $>$@{xlnt::detail::binary\_reader$<$ T $>$}!data@{data}}
@@ -116,14 +116,14 @@ const T$\ast$ \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{xlnt\+::de
 \index{offset@{offset}!xlnt::detail::binary\_reader$<$ T $>$@{xlnt::detail::binary\_reader$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{offset()}{offset()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{xlnt\+::detail\+::binary\+\_\+reader}}$<$ T $>$\+::offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+std\+::size\+\_\+t \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{xlnt\+::detail\+::binary\+\_\+reader}}$<$ T $>$\+::offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__reader_af4eb95836af317913b6e9e1c45c6fad0}\label{classxlnt_1_1detail_1_1binary__reader_af4eb95836af317913b6e9e1c45c6fad0}} 
 \index{xlnt::detail::binary\_reader$<$ T $>$@{xlnt::detail::binary\_reader$<$ T $>$}!offset@{offset}}
 \index{offset@{offset}!xlnt::detail::binary\_reader$<$ T $>$@{xlnt::detail::binary\_reader$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{offset()}{offset()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{xlnt\+::detail\+::binary\+\_\+reader}}$<$ T $>$\+::offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{xlnt\+::detail\+::binary\+\_\+reader}}$<$ T $>$\+::offset (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__reader_a6228b205e42201a578787562a5747616}\label{classxlnt_1_1detail_1_1binary__reader_a6228b205e42201a578787562a5747616}} 
 \index{xlnt::detail::binary\_reader$<$ T $>$@{xlnt::detail::binary\_reader$<$ T $>$}!operator=@{operator=}}
@@ -162,7 +162,7 @@ const U\& \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{xlnt\+::detail
 \doxysubsubsection{\texorpdfstring{read\_vector()}{read\_vector()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 template$<$typename U $>$ \\
-std\+::vector$<$U$>$ \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{xlnt\+::detail\+::binary\+\_\+reader}}$<$ T $>$\+::read\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}}}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+std\+::vector$<$U$>$ \mbox{\hyperlink{classxlnt_1_1detail_1_1binary__reader}{xlnt\+::detail\+::binary\+\_\+reader}}$<$ T $>$\+::read\+\_\+vector (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{classxlnt_1_1detail_1_1binary__reader_a8cbe1de822e6c201bf1b9d90814b9082}\label{classxlnt_1_1detail_1_1binary__reader_a8cbe1de822e6c201bf1b9d90814b9082}} 
 \index{xlnt::detail::binary\_reader$<$ T $>$@{xlnt::detail::binary\_reader$<$ T $>$}!reset@{reset}}

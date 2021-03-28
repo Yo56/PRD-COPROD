@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="group__python__builtins" kind="group">
+    <compoundname>python_builtins</compoundname>
+    <title>_</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__python__builtins_1gaf4397f2663d6784bd53630fc5a23c02a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>dict</type>
+        <definition>dict pybind11::globals</definition>
+        <argsstring>()</argsstring>
+        <name>globals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a dictionary representing the global variables in the current execution frame, or <computeroutput>__main__.__dict__</computeroutput> if there is no frame (usually when the interpreter is embedded). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" line="808" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" bodystart="808" bodyend="811"/>
+      </memberdef>
+      <memberdef kind="function" id="group__python__builtins_1ga2de041115880fe435885b9a9d7c2c276" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>detail::enable_if_t&lt; std::is_base_of&lt; object, T &gt;::value, int &gt;</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool pybind11::isinstance</definition>
+        <argsstring>(handle obj)</argsstring>
+        <name>isinstance</name>
+        <param>
+          <type>handle</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>\rst Return true if <computeroutput>obj</computeroutput> is an instance of <computeroutput>T</computeroutput>. Type <computeroutput>T</computeroutput> must be a subclass of <computeroutput>object</computeroutput> or a class which was exposed to Python as <computeroutput>py::class_&lt;T&gt;</computeroutput>. \endrst </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="293" column="6" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="293" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="group__python__builtins_1ga514d6552530d0b02362a2045f43fcdba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pybind11::isinstance</definition>
+        <argsstring>(handle obj, handle type)</argsstring>
+        <name>isinstance</name>
+        <param>
+          <type>handle</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>handle</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return true if <computeroutput>obj</computeroutput> is an instance of the <computeroutput>type</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="303" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="303" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="function" id="group__python__builtins_1ga87cc23c83cdeaec183f0a0e4122d9997" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pybind11::hasattr</definition>
+        <argsstring>(handle obj, handle name)</argsstring>
+        <name>hasattr</name>
+        <param>
+          <type>handle</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>handle</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="312" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="312" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="group__python__builtins_1gaef7ee96307a4732fad5df956b387f8a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pybind11::hasattr</definition>
+        <argsstring>(handle obj, const char *name)</argsstring>
+        <name>hasattr</name>
+        <param>
+          <type>handle</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="316" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="316" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="group__python__builtins_1ga0854324102907dc2d82ac413b6e6b66e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>object</type>
+        <definition>object pybind11::getattr</definition>
+        <argsstring>(handle obj, handle name)</argsstring>
+        <name>getattr</name>
+        <param>
+          <type>handle</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>handle</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="320" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="320" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="group__python__builtins_1gac80ddad26eb3426c93277ce8d7c0f982" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>object</type>
+        <definition>object pybind11::getattr</definition>
+        <argsstring>(handle obj, const char *name)</argsstring>
+        <name>getattr</name>
+        <param>
+          <type>handle</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="326" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="326" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="group__python__builtins_1ga715c20d77757165563f28474dc39e80c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>object</type>
+        <definition>object pybind11::getattr</definition>
+        <argsstring>(handle obj, handle name, handle default_)</argsstring>
+        <name>getattr</name>
+        <param>
+          <type>handle</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>handle</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>handle</type>
+          <declname>default_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="332" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="332" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="group__python__builtins_1ga7a207d73efa28381746217b7afba118f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>object</type>
+        <definition>object pybind11::getattr</definition>
+        <argsstring>(handle obj, const char *name, handle default_)</argsstring>
+        <name>getattr</name>
+        <param>
+          <type>handle</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>handle</type>
+          <declname>default_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="341" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="341" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="group__python__builtins_1gad3d54ac3f3614c110d2ffa5c061ee905" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pybind11::setattr</definition>
+        <argsstring>(handle obj, handle name, handle value)</argsstring>
+        <name>setattr</name>
+        <param>
+          <type>handle</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>handle</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>handle</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="350" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="350" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="group__python__builtins_1gac63dcad9209e4abd96a430bef04414ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pybind11::setattr</definition>
+        <argsstring>(handle obj, const char *name, handle value)</argsstring>
+        <name>setattr</name>
+        <param>
+          <type>handle</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>handle</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="354" column="13" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="354" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="group__python__builtins_1ga443ea89aee29c1a3b9d57324d4d089b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t pybind11::len</definition>
+        <argsstring>(handle h)</argsstring>
+        <name>len</name>
+        <param>
+          <type>handle</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="1224" column="15" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="1224" bodyend="1229"/>
+      </memberdef>
+      <memberdef kind="function" id="group__python__builtins_1gad03802ec7d35cdd35a26c59cd53db480" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>str</type>
+        <definition>str pybind11::repr</definition>
+        <argsstring>(handle h)</argsstring>
+        <name>repr</name>
+        <param>
+          <type>handle</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="1231" column="12" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="1231" bodyend="1240"/>
+      </memberdef>
+      <memberdef kind="function" id="group__python__builtins_1gab4e8cc0cdd5b04fd00f4ba1f2d0f5b8d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>iterator</type>
+        <definition>iterator pybind11::iter</definition>
+        <argsstring>(handle obj)</argsstring>
+        <name>iter</name>
+        <param>
+          <type>handle</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" line="1242" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pytypes.h" bodystart="1242" bodyend="1246"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Unless stated otherwise, the following C++ functions behave the same as their Python counterparts. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="fr">
+  <compounddef id="structpybind11_1_1detail_1_1init" kind="struct" language="C++" prot="public">
+    <compoundname>pybind11::detail::init</compoundname>
+    <includes refid="pybind11_8h" local="no">pybind11.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename...</type>
+        <declname>Args</declname>
+        <defname>Args</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1init_1a84f1bb9f5b834abb93ce93bccf4d61b4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Class</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Extra</declname>
+            <defname>Extra</defname>
+          </param>
+          <param>
+            <type><ref refid="namespacepybind11_1_1detail_1a492fb1fcf079a5bc67248b852bc73619" kindref="member">enable_if_t</ref>&lt;!Class::has_alias, int &gt;</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void pybind11::detail::init&lt; Args &gt;::execute</definition>
+        <argsstring>(Class &amp;cl, const Extra &amp;... extra)</argsstring>
+        <name>execute</name>
+        <param>
+          <type>Class &amp;</type>
+          <declname>cl</declname>
+        </param>
+        <param>
+          <type>const Extra &amp;...</type>
+          <declname>extra</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Function which calls a specific C++ in-place constructor</para>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" line="1317" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" bodystart="1317" bodyend="1321"/>
+      </memberdef>
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1init_1a84f1bb9f5b834abb93ce93bccf4d61b4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Class</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Extra</declname>
+            <defname>Extra</defname>
+          </param>
+          <param>
+            <type><ref refid="namespacepybind11_1_1detail_1a492fb1fcf079a5bc67248b852bc73619" kindref="member">enable_if_t</ref>&lt; Class::has_alias &amp;&amp;std::is_constructible&lt; typename Class::type, Args... &gt;::value, int &gt;</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void pybind11::detail::init&lt; Args &gt;::execute</definition>
+        <argsstring>(Class &amp;cl, const Extra &amp;... extra)</argsstring>
+        <name>execute</name>
+        <param>
+          <type>Class &amp;</type>
+          <declname>cl</declname>
+        </param>
+        <param>
+          <type>const Extra &amp;...</type>
+          <declname>extra</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" line="1326" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" bodystart="1326" bodyend="1336"/>
+      </memberdef>
+      <memberdef kind="function" id="structpybind11_1_1detail_1_1init_1a84f1bb9f5b834abb93ce93bccf4d61b4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Class</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Extra</declname>
+            <defname>Extra</defname>
+          </param>
+          <param>
+            <type><ref refid="namespacepybind11_1_1detail_1a492fb1fcf079a5bc67248b852bc73619" kindref="member">enable_if_t</ref>&lt; Class::has_alias &amp;&amp;!std::is_constructible&lt; typename Class::type, Args... &gt;::value, int &gt;</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void pybind11::detail::init&lt; Args &gt;::execute</definition>
+        <argsstring>(Class &amp;cl, const Extra &amp;... extra)</argsstring>
+        <name>execute</name>
+        <param>
+          <type>Class &amp;</type>
+          <declname>cl</declname>
+        </param>
+        <param>
+          <type>const Extra &amp;...</type>
+          <declname>extra</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" line="1341" column="17" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" bodystart="1341" bodyend="1343"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" line="1315" column="12" bodyfile="C:/Users/nouet/Documents/Cours/5A/Dev PRD/PrdCoprod/PrdCoprod/libs/xlnt-1.5.0/third-party/pybind11/include/pybind11/pybind11.h" bodystart="1315" bodyend="1344"/>
+    <listofallmembers>
+      <member refid="structpybind11_1_1detail_1_1init_1a84f1bb9f5b834abb93ce93bccf4d61b4" prot="public" virt="non-virtual"><scope>pybind11::detail::init</scope><name>execute</name></member>
+      <member refid="structpybind11_1_1detail_1_1init_1a84f1bb9f5b834abb93ce93bccf4d61b4" prot="public" virt="non-virtual"><scope>pybind11::detail::init</scope><name>execute</name></member>
+      <member refid="structpybind11_1_1detail_1_1init_1a84f1bb9f5b834abb93ce93bccf4d61b4" prot="public" virt="non-virtual"><scope>pybind11::detail::init</scope><name>execute</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
