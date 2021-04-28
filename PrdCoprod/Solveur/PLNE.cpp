@@ -1264,7 +1264,7 @@ void PLNE::addContrainte14() {
 						}
 					}
 					// AJOUT CONTRAINTE
-					model.add(sommeExprGauche >= sommeExprDroite * NS_is[getIndiceGeneralFromOperation(f, i)][s]);
+					model.add(sommeExprGauche >= (sommeExprDroite * NS_is[getIndiceGeneralFromOperation(f, i)][s]));
 				}
 			}
 		}
@@ -1341,7 +1341,7 @@ void PLNE::addAllContraintes() {
 	addContrainte3(); 
 	addContrainte4();
 	addContrainte5(); 
-	addContrainte6(); 
+	addContrainte6(); //provoque une infaisabilite 
 	addContrainte7(); 
 	addContrainte8(); 
 
@@ -1350,7 +1350,7 @@ void PLNE::addAllContraintes() {
 
 	addContrainte11();
 	addContrainte12();
-	//addContrainte14(); provoque une infaisabilite 
+	addContrainte14(); //provoque une infaisabilite 
 	addContrainte15();
 	addContrainte16();
 
@@ -1452,6 +1452,8 @@ void PLNE::solve() {
 		cout << " status = " << cplex.getStatus() << endl;
 		cout << " objectif = " << cplex.getObjValue() << endl;
 		cplex.writeSolution("BBBBBBB.txt");
+
+		
 	}
 	catch (IloException &e) {
 		cerr << "Exception de la Concert Technology" << e << endl;

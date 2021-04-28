@@ -2,7 +2,6 @@
 #include <ilcplex/ilocplex.h>
 #include <vector>
 
-#include "Solveur/Tuto.h"
 #include "Solveur/PLNE.h"
 #include "Donnees/CAcquisition.h"
 #include "Donnees/CJeuDonnees.h"
@@ -47,7 +46,7 @@ int main()
 	plne.addObjectif();
 
 	//export du modele
-	plne.exportationModele("AAAAAAAAAAA");
+	//plne.exportationModele("AAAAAAAAAAA");
 	
 	//resolution
 	plne.solve();

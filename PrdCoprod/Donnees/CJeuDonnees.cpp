@@ -28,9 +28,9 @@ CInput CJeuDonnees::version1()
 	vector <vector<int> > rMax_lh{ {4,4,4} };
 	vector<int> rTot{ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24 };
 	vector <vector<int> > CO_ii{ {1,1}, {1,1} };
-	vector <vector<int> >NS_is{ {3,3},{3,3} };
+	vector <vector<int> >NS_is{ {3,0},{0,3} };
 
-	vector <vector <vector<int> > > SKL_asl{ {{1},{0}},   { {0}, {1} },   { {1}, {1} } };
+	vector <vector <vector<int> > > SKL_asl{ {{1},{1}},   { {1}, {1} },   { {1}, {0} } };
 
 	vector <vector<int> > H{ {7,8,9,10,11,12,13,14}, {15,16,17,18,19,20,21,21}, {23,0,1,2,3,4,5,6} };
 	vector <vector<int> > L{ {22,56} }; //{ {0,1} };
